@@ -1,0 +1,7 @@
+site_name: Documentación Sygma-Tech
+theme: readthedocs
+
+nav:
+  - Inicio: 'index.md'
+  - 'Servicio WolBox':
+      - 'Integración': 'wolbox.md'
