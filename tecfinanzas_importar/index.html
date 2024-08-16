@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>SV Importar Datos - Documentación Sygma-Tech</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SV Importar Datos";
+        var mkdocs_page_input_path = "tecfinanzas_importar.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Documentación Sygma-Tech
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Servicio TecFinanzas</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tecfinanzas/">Integración</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tecfinanzas_token/">SV Generación Token</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">SV Importar Datos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#url-de-integracion">URL de Integración</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#headers">Headers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#campos-obligatorios">Campos Obligatorios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-success">Respuesta Success</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-token-invalido">Respuesta Token Invalido</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-campos-requeridos">Respuesta Campos Requeridos</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Documentación Sygma-Tech</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Servicio TecFinanzas</li>
+      <li class="breadcrumb-item active">SV Importar Datos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="servicio-importar-datos">SERVICIO IMPORTAR DATOS</h1>
+<p><strong>Descripción:</strong> Este servicio permite recibir los 224 parametros para el proceso de creacion de los datos demograficos y información financiera dentro de TESEO.</p>
+<p><strong>Tipo de Servicio:</strong> POST</p>
+<h2 id="url-de-integracion">URL de Integración</h2>
+<ul>
+<li><strong>Prueba:</strong> <code>http://testing-sygma.com/api/tecfinanzas/importar_datos</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/tecfinanzas/importar_datos</code></li>
+</ul>
+<h2 id="headers">Headers</h2>
+<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
+<ul>
+<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
+</ul>
+<h2 id="cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</h2>
+<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
+<h3 id="campos-obligatorios">Campos Obligatorios</h3>
+<p>-- nro_documento
+-- nro_credito
+-- primer_nombre
+-- primer_apellido
+-- tipo_doc
+-- nro_documento
+-- nro_credito
+-- primer_nombre
+-- primer_apellido
+-- valor_credito
+-- plazo_inicial_credito
+-- tasa_intere</p>
+<pre><code class="language-json">{
+  &quot;datostecfinanza&quot;: {
+    &quot;nro_documento&quot;: &quot;3234567890&quot;,
+    &quot;dir_residencia&quot;: &quot;123 Main St&quot;,
+    &quot;correo&quot;: &quot;example@example.com&quot;,
+    &quot;dir_familiar&quot;: &quot;456 Elm St&quot;,
+    &quot;dir_correspondencia&quot;: &quot;789 Maple Ave&quot;,
+    &quot;dir_empresa_labora&quot;: &quot;101 Pine Rd&quot;,
+    &quot;email_labora&quot;: &quot;work@example.com&quot;,
+    &quot;dir_ref_fam1&quot;: &quot;123 Oak St&quot;,
+    &quot;dir_ref_fam2&quot;: &quot;456 Birch St&quot;,
+    &quot;dir_ref_per1&quot;: &quot;789 Cedar St&quot;,
+    &quot;dir_ref_per2&quot;: &quot;101 Spruce St&quot;,
+    &quot;cuenta_ext1&quot;: &quot;000111222&quot;,
+    &quot;cuenta_ext2&quot;: &quot;333444555&quot;,
+    &quot;no_pagare&quot;: &quot;PG123456&quot;,
+    &quot;nro_credito&quot;: &quot;CR1234567890&quot;,
+    &quot;poliza&quot;: &quot;POL123456&quot;,
+    &quot;fecha_nacimiento&quot;: &quot;1980-01-01&quot;,
+    &quot;fecha_ingreso&quot;: &quot;2022-01-01&quot;,
+    &quot;fecha_ultima&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_ini_cargo&quot;: &quot;2022-01-01&quot;,
+    &quot;fecha_fin_cargo&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_desemb&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_nomina&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_venc_final&quot;: &quot;2024-12-31&quot;,
+    &quot;fecha_venc_cuota1&quot;: &quot;2024-01-31&quot;,
+    &quot;fecha_ing_poliza&quot;: &quot;2024-01-01&quot;,
+    &quot;clase_poliza&quot;: &quot;Clase A&quot;,
+    &quot;tipo_cliente&quot;: &quot;Tipo 1&quot;,
+    &quot;codigo_dane_exp_doc&quot;: 12345,
+    &quot;codigo_dane_nacim&quot;: 67890,
+    &quot;codigo_ciiu_cliente&quot;: 1234,
+    &quot;antig_actividad&quot;: 5,
+    &quot;codigo_dane_resid&quot;: 54321,
+    &quot;tel_fijo_resi&quot;: &quot;1234567890&quot;,
+    &quot;tel_cel&quot;: &quot;0987654321&quot;,
+    &quot;codigo_dane_dir_fam&quot;: 11223,
+    &quot;codigo_dane_dir_corr&quot;: 44556,
+    &quot;codigo_dane_dir_emp&quot;: 77889,
+    &quot;tel_fijo_ofi&quot;: &quot;1112233445&quot;,
+    &quot;ext_ofi_lab&quot;: &quot;123&quot;,
+    &quot;nro_renov_contrato&quot;: &quot;RENOV123&quot;,
+    &quot;codigo_ciiu_emp&quot;: 6789,
+    &quot;nro_personas&quot;: 4,
+    &quot;menores_18&quot;: 2,
+    &quot;codigo_dane_ref_fam1&quot;: 33445,
+    &quot;tel_ref_fam1&quot;: &quot;5566778899&quot;,
+    &quot;codigo_dane_ref_fam2&quot;: 66778,
+    &quot;tel_ref_fam2&quot;: &quot;9988776655&quot;,
+    &quot;codigo_dane_ref_per1&quot;: 88990,
+    &quot;tel_ref_per1&quot;: &quot;1122334455&quot;,
+    &quot;codigo_dane_ref_per2&quot;: 99001,
+    &quot;tel_ref_per2&quot;: &quot;2233445566&quot;,
+    &quot;nro_cuenta&quot;: 123456,
+    &quot;valor_ingreso_salario&quot;: 3000000,
+    &quot;valor_ingreso_comisiones&quot;: 500000,
+    &quot;valor_ingreso_honorarios&quot;: 1000000,
+    &quot;valor_ingresos_arrend&quot;: 200000,
+    &quot;valor_rendimientos&quot;: 150000,
+    &quot;otros_ingresos&quot;: 100000,
+    &quot;valor_total_ingresos&quot;: 6000000,
+    &quot;valor_deducciones_ley&quot;: 500000,
+    &quot;valor_otras_deducciones&quot;: 200000,
+    &quot;valor_arrend_cliente&quot;: 300000,
+    &quot;valor_cuota_credito&quot;: 1000000,
+    &quot;valor_gastos_tarjeta&quot;: 50000,
+    &quot;valor_gastos_familiares&quot;: 200000,
+    &quot;valor_gastos_sost&quot;: 50000,
+    &quot;valor_pago_otros_creditos&quot;: 150000,
+    &quot;otros_egresos&quot;: 100000,
+    &quot;valor_total_egresos&quot;: 2000000,
+    &quot;valor_activos_corrientes&quot;: 5000000,
+    &quot;valor_activos_fijos&quot;: 2000000,
+    &quot;valor_otros_activos&quot;: 1000000,
+    &quot;total_activos&quot;: 8000000,
+    &quot;valor_pasivos_financieros&quot;: 3000000,
+    &quot;valor_pasivos_corrientes&quot;: 1000000,
+    &quot;valor_otros_pasivos&quot;: 500000,
+    &quot;total_pasivos&quot;: 4500000,
+    &quot;salario&quot;: 2000000,
+    &quot;patrimonio&quot;: 3500000,
+    &quot;cupo_solicitado&quot;: 1000000,
+    &quot;monto_cuenta_ext1&quot;: 500000,
+    &quot;monto_cuenta_ext2&quot;: 200000,
+    &quot;puntaje_acierta&quot;: 800,
+    &quot;nro_cuentas_embargadas&quot;: 1,
+    &quot;nro_cuentas_canceladas&quot;: 2,
+    &quot;nro_obligaciones_mora&quot;: 3,
+    &quot;nro_obligaciones_mora_coop&quot;: 1,
+    &quot;nro_carteras_castigadas&quot;: 0,
+    &quot;nro_carteras_dudoso&quot;: 2,
+    &quot;nro_obligaciones_reestructuradas&quot;: 1,
+    &quot;nro_obligaciones_calificadas_C&quot;: 0,
+    &quot;nro_obligaciones_calificadas_D&quot;: 1,
+    &quot;nro_obligaciones_calificadas_E&quot;: 0,
+    &quot;nro_moras_30_dias&quot;: 2,
+    &quot;nro_moras_60_dias&quot;: 1,
+    &quot;nro_moras_sup_60_dias&quot;: 0,
+    &quot;nro_entidades_consulta&quot;: 3,
+    &quot;quanto_minimo&quot;: 1000000,
+    &quot;quanto_maximo&quot;: 5000000,
+    &quot;quanto_medio&quot;: 3000000,
+    &quot;sum_cuotas_creditos&quot;: 2000000,
+    &quot;sum_saldos_tdc&quot;: 1500000,
+    &quot;sum_cupos_tdc&quot;: 1000000,
+    &quot;nro_embargos_pago&quot;: 1,
+    &quot;nro_procesos_civiles&quot;: 0,
+    &quot;nit_custodia&quot;: 123456,
+    &quot;nit_originador&quot;: 654321,
+    &quot;nit_pagaduria&quot;: 112233,
+    &quot;codigo_pagaduria&quot;: 445566,
+    &quot;nit_fideicomisos&quot;: 778899,
+    &quot;codigo_fideicomiso&quot;: 990011,
+    &quot;codigo_dane_asociado&quot;: 223344,
+    &quot;valor_credito&quot;: 5000000,
+    &quot;plazo_inicial_credito&quot;: 24,
+    &quot;tasa_interes&quot;: 5.25,
+    &quot;valor_aval&quot;: 1000000,
+    &quot;periodicidad&quot;: 12,
+    &quot;tasa_unica&quot;: 6.50,
+    &quot;porcentaje_reserva&quot;: 2.00,
+    &quot;prima_comercial&quot;: 300000,
+    &quot;no_doc_benef_grat1&quot;: 12345,
+    &quot;porc_benef_grat1&quot;: 0.10,
+    &quot;no_doc_benef_grat2&quot;: 67890,
+    &quot;porc_benef_grat2&quot;: 0.15,
+    &quot;tipo_entidad&quot;: &quot;Entidad A&quot;,
+    &quot;cliente_declara&quot;: &quot;Sí&quot;,
+    &quot;desempena_cargo&quot;: &quot;No&quot;,
+    &quot;manejo_recursos&quot;: &quot;Sí&quot;,
+    &quot;representa_organizacion&quot;: &quot;No&quot;,
+    &quot;cliente_es_pep&quot;: &quot;No&quot;,
+    &quot;vinculo_con_pep&quot;: &quot;N/A&quot;,
+    &quot;reconocimiento_publico&quot;: &quot;Sí&quot;,
+    &quot;posee_cuenta&quot;: &quot;Sí&quot;,
+    &quot;realiza_operaciones&quot;: &quot;Sí&quot;,
+    &quot;importaciones&quot;: &quot;No&quot;,
+    &quot;credito_documentario&quot;: &quot;Sí&quot;,
+    &quot;giros_directos&quot;: &quot;No&quot;,
+    &quot;negociacion_divisas&quot;: &quot;Sí&quot;,
+    &quot;leasing_importacion&quot;: &quot;No&quot;,
+    &quot;giros_financiados&quot;: &quot;Sí&quot;,
+    &quot;exportaciones&quot;: &quot;No&quot;,
+    &quot;inversiones&quot;: &quot;Sí&quot;,
+    &quot;venta_bienes&quot;: &quot;No&quot;,
+    &quot;honorarios_comisiones&quot;: &quot;Sí&quot;,
+    &quot;ingresos_actividad&quot;: &quot;Sí&quot;,
+    &quot;prestamo_bancario&quot;: &quot;No&quot;,
+    &quot;rifas&quot;: &quot;No&quot;,
+    &quot;pension&quot;: &quot;Sí&quot;,
+    &quot;herencia&quot;: &quot;No&quot;,
+    &quot;liq_prestaciones&quot;: &quot;Sí&quot;,
+    &quot;liq_sucesiones&quot;: &quot;No&quot;,
+    &quot;otros&quot;: &quot;N/A&quot;,
+    &quot;cuentas_moneda_ext&quot;: &quot;Sí&quot;,
+    &quot;permanencia_eeuu&quot;: &quot;No&quot;,
+    &quot;tarjeta_verde&quot;: &quot;No&quot;,
+    &quot;ingresos_fdap&quot;: &quot;No&quot;,
+    &quot;ingreso_bruto_venta&quot;: &quot;Sí&quot;,
+    &quot;ciudadano_eeuu&quot;: &quot;No&quot;,
+    &quot;obligado_tributar&quot;: &quot;Sí&quot;,
+    &quot;coincidencia_listas&quot;: &quot;No&quot;,
+    &quot;procesos_cooperativa&quot;: &quot;No&quot;,
+    &quot;extraprima&quot;: &quot;No&quot;,
+    &quot;primer_apellido&quot;: &quot;Apellido1&quot;,
+    &quot;segundo_apellido&quot;: &quot;Apellido2&quot;,
+    &quot;primer_nombre&quot;: &quot;Nombre1&quot;,
+    &quot;segundo_nombre&quot;: &quot;Nombre2&quot;,
+    &quot;tipo_doc&quot;: &quot;CC&quot;,
+    &quot;pais_nacimiento&quot;: &quot;Colombia&quot;,
+    &quot;nacionalidad&quot;: &quot;Colombiana&quot;,
+    &quot;genero&quot;: &quot;Masculino&quot;,
+    &quot;estado_civil&quot;: &quot;Casado&quot;,
+    &quot;nivel_estudios&quot;: &quot;Universitario&quot;,
+    &quot;grupo_etnico&quot;: &quot;Ninguno&quot;,
+    &quot;profesion&quot;: &quot;Ingeniero&quot;,
+    &quot;ocupacion&quot;: &quot;Desarrollador&quot;,
+    &quot;clase_cliente&quot;: &quot;VIP&quot;,
+    &quot;actividad_economica&quot;: &quot;Tecnología&quot;,
+    &quot;barrio_resi&quot;: &quot;Centro&quot;,
+    &quot;estrato_resi&quot;: 4,
+    &quot;tipo_vivienda&quot;: &quot;Propia&quot;,
+    &quot;nombre_empresa&quot;: &quot;Tech Solutions&quot;,
+    &quot;punto_venta&quot;: &quot;Sucursal A&quot;,
+    &quot;tipo_contrato&quot;: &quot;Indefinido&quot;,
+    &quot;tipo_empresa&quot;: &quot;S.A.&quot;,
+    &quot;cargo_actual&quot;: &quot;Gerente&quot;,
+    &quot;cargo_politico&quot;: &quot;Ninguno&quot;,
+    &quot;nombre_ref_fam1&quot;: &quot;Referencia1&quot;,
+    &quot;parentesco_ref_fam1&quot;: &quot;Hermano&quot;,
+    &quot;nombre_ref_fam2&quot;: &quot;Referencia2&quot;,
+    &quot;parentesco_ref_fam2&quot;: &quot;Madre&quot;,
+    &quot;nombre_ref_per1&quot;: &quot;Referencia3&quot;,
+    &quot;nombre_ref_per2&quot;: &quot;Referencia4&quot;,
+    &quot;nombre_banco_cuenta&quot;: &quot;Banco ABC&quot;,
+    &quot;tipo_cuenta&quot;: &quot;Ahorros&quot;,
+    &quot;desc_otros_activos&quot;: &quot;N/A&quot;,
+    &quot;desc_otros_pasivos&quot;: &quot;N/A&quot;,
+    &quot;otros_activos_pasivos&quot;: &quot;N/A&quot;,
+    &quot;nombre_banco_ext1&quot;: &quot;Banco XYZ&quot;,
+    &quot;tipo_producto_ext1&quot;: &quot;Cuenta&quot;,
+    &quot;moneda_ext1&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext1&quot;: &quot;Nueva York&quot;,
+    &quot;pais_banco_ext1&quot;: &quot;EE.UU.&quot;,
+    &quot;nombre_banco_ext2&quot;: &quot;Banco DEF&quot;,
+    &quot;tipo_producto_ext2&quot;: &quot;Ahorros&quot;,
+    &quot;moneda_ext2&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext2&quot;: &quot;Los Ángeles&quot;,
+    &quot;pais_banco_ext2&quot;: &quot;EE.UU.&quot;,
+    &quot;calificacion_cliente&quot;: &quot;Excelente&quot;,
+    &quot;tipo_cliente_datacredito&quot;: &quot;Regular&quot;,
+    &quot;obs_originador&quot;: &quot;Observación del originador&quot;,
+    &quot;tipo_libranza&quot;: &quot;Tipo 1&quot;,
+    &quot;razon_social_originador&quot;: &quot;Originador S.A.&quot;,
+    &quot;razon_social_pagaduria&quot;: &quot;Pagaduría S.A.&quot;,
+    &quot;segmento_libranza&quot;: &quot;Segmento A&quot;,
+    &quot;razon_social_fideicomisos&quot;: &quot;Fideicomisos S.A.&quot;,
+    &quot;nombre_fideicomiso&quot;: &quot;Fideicomiso A&quot;,
+    &quot;fondeador&quot;: &quot;Fondeador A&quot;,
+    &quot;nombre_vendedor&quot;: &quot;Vendedor A&quot;,
+    &quot;oficina_asociado&quot;: &quot;Oficina 1&quot;,
+    &quot;tipo_aval&quot;: &quot;Aval A&quot;,
+    &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
+    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;
+  }
+}
+</code></pre>
+<h3 id="respuesta-success">Respuesta Success</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 3,
+    &quot;nro_documento&quot;: &quot;3234567890&quot;,
+    &quot;dir_residencia&quot;: &quot;123 Main St&quot;,
+    &quot;correo&quot;: &quot;example@example.com&quot;,
+    &quot;dir_familiar&quot;: &quot;456 Elm St&quot;,
+    &quot;dir_correspondencia&quot;: &quot;789 Maple Ave&quot;,
+    &quot;dir_empresa_labora&quot;: &quot;101 Pine Rd&quot;,
+    &quot;email_labora&quot;: &quot;work@example.com&quot;,
+    &quot;dir_ref_fam1&quot;: &quot;123 Oak St&quot;,
+    &quot;dir_ref_fam2&quot;: &quot;456 Birch St&quot;,
+    &quot;dir_ref_per1&quot;: &quot;789 Cedar St&quot;,
+    &quot;dir_ref_per2&quot;: &quot;101 Spruce St&quot;,
+    &quot;cuenta_ext1&quot;: &quot;000111222&quot;,
+    &quot;cuenta_ext2&quot;: &quot;333444555&quot;,
+    &quot;no_pagare&quot;: &quot;PG123456&quot;,
+    &quot;nro_credito&quot;: &quot;CR1234567890&quot;,
+    &quot;poliza&quot;: &quot;POL123456&quot;,
+    &quot;fecha_nacimiento&quot;: &quot;1980-01-01&quot;,
+    &quot;fecha_ingreso&quot;: &quot;2022-01-01&quot;,
+    &quot;fecha_ultima&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_ini_cargo&quot;: &quot;2022-01-01&quot;,
+    &quot;fecha_fin_cargo&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_desemb&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_nomina&quot;: &quot;2024-01-01&quot;,
+    &quot;fecha_venc_final&quot;: &quot;2024-12-31&quot;,
+    &quot;fecha_venc_cuota1&quot;: &quot;2024-01-31&quot;,
+    &quot;fecha_ing_poliza&quot;: &quot;2024-01-01&quot;,
+    &quot;clase_poliza&quot;: &quot;Clase A&quot;,
+    &quot;tipo_cliente&quot;: &quot;Tipo 1&quot;,
+    &quot;codigo_dane_exp_doc&quot;: 12345,
+    &quot;codigo_dane_nacim&quot;: 67890,
+    &quot;codigo_ciiu_cliente&quot;: 1234,
+    &quot;antig_actividad&quot;: 5,
+    &quot;codigo_dane_resid&quot;: 54321,
+    &quot;tel_fijo_resi&quot;: &quot;1234567890&quot;,
+    &quot;tel_cel&quot;: &quot;0987654321&quot;,
+    &quot;codigo_dane_dir_fam&quot;: 11223,
+    &quot;codigo_dane_dir_corr&quot;: 44556,
+    &quot;codigo_dane_dir_emp&quot;: 77889,
+    &quot;tel_fijo_ofi&quot;: &quot;1112233445&quot;,
+    &quot;ext_ofi_lab&quot;: &quot;123&quot;,
+    &quot;nro_renov_contrato&quot;: &quot;RENOV123&quot;,
+    &quot;codigo_ciiu_emp&quot;: 6789,
+    &quot;nro_personas&quot;: 4,
+    &quot;menores_18&quot;: 2,
+    &quot;codigo_dane_ref_fam1&quot;: 33445,
+    &quot;tel_ref_fam1&quot;: &quot;5566778899&quot;,
+    &quot;codigo_dane_ref_fam2&quot;: 66778,
+    &quot;tel_ref_fam2&quot;: &quot;9988776655&quot;,
+    &quot;codigo_dane_ref_per1&quot;: 88990,
+    &quot;tel_ref_per1&quot;: &quot;1122334455&quot;,
+    &quot;codigo_dane_ref_per2&quot;: 99001,
+    &quot;tel_ref_per2&quot;: &quot;2233445566&quot;,
+    &quot;nro_cuenta&quot;: 123456,
+    &quot;valor_ingreso_salario&quot;: 3000000,
+    &quot;valor_ingreso_comisiones&quot;: 500000,
+    &quot;valor_ingreso_honorarios&quot;: 1000000,
+    &quot;valor_ingresos_arrend&quot;: 200000,
+    &quot;valor_rendimientos&quot;: 150000,
+    &quot;otros_ingresos&quot;: 100000,
+    &quot;valor_total_ingresos&quot;: 6000000,
+    &quot;valor_deducciones_ley&quot;: 500000,
+    &quot;valor_otras_deducciones&quot;: 200000,
+    &quot;valor_arrend_cliente&quot;: 300000,
+    &quot;valor_cuota_credito&quot;: 1000000,
+    &quot;valor_gastos_tarjeta&quot;: 50000,
+    &quot;valor_gastos_familiares&quot;: 200000,
+    &quot;valor_gastos_sost&quot;: 50000,
+    &quot;valor_pago_otros_creditos&quot;: 150000,
+    &quot;otros_egresos&quot;: 100000,
+    &quot;valor_total_egresos&quot;: 2000000,
+    &quot;valor_activos_corrientes&quot;: 5000000,
+    &quot;valor_activos_fijos&quot;: 2000000,
+    &quot;valor_otros_activos&quot;: 1000000,
+    &quot;total_activos&quot;: 8000000,
+    &quot;valor_pasivos_financieros&quot;: 3000000,
+    &quot;valor_pasivos_corrientes&quot;: 1000000,
+    &quot;valor_otros_pasivos&quot;: 500000,
+    &quot;total_pasivos&quot;: 4500000,
+    &quot;salario&quot;: 2000000,
+    &quot;patrimonio&quot;: 3500000,
+    &quot;cupo_solicitado&quot;: 1000000,
+    &quot;monto_cuenta_ext1&quot;: 500000,
+    &quot;monto_cuenta_ext2&quot;: 200000,
+    &quot;puntaje_acierta&quot;: 800,
+    &quot;nro_cuentas_embargadas&quot;: 1,
+    &quot;nro_cuentas_canceladas&quot;: 2,
+    &quot;nro_obligaciones_mora&quot;: 3,
+    &quot;nro_obligaciones_mora_coop&quot;: 1,
+    &quot;nro_carteras_castigadas&quot;: 0,
+    &quot;nro_carteras_dudoso&quot;: 2,
+    &quot;nro_obligaciones_reestructuradas&quot;: 1,
+    &quot;nro_obligaciones_calificadas_C&quot;: 0,
+    &quot;nro_obligaciones_calificadas_D&quot;: 1,
+    &quot;nro_obligaciones_calificadas_E&quot;: 0,
+    &quot;nro_moras_30_dias&quot;: 2,
+    &quot;nro_moras_60_dias&quot;: 1,
+    &quot;nro_moras_sup_60_dias&quot;: 0,
+    &quot;nro_entidades_consulta&quot;: 3,
+    &quot;quanto_minimo&quot;: 1000000,
+    &quot;quanto_maximo&quot;: 5000000,
+    &quot;quanto_medio&quot;: 3000000,
+    &quot;sum_cuotas_creditos&quot;: 2000000,
+    &quot;sum_saldos_tdc&quot;: 1500000,
+    &quot;sum_cupos_tdc&quot;: 1000000,
+    &quot;nro_embargos_pago&quot;: 1,
+    &quot;nro_procesos_civiles&quot;: 0,
+    &quot;nit_custodia&quot;: 123456,
+    &quot;nit_originador&quot;: 654321,
+    &quot;nit_pagaduria&quot;: 112233,
+    &quot;codigo_pagaduria&quot;: 445566,
+    &quot;nit_fideicomisos&quot;: 778899,
+    &quot;codigo_fideicomiso&quot;: 990011,
+    &quot;codigo_dane_asociado&quot;: 223344,
+    &quot;valor_credito&quot;: 5000000,
+    &quot;plazo_inicial_credito&quot;: 24,
+    &quot;tasa_interes&quot;: &quot;5.25&quot;,
+    &quot;valor_aval&quot;: 1000000,
+    &quot;periodicidad&quot;: 12,
+    &quot;tasa_unica&quot;: &quot;6.5&quot;,
+    &quot;porcentaje_reserva&quot;: &quot;2.0&quot;,
+    &quot;prima_comercial&quot;: 300000,
+    &quot;no_doc_benef_grat1&quot;: 12345,
+    &quot;porc_benef_grat1&quot;: &quot;0.1&quot;,
+    &quot;no_doc_benef_grat2&quot;: 67890,
+    &quot;porc_benef_grat2&quot;: &quot;0.15&quot;,
+    &quot;tipo_entidad&quot;: &quot;Entidad A&quot;,
+    &quot;cliente_declara&quot;: &quot;Sí&quot;,
+    &quot;desempena_cargo&quot;: &quot;No&quot;,
+    &quot;manejo_recursos&quot;: &quot;Sí&quot;,
+    &quot;representa_organizacion&quot;: &quot;No&quot;,
+    &quot;cliente_es_pep&quot;: &quot;No&quot;,
+    &quot;vinculo_con_pep&quot;: &quot;N/A&quot;,
+    &quot;reconocimiento_publico&quot;: &quot;Sí&quot;,
+    &quot;posee_cuenta&quot;: &quot;Sí&quot;,
+    &quot;realiza_operaciones&quot;: &quot;Sí&quot;,
+    &quot;importaciones&quot;: &quot;No&quot;,
+    &quot;credito_documentario&quot;: &quot;Sí&quot;,
+    &quot;giros_directos&quot;: &quot;No&quot;,
+    &quot;negociacion_divisas&quot;: &quot;Sí&quot;,
+    &quot;leasing_importacion&quot;: &quot;No&quot;,
+    &quot;giros_financiados&quot;: &quot;Sí&quot;,
+    &quot;exportaciones&quot;: &quot;No&quot;,
+    &quot;inversiones&quot;: &quot;Sí&quot;,
+    &quot;venta_bienes&quot;: &quot;No&quot;,
+    &quot;honorarios_comisiones&quot;: &quot;Sí&quot;,
+    &quot;ingresos_actividad&quot;: &quot;Sí&quot;,
+    &quot;prestamo_bancario&quot;: &quot;No&quot;,
+    &quot;rifas&quot;: &quot;No&quot;,
+    &quot;pension&quot;: &quot;Sí&quot;,
+    &quot;herencia&quot;: &quot;No&quot;,
+    &quot;liq_prestaciones&quot;: &quot;Sí&quot;,
+    &quot;liq_sucesiones&quot;: &quot;No&quot;,
+    &quot;otros&quot;: &quot;N/A&quot;,
+    &quot;cuentas_moneda_ext&quot;: &quot;Sí&quot;,
+    &quot;permanencia_eeuu&quot;: &quot;No&quot;,
+    &quot;tarjeta_verde&quot;: &quot;No&quot;,
+    &quot;ingresos_fdap&quot;: &quot;No&quot;,
+    &quot;ingreso_bruto_venta&quot;: &quot;Sí&quot;,
+    &quot;ciudadano_eeuu&quot;: &quot;No&quot;,
+    &quot;obligado_tributar&quot;: &quot;Sí&quot;,
+    &quot;coincidencia_listas&quot;: &quot;No&quot;,
+    &quot;procesos_cooperativa&quot;: &quot;No&quot;,
+    &quot;extraprima&quot;: &quot;No&quot;,
+    &quot;primer_apellido&quot;: &quot;Apellido1&quot;,
+    &quot;segundo_apellido&quot;: &quot;Apellido2&quot;,
+    &quot;primer_nombre&quot;: &quot;Nombre1&quot;,
+    &quot;segundo_nombre&quot;: &quot;Nombre2&quot;,
+    &quot;tipo_doc&quot;: &quot;CC&quot;,
+    &quot;pais_nacimiento&quot;: &quot;Colombia&quot;,
+    &quot;nacionalidad&quot;: &quot;Colombiana&quot;,
+    &quot;genero&quot;: &quot;Masculino&quot;,
+    &quot;estado_civil&quot;: &quot;Casado&quot;,
+    &quot;nivel_estudios&quot;: &quot;Universitario&quot;,
+    &quot;grupo_etnico&quot;: &quot;Ninguno&quot;,
+    &quot;profesion&quot;: &quot;Ingeniero&quot;,
+    &quot;ocupacion&quot;: &quot;Desarrollador&quot;,
+    &quot;clase_cliente&quot;: &quot;VIP&quot;,
+    &quot;actividad_economica&quot;: &quot;Tecnología&quot;,
+    &quot;barrio_resi&quot;: &quot;Centro&quot;,
+    &quot;estrato_resi&quot;: &quot;4&quot;,
+    &quot;tipo_vivienda&quot;: &quot;Propia&quot;,
+    &quot;nombre_empresa&quot;: &quot;Tech Solutions&quot;,
+    &quot;punto_venta&quot;: &quot;Sucursal A&quot;,
+    &quot;tipo_contrato&quot;: &quot;Indefinido&quot;,
+    &quot;tipo_empresa&quot;: &quot;S.A.&quot;,
+    &quot;cargo_actual&quot;: &quot;Gerente&quot;,
+    &quot;cargo_politico&quot;: &quot;Ninguno&quot;,
+    &quot;nombre_ref_fam1&quot;: &quot;Referencia1&quot;,
+    &quot;parentesco_ref_fam1&quot;: &quot;Hermano&quot;,
+    &quot;nombre_ref_fam2&quot;: &quot;Referencia2&quot;,
+    &quot;parentesco_ref_fam2&quot;: &quot;Madre&quot;,
+    &quot;nombre_ref_per1&quot;: &quot;Referencia3&quot;,
+    &quot;nombre_ref_per2&quot;: &quot;Referencia4&quot;,
+    &quot;nombre_banco_cuenta&quot;: &quot;Banco ABC&quot;,
+    &quot;tipo_cuenta&quot;: &quot;Ahorros&quot;,
+    &quot;desc_otros_activos&quot;: &quot;N/A&quot;,
+    &quot;desc_otros_pasivos&quot;: &quot;N/A&quot;,
+    &quot;otros_activos_pasivos&quot;: &quot;N/A&quot;,
+    &quot;nombre_banco_ext1&quot;: &quot;Banco XYZ&quot;,
+    &quot;tipo_producto_ext1&quot;: &quot;Cuenta&quot;,
+    &quot;moneda_ext1&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext1&quot;: &quot;Nueva York&quot;,
+    &quot;pais_banco_ext1&quot;: &quot;EE.UU.&quot;,
+    &quot;nombre_banco_ext2&quot;: &quot;Banco DEF&quot;,
+    &quot;tipo_producto_ext2&quot;: &quot;Ahorros&quot;,
+    &quot;moneda_ext2&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext2&quot;: &quot;Los Ángeles&quot;,
+    &quot;pais_banco_ext2&quot;: &quot;EE.UU.&quot;,
+    &quot;calificacion_cliente&quot;: &quot;Excelente&quot;,
+    &quot;tipo_cliente_datacredito&quot;: &quot;Regular&quot;,
+    &quot;obs_originador&quot;: &quot;Observación del originador&quot;,
+    &quot;tipo_libranza&quot;: &quot;Tipo 1&quot;,
+    &quot;razon_social_originador&quot;: &quot;Originador S.A.&quot;,
+    &quot;razon_social_pagaduria&quot;: &quot;Pagaduría S.A.&quot;,
+    &quot;segmento_libranza&quot;: &quot;Segmento A&quot;,
+    &quot;razon_social_fideicomisos&quot;: &quot;Fideicomisos S.A.&quot;,
+    &quot;nombre_fideicomiso&quot;: &quot;Fideicomiso A&quot;,
+    &quot;fondeador&quot;: &quot;Fondeador A&quot;,
+    &quot;nombre_vendedor&quot;: &quot;Vendedor A&quot;,
+    &quot;oficina_asociado&quot;: &quot;Oficina 1&quot;,
+    &quot;tipo_aval&quot;: &quot;Aval A&quot;,
+    &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
+    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;,
+    &quot;created_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;,
+    &quot;updated_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;
+  }
+}
+</code></pre>
+<h3 id="respuesta-token-invalido">Respuesta Token Invalido</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Token Inválido&quot;,
+  &quot;details&quot;: &quot;Signature has expired&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuesta-campos-requeridos">Respuesta Campos Requeridos</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;Nro documento no puede estar en blanco&quot;
+  ]
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tecfinanzas_token/" class="btn btn-neutral float-left" title="SV Generación Token"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tecfinanzas_token/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
