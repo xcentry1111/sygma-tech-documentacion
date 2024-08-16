@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Integración - Documentación Sygma-Tech</title>
+    <title>Generación Token - Documentación Sygma-Tech</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Integraci\u00f3n";
-        var mkdocs_page_input_path = "tecfinanzas.md";
+        var mkdocs_page_name = "Generaci\u00f3n Token";
+        var mkdocs_page_input_path = "tecfinanzas_token.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -45,13 +45,25 @@
               </ul>
               <p class="caption"><span class="caption-text">Servicio TecFinanzas</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Integración</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../tecfinanzas/">Integración</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Generación Token</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#descripcion">Descripción</a>
+    <li class="toctree-l2"><a class="reference internal" href="#url-de-integracion">URL de Integración</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#headers">Headers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-success">Respuesta Success</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-credenciales-no-validas">Respuesta Credenciales no Validas</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-parametros-no-enviados">Respuesta Parametros no enviados</a>
+    </li>
+        </ul>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../tecfinanzas_token/">Generación Token</a>
                   </li>
               </ul>
       </div>
@@ -69,7 +81,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Servicio TecFinanzas</li>
-      <li class="breadcrumb-item active">Integración</li>
+      <li class="breadcrumb-item active">Generación Token</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -78,16 +90,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="integracion">INTEGRACIÓN</h1>
-<h2 id="descripcion">Descripción</h2>
-<p>Este servicio recibe una variedad de información en formato JSON, la cual es cargada en la plataforma <strong>TESEO</strong>. Además,
-cuenta con una validación de campos obligatorios para asegurar que el proceso se realice correctamente.</p>
+                <h1 id="generacion-token">GENERACION TOKEN</h1>
+<p><strong>Descripción:</strong> Este servicio genera un token utilizando un usuario y contraseña, lo cual permite acceder y consumir los servicios proporcionados por el software TESEO. El token tiene una validez de 1 hora; después de ese tiempo, se debe solicitar un nuevo token para continuar accediendo a los recursos.</p>
+<p><strong>Tipo de Servicio:</strong> POST</p>
+<h2 id="url-de-integracion">URL de Integración</h2>
+<ul>
+<li><strong>Prueba:</strong> <code>http://testing-sygma.com/api/login</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/login</code></li>
+</ul>
+<h2 id="headers">Headers</h2>
+<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
+<ul>
+<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
+</ul>
+<h2 id="cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</h2>
+<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
+<pre><code class="language-json">{
+  &quot;username&quot;: &quot;&quot;,  // USUARIO QUE SE VA A CONECTAR
+  &quot;password&quot;: &quot;&quot; // CONTRASEÑA DEL USUARIO QUE SE VA A CONECTAR
+}
+
+</code></pre>
+<h3 id="respuesta-success">Respuesta Success</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: true,
+  &quot;auth_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMzg1MywiZXhwIjoxNzIzODMzMDg3fQ.WlNDobuExhSO_jNWOui-HNFhVXPyGLvUs7hIuSY1f5Y&quot;,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_at&quot;: &quot;2024-08-16 18:31:27&quot;,
+  &quot;message&quot;: &quot;Generado con Exito&quot;,
+  &quot;code&quot;: 200
+}
+</code></pre>
+<h3 id="respuesta-credenciales-no-validas">Respuesta Credenciales no Validas</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Credenciales no validas&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuesta-parametros-no-enviados">Respuesta Parametros no enviados</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;username y password son requeridos&quot;,
+  &quot;code&quot;: 422
+}
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Inicio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../tecfinanzas_token/" class="btn btn-neutral float-right" title="Generación Token">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tecfinanzas/" class="btn btn-neutral float-left" title="Integración"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -110,10 +163,8 @@ cuenta con una validación de campos obligatorios para asegurar que el proceso s
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../tecfinanzas/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../tecfinanzas_token/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
