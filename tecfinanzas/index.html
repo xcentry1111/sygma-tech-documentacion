@@ -47,17 +47,23 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Integración</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#tipo-de-servicio">Tipo de Servicio</a>
+    <li class="toctree-l2"><a class="reference internal" href="#descripcion">Descripción</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generacion-de-token">Generación de Token</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#url-de-integracion">URL de Integración</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#headers">Headers</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#body-raw">Body (raw)</a>
+    <li class="toctree-l2"><a class="reference internal" href="#cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-success">Respuesta Success</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#documentos-de-prueba">Documentos de Prueba</a>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-credenciales-no-validas">Respuesta Credenciales no Validas</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#resultado">Resultado</a>
+    <li class="toctree-l3"><a class="reference internal" href="#respuesta-parametros-no-enviados">Respuesta Parametros no enviados</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -87,77 +93,52 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="integracion">INTEGRACIÓN</h1>
-<h3 id="tipo-de-servicio">Tipo de Servicio</h3>
-<p><strong>Tipo:</strong> POST</p>
-<h3 id="url-de-integracion">URL de Integración</h3>
+<h2 id="descripcion">Descripción</h2>
+<p>Este servicio recibe una variedad de información en formato JSON, la cual es cargada en la plataforma <strong>TESEO</strong>. Además, cuenta con una validación de campos obligatorios para asegurar que el proceso se realice correctamente.</p>
+<h2 id="generacion-de-token">Generación de Token</h2>
+<p><strong>Descripción:</strong> Este servicio genera un token utilizando un usuario y contraseña, lo cual permite acceder y consumir los servicios proporcionados por el software TESEO. El token tiene una validez de 1 hora; después de ese tiempo, se debe solicitar un nuevo token para continuar accediendo a los recursos.</p>
+<p><strong>Tipo de Servicio:</strong> POST</p>
+<h2 id="url-de-integracion">URL de Integración</h2>
 <ul>
-<li><strong>Prueba</strong>  http://testing-sygma.com/ws_consulta</li>
-<li><strong>Producción:</strong> https://sygma-tech.com.co/ws_consulta</li>
+<li><strong>Prueba:</strong> <code>http://testing-sygma.com/api/login</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/login</code></li>
 </ul>
-<h3 id="headers">Headers</h3>
+<h2 id="headers">Headers</h2>
+<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
 <ul>
-<li>El proceso requiere en la cabecera los siguientes datos.<ul>
-<li><strong>Accept-Type:</strong> application/json (Datos Obligatorios)</li>
-<li><strong>Portafolio:</strong> 10031 (Datos Obligatorios)</li>
-<li><strong>username:</strong> (Se envia por medio de correo electronico)</li>
-<li><strong>password:</strong> (Se envia por medio de correo electronico)</li>
+<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
 </ul>
-</li>
-</ul>
-<h3 id="body-raw">Body (raw)</h3>
-<ul>
-<li>Para el envio de la información debe ser tipo JSON.
-  <strong>Ejemplo</strong></li>
-</ul>
+<h2 id="cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</h2>
+<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
 <pre><code class="language-json">{
-  &quot;data&quot;: {
-    &quot;identificacion&quot;: &quot;39526796&quot;
-  }
+  &quot;username&quot;: &quot;&quot;,  // USUARIO QUE SE VA A CONECTAR
+  &quot;password&quot;: &quot;&quot; // CONTRASEÑA DEL USUARIO QUE SE VA A CONECTAR
+}
+
+</code></pre>
+<h3 id="respuesta-success">Respuesta Success</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: true,
+  &quot;auth_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMzg1MywiZXhwIjoxNzIzODMzMDg3fQ.WlNDobuExhSO_jNWOui-HNFhVXPyGLvUs7hIuSY1f5Y&quot;,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_at&quot;: &quot;2024-08-16 18:31:27&quot;,
+  &quot;message&quot;: &quot;Generado con Exito&quot;,
+  &quot;code&quot;: 200
 }
 </code></pre>
-<h3 id="documentos-de-prueba">Documentos de Prueba</h3>
-<pre><code class="language-html">1193029667, 1140907250, 1007218621, 79962253, 26430836, 
-1127606400, 51788258, 5884877, 78036389, 1068589463, 
-31198035, 80012453, 39526796, 1003715670, 1016061064, 
-1118305490, 13165624, 1007633666, 1120748852, 21587653, 43043364
-</code></pre>
-<h3 id="resultado">Resultado</h3>
-<ul>
-<li>Servicio que permite retornar los datos de las obligaciones de un cliente.</li>
-</ul>
+<h3 id="respuesta-credenciales-no-validas">Respuesta Credenciales no Validas</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: 200,
-  &quot;msg&quot;: &quot;Successful registration&quot;,
-  &quot;data&quot;: [
-    {
-      &quot;fecha_generacion&quot;: &quot;2023-03-28 10:17:04 -0500&quot;,
-      &quot;obligacion_colte&quot;: &quot;&quot;,
-      &quot;propietario&quot;: &quot;DFS&quot;,
-      &quot;casa_cobro&quot;: &quot;3_AYS&quot;,
-      &quot;identificacion&quot;: &quot;39526796&quot;,
-      &quot;nombre_completo&quot;: &quot;MARIA FABIOLA MUÑOZ &quot;,
-      &quot;nro_obligacion&quot;: &quot;13258477&quot;,
-      &quot;fecha_desembolso&quot;: &quot;2021-11-13&quot;,
-      &quot;clinica&quot;: &quot;PLAZA IMPERIAL&quot;,
-      &quot;originador&quot;: &quot;NEGOZIA&quot;,
-      &quot;valor_desembolsado&quot;: &quot;2956800.0&quot;,
-      &quot;tasa_corriente&quot;: &quot;25.91&quot;,
-      &quot;dias_mora&quot;: &quot;439&quot;,
-      &quot;plazo_inicial&quot;: &quot;12&quot;,
-      &quot;estado_obligacion&quot;: &quot;EN MORA&quot;,
-      &quot;cuotas_mora&quot;: &quot;11&quot;,
-      &quot;fallecido&quot;: &quot;&quot;,
-      &quot;pago_minimo&quot;: &quot;3120097.05&quot;,
-      &quot;saldo_total&quot;: &quot;3120097.05&quot;,
-      &quot;saldo_capital&quot;: &quot;0.0&quot;,
-      &quot;fch_ult_pago&quot;: &quot;2021-12-29&quot;,
-      &quot;total_recaudo&quot;: &quot;290400.0&quot;,
-      &quot;total_recaudo_mes&quot;: &quot;0.0&quot;,
-      &quot;trama&quot;: &quot;09. &gt; 360&quot;,
-      &quot;cel1&quot;: &quot;3006443103&quot;,
-      &quot;cel2&quot;: &quot;3017549691&quot;
-    }
-  ]
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Credenciales no validas&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuesta-parametros-no-enviados">Respuesta Parametros no enviados</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;username y password son requeridos&quot;,
+  &quot;code&quot;: 422
 }
 </code></pre>
               
