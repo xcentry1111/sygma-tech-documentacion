@@ -67,6 +67,8 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#descripcion-de-los-campos">Descripción de los campos</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -112,18 +114,25 @@
 <h2 id="cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</h2>
 <p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
 <h3 id="campos-obligatorios">Campos Obligatorios</h3>
-<p>-- nro_documento
--- nro_credito
--- primer_nombre
--- primer_apellido
--- tipo_doc
--- nro_documento
--- nro_credito
--- primer_nombre
--- primer_apellido
--- valor_credito
--- plazo_inicial_credito
--- tasa_intere</p>
+<ul>
+<li>
+<p>Son obligatorios para que el proceso responda correctamente</p>
+</li>
+<li>
+<p>nro_documento</p>
+</li>
+<li>nro_credito</li>
+<li>primer_nombre</li>
+<li>primer_apellido</li>
+<li>tipo_doc</li>
+<li>nro_documento</li>
+<li>nro_credito</li>
+<li>primer_nombre</li>
+<li>primer_apellido</li>
+<li>valor_credito</li>
+<li>plazo_inicial_credito</li>
+<li>tasa_intere</li>
+</ul>
 <pre><code class="language-json">{
   &quot;datostecfinanza&quot;: {
     &quot;nro_documento&quot;: &quot;3234567890&quot;,
@@ -601,6 +610,1138 @@
   ]
 }
 </code></pre>
+<h2 id="descripcion-de-los-campos">Descripción de los campos</h2>
+<table>
+<thead>
+<tr>
+<th>DESCRIPCION</th>
+<th>CAMPO</th>
+<th>Tipo Campo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Número Documento</td>
+<td>nro_documento</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección Residencia</td>
+<td>dir_residencia</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección de correo electrónico</td>
+<td>correo</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección familiar</td>
+<td>dir_familiar</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección Correspondencia</td>
+<td>dir_correspondencia</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección de la Empresa donde Labora</td>
+<td>dir_empresa_labora</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>E-mail laboral</td>
+<td>email_labora</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección Referencia Familiar 1</td>
+<td>dir_ref_fam1</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección Referencia Familiar 2</td>
+<td>dir_ref_fam2</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección Referencia Personal 1</td>
+<td>dir_ref_per1</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Dirección Referencia Personal 2</td>
+<td>dir_ref_per2</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Número de cuenta en moneda extranjera1</td>
+<td>cuenta_ext1</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Número de cuenta en moneda extranjera2</td>
+<td>cuenta_ext2</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>No. Pagaré</td>
+<td>no_pagare</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Número del Crédito</td>
+<td>nro_credito</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Póliza Palig</td>
+<td>poliza</td>
+<td>ALFANUMÉRICO</td>
+</tr>
+<tr>
+<td>Fecha Expedicion Documento</td>
+<td>fecha_expedicion_doc</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>FechaNacimiento</td>
+<td>fecha_nacimiento</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha de ingreso a la empresa</td>
+<td>fecha_ingreso</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha Última Actualización</td>
+<td>fecha_ultima</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha Inicio Cargo Politico</td>
+<td>fecha_ini_cargo</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha Fin Cargo Politico</td>
+<td>fecha_fin_cargo</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha desembolso (DD/MM/AAAA)</td>
+<td>fecha_desemb</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha Nomina (DD/MM/AAAA)</td>
+<td>fecha_nomina</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha Vencimiento Final (DD/MM/AAAA)</td>
+<td>fecha_venc_final</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha Vencimiento Cuota 1 (DD/MM/AAAA)</td>
+<td>fecha_venc_cuota1</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Fecha ingreso póliza</td>
+<td>fecha_ing_poliza</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Clase de póliza de vida</td>
+<td>clase_poliza</td>
+<td>DATE - DD/MM/AAAA</td>
+</tr>
+<tr>
+<td>Tipo de Cliente</td>
+<td>tipo_cliente</td>
+<td>INDIVIDUAL/COLECTIVA</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Expedicion Documento</td>
+<td>codigo_dane_exp_doc</td>
+<td>NATURAL/JURÍDICA</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Nacimiento</td>
+<td>codigo_dane_nacim</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código CIIU Registra Cliente</td>
+<td>codigo_ciiu_cliente</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Antigüedad Actividad Económica en meses (INDEPENDIENTE)</td>
+<td>antig_actividad</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Residencia</td>
+<td>codigo_dane_resid</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Teléfono Fijo Residencia</td>
+<td>tel_fijo_resi</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Teléfono celular</td>
+<td>tel_cel</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Dirección Familiar</td>
+<td>codigo_dane_dir_fam</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Correspondencia</td>
+<td>codigo_dane_dir_corr</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Dirección Empresa donde labora</td>
+<td>codigo_dane_dir_emp</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Teléfono Fijo Oficina donde labora</td>
+<td>tel_fijo_ofi</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Extensión Oficina donde Labora</td>
+<td>ext_ofi_lab</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Número Renovaciones Contrato Término Fijo</td>
+<td>nro_renov_contrato</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código CIIU de actividad de la empresa</td>
+<td>codigo_ciiu_emp</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de personas a cargo</td>
+<td>nro_personas</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Personas a cargo menores de 18 años</td>
+<td>menores_18</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Dirección Referencia Familiar 1</td>
+<td>codigo_dane_ref_fam1</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Teléfono Referencia Familiar 1</td>
+<td>tel_ref_fam1</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Dirección Referencia Familiar 2</td>
+<td>codigo_dane_ref_fam2</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Teléfono Referencia Familiar 2</td>
+<td>tel_ref_fam2</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Dirección Referencia Personal 1</td>
+<td>codigo_dane_ref_per1</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Teléfono Referencia Personal 1</td>
+<td>tel_ref_per1</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Dirección Referencia Personal 2</td>
+<td>codigo_dane_ref_per2</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Teléfono Referencia Personal 2</td>
+<td>tel_ref_per2</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Número Cuenta Bancaria</td>
+<td>nro_cuenta</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Ingreso / Salario FIJO Mensual</td>
+<td>valor_ingreso_salario</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Ingreso por Comisiones Mensual</td>
+<td>valor_ingreso_comisiones</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Ingresos por Honorarios Mensual</td>
+<td>valor_ingreso_honorarios</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Ingresos por Arrendamientos Mensual</td>
+<td>valor_ingresos_arrend</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Rendimientos Financieros Mensuales</td>
+<td>valor_rendimientos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Otros ingresos Mensuales</td>
+<td>otros_ingresos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Total Ingresos Mes</td>
+<td>valor_total_ingresos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Deducciones de ley mes</td>
+<td>valor_deducciones_ley</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Otras deducciones nómina mes</td>
+<td>valor_otras_deducciones</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Arrendamiento cliente mes</td>
+<td>valor_arrend_cliente</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Cuota Crédito de vivienda cliente mes</td>
+<td>valor_cuota_credito</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Gastos por Tarjeta Crédito cliente mes</td>
+<td>valor_gastos_tarjeta</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Gastos Familiares cliente mes</td>
+<td>valor_gastos_familiares</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Gastos de sostenimiento cliente mes</td>
+<td>valor_gastos_sost</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Pago Otros Créditos cliente mes</td>
+<td>valor_pago_otros_creditos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Otros egresos cliente mes</td>
+<td>otros_egresos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Total egresos cliente mes</td>
+<td>valor_total_egresos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Activos Corrientes</td>
+<td>valor_activos_corrientes</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Activos Fijos</td>
+<td>valor_activos_fijos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Otros Activos</td>
+<td>valor_otros_activos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Total activos</td>
+<td>total_activos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Pasivos Financieros (deudas financieras)</td>
+<td>valor_pasivos_financieros</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Pasivos Corrientes</td>
+<td>valor_pasivos_corrientes</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Otros Pasivos</td>
+<td>valor_otros_pasivos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Total pasivos</td>
+<td>total_pasivos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Salario*</td>
+<td>salario</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Patrimonio*</td>
+<td>patrimonio</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Cupo Solicitado</td>
+<td>cupo_solicitado</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Monto cuenta en moneda extranjera1</td>
+<td>monto_cuenta_ext1</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Monto cuenta en moneda extranjera2</td>
+<td>monto_cuenta_ext2</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Puntaje Acierta Deudor</td>
+<td>puntaje_acierta</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de cuentas  embargadas</td>
+<td>nro_cuentas_embargadas</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de cuentas  canceladas por mal manejo</td>
+<td>nro_cuentas_canceladas</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de obligaciones en mora</td>
+<td>nro_obligaciones_mora</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de obligaciones en mora (Sector cooperativo)</td>
+<td>nro_obligaciones_mora_coop</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de carteras castigadas (Sector financiero o cooperativo)</td>
+<td>nro_carteras_castigadas</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de carteras  en dudoso recaudo</td>
+<td>nro_carteras_dudoso</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de obligaciones reestructuradas</td>
+<td>nro_obligaciones_reestructuradas</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de obligaciones calificadas en "C" (Sector financiero)</td>
+<td>nro_obligaciones_calificadas_C</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de obligaciones calificadas en "D" (Sector financiero)</td>
+<td>nro_obligaciones_calificadas_D</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de obligaciones calificadas en "E" (Sector financiero)</td>
+<td>nro_obligaciones_calificadas_E</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Número moras de 30 días en los últimos 12 meses</td>
+<td>nro_moras_30_dias</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Número moras de 60 días en los últimos 12 meses</td>
+<td>nro_moras_60_dias</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Número moras superiores a 60 días en los últimos 12 meses</td>
+<td>nro_moras_sup_60_dias</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. entidades (financieras y cooperativas) que consultan últimos 6 meses</td>
+<td>nro_entidades_consulta</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Quanto mínimo ($)</td>
+<td>quanto_minimo</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Quanto máximo ($)</td>
+<td>quanto_maximo</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Quanto medio ($)</td>
+<td>quanto_medio</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>∑ Cuotas créditos de consumo (sin incluir TDC, CBR ni CAV) Centrales de Riesgo</td>
+<td>sum_cuotas_creditos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>∑ Saldos TDC y CBR Centrales de Riesgo</td>
+<td>sum_saldos_tdc</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>∑ Cupos TDC y CBR Centrales de Riesgo</td>
+<td>sum_cupos_tdc</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No. de embargos en desprendible de pago</td>
+<td>nro_embargos_pago</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>N° de procesos civiles en contra en curso</td>
+<td>nro_procesos_civiles</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>NIT Custodia Pagaré</td>
+<td>nit_custodia</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>NIT Originador</td>
+<td>nit_originador</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>NIT Pagaduría</td>
+<td>nit_pagaduria</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código Pagaduría</td>
+<td>codigo_pagaduria</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>NIT Fideicomisos</td>
+<td>nit_fideicomisos</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código Fideicomiso</td>
+<td>codigo_fideicomiso</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Código DANE Ciudad Asociado</td>
+<td>codigo_dane_asociado</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor Crédito Aprobado ($)</td>
+<td>valor_credito</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Plazo inicial crédito (meses)</td>
+<td>plazo_inicial_credito</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Tasa Interés Colocación E.A.</td>
+<td>tasa_interes</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Valor AVAL</td>
+<td>valor_aval</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Períodicidad</td>
+<td>periodicidad</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Tasa Unica %</td>
+<td>tasa_unica</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Porcentaje de reserva</td>
+<td>porcentaje_reserva</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Prima Comercial</td>
+<td>prima_comercial</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No de documento beneficiario gratuito 1</td>
+<td>no_doc_benef_grat1</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>% Beneficiario gratuito 1</td>
+<td>porc_benef_grat1</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>No de documento beneficiario gratuito 2</td>
+<td>no_doc_benef_grat2</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>% Beneficiario gratuito 2</td>
+<td>porc_benef_grat2</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Tipo Entidad Pagaduría</td>
+<td>tipo_entidad</td>
+<td>NUMÉRICO</td>
+</tr>
+<tr>
+<td>Cliente Declara Renta</td>
+<td>cliente_declara</td>
+<td>PÚBLiCA/PRIVADA</td>
+</tr>
+<tr>
+<td>¿Actualmente Desempeña un cargo político?</td>
+<td>desempena_cargo</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Manejo de recursos públicos</td>
+<td>manejo_recursos</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>¿Representa legalmente alguna organización internacional (ONG/OIG)?</td>
+<td>representa_organizacion</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Cliente es PEP</td>
+<td>cliente_es_pep</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>¿Tiene algún vinculo con un PEP ?</td>
+<td>vinculo_con_pep</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Reconocimiento público</td>
+<td>reconocimiento_publico</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Posee Cuenta Bancaria</td>
+<td>posee_cuenta</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Realiza operaciones en moneda extranjera</td>
+<td>realiza_operaciones</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Importaciones**</td>
+<td>importaciones</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Crédito documentario**</td>
+<td>credito_documentario</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Giros directos**</td>
+<td>giros_directos</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Negociación de divisas**</td>
+<td>negociacion_divisas</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Leasing de importación**</td>
+<td>leasing_importacion</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Giros financiados**</td>
+<td>giros_financiados</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Exportaciones**</td>
+<td>exportaciones</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Inversiones**</td>
+<td>inversiones</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Venta de bienes*</td>
+<td>venta_bienes</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Honorarios y comisiones*</td>
+<td>honorarios_comisiones</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Ingresos por actividad*</td>
+<td>ingresos_actividad</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Préstamo bancario*</td>
+<td>prestamo_bancario</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Rifas*</td>
+<td>rifas</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Pensión*</td>
+<td>pension</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Herencia*</td>
+<td>herencia</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Liquidación de prestaciones*</td>
+<td>liq_prestaciones</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Liquidación de sucesiones*</td>
+<td>liq_sucesiones</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Otros*</td>
+<td>otros</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Tiene cuentas en moneda extranjera</td>
+<td>cuentas_moneda_ext</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>He permanecido 31 días o más durante el año en curso o 183 días durante un periodo de 3 años, que incluye el año en curso y los dos años inmediatamente anteriores dentro del territorio de los Estados Unidos</td>
+<td>permanencia_eeuu</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Soy poseedor de la tarjeta verde(Green Card) de los estados unidos de NorteamErica(Tarjeta de residencia)</td>
+<td>tarjeta_verde</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Recibo sumas de dinero fijas u ocasionales(FDAP) que provienen de fuentes dentro de los Estados Unidos de Norteamérica)</td>
+<td>ingresos_fdap</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Recibo ingreso bruto procedente de la venta u otra disposición de cualquier propiedad que pueda producir rentas intereses o dividendos cuya fuente se encuentre dentro de los estados unidos de Norteamérica</td>
+<td>ingreso_bruto_venta</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Soy ciudadano de los Estados Unidos residente en Colombia</td>
+<td>ciudadano_eeuu</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Estoy obligado a tributar en Estados Unidos</td>
+<td>obligado_tributar</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>¿Coincidencia en listas de control? (No, Listas)</td>
+<td>coincidencia_listas</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Procesos en contra en curso con Cooperativa o Demanda por Alimentos (Sí/No)</td>
+<td>procesos_cooperativa</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Extraprima</td>
+<td>extraprima</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Primer apellido</td>
+<td>primer_apellido</td>
+<td>SI/NO</td>
+</tr>
+<tr>
+<td>Segundo apellido</td>
+<td>segundo_apellido</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Primer nombre</td>
+<td>primer_nombre</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Segundo nombre</td>
+<td>segundo_nombre</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo de documento</td>
+<td>tipo_doc</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Pais Nacimiento</td>
+<td>pais_nacimiento</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nacionalidad</td>
+<td>nacionalidad</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Género</td>
+<td>genero</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Estado Civil</td>
+<td>estado_civil</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nivel de Estudios</td>
+<td>nivel_estudios</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Grupo étnico</td>
+<td>grupo_etnico</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Profesiòn</td>
+<td>profesion</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Ocupación</td>
+<td>ocupacion</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Clase de Cliente</td>
+<td>clase_cliente</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Actividad Económica (INDEPENDIENTES)</td>
+<td>actividad_economica</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Barrio Residencia</td>
+<td>barrio_resi</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Estrato Residencia</td>
+<td>estrato_resi</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo de vivienda Residencia</td>
+<td>tipo_vivienda</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre empresa donde labora</td>
+<td>nombre_empresa</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Punto de Venta donde labora</td>
+<td>punto_venta</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo de contrato</td>
+<td>tipo_contrato</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo de empresa</td>
+<td>tipo_empresa</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Cargo Actual en la empresa</td>
+<td>cargo_actual</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>¿Cuál Cargo Politico Desempeña?</td>
+<td>cargo_politico</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre Referencia Familiar 1</td>
+<td>nombre_ref_fam1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Parentesco Referencia Familiar 1</td>
+<td>parentesco_ref_fam1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre Referencia Familiar 2</td>
+<td>nombre_ref_fam2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Parentesco Referencia Familiar 2</td>
+<td>parentesco_ref_fam2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre Referencia Personal 1</td>
+<td>nombre_ref_per1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre Referencia Personal 2</td>
+<td>nombre_ref_per2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre Banco Cuenta Bancaria</td>
+<td>nombre_banco_cuenta</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo de Cuenta Bancaria</td>
+<td>tipo_cuenta</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Desripción Otros Activos</td>
+<td>desc_otros_activos</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Descripción Otros Pasivos</td>
+<td>desc_otros_pasivos</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Otros**</td>
+<td>otros_activos_pasivos</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre del banco donde tiene cuenta en moneda extranjera1</td>
+<td>nombre_banco_ext1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo producto en moneda extranjera1</td>
+<td>tipo_producto_ext1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Moneda extranjera1</td>
+<td>moneda_ext1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Ciudad del banco donde tiene cuenta en moneda extranjera1</td>
+<td>ciudad_banco_ext1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>País donde posee cuenta en moneda extranjera1</td>
+<td>pais_banco_ext1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre del banco donde tiene cuenta en moneda extranjera2</td>
+<td>nombre_banco_ext2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo producto en moneda extranjera2</td>
+<td>tipo_producto_ext2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Moneda extranjera2</td>
+<td>moneda_ext2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Ciudad del banco donde tiene cuenta en moneda extranjera2</td>
+<td>ciudad_banco_ext2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>País donde posee cuenta en moneda extranjera2</td>
+<td>pais_banco_ext2</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Calificación del Cliente</td>
+<td>calificacion_cliente</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo Cliente Datacredito</td>
+<td>tipo_cliente_datacredito</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Observaciones Originador</td>
+<td>obs_originador</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo de libranza</td>
+<td>tipo_libranza</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Razón Social Originador</td>
+<td>razon_social_originador</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Razón Social Pagaduria</td>
+<td>razon_social_pagaduria</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Segmenteo Libranza</td>
+<td>segmento_libranza</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Razón Social Fideicomisos</td>
+<td>razon_social_fideicomisos</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre Fideicomiso</td>
+<td>nombre_fideicomiso</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Fondeador</td>
+<td>fondeador</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Nombre Vendedor</td>
+<td>nombre_vendedor</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Oficina Asociado</td>
+<td>oficina_asociado</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Tipo de AVAL</td>
+<td>tipo_aval</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Beneficiario gratuito 1</td>
+<td>benef_grat1</td>
+<td>TEXTO</td>
+</tr>
+<tr>
+<td>Beneficiario gratuito 2</td>
+<td>benef_grat2</td>
+<td>TEXTO</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
