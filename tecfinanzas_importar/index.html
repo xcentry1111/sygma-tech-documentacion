@@ -359,7 +359,28 @@
     &quot;oficina_asociado&quot;: &quot;Oficina 1&quot;,
     &quot;tipo_aval&quot;: &quot;Aval A&quot;,
     &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
-    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;
+    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;,
+    &quot;cuotas_credito&quot;: 0.00,
+    &quot;cuota_cupo_tdc&quot;: 0.00,
+    &quot;cuota_cupo_rota&quot;: 0.00,
+    &quot;gastos_familiares_pensionado&quot;: 0.00,
+    &quot;gastos_familiares_activo&quot;: 0.00,
+    &quot;tasa_usura_ultimos_meses&quot;: 0.00,
+    &quot;gastos_financieros&quot;: 0.00,
+    &quot;porcent_endeudamiento&quot;: 0.00,
+    &quot;gastos_familiaries&quot;: 200000.00,
+    &quot;int_anticipado&quot;: 2844734.00,
+    &quot;p_patrimonial&quot;: 7937316.00,
+    &quot;valor_prestamo_sin_c&quot;: 0.00,
+    &quot;valor_prestamo_sin_r&quot;: 0.00,
+    &quot;valor_prestamo_sin_cc&quot;: 0.00,
+    &quot;total_oblm_sf&quot;: 0.00,
+    &quot;total_oblm_mayor_7&quot;: 0.00,
+    &quot;total_obl_castigadas_mayor_15&quot;: 0.00,
+    &quot;total_oblm_mayor_90&quot;: 0.00,
+    &quot;total_deuda_sf&quot;: 0.00,
+    &quot;total_deuda_sc&quot;: 0.00,
+    &quot;total_deuda_sr&quot;: 0.00
   }
 }
 </code></pre>
@@ -592,6 +613,27 @@
     &quot;tipo_aval&quot;: &quot;Aval A&quot;,
     &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
     &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;,
+    &quot;cuotas_credito&quot;: 0.00,
+    &quot;cuota_cupo_tdc&quot;: 0.00,
+    &quot;cuota_cupo_rota&quot;: 0.00,
+    &quot;gastos_familiares_pensionado&quot;: 0.00,
+    &quot;gastos_familiares_activo&quot;: 0.00,
+    &quot;tasa_usura_ultimos_meses&quot;: 0.00,
+    &quot;gastos_financieros&quot;: 0.00,
+    &quot;porcent_endeudamiento&quot;: 0.00,
+    &quot;gastos_familiaries&quot;: 200000.00,
+    &quot;int_anticipado&quot;: 2844734.00,
+    &quot;p_patrimonial&quot;: 7937316.00,
+    &quot;valor_prestamo_sin_c&quot;: 0.00,
+    &quot;valor_prestamo_sin_r&quot;: 0.00,
+    &quot;valor_prestamo_sin_cc&quot;: 0.00,
+    &quot;total_oblm_sf&quot;: 0.00,
+    &quot;total_oblm_mayor_7&quot;: 0.00,
+    &quot;total_obl_castigadas_mayor_15&quot;: 0.00,
+    &quot;total_oblm_mayor_90&quot;: 0.00,
+    &quot;total_deuda_sf&quot;: 0.00,
+    &quot;total_deuda_sc&quot;: 0.00,
+    &quot;total_deuda_sr&quot;: 0.00,
     &quot;created_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;,
     &quot;updated_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;
   }
@@ -1742,6 +1784,111 @@
 <td>Beneficiario gratuito 2</td>
 <td>benef_grat2</td>
 <td>TEXTO</td>
+</tr>
+<tr>
+<td>cuotas_credito</td>
+<td>Cuotas Crédito</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>cuota_cupo_tdc</td>
+<td>Cuota Cupo TDC</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>cuota_cupo_rota</td>
+<td>Cuota Cupo ROTA</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>gastos_familiares_pensionado</td>
+<td>Gastos Familiares Pensionado</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>gastos_familiares_activo</td>
+<td>Gastos Familiares Activo</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>tasa_usura_ultimos_meses</td>
+<td>Tasa Usura Últimos Meses</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>gastos_financieros</td>
+<td>Gastos Financieros</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>porcent_endeudamiento</td>
+<td>% Endeudamiento</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>gastos_familiaries</td>
+<td>Gastos Familiares</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>int_anticipado</td>
+<td>Int Anticipado</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>p_patrimonial</td>
+<td>Ppatrimonial</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>valor_prestamo_sin_c</td>
+<td>Valor Préstamos Diferentes a Coomeva (Financiero)</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>valor_prestamo_sin_r</td>
+<td>Valor Préstamos Diferentes a Coomeva (Real)</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>valor_prestamo_sin_cc</td>
+<td>Valor Préstamos Diferentes a Coomeva (Cooperativa)</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>total_oblm_sf</td>
+<td>Total Obligaciones en Mora Sector Financiero</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>total_oblm_mayor_7</td>
+<td>Total Obligaciones &gt; Saldo Cartera a 7 millones Sector Financiero</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>total_obl_castigadas_mayor_15</td>
+<td>Total Obligaciones Castigadas &gt; Saldo Cartera a 15 millones Sector Financiero</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>total_oblm_mayor_90</td>
+<td>Total Moras =&gt; 90 días Todos los Sectores</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>total_deuda_sf</td>
+<td>Total Endeudamiento Sector Financiero (Suma de Saldos)</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>total_deuda_sc</td>
+<td>Total Endeudamiento Sector Cooperativo (Suma de Saldos)</td>
+<td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>total_deuda_sr</td>
+<td>Total Endeudamiento Sector Real (Suma de Saldos)</td>
+<td>NUMERICO(2)</td>
 </tr>
 </tbody>
 </table>
