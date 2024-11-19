@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Integración - Documentación Sygma-Tech</title>
+    <title>SERVICIO PARA ACTUALIZAR DATOS - Documentación Sygma-Tech</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Integraci\u00f3n";
-        var mkdocs_page_input_path = "tecfinanzas.md";
+        var mkdocs_page_name = "SERVICIO PARA ACTUALIZAR DATOS";
+        var mkdocs_page_input_path = "tecfinanzas_actualizar.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,12 +44,8 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Servicio TecFinanzas</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Integración</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#descripcion">Descripción</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tecfinanzas/">Integración</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../tecfinanzas_token/">SV Generación Token</a>
                   </li>
@@ -72,8 +68,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Servicio TecFinanzas</li>
-      <li class="breadcrumb-item active">Integración</li>
+      <li class="breadcrumb-item active">SERVICIO PARA ACTUALIZAR DATOS</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -82,17 +77,74 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="integracion">INTEGRACIÓN</h1>
-<h2 id="descripcion">Descripción</h2>
-<p>Este servicio recibe una variedad de información en formato JSON, la cual es cargada en la plataforma <strong>TESEO</strong>. Además,
-cuenta con una validación de campos obligatorios para asegurar que el proceso se realice correctamente.</p>
+                <h1 id="servicio-para-actualizar-datos">SERVICIO PARA ACTUALIZAR DATOS</h1>
+<p><strong>Descripción:</strong> Este servicio permite recibir los 8 parametros para el proceso de la actualizacion del credito.</p>
+<p><strong>Tipo de Servicio:</strong> POST</p>
+<h2 id="url-de-integracion">URL de Integración</h2>
+<ul>
+<li><strong>Prueba:</strong> <code>http://testing-sygma.com/api/tecfinanzas/update_datos</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/tecfinanzas/update_datos</code></li>
+</ul>
+<h2 id="headers">Headers</h2>
+<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
+<ul>
+<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
+</ul>
+<h2 id="cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</h2>
+<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
+<h3 id="campos-obligatorios">Campos Obligatorios</h3>
+<pre><code class="language-json">{
+  &quot;datostecfinanza&quot;: {
+      &quot;tipo_servicio&quot;: &quot;UPDATE&quot;, // Tipo de servicio que esta ejecutanto
+      &quot;no_pagare&quot;: &quot;PG123456&quot;, // No. Pagaré
+      &quot;nro_credito&quot;: &quot;CR1234567890&quot;, // Número del Crédito
+      &quot;nit_pagaduria&quot;: 112233, // NIT Pagaduría
+      &quot;fecha_desemb&quot;: &quot;2024-01-01&quot;, // Fecha desembolso (DD/MM/AAAA)
+      &quot;valor_credito&quot;: 5000000, // Valor Crédito Aprobado ($)
+      &quot;plazo_inicial_credito&quot;: 24, // Plazo inicial crédito (meses)
+      &quot;tasa_interes&quot;: 5.25, // Tasa Interés Colocación Mes V
+      &quot;prima_comercial&quot;: 300000 // Prima Comercial
+  }
+}
+</code></pre>
+<h3 id="respuesta-success">Respuesta Success</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;data&quot;: {
+      &quot;Id&quot;: 3,
+      &quot;tipo_servicio&quot;: &quot;UPDATE&quot;, // Tipo de servicio que esta ejecutanto
+      &quot;no_pagare&quot;: &quot;PG123456&quot;, // No. Pagaré
+      &quot;nro_credito&quot;: &quot;CR1234567890&quot;, // Número del Crédito
+      &quot;nit_pagaduria&quot;: 112233, // NIT Pagaduría
+      &quot;fecha_desemb&quot;: &quot;2024-01-01&quot;, // Fecha desembolso (DD/MM/AAAA)
+      &quot;valor_credito&quot;: 5000000, // Valor Crédito Aprobado ($)
+      &quot;plazo_inicial_credito&quot;: 24, // Plazo inicial crédito (meses)
+      &quot;tasa_interes&quot;: 5.25, // Tasa Interés Colocación Mes V
+      &quot;prima_comercial&quot;: 300000 // Prima Comercial
+  }
+}
+</code></pre>
+<h3 id="respuesta-token-invalido">Respuesta Token Invalido</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Token Inválido&quot;,
+  &quot;details&quot;: &quot;Signature has expired&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuesta-campos-requeridos">Respuesta Campos Requeridos</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;Nro documento no puede estar en blanco&quot;
+  ]
+}
+</code></pre>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Inicio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../tecfinanzas_token/" class="btn btn-neutral float-right" title="SV Generación Token">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -114,10 +166,6 @@ cuenta con una validación de campos obligatorios para asegurar que el proceso s
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../tecfinanzas_token/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
