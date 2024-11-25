@@ -121,10 +121,10 @@
 <p>Son obligatorios para que el proceso responda correctamente</p>
 </li>
 <li>
-<p>nro_documento</p>
+<p>nro_documento,</p>
 </li>
-<li>nro_credito</li>
-<li>primer_nombre</li>
+<li>nro_credito,</li>
+<li>primer_nombre,</li>
 <li>primer_apellido</li>
 <li>tipo_doc</li>
 <li>valor_credito</li>
@@ -132,6 +132,13 @@
 <li>fecha_desemb</li>
 <li>tasa_interes</li>
 <li>prima_comercial</li>
+<li>no_pagare</li>
+<li>nit_originador</li>
+<li>nit_fideicomisos</li>
+<li>nit_pagaduria</li>
+<li>tipo_libranza</li>
+<li>sector_empresa</li>
+<li>segmento_libranza</li>
 </ul>
 <pre><code class="language-json">{
   &quot;datostecfinanza&quot;: {
@@ -379,7 +386,8 @@
     &quot;total_oblm_mayor_90&quot;: 0.00,
     &quot;total_deuda_sf&quot;: 0.00,
     &quot;total_deuda_sc&quot;: 0.00,
-    &quot;total_deuda_sr&quot;: 0.00
+    &quot;total_deuda_sr&quot;: 0.00,
+    &quot;sector_empresa&quot;: &quot;Sector Empresa&quot;
   }
 }
 </code></pre>
@@ -633,6 +641,7 @@
     &quot;total_deuda_sf&quot;: 0.00,
     &quot;total_deuda_sc&quot;: 0.00,
     &quot;total_deuda_sr&quot;: 0.00,
+    &quot;sector_empresa&quot;: &quot;Sector Empresa&quot;,
     &quot;created_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;,
     &quot;updated_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;
   }
@@ -1888,6 +1897,11 @@
 <td>total_deuda_sr</td>
 <td>Total Endeudamiento Sector Real (Suma de Saldos)</td>
 <td>NUMERICO(2)</td>
+</tr>
+<tr>
+<td>sector_empresa</td>
+<td>Sector de la Empresa a la que pertenece</td>
+<td>TEXTO</td>
 </tr>
 </tbody>
 </table>
