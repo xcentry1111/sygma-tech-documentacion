@@ -387,7 +387,8 @@
     &quot;total_deuda_sf&quot;: 0.00,
     &quot;total_deuda_sc&quot;: 0.00,
     &quot;total_deuda_sr&quot;: 0.00,
-    &quot;sector_empresa&quot;: &quot;Sector Empresa&quot;
+    &quot;sector_empresa&quot;: &quot;Sector Empresa&quot;,
+    &quot;valor_cuota_total&quot;: 200000.00
   }
 }
 </code></pre>
@@ -642,6 +643,7 @@
     &quot;total_deuda_sc&quot;: 0.00,
     &quot;total_deuda_sr&quot;: 0.00,
     &quot;sector_empresa&quot;: &quot;Sector Empresa&quot;,
+    &quot;valor_cuota_total&quot;: 200000.00,
     &quot;created_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;,
     &quot;updated_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;
   }
@@ -1794,73 +1796,73 @@
 <td>TEXTO</td>
 </tr>
 <tr>
-<td>cuotas_credito</td>
 <td>Cuotas Crédito</td>
+<td>cuotas_credito</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>cuota_cupo_tdc</td>
 <td>Cuota Cupo TDC</td>
+<td>cuota_cupo_tdc</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>cuota_cupo_rota</td>
 <td>Cuota Cupo ROTA</td>
+<td>cuota_cupo_rota</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>gastos_familiares_pensionado</td>
 <td>Gastos Familiares Pensionado</td>
+<td>gastos_familiares_pensionado</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>gastos_familiares_activo</td>
 <td>Gastos Familiares Activo</td>
+<td>gastos_familiares_activo</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>tasa_usura_ultimos_meses</td>
 <td>Tasa Usura Últimos Meses</td>
+<td>tasa_usura_ultimos_meses</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>gastos_financieros</td>
 <td>Gastos Financieros</td>
+<td>gastos_financieros</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>porcent_endeudamiento</td>
 <td>% Endeudamiento</td>
+<td>porcent_endeudamiento</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>gastos_familiaries</td>
 <td>Gastos Familiares</td>
+<td>gastos_familiaries</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
+<td>Valor total intereses anticipados</td>
 <td>int_anticipado</td>
-<td>Int Anticipado</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>p_patrimonial</td>
 <td>Ppatrimonial</td>
+<td>p_patrimonial</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>valor_prestamo_sin_c</td>
 <td>Valor Préstamos Diferentes a Coomeva (Financiero)</td>
+<td>valor_prestamo_sin_c</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>valor_prestamo_sin_r</td>
 <td>Valor Préstamos Diferentes a Coomeva (Real)</td>
+<td>valor_prestamo_sin_r</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
-<td>valor_prestamo_sin_cc</td>
 <td>Valor Préstamos Diferentes a Coomeva (Cooperativa)</td>
+<td>valor_prestamo_sin_cc</td>
 <td>NUMERICO(2)</td>
 </tr>
 <tr>
@@ -1902,6 +1904,11 @@
 <td>sector_empresa</td>
 <td>Sector de la Empresa a la que pertenece</td>
 <td>TEXTO</td>
+</tr>
+<tr>
+<td>valor_cuota_total</td>
+<td>Valor de la cuota que debe de pagar el duedor (incluye seguros y avales)</td>
+<td>NUMERICO(2)</td>
 </tr>
 </tbody>
 </table>
