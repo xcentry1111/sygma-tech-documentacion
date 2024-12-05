@@ -592,24 +592,23 @@
 <p>Son obligatorios para que el proceso responda correctamente</p>
 </li>
 <li>
-<p>nro_documento,</p>
+<p>nro_documento</p>
 </li>
-<li>nro_credito,</li>
-<li>primer_nombre,</li>
-<li>primer_apellido</li>
-<li>tipo_doc</li>
-<li>valor_credito</li>
-<li>plazo_inicial_credito</li>
-<li>fecha_desemb</li>
-<li>tasa_interes</li>
-<li>prima_comercial</li>
 <li>no_pagare</li>
+<li>fecha_desemb</li>
+<li>tipo_libranza </li>
+<li>segmento_libranza </li>
 <li>nit_originador</li>
-<li>nit_fideicomisos</li>
 <li>nit_pagaduria</li>
-<li>tipo_libranza</li>
-<li>sector_empresa</li>
-<li>segmento_libranza</li>
+<li>nit_fideicomisos</li>
+<li>valor_desembolso</li>
+<li>plazo_inicial_credito</li>
+<li>tasa_interes</li>
+<li>valor_aval</li>
+<li>tipo_entidad</li>
+<li>primer_apellido</li>
+<li>primer_nombre</li>
+<li>tipo_doc</li>
 </ul>
 <pre><code class="language-json">{
   &quot;datostecfinanza&quot;: {
@@ -621,13 +620,11 @@
     &quot;dir_empresa_labora&quot;: &quot;101 Pine Rd&quot;,
     &quot;email_labora&quot;: &quot;work@example.com&quot;,
     &quot;dir_ref_fam1&quot;: &quot;123 Oak St&quot;,
-    &quot;dir_ref_fam2&quot;: &quot;456 Birch St&quot;,
     &quot;dir_ref_per1&quot;: &quot;789 Cedar St&quot;,
-    &quot;dir_ref_per2&quot;: &quot;101 Spruce St&quot;,
     &quot;cuenta_ext1&quot;: &quot;000111222&quot;,
     &quot;cuenta_ext2&quot;: &quot;333444555&quot;,
     &quot;no_pagare&quot;: &quot;PG123456&quot;,
-    &quot;nro_credito&quot;: &quot;CR1234567890&quot;,
+    &quot;nro_solicitud&quot;: &quot;CR1234567890&quot;,
     &quot;poliza&quot;: &quot;POL123456&quot;,
     &quot;fecha_expedicion_doc&quot;: &quot;1980-01-01&quot;,
     &quot;fecha_nacimiento&quot;: &quot;1980-01-01&quot;,
@@ -636,9 +633,6 @@
     &quot;fecha_ini_cargo&quot;: &quot;2022-01-01&quot;,
     &quot;fecha_fin_cargo&quot;: &quot;2024-01-01&quot;,
     &quot;fecha_desemb&quot;: &quot;2024-01-01&quot;,
-    &quot;fecha_nomina&quot;: &quot;2024-01-01&quot;,
-    &quot;fecha_venc_final&quot;: &quot;2024-12-31&quot;,
-    &quot;fecha_venc_cuota1&quot;: &quot;2024-01-31&quot;,
     &quot;fecha_ing_poliza&quot;: &quot;2024-01-01&quot;,
     &quot;clase_poliza&quot;: &quot;Clase A&quot;,
     &quot;tipo_cliente&quot;: &quot;Tipo 1&quot;,
@@ -655,17 +649,12 @@
     &quot;tel_fijo_ofi&quot;: &quot;1112233445&quot;,
     &quot;ext_ofi_lab&quot;: &quot;123&quot;,
     &quot;nro_renov_contrato&quot;: &quot;RENOV123&quot;,
-    &quot;codigo_ciiu_emp&quot;: 6789,
     &quot;nro_personas&quot;: 4,
     &quot;menores_18&quot;: 2,
     &quot;codigo_dane_ref_fam1&quot;: 33445,
     &quot;tel_ref_fam1&quot;: &quot;5566778899&quot;,
-    &quot;codigo_dane_ref_fam2&quot;: 66778,
-    &quot;tel_ref_fam2&quot;: &quot;9988776655&quot;,
     &quot;codigo_dane_ref_per1&quot;: 88990,
     &quot;tel_ref_per1&quot;: &quot;1122334455&quot;,
-    &quot;codigo_dane_ref_per2&quot;: 99001,
-    &quot;tel_ref_per2&quot;: &quot;2233445566&quot;,
     &quot;nro_cuenta&quot;: 123456,
     &quot;valor_ingreso_salario&quot;: 3000000,
     &quot;valor_ingreso_comisiones&quot;: 500000,
@@ -692,12 +681,51 @@
     &quot;valor_pasivos_corrientes&quot;: 1000000,
     &quot;valor_otros_pasivos&quot;: 500000,
     &quot;total_pasivos&quot;: 4500000,
-    &quot;salario&quot;: 2000000,
     &quot;patrimonio&quot;: 3500000,
-    &quot;cupo_solicitado&quot;: 1000000,
+    &quot;monto_solicitado&quot;: 1000000,
     &quot;monto_cuenta_ext1&quot;: 500000,
     &quot;monto_cuenta_ext2&quot;: 200000,
     &quot;puntaje_acierta&quot;: 800,
+    &quot;barrio_resi&quot;: &quot;Centro&quot;,
+    &quot;estrato_resi&quot;: 4,
+    &quot;tipo_vivienda&quot;: &quot;Propia&quot;,
+    &quot;nombre_empresa&quot;: &quot;Tech Solutions&quot;,
+    &quot;punto_venta&quot;: &quot;Sucursal A&quot;,
+    &quot;tipo_contrato&quot;: &quot;Indefinido&quot;,
+    &quot;tipo_empresa&quot;: &quot;S.A.&quot;,
+    &quot;cargo_actual&quot;: &quot;Gerente&quot;,
+    &quot;cargo_politico&quot;: &quot;Ninguno&quot;,
+    &quot;nombre_ref_fam1&quot;: &quot;Referencia1&quot;,
+    &quot;parentesco_ref_fam1&quot;: &quot;Hermano&quot;,
+    &quot;nombre_ref_per1&quot;: &quot;Referencia3&quot;,
+    &quot;nombre_banco_cuenta&quot;: &quot;Banco ABC&quot;,
+    &quot;tipo_cuenta&quot;: &quot;Ahorros&quot;,
+    &quot;desc_otros_activos&quot;: &quot;N/A&quot;,
+    &quot;desc_otros_pasivos&quot;: &quot;N/A&quot;,
+    &quot;otros_activos_pasivos&quot;: &quot;N/A&quot;,
+    &quot;nombre_banco_ext1&quot;: &quot;Banco XYZ&quot;,
+    &quot;tipo_producto_ext1&quot;: &quot;Cuenta&quot;,
+    &quot;moneda_ext1&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext1&quot;: &quot;Nueva York&quot;,
+    &quot;pais_banco_ext1&quot;: &quot;EE.UU.&quot;,
+    &quot;nombre_banco_ext2&quot;: &quot;Banco DEF&quot;,
+    &quot;tipo_producto_ext2&quot;: &quot;Ahorros&quot;,
+    &quot;moneda_ext2&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext2&quot;: &quot;Los Ángeles&quot;,
+    &quot;pais_banco_ext2&quot;: &quot;EE.UU.&quot;,
+    &quot;calificacion_cliente&quot;: &quot;Excelente&quot;,
+    &quot;tipo_cliente_datacredito&quot;: &quot;Regular&quot;,
+    &quot;tipo_libranza&quot;: &quot;Tipo 1&quot;,
+    &quot;razon_social_originador&quot;: &quot;Originador S.A.&quot;,
+    &quot;razon_social_pagaduria&quot;: &quot;Pagaduría S.A.&quot;,
+    &quot;segmento_libranza&quot;: &quot;Segmento A&quot;,
+    &quot;razon_social_fideicomisos&quot;: &quot;Fideicomisos S.A.&quot;,
+    &quot;fondeador&quot;: &quot;Fondeador A&quot;,
+    &quot;oficina_asociado&quot;: &quot;Oficina 1&quot;,
+    &quot;tipo_aval&quot;: &quot;Aval A&quot;,
+    &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
+    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;,
+    &quot;p_patrimonial&quot;: 7937316.00,
     &quot;nro_cuentas_embargadas&quot;: 1,
     &quot;nro_cuentas_canceladas&quot;: 2,
     &quot;nro_obligaciones_mora&quot;: 3,
@@ -723,18 +751,15 @@
     &quot;nit_custodia&quot;: 123456,
     &quot;nit_originador&quot;: 654321,
     &quot;nit_pagaduria&quot;: 112233,
-    &quot;codigo_pagaduria&quot;: 445566,
     &quot;nit_fideicomisos&quot;: 778899,
     &quot;codigo_fideicomiso&quot;: 990011,
-    &quot;codigo_dane_asociado&quot;: 223344,
-    &quot;valor_credito&quot;: 5000000,
+    &quot;valor_desembolso&quot;: 5000000,
     &quot;plazo_inicial_credito&quot;: 24,
     &quot;tasa_interes&quot;: 5.25,
     &quot;valor_aval&quot;: 1000000,
     &quot;periodicidad&quot;: 12,
-    &quot;tasa_unica&quot;: 6.50,
     &quot;porcentaje_reserva&quot;: 2.00,
-    &quot;prima_comercial&quot;: 300000,
+    &quot;prima_segvida&quot;: 300000,
     &quot;no_doc_benef_grat1&quot;: 12345,
     &quot;porc_benef_grat1&quot;: 0.10,
     &quot;no_doc_benef_grat2&quot;: 67890,
@@ -752,116 +777,18 @@
     &quot;importaciones&quot;: &quot;No&quot;,
     &quot;credito_documentario&quot;: &quot;Sí&quot;,
     &quot;giros_directos&quot;: &quot;No&quot;,
-    &quot;negociacion_divisas&quot;: &quot;Sí&quot;,
-    &quot;leasing_importacion&quot;: &quot;No&quot;,
-    &quot;giros_financiados&quot;: &quot;Sí&quot;,
-    &quot;exportaciones&quot;: &quot;No&quot;,
-    &quot;inversiones&quot;: &quot;Sí&quot;,
-    &quot;venta_bienes&quot;: &quot;No&quot;,
-    &quot;honorarios_comisiones&quot;: &quot;Sí&quot;,
-    &quot;ingresos_actividad&quot;: &quot;Sí&quot;,
-    &quot;prestamo_bancario&quot;: &quot;No&quot;,
-    &quot;rifas&quot;: &quot;No&quot;,
-    &quot;pension&quot;: &quot;Sí&quot;,
-    &quot;herencia&quot;: &quot;No&quot;,
-    &quot;liq_prestaciones&quot;: &quot;Sí&quot;,
-    &quot;liq_sucesiones&quot;: &quot;No&quot;,
-    &quot;otros&quot;: &quot;N/A&quot;,
-    &quot;cuentas_moneda_ext&quot;: &quot;Sí&quot;,
-    &quot;permanencia_eeuu&quot;: &quot;No&quot;,
-    &quot;tarjeta_verde&quot;: &quot;No&quot;,
-    &quot;ingresos_fdap&quot;: &quot;No&quot;,
-    &quot;ingreso_bruto_venta&quot;: &quot;Sí&quot;,
-    &quot;ciudadano_eeuu&quot;: &quot;No&quot;,
-    &quot;obligado_tributar&quot;: &quot;Sí&quot;,
-    &quot;coincidencia_listas&quot;: &quot;No&quot;,
-    &quot;procesos_cooperativa&quot;: &quot;No&quot;,
-    &quot;extraprima&quot;: &quot;No&quot;,
-    &quot;primer_apellido&quot;: &quot;Apellido1&quot;,
-    &quot;segundo_apellido&quot;: &quot;Apellido2&quot;,
-    &quot;primer_nombre&quot;: &quot;Nombre1&quot;,
-    &quot;segundo_nombre&quot;: &quot;Nombre2&quot;,
-    &quot;tipo_doc&quot;: &quot;CC&quot;,
-    &quot;pais_nacimiento&quot;: &quot;Colombia&quot;,
-    &quot;nacionalidad&quot;: &quot;Colombiana&quot;,
-    &quot;genero&quot;: &quot;Masculino&quot;,
-    &quot;estado_civil&quot;: &quot;Casado&quot;,
-    &quot;nivel_estudios&quot;: &quot;Universitario&quot;,
-    &quot;grupo_etnico&quot;: &quot;Ninguno&quot;,
-    &quot;profesion&quot;: &quot;Ingeniero&quot;,
-    &quot;ocupacion&quot;: &quot;Desarrollador&quot;,
-    &quot;clase_cliente&quot;: &quot;VIP&quot;,
-    &quot;actividad_economica&quot;: &quot;Tecnología&quot;,
-    &quot;barrio_resi&quot;: &quot;Centro&quot;,
-    &quot;estrato_resi&quot;: 4,
-    &quot;tipo_vivienda&quot;: &quot;Propia&quot;,
-    &quot;nombre_empresa&quot;: &quot;Tech Solutions&quot;,
-    &quot;punto_venta&quot;: &quot;Sucursal A&quot;,
-    &quot;tipo_contrato&quot;: &quot;Indefinido&quot;,
-    &quot;tipo_empresa&quot;: &quot;S.A.&quot;,
-    &quot;cargo_actual&quot;: &quot;Gerente&quot;,
-    &quot;cargo_politico&quot;: &quot;Ninguno&quot;,
-    &quot;nombre_ref_fam1&quot;: &quot;Referencia1&quot;,
-    &quot;parentesco_ref_fam1&quot;: &quot;Hermano&quot;,
-    &quot;nombre_ref_fam2&quot;: &quot;Referencia2&quot;,
-    &quot;parentesco_ref_fam2&quot;: &quot;Madre&quot;,
-    &quot;nombre_ref_per1&quot;: &quot;Referencia3&quot;,
-    &quot;nombre_ref_per2&quot;: &quot;Referencia4&quot;,
-    &quot;nombre_banco_cuenta&quot;: &quot;Banco ABC&quot;,
-    &quot;tipo_cuenta&quot;: &quot;Ahorros&quot;,
-    &quot;desc_otros_activos&quot;: &quot;N/A&quot;,
-    &quot;desc_otros_pasivos&quot;: &quot;N/A&quot;,
-    &quot;otros_activos_pasivos&quot;: &quot;N/A&quot;,
-    &quot;nombre_banco_ext1&quot;: &quot;Banco XYZ&quot;,
-    &quot;tipo_producto_ext1&quot;: &quot;Cuenta&quot;,
-    &quot;moneda_ext1&quot;: &quot;USD&quot;,
-    &quot;ciudad_banco_ext1&quot;: &quot;Nueva York&quot;,
-    &quot;pais_banco_ext1&quot;: &quot;EE.UU.&quot;,
-    &quot;nombre_banco_ext2&quot;: &quot;Banco DEF&quot;,
-    &quot;tipo_producto_ext2&quot;: &quot;Ahorros&quot;,
-    &quot;moneda_ext2&quot;: &quot;USD&quot;,
-    &quot;ciudad_banco_ext2&quot;: &quot;Los Ángeles&quot;,
-    &quot;pais_banco_ext2&quot;: &quot;EE.UU.&quot;,
-    &quot;calificacion_cliente&quot;: &quot;Excelente&quot;,
-    &quot;tipo_cliente_datacredito&quot;: &quot;Regular&quot;,
-    &quot;obs_originador&quot;: &quot;Observación del originador&quot;,
-    &quot;tipo_libranza&quot;: &quot;Tipo 1&quot;,
-    &quot;razon_social_originador&quot;: &quot;Originador S.A.&quot;,
-    &quot;razon_social_pagaduria&quot;: &quot;Pagaduría S.A.&quot;,
-    &quot;segmento_libranza&quot;: &quot;Segmento A&quot;,
-    &quot;razon_social_fideicomisos&quot;: &quot;Fideicomisos S.A.&quot;,
-    &quot;nombre_fideicomiso&quot;: &quot;Fideicomiso A&quot;,
-    &quot;fondeador&quot;: &quot;Fondeador A&quot;,
-    &quot;nombre_vendedor&quot;: &quot;Vendedor A&quot;,
-    &quot;oficina_asociado&quot;: &quot;Oficina 1&quot;,
-    &quot;tipo_aval&quot;: &quot;Aval A&quot;,
-    &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
-    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;,
-    &quot;cuotas_credito&quot;: 0.00,
-    &quot;cuota_cupo_tdc&quot;: 0.00,
-    &quot;cuota_cupo_rota&quot;: 0.00,
-    &quot;gastos_familiares_pensionado&quot;: 0.00,
-    &quot;gastos_familiares_activo&quot;: 0.00,
-    &quot;tasa_usura_ultimos_meses&quot;: 0.00,
-    &quot;gastos_financieros&quot;: 0.00,
-    &quot;porcent_endeudamiento&quot;: 0.00,
-    &quot;gastos_familiaries&quot;: 200000.00,
-    &quot;int_anticipado&quot;: 2844734.00,
-    &quot;p_patrimonial&quot;: 7937316.00,
-    &quot;valor_prestamo_sin_c&quot;: 0.00,
-    &quot;valor_prestamo_sin_r&quot;: 0.00,
-    &quot;valor_prestamo_sin_cc&quot;: 0.00,
-    &quot;total_oblm_sf&quot;: 0.00,
-    &quot;total_oblm_mayor_7&quot;: 0.00,
-    &quot;total_obl_castigadas_mayor_15&quot;: 0.00,
-    &quot;total_oblm_mayor_90&quot;: 0.00,
-    &quot;total_deuda_sf&quot;: 0.00,
-    &quot;total_deuda_sc&quot;: 0.00,
-    &quot;total_deuda_sr&quot;: 0.00,
-    &quot;sector_empresa&quot;: &quot;Sector Empresa&quot;,
-    &quot;valor_cuota_total&quot;: 200000.00
+    &quot;negociacion_divisas&quot;: &quot;No&quot;,
+    &quot;derechos_socio&quot;: &quot;No&quot;,
+    &quot;rendimiento_inversion&quot;: &quot;Sí&quot;,
+    &quot;valor_inversiones&quot;: 1000000,
+    &quot;valor_descuentos&quot;: 0,
+    &quot;valor_saldo_pendiente&quot;: 200000,
+    &quot;valor_beneficios_descuentos&quot;: 10000,
+    &quot;valor_total_saldo&quot;: 1500000,
+    &quot;nombre_ref_fam2&quot;: &quot;Referencia2&quot;
   }
 }
+
 </code></pre>
 <h3 id="respuesta-success">Respuesta Success</h3>
 <pre><code class="language-json">{
@@ -876,13 +803,11 @@
     &quot;dir_empresa_labora&quot;: &quot;101 Pine Rd&quot;,
     &quot;email_labora&quot;: &quot;work@example.com&quot;,
     &quot;dir_ref_fam1&quot;: &quot;123 Oak St&quot;,
-    &quot;dir_ref_fam2&quot;: &quot;456 Birch St&quot;,
     &quot;dir_ref_per1&quot;: &quot;789 Cedar St&quot;,
-    &quot;dir_ref_per2&quot;: &quot;101 Spruce St&quot;,
     &quot;cuenta_ext1&quot;: &quot;000111222&quot;,
     &quot;cuenta_ext2&quot;: &quot;333444555&quot;,
     &quot;no_pagare&quot;: &quot;PG123456&quot;,
-    &quot;nro_credito&quot;: &quot;CR1234567890&quot;,
+    &quot;nro_solicitud&quot;: &quot;CR1234567890&quot;,
     &quot;poliza&quot;: &quot;POL123456&quot;,
     &quot;fecha_expedicion_doc&quot;: &quot;1980-01-01&quot;,
     &quot;fecha_nacimiento&quot;: &quot;1980-01-01&quot;,
@@ -891,9 +816,6 @@
     &quot;fecha_ini_cargo&quot;: &quot;2022-01-01&quot;,
     &quot;fecha_fin_cargo&quot;: &quot;2024-01-01&quot;,
     &quot;fecha_desemb&quot;: &quot;2024-01-01&quot;,
-    &quot;fecha_nomina&quot;: &quot;2024-01-01&quot;,
-    &quot;fecha_venc_final&quot;: &quot;2024-12-31&quot;,
-    &quot;fecha_venc_cuota1&quot;: &quot;2024-01-31&quot;,
     &quot;fecha_ing_poliza&quot;: &quot;2024-01-01&quot;,
     &quot;clase_poliza&quot;: &quot;Clase A&quot;,
     &quot;tipo_cliente&quot;: &quot;Tipo 1&quot;,
@@ -910,17 +832,12 @@
     &quot;tel_fijo_ofi&quot;: &quot;1112233445&quot;,
     &quot;ext_ofi_lab&quot;: &quot;123&quot;,
     &quot;nro_renov_contrato&quot;: &quot;RENOV123&quot;,
-    &quot;codigo_ciiu_emp&quot;: 6789,
     &quot;nro_personas&quot;: 4,
     &quot;menores_18&quot;: 2,
     &quot;codigo_dane_ref_fam1&quot;: 33445,
     &quot;tel_ref_fam1&quot;: &quot;5566778899&quot;,
-    &quot;codigo_dane_ref_fam2&quot;: 66778,
-    &quot;tel_ref_fam2&quot;: &quot;9988776655&quot;,
     &quot;codigo_dane_ref_per1&quot;: 88990,
     &quot;tel_ref_per1&quot;: &quot;1122334455&quot;,
-    &quot;codigo_dane_ref_per2&quot;: 99001,
-    &quot;tel_ref_per2&quot;: &quot;2233445566&quot;,
     &quot;nro_cuenta&quot;: 123456,
     &quot;valor_ingreso_salario&quot;: 3000000,
     &quot;valor_ingreso_comisiones&quot;: 500000,
@@ -947,12 +864,51 @@
     &quot;valor_pasivos_corrientes&quot;: 1000000,
     &quot;valor_otros_pasivos&quot;: 500000,
     &quot;total_pasivos&quot;: 4500000,
-    &quot;salario&quot;: 2000000,
     &quot;patrimonio&quot;: 3500000,
-    &quot;cupo_solicitado&quot;: 1000000,
+    &quot;monto_solicitado&quot;: 1000000,
     &quot;monto_cuenta_ext1&quot;: 500000,
     &quot;monto_cuenta_ext2&quot;: 200000,
     &quot;puntaje_acierta&quot;: 800,
+    &quot;barrio_resi&quot;: &quot;Centro&quot;,
+    &quot;estrato_resi&quot;: 4,
+    &quot;tipo_vivienda&quot;: &quot;Propia&quot;,
+    &quot;nombre_empresa&quot;: &quot;Tech Solutions&quot;,
+    &quot;punto_venta&quot;: &quot;Sucursal A&quot;,
+    &quot;tipo_contrato&quot;: &quot;Indefinido&quot;,
+    &quot;tipo_empresa&quot;: &quot;S.A.&quot;,
+    &quot;cargo_actual&quot;: &quot;Gerente&quot;,
+    &quot;cargo_politico&quot;: &quot;Ninguno&quot;,
+    &quot;nombre_ref_fam1&quot;: &quot;Referencia1&quot;,
+    &quot;parentesco_ref_fam1&quot;: &quot;Hermano&quot;,
+    &quot;nombre_ref_per1&quot;: &quot;Referencia3&quot;,
+    &quot;nombre_banco_cuenta&quot;: &quot;Banco ABC&quot;,
+    &quot;tipo_cuenta&quot;: &quot;Ahorros&quot;,
+    &quot;desc_otros_activos&quot;: &quot;N/A&quot;,
+    &quot;desc_otros_pasivos&quot;: &quot;N/A&quot;,
+    &quot;otros_activos_pasivos&quot;: &quot;N/A&quot;,
+    &quot;nombre_banco_ext1&quot;: &quot;Banco XYZ&quot;,
+    &quot;tipo_producto_ext1&quot;: &quot;Cuenta&quot;,
+    &quot;moneda_ext1&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext1&quot;: &quot;Nueva York&quot;,
+    &quot;pais_banco_ext1&quot;: &quot;EE.UU.&quot;,
+    &quot;nombre_banco_ext2&quot;: &quot;Banco DEF&quot;,
+    &quot;tipo_producto_ext2&quot;: &quot;Ahorros&quot;,
+    &quot;moneda_ext2&quot;: &quot;USD&quot;,
+    &quot;ciudad_banco_ext2&quot;: &quot;Los Ángeles&quot;,
+    &quot;pais_banco_ext2&quot;: &quot;EE.UU.&quot;,
+    &quot;calificacion_cliente&quot;: &quot;Excelente&quot;,
+    &quot;tipo_cliente_datacredito&quot;: &quot;Regular&quot;,
+    &quot;tipo_libranza&quot;: &quot;Tipo 1&quot;,
+    &quot;razon_social_originador&quot;: &quot;Originador S.A.&quot;,
+    &quot;razon_social_pagaduria&quot;: &quot;Pagaduría S.A.&quot;,
+    &quot;segmento_libranza&quot;: &quot;Segmento A&quot;,
+    &quot;razon_social_fideicomisos&quot;: &quot;Fideicomisos S.A.&quot;,
+    &quot;fondeador&quot;: &quot;Fondeador A&quot;,
+    &quot;oficina_asociado&quot;: &quot;Oficina 1&quot;,
+    &quot;tipo_aval&quot;: &quot;Aval A&quot;,
+    &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
+    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;,
+    &quot;p_patrimonial&quot;: 7937316.00,
     &quot;nro_cuentas_embargadas&quot;: 1,
     &quot;nro_cuentas_canceladas&quot;: 2,
     &quot;nro_obligaciones_mora&quot;: 3,
@@ -978,22 +934,19 @@
     &quot;nit_custodia&quot;: 123456,
     &quot;nit_originador&quot;: 654321,
     &quot;nit_pagaduria&quot;: 112233,
-    &quot;codigo_pagaduria&quot;: 445566,
     &quot;nit_fideicomisos&quot;: 778899,
     &quot;codigo_fideicomiso&quot;: 990011,
-    &quot;codigo_dane_asociado&quot;: 223344,
-    &quot;valor_credito&quot;: 5000000,
+    &quot;valor_desembolso&quot;: 5000000,
     &quot;plazo_inicial_credito&quot;: 24,
-    &quot;tasa_interes&quot;: &quot;5.25&quot;,
+    &quot;tasa_interes&quot;: 5.25,
     &quot;valor_aval&quot;: 1000000,
     &quot;periodicidad&quot;: 12,
-    &quot;tasa_unica&quot;: &quot;6.5&quot;,
-    &quot;porcentaje_reserva&quot;: &quot;2.0&quot;,
-    &quot;prima_comercial&quot;: 300000,
+    &quot;porcentaje_reserva&quot;: 2.00,
+    &quot;prima_segvida&quot;: 300000,
     &quot;no_doc_benef_grat1&quot;: 12345,
-    &quot;porc_benef_grat1&quot;: &quot;0.1&quot;,
+    &quot;porc_benef_grat1&quot;: 0.10,
     &quot;no_doc_benef_grat2&quot;: 67890,
-    &quot;porc_benef_grat2&quot;: &quot;0.15&quot;,
+    &quot;porc_benef_grat2&quot;: 0.15,
     &quot;tipo_entidad&quot;: &quot;Entidad A&quot;,
     &quot;cliente_declara&quot;: &quot;Sí&quot;,
     &quot;desempena_cargo&quot;: &quot;No&quot;,
@@ -1007,114 +960,15 @@
     &quot;importaciones&quot;: &quot;No&quot;,
     &quot;credito_documentario&quot;: &quot;Sí&quot;,
     &quot;giros_directos&quot;: &quot;No&quot;,
-    &quot;negociacion_divisas&quot;: &quot;Sí&quot;,
-    &quot;leasing_importacion&quot;: &quot;No&quot;,
-    &quot;giros_financiados&quot;: &quot;Sí&quot;,
-    &quot;exportaciones&quot;: &quot;No&quot;,
-    &quot;inversiones&quot;: &quot;Sí&quot;,
-    &quot;venta_bienes&quot;: &quot;No&quot;,
-    &quot;honorarios_comisiones&quot;: &quot;Sí&quot;,
-    &quot;ingresos_actividad&quot;: &quot;Sí&quot;,
-    &quot;prestamo_bancario&quot;: &quot;No&quot;,
-    &quot;rifas&quot;: &quot;No&quot;,
-    &quot;pension&quot;: &quot;Sí&quot;,
-    &quot;herencia&quot;: &quot;No&quot;,
-    &quot;liq_prestaciones&quot;: &quot;Sí&quot;,
-    &quot;liq_sucesiones&quot;: &quot;No&quot;,
-    &quot;otros&quot;: &quot;N/A&quot;,
-    &quot;cuentas_moneda_ext&quot;: &quot;Sí&quot;,
-    &quot;permanencia_eeuu&quot;: &quot;No&quot;,
-    &quot;tarjeta_verde&quot;: &quot;No&quot;,
-    &quot;ingresos_fdap&quot;: &quot;No&quot;,
-    &quot;ingreso_bruto_venta&quot;: &quot;Sí&quot;,
-    &quot;ciudadano_eeuu&quot;: &quot;No&quot;,
-    &quot;obligado_tributar&quot;: &quot;Sí&quot;,
-    &quot;coincidencia_listas&quot;: &quot;No&quot;,
-    &quot;procesos_cooperativa&quot;: &quot;No&quot;,
-    &quot;extraprima&quot;: &quot;No&quot;,
-    &quot;primer_apellido&quot;: &quot;Apellido1&quot;,
-    &quot;segundo_apellido&quot;: &quot;Apellido2&quot;,
-    &quot;primer_nombre&quot;: &quot;Nombre1&quot;,
-    &quot;segundo_nombre&quot;: &quot;Nombre2&quot;,
-    &quot;tipo_doc&quot;: &quot;CC&quot;,
-    &quot;pais_nacimiento&quot;: &quot;Colombia&quot;,
-    &quot;nacionalidad&quot;: &quot;Colombiana&quot;,
-    &quot;genero&quot;: &quot;Masculino&quot;,
-    &quot;estado_civil&quot;: &quot;Casado&quot;,
-    &quot;nivel_estudios&quot;: &quot;Universitario&quot;,
-    &quot;grupo_etnico&quot;: &quot;Ninguno&quot;,
-    &quot;profesion&quot;: &quot;Ingeniero&quot;,
-    &quot;ocupacion&quot;: &quot;Desarrollador&quot;,
-    &quot;clase_cliente&quot;: &quot;VIP&quot;,
-    &quot;actividad_economica&quot;: &quot;Tecnología&quot;,
-    &quot;barrio_resi&quot;: &quot;Centro&quot;,
-    &quot;estrato_resi&quot;: &quot;4&quot;,
-    &quot;tipo_vivienda&quot;: &quot;Propia&quot;,
-    &quot;nombre_empresa&quot;: &quot;Tech Solutions&quot;,
-    &quot;punto_venta&quot;: &quot;Sucursal A&quot;,
-    &quot;tipo_contrato&quot;: &quot;Indefinido&quot;,
-    &quot;tipo_empresa&quot;: &quot;S.A.&quot;,
-    &quot;cargo_actual&quot;: &quot;Gerente&quot;,
-    &quot;cargo_politico&quot;: &quot;Ninguno&quot;,
-    &quot;nombre_ref_fam1&quot;: &quot;Referencia1&quot;,
-    &quot;parentesco_ref_fam1&quot;: &quot;Hermano&quot;,
+    &quot;negociacion_divisas&quot;: &quot;No&quot;,
+    &quot;derechos_socio&quot;: &quot;No&quot;,
+    &quot;rendimiento_inversion&quot;: &quot;Sí&quot;,
+    &quot;valor_inversiones&quot;: 1000000,
+    &quot;valor_descuentos&quot;: 0,
+    &quot;valor_saldo_pendiente&quot;: 200000,
+    &quot;valor_beneficios_descuentos&quot;: 10000,
+    &quot;valor_total_saldo&quot;: 1500000,
     &quot;nombre_ref_fam2&quot;: &quot;Referencia2&quot;,
-    &quot;parentesco_ref_fam2&quot;: &quot;Madre&quot;,
-    &quot;nombre_ref_per1&quot;: &quot;Referencia3&quot;,
-    &quot;nombre_ref_per2&quot;: &quot;Referencia4&quot;,
-    &quot;nombre_banco_cuenta&quot;: &quot;Banco ABC&quot;,
-    &quot;tipo_cuenta&quot;: &quot;Ahorros&quot;,
-    &quot;desc_otros_activos&quot;: &quot;N/A&quot;,
-    &quot;desc_otros_pasivos&quot;: &quot;N/A&quot;,
-    &quot;otros_activos_pasivos&quot;: &quot;N/A&quot;,
-    &quot;nombre_banco_ext1&quot;: &quot;Banco XYZ&quot;,
-    &quot;tipo_producto_ext1&quot;: &quot;Cuenta&quot;,
-    &quot;moneda_ext1&quot;: &quot;USD&quot;,
-    &quot;ciudad_banco_ext1&quot;: &quot;Nueva York&quot;,
-    &quot;pais_banco_ext1&quot;: &quot;EE.UU.&quot;,
-    &quot;nombre_banco_ext2&quot;: &quot;Banco DEF&quot;,
-    &quot;tipo_producto_ext2&quot;: &quot;Ahorros&quot;,
-    &quot;moneda_ext2&quot;: &quot;USD&quot;,
-    &quot;ciudad_banco_ext2&quot;: &quot;Los Ángeles&quot;,
-    &quot;pais_banco_ext2&quot;: &quot;EE.UU.&quot;,
-    &quot;calificacion_cliente&quot;: &quot;Excelente&quot;,
-    &quot;tipo_cliente_datacredito&quot;: &quot;Regular&quot;,
-    &quot;obs_originador&quot;: &quot;Observación del originador&quot;,
-    &quot;tipo_libranza&quot;: &quot;Tipo 1&quot;,
-    &quot;razon_social_originador&quot;: &quot;Originador S.A.&quot;,
-    &quot;razon_social_pagaduria&quot;: &quot;Pagaduría S.A.&quot;,
-    &quot;segmento_libranza&quot;: &quot;Segmento A&quot;,
-    &quot;razon_social_fideicomisos&quot;: &quot;Fideicomisos S.A.&quot;,
-    &quot;nombre_fideicomiso&quot;: &quot;Fideicomiso A&quot;,
-    &quot;fondeador&quot;: &quot;Fondeador A&quot;,
-    &quot;nombre_vendedor&quot;: &quot;Vendedor A&quot;,
-    &quot;oficina_asociado&quot;: &quot;Oficina 1&quot;,
-    &quot;tipo_aval&quot;: &quot;Aval A&quot;,
-    &quot;benef_grat1&quot;: &quot;Beneficio 1&quot;,
-    &quot;benef_grat2&quot;: &quot;Beneficio 2&quot;,
-    &quot;cuotas_credito&quot;: 0.00,
-    &quot;cuota_cupo_tdc&quot;: 0.00,
-    &quot;cuota_cupo_rota&quot;: 0.00,
-    &quot;gastos_familiares_pensionado&quot;: 0.00,
-    &quot;gastos_familiares_activo&quot;: 0.00,
-    &quot;tasa_usura_ultimos_meses&quot;: 0.00,
-    &quot;gastos_financieros&quot;: 0.00,
-    &quot;porcent_endeudamiento&quot;: 0.00,
-    &quot;gastos_familiaries&quot;: 200000.00,
-    &quot;int_anticipado&quot;: 2844734.00,
-    &quot;p_patrimonial&quot;: 7937316.00,
-    &quot;valor_prestamo_sin_c&quot;: 0.00,
-    &quot;valor_prestamo_sin_r&quot;: 0.00,
-    &quot;valor_prestamo_sin_cc&quot;: 0.00,
-    &quot;total_oblm_sf&quot;: 0.00,
-    &quot;total_oblm_mayor_7&quot;: 0.00,
-    &quot;total_obl_castigadas_mayor_15&quot;: 0.00,
-    &quot;total_oblm_mayor_90&quot;: 0.00,
-    &quot;total_deuda_sf&quot;: 0.00,
-    &quot;total_deuda_sc&quot;: 0.00,
-    &quot;total_deuda_sr&quot;: 0.00,
-    &quot;sector_empresa&quot;: &quot;Sector Empresa&quot;,
-    &quot;valor_cuota_total&quot;: 200000.00,
     &quot;created_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;,
     &quot;updated_at&quot;: &quot;2024-08-16T17:32:11.761Z&quot;
   }
@@ -1140,1246 +994,1398 @@
 <table>
 <thead>
 <tr>
-<th>DESCRIPCION</th>
+<th>DESCRIPCIÓN</th>
 <th>CAMPO</th>
-<th>Tipo Campo</th>
+<th>TIPO CAMPO</th>
+<th>COMPONENTE</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Número Documento</td>
 <td>nro_documento</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Dirección Residencia</td>
 <td>dir_residencia</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Dirección de correo electrónico</td>
 <td>correo</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Dirección familiar</td>
 <td>dir_familiar</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Dirección Correspondencia</td>
 <td>dir_correspondencia</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Dirección de la Empresa donde Labora</td>
 <td>dir_empresa_labora</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>E-mail laboral</td>
 <td>email_labora</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Dirección Referencia Familiar 1</td>
 <td>dir_ref_fam1</td>
-<td>ALFANUMÉRICO</td>
-</tr>
-<tr>
-<td>Dirección Referencia Familiar 2</td>
-<td>dir_ref_fam2</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Dirección Referencia Personal 1</td>
 <td>dir_ref_per1</td>
-<td>ALFANUMÉRICO</td>
-</tr>
-<tr>
-<td>Dirección Referencia Personal 2</td>
-<td>dir_ref_per2</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Número de cuenta en moneda extranjera1</td>
 <td>cuenta_ext1</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Número de cuenta en moneda extranjera2</td>
 <td>cuenta_ext2</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
-<td>No. Pagaré</td>
+<td>No. Pagaré = Número Crédito</td>
 <td>no_pagare</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Número del Crédito</td>
-<td>nro_credito</td>
-<td>ALFANUMÉRICO</td>
+<td>Número de Solicitud del Crédito</td>
+<td>nro_solicitud</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Póliza Palig</td>
+<td>Número Póliza Cobertura Actual (para libranza privada viene vacío)</td>
 <td>poliza</td>
-<td>ALFANUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>SEGURO</td>
 </tr>
 <tr>
-<td>Fecha Expedicion Documento</td>
+<td>Fecha Expedición Documento</td>
 <td>fecha_expedicion_doc</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>FechaNacimiento</td>
+<td>Fecha Nacimiento</td>
 <td>fecha_nacimiento</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Fecha de ingreso a la empresa</td>
 <td>fecha_ingreso</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Fecha Última Actualización</td>
+<td>Fecha Última Actualización DATACRÉDITO - EXPIRIAN</td>
 <td>fecha_ultima</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Fecha Inicio Cargo Politico</td>
+<td>Fecha Inicio Cargo Político</td>
 <td>fecha_ini_cargo</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Fecha Fin Cargo Politico</td>
+<td>Fecha Fin Cargo Político</td>
 <td>fecha_fin_cargo</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Fecha desembolso (DD/MM/AAAA)</td>
 <td>fecha_desemb</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Fecha Nomina (DD/MM/AAAA)</td>
-<td>fecha_nomina</td>
-<td>DATE - DD/MM/AAAA</td>
-</tr>
-<tr>
-<td>Fecha Vencimiento Final (DD/MM/AAAA)</td>
-<td>fecha_venc_final</td>
-<td>DATE - DD/MM/AAAA</td>
-</tr>
-<tr>
-<td>Fecha Vencimiento Cuota 1 (DD/MM/AAAA)</td>
-<td>fecha_venc_cuota1</td>
-<td>DATE - DD/MM/AAAA</td>
-</tr>
-<tr>
-<td>Fecha ingreso póliza</td>
+<td>Fecha ingreso póliza (DEBE COINCIDIR CON FECHA DESEMBOLSO)</td>
 <td>fecha_ing_poliza</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>DATE</td>
+<td>SEGURO</td>
 </tr>
 <tr>
-<td>Clase de póliza de vida</td>
+<td>Clase de póliza de vida: SIMPRE HACER REFERENCIA A "INDIVIDUAL"</td>
 <td>clase_poliza</td>
-<td>DATE - DD/MM/AAAA</td>
+<td>VARCHAR2</td>
+<td>SEGURO</td>
 </tr>
 <tr>
-<td>Tipo de Cliente</td>
+<td>Tipo de Cliente (ALUDE A PERSONA NATURAL o PERSONA JURÍDICA) EN ESTE PROYECTO SIEMPRE PERSONA NATURAL</td>
 <td>tipo_cliente</td>
-<td>INDIVIDUAL/COLECTIVA</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Código DANE Ciudad Expedicion Documento</td>
+<td>Código DANE Ciudad Expedición Documento</td>
 <td>codigo_dane_exp_doc</td>
-<td>NATURAL/JURÍDICA</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Código DANE Ciudad Nacimiento</td>
 <td>codigo_dane_nacim</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Código CIIU Registra Cliente</td>
+<td>Código CIIU Registra Cliente (SIEMPRE SERÁ: "020" PENSIONADO o "010" EMPLEADO</td>
 <td>codigo_ciiu_cliente</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Antigüedad Actividad Económica en meses (INDEPENDIENTE)</td>
+<td>Antigüedad Actividad Económica en meses (ES UN CÁLCULO EN FECHA INGRESO - FECHA RADICACIÓN)</td>
 <td>antig_actividad</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Código DANE Ciudad Residencia</td>
 <td>codigo_dane_resid</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Teléfono Fijo Residencia</td>
 <td>tel_fijo_resi</td>
-<td>NUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Teléfono celular</td>
 <td>tel_cel</td>
-<td>NUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Código DANE Ciudad Dirección Familiar</td>
 <td>codigo_dane_dir_fam</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Código DANE Ciudad Correspondencia</td>
 <td>codigo_dane_dir_corr</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Código DANE Ciudad Dirección Empresa donde labora</td>
 <td>codigo_dane_dir_emp</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Teléfono Fijo Oficina donde labora</td>
 <td>tel_fijo_ofi</td>
-<td>NUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Extensión Oficina donde Labora</td>
 <td>ext_ofi_lab</td>
-<td>NUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Número Renovaciones Contrato Término Fijo</td>
+<td>Número Renovaciones Contrato Término Fijo (normalmente vendrá vacío)</td>
 <td>nro_renov_contrato</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Código CIIU de actividad de la empresa</td>
-<td>codigo_ciiu_emp</td>
-<td>NUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>No. de personas a cargo</td>
 <td>nro_personas</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Personas a cargo menores de 18 años</td>
 <td>menores_18</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Código DANE Ciudad Dirección Referencia Familiar 1</td>
 <td>codigo_dane_ref_fam1</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Teléfono Referencia Familiar 1</td>
 <td>tel_ref_fam1</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Código DANE Ciudad Dirección Referencia Familiar 2</td>
-<td>codigo_dane_ref_fam2</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Teléfono Referencia Familiar 2</td>
-<td>tel_ref_fam2</td>
-<td>NUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Código DANE Ciudad Dirección Referencia Personal 1</td>
 <td>codigo_dane_ref_per1</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Teléfono Referencia Personal 1</td>
 <td>tel_ref_per1</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Código DANE Ciudad Dirección Referencia Personal 2</td>
-<td>codigo_dane_ref_per2</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Teléfono Referencia Personal 2</td>
-<td>tel_ref_per2</td>
-<td>NUMÉRICO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Número Cuenta Bancaria</td>
 <td>nro_cuenta</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Ingreso / Salario FIJO Mensual</td>
 <td>valor_ingreso_salario</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Ingreso por Comisiones Mensual</td>
 <td>valor_ingreso_comisiones</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Ingresos por Honorarios Mensual</td>
 <td>valor_ingreso_honorarios</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Ingresos por Arrendamientos Mensual</td>
 <td>valor_ingresos_arrend</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Rendimientos Financieros Mensuales</td>
 <td>valor_rendimientos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Otros ingresos Mensuales</td>
 <td>otros_ingresos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Total Ingresos Mes</td>
 <td>valor_total_ingresos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Deducciones de ley mes</td>
 <td>valor_deducciones_ley</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Otras deducciones nómina mes</td>
 <td>valor_otras_deducciones</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Arrendamiento cliente mes</td>
 <td>valor_arrend_cliente</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Cuota Crédito de vivienda cliente mes</td>
 <td>valor_cuota_credito</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Gastos por Tarjeta Crédito cliente mes</td>
 <td>valor_gastos_tarjeta</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Gastos Familiares cliente mes</td>
 <td>valor_gastos_familiares</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Gastos de sostenimiento cliente mes</td>
 <td>valor_gastos_sost</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Pago Otros Créditos cliente mes</td>
 <td>valor_pago_otros_creditos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Otros egresos cliente mes</td>
 <td>otros_egresos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Total egresos cliente mes</td>
 <td>valor_total_egresos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Activos Corrientes</td>
 <td>valor_activos_corrientes</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Activos Fijos</td>
 <td>valor_activos_fijos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Otros Activos</td>
 <td>valor_otros_activos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Total activos</td>
 <td>total_activos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Pasivos Financieros (deudas financieras)</td>
 <td>valor_pasivos_financieros</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Pasivos Corrientes</td>
 <td>valor_pasivos_corrientes</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Valor Otros Pasivos</td>
 <td>valor_otros_pasivos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Total pasivos</td>
 <td>total_pasivos</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
-<td>Salario*</td>
-<td>salario</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Patrimonio*</td>
+<td>Patrimonio</td>
 <td>patrimonio</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
-<td>Cupo Solicitado</td>
-<td>cupo_solicitado</td>
-<td>NUMÉRICO</td>
+<td>Monto Crédito Solicitado (antes estaba como Cupo Solicitado)</td>
+<td>monto_solicitado</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Monto cuenta en moneda extranjera1</td>
 <td>monto_cuenta_ext1</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Monto cuenta en moneda extranjera2</td>
 <td>monto_cuenta_ext2</td>
-<td>NUMÉRICO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Puntaje Acierta Deudor</td>
 <td>puntaje_acierta</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de cuentas  embargadas</td>
-<td>nro_cuentas_embargadas</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de cuentas  canceladas por mal manejo</td>
-<td>nro_cuentas_canceladas</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de obligaciones en mora</td>
-<td>nro_obligaciones_mora</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de obligaciones en mora (Sector cooperativo)</td>
-<td>nro_obligaciones_mora_coop</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de carteras castigadas (Sector financiero o cooperativo)</td>
-<td>nro_carteras_castigadas</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de carteras  en dudoso recaudo</td>
-<td>nro_carteras_dudoso</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de obligaciones reestructuradas</td>
-<td>nro_obligaciones_reestructuradas</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de obligaciones calificadas en "C" (Sector financiero)</td>
-<td>nro_obligaciones_calificadas_C</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de obligaciones calificadas en "D" (Sector financiero)</td>
-<td>nro_obligaciones_calificadas_D</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de obligaciones calificadas en "E" (Sector financiero)</td>
-<td>nro_obligaciones_calificadas_E</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Número moras de 30 días en los últimos 12 meses</td>
-<td>nro_moras_30_dias</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Número moras de 60 días en los últimos 12 meses</td>
-<td>nro_moras_60_dias</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Número moras superiores a 60 días en los últimos 12 meses</td>
-<td>nro_moras_sup_60_dias</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. entidades (financieras y cooperativas) que consultan últimos 6 meses</td>
-<td>nro_entidades_consulta</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Quanto mínimo ($)</td>
-<td>quanto_minimo</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Quanto máximo ($)</td>
-<td>quanto_maximo</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Quanto medio ($)</td>
-<td>quanto_medio</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>∑ Cuotas créditos de consumo (sin incluir TDC, CBR ni CAV) Centrales de Riesgo</td>
-<td>sum_cuotas_creditos</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>∑ Saldos TDC y CBR Centrales de Riesgo</td>
-<td>sum_saldos_tdc</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>∑ Cupos TDC y CBR Centrales de Riesgo</td>
-<td>sum_cupos_tdc</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No. de embargos en desprendible de pago</td>
-<td>nro_embargos_pago</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>N° de procesos civiles en contra en curso</td>
-<td>nro_procesos_civiles</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>NIT Custodia Pagaré</td>
-<td>nit_custodia</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>NIT Originador</td>
-<td>nit_originador</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>NIT Pagaduría</td>
-<td>nit_pagaduria</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Código Pagaduría</td>
-<td>codigo_pagaduria</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>NIT Fideicomisos</td>
-<td>nit_fideicomisos</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Código Fideicomiso</td>
-<td>codigo_fideicomiso</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Código DANE Ciudad Asociado</td>
-<td>codigo_dane_asociado</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Valor Crédito Aprobado ($)</td>
-<td>valor_credito</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Plazo inicial crédito (meses)</td>
-<td>plazo_inicial_credito</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Tasa Interés Colocación E.A.</td>
-<td>tasa_interes</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Valor AVAL</td>
-<td>valor_aval</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Períodicidad</td>
-<td>periodicidad</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Tasa Unica %</td>
-<td>tasa_unica</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Porcentaje de reserva</td>
-<td>porcentaje_reserva</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Prima Comercial</td>
-<td>prima_comercial</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No de documento beneficiario gratuito 1</td>
-<td>no_doc_benef_grat1</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>% Beneficiario gratuito 1</td>
-<td>porc_benef_grat1</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>No de documento beneficiario gratuito 2</td>
-<td>no_doc_benef_grat2</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>% Beneficiario gratuito 2</td>
-<td>porc_benef_grat2</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Tipo Entidad Pagaduría</td>
-<td>tipo_entidad</td>
-<td>NUMÉRICO</td>
-</tr>
-<tr>
-<td>Cliente Declara Renta</td>
-<td>cliente_declara</td>
-<td>PÚBLiCA/PRIVADA</td>
-</tr>
-<tr>
-<td>¿Actualmente Desempeña un cargo político?</td>
-<td>desempena_cargo</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Manejo de recursos públicos</td>
-<td>manejo_recursos</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>¿Representa legalmente alguna organización internacional (ONG/OIG)?</td>
-<td>representa_organizacion</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Cliente es PEP</td>
-<td>cliente_es_pep</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>¿Tiene algún vinculo con un PEP ?</td>
-<td>vinculo_con_pep</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Reconocimiento público</td>
-<td>reconocimiento_publico</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Posee Cuenta Bancaria</td>
-<td>posee_cuenta</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Realiza operaciones en moneda extranjera</td>
-<td>realiza_operaciones</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Importaciones**</td>
-<td>importaciones</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Crédito documentario**</td>
-<td>credito_documentario</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Giros directos**</td>
-<td>giros_directos</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Negociación de divisas**</td>
-<td>negociacion_divisas</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Leasing de importación**</td>
-<td>leasing_importacion</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Giros financiados**</td>
-<td>giros_financiados</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Exportaciones**</td>
-<td>exportaciones</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Inversiones**</td>
-<td>inversiones</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Venta de bienes*</td>
-<td>venta_bienes</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Honorarios y comisiones*</td>
-<td>honorarios_comisiones</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Ingresos por actividad*</td>
-<td>ingresos_actividad</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Préstamo bancario*</td>
-<td>prestamo_bancario</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Rifas*</td>
-<td>rifas</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Pensión*</td>
-<td>pension</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Herencia*</td>
-<td>herencia</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Liquidación de prestaciones*</td>
-<td>liq_prestaciones</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Liquidación de sucesiones*</td>
-<td>liq_sucesiones</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Otros*</td>
-<td>otros</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Tiene cuentas en moneda extranjera</td>
-<td>cuentas_moneda_ext</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>He permanecido 31 días o más durante el año en curso o 183 días durante un periodo de 3 años, que incluye el año en curso y los dos años inmediatamente anteriores dentro del territorio de los Estados Unidos</td>
-<td>permanencia_eeuu</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Soy poseedor de la tarjeta verde(Green Card) de los estados unidos de NorteamErica(Tarjeta de residencia)</td>
-<td>tarjeta_verde</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Recibo sumas de dinero fijas u ocasionales(FDAP) que provienen de fuentes dentro de los Estados Unidos de Norteamérica)</td>
-<td>ingresos_fdap</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Recibo ingreso bruto procedente de la venta u otra disposición de cualquier propiedad que pueda producir rentas intereses o dividendos cuya fuente se encuentre dentro de los estados unidos de Norteamérica</td>
-<td>ingreso_bruto_venta</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Soy ciudadano de los Estados Unidos residente en Colombia</td>
-<td>ciudadano_eeuu</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Estoy obligado a tributar en Estados Unidos</td>
-<td>obligado_tributar</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>¿Coincidencia en listas de control? (No, Listas)</td>
-<td>coincidencia_listas</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Procesos en contra en curso con Cooperativa o Demanda por Alimentos (Sí/No)</td>
-<td>procesos_cooperativa</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Extraprima</td>
-<td>extraprima</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Primer apellido</td>
-<td>primer_apellido</td>
-<td>SI/NO</td>
-</tr>
-<tr>
-<td>Segundo apellido</td>
-<td>segundo_apellido</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Primer nombre</td>
-<td>primer_nombre</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Segundo nombre</td>
-<td>segundo_nombre</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Tipo de documento</td>
-<td>tipo_doc</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Pais Nacimiento</td>
-<td>pais_nacimiento</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Nacionalidad</td>
-<td>nacionalidad</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Género</td>
-<td>genero</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Estado Civil</td>
-<td>estado_civil</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Nivel de Estudios</td>
-<td>nivel_estudios</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Grupo étnico</td>
-<td>grupo_etnico</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Profesiòn</td>
-<td>profesion</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Ocupación</td>
-<td>ocupacion</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Clase de Cliente</td>
-<td>clase_cliente</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Actividad Económica (INDEPENDIENTES)</td>
-<td>actividad_economica</td>
-<td>TEXTO</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Barrio Residencia</td>
 <td>barrio_resi</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Estrato Residencia</td>
 <td>estrato_resi</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Tipo de vivienda Residencia</td>
 <td>tipo_vivienda</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Nombre empresa donde labora</td>
 <td>nombre_empresa</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Punto de Venta donde labora</td>
+<td>Punto de Venta donde labora (POR DEFECTIVO VIENE "PRINCIPAL")</td>
 <td>punto_venta</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Tipo de contrato</td>
 <td>tipo_contrato</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
-<td>Tipo de empresa</td>
+<td>Tipo de empresa ("PÚBLICA", "PRIVADA", "MIXTA")</td>
 <td>tipo_empresa</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Cargo Actual en la empresa</td>
 <td>cargo_actual</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>¿Cuál Cargo Politico Desempeña?</td>
 <td>cargo_politico</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Nombre Referencia Familiar 1</td>
 <td>nombre_ref_fam1</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Parentesco Referencia Familiar 1</td>
 <td>parentesco_ref_fam1</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Nombre Referencia Familiar 2</td>
-<td>nombre_ref_fam2</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Parentesco Referencia Familiar 2</td>
-<td>parentesco_ref_fam2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Nombre Referencia Personal 1</td>
 <td>nombre_ref_per1</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Nombre Referencia Personal 2</td>
-<td>nombre_ref_per2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 <tr>
 <td>Nombre Banco Cuenta Bancaria</td>
 <td>nombre_banco_cuenta</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Tipo de Cuenta Bancaria</td>
 <td>tipo_cuenta</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
-<td>Desripción Otros Activos</td>
+<td>Descripción Otros Activos</td>
 <td>desc_otros_activos</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Descripción Otros Pasivos</td>
 <td>desc_otros_pasivos</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
-<td>Otros**</td>
+<td>Otros</td>
 <td>otros_activos_pasivos</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Nombre del banco donde tiene cuenta en moneda extranjera1</td>
 <td>nombre_banco_ext1</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Tipo producto en moneda extranjera1</td>
 <td>tipo_producto_ext1</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Moneda extranjera1</td>
 <td>moneda_ext1</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Ciudad del banco donde tiene cuenta en moneda extranjera1</td>
 <td>ciudad_banco_ext1</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>País donde posee cuenta en moneda extranjera1</td>
 <td>pais_banco_ext1</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Nombre del banco donde tiene cuenta en moneda extranjera2</td>
 <td>nombre_banco_ext2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Tipo producto en moneda extranjera2</td>
 <td>tipo_producto_ext2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Moneda extranjera2</td>
 <td>moneda_ext2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>Ciudad del banco donde tiene cuenta en moneda extranjera2</td>
 <td>ciudad_banco_ext2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
 <td>País donde posee cuenta en moneda extranjera2</td>
 <td>pais_banco_ext2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
 </tr>
 <tr>
-<td>Calificación del Cliente</td>
+<td>Calificación del Cliente (MEJOR CALIFICACIÓN EN DATACRÉDITO)</td>
 <td>calificacion_cliente</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
 <td>Tipo Cliente Datacredito</td>
 <td>tipo_cliente_datacredito</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Observaciones Originador</td>
-<td>obs_originador</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Tipo de libranza</td>
+<td>Tipo de libranza (LINEA DE LIBRANZA : "COMPRA DE CARTERA", "LIBRE INVERSIÓN", ETC)</td>
 <td>tipo_libranza</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Razón Social Originador</td>
+<td>Razón Social Originador (EN PRINCIPIO "VANTAGE")</td>
 <td>razon_social_originador</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
 <td>Razón Social Pagaduria</td>
 <td>razon_social_pagaduria</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Segmenteo Libranza</td>
+<td>Segmento Libranza ("PENSIONADO", "DOCENTE", ETC)</td>
 <td>segmento_libranza</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
 <td>Razón Social Fideicomisos</td>
 <td>razon_social_fideicomisos</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Nombre Fideicomiso</td>
-<td>nombre_fideicomiso</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Fondeador</td>
+<td>Fondeador (VIENE VACIO PORQUE AUN NO SE HA VENDIDO)</td>
 <td>fondeador</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Nombre Vendedor</td>
-<td>nombre_vendedor</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Oficina Asociado</td>
+<td>Oficina Asociado (ALUDE A LA OFICINA DONDE SE RADICÓ CRÉDITO)</td>
 <td>oficina_asociado</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
 </tr>
 <tr>
-<td>Tipo de AVAL</td>
+<td>Tipo de AVAL (EN LIBRANZA PRIVADA DEBE VENIR "NORMALIZATE", LIBRANZA PÚBLICA "FIGARANTIAS")</td>
 <td>tipo_aval</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>SEGURO</td>
 </tr>
 <tr>
 <td>Beneficiario gratuito 1</td>
 <td>benef_grat1</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>SEGURO</td>
 </tr>
 <tr>
 <td>Beneficiario gratuito 2</td>
 <td>benef_grat2</td>
-<td>TEXTO</td>
+<td>VARCHAR2</td>
+<td>SEGURO</td>
 </tr>
 <tr>
-<td>Cuotas Crédito</td>
-<td>cuotas_credito</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Cuota Cupo TDC</td>
-<td>cuota_cupo_tdc</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Cuota Cupo ROTA</td>
-<td>cuota_cupo_rota</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Gastos Familiares Pensionado</td>
-<td>gastos_familiares_pensionado</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Gastos Familiares Activo</td>
-<td>gastos_familiares_activo</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Tasa Usura Últimos Meses</td>
-<td>tasa_usura_ultimos_meses</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Gastos Financieros</td>
-<td>gastos_financieros</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>% Endeudamiento</td>
-<td>porcent_endeudamiento</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Gastos Familiares</td>
-<td>gastos_familiaries</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Valor total intereses anticipados</td>
-<td>int_anticipado</td>
-<td>NUMERICO(2)</td>
-</tr>
-<tr>
-<td>Ppatrimonial</td>
+<td>Protección Patrimial o Seguro Crédito</td>
 <td>p_patrimonial</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
 </tr>
 <tr>
-<td>Valor Préstamos Diferentes a Coomeva (Financiero)</td>
+<td>No. de cuentas embargadas</td>
+<td>nro_cuentas_embargadas</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de cuentas canceladas por mal manejo</td>
+<td>nro_cuentas_canceladas</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de obligaciones en mora</td>
+<td>nro_obligaciones_mora</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de obligaciones en mora (Sector cooperativo)</td>
+<td>nro_obligaciones_mora_coop</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de carteras castigadas (Sector financiero o cooperativo)</td>
+<td>nro_carteras_castigadas</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de carteras en dudoso recaudo</td>
+<td>nro_carteras_dudoso</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de obligaciones reestructuradas</td>
+<td>nro_obligaciones_reestructuradas</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de obligaciones calificadas en "C" (Sector financiero)</td>
+<td>nro_obligaciones_calificadas_C</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de obligaciones calificadas en "D" (Sector financiero)</td>
+<td>nro_obligaciones_calificadas_D</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de obligaciones calificadas en "E" (Sector financiero)</td>
+<td>nro_obligaciones_calificadas_E</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Número moras de 30 días en los últimos 12 meses</td>
+<td>nro_moras_30_dias</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Número moras de 60 días en los últimos 12 meses</td>
+<td>nro_moras_60_dias</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Número moras superiores a 60 días en los últimos 12 meses</td>
+<td>nro_moras_sup_60_dias</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. entidades (financieras y cooperativas) que consultan últimos 6 meses</td>
+<td>nro_entidades_consulta</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Quanto mínimo ($)</td>
+<td>quanto_minimo</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Quanto máximo ($)</td>
+<td>quanto_maximo</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Quanto medio ($)</td>
+<td>quanto_medio</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>∑ Cuotas créditos de consumo (sin incluir TDC, CBR ni CAV) Centrales de Riesgo</td>
+<td>sum_cuotas_creditos</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>∑ Saldos TDC y CBR Centrales de Riesgo</td>
+<td>sum_saldos_tdc</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>∑ Cupos TDC y CBR Centrales de Riesgo</td>
+<td>sum_cupos_tdc</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>No. de embargos en desprendible de pago</td>
+<td>nro_embargos_pago</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>N° de procesos civiles en contra en curso</td>
+<td>nro_procesos_civiles</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>NIT Custodia Pagaré (normalmente vacío por el momento)</td>
+<td>nit_custodia</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>NIT Originador (NIT VANTAGE 900690783)</td>
+<td>nit_originador</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>NIT Pagaduría (NIT DE LA PAGADURIA ASOCIADA AL DEUDOR)</td>
+<td>nit_pagaduria</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>NIT Fideicomisos (NIT MASTER TRUST - NIT PA VANTAGE)</td>
+<td>nit_fideicomisos</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Código Fideicomiso</td>
+<td>codigo_fideicomiso</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Valor Desembolsado</td>
+<td>valor_desembolso</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Plazo inicial crédito (meses)</td>
+<td>plazo_inicial_credito</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Tasa Interés Colocación nominal mes vencido</td>
+<td>tasa_interes</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Valor AVAL - FIANZA</td>
+<td>valor_aval</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>Períodicidad (VENDRÁ CÓDIGO "2" QUE ALUDE A PAGO MENSUAL)</td>
+<td>periodicidad</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>Porcentaje de reserva (ANTERIORMENTE ERA 9% … NUEVA POLÍTICA)</td>
+<td>porcentaje_reserva</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>Prima Mensual Seguro Vida</td>
+<td>prima_segvida</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>No de documento beneficiario gratuito 1</td>
+<td>no_doc_benef_grat1</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>% Beneficiario gratuito 1</td>
+<td>porc_benef_grat1</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>No de documento beneficiario gratuito 2</td>
+<td>no_doc_benef_grat2</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>% Beneficiario gratuito 2</td>
+<td>porc_benef_grat2</td>
+<td>NUMBER</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>Tipo Entidad Pagaduría (DETALLAR SI ES "PÚBLICA" o "PRIVADA")</td>
+<td>tipo_entidad</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Cliente Declara Renta</td>
+<td>cliente_declara</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>¿Actualmente Desempeña un cargo político?</td>
+<td>desempena_cargo</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Manejo de recursos públicos</td>
+<td>manejo_recursos</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>¿Representa legalmente alguna organización internacional (ONG/OIG)?</td>
+<td>representa_organizacion</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Cliente es PEP</td>
+<td>cliente_es_pep</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>¿Tiene algún vinculo con un PEP?</td>
+<td>vinculo_con_pep</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Reconocimiento público</td>
+<td>reconocimiento_publico</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Posee Cuenta Bancaria</td>
+<td>posee_cuenta</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Realiza operaciones en moneda extranjera</td>
+<td>realiza_operaciones</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Importaciones**</td>
+<td>importaciones</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Crédito documentario**</td>
+<td>credito_documentario</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Giros directos**</td>
+<td>giros_directos</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Negociación de divisas**</td>
+<td>negociacion_divisas</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Leasing de importación**</td>
+<td>leasing_importacion</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Giros financiados**</td>
+<td>giros_financiados</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Exportaciones**</td>
+<td>exportaciones</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Inversiones**</td>
+<td>inversiones</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Venta de bienes*</td>
+<td>venta_bienes</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Honorarios y comisiones*</td>
+<td>honorarios_comisiones</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Ingresos por actividad*</td>
+<td>ingresos_actividad</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Préstamo bancario*</td>
+<td>prestamo_bancario</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Rifas*</td>
+<td>rifas</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Pensión*</td>
+<td>pension</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Herencia*</td>
+<td>herencia</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Liquidación de prestaciones*</td>
+<td>liq_prestaciones</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Liquidación de sucesiones*</td>
+<td>liq_sucesiones</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Otros*</td>
+<td>otros</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Tiene cuentas en moneda extranjera</td>
+<td>cuentas_moneda_ext</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>He permanecido 31 días o más durante el año en curso o 183 días durante un periodo de 3 años, que incluye el año en curso y los dos años inmediatamente anteriores dentro del territorio de los Estados Unidos</td>
+<td>permanencia_eeuu</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Soy poseedor de la tarjeta verde(Green Card) de los Estados Unidos de Norteamérica (Tarjeta de residencia)</td>
+<td>tarjeta_verde</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Recibo sumas de dinero fijas u ocasionales(FDAP) que provienen de fuentes dentro de los Estados Unidos de Norteamérica</td>
+<td>ingresos_fdap</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Recibo ingreso bruto procedente de la venta u otra disposición de cualquier propiedad que pueda producir rentas intereses o dividendos cuya fuente se encuentre dentro de los estados unidos de Norteamérica</td>
+<td>ingreso_bruto_venta</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Soy ciudadano de los Estados Unidos residente en Colombia</td>
+<td>ciudadano_eeuu</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Estoy obligado a tributar en Estados Unidos</td>
+<td>obligado_tributar</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>¿Coincidencia en listas de control? (No, Listas)</td>
+<td>coincidencia_listas</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Procesos en contra en curso con Cooperativa o Demanda por Alimentos (Sí/No)</td>
+<td>procesos_cooperativa</td>
+<td>VARCHAR2</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Extraprima</td>
+<td>extraprima</td>
+<td>VARCHAR2</td>
+<td>SEGURO</td>
+</tr>
+<tr>
+<td>Primer apellido</td>
+<td>primer_apellido</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Segundo apellido</td>
+<td>segundo_apellido</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Primer nombre</td>
+<td>primer_nombre</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Segundo nombre</td>
+<td>segundo_nombre</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Tipo de documento</td>
+<td>tipo_doc</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>País Nacimiento</td>
+<td>pais_nacimiento</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Nacionalidad</td>
+<td>nacionalidad</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Género</td>
+<td>genero</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Estado Civil</td>
+<td>estado_civil</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Nivel de Estudios</td>
+<td>nivel_estudios</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Grupo étnico</td>
+<td>grupo_etnico</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Profesión</td>
+<td>profesion</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Ocupación</td>
+<td>ocupacion</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Clase de Cliente (1.)</td>
+<td>clase_cliente</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Cuotas Crédito (ALUDE SUMATORIO TODAS CUOTAS CONSUMO DIFERENTES A TDC Y CR Y SECTOR DELCOS)</td>
+<td>cuotas_credito</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Cuota Cupo TDC UTILIZADO (ALUDE A SUMATORIA CUPOS UTILIZADOS DE TODAS TARJETAS CRÉDITO * TASA PONDERADA * PLAZO)</td>
+<td>cuota_cupo_tdcusado</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Cuota Cupo TDC CONTINGENTE (ALUDE A SUMATORIA CUPOS UTILIZADOS DE TODAS TARJETAS CRÉDITO * 33% * TASA PONDERADA 3 MESES * PLAZO)</td>
+<td>cuota_cupo_tdcconting</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Cuota Cupo ROTA USADO (SUMATORIA LOS CUPOS UTILIZADOS ROTATIVO * TASA PONDERADA 3 MESES * PLAZO 48 MESES)</td>
+<td>cuota_cupo_rotausado</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Cuota Cupo ROTA CONTINGENTE (SUMATORIA TODAS CUPOS ROTATIVO * 33% * TASA PONDERADA 3 MESES * PLAZO 48 MESES)</td>
+<td>cuota_cupo_rotaconting</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
+</tr>
+<tr>
+<td>Gastos Familiares Pensionados (ESTIMADO 10% DEL INGRESO)</td>
+<td>gastos_familiares_pensionado</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Gastos Familiares Activos (CÁLCULO INGRESO SOBRE TABLA ENTREGADA POR VANTAGE)</td>
+<td>gastos_familiares_activo</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Tasa Usura Promedio Últimos 3 meses</td>
+<td>tasa_usura_ultimos_meses</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Gastos Financieros (CORRESPONDEN A SUMATORIA CUOTAS CREDITOS + CUOTAS TDC + CUOTAS ROTATIVOS)</td>
+<td>gastos_financieros</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>% Endeudamiento (CÁLCULO GASTOS FINANCIEROS + GASTOS FAMILIARES + CUOTA NUEVO CREDITO) / INGRESOS CAPACIDAD CREDITO</td>
+<td>porcent_endeudamiento</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN FINANCIERA</td>
+</tr>
+<tr>
+<td>Días Intereses Anticipados</td>
+<td>dias_int_ant</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Intereses Anticipados Cobrados</td>
+<td>int_anticipado</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Gasto por Plataforma</td>
+<td>gto_plataforma</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Valor préstamos diferentes a Coomeva (Financiero)</td>
 <td>valor_prestamo_sin_c</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Valor Préstamos Diferentes a Coomeva (Real)</td>
+<td>Valor préstamos diferentes a Coomeva (Real)</td>
 <td>valor_prestamo_sin_r</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Valor Préstamos Diferentes a Coomeva (Cooperativa)</td>
+<td>Valor préstamos diferentes a Coomeva (Cooperativa)</td>
 <td>valor_prestamo_sin_cc</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Total Obligaciones en Mora Sector Financiero</td>
+<td>No obligaciones en mora Sector Financiero</td>
 <td>total_oblm_sf</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Total Obligaciones &gt; Saldo Cartera a 7 millones Sector Financiero</td>
+<td>No obligaciones en mora &gt; saldo cartera a 7 millones Sector Financiero</td>
 <td>total_oblm_mayor_7</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Total Obligaciones Castigadas &gt; Saldo Cartera a 15 millones Sector Financiero</td>
+<td>No obligaciones castigadas &gt; saldo cartera a 15 millones Sector Financiero</td>
 <td>total_obl_castigadas_mayor_15</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Total Moras =&gt; 90 días Todos los Sectores</td>
+<td>No Moras =&gt;90 días Todos los sectores</td>
 <td>total_oblm_mayor_90</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Total Endeudamiento Sector Financiero (Suma de Saldos)</td>
+<td>Total Endeudamiento Sector Financiero Sumatoria de los saldos</td>
 <td>total_deuda_sf</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Total Endeudamiento Sector Cooperativo (Suma de Saldos)</td>
+<td>Total Endeudamiento Sector Cooperativo Sumatoria de los saldos</td>
 <td>total_deuda_sc</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Total Endeudamiento Sector Real (Suma de Saldos)</td>
+<td>Total Endeudamiento Sector Real Sumatoria de los saldos</td>
 <td>total_deuda_sr</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CENTRALES</td>
 </tr>
 <tr>
-<td>Sector de la Empresa a la que pertenece</td>
-<td>sector_empresa</td>
-<td>TEXTO</td>
-</tr>
-<tr>
-<td>Valor de la cuota que debe de pagar el duedor (incluye seguros y avales)</td>
+<td>Valor de la cuota total que debe pagar deudor (incluye seguros y avales)</td>
 <td>valor_cuota_total</td>
-<td>NUMERICO(2)</td>
+<td>NUMBER</td>
+<td>INFORMACIÓN CRÉDITO</td>
+</tr>
+<tr>
+<td>Correo electrónico referencia familiar 1</td>
+<td>email_ref_fam1</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Correo electrónico referencia personal 1</td>
+<td>email_ref_pers1</td>
+<td>NUMBER</td>
+<td>DEMOGRÁFICOS</td>
+</tr>
+<tr>
+<td>Nombre Referencia Familiar 2</td>
+<td>nombre_ref_fam2</td>
+<td>VARCHAR2</td>
+<td>DEMOGRÁFICOS</td>
 </tr>
 </tbody>
 </table>
