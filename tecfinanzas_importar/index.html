@@ -570,7 +570,8 @@
 
 
 <h1 id="servicio-importar-datos">SERVICIO IMPORTAR DATOS</h1>
-<p><strong>Descripción:</strong> Este servicio permite recibir los 224 parametros para el proceso de creacion de los datos demograficos y información financiera dentro de TESEO.</p>
+<p><strong>Descripción:</strong> Este servicio permite recibir los 224 parametros para el proceso de creacion de los datos demograficos
+y información financiera dentro de TESEO.</p>
 <p><strong>Tipo de Servicio:</strong> POST</p>
 <h2 id="url-de-integracion">URL de Integración</h2>
 <ul>
@@ -596,8 +597,8 @@
 </li>
 <li>no_pagare</li>
 <li>fecha_desemb</li>
-<li>tipo_libranza </li>
-<li>segmento_libranza </li>
+<li>tipo_libranza</li>
+<li>segmento_libranza</li>
 <li>nit_originador</li>
 <li>nit_pagaduria</li>
 <li>nit_fideicomisos</li>
@@ -612,7 +613,7 @@
 </ul>
 <pre><code class="language-json">{
   &quot;datostecfinanza&quot;: {
-    &quot;nro_documento&quot;: &quot;3234567890&quot;,
+    &quot;nro_documento&quot;: &quot;&quot;,
     &quot;dir_residencia&quot;: &quot;123 Main St&quot;,
     &quot;correo&quot;: &quot;example@example.com&quot;,
     &quot;dir_familiar&quot;: &quot;456 Elm St&quot;,
@@ -777,15 +778,72 @@
     &quot;importaciones&quot;: &quot;No&quot;,
     &quot;credito_documentario&quot;: &quot;Sí&quot;,
     &quot;giros_directos&quot;: &quot;No&quot;,
-    &quot;negociacion_divisas&quot;: &quot;No&quot;,
-    &quot;derechos_socio&quot;: &quot;No&quot;,
-    &quot;rendimiento_inversion&quot;: &quot;Sí&quot;,
-    &quot;valor_inversiones&quot;: 1000000,
-    &quot;valor_descuentos&quot;: 0,
-    &quot;valor_saldo_pendiente&quot;: 200000,
-    &quot;valor_beneficios_descuentos&quot;: 10000,
-    &quot;valor_total_saldo&quot;: 1500000,
-    &quot;nombre_ref_fam2&quot;: &quot;Referencia2&quot;
+    &quot;negociacion_divisas&quot;: &quot;Sí&quot;,
+    &quot;leasing_importacion&quot;: &quot;No&quot;,
+    &quot;giros_financiados&quot;: &quot;Sí&quot;,
+    &quot;exportaciones&quot;: &quot;No&quot;,
+    &quot;inversiones&quot;: &quot;Sí&quot;,
+    &quot;venta_bienes&quot;: &quot;No&quot;,
+    &quot;honorarios_comisiones&quot;: &quot;Sí&quot;,
+    &quot;ingresos_actividad&quot;: &quot;Sí&quot;,
+    &quot;prestamo_bancario&quot;: &quot;No&quot;,
+    &quot;rifas&quot;: &quot;No&quot;,
+    &quot;pension&quot;: &quot;Sí&quot;,
+    &quot;herencia&quot;: &quot;No&quot;,
+    &quot;liq_prestaciones&quot;: &quot;Sí&quot;,
+    &quot;liq_sucesiones&quot;: &quot;No&quot;,
+    &quot;otros&quot;: &quot;N/A&quot;,
+    &quot;cuentas_moneda_ext&quot;: &quot;Sí&quot;,
+    &quot;permanencia_eeuu&quot;: &quot;No&quot;,
+    &quot;tarjeta_verde&quot;: &quot;No&quot;,
+    &quot;ingresos_fdap&quot;: &quot;No&quot;,
+    &quot;ingreso_bruto_venta&quot;: &quot;Sí&quot;,
+    &quot;ciudadano_eeuu&quot;: &quot;No&quot;,
+    &quot;obligado_tributar&quot;: &quot;Sí&quot;,
+    &quot;coincidencia_listas&quot;: &quot;No&quot;,
+    &quot;procesos_cooperativa&quot;: &quot;No&quot;,
+    &quot;extraprima&quot;: &quot;No&quot;,
+    &quot;primer_apellido&quot;: &quot;Apellido1&quot;,
+    &quot;segundo_apellido&quot;: &quot;Apellido2&quot;,
+    &quot;primer_nombre&quot;: &quot;Nombre1&quot;,
+    &quot;segundo_nombre&quot;: &quot;Nombre2&quot;,
+    &quot;tipo_doc&quot;: &quot;CC&quot;,
+    &quot;pais_nacimiento&quot;: &quot;Colombia&quot;,
+    &quot;nacionalidad&quot;: &quot;Colombiana&quot;,
+    &quot;genero&quot;: &quot;Masculino&quot;,
+    &quot;estado_civil&quot;: &quot;Casado&quot;,
+    &quot;nivel_estudios&quot;: &quot;Universitario&quot;,
+    &quot;grupo_etnico&quot;: &quot;Ninguno&quot;,
+    &quot;profesion&quot;: &quot;Ingeniero&quot;,
+    &quot;ocupacion&quot;: &quot;Desarrollador&quot;,
+    &quot;clase_cliente&quot;: &quot;VIP&quot;,
+    &quot;cuotas_credito&quot;: 0.00,
+    &quot;cuota_cupo_tdcusado&quot;: 0.00,
+    &quot;cuota_cupo_tdcconting&quot;: 0.00,
+    &quot;cuota_cupo_rotausado&quot;: 0.00,
+    &quot;cuota_cupo_rotaconting&quot;: 0.00,
+    &quot;gastos_familiares_pensionado&quot;: 0.00,
+    &quot;gastos_familiares_activo&quot;: 0.00,
+    &quot;tasa_usura_ultimos_meses&quot;: 0.00,
+    &quot;gastos_financieros&quot;: 0.00,
+    &quot;porcent_endeudamiento&quot;: 0.00,
+    &quot;dias_int_ant&quot;: 0.00,
+    &quot;int_anticipado&quot;: 2844734.00,
+    &quot;gto_plataforma&quot;: 2844734.00,
+    &quot;valor_prestamo_sin_c&quot;: 0.00,
+    &quot;valor_prestamo_sin_r&quot;: 0.00,
+    &quot;valor_prestamo_sin_cc&quot;: 0.00,
+    &quot;total_oblm_sf&quot;: 0.00,
+    &quot;total_oblm_mayor_7&quot;: 0.00,
+    &quot;total_obl_castigadas_mayor_15&quot;: 0.00,
+    &quot;total_oblm_mayor_90&quot;: 0.00,
+    &quot;total_deuda_sf&quot;: 0.00,
+    &quot;total_deuda_sc&quot;: 0.00,
+    &quot;total_deuda_sr&quot;: 0.00,
+    &quot;valor_cuota_total&quot;: 0.00,
+    &quot;email_ref_fam1&quot;: &quot;work@example.com&quot;,
+    &quot;email_ref_pers1&quot;: &quot;work@example.com&quot;,
+    &quot;nombre_ref_fam1&quot;: &quot;Referencia1&quot;
   }
 }
 
