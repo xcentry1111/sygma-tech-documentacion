@@ -1,7 +1,13 @@
 site_name: Documentación Sygma-Tech
-theme: readthedocs
+theme:
+  name: material
 
 nav:
   - Inicio: 'index.md'
-  - 'Servicio WolBox':
-      - 'Integración': 'wolbox.md'
+  #- 'Servicio WolBox':
+  #    - 'Integración': 'wolbox.md'
+  - 'Servicio TecFinanzas':
+      - 'Integración': 'tecfinanzas.md'
+      - 'SV Generación Token': 'tecfinanzas_token.md'
+      - 'SV Importar Datos': 'tecfinanzas_importar.md'
+      - 'SV Actualizar Datos': 'tecfinanzas_actualizar.md'
