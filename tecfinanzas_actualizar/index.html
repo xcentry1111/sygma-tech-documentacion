@@ -380,6 +380,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#consideracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideracion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
     <span class="md-ellipsis">
       Cuerpo de la Solicitud (raw)
@@ -491,6 +500,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#consideracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideracion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
     <span class="md-ellipsis">
       Cuerpo de la Solicitud (raw)
@@ -571,6 +589,10 @@
 <li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
 <li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
 <li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
+</ul>
+<h2 id="consideracion">Consideracion</h2>
+<ul>
+<li>El parámetro tipo_servicio debe establecerse por defecto en 'UPDATE', ya que con este valor el sistema identifica que se trata de una actualización. Por otro lado, id_transaccion corresponde a un identificador propio de la entidad que debe enviarse con el fin de que, al momento de cruzar información, se pueda identificar.</li>
 </ul>
 <h2 id="cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</h2>
 <p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
