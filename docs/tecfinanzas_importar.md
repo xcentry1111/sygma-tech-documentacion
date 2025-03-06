@@ -1,16 +1,16 @@
-# SERVICIO IMPORTAR DATOS
+# Servicio para importar datos
 
 **Descripción:** Este servicio permite recibir parametros para el proceso de creacion de los datos demograficos
 y información financiera dentro de TESEO.
 
 **Tipo de Servicio:** POST
 
-## URL de Integración
+## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/tecfinanzas/importar_datos`
-- **Producción:** `POR_DEFINIR/api/tecfinanzas/importar_datos`
+- **Prueba:** `http://testing-sygma.com/api/originador`
+- **Producción:** `POR_DEFINIR/api/originador`
 
-## Headers
+## **Headers**
 
 El proceso requiere los siguientes encabezados en la solicitud:
 
@@ -18,11 +18,11 @@ El proceso requiere los siguientes encabezados en la solicitud:
 - **Content-Type:** `application/json` (Obligatorio)
 - **Authorization:** `Bearer ${token}` (Obligatorio)
 
-## Cuerpo de la Solicitud (raw)
+## **Cuerpo de la Solicitud (raw)**
 
 La información debe enviarse en formato JSON. **Ejemplo:**
 
-### Campos Obligatorios
+### **Campos Obligatorios**
 
 - Son obligatorios para que el proceso responda correctamente
 
@@ -42,6 +42,11 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 - primer_apellido
 - primer_nombre
 - tipo_doc
+- id_transaccion
+- dias_int_ant
+- poliza
+- nro_personas
+
 
 `````json
  {
@@ -302,7 +307,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 
 `````
 
-### Respuesta Success
+### **Respuesta Success**
 
 ``````json
 {
@@ -566,7 +571,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 }
 ``````
 
-### Respuesta Token Invalido
+### **Respuesta Token Invalido**
 
 ``````json
 {
@@ -577,7 +582,11 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 }
 ``````
 
-### Respuesta Campos Requeridos
+### **Respuestas por Campos Requeridos**
+
+Durante el procesamiento de la solicitud, el sistema puede devolver respuestas en caso de que falten campos obligatorios o existan errores en la información enviada.
+
+#### **Ejemplo de Respuesta para Campos Requeridos**
 
 ``````json
 {
@@ -588,7 +597,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 }
 ``````
 
-## Descripción de los campos
+## **Descripción de los campos**
 
 | DESCRIPCIÓN                                                                                                                                                                                                    | CAMPO                            | TIPO CAMPO | COMPONENTE             |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|------------|------------------------|

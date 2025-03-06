@@ -1,16 +1,16 @@
-# SERVICIO PARA ACTUALIZAR DATOS
+# Servicio para actualizar datos
 
 
-**Descripción:** Este servicio permite recibir los 9 parametros para el proceso de la actualizacion del credito.
+**Descripción:** Este servicio permite recibir  parametros para el proceso de la actualizacion del credito.
 
 **Tipo de Servicio:** POST
 
-## URL de Integración
+## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/tecfinanzas/importar_datos`
-- **Producción:** `POR_DEFINIR/api/tecfinanzas/importar_datos`
+- **Prueba:** `http://testing-sygma.com/api/originador`
+- **Producción:** `POR_DEFINIR/api/originador`
 
-## Headers
+## **Headers**
 
 El proceso requiere los siguientes encabezados en la solicitud:
 
@@ -18,14 +18,14 @@ El proceso requiere los siguientes encabezados en la solicitud:
 - **Content-Type:** `application/json` (Obligatorio)
 - **Authorization:** `Bearer ${token}` (Obligatorio)
 
-## Consideracion
+## **Consideracion**
 
-- El parámetro tipo_servicio debe establecerse por defecto en 'UPDATE', ya que con este valor el sistema identifica que se trata de una actualización. Por otro lado, id_transaccion corresponde a un identificador propio de la entidad que debe enviarse con el fin de que, al momento de cruzar información, se pueda identificar.
-## Cuerpo de la Solicitud (raw)
+- El parámetro **tipo_servicio** debe establecerse por defecto en **UPDATE**, ya que con este valor el sistema identifica que se trata de una actualización. Por otro lado, id_transaccion corresponde a un identificador propio de la entidad que debe enviarse con el fin de que, al momento de cruzar información, se pueda identificar.
+## **Cuerpo de la Solicitud (raw)** 
 
 La información debe enviarse en formato JSON. **Ejemplo:**
 
-### Campos Obligatorios
+### **Campos Obligatorios**
 
 ``````json
 
@@ -58,7 +58,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 
 ``````
 
-### Respuesta Success
+### **Respuesta Success**
 
 ``````json
 {
@@ -345,7 +345,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 }
 ``````
 
-### Respuesta Token Invalido
+### **Respuesta Token Invalido**
 
 ``````json
 {
@@ -356,7 +356,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 }
 ``````
 
-### Respuesta Campos Requeridos
+### **Respuesta Campos Requeridos**
 
 ``````json
 {

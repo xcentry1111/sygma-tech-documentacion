@@ -6,8 +6,11 @@ nav:
   - Inicio: 'index.md'
   #- 'Servicio WolBox':
   #    - 'Integración': 'wolbox.md'
-  - 'Servicio TecFinanzas':
-      - 'Integración': 'tecfinanzas.md'
-      - 'SV Generación Token': 'tecfinanzas_token.md'
+  - 'SV autenticación': 'tecfinanzas_token.md'
+  - 'SV Originación (Libranza)':
+      - 'Descripción': 'tecfinanzas.md'
       - 'SV Importar Datos': 'tecfinanzas_importar.md'
       - 'SV Actualizar Datos': 'tecfinanzas_actualizar.md'
+  - 'SV Plan de Pagos':
+      - 'Descripción': 'descripcion_plan_pagos.md'
+      - 'SV Plan Pagos': 'plan_pagos.md'

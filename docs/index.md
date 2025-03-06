@@ -1,4 +1,4 @@
-# DOCUMENTACIÓN [SYGMA-TECH](http://www.sygma-tech.co)
+# Documentación [SYGMA-TECH](http://www.sygma-tech.co)
 
 ## ¿Quiénes somos?
 
