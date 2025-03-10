@@ -14,3 +14,7 @@ nav:
   - 'SV Plan de Pagos':
       - 'Descripción': 'descripcion_plan_pagos.md'
       - 'SV Plan Pagos': 'plan_pagos.md'
+  - 'SV Consultas Deudor + Obligaciones':
+      - 'Descripción': 'identificacion_descripcion.md'
+      - 'SV Identificación Básica': 'identificacion_consulta.md'
+      - 'SV Identificación Completa': 'identificacion_consulta_completo.md'
