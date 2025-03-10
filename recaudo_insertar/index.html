@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../descripcion_insertar_recaudos/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>INTEGRACIÓN - Documentación Sygma-Tech</title>
+        <title>Aplicar Recaudo - Documentación Sygma-Tech</title>
       
     
     
@@ -58,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integracion" class="md-skip">
+        <a href="#servicio-para-aplicar-un-recaudo-pago" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              INTEGRACIÓN
+              Aplicar Recaudo
             
           </span>
         </div>
@@ -539,17 +541,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -563,7 +567,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Insertar Recaudos
@@ -595,10 +599,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../recaudo_insertar/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Aplicar Recaudo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -607,6 +631,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud (raw)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Respuesta Succes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Token Invalido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-no-validas-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuestas no validas - Valor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-no-validas-obligacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuestas no validas - Obligación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-no-validas-fecha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuestas no validas - Fecha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -646,15 +795,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipo de Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
       URL de Integración
@@ -673,29 +813,89 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#body-raw" class="md-nav__link">
+  <a href="#consideraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Body (raw)
+      Consideraciones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentos-de-prueba" class="md-nav__link">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentos de Prueba
+      Cuerpo de la Solicitud (raw)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#resultado" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado
+      Ejemplo Respuesta Succes
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Token Invalido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-no-validas-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuestas no validas - Valor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-no-validas-obligacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuestas no validas - Obligación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-no-validas-fecha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuestas no validas - Fecha
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -714,78 +914,90 @@
                   
 
 
-<h1 id="integracion">INTEGRACIÓN</h1>
-<h3 id="tipo-de-servicio">Tipo de Servicio</h3>
-<p><strong>Tipo:</strong> POST</p>
-<h3 id="url-de-integracion">URL de Integración</h3>
+<h1 id="servicio-para-aplicar-un-recaudo-pago">Servicio para aplicar un recaudo (Pago)</h1>
+<p><strong>Descripción:</strong> Este servicio recibe varios parametros cuya finalidad es insertar un recaudo a la obligación</p>
+<p><strong>Tipo de Servicio:</strong> POST</p>
+<h2 id="url-de-integracion"><strong>URL de Integración</strong></h2>
 <ul>
-<li><strong>Prueba</strong>  http://testing-sygma.com/ws_consulta</li>
-<li><strong>Producción:</strong> https://sygma-tech.com.co/ws_consulta</li>
+<li><strong>Prueba:</strong> <code>http://testing-sygma.com/api/insertar_recaudo</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/insertar_recaudo</code></li>
 </ul>
-<h3 id="headers">Headers</h3>
+<h2 id="headers"><strong>Headers</strong></h2>
+<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
 <ul>
-<li>El proceso requiere en la cabecera los siguientes datos.<ul>
-<li><strong>Accept-Type:</strong> application/json (Datos Obligatorios)</li>
-<li><strong>Portafolio:</strong> 10031 (Datos Obligatorios)</li>
-<li><strong>username:</strong> (Se envia por medio de correo electronico)</li>
-<li><strong>password:</strong> (Se envia por medio de correo electronico)</li>
+<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
 </ul>
-</li>
-</ul>
-<h3 id="body-raw">Body (raw)</h3>
+<h2 id="consideraciones"><strong>Consideraciones</strong></h2>
 <ul>
-<li>Para el envio de la información debe ser tipo JSON.
-  <strong>Ejemplo</strong></li>
+<li>El parámetro <strong>tipo_servicio</strong> debe establecerse por defecto en <strong>INSERTAR_RECAUDO</strong>, ya que este valor permite al sistema identificar que se trata de una inserción de recaudo.</li>
+<li>Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:</li>
 </ul>
 <pre><code class="language-json">{
-  &quot;data&quot;: {
-    &quot;identificacion&quot;: &quot;39526796&quot;
-  }
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;No cuenta con los permisos para consumir el servicio&quot;,
+  &quot;code&quot;: 400
 }
 </code></pre>
-<h3 id="documentos-de-prueba">Documentos de Prueba</h3>
-<pre><code class="language-html">1193029667, 1140907250, 1007218621, 79962253, 26430836, 
-1127606400, 51788258, 5884877, 78036389, 1068589463, 
-31198035, 80012453, 39526796, 1003715670, 1016061064, 
-1118305490, 13165624, 1007633666, 1120748852, 21587653, 43043364
-</code></pre>
-<h3 id="resultado">Resultado</h3>
-<ul>
-<li>Servicio que permite retornar los datos de las obligaciones de un cliente.</li>
-</ul>
+<h2 id="cuerpo-de-la-solicitud-raw"><strong>Cuerpo de la Solicitud (raw)</strong></h2>
+<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
+<h3 id="campos-obligatorios"><strong>Campos Obligatorios</strong></h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: 200,
-  &quot;msg&quot;: &quot;Successful registration&quot;,
-  &quot;data&quot;: [
-    {
-      &quot;fecha_generacion&quot;: &quot;2023-03-28 10:17:04 -0500&quot;,
-      &quot;obligacion_colte&quot;: &quot;&quot;,
-      &quot;propietario&quot;: &quot;DFS&quot;,
-      &quot;casa_cobro&quot;: &quot;3_AYS&quot;,
-      &quot;identificacion&quot;: &quot;39526796&quot;,
-      &quot;nombre_completo&quot;: &quot;MARIA FABIOLA MUÑOZ &quot;,
-      &quot;nro_obligacion&quot;: &quot;13258477&quot;,
-      &quot;fecha_desembolso&quot;: &quot;2021-11-13&quot;,
-      &quot;clinica&quot;: &quot;PLAZA IMPERIAL&quot;,
-      &quot;originador&quot;: &quot;NEGOZIA&quot;,
-      &quot;valor_desembolsado&quot;: &quot;2956800.0&quot;,
-      &quot;tasa_corriente&quot;: &quot;25.91&quot;,
-      &quot;dias_mora&quot;: &quot;439&quot;,
-      &quot;plazo_inicial&quot;: &quot;12&quot;,
-      &quot;estado_obligacion&quot;: &quot;EN MORA&quot;,
-      &quot;cuotas_mora&quot;: &quot;11&quot;,
-      &quot;fallecido&quot;: &quot;&quot;,
-      &quot;pago_minimo&quot;: &quot;3120097.05&quot;,
-      &quot;saldo_total&quot;: &quot;3120097.05&quot;,
-      &quot;saldo_capital&quot;: &quot;0.0&quot;,
-      &quot;fch_ult_pago&quot;: &quot;2021-12-29&quot;,
-      &quot;total_recaudo&quot;: &quot;290400.0&quot;,
-      &quot;total_recaudo_mes&quot;: &quot;0.0&quot;,
-      &quot;trama&quot;: &quot;09. &gt; 360&quot;,
-      &quot;cel1&quot;: &quot;3006443103&quot;,
-      &quot;cel2&quot;: &quot;3017549691&quot;
-    }
-  ]
+  &quot;tipo_servicio&quot;: &quot;INSERTAR_RECAUDO&quot;, // OBLIGATORIO
+  &quot;personasobligacion_id&quot;: &quot;1938373&quot;, // OBLIGATORIO
+  &quot;fecha&quot;: &quot;02-07-2024&quot;, // DD-MM-YYYY - OBLIGATORIO - FORMATO
+  &quot;valor&quot;: &quot;10000&quot;, // OBLIGATORIO
+  &quot;sucursal&quot;: &quot;TENJO&quot;, // Sede desde donde se envia el servicio
+  &quot;codigo_transaccion&quot;: &quot;2763637388&quot;,
+  &quot;usuario&quot;: &quot;USUARIO DE LA TRANSACCION&quot;,
+  &quot;observacion&quot;: &quot;PAGO REALIZADO POR LA PLATAFORMA TESEO&quot;
+}
+
+</code></pre>
+<h3 id="ejemplo-respuesta-succes"><strong>Ejemplo Respuesta Succes</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: true,
+  &quot;guid&quot;: &quot;bf5304c04eb5ef007a0a&quot;,
+  &quot;estado_recaudo&quot;: &quot;APLICADO&quot;,
+  &quot;message&quot;: &quot;Registro creado con éxito!!!&quot;,
+  &quot;code&quot;: 200
+}
+</code></pre>
+<h3 id="respuesta-token-invalido"><strong>Respuesta Token Invalido</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Token Inválido&quot;,
+  &quot;details&quot;: &quot;Signature has expired&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuesta-campos-requeridos"><strong>Respuesta Campos Requeridos</strong></h3>
+<pre><code class="language-json">{
+  &quot;error&quot;: &quot;Falta el parámetro&quot;,
+  &quot;message&quot;: &quot;Los siguientes parámetros son requeridos: tipo_servicio&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuestas-no-validas-valor"><strong>Respuestas no validas - Valor</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;El valor debe ser superior a 0&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuestas-no-validas-obligacion"><strong>Respuestas no validas - Obligación</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Id de la obligación no valida&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuestas-no-validas-fecha"><strong>Respuestas no validas - Fecha</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;La fecha no puede superar el dia actual&quot;,
+  &quot;code&quot;: 400
 }
 </code></pre>
 
