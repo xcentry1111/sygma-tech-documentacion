@@ -22,3 +22,6 @@ nav:
   - 'Insertar Recaudos':
       - 'Descripción': 'descripcion_insertar_recaudos.md'
       - 'Aplicar Recaudo': 'recaudo_insertar.md'
+  - 'Reversar Recaudos':
+      - 'Descripción': 'descripcion_reversar_recaudos.md'
+      - 'Aplicar Recaudo': 'recaudo_reversar.md'
