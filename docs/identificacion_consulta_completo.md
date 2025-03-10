@@ -19,7 +19,7 @@ El proceso requiere los siguientes encabezados en la solicitud:
 - **Authorization:** `Bearer ${token}` (Obligatorio)
 
 ## **Consideraciones**
-- El parámetro **servicio** debe establecerse por defecto en **ALAFECHA_COMPLETO**, ya que este valor permite al sistema identificar que se trata de una consulta por identificación.
+- El parámetro **servicio** debe establecerse por defecto en **CONSULTA_COMPLETO**, ya que este valor permite al sistema identificar que se trata de una consulta por identificación.
 - El parametro **dato** corresponde al ````Número de Identificación```` del deudor que se desea consultar.
 - Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:
 
@@ -39,7 +39,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
 
 ``````json
 {
-  "servicio": "ALAFECHA_COMPLETO", 
+  "servicio": "CONSULTA_COMPLETO", 
   "dato": "37195302" 
 }
   
@@ -63,25 +63,25 @@ La información debe enviarse en formato JSON. **Ejemplo:**
   "persona": {
     "persona_id": "9755361",
     "identificacion": "37195302",
-    "nombre": "AYDE TAMARA MARIN",
+    "nombre": "PRUEBA",
     "telefono": "",
     "obligaciones": [
       {
-        "personasobligacion_id": "8864845",
-        "nro_obligacion": "204202004756",
+        "personasobligacion_id": "8864800",
+        "nro_obligacion": "204202004788",
         "idcredito": "11632563",
         "fecha_matricula": "27-11-2020",
         "portafoliossucursal_id": "17146",
         "sucursal": "CUCUTA AGENCIA ATALAYA",
         "portafoliosvehiculo_id": "627",
-        "vehiculo": "ALAFECHA",
+        "vehiculo": "API",
         "cliente": "12940",
-        "originador": "FDLM",
+        "originador": "PRUEBA ORIGINADOR",
         "saldo_capital": "264863",
         "saldo_total": "271044",
         "plan_pagos": [
           {
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "nro_cuota": "1",
             "fecha_vence": "14-07-2021",
             "capital": "264863.21",
@@ -96,12 +96,12 @@ La información debe enviarse en formato JSON. **Ejemplo:**
         "recaudos": [
           {
             "planesrecaudo_id": "76428062",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "20-01-2025",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -111,12 +111,12 @@ La información debe enviarse en formato JSON. **Ejemplo:**
           },
           {
             "planesrecaudo_id": "76299147",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "16-12-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -126,12 +126,12 @@ La información debe enviarse en formato JSON. **Ejemplo:**
           },
           {
             "planesrecaudo_id": "76136590",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-11-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -141,12 +141,12 @@ La información debe enviarse en formato JSON. **Ejemplo:**
           },
           {
             "planesrecaudo_id": "76005785",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-10-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -156,7 +156,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
           },
           {
             "planesrecaudo_id": "73272730",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "29-06-2023",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -165,13 +165,13 @@ La información debe enviarse en formato JSON. **Ejemplo:**
             "valor": "276000",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           },
           {
             "planesrecaudo_id": "73272729",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "01-03-2021",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -180,13 +180,13 @@ La información debe enviarse en formato JSON. **Ejemplo:**
             "valor": "60064",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           },
           {
             "planesrecaudo_id": "73272728",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-01-2021",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -195,7 +195,7 @@ La información debe enviarse en formato JSON. **Ejemplo:**
             "valor": "60064",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           }

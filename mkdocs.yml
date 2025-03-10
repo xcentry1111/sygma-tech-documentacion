@@ -6,15 +6,19 @@ nav:
   - Inicio: 'index.md'
   #- 'Servicio WolBox':
   #    - 'Integración': 'wolbox.md'
-  - 'SV autenticación': 'tecfinanzas_token.md'
-  - 'SV Originación (Libranza)':
+  - 'autenticación': 'tecfinanzas_token.md'
+  - 'Originación (Libranza)':
       - 'Descripción': 'tecfinanzas.md'
-      - 'SV Importar Datos': 'tecfinanzas_importar.md'
-      - 'SV Actualizar Datos': 'tecfinanzas_actualizar.md'
-  - 'SV Plan de Pagos':
+      - 'Importar Datos': 'tecfinanzas_importar.md'
+      - 'Actualizar Datos': 'tecfinanzas_actualizar.md'
+  - 'Plan de Pagos':
       - 'Descripción': 'descripcion_plan_pagos.md'
-      - 'SV Plan Pagos': 'plan_pagos.md'
-  - 'SV Consultas Deudor + Obligaciones':
+      - 'Plan Pagos': 'plan_pagos.md'
+  - 'Consultas Deudor + Obligaciones + Recaudos':
       - 'Descripción': 'identificacion_descripcion.md'
-      - 'SV Identificación Básica': 'identificacion_consulta.md'
-      - 'SV Identificación Completa': 'identificacion_consulta_completo.md'
+      - 'Identificación Básica': 'identificacion_consulta.md'
+      - 'Identificación Completa': 'identificacion_consulta_completo.md'
+      - 'Id Recaudo': 'recaudo_consulta.md'
+  - 'Insertar Recaudos':
+      - 'Descripción': 'descripcion_insertar_recaudos.md'
+      - 'Aplicar Recaudo': 'recaudo_insertar.md'

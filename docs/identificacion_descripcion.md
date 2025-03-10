@@ -15,21 +15,21 @@ Para garantizar la integridad y coherencia de los datos, el servicio realiza div
 ## **Formato de Entrada**
 Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
 
-- **Ejemplo de solicitud Consulta Persona (ALAFECHA_BASICO):** 
+- **Ejemplo de solicitud Consulta Persona (API_BASICO):** 
 ```json
 {
   "persona": {
-    "persona_id": "9755361",
+    "persona_id": "97553680",
     "identificacion": "37195302",
-    "nombre": "AYDE TAMARA MARIN",
+    "nombre": "PRUEBA",
     "telefono": "",
     "obl_nro_total": "1",
     "obl_pago_minimo": "210000",
     "obl_pago_total": "271045",
     "obligaciones": [
       {
-        "personasobligacion_id": "8864845",
-        "nro_obligacion": "204202004756",
+        "personasobligacion_id": "8864800",
+        "nro_obligacion": "204202004788",
         "idcredito": "11632563",
         "pago_minimo": "210000",
         "pago_total": "271045"
@@ -39,31 +39,31 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
 }
 ```
 
-- **Ejemplo de solicitud Consulta Persona (ALAFECHA_COMPLETO):**
+- **Ejemplo de solicitud Consulta Persona (API_COMPLETO):**
 ```json
 {
   "persona": {
     "persona_id": "9755361",
     "identificacion": "37195302",
-    "nombre": "AYDE TAMARA MARIN",
+    "nombre": "PRUEBA",
     "telefono": "",
     "obligaciones": [
       {
-        "personasobligacion_id": "8864845",
-        "nro_obligacion": "204202004756",
+        "personasobligacion_id": "8864800",
+        "nro_obligacion": "204202004788",
         "idcredito": "11632563",
         "fecha_matricula": "27-11-2020",
         "portafoliossucursal_id": "17146",
         "sucursal": "CUCUTA AGENCIA ATALAYA",
         "portafoliosvehiculo_id": "627",
-        "vehiculo": "ALAFECHA",
+        "vehiculo": "API",
         "cliente": "12940",
-        "originador": "FDLM",
+        "originador": "PRUEBA ORIGINADOR",
         "saldo_capital": "264863",
         "saldo_total": "271044",
         "plan_pagos": [
           {
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "nro_cuota": "1",
             "fecha_vence": "14-07-2021",
             "capital": "264863.21",
@@ -78,12 +78,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
         "recaudos": [
           {
             "planesrecaudo_id": "76428062",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "20-01-2025",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -93,12 +93,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "76299147",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "16-12-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -108,12 +108,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "76136590",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-11-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -123,12 +123,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "76005785",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-10-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -138,7 +138,7 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "73272730",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "29-06-2023",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -147,13 +147,13 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
             "valor": "276000",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           },
           {
             "planesrecaudo_id": "73272729",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "01-03-2021",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -162,13 +162,13 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
             "valor": "60064",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           },
           {
             "planesrecaudo_id": "73272728",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-01-2021",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -177,7 +177,7 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
             "valor": "60064",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           }
@@ -188,31 +188,31 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
 }
 ```
 
-- **Ejemplo de solicitud Consulta por ID Obligación (ALAFECHA_OBLIGACION):**
+- **Ejemplo de solicitud Consulta por ID Obligación (API_OBLIGACION):**
 ```json
 {
   "persona": {
     "persona_id": "9755361",
     "identificacion": "37195302",
-    "nombre": "AYDE TAMARA MARIN",
+    "nombre": "PRUEBA",
     "telefono": "",
     "obligaciones": [
       {
-        "personasobligacion_id": "8864845",
-        "nro_obligacion": "204202004756",
+        "personasobligacion_id": "8864800",
+        "nro_obligacion": "204202004788",
         "idcredito": "11632563",
         "fecha_matricula": "27-11-2020",
         "portafoliossucursal_id": "17146",
         "sucursal": "CUCUTA AGENCIA ATALAYA",
         "portafoliosvehiculo_id": "627",
-        "vehiculo": "ALAFECHA",
+        "vehiculo": "API",
         "cliente": "12940",
-        "originador": "FDLM",
+        "originador": "PRUEBA ORIGINADOR",
         "saldo_capital": "264863",
         "saldo_total": "271044",
         "plan_pagos": [
           {
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "nro_cuota": "1",
             "fecha_vence": "14-07-2021",
             "capital": "264863.21",
@@ -227,12 +227,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
         "recaudos": [
           {
             "planesrecaudo_id": "76428062",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "20-01-2025",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -242,12 +242,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "76299147",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "16-12-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -257,12 +257,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "76136590",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-11-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -272,12 +272,12 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "76005785",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-10-2024",
             "tipo_pago": "EFECTIVO",
             "estado": "",
             "tipo_afecta": "AJUSTE CUOTA",
-            "usuario": "WS_ALAFECHA",
+            "usuario": "WS_USUARIO_CONSULTA",
             "valor": "210000",
             "sucursal": "",
             "codigo_transaccion": "",
@@ -287,7 +287,7 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
           },
           {
             "planesrecaudo_id": "73272730",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "29-06-2023",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -296,13 +296,13 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
             "valor": "276000",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           },
           {
             "planesrecaudo_id": "73272729",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "01-03-2021",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -311,13 +311,13 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
             "valor": "60064",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           },
           {
             "planesrecaudo_id": "73272728",
-            "personasobligacion_id": "8864845",
+            "personasobligacion_id": "8864800",
             "fecha_recaudo": "15-01-2021",
             "tipo_pago": "EFECTIVO",
             "estado": "",
@@ -326,7 +326,7 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
             "valor": "60064",
             "sucursal": "",
             "codigo_transaccion": "",
-            "observaciones": "MIGRACION DE INFORMACION - ALAFECHA",
+            "observaciones": "MIGRACION DE INFORMACION - API",
             "anulado_por": "",
             "obs_anulacion": ""
           }
