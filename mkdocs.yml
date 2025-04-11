@@ -11,9 +11,9 @@ nav:
       - 'Descripción': 'tecfinanzas.md'
       - 'Importar Datos': 'tecfinanzas_importar.md'
       - 'Actualizar Datos': 'tecfinanzas_actualizar.md'
-  - 'Plan de Pagos':
+  - 'Credito digital':
       - 'Descripción': 'descripcion_plan_pagos.md'
-      - 'Plan Pagos': 'plan_pagos.md'
+      - 'Simulador': 'simulador.md'
   - 'Consultas Deudor + Obligaciones + Recaudos':
       - 'Descripción': 'identificacion_descripcion.md'
       - 'Identificación Básica': 'identificacion_consulta.md'
@@ -24,4 +24,4 @@ nav:
       - 'Aplicar Recaudo': 'recaudo_insertar.md'
   - 'Reversar Recaudos':
       - 'Descripción': 'descripcion_reversar_recaudos.md'
-      - 'Aplicar Recaudo': 'recaudo_reversar.md'
+      - 'Reversar Recaudo': 'recaudo_reversar.md'

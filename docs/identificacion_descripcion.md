@@ -60,6 +60,8 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
         "cliente": "12940",
         "originador": "PRUEBA ORIGINADOR",
         "saldo_capital": "264863",
+        "pago_minimo": "28283",
+        "dias_mora": "20",
         "saldo_total": "271044",
         "plan_pagos": [
           {
@@ -209,6 +211,8 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
         "cliente": "12940",
         "originador": "PRUEBA ORIGINADOR",
         "saldo_capital": "264863",
+        "pago_minimo": "28283",
+        "dias_mora": "20",
         "saldo_total": "271044",
         "plan_pagos": [
           {

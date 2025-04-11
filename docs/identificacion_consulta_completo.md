@@ -78,6 +78,8 @@ La información debe enviarse en formato JSON. **Ejemplo:**
         "cliente": "12940",
         "originador": "PRUEBA ORIGINADOR",
         "saldo_capital": "264863",
+        "pago_minimo": "28283",
+        "dias_mora": "20",
         "saldo_total": "271044",
         "plan_pagos": [
           {
