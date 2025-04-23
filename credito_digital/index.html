@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../descripcion_reversar_recaudos/">
-      
-      
-        <link rel="next" href="../s_plan_simulador/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Reversar Recaudo - Documentación Sygma-Tech</title>
+        <title>Servicio para generar plan de pagos - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servicio-para-reversar-un-recaudo-pago" class="md-skip">
+        <a href="#servicio-para-generar-plan-de-pagos" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reversar Recaudo
+              Servicio para generar plan de pagos
             
           </span>
         </div>
@@ -599,20 +595,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -628,7 +622,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Reversar Recaudos
@@ -662,32 +656,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reversar Recaudo
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../recaudo_reversar/" class="md-nav__link">
         
   
   
@@ -698,113 +670,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Headers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consideraciones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Token Invalido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-campos-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Campos Requeridos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuestas-no-validas-recaudo-no-existe" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuestas no validas - Recaudo no Existe
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -981,9 +846,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
+  <a href="#ejemplo-respuesta-succes-segun-parametrizacion-del-cliente" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
+      Ejemplo Respuesta Succes segun parametrización del cliente
     </span>
   </a>
   
@@ -1002,15 +867,6 @@
   <a href="#respuesta-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
       Respuesta Campos Requeridos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuestas-no-validas-recaudo-no-existe" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuestas no validas - Recaudo no Existe
     </span>
   </a>
   
@@ -1037,13 +893,13 @@
 
 
 
-<h1 id="servicio-para-reversar-un-recaudo-pago">Servicio para reversar un recaudo (Pago)</h1>
-<p><strong>Descripción:</strong> Este servicio recibe varios parametros cuya finalidad es reversar un recaudo de una obligación (Pago)</p>
+<h1 id="servicio-para-generar-plan-de-pagos">Servicio para generar plan de pagos</h1>
+<p><strong>Descripción:</strong> Este servicio permite recibir  parametros para el proceso de la generación del plan de pagos segun la parametrización del cliente.</p>
 <p><strong>Tipo de Servicio:</strong> POST</p>
 <h2 id="url-de-integracion"><strong>URL de Integración</strong></h2>
 <ul>
-<li><strong>Prueba:</strong> <code>http://testing-sygma.com/api/reversar_recaudo</code></li>
-<li><strong>Producción:</strong> <code>POR_DEFINIR/api/reversar_recaudo</code></li>
+<li><strong>Prueba:</strong> <code>http://testing-sygma.com/api/procesamiento</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/procesamiento</code></li>
 </ul>
 <h2 id="headers"><strong>Headers</strong></h2>
 <p>El proceso requiere los siguientes encabezados en la solicitud:</p>
@@ -1054,32 +910,56 @@
 </ul>
 <h2 id="consideraciones"><strong>Consideraciones</strong></h2>
 <ul>
-<li>El parámetro <strong>tipo_servicio</strong> debe establecerse por defecto en <strong>REVERSAR_RECAUDO</strong>, ya que este valor permite al sistema identificar que se trata de una inserción de recaudo.</li>
+<li>El parámetro <strong>tipo_servicio</strong> debe establecerse por defecto en <strong>API_PLAN_PAGOS</strong>, ya que este valor permite al sistema identificar que se trata de una generación de plan de pagos.</li>
 <li>Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:</li>
 </ul>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;No cuenta con los permisos para consumir el servicio&quot;,
-  &quot;code&quot;: 400
+    &quot;error&quot;: &quot;Parametro requerido&quot;,
+    &quot;message&quot;: &quot;No se han definido parámetros requeridos tipo_servicio&quot;,
+    &quot;code&quot;: 400
 }
 </code></pre>
 <h2 id="cuerpo-de-la-solicitud-raw"><strong>Cuerpo de la Solicitud (raw)</strong></h2>
 <p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
 <h3 id="campos-obligatorios"><strong>Campos Obligatorios</strong></h3>
 <pre><code class="language-json">{
-  &quot;tipo_servicio&quot;: &quot;REVERSAR_RECAUDO&quot;, // OBLIGATORIO
-  &quot;recaudo_id&quot;: &quot;27832828&quot;, // OBLIGATORIO
-  &quot;observacion&quot;: &quot;SE REVERSA POR MOTIVOS DE PRUEBAS&quot; // OBLIGATORIO - SE DEBE DE JUSTIFICAR PORQUE SE DESEA REVERSAR
+  &quot;tipo_servicio&quot;: &quot;API_PLAN_PAGOS&quot;,
+  &quot;valor&quot;: &quot;1821340&quot;,
+  &quot;fecha&quot;: &quot;2024-11-21&quot;,
+  &quot;tasa&quot;: &quot;27.13&quot;,
+  &quot;plazo&quot;: 3,
+  &quot;cuota_maxima&quot;: 100000
 }
 
 </code></pre>
-<h3 id="ejemplo-respuesta-succes"><strong>Ejemplo Respuesta Succes</strong></h3>
+<h3 id="ejemplo-respuesta-succes-segun-parametrizacion-del-cliente"><strong>Ejemplo Respuesta Succes segun parametrización del cliente</strong></h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: true,
-  &quot;guid&quot;: &quot;e87d6aad89f02df1a6f6&quot;,
-  &quot;estado_aplicacion&quot;: &quot;APLICADO&quot;,
-  &quot;message&quot;: &quot;Registro reversado con éxito!!!&quot;,
-  &quot;code&quot;: 200
+  &quot;plan_pagos&quot;: [
+    {
+      &quot;nro_cuota&quot;: 1,
+      &quot;fecha_vence&quot;: &quot;2024-11-21&quot;,
+      &quot;cuota&quot;: &quot;619433.0&quot;,
+      &quot;abono_capital&quot;: &quot;619432.19&quot;,
+      &quot;interes_corriente&quot;: &quot;0.0&quot;,
+      &quot;saldo_final&quot;: &quot;1201907.81&quot;
+    },
+    {
+      &quot;nro_cuota&quot;: 2,
+      &quot;fecha_vence&quot;: &quot;2024-12-21&quot;,
+      &quot;cuota&quot;: &quot;619433.0&quot;,
+      &quot;abono_capital&quot;: &quot;595147.64&quot;,
+      &quot;interes_corriente&quot;: &quot;24284.55&quot;,
+      &quot;saldo_final&quot;: &quot;606760.17&quot;
+    },
+    {
+      &quot;nro_cuota&quot;: 3,
+      &quot;fecha_vence&quot;: &quot;2025-01-21&quot;,
+      &quot;cuota&quot;: &quot;619433.0&quot;,
+      &quot;abono_capital&quot;: &quot;606760.17&quot;,
+      &quot;interes_corriente&quot;: &quot;12672.19&quot;,
+      &quot;saldo_final&quot;: &quot;0.0&quot;
+    }
+  ]
 }
 </code></pre>
 <h3 id="respuesta-token-invalido"><strong>Respuesta Token Invalido</strong></h3>
@@ -1092,16 +972,10 @@
 </code></pre>
 <h3 id="respuesta-campos-requeridos"><strong>Respuesta Campos Requeridos</strong></h3>
 <pre><code class="language-json">{
-  &quot;error&quot;: &quot;Falta el parámetro&quot;,
-  &quot;message&quot;: &quot;Los siguientes parámetros son requeridos: tipo_servicio&quot;,
-  &quot;code&quot;: 400
-}
-</code></pre>
-<h3 id="respuestas-no-validas-recaudo-no-existe"><strong>Respuestas no validas - Recaudo no Existe</strong></h3>
-<pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;Id del recaudo no valido&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;valor no puede estar en blanco&quot;
+  ]
 }
 </code></pre>
 
