@@ -4,24 +4,30 @@ theme:
 
 nav:
   - Inicio: 'index.md'
-  #- 'Servicio WolBox':
-  #    - 'Integración': 'wolbox.md'
+  - 'Servicio WolBox': 'wolbox.md'
   - 'autenticación': 'tecfinanzas_token.md'
   - 'Originación (Libranza)':
       - 'Descripción': 'tecfinanzas.md'
       - 'Importar Datos': 'tecfinanzas_importar.md'
       - 'Actualizar Datos': 'tecfinanzas_actualizar.md'
-  - 'Credito digital':
-      - 'Descripción': 'descripcion_plan_pagos.md'
-      - 'Simulador': 'simulador.md'
+#   - 'Credito digital':
+#       - 'Descripción': 'descripcion_plan_pagos.md'
+#       - 'Simulador': 'credito_digital.md'
   - 'Consultas Deudor + Obligaciones + Recaudos':
       - 'Descripción': 'identificacion_descripcion.md'
       - 'Identificación Básica': 'identificacion_consulta.md'
       - 'Identificación Completa': 'identificacion_consulta_completo.md'
       - 'Id Recaudo': 'recaudo_consulta.md'
-  - 'Insertar Recaudos':
+  - 'Consultar Deudor + Tipo Documento':
+      - 'Servicio Consulta': "consulta_completo_credintegral.md"
+  - 'Insertar Recaudos':  
       - 'Descripción': 'descripcion_insertar_recaudos.md'
       - 'Aplicar Recaudo': 'recaudo_insertar.md'
   - 'Reversar Recaudos':
       - 'Descripción': 'descripcion_reversar_recaudos.md'
       - 'Reversar Recaudo': 'recaudo_reversar.md'
+  - 'Simuladores':
+      - 'Plan Simulador': 's_plan_simulador.md'      
+      - 'Simulador Cuota Maxima': 's_cuota_maxima.md'
+  - 'Originacion Promosumma':
+      - 'Importar Datos': 'promosumma_originacion_import.md'       

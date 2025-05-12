@@ -1,6 +1,8 @@
 FROM python:3.10-slim
 
-RUN pip install mkdocs mkdocs-material
+RUN apt-get update && \
+    apt-get install -y git && \
+    pip install mkdocs mkdocs-material
 
 WORKDIR /docs
 

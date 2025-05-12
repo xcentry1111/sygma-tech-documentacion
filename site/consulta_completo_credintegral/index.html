@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../consulta_completo_credintegral/">
+        <link rel="prev" href="../recaudo_consulta/">
       
       
-        <link rel="next" href="../recaudo_insertar/">
+        <link rel="next" href="../descripcion_insertar_recaudos/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Descripción - Documentación Sygma-Tech</title>
+        <title>Servicio Consulta - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#descripcion-del-servicio" class="md-skip">
+        <a href="#servicio-de-consulta-por-identificacion-y-obligaciones-detallado" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Descripción
+              Servicio Consulta
             
           </span>
         </div>
@@ -508,18 +508,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -535,80 +537,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Consultar Deudor + Tipo Documento
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../consulta_completo_credintegral/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Servicio Consulta
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Insertar Recaudos
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Insertar Recaudos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -633,7 +565,7 @@
   
   
   <span class="md-ellipsis">
-    Descripción
+    Servicio Consulta
     
   </span>
   
@@ -646,7 +578,7 @@
   
   
   <span class="md-ellipsis">
-    Descripción
+    Servicio Consulta
     
   </span>
   
@@ -669,38 +601,80 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      URL de Integración
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionamiento" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      Funcionamiento
+      Headers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#validaciones" class="md-nav__link">
+  <a href="#consideraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Validaciones
+      Consideraciones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-de-entrada" class="md-nav__link">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
     <span class="md-ellipsis">
-      Formato de Entrada
+      Cuerpo de la Solicitud (raw)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Identificación no valida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-respuesta-succes-segun-parametrizacion-del-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Respuesta Succes segun parametrización del cliente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Token Invalido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -708,6 +682,74 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Insertar Recaudos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Insertar Recaudos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../descripcion_insertar_recaudos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Descripción
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1020,38 +1062,80 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      URL de Integración
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionamiento" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      Funcionamiento
+      Headers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#validaciones" class="md-nav__link">
+  <a href="#consideraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Validaciones
+      Consideraciones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#formato-de-entrada" class="md-nav__link">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
     <span class="md-ellipsis">
-      Formato de Entrada
+      Cuerpo de la Solicitud (raw)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Identificación no valida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-respuesta-succes-segun-parametrizacion-del-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Respuesta Succes segun parametrización del cliente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Token Invalido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1071,33 +1155,213 @@
 
 
 
-<h1 id="descripcion-del-servicio">Descripción del Servicio</h1>
-<h2 id="introduccion"><strong>Introducción</strong></h2>
-<p>La finalidad de este servicio es registrar un recaudo asociado a una obligación a través de la API expuesta, siguiendo una estructura definida.</p>
-<h2 id="funcionamiento"><strong>Funcionamiento</strong></h2>
+<h1 id="servicio-de-consulta-por-identificacion-y-obligaciones-detallado">Servicio de Consulta por Identificación y Obligaciones (Detallado)</h1>
+<p><strong>Descripción:</strong><br />
+Este servicio permite consultar la información de un deudor y sus obligaciones, enviando su número de identificación y tipo de documento.</p>
+<p><strong>Tipo de Servicio:</strong> <code>POST</code></p>
+<hr />
+<h2 id="url-de-integracion">URL de Integración</h2>
 <ul>
-<li>Recibe una solicitud con datos en formato JSON.</li>
-<li>Valida que todos los campos obligatorios estén presentes.</li>
-<li>Valida que tenga permisos al consumo del servicio.</li>
-<li>Procesa la información según la configuración establecida.</li>
-<li>Devuelve el plan de pagos generado en respuesta.</li>
+<li><strong>Ambiente de pruebas:</strong> <code>http://testing-sygma.com/api/consultar_api</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/consultar_api</code></li>
 </ul>
-<h2 id="validaciones"><strong>Validaciones</strong></h2>
-<p>Para garantizar la integridad y coherencia de los datos, el servicio realiza diversas validaciones antes de procesar la solicitud. Si algún dato es inválido o falta información requerida, se generará un mensaje de error con la descripción del problema.</p>
-<h2 id="formato-de-entrada"><strong>Formato de Entrada</strong></h2>
-<p>Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.</p>
+<hr />
+<h2 id="headers">Headers</h2>
+<p>Los siguientes encabezados son obligatorios en la solicitud:</p>
 <ul>
-<li><strong>Ejemplo de solicitud</strong> </li>
+<li><code>Accept</code>: <code>application/json</code></li>
+<li><code>Content-Type</code>: <code>application/json</code></li>
+<li><code>Authorization</code>: <code>Bearer ${token}</code></li>
 </ul>
+<hr />
+<h2 id="consideraciones">Consideraciones</h2>
+<ul>
+<li>El parámetro <code>servicio</code> debe enviarse con el valor fijo: <code>CONSULTA_COMPLETO</code>.</li>
+<li>El parámetro <code>dato</code> corresponde al <strong>número de identificación</strong> del deudor.</li>
+<li>El parámetro <code>tipo_documento</code> también es obligatorio y debe tener uno de los siguientes valores:</li>
+<li><code>CC</code> (Cédula de ciudadanía)</li>
+<li><code>CE</code> (Cédula de extranjería)</li>
+<li><code>TI</code> (Tarjeta de identidad)</li>
+<li>Si no se envía alguno de estos parámetros obligatorios, el sistema responderá con un error.</li>
+</ul>
+<hr />
+<h2 id="cuerpo-de-la-solicitud-raw">Cuerpo de la Solicitud (raw)</h2>
+<p><strong>Ejemplo de solicitud JSON:</strong></p>
 <pre><code class="language-json">{
-  &quot;tipo_servicio&quot;: &quot;INSERTAR_RECAUDO&quot;, // OBLIGATORIO
-  &quot;personasobligacion_id&quot;: &quot;193833&quot;, // OBLIGATORIO
-  &quot;fecha&quot;: &quot;02-07-2024&quot;, // DD-MM-YYYY - OBLIGATORIO - FORMATO
-  &quot;valor&quot;: &quot;10000&quot;, // OBLIGATORIO
-  &quot;sucursal&quot;: &quot;TENJO&quot;, // Sede desde donde se envia el servicio
-  &quot;codigo_transaccion&quot;: &quot;2763637388&quot;,
-  &quot;usuario&quot;: &quot;USUARIO DE LA TRANSACCION&quot;,
-  &quot;observacion&quot;: &quot;PAGO REALIZADO POR LA PLATAFORMA TESEO&quot;
+  &quot;servicio&quot;: &quot;CONSULTA_COMPLETO&quot;,
+  &quot;dato&quot;: &quot;37195302&quot;,
+  &quot;tipo_documento&quot;: &quot;CC&quot;
+}
+</code></pre>
+<h3 id="respuesta-identificacion-no-valida"><strong>Respuesta Identificación no valida</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: true,
+  &quot;message&quot;: &quot;No se encontro informacion sobre este registro - 37195302111&quot;,
+  &quot;code&quot;: 200
+}
+</code></pre>
+<h3 id="ejemplo-respuesta-succes-segun-parametrizacion-del-cliente"><strong>Ejemplo Respuesta Succes segun parametrización del cliente</strong></h3>
+<pre><code class="language-json">{
+  &quot;persona&quot;: {
+    &quot;persona_id&quot;: &quot;9755361&quot;,
+    &quot;identificacion&quot;: &quot;37195302&quot;,
+    &quot;nombre&quot;: &quot;PRUEBA&quot;,
+    &quot;telefono&quot;: &quot;&quot;,
+    &quot;obligaciones&quot;: [
+      {
+        &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+        &quot;nro_obligacion&quot;: &quot;204202004788&quot;,
+        &quot;idcredito&quot;: &quot;11632563&quot;,
+        &quot;fecha_matricula&quot;: &quot;27-11-2020&quot;,
+        &quot;portafoliossucursal_id&quot;: &quot;17146&quot;,
+        &quot;sucursal&quot;: &quot;CUCUTA AGENCIA ATALAYA&quot;,
+        &quot;portafoliosvehiculo_id&quot;: &quot;627&quot;,
+        &quot;vehiculo&quot;: &quot;API&quot;,
+        &quot;cliente&quot;: &quot;12940&quot;,
+        &quot;originador&quot;: &quot;PRUEBA ORIGINADOR&quot;,
+        &quot;saldo_capital&quot;: &quot;264863&quot;,
+        &quot;pago_minimo&quot;: &quot;28283&quot;,
+        &quot;dias_mora&quot;: &quot;20&quot;,
+        &quot;saldo_total&quot;: &quot;271044&quot;,
+        &quot;plan_pagos&quot;: [
+          {
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;nro_cuota&quot;: &quot;1&quot;,
+            &quot;fecha_vence&quot;: &quot;14-07-2021&quot;,
+            &quot;capital&quot;: &quot;264863.21&quot;,
+            &quot;corriente&quot;: &quot;0&quot;,
+            &quot;comisiones&quot;: &quot;0&quot;,
+            &quot;ivacomisiones&quot;: &quot;0&quot;,
+            &quot;seguro&quot;: &quot;0&quot;,
+            &quot;mora&quot;: &quot;6181.48&quot;,
+            &quot;valor_pagar&quot;: &quot;264863.21&quot;
+          }
+        ],
+        &quot;recaudos&quot;: [
+          {
+            &quot;planesrecaudo_id&quot;: &quot;76428062&quot;,
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;fecha_recaudo&quot;: &quot;20-01-2025&quot;,
+            &quot;tipo_pago&quot;: &quot;EFECTIVO&quot;,
+            &quot;estado&quot;: &quot;&quot;,
+            &quot;tipo_afecta&quot;: &quot;AJUSTE CUOTA&quot;,
+            &quot;usuario&quot;: &quot;WS_USUARIO_CONSULTA&quot;,
+            &quot;valor&quot;: &quot;210000&quot;,
+            &quot;sucursal&quot;: &quot;&quot;,
+            &quot;codigo_transaccion&quot;: &quot;&quot;,
+            &quot;observaciones&quot;: &quot;PAGO REALIZADO POR CAJATRANSTERCEROS DESDE FUNDACION DELAMUJER - APLICACION TANQUE - FECHA MOVIMIENTO: 2025-01-20 - OBS-OPCIONAL1: CONSIGNACION *&quot;,
+            &quot;anulado_por&quot;: &quot;&quot;,
+            &quot;obs_anulacion&quot;: &quot;&quot;
+          },
+          {
+            &quot;planesrecaudo_id&quot;: &quot;76299147&quot;,
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;fecha_recaudo&quot;: &quot;16-12-2024&quot;,
+            &quot;tipo_pago&quot;: &quot;EFECTIVO&quot;,
+            &quot;estado&quot;: &quot;&quot;,
+            &quot;tipo_afecta&quot;: &quot;AJUSTE CUOTA&quot;,
+            &quot;usuario&quot;: &quot;WS_USUARIO_CONSULTA&quot;,
+            &quot;valor&quot;: &quot;210000&quot;,
+            &quot;sucursal&quot;: &quot;&quot;,
+            &quot;codigo_transaccion&quot;: &quot;&quot;,
+            &quot;observaciones&quot;: &quot;PAGO REALIZADO POR CAJATRANSTERCEROS DESDE FUNDACION DELAMUJER - APLICACION TANQUE - FECHA MOVIMIENTO: 2024-12-16 - OBS-OPCIONAL1: CONSIGNACION *&quot;,
+            &quot;anulado_por&quot;: &quot;&quot;,
+            &quot;obs_anulacion&quot;: &quot;&quot;
+          },
+          {
+            &quot;planesrecaudo_id&quot;: &quot;76136590&quot;,
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;fecha_recaudo&quot;: &quot;15-11-2024&quot;,
+            &quot;tipo_pago&quot;: &quot;EFECTIVO&quot;,
+            &quot;estado&quot;: &quot;&quot;,
+            &quot;tipo_afecta&quot;: &quot;AJUSTE CUOTA&quot;,
+            &quot;usuario&quot;: &quot;WS_USUARIO_CONSULTA&quot;,
+            &quot;valor&quot;: &quot;210000&quot;,
+            &quot;sucursal&quot;: &quot;&quot;,
+            &quot;codigo_transaccion&quot;: &quot;&quot;,
+            &quot;observaciones&quot;: &quot;PAGO REALIZADO POR CAJATRANSTERCEROS DESDE FUNDACION DELAMUJER - APLICACION TANQUE - FECHA MOVIMIENTO: 2024-11-15 - OBS-OPCIONAL1: CONSIGNACION *&quot;,
+            &quot;anulado_por&quot;: &quot;&quot;,
+            &quot;obs_anulacion&quot;: &quot;&quot;
+          },
+          {
+            &quot;planesrecaudo_id&quot;: &quot;76005785&quot;,
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;fecha_recaudo&quot;: &quot;15-10-2024&quot;,
+            &quot;tipo_pago&quot;: &quot;EFECTIVO&quot;,
+            &quot;estado&quot;: &quot;&quot;,
+            &quot;tipo_afecta&quot;: &quot;AJUSTE CUOTA&quot;,
+            &quot;usuario&quot;: &quot;WS_USUARIO_CONSULTA&quot;,
+            &quot;valor&quot;: &quot;210000&quot;,
+            &quot;sucursal&quot;: &quot;&quot;,
+            &quot;codigo_transaccion&quot;: &quot;&quot;,
+            &quot;observaciones&quot;: &quot;PAGO REALIZADO POR LA PLATAFORMA TESEO DESDE FUNDACION DELAMUJER - APLICACION TANQUE - FECHA MOVIMIENTO: 2024-10-15 - OBS-OPCIONAL1: CONSIGNACION *&quot;,
+            &quot;anulado_por&quot;: &quot;&quot;,
+            &quot;obs_anulacion&quot;: &quot;&quot;
+          },
+          {
+            &quot;planesrecaudo_id&quot;: &quot;73272730&quot;,
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;fecha_recaudo&quot;: &quot;29-06-2023&quot;,
+            &quot;tipo_pago&quot;: &quot;EFECTIVO&quot;,
+            &quot;estado&quot;: &quot;&quot;,
+            &quot;tipo_afecta&quot;: &quot;AJUSTE CUOTA&quot;,
+            &quot;usuario&quot;: &quot;ADMINISTRADOR SISTEMA&quot;,
+            &quot;valor&quot;: &quot;276000&quot;,
+            &quot;sucursal&quot;: &quot;&quot;,
+            &quot;codigo_transaccion&quot;: &quot;&quot;,
+            &quot;observaciones&quot;: &quot;MIGRACION DE INFORMACION - API&quot;,
+            &quot;anulado_por&quot;: &quot;&quot;,
+            &quot;obs_anulacion&quot;: &quot;&quot;
+          },
+          {
+            &quot;planesrecaudo_id&quot;: &quot;73272729&quot;,
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;fecha_recaudo&quot;: &quot;01-03-2021&quot;,
+            &quot;tipo_pago&quot;: &quot;EFECTIVO&quot;,
+            &quot;estado&quot;: &quot;&quot;,
+            &quot;tipo_afecta&quot;: &quot;AJUSTE CUOTA&quot;,
+            &quot;usuario&quot;: &quot;ADMINISTRADOR SISTEMA&quot;,
+            &quot;valor&quot;: &quot;60064&quot;,
+            &quot;sucursal&quot;: &quot;&quot;,
+            &quot;codigo_transaccion&quot;: &quot;&quot;,
+            &quot;observaciones&quot;: &quot;MIGRACION DE INFORMACION - API&quot;,
+            &quot;anulado_por&quot;: &quot;&quot;,
+            &quot;obs_anulacion&quot;: &quot;&quot;
+          },
+          {
+            &quot;planesrecaudo_id&quot;: &quot;73272728&quot;,
+            &quot;personasobligacion_id&quot;: &quot;8864800&quot;,
+            &quot;fecha_recaudo&quot;: &quot;15-01-2021&quot;,
+            &quot;tipo_pago&quot;: &quot;EFECTIVO&quot;,
+            &quot;estado&quot;: &quot;&quot;,
+            &quot;tipo_afecta&quot;: &quot;AJUSTE CUOTA&quot;,
+            &quot;usuario&quot;: &quot;ADMINISTRADOR SISTEMA&quot;,
+            &quot;valor&quot;: &quot;60064&quot;,
+            &quot;sucursal&quot;: &quot;&quot;,
+            &quot;codigo_transaccion&quot;: &quot;&quot;,
+            &quot;observaciones&quot;: &quot;MIGRACION DE INFORMACION - API&quot;,
+            &quot;anulado_por&quot;: &quot;&quot;,
+            &quot;obs_anulacion&quot;: &quot;&quot;
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="respuesta-token-invalido"><strong>Respuesta Token Invalido</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Token Inválido&quot;,
+  &quot;details&quot;: &quot;Signature has expired&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuesta-campos-requeridos"><strong>Respuesta Campos Requeridos</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;El parámetro :dato es requerido&quot;,
+  &quot;code&quot;: 400
 }
 </code></pre>
 
