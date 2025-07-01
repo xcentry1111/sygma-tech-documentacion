@@ -1103,6 +1103,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#respuesta-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Respuesta Exitosa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-de-otp-invalido" class="md-nav__link">
     <span class="md-ellipsis">
       ❗ Ejemplo de OTP Inválido
@@ -1117,6 +1127,11 @@
       ❗ Ejemplo de Error por Token Ausente o Inválido
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1261,6 +1276,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#respuesta-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Respuesta Exitosa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-de-otp-invalido" class="md-nav__link">
     <span class="md-ellipsis">
       ❗ Ejemplo de OTP Inválido
@@ -1275,6 +1300,11 @@
       ❗ Ejemplo de Error por Token Ausente o Inválido
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1352,16 +1382,13 @@
 </ul>
 <hr />
 <h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
-<p>```json
-{
-  "otp": "462019",
-  "transaccion_id": "68406a6a2d9aa64766060ee2"
-}</p>
-<pre><code>
-#### ✅ Respuesta Exitosa
-
-````json
-{
+<pre><code class="language-json">{
+  &quot;otp&quot;: &quot;462019&quot;,
+  &quot;transaccion_id&quot;: &quot;68406a6a2d9aa64766060ee2&quot;
+}
+</code></pre>
+<h3 id="respuesta-exitosa">✅ Respuesta Exitosa</h3>
+<pre><code class="language-js">{
   &quot;status&quot;: &quot;success&quot;,
   &quot;mensaje&quot;: &quot;OTP válido. Se puede continuar con el proceso.&quot;
 }
