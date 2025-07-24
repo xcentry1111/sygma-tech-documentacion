@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-validacion-de-otp" class="md-skip">
+        <a href="#manual-de-integracion-api-validacion-de-otp-evaluacion-experian" class="md-skip">
           Skip to content
         </a>
       
@@ -1130,6 +1130,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-otp-invalido_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Ejemplo de OTP Inválido
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1303,6 +1312,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-otp-invalido_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Ejemplo de OTP Inválido
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1329,9 +1347,10 @@
 
 
 
-<h1 id="manual-de-integracion-api-validacion-de-otp">📘 Manual de Integración API: <strong>Validación de OTP</strong></h1>
+<h1 id="manual-de-integracion-api-validacion-de-otp-evaluacion-experian">📘 Manual de Integración API: Validación de OTP + Evaluación Experian</h1>
 <h2 id="descripcion-del-servicio">📄 Descripción del Servicio</h2>
-<p>Este servicio permite validar un código OTP (One Time Password) asociado a una transacción. El cliente debe enviar el token de autenticación junto con el código OTP para verificar su validez.</p>
+<p>Este servicio permite validar un código OTP (One Time Password) asociado a una transacción.<br />
+Una vez validado el OTP, el sistema extrae automáticamente la información del cliente con base en el <code>transaccion_id</code> y realiza una evaluación en <strong>Experian</strong> (centrales de riesgo) para determinar si el cliente es <strong>aprobado</strong> o <strong>rechazado</strong>.</p>
 <hr />
 <h2 id="tipo-de-servicio">🚀 Tipo de Servicio</h2>
 <p><code>POST</code></p>
@@ -1370,16 +1389,18 @@
 </tbody>
 </table>
 <blockquote>
-<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación (ver pestaña <strong>Token</strong>), usando el usuario y contraseña asignados por la entidad.</p>
+<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación (ver sección <strong>Token</strong>).</p>
 </blockquote>
 <hr />
 <h2 id="cuerpo-de-la-solicitud-json">🔢 Cuerpo de la Solicitud (JSON)</h2>
-<p>Debe enviarse un objeto JSON con los siguientes campos:</p>
 <h3 id="campos-obligatorios">🔸 Campos Obligatorios</h3>
 <ul>
-<li><code>otp</code>: Código numérico recibido por el usuario vía SMS o correo.</li>
-<li><code>transaccion_id</code>: Identificador único de la transacción asociada al OTP.</li>
+<li><code>otp</code>: Código OTP recibido por el cliente.</li>
+<li><code>transaccion_id</code>: ID único de la transacción (internamente vinculado al cliente).</li>
 </ul>
+<blockquote>
+<p>⚠️ <strong>Nota:</strong> No es necesario enviar el número de documento, ya que el sistema lo obtiene automáticamente con el <code>transaccion_id</code>.</p>
+</blockquote>
 <hr />
 <h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
 <pre><code class="language-json">{
@@ -1390,7 +1411,9 @@
 <h3 id="respuesta-exitosa">✅ Respuesta Exitosa</h3>
 <pre><code class="language-js">{
   &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido. Se puede continuar con el proceso.&quot;
+  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
+  &quot;experian_status&quot;: &quot;aprobado&quot;,
+  &quot;detalle&quot;: &quot;El usuario tiene buen perfil crediticio.&quot;
 }
 
 </code></pre>
@@ -1406,6 +1429,21 @@
   &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente&quot;
 }
 </code></pre>
+<h4 id="ejemplo-de-otp-invalido_1">❗ Ejemplo de OTP Inválido</h4>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian completada.&quot;,
+  &quot;experian_status&quot;: &quot;rechazado&quot;,
+  &quot;detalle&quot;: &quot;El usuario tiene historial negativo en centrales de riesgo.&quot;
+}
+</code></pre>
+<p>🔁 Flujo del Servicio
+    1.  Se recibe otp y transaccion_id.
+    2.  Se valida el OTP.
+    3.  Si es válido:
+    •   Se obtiene el cliente desde el transaccion_id.
+    •   Se consulta Experian con los datos del cliente.
+    •   Se retorna el resultado: aprobado o rechazado.</p>
 
 
 
