@@ -1149,6 +1149,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#flujo-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Flujo del Servicio
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1331,6 +1340,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#flujo-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Flujo del Servicio
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1437,13 +1455,15 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
   &quot;detalle&quot;: &quot;El usuario tiene historial negativo en centrales de riesgo.&quot;
 }
 </code></pre>
-<p>🔁 Flujo del Servicio
-    1.  Se recibe otp y transaccion_id.
-    2.  Se valida el OTP.
-    3.  Si es válido:
-    •   Se obtiene el cliente desde el transaccion_id.
-    •   Se consulta Experian con los datos del cliente.
-    •   Se retorna el resultado: aprobado o rechazado.</p>
+<h2 id="flujo-del-servicio">🔁 Flujo del Servicio</h2>
+<ol>
+<li>Se recibe <code>otp</code> y <code>transaccion_id</code>.</li>
+<li>Se valida el OTP.</li>
+<li>Si es válido:</li>
+<li>Se obtiene el cliente desde el <code>transaccion_id</code>.</li>
+<li>Se consulta <strong>Experian</strong> con los datos del cliente.</li>
+<li>Se retorna el resultado: ✅ <strong>aprobado</strong> o ❌ <strong>rechazado</strong>.</li>
+</ol>
 
 
 
