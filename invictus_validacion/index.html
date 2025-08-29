@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -1099,8 +1099,35 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-de-expiriam-estados-y-flujos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Decisión de Expiriam (Estados y Flujos)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Decisión de Expiriam (Estados y Flujos)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-estados" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Tabla de estados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-detallado-por-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Flujo detallado por estado
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#respuesta-exitosa" class="md-nav__link">
@@ -1109,8 +1136,35 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="✅ Respuesta Exitosa">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-en-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta En Verificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-rechazado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Respuesta Rechazado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❗ Respuesta Rechazado">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-solicitud-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Respuesta Solicitud Error
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ejemplo-de-otp-invalido" class="md-nav__link">
@@ -1358,8 +1412,35 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-de-expiriam-estados-y-flujos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Decisión de Expiriam (Estados y Flujos)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Decisión de Expiriam (Estados y Flujos)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-estados" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Tabla de estados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-detallado-por-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Flujo detallado por estado
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#respuesta-exitosa" class="md-nav__link">
@@ -1368,8 +1449,35 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="✅ Respuesta Exitosa">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-en-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta En Verificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-rechazado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Respuesta Rechazado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❗ Respuesta Rechazado">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-solicitud-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Respuesta Solicitud Error
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ejemplo-de-otp-invalido" class="md-nav__link">
@@ -1494,14 +1602,109 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
   &quot;transaccion_id&quot;: &quot;68406a6a2d9aa64766060ee2&quot;
 }
 </code></pre>
+<h2 id="decision-de-expiriam-estados-y-flujos">🧩 Decisión de <strong>Expiriam</strong> (Estados y Flujos)</h2>
+<p>El proceso de originación consume una decisión de <strong>Expiriam</strong> y TESEO actúa según el <strong>estado</strong> recibido.<br />
+Estados posibles (valor devuelto en la respuesta exitosa):<br />
+APROBADO · RECHAZADO · EN_VERIFICACION · SOLICITUD_POR_ERROR</p>
+<hr />
+<h3 id="tabla-de-estados">📊 Tabla de estados</h3>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Significado breve</th>
+<th>Acción TESEO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>APROBADO</strong></td>
+<td>Cumple todas las políticas de crédito</td>
+<td>Enviar SMS/correo al usuario informando aprobación. Dirigir al punto Gana para firma.</td>
+</tr>
+<tr>
+<td><strong>RECHAZADO</strong></td>
+<td>No cumple políticas</td>
+<td>Registrar rechazo. Bloquear nueva solicitud por <strong>30 días</strong>. A los 30 días sin cambios → <strong>caducado</strong>*</td>
+</tr>
+<tr>
+<td><strong>EN_VERIFICACION</strong></td>
+<td>Cumple políticas, pero Expiriam exige validación de identidad (alerta)</td>
+<td>Enviar <strong>OTP</strong> y <strong>enlace de verificación</strong> provisto por Expiriam. Esperar resultado (webhook o polling).</td>
+</tr>
+<tr>
+<td><strong>SOLICITUD_POR_ERROR</strong></td>
+<td>Error técnico o inconsistencias en la petición a Expiriam</td>
+<td>Registrar error, NO enviar OTP. Devolver detalle en errors.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="flujo-detallado-por-estado">🔁 Flujo detallado por estado</h3>
+<ul>
+<li><strong>APROBADO</strong></li>
+<li>TESEO marca la solicitud como aprobada despues de la respuesta dada.</li>
+<li>
+<p>Envía notificaciones (SMS/correo) al usuario informadole que su credito ha sido aprobado.</p>
+</li>
+<li>
+<p><strong>RECHAZADO</strong></p>
+</li>
+<li>TESEO guarda el rechazo y bloquea re-solicitud por <strong>30 días</strong>.</li>
+<li>Si el usuario reintenta antes, responder “debe esperar 30 días”.</li>
+<li>
+<p>Transcurridos 30 días sin novedades, la solicitud pasa a <strong>caducado</strong> (interno).</p>
+</li>
+<li>
+<p><strong>EN_VERIFICACION</strong></p>
+</li>
+<li>TESEO envía <strong>OTP</strong> y <strong>link de verificación</strong> (entregado por Expiriam) al celular/correo del usuario.</li>
+<li>El usuario completa la verificación desde su <strong>celular</strong>.</li>
+<li>TESEO obtiene el resultado <strong>por webhook</strong> (preferido) o por <strong>consulta periódica</strong> (polling).</li>
+<li>
+<p>Resultado final tras verificación:</p>
+<ul>
+<li><strong>Aprobado</strong> → notificar aprobación y dirigir a punto Gana.</li>
+<li><strong>Rechazado</strong> → aplicar reglas de rechazo (bloqueo 30 días).</li>
+</ul>
+</li>
+<li>
+<p><strong>SOLICITUD_POR_ERROR</strong></p>
+</li>
+<li>TESEO no realiza validaciones de identidad.</li>
+<li>Devuelve detalles del error en la respuesta y registra logs para soporte.</li>
+</ul>
+<hr />
 <h3 id="respuesta-exitosa">✅ Respuesta Exitosa</h3>
 <pre><code class="language-js">{
   &quot;status&quot;: &quot;success&quot;,
   &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
-  &quot;experian_status&quot;: &quot;aprobado&quot;,
+  &quot;experian_status&quot;: &quot;APROBADO&quot;,
   &quot;detalle&quot;: &quot;El usuario tiene buen perfil crediticio.&quot;
 }
 
+</code></pre>
+<h3 id="respuesta-en-verificacion">✅ Respuesta En Verificación</h3>
+<pre><code class="language-js">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
+  &quot;experian_status&quot;: &quot;EN_VERIFICACION&quot;,
+  &quot;detalle&quot;: &quot;Validación de identidad requerida.&quot;
+}
+</code></pre>
+<h3 id="respuesta-rechazado">❗ Respuesta Rechazado</h3>
+<pre><code class="language-js">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
+  &quot;experian_status&quot;: &quot;RECHAZADO&quot;,
+  &quot;detalle&quot;: &quot;Solicitud rechazada. Podrá reintentar en 30 días..&quot;
+}
+</code></pre>
+<h4 id="respuesta-solicitud-error">❗ Respuesta Solicitud Error</h4>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;No fue posible obtener la decisión del proveedor.&quot;
+}
 </code></pre>
 <h4 id="ejemplo-de-otp-invalido">❗ Ejemplo de OTP Inválido</h4>
 <pre><code class="language-json">{
@@ -1580,10 +1783,10 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
