@@ -9,14 +9,14 @@
       
       
       
-        <link rel="prev" href="../invictus_originacion_import/">
+        <link rel="prev" href="../invictus_notificacion/">
       
       
         <link rel="next" href="../invictus_reenviar_validacion/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -980,6 +980,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_notificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notificación OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1099,6 +1122,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primera Validacion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-lista-negra" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Respuesta Exitosa Lista Negra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-lista-blanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa Lista Blanca
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1148,13 +1204,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuesta-rechazado" class="md-nav__link">
+  <a href="#respuesta-rechazado-por-experian" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Respuesta Rechazado
+      ❗ Respuesta Rechazado por Experian
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="❗ Respuesta Rechazado">
+    <nav class="md-nav" aria-label="❗ Respuesta Rechazado por Experian">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1200,15 +1256,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flujo-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Flujo del Servicio
-    </span>
-  </a>
   
 </li>
       
@@ -1412,6 +1459,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primera-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primera Validacion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-lista-negra" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Respuesta Exitosa Lista Negra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-lista-blanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa Lista Blanca
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1461,13 +1541,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuesta-rechazado" class="md-nav__link">
+  <a href="#respuesta-rechazado-por-experian" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Respuesta Rechazado
+      ❗ Respuesta Rechazado por Experian
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="❗ Respuesta Rechazado">
+    <nav class="md-nav" aria-label="❗ Respuesta Rechazado por Experian">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1513,15 +1593,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flujo-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Flujo del Servicio
-    </span>
-  </a>
   
 </li>
       
@@ -1602,10 +1673,36 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
   &quot;transaccion_id&quot;: &quot;68406a6a2d9aa64766060ee2&quot;
 }
 </code></pre>
+<h3 id="primera-validacion">Primera Validacion</h3>
+<p>Consultar Listas Negras y Blancas
+Consideraciones: </p>
+<ol>
+<li>Listas negras, en caso de estar de inmediato se entrega la respuesta de RECHAZADO.</li>
+<li>Listas Blancas, en caso de estar de inmediato se marca como aprobado y no hay necesidad de consultar Experiam.</li>
+<li>Si no esta en ninguna de las listas, sigue el flujo sin problema </li>
+</ol>
+<h3 id="respuesta-exitosa-lista-negra">❗ Respuesta Exitosa Lista Negra</h3>
+<pre><code class="language-js">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;mensaje&quot;: &quot;OTP válido.&quot;,
+  &quot;experian_status&quot;: null,
+  &quot;detalle&quot;: &quot;Solicitud rechazada.&quot;
+}
+
+</code></pre>
+<h3 id="respuesta-exitosa-lista-blanca">✅ Respuesta Exitosa Lista Blanca</h3>
+<pre><code class="language-js">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;mensaje&quot;: &quot;OTP válido.&quot;,
+  &quot;experian_status&quot;: null,
+  &quot;detalle&quot;: &quot;El usuario tiene buen perfil crediticio.&quot;
+}
+
+</code></pre>
 <h2 id="decision-de-expiriam-estados-y-flujos">🧩 Decisión de <strong>Expiriam</strong> (Estados y Flujos)</h2>
 <p>El proceso de originación consume una decisión de <strong>Expiriam</strong> y TESEO actúa según el <strong>estado</strong> recibido.<br />
 Estados posibles (valor devuelto en la respuesta exitosa):<br />
-APROBADO · RECHAZADO · EN_VERIFICACION · SOLICITUD_POR_ERROR</p>
+APROBADO · RECHAZADO · REQUIERE_VERIFICACION · SOLICITUD_CON_ERROR</p>
 <hr />
 <h3 id="tabla-de-estados">📊 Tabla de estados</h3>
 <table>
@@ -1628,12 +1725,12 @@ APROBADO · RECHAZADO · EN_VERIFICACION · SOLICITUD_POR_ERROR</p>
 <td>Registrar rechazo. Bloquear nueva solicitud por <strong>30 días</strong>. A los 30 días sin cambios → <strong>caducado</strong>*</td>
 </tr>
 <tr>
-<td><strong>EN_VERIFICACION</strong></td>
+<td><strong>REQUIERE_VERIFICACION</strong></td>
 <td>Cumple políticas, pero Expiriam exige validación de identidad (alerta)</td>
 <td>Enviar <strong>OTP</strong> y <strong>enlace de verificación</strong> provisto por Expiriam. Esperar resultado (webhook o polling).</td>
 </tr>
 <tr>
-<td><strong>SOLICITUD_POR_ERROR</strong></td>
+<td><strong>SOLICITUD_CON_ERROR</strong></td>
 <td>Error técnico o inconsistencias en la petición a Expiriam</td>
 <td>Registrar error, NO enviar OTP. Devolver detalle en errors.</td>
 </tr>
@@ -1669,7 +1766,7 @@ APROBADO · RECHAZADO · EN_VERIFICACION · SOLICITUD_POR_ERROR</p>
 </ul>
 </li>
 <li>
-<p><strong>SOLICITUD_POR_ERROR</strong></p>
+<p><strong>SOLICITUD_CON_ERROR</strong></p>
 </li>
 <li>TESEO no realiza validaciones de identidad.</li>
 <li>Devuelve detalles del error en la respuesta y registra logs para soporte.</li>
@@ -1692,7 +1789,7 @@ APROBADO · RECHAZADO · EN_VERIFICACION · SOLICITUD_POR_ERROR</p>
   &quot;detalle&quot;: &quot;Validación de identidad requerida.&quot;
 }
 </code></pre>
-<h3 id="respuesta-rechazado">❗ Respuesta Rechazado</h3>
+<h3 id="respuesta-rechazado-por-experian">❗ Respuesta Rechazado por Experian</h3>
 <pre><code class="language-js">{
   &quot;status&quot;: &quot;success&quot;,
   &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
@@ -1714,27 +1811,16 @@ APROBADO · RECHAZADO · EN_VERIFICACION · SOLICITUD_POR_ERROR</p>
 </code></pre>
 <h4 id="ejemplo-de-error-por-token-ausente-o-invalido">❗ Ejemplo de Error por Token Ausente o Inválido</h4>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;unauthorized&quot;,
+  &quot;status&quot;: &quot;error&quot;,
   &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente&quot;
 }
 </code></pre>
 <h4 id="ejemplo-de-otp-invalido_1">❗ Ejemplo de OTP Inválido</h4>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian completada.&quot;,
-  &quot;experian_status&quot;: &quot;rechazado&quot;,
-  &quot;detalle&quot;: &quot;El usuario tiene historial negativo en centrales de riesgo.&quot;
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;OTP válido.&quot;
 }
 </code></pre>
-<h2 id="flujo-del-servicio">🔁 Flujo del Servicio</h2>
-<ol>
-<li>Se recibe <code>otp</code> y <code>transaccion_id</code>.</li>
-<li>Se valida el OTP.</li>
-<li>Si es válido:</li>
-<li>Se obtiene el cliente desde el <code>transaccion_id</code>.</li>
-<li>Se consulta <strong>Experian</strong> con los datos del cliente.</li>
-<li>Se retorna el resultado: ✅ <strong>aprobado</strong> o ❌ <strong>rechazado</strong>.</li>
-</ol>
 
 
 

@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -983,6 +983,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../invictus_notificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notificación OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../invictus_validacion/" class="md-nav__link">
         
   
@@ -1147,6 +1170,15 @@
   <a href="#error-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
       ❗ Error de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-envio-solo-se-permite-enviar-maximo-3-veces-el-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Limite de envio (Solo se permite enviar maximo 3 veces el servicio)
     </span>
   </a>
   
@@ -1364,6 +1396,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#limite-de-envio-solo-se-permite-enviar-maximo-3-veces-el-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Limite de envio (Solo se permite enviar maximo 3 veces el servicio)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1387,7 +1428,8 @@
 
 <h1 id="manual-de-integracion-api-reenvio-de-codigo-otp">📘 Manual de Integración API: <strong>Reenvío de Código OTP</strong></h1>
 <h2 id="descripcion-del-servicio">📄 Descripción del Servicio</h2>
-<p>Este servicio permite <strong>reenviar el código OTP (One Time Password)</strong> a un usuario que ya cuenta con una transacción activa. Se debe autenticar usando un token válido y proporcionar el ID de la transacción.</p>
+<p>Este servicio permite **reenviar el código OTP ** a un usuario que ya cuenta con una transacción activa. Se debe autenticar usando un token válido y proporcionar el ID de la transacción.</p>
+<p>Cada transacción cuenta con un maximo de 3 reenvios de ser asi, el sistema mostrara su mensaje de error y tendra que volver a iniciar el proceso.</p>
 <hr />
 <h2 id="tipo-de-servicio">🚀 Tipo de Servicio</h2>
 <p><code>POST</code></p>
@@ -1438,7 +1480,7 @@
 <hr />
 <h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
 <pre><code class="language-json">{
-  &quot;transaccion_id&quot;: &quot;68406a6a2d9aa64766060ee2&quot;
+  &quot;transaccion_id&quot;: &quot;2yu2yg33i3iuy3i&quot;
 }
 </code></pre>
 <h4 id="respuesta-exitosa">✅ Respuesta Exitosa</h4>
@@ -1457,8 +1499,14 @@
 </code></pre>
 <h4 id="error-de-autenticacion">❗  Error de Autenticación</h4>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;unauthorized&quot;,
+  &quot;status&quot;: &quot;error&quot;,
   &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente&quot;
+}
+</code></pre>
+<h4 id="limite-de-envio-solo-se-permite-enviar-maximo-3-veces-el-servicio">❗ Limite de envio (Solo se permite enviar maximo 3 veces el servicio)</h4>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Límite de envío alcanzado.&quot;
 }
 </code></pre>
 
