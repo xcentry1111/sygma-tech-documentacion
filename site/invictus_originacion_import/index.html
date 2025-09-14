@@ -12,11 +12,11 @@
         <link rel="prev" href="../promosumma_originacion_import/">
       
       
-        <link rel="next" href="../invictus_validacion/">
+        <link rel="next" href="../invictus_notificacion/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -1104,9 +1104,37 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#validaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#respuesta-exitosa" class="md-nav__link">
     <span class="md-ellipsis">
       ✅ Respuesta Exitosa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicto-de-identidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Conflicto de identidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rechazo-reciente-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Rechazo reciente (&lt;30 días)
     </span>
   </a>
   
@@ -1121,6 +1149,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Ejemplo de Error por Token Ausente o Inválido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kyc-pendiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ KYC pendiente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1130,6 +1181,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_notificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notificación OTP
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1377,9 +1451,37 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#validaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#respuesta-exitosa" class="md-nav__link">
     <span class="md-ellipsis">
       ✅ Respuesta Exitosa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicto-de-identidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Conflicto de identidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rechazo-reciente-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Rechazo reciente (&lt;30 días)
     </span>
   </a>
   
@@ -1391,6 +1493,29 @@
       ❗ Ejemplo de Error por Campo Faltante
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Ejemplo de Error por Token Ausente o Inválido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kyc-pendiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ KYC pendiente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1472,6 +1597,7 @@
 <li><code>segundo_nombre</code></li>
 <li><code>primer_apellido</code></li>
 <li><code>segundo_apellido</code></li>
+<li><code>fecha_nacimiento</code></li>
 <li><code>email</code></li>
 <li><code>celular</code></li>
 <li><code>codigo_dane</code></li>
@@ -1526,6 +1652,7 @@
     &quot;segundo_nombre&quot;: &quot;MARTINEZ&quot;,
     &quot;primer_apellido&quot;: &quot;MARIO&quot;,
     &quot;segundo_apellido&quot;: &quot;MARIO&quot;,
+    &quot;fecha_nacimiento&quot;: &quot;1988-05-15&quot;,
     &quot;email&quot;: &quot;PRUEBA@GMAIL.COM&quot;,
     &quot;celular&quot;: &quot;3016795090&quot;,
     &quot;codigo_dane&quot;: &quot;015001&quot;,
@@ -1538,6 +1665,56 @@
 }
 
 </code></pre>
+<hr />
+<h3 id="validaciones">Validaciones</h3>
+<table>
+<thead>
+<tr>
+<th>Regla</th>
+<th>Condición</th>
+<th style="text-align: right;">HTTP</th>
+<th><code>status</code></th>
+<th><code>message</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Crédito existente y datos coinciden</td>
+<td>Existe crédito y <strong>correo/celular</strong> coinciden</td>
+<td style="text-align: right;">200</td>
+<td>success</td>
+<td>"Datos coinciden. Continúa el flujo."</td>
+</tr>
+<tr>
+<td>2. Conflicto de identidad</td>
+<td>Correo o celular ya existen pero con <strong>otra cédula</strong></td>
+<td style="text-align: right;">409</td>
+<td>blocked</td>
+<td>"El {correo|celular} ya está registrado para otra identificación."</td>
+</tr>
+<tr>
+<td>3. Rechazo reciente (&lt;30 días)</td>
+<td>Última solicitud <strong>rechazada</strong> hace &lt;30 días</td>
+<td style="text-align: right;">423</td>
+<td>blocked</td>
+<td>"Te faltan {dias_restantes} día(s) para volver a solicitar."</td>
+</tr>
+<tr>
+<td>4. Aprobada pendiente de firma</td>
+<td>Existe solicitud <strong>aprobada</strong> sin firma</td>
+<td style="text-align: right;">409</td>
+<td>action_required</td>
+<td>"Tienes una solicitud aprobada. Completa el proceso de firma."</td>
+</tr>
+<tr>
+<td>5. KYC pendiente</td>
+<td>Estado requiere <strong>verificación de identidad</strong></td>
+<td style="text-align: right;">202</td>
+<td>action_required</td>
+<td>"Requiere verificación de identidad."</td>
+</tr>
+</tbody>
+</table>
 <h4 id="respuesta-exitosa">✅ Respuesta Exitosa</h4>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;success&quot;,
@@ -1548,6 +1725,23 @@
 }
 
 </code></pre>
+<h4 id="conflicto-de-identidad">❗ Conflicto de identidad</h4>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El correo ya está registrado para otra identificación.&quot;
+  ]
+}
+</code></pre>
+<h4 id="rechazo-reciente-30-dias">❗ Rechazo reciente (&lt;30 días)</h4>
+<pre><code class="language-json">
+{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;Te faltan 12 día(s) para volver a realizar la solicitud&quot;
+  ]
+}
+</code></pre>
 <h4 id="ejemplo-de-error-por-campo-faltante">❗ Ejemplo de Error por Campo Faltante</h4>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;error&quot;,
@@ -1555,6 +1749,33 @@
     &quot;El campo identificacion es obligatorio&quot;
   ]
 }
+</code></pre>
+<h4 id="ejemplo-de-error-por-token-ausente-o-invalido">❗ Ejemplo de Error por Token Ausente o Inválido</h4>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente&quot;
+}
+
+
+#### ✅ Aprobada pendiente de firma
+
+```json
+{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;mensaje&quot;: &quot;Tienes una solicitud aprobada. Completa el proceso de firma.&quot;
+  }
+}
+
+</code></pre>
+<h4 id="kyc-pendiente">✅ KYC pendiente</h4>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;mensaje&quot;: &quot;Requiere verificación de identidad. Se te acaba de enviar un mensaje a los diferentes canales SMS - EMAIL y WHATSAPP&quot;
+  }
+}
+
 </code></pre>
 
 

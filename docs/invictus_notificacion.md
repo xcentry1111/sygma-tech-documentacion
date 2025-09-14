@@ -112,4 +112,4 @@ Los siguientes campos son **requeridos** para procesar correctamente la notifica
   "status": "error",
   "mensaje": "Transacción no encontrada o no válida para reenvío"
 }
-
+```
