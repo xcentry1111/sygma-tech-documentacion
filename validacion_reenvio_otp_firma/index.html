@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../s_plan_simulador/">
+        <link rel="prev" href="../validacion_otp_firma_digital/">
       
       
-        <link rel="next" href="../promosumma_originacion_import/">
+        <link rel="next" href="../consulta_municipio/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Simulador Cuota Maxima - Documentación Sygma-Tech</title>
+        <title>Reenvio OTP - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servicio-para-simulacion-previa-de-plan-de-pagos" class="md-skip">
+        <a href="#manual-de-integracion-api-reenvio-de-codigo-otp" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Simulador Cuota Maxima
+              Reenvio OTP
             
           </span>
         </div>
@@ -758,20 +758,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -787,7 +785,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Simuladores
@@ -821,32 +819,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Simulador Cuota Maxima
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../s_cuota_maxima/" class="md-nav__link">
         
   
   
@@ -857,137 +833,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛰️ URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encabezados-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧾 Encabezados (Headers)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      📨 Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📨 Cuerpo de la Solicitud (raw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa-ejemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta Exitosa - Ejemplo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Errores Comunes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❌ Errores Comunes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Token Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permisos-insuficientes" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Permisos insuficientes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-servicio-requerido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo servicio requerido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-dato-invalido-o-faltante" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo dato inválido o faltante
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monto-inferior-al-permitido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Monto inferior al permitido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Consideraciones
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1209,18 +1054,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -1236,7 +1083,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Firma Digital Invictus
@@ -1293,10 +1140,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../validacion_reenvio_otp_firma/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Reenvio OTP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1307,6 +1176,245 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Descripción del Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 URL de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📉 Headers Requeridos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Cuerpo de la Solicitud (JSON)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔸 Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Ejemplo de Body
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Flujo de Validación del Servicio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-validacion-de-campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Validación de Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-validacion-de-transaccion-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Validación de Transacción Existente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-validacion-de-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Validación de Límite de Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-se-excede-el-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Si se excede el límite de reenvíos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-validacion-de-tiempo-entre-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Validación de Tiempo entre Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-generacion-y-envio-de-nuevo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Generación y Envío de Nuevo OTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      📤 Ejemplos de Respuestas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reenvio-exitoso" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Reenvío Exitoso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campo-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Campo Faltante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificacion-no-coincide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Identificación No Coincide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaccion-ya-completada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✔️ Transacción Ya Completada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiempo-de-espera-no-cumplido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏱️ Tiempo de Espera No Cumplido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-reenvios-excedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Límite de Reenvíos Excedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1414,101 +1522,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#descripcion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Descripción del Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
-      🛰️ URL de Integración
+      🔗 URL de Integración
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#encabezados-headers" class="md-nav__link">
+  <a href="#headers-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      🧾 Encabezados (Headers)
+      📉 Headers Requeridos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
     <span class="md-ellipsis">
-      📨 Cuerpo de la Solicitud (raw)
+      🔢 Cuerpo de la Solicitud (JSON)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📨 Cuerpo de la Solicitud (raw)">
+    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#respuesta-exitosa-ejemplo" class="md-nav__link">
+  <a href="#campos-obligatorios" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Respuesta Exitosa - Ejemplo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Errores Comunes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❌ Errores Comunes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Token Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permisos-insuficientes" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Permisos insuficientes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-servicio-requerido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo servicio requerido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-dato-invalido-o-faltante" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo dato inválido o faltante
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monto-inferior-al-permitido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Monto inferior al permitido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Consideraciones
+      🔸 Campos Obligatorios
     </span>
   </a>
   
@@ -1516,6 +1578,160 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Ejemplo de Body
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Flujo de Validación del Servicio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-validacion-de-campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Validación de Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-validacion-de-transaccion-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Validación de Transacción Existente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-validacion-de-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Validación de Límite de Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-se-excede-el-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Si se excede el límite de reenvíos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-validacion-de-tiempo-entre-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Validación de Tiempo entre Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-generacion-y-envio-de-nuevo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Generación y Envío de Nuevo OTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      📤 Ejemplos de Respuestas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reenvio-exitoso" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Reenvío Exitoso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campo-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Campo Faltante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificacion-no-coincide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Identificación No Coincide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaccion-ya-completada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✔️ Transacción Ya Completada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiempo-de-espera-no-cumplido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏱️ Tiempo de Espera No Cumplido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-reenvios-excedido" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Límite de Reenvíos Excedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error de Autenticación
+    </span>
+  </a>
   
 </li>
         
@@ -1540,18 +1756,20 @@
 
 
 
-<h1 id="servicio-para-simulacion-previa-de-plan-de-pagos">📘 Servicio para <strong>Simulación Previa de Plan de Pagos</strong></h1>
-<p><strong>Descripción:</strong><br />
-Este servicio permite generar planes de pago simulados a partir de un valor ingresado. El sistema retorna diferentes opciones de monto máximo y sus respectivos planes de pago.</p>
-<p><strong>Tipo de Servicio:</strong> <code>POST</code></p>
+<h1 id="manual-de-integracion-api-reenvio-de-codigo-otp">📘 Manual de Integración API: <strong>Reenvío de Código OTP</strong></h1>
+<h2 id="descripcion-del-servicio">📄 Descripción del Servicio</h2>
+<p>Este servicio permite reenviar el código OTP a los canales de comunicación previamente seleccionados por el usuario (SMS, Email, WhatsApp) cuando el código ha expirado, se han agotado los intentos o el usuario no ha recibido el mensaje original. El servicio genera un nuevo código OTP con vigencia renovada.</p>
 <hr />
-<h2 id="url-de-integracion">🛰️ URL de Integración</h2>
+<h2 id="tipo-de-servicio">🚀 Tipo de Servicio</h2>
+<p><code>POST</code></p>
+<hr />
+<h2 id="url-de-integracion">🔗 URL de Integración</h2>
 <ul>
-<li><strong>Prueba:</strong> <code>https://testing-sygma.com/api/simulador_previo</code></li>
-<li><strong>Producción:</strong> <code>POR_DEFINIR/api/simulador_previo</code></li>
+<li><strong>Ambiente de Pruebas:</strong> <code>https://testing-sygma.com/api/reenvio_otp_firma</code>  </li>
+<li><strong>Producción:</strong> <code>POR DEFINIR</code></li>
 </ul>
 <hr />
-<h2 id="encabezados-headers">🧾 Encabezados (Headers)</h2>
+<h2 id="headers-requeridos">📉 Headers Requeridos</h2>
 <table>
 <thead>
 <tr>
@@ -1578,104 +1796,209 @@ Este servicio permite generar planes de pago simulados a partir de un valor ingr
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación (pestaña <strong>Token</strong>), usando un usuario y contraseña provistos por la entidad.</p>
-</blockquote>
+<p>!!! info "Nota sobre autenticación"
+    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
 <hr />
-<h2 id="cuerpo-de-la-solicitud-raw">📨 Cuerpo de la Solicitud (raw)</h2>
+<h2 id="cuerpo-de-la-solicitud-json">🔢 Cuerpo de la Solicitud (JSON)</h2>
+<p>La solicitud debe enviarse en formato <code>raw</code> JSON con los siguientes campos:</p>
+<h3 id="campos-obligatorios">🔸 Campos Obligatorios</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guid</code></td>
+<td>string (UUID)</td>
+<td>ID único de la transacción generada en el servicio de validación de firma digital</td>
+</tr>
+<tr>
+<td><code>identificacion</code></td>
+<td>string</td>
+<td>Número de identificación del usuario</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
 <pre><code class="language-json">{
-  &quot;servicio&quot;: &quot;CREDINTEGRAL_SIMC&quot;,
-  &quot;dato&quot;: 79000
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;
 }
 </code></pre>
-<p>📌 <strong>Campo dato:</strong> Corresponde al valor base para el cual se desea generar la simulación. Debe ser un número entero válido y mayor al monto mínimo permitido por el sistema.</p>
-<h3 id="respuesta-exitosa-ejemplo">✅ Respuesta Exitosa - Ejemplo</h3>
+<h3 id="flujo-de-validacion-del-servicio">🔄 Flujo de Validación del Servicio</h3>
+<ul>
+<li>El servicio ejecuta las siguientes validaciones en orden:</li>
+</ul>
+<h3 id="1-validacion-de-campos-obligatorios">1️⃣ Validación de Campos Obligatorios</h3>
+<ul>
+<li>Se verifica que los campos guid e identificacion estén presentes en la solicitud.</li>
+</ul>
+<hr />
+<h3 id="2-validacion-de-transaccion-existente">2️⃣ Validación de Transacción Existente</h3>
+<ul>
+<li>
+<p>Se verifica que:</p>
+</li>
+<li>
+<p>El guid exista en el sistema</p>
+</li>
+<li>La identificacion corresponda con el usuario asociado al guid</li>
+<li>La transacción no esté en estado completado (OTP ya validado correctamente)</li>
+</ul>
+<h3 id="3-validacion-de-limite-de-reenvios">3️⃣ Validación de Límite de Reenvíos</h3>
+<ul>
+<li>Se verifica el número de veces que se ha solicitado el reenvío del OTP para esta transacción.</li>
+<li>!!! "Límite de Reenvíos"</li>
+<li>Máximo permitido: 5 reenvíos por transacción</li>
+<li>Tiempo mínimo entre reenvíos: 60 segundos</li>
+</ul>
+<h3 id="si-se-excede-el-limite-de-reenvios">🚫 Si se excede el límite de reenvíos:</h3>
 <pre><code class="language-json">{
-  &quot;simulacion&quot;: {
-    &quot;id_consulta&quot;: &quot;126969&quot;,
-    &quot;vlrprestamo&quot;: [
-      {
-        &quot;nro_cuotas&quot;: &quot;3&quot;,
-        &quot;monto_maximo&quot;: &quot;100000&quot;,
-        &quot;plan_pagos&quot;: [
-          {
-            &quot;nro_cuota&quot;: &quot;1&quot;,
-            &quot;fecha_vence&quot;: &quot;23-05-2025&quot;,
-            &quot;inicial&quot;: &quot;100000&quot;,
-            &quot;valor_cuota&quot;: &quot;64142.67&quot;,
-            &quot;capital&quot;: &quot;31449.1&quot;,
-            &quot;interes&quot;: &quot;1918.9&quot;,
-            &quot;seguro&quot;: &quot;300&quot;,
-            &quot;fianza&quot;: &quot;3200&quot;,
-            &quot;iva_fianza&quot;: &quot;608&quot;,
-            &quot;plataforma&quot;: &quot;26666.67&quot;,
-            &quot;final&quot;: &quot;68550.9&quot;
-          },
-          ...
-        ]
-      },
-      ...
-    ]
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Has excedido el número máximo de reenvíos permitidos. Por favor, contacta a soporte.&quot;,
+  &quot;reenvios_maximos&quot;: 5,
+  &quot;reenvios_realizados&quot;: 5
+}
+</code></pre>
+<h3 id="4-validacion-de-tiempo-entre-reenvios">4️⃣ Validación de Tiempo entre Reenvíos</h3>
+<ul>
+<li>Se verifica que hayan transcurrido al menos 60 segundos desde el último reenvío.</li>
+<li>
+<p>⏱️ Si no ha pasado el tiempo mínimo:</p>
+</li>
+<li>
+<p>Respuesta:</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Debes esperar {segundos_restantes} segundos antes de solicitar un nuevo código.&quot;,
+  &quot;tiempo_espera_minimo&quot;: &quot;60 segundos&quot;,
+  &quot;segundos_restantes&quot;: 42
+}
+</code></pre>
+<h3 id="5-generacion-y-envio-de-nuevo-otp">5️⃣ Generación y Envío de Nuevo OTP</h3>
+<ul>
+<li>
+<p>Si todas las validaciones son exitosas:</p>
+</li>
+<li>
+<p>Acciones automáticas:</p>
+</li>
+<li>
+<p>Se invalida el código OTP anterior</p>
+</li>
+<li>Se genera un nuevo código OTP de 6 dígitos</li>
+<li>Se reinician los intentos de validación (3 intentos disponibles)</li>
+<li>Se actualiza la vigencia del código (3 minutos)</li>
+<li>
+<p>Se envía el nuevo código a los canales registrados del usuario:</p>
+</li>
+<li>
+<p>SMS</p>
+</li>
+<li>Email</li>
+<li>
+<p>WhatsApp (si fue seleccionado)</p>
+</li>
+<li>
+<p>Se registra el reenvío en la auditoría del sistema</p>
+</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
+    &quot;mensaje&quot;: &quot;Código OTP reenviado exitosamente a los canales registrados.&quot;,
+    &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
+    &quot;vigencia_otp&quot;: &quot;3 minutos&quot;,
+    &quot;intentos_disponibles&quot;: 3,
+    &quot;reenvios_restantes&quot;: 3
   }
 }
 </code></pre>
-<h3 id="errores-comunes">❌ Errores Comunes</h3>
-<h4 id="token-invalido">⚠️ Token Inválido</h4>
+<hr />
+<h3 id="ejemplos-de-respuestas">📤 Ejemplos de Respuestas</h3>
+<h3 id="reenvio-exitoso">✅ Reenvío Exitoso</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;Token Inválido&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
+    &quot;mensaje&quot;: &quot;Código OTP reenviado exitosamente a los canales registrados.&quot;,
+    &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
+    &quot;vigencia_otp&quot;: &quot;5 minutos&quot;,
+    &quot;intentos_disponibles&quot;: 3,
+    &quot;reenvios_restantes&quot;: 3,
+    &quot;timestamp&quot;: &quot;2025-10-07T14:25:30Z&quot;
+  }
 }
-
 </code></pre>
-<h4 id="permisos-insuficientes">⚠️ Permisos insuficientes</h4>
+<hr />
+<h3 id="campo-faltante">❗ Campo Faltante</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;No cuenta con los permisos para consumir el servicio&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo guid es obligatorio.&quot;,
+    &quot;El campo identificacion es obligatorio.&quot;
+  ]
 }
-
 </code></pre>
-<h4 id="campo-servicio-requerido">⚠️ Campo servicio requerido</h4>
+<hr />
+<h3 id="transaccion-no-encontrada">🔍 Transacción No Encontrada</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;El parámetro :servicio es requerido&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;,
+  &quot;guid&quot;: &quot;invalid-uuid-12345&quot;
 }
-
 </code></pre>
-<h4 id="campo-dato-invalido-o-faltante">⚠️ Campo dato inválido o faltante</h4>
+<hr />
+<h3 id="identificacion-no-coincide">🚫 Identificación No Coincide</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;El parámetro :dato es requerido y debe ser un número entero válido&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;La identificación no corresponde a esta transacción.&quot;,
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
 }
-
 </code></pre>
-<h4 id="monto-inferior-al-permitido">⚠️ Monto inferior al permitido</h4>
+<hr />
+<h3 id="transaccion-ya-completada">✔️ Transacción Ya Completada</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;El monto no puede ser menor a {MONTO_MINIMO}&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Esta transacción ya ha sido completada exitosamente. No es necesario un nuevo código.&quot;,
+  &quot;fecha_completado&quot;: &quot;2025-10-07T13:45:20Z&quot;
 }
-
-
 </code></pre>
-<h4 id="consideraciones">🧠 Consideraciones</h4>
-<ul>
-<li>
-<p>El campo servicio debe enviarse en mayúsculas tal como se define en el sistema.</p>
-</li>
-<li>
-<p>El servicio valida que el usuario tenga permisos (crea = 'S') sobre el objeto correspondiente.</p>
-</li>
-<li>
-<p>El sistema consulta configuraciones internas (parámetro mínimo, consecutivo, etc.) y lanza un proceso Job para generar la simulación.</p>
-</li>
-<li>
-<p>La respuesta puede incluir múltiples combinaciones de cuotas y montos máximos, con sus respectivos detalles financieros.</p>
-</li>
-</ul>
+<hr />
+<h3 id="tiempo-de-espera-no-cumplido">⏱️ Tiempo de Espera No Cumplido</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Debes esperar 42 segundos antes de solicitar un nuevo código.&quot;,
+  &quot;tiempo_espera_minimo&quot;: &quot;60 segundos&quot;,
+  &quot;segundos_restantes&quot;: 42,
+  &quot;ultimo_envio&quot;: &quot;2025-10-07T14:24:30Z&quot;
+}
+</code></pre>
+<hr />
+<h3 id="limite-de-reenvios-excedido">🚨 Límite de Reenvíos Excedido</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Has excedido el número máximo de reenvíos permitidos. Por favor, contacta a soporte.&quot;,
+  &quot;reenvios_maximos&quot;: 5,
+  &quot;reenvios_realizados&quot;: 5,
+  &quot;contacto_soporte&quot;: &quot;soporte@teseo-sygma.com&quot;
+}
+</code></pre>
+<hr />
+<h3 id="error-de-autenticacion">❗ Error de Autenticación</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
 
 
 

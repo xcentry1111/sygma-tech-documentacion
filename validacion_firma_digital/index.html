@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../s_plan_simulador/">
+        <link rel="prev" href="../invictus_reenviar_validacion/">
       
       
-        <link rel="next" href="../promosumma_originacion_import/">
+        <link rel="next" href="../validacion_otp_firma_digital/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Simulador Cuota Maxima - Documentación Sygma-Tech</title>
+        <title>Validación Firma - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servicio-para-simulacion-previa-de-plan-de-pagos" class="md-skip">
+        <a href="#manual-de-integracion-api-validacion-de-firma-digital-y-listas-restrictivas" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Simulador Cuota Maxima
+              Validación Firma
             
           </span>
         </div>
@@ -758,20 +758,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -787,7 +785,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Simuladores
@@ -821,32 +819,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Simulador Cuota Maxima
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../s_cuota_maxima/" class="md-nav__link">
         
   
   
@@ -857,137 +833,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛰️ URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encabezados-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧾 Encabezados (Headers)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      📨 Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📨 Cuerpo de la Solicitud (raw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa-ejemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta Exitosa - Ejemplo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Errores Comunes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❌ Errores Comunes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Token Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permisos-insuficientes" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Permisos insuficientes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-servicio-requerido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo servicio requerido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-dato-invalido-o-faltante" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo dato inválido o faltante
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monto-inferior-al-permitido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Monto inferior al permitido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Consideraciones
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1209,18 +1054,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -1236,7 +1083,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Firma Digital Invictus
@@ -1247,10 +1094,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../validacion_firma_digital/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Validación Firma
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1261,6 +1130,314 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers Requeridos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valores-permitidos-para-tiposdocumento_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Permitidos para tiposdocumento_id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de Validación del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flujo de Validación del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-consulta-interna-proceso-de-firma-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Consulta Interna: Proceso de Firma Digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-consulta-de-listas-restrictivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Consulta de Listas Restrictivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-validacion-de-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Validación de Crédito Aprobado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Validación de Crédito Aprobado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-tiene-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Si tiene crédito aprobado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Si tiene crédito aprobado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credito-aprobado-hace-mas-de-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crédito aprobado hace más de 30 días
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credito-aprobado-dentro-del-plazo-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crédito aprobado dentro del plazo (&lt; 30 días)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-no-tiene-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Si NO tiene crédito aprobado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-validaciones-y-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla de Validaciones y Respuestas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Respuestas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de Respuestas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-otp-enviado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa - OTP Enviado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuario-en-lista-restrictiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Usuario en Lista Restrictiva
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credito-caducado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Crédito Caducado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sin-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Sin Crédito Aprobado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-por-campo-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error por Campo Faltante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consideraciones de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código OTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consulta-de-listas-restrictivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consulta de Listas Restrictivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-transacciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Almacenamiento de Transacciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1414,101 +1591,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#descripcion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
-      🛰️ URL de Integración
+      URL de Integración
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#encabezados-headers" class="md-nav__link">
+  <a href="#headers-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      🧾 Encabezados (Headers)
+      Headers Requeridos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
     <span class="md-ellipsis">
-      📨 Cuerpo de la Solicitud (raw)
+      Cuerpo de la Solicitud
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📨 Cuerpo de la Solicitud (raw)">
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#respuesta-exitosa-ejemplo" class="md-nav__link">
+  <a href="#campos-obligatorios" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Respuesta Exitosa - Ejemplo
+      Campos Obligatorios
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
+  <a href="#valores-permitidos-para-tiposdocumento_id" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Errores Comunes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❌ Errores Comunes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Token Inválido
+      Valores Permitidos para tiposdocumento_id
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#permisos-insuficientes" class="md-nav__link">
+  <a href="#ejemplo-de-body" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Permisos insuficientes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-servicio-requerido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo servicio requerido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#campo-dato-invalido-o-faltante" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Campo dato inválido o faltante
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monto-inferior-al-permitido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Monto inferior al permitido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Consideraciones
+      Ejemplo de Body
     </span>
   </a>
   
@@ -1516,6 +1665,211 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de Validación del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flujo de Validación del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-consulta-interna-proceso-de-firma-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Consulta Interna: Proceso de Firma Digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-consulta-de-listas-restrictivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Consulta de Listas Restrictivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-validacion-de-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Validación de Crédito Aprobado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Validación de Crédito Aprobado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-tiene-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Si tiene crédito aprobado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Si tiene crédito aprobado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credito-aprobado-hace-mas-de-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crédito aprobado hace más de 30 días
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credito-aprobado-dentro-del-plazo-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crédito aprobado dentro del plazo (&lt; 30 días)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-no-tiene-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Si NO tiene crédito aprobado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-validaciones-y-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla de Validaciones y Respuestas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Respuestas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de Respuestas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-otp-enviado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa - OTP Enviado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuario-en-lista-restrictiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Usuario en Lista Restrictiva
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credito-caducado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Crédito Caducado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sin-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Sin Crédito Aprobado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-por-campo-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error por Campo Faltante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consideraciones de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código OTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consulta-de-listas-restrictivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consulta de Listas Restrictivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-transacciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Almacenamiento de Transacciones
+    </span>
+  </a>
   
 </li>
         
@@ -1540,18 +1894,34 @@
 
 
 
-<h1 id="servicio-para-simulacion-previa-de-plan-de-pagos">📘 Servicio para <strong>Simulación Previa de Plan de Pagos</strong></h1>
-<p><strong>Descripción:</strong><br />
-Este servicio permite generar planes de pago simulados a partir de un valor ingresado. El sistema retorna diferentes opciones de monto máximo y sus respectivos planes de pago.</p>
-<p><strong>Tipo de Servicio:</strong> <code>POST</code></p>
+<h1 id="manual-de-integracion-api-validacion-de-firma-digital-y-listas-restrictivas">📘 Manual de Integración API: Validación de Firma Digital y Listas Restrictivas</h1>
+<h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
+<p>Este servicio permite validar si una persona está en proceso de firma digital, verificar su estado en listas restrictivas a través de operadores como Extradata o Entidad deseada, y determinar la viabilidad de otorgar un crédito. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.</p>
 <hr />
-<h2 id="url-de-integracion">🛰️ URL de Integración</h2>
-<ul>
-<li><strong>Prueba:</strong> <code>https://testing-sygma.com/api/simulador_previo</code></li>
-<li><strong>Producción:</strong> <code>POR_DEFINIR/api/simulador_previo</code></li>
-</ul>
+<h2 id="tipo-de-servicio">Tipo de Servicio</h2>
+<p><strong>Método HTTP:</strong> <code>POST</code></p>
 <hr />
-<h2 id="encabezados-headers">🧾 Encabezados (Headers)</h2>
+<h2 id="url-de-integracion">URL de Integración</h2>
+<table>
+<thead>
+<tr>
+<th>Ambiente</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pruebas</strong></td>
+<td><code>https://testing-sygma.com/api/validacion_firma_digital</code></td>
+</tr>
+<tr>
+<td><strong>Producción</strong></td>
+<td><code>POR DEFINIR</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="headers-requeridos">Headers Requeridos</h2>
 <table>
 <thead>
 <tr>
@@ -1562,119 +1932,281 @@ Este servicio permite generar planes de pago simulados a partir de un valor ingr
 </thead>
 <tbody>
 <tr>
-<td>Authorization</td>
-<td>Bearer <code>{token}</code></td>
+<td><code>Authorization</code></td>
+<td><code>Bearer {token}</code></td>
 <td>✅</td>
 </tr>
 <tr>
-<td>Accept</td>
-<td>application/json</td>
+<td><code>Accept</code></td>
+<td><code>application/json</code></td>
 <td>✅</td>
 </tr>
 <tr>
-<td>Content-Type</td>
-<td>application/json</td>
+<td><code>Content-Type</code></td>
+<td><code>application/json</code></td>
 <td>✅</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación (pestaña <strong>Token</strong>), usando un usuario y contraseña provistos por la entidad.</p>
-</blockquote>
+<p>!!! "Obtención del Token"
+    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
 <hr />
-<h2 id="cuerpo-de-la-solicitud-raw">📨 Cuerpo de la Solicitud (raw)</h2>
+<h2 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h2>
+<p>La solicitud debe enviarse en formato <strong>raw JSON</strong> con los siguientes campos:</p>
+<h3 id="campos-obligatorios">Campos Obligatorios</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tiposdocumento_id</code></td>
+<td>string</td>
+<td>ID del tipo de documento</td>
+</tr>
+<tr>
+<td><code>identificacion</code></td>
+<td>string</td>
+<td>Número de identificación del usuario</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valores-permitidos-para-tiposdocumento_id">Valores Permitidos para <code>tiposdocumento_id</code></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td>Cédula de ciudadanía (CC)</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Cédula de extranjería (CE)</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>NIT</td>
+</tr>
+<tr>
+<td><code>8</code></td>
+<td>Pasaporte (PA)</td>
+</tr>
+<tr>
+<td><code>181</code></td>
+<td>Permiso Especial (PEP)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-body">Ejemplo de Body</h3>
 <pre><code class="language-json">{
-  &quot;servicio&quot;: &quot;CREDINTEGRAL_SIMC&quot;,
-  &quot;dato&quot;: 79000
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;
 }
 </code></pre>
-<p>📌 <strong>Campo dato:</strong> Corresponde al valor base para el cual se desea generar la simulación. Debe ser un número entero válido y mayor al monto mínimo permitido por el sistema.</p>
-<h3 id="respuesta-exitosa-ejemplo">✅ Respuesta Exitosa - Ejemplo</h3>
+<hr />
+<h2 id="flujo-de-validacion-del-servicio">Flujo de Validación del Servicio</h2>
+<p>El servicio ejecuta las siguientes validaciones en orden:</p>
+<h3 id="1-consulta-interna-proceso-de-firma-digital">1. Consulta Interna: Proceso de Firma Digital</h3>
+<p>Se verifica si la persona está actualmente en proceso de firma digital dentro del sistema, en caso de que no este se retorna la respuesta  que el usuario actualmente no cuenta con una solicitud de credito disponible.</p>
+<pre><code class="language-json">    {
+      &quot;status&quot;: &quot;blocked&quot;,
+      &quot;mensaje&quot;: &quot;No hay crédito disponible para firma.&quot;
+    }
+</code></pre>
+<h3 id="2-consulta-de-listas-restrictivas">2. Consulta de Listas Restrictivas</h3>
+<p>El sistema consulta ante el operador configurado Extradata o Entidad deseada para verificar si la persona aparece en listas restrictivas</p>
+<p>!!! "Usuario en Lista Restrictiva"
+    <strong>Acciones automáticas:</strong></p>
+<ul>
+<li>Se envía SMS y correo electrónico al usuario con el mensaje y retorna el mensaje tipo json a invictus</li>
+</ul>
+<p><strong>Respuesta a Invictus:</strong></p>
+<pre><code class="language-json">    {
+      &quot;status&quot;: &quot;blocked&quot;,
+      &quot;mensaje&quot;: &quot;No hay crédito disponible. Usuario en lista restrictiva.&quot;
+    }
+</code></pre>
+<h3 id="3-validacion-de-credito-aprobado">3. Validación de Crédito Aprobado</h3>
+<p>Si el usuario <strong>NO</strong> está en lista restrictiva, el sistema verifica si tiene un crédito aprobado.</p>
+<h4 id="si-tiene-credito-aprobado">✅ Si tiene crédito aprobado</h4>
+<p>Se valida la vigencia de la aprobación:</p>
+<h5 id="credito-aprobado-hace-mas-de-30-dias">Crédito aprobado hace más de 30 días</h5>
+<ul>
+<li>Se retorna la respuesta a invictus de la siguiente manera.</li>
+</ul>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
-  &quot;simulacion&quot;: {
-    &quot;id_consulta&quot;: &quot;126969&quot;,
-    &quot;vlrprestamo&quot;: [
-      {
-        &quot;nro_cuotas&quot;: &quot;3&quot;,
-        &quot;monto_maximo&quot;: &quot;100000&quot;,
-        &quot;plan_pagos&quot;: [
-          {
-            &quot;nro_cuota&quot;: &quot;1&quot;,
-            &quot;fecha_vence&quot;: &quot;23-05-2025&quot;,
-            &quot;inicial&quot;: &quot;100000&quot;,
-            &quot;valor_cuota&quot;: &quot;64142.67&quot;,
-            &quot;capital&quot;: &quot;31449.1&quot;,
-            &quot;interes&quot;: &quot;1918.9&quot;,
-            &quot;seguro&quot;: &quot;300&quot;,
-            &quot;fianza&quot;: &quot;3200&quot;,
-            &quot;iva_fianza&quot;: &quot;608&quot;,
-            &quot;plataforma&quot;: &quot;26666.67&quot;,
-            &quot;final&quot;: &quot;68550.9&quot;
-          },
-          ...
-        ]
-      },
-      ...
-    ]
+  &quot;status&quot;: &quot;expired&quot;,
+  &quot;mensaje&quot;: &quot;Tu crédito aprobado ha caducado. Puedes realizar una nueva solicitud de crédito.&quot;
+}
+</code></pre>
+<h5 id="credito-aprobado-dentro-del-plazo-30-dias">Crédito aprobado dentro del plazo (&lt; 30 días)</h5>
+<p><strong>Acciones automáticas:</strong></p>
+<ul>
+<li>Se genera un código OTP de 6 dígitos</li>
+<li>Se envía el código OTP a los canales seleccionados por el usuario en su solicitud inicial:<ul>
+<li>SMS</li>
+<li>Correo electrónico</li>
+<li>WhatsApp (si fue seleccionado)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Respuesta Success:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;uuid-generado&quot;,
+    &quot;mensaje&quot;: &quot;Código OTP enviado exitosamente a los canales registrados.&quot;,
+    &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
+    &quot;vigencia_otp&quot;: &quot;5 minutos&quot;
   }
 }
 </code></pre>
-<h3 id="errores-comunes">❌ Errores Comunes</h3>
-<h4 id="token-invalido">⚠️ Token Inválido</h4>
+<h4 id="si-no-tiene-credito-aprobado">❌ Si NO tiene crédito aprobado</h4>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;Token Inválido&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;no_credit&quot;,
+  &quot;mensaje&quot;: &quot;No tienes un crédito aprobado disponible para firma.&quot;
 }
-
 </code></pre>
-<h4 id="permisos-insuficientes">⚠️ Permisos insuficientes</h4>
+<hr />
+<h2 id="tabla-de-validaciones-y-respuestas">Tabla de Validaciones y Respuestas</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Condición</th>
+<th>HTTP</th>
+<th>status</th>
+<th>message</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Usuario en lista restrictiva</td>
+<td>403</td>
+<td><code>blocked</code></td>
+<td>"No hay crédito disponible. Usuario en lista restrictiva."</td>
+<td>Envío de SMS + Email informativo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Crédito aprobado caducado (&gt;30 días)</td>
+<td>200</td>
+<td><code>expired</code></td>
+<td>"Tu crédito aprobado ha caducado. Puedes realizar una nueva solicitud."</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Crédito aprobado vigente (&lt;30 días)</td>
+<td>200</td>
+<td><code>success</code></td>
+<td>"Código OTP enviado exitosamente a los canales registrados."</td>
+<td>Generación y envío de OTP</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sin crédito aprobado</td>
+<td>200</td>
+<td><code>no_credit</code></td>
+<td>"No tienes un crédito aprobado disponible para firma."</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Error en campos requeridos</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>"El campo {campo} es obligatorio."</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Token inválido o ausente</td>
+<td>401</td>
+<td><code>error</code></td>
+<td>"Token de autorización inválido o ausente."</td>
+<td>Ninguna</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejemplos-de-respuestas">Ejemplos de Respuestas</h2>
+<h3 id="respuesta-exitosa-otp-enviado">✅ Respuesta Exitosa - OTP Enviado</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;No cuenta con los permisos para consumir el servicio&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;transaccion_id&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
+    &quot;mensaje&quot;: &quot;Código OTP enviado exitosamente a los canales registrados.&quot;,
+    &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
+    &quot;vigencia_otp&quot;: &quot;5 minutos&quot;
+  }
 }
-
 </code></pre>
-<h4 id="campo-servicio-requerido">⚠️ Campo servicio requerido</h4>
+<h3 id="usuario-en-lista-restrictiva">🚫 Usuario en Lista Restrictiva</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;El parámetro :servicio es requerido&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;blocked&quot;,
+  &quot;mensaje&quot;: &quot;No hay crédito disponible. Usuario en lista restrictiva.&quot;,
+  &quot;notificacion_enviada&quot;: true
 }
-
 </code></pre>
-<h4 id="campo-dato-invalido-o-faltante">⚠️ Campo dato inválido o faltante</h4>
+<h3 id="credito-caducado">⏰ Crédito Caducado</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;El parámetro :dato es requerido y debe ser un número entero válido&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;expired&quot;,
+  &quot;mensaje&quot;: &quot;Tu crédito aprobado ha caducado. Puedes realizar una nueva solicitud de crédito.&quot;,
+  &quot;dias_transcurridos&quot;: 45
 }
-
 </code></pre>
-<h4 id="monto-inferior-al-permitido">⚠️ Monto inferior al permitido</h4>
+<h3 id="sin-credito-aprobado">❌ Sin Crédito Aprobado</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: false,
-  &quot;message&quot;: &quot;El monto no puede ser menor a {MONTO_MINIMO}&quot;,
-  &quot;code&quot;: 400
+  &quot;status&quot;: &quot;no_credit&quot;,
+  &quot;mensaje&quot;: &quot;No tienes un crédito aprobado disponible para firma.&quot;
 }
-
-
 </code></pre>
-<h4 id="consideraciones">🧠 Consideraciones</h4>
+<h3 id="error-por-campo-faltante">❗ Error por Campo Faltante</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo identificacion es obligatorio.&quot;
+  ]
+}
+</code></pre>
+<h3 id="error-de-autenticacion">❗ Error de Autenticación</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
+<hr />
+<h2 id="consideraciones-de-seguridad">Consideraciones de Seguridad</h2>
+<h3 id="codigo-otp">Código OTP</h3>
 <ul>
-<li>
-<p>El campo servicio debe enviarse en mayúsculas tal como se define en el sistema.</p>
-</li>
-<li>
-<p>El servicio valida que el usuario tenga permisos (crea = 'S') sobre el objeto correspondiente.</p>
-</li>
-<li>
-<p>El sistema consulta configuraciones internas (parámetro mínimo, consecutivo, etc.) y lanza un proceso Job para generar la simulación.</p>
-</li>
-<li>
-<p>La respuesta puede incluir múltiples combinaciones de cuotas y montos máximos, con sus respectivos detalles financieros.</p>
-</li>
+<li><strong>Vigencia:</strong> 5 minutos</li>
+<li><strong>Longitud:</strong> 6 dígitos numéricos</li>
+<li><strong>Intentos:</strong> Se invalida después de 3 intentos fallidos</li>
+</ul>
+<h3 id="consulta-de-listas-restrictivas">Consulta de Listas Restrictivas</h3>
+<ul>
+<li>Se realiza en tiempo real con el operador configurado</li>
+<li><strong>Timeout máximo:</strong> 30 segundos</li>
+<li>En caso de error del operador, se debe notificar y registrar para revisión manual</li>
+</ul>
+<h3 id="almacenamiento-de-transacciones">Almacenamiento de Transacciones</h3>
+<ul>
+<li>Todas las consultas y respuestas deben quedar registradas con <code>transaccion_id</code> único</li>
+<li>Incluir timestamp, usuario, resultado de validaciones y acciones ejecutadas</li>
 </ul>
 
 
