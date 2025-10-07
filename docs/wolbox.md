@@ -6,7 +6,7 @@
 
 ### URL de Integración
 
-- **Prueba**  http://testing-sygma.com/ws_consulta
+- **Prueba**  https://testing-sygma.com/ws_consulta
 - **Producción:** https://sygma-tech.com.co/ws_consulta
 
 ### Headers

@@ -7,7 +7,7 @@
 
 ## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/reversar_recaudo`
+- **Prueba:** `https://testing-sygma.com/api/reversar_recaudo`
 - **Producción:** `POR_DEFINIR/api/reversar_recaudo`
 
 ## **Headers**

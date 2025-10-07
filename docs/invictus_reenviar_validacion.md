@@ -16,7 +16,7 @@ Cada transacción cuenta con un maximo de 3 reenvios de ser asi, el sistema most
 
 ## 🔗 URL de Integración
 
-- **Ambiente de Pruebas:** `http://testing-sygma.com/api/reenviar_otp`  
+- **Ambiente de Pruebas:** `https://testing-sygma.com/api/reenviar_otp`  
 - **Producción:** `POR DEFINIR`
 
 ---

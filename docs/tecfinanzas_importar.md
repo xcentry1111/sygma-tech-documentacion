@@ -7,7 +7,7 @@ y información financiera dentro de TESEO.
 
 ## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/originador`
+- **Prueba:** `https://testing-sygma.com/api/originador`
 - **Producción:** `POR_DEFINIR/api/originador`
 
 ## **Headers**

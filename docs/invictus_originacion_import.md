@@ -14,7 +14,7 @@ Este servicio permite recibir y validar la información proveniente de *Invictus
 
 ## 🔗 URL de Integración
  
-- **Ambiente de Pruebas:** `http://testing-sygma.com/api/ori_invictus`  
+- **Ambiente de Pruebas:** `https://testing-sygma.com/api/ori_invictus`  
 - **Producción:** `POR DEFINIR`
 
 ---
@@ -168,7 +168,7 @@ Los siguientes campos son **requeridos** para procesar correctamente la solicitu
   "status": "error",
   "mensaje": "Token de autorización inválido o ausente"
 }
-
+```
 
 #### ✅ Aprobada pendiente de firma
 

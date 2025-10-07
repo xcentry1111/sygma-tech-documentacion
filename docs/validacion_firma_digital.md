@@ -1,0 +1,254 @@
+# 📘 Manual de Integración API: Validación de Firma Digital y Listas Restrictivas
+
+## Descripción del Servicio
+
+Este servicio permite validar si una persona está en proceso de firma digital, verificar su estado en listas restrictivas a través de operadores como Extradata o Entidad deseada, y determinar la viabilidad de otorgar un crédito. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.
+
+---
+
+## Tipo de Servicio
+
+**Método HTTP:** `POST`
+
+---
+
+## URL de Integración
+
+| Ambiente | URL |
+|----------|-----|
+| **Pruebas** | `https://testing-sygma.com/api/validacion_firma_digital` |
+| **Producción** | `POR DEFINIR` |
+
+---
+
+## Headers Requeridos
+
+| Nombre | Valor | Requerido |
+|--------|-------|-----------|
+| `Authorization` | `Bearer {token}` | ✅ |
+| `Accept` | `application/json` | ✅ |
+| `Content-Type` | `application/json` | ✅ |
+
+!!! "Obtención del Token"
+    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.
+
+---
+
+## Cuerpo de la Solicitud
+
+La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
+
+### Campos Obligatorios
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| `tiposdocumento_id` | string | ID del tipo de documento |
+| `identificacion` | string | Número de identificación del usuario |
+
+### Valores Permitidos para `tiposdocumento_id`
+
+| ID | Descripción |
+|----|-------------|
+| `1` | Cédula de ciudadanía (CC) |
+| `2` | Cédula de extranjería (CE) |
+| `3` | NIT |
+| `8` | Pasaporte (PA) |
+| `181` | Permiso Especial (PEP) |
+
+### Ejemplo de Body
+
+```json
+{
+  "tiposdocumento_id": "1",
+  "identificacion": "88282828"
+}
+```
+
+---
+
+## Flujo de Validación del Servicio
+
+El servicio ejecuta las siguientes validaciones en orden:
+
+### 1. Consulta Interna: Proceso de Firma Digital
+
+Se verifica si la persona está actualmente en proceso de firma digital dentro del sistema, en caso de que no este se retorna la respuesta  que el usuario actualmente no cuenta con una solicitud de credito disponible.
+
+```json
+    {
+      "status": "blocked",
+      "mensaje": "No hay crédito disponible para firma."
+    }
+```
+
+### 2. Consulta de Listas Restrictivas
+
+El sistema consulta ante el operador configurado Extradata o Entidad deseada para verificar si la persona aparece en listas restrictivas
+
+!!! "Usuario en Lista Restrictiva"
+    **Acciones automáticas:**
+    
+- Se envía SMS y correo electrónico al usuario con el mensaje y retorna el mensaje tipo json a invictus
+    
+**Respuesta a Invictus:**
+
+```json
+    {
+      "status": "blocked",
+      "mensaje": "No hay crédito disponible. Usuario en lista restrictiva."
+    }
+```
+
+### 3. Validación de Crédito Aprobado
+
+Si el usuario **NO** está en lista restrictiva, el sistema verifica si tiene un crédito aprobado.
+
+#### ✅ Si tiene crédito aprobado
+
+Se valida la vigencia de la aprobación:
+
+##### Crédito aprobado hace más de 30 días
+
+- Se retorna la respuesta a invictus de la siguiente manera.
+
+**Respuesta:**
+```json
+{
+  "status": "expired",
+  "mensaje": "Tu crédito aprobado ha caducado. Puedes realizar una nueva solicitud de crédito."
+}
+```
+
+##### Crédito aprobado dentro del plazo (< 30 días)
+
+**Acciones automáticas:**
+
+- Se genera un código OTP de 6 dígitos
+- Se envía el código OTP a los canales seleccionados por el usuario en su solicitud inicial:
+    - SMS
+    - Correo electrónico
+    - WhatsApp (si fue seleccionado)
+
+**Respuesta Success:**
+```json
+{
+  "status": "success",
+  "datos": {
+    "guid": "uuid-generado",
+    "mensaje": "Código OTP enviado exitosamente a los canales registrados.",
+    "canales_envio": ["SMS", "Email", "WhatsApp"],
+    "vigencia_otp": "5 minutos"
+  }
+}
+```
+
+#### ❌ Si NO tiene crédito aprobado
+
+**Respuesta:**
+```json
+{
+  "status": "no_credit",
+  "mensaje": "No tienes un crédito aprobado disponible para firma."
+}
+```
+
+---
+
+## Tabla de Validaciones y Respuestas
+
+| # | Condición | HTTP | status | message | Acciones |
+|---|-----------|------|--------|---------|----------|
+| 1 | Usuario en lista restrictiva | 403 | `blocked` | "No hay crédito disponible. Usuario en lista restrictiva." | Envío de SMS + Email informativo |
+| 2 | Crédito aprobado caducado (>30 días) | 200 | `expired` | "Tu crédito aprobado ha caducado. Puedes realizar una nueva solicitud." | Ninguna |
+| 3 | Crédito aprobado vigente (<30 días) | 200 | `success` | "Código OTP enviado exitosamente a los canales registrados." | Generación y envío de OTP |
+| 4 | Sin crédito aprobado | 200 | `no_credit` | "No tienes un crédito aprobado disponible para firma." | Ninguna |
+| 5 | Error en campos requeridos | 400 | `error` | "El campo {campo} es obligatorio." | Ninguna |
+| 6 | Token inválido o ausente | 401 | `error` | "Token de autorización inválido o ausente." | Ninguna |
+
+---
+
+## Ejemplos de Respuestas
+
+### ✅ Respuesta Exitosa - OTP Enviado
+
+```json
+{
+  "status": "success",
+  "datos": {
+    "transaccion_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "mensaje": "Código OTP enviado exitosamente a los canales registrados.",
+    "canales_envio": ["SMS", "Email", "WhatsApp"],
+    "vigencia_otp": "5 minutos"
+  }
+}
+```
+
+### 🚫 Usuario en Lista Restrictiva
+
+```json
+{
+  "status": "blocked",
+  "mensaje": "No hay crédito disponible. Usuario en lista restrictiva.",
+  "notificacion_enviada": true
+}
+```
+
+### ⏰ Crédito Caducado
+
+```json
+{
+  "status": "expired",
+  "mensaje": "Tu crédito aprobado ha caducado. Puedes realizar una nueva solicitud de crédito.",
+  "dias_transcurridos": 45
+}
+```
+
+### ❌ Sin Crédito Aprobado
+
+```json
+{
+  "status": "no_credit",
+  "mensaje": "No tienes un crédito aprobado disponible para firma."
+}
+```
+
+### ❗ Error por Campo Faltante
+
+```json
+{
+  "status": "error",
+  "errors": [
+    "El campo identificacion es obligatorio."
+  ]
+}
+```
+
+### ❗ Error de Autenticación
+
+```json
+{
+  "status": "error",
+  "mensaje": "Token de autorización inválido o ausente."
+}
+```
+
+---
+
+## Consideraciones de Seguridad
+
+### Código OTP
+
+- **Vigencia:** 5 minutos
+- **Longitud:** 6 dígitos numéricos
+- **Intentos:** Se invalida después de 3 intentos fallidos
+
+### Consulta de Listas Restrictivas
+
+- Se realiza en tiempo real con el operador configurado
+- **Timeout máximo:** 30 segundos
+- En caso de error del operador, se debe notificar y registrar para revisión manual
+
+### Almacenamiento de Transacciones
+
+- Todas las consultas y respuestas deben quedar registradas con `transaccion_id` único
+- Incluir timestamp, usuario, resultado de validaciones y acciones ejecutadas

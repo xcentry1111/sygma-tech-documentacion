@@ -7,7 +7,7 @@
 
 ## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/procesamiento`
+- **Prueba:** `https://testing-sygma.com/api/procesamiento`
 - **Producción:** `POR_DEFINIR/api/procesamiento`
 
 ## **Headers**

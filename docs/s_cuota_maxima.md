@@ -9,7 +9,7 @@ Este servicio permite generar planes de pago simulados a partir de un valor ingr
 
 ## 🛰️ URL de Integración
 
-- **Prueba:** `http://testing-sygma.com/api/simulador_previo`
+- **Prueba:** `https://testing-sygma.com/api/simulador_previo`
 - **Producción:** `POR_DEFINIR/api/simulador_previo`
 
 ---

@@ -8,7 +8,7 @@
 
 ## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/consulta_municipios`
+- **Prueba:** `https://testing-sygma.com/api/consulta_municipios`
 - **Producción:** `POR_DEFINIR/api/consulta_municipios`
 
 ---

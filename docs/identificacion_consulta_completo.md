@@ -7,7 +7,7 @@
 
 ## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/consultar`
+- **Prueba:** `https://testing-sygma.com/api/consultar`
 - **Producción:** `POR_DEFINIR/api/consultar`
 
 ## **Headers**

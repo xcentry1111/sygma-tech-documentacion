@@ -7,7 +7,7 @@
 
 ## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/insertar_recaudo`
+- **Prueba:** `https://testing-sygma.com/api/insertar_recaudo`
 - **Producción:** `POR_DEFINIR/api/insertar_recaudo`
 
 ## **Headers**

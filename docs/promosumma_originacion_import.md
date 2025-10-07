@@ -7,7 +7,7 @@ Este servicio permite recibir y validar información demográfica y financiera d
 `POST`
 
 ## 🔗 URL de Integración
-- **Ambiente de Pruebas:** `http://testing-sygma.com/api/importar_originacion`
+- **Ambiente de Pruebas:** `https://testing-sygma.com/api/importar_originacion`
 - **Producción:** `POR DEFINIR`
 
 ## 📉 Headers Requeridos

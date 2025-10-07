@@ -35,6 +35,10 @@ nav:
       - 'Originación': 'invictus_originacion_import.md'
       - 'Notificación OTP': 'invictus_notificacion.md'
       - 'Validación OTP': 'invictus_validacion.md'
-      - 'Reenviar OTP': 'invictus_reenviar_validacion.md'          
+      - 'Reenviar OTP': 'invictus_reenviar_validacion.md'
+  - 'Firma Digital Invictus':
+      - 'Validación Firma': 'validacion_firma_digital.md'
+      - 'Validación OTP': 'validacion_otp_firma_digital.md'
+      - 'Reenvio OTP': 'validacion_reenvio_otp_firma.md'
   - 'Municipio': 
       - 'Consultar': 'consulta_municipio.md'    

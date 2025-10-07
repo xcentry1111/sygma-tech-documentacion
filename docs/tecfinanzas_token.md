@@ -6,7 +6,7 @@
 
 ## **URL de Integración**
 
-- **Prueba:** `http://testing-sygma.com/api/login`
+- **Prueba:** `https://testing-sygma.com/api/login`
 - **Producción:** `POR_DEFINIR/api/login`
 
 ## **Headers**

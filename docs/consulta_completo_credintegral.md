@@ -9,7 +9,7 @@ Este servicio permite consultar la información de un deudor y sus obligaciones,
 
 ## URL de Integración
 
-- **Ambiente de pruebas:** `http://testing-sygma.com/api/consultar_api`
+- **Ambiente de pruebas:** `https://testing-sygma.com/api/consultar_api`
 - **Producción:** `POR_DEFINIR/api/consultar_api`
 
 ---

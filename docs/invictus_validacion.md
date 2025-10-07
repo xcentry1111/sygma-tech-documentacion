@@ -15,7 +15,7 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
 
 ## 🔗 URL de Integración
 
-- **Ambiente de Pruebas:** `http://testing-sygma.com/api/validar_otp`  
+- **Ambiente de Pruebas:** `https://testing-sygma.com/api/validar_otp`  
 - **Producción:** `POR DEFINIR`
 
 ---

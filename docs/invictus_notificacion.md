@@ -15,7 +15,7 @@ Ejemplo: `sms=1`, `email=1`, `whatsapp=0` → se envía por **SMS** y **Email**.
 ---
 
 ## 🔗 URL de Integración
-- **Ambiente de Pruebas:** `http://testing-sygma.com/api/notificacion_canal`  
+- **Ambiente de Pruebas:** `https://testing-sygma.com/api/notificacion_canal`  
 - **Producción:** `POR DEFINIR`
 
 ---

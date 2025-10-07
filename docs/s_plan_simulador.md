@@ -9,7 +9,7 @@ Este servicio permite generar la simulación de un plan de pagos a partir de un 
 
 ## 🛰️ URL de Integración
 
-- **Prueba:** `http://testing-sygma.com/api/datos_simulador`
+- **Prueba:** `https://testing-sygma.com/api/datos_simulador`
 - **Producción:** `POR_DEFINIR/api/datos_simulador`
 
 ---
