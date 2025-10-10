@@ -39,7 +39,7 @@ Debe enviarse un objeto JSON con el identificador de la transacción.
 
 ### 🔸 Campos Obligatorios
 
-- `transaccion_id`: ID único de la transacción al cual se debe asociar el reenvío del OTP.
+- `guid`: ID único de la transacción al cual se debe asociar el reenvío del OTP.
 
 ---
 
@@ -47,7 +47,7 @@ Debe enviarse un objeto JSON con el identificador de la transacción.
 
 ```json
 {
-  "transaccion_id": "2yu2yg33i3iuy3i"
+  "guid": "2yu2yg33i3iuy3i"
 }
 ```
 

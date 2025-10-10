@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../invictus_reenviar_validacion/">
+      
+      
+        <link rel="next" href="../validacion_otp_firma_digital/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>Manual de Integración API: Validación de Firma Digital y Listas Restrictivas - Documentación Sygma-Tech</title>
+        <title>Validación Firma - Documentación Sygma-Tech</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
       
       
 
@@ -94,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manual de Integración API: Validación de Firma Digital y Listas Restrictivas
+              Validación Firma
             
           </span>
         </div>
@@ -1050,6 +1054,452 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Firma Digital Invictus
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Firma Digital Invictus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Validación Firma
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validación Firma
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers Requeridos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valores-permitidos-para-tiposdocumento_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Permitidos para tiposdocumento_id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de Validación del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flujo de Validación del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-consulta-interna-proceso-de-firma-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Consulta Interna: Proceso de Firma Digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-consulta-de-listas-restrictivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Consulta de Listas Restrictivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-validacion-de-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Validación de Crédito Aprobado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Validación de Crédito Aprobado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-tiene-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Si tiene crédito aprobado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Si tiene crédito aprobado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credito-aprobado-hace-mas-de-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crédito aprobado hace más de 30 días
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credito-aprobado-dentro-del-plazo-30-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crédito aprobado dentro del plazo (&lt; 30 días)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-no-tiene-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Si NO tiene crédito aprobado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-validaciones-y-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla de Validaciones y Respuestas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Respuestas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de Respuestas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-otp-enviado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa - OTP Enviado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuario-en-lista-restrictiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Usuario en Lista Restrictiva
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credito-caducado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Crédito Caducado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sin-credito-aprobado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Sin Crédito Aprobado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-por-campo-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error por Campo Faltante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consideraciones de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código OTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consulta-de-listas-restrictivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consulta de Listas Restrictivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-de-transacciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Almacenamiento de Transacciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validacion_otp_firma_digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validación OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validacion_reenvio_otp_firma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reenvio OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -1061,10 +1511,124 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Desembolso Invictus
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Desembolso Invictus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desmebolso_validacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validación Credito
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_otp_valida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validación OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_reenvio_otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reenvio OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -1077,8 +1641,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             Municipio
           </label>
@@ -1428,15 +1992,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#contacto-y-soporte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contacto y Soporte
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1453,9 +2008,9 @@
 
 
 
-<h1 id="manual-de-integracion-api-validacion-de-firma-digital-y-listas-restrictivas">Manual de Integración API: Validación de Firma Digital y Listas Restrictivas</h1>
+<h1 id="manual-de-integracion-api-validacion-de-firma-digital-y-listas-restrictivas">📘 Manual de Integración API: Validación de Firma Digital y Listas Restrictivas</h1>
 <h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
-<p>Este servicio permite validar si una persona está en proceso de firma digital, verificar su estado en listas restrictivas a través de operadores como Extradata o Credencial, y determinar la viabilidad de otorgar un crédito. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.</p>
+<p>Este servicio permite validar si una persona está en proceso de firma digital, verificar su estado en listas restrictivas a través de operadores como Extradata o Entidad deseada, y determinar la viabilidad de otorgar un crédito. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.</p>
 <hr />
 <h2 id="tipo-de-servicio">Tipo de Servicio</h2>
 <p><strong>Método HTTP:</strong> <code>POST</code></p>
@@ -1507,7 +2062,7 @@
 </tr>
 </tbody>
 </table>
-<p>!!! note "Obtención del Token"
+<p>!!! "Obtención del Token"
     El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
 <hr />
 <h2 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h2>
@@ -1575,28 +2130,33 @@
 <h2 id="flujo-de-validacion-del-servicio">Flujo de Validación del Servicio</h2>
 <p>El servicio ejecuta las siguientes validaciones en orden:</p>
 <h3 id="1-consulta-interna-proceso-de-firma-digital">1. Consulta Interna: Proceso de Firma Digital</h3>
-<p>Se verifica si la persona está actualmente en proceso de firma digital dentro del sistema.</p>
+<p>Se verifica si la persona está actualmente en proceso de firma digital dentro del sistema, en caso de que no este se retorna la respuesta  que el usuario actualmente no cuenta con una solicitud de credito disponible.</p>
+<pre><code class="language-json">    {
+      &quot;status&quot;: &quot;blocked&quot;,
+      &quot;mensaje&quot;: &quot;No hay crédito disponible para firma.&quot;
+    }
+</code></pre>
 <h3 id="2-consulta-de-listas-restrictivas">2. Consulta de Listas Restrictivas</h3>
-<p>El sistema consulta ante el operador configurado (Extradata o Credencial) para verificar si la persona aparece en listas restrictivas (OFAC, ONU, listas locales, etc.).</p>
-<p>!!! danger "Usuario en Lista Restrictiva"
+<p>El sistema consulta ante el operador configurado Extradata o Entidad deseada para verificar si la persona aparece en listas restrictivas</p>
+<p>!!! "Usuario en Lista Restrictiva"
     <strong>Acciones automáticas:</strong></p>
-<pre><code>- Se envía SMS y correo electrónico al usuario con el mensaje:
-
-&gt; "Actualmente no podemos ofrecerte un crédito. Nuestro equipo se estará contactando contigo próximamente."
-
-**Respuesta a Invictus:**
-```json
-{
-  "status": "blocked",
-  "mensaje": "No hay crédito disponible. Usuario en lista restrictiva."
-}
-```
+<ul>
+<li>Se envía SMS y correo electrónico al usuario con el mensaje y retorna el mensaje tipo json a invictus</li>
+</ul>
+<p><strong>Respuesta a Invictus:</strong></p>
+<pre><code class="language-json">    {
+      &quot;status&quot;: &quot;blocked&quot;,
+      &quot;mensaje&quot;: &quot;No hay crédito disponible. Usuario en lista restrictiva.&quot;
+    }
 </code></pre>
 <h3 id="3-validacion-de-credito-aprobado">3. Validación de Crédito Aprobado</h3>
 <p>Si el usuario <strong>NO</strong> está en lista restrictiva, el sistema verifica si tiene un crédito aprobado.</p>
 <h4 id="si-tiene-credito-aprobado">✅ Si tiene crédito aprobado</h4>
 <p>Se valida la vigencia de la aprobación:</p>
 <h5 id="credito-aprobado-hace-mas-de-30-dias">Crédito aprobado hace más de 30 días</h5>
+<ul>
+<li>Se retorna la respuesta a invictus de la siguiente manera.</li>
+</ul>
 <p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;expired&quot;,
@@ -1614,11 +2174,11 @@
 </ul>
 </li>
 </ul>
-<p><strong>Respuesta:</strong></p>
+<p><strong>Respuesta Success:</strong></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;success&quot;,
   &quot;datos&quot;: {
-    &quot;transaccion_id&quot;: &quot;uuid-generado&quot;,
+    &quot;guid&quot;: &quot;uuid-generado&quot;,
     &quot;mensaje&quot;: &quot;Código OTP enviado exitosamente a los canales registrados.&quot;,
     &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
     &quot;vigencia_otp&quot;: &quot;5 minutos&quot;
@@ -1702,7 +2262,7 @@
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;success&quot;,
   &quot;datos&quot;: {
-    &quot;transaccion_id&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
+    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
     &quot;mensaje&quot;: &quot;Código OTP enviado exitosamente a los canales registrados.&quot;,
     &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
     &quot;vigencia_otp&quot;: &quot;5 minutos&quot;
@@ -1720,7 +2280,6 @@
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;expired&quot;,
   &quot;mensaje&quot;: &quot;Tu crédito aprobado ha caducado. Puedes realizar una nueva solicitud de crédito.&quot;,
-  &quot;fecha_aprobacion&quot;: &quot;2024-08-15&quot;,
   &quot;dias_transcurridos&quot;: 45
 }
 </code></pre>
@@ -1760,21 +2319,9 @@
 </ul>
 <h3 id="almacenamiento-de-transacciones">Almacenamiento de Transacciones</h3>
 <ul>
-<li>Todas las consultas y respuestas deben quedar registradas con <code>transaccion_id</code> único</li>
+<li>Todas las consultas y respuestas deben quedar registradas con <code>guid</code> único</li>
 <li>Incluir timestamp, usuario, resultado de validaciones y acciones ejecutadas</li>
 </ul>
-<hr />
-<h2 id="contacto-y-soporte">Contacto y Soporte</h2>
-<p>Para dudas o incidencias relacionadas con este servicio, contactar al equipo de integración:</p>
-<ul>
-<li><strong>Email:</strong> soporte@teseo-sygma.com</li>
-<li><strong>Slack:</strong> #api-integraciones</li>
-</ul>
-<hr />
-<p>!!! info "Información del Documento"
-    <strong>Versión:</strong> 1.0<br />
-<strong>Fecha de actualización:</strong> Octubre 2025<br />
-<strong>Responsable:</strong> Equipo de Desarrollo TESEO</p>
 
 
 
@@ -1826,7 +2373,7 @@
       <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

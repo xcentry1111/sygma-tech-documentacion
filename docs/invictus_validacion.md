@@ -3,7 +3,7 @@
 ## 📄 Descripción del Servicio
 
 Este servicio permite validar un código OTP (One Time Password) asociado a una transacción.  
-Una vez validado el OTP, el sistema extrae automáticamente la información del cliente con base en el `transaccion_id` y realiza una evaluación en **Experian** (centrales de riesgo) para determinar si el cliente es **aprobado** o **rechazado**.
+Una vez validado el OTP, el sistema extrae automáticamente la información del cliente con base en el `guid` y realiza una evaluación en **Experian** (centrales de riesgo) para determinar si el cliente es **aprobado** o **rechazado**.
 
 ---
 
@@ -37,9 +37,9 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
 ### 🔸 Campos Obligatorios
 
 - `otp`: Código OTP recibido por el cliente.
-- `transaccion_id`: ID único de la transacción (internamente vinculado al cliente).
+- `guid`: ID único de la transacción (internamente vinculado al cliente).
 
-> ⚠️ **Nota:** No es necesario enviar el número de documento, ya que el sistema lo obtiene automáticamente con el `transaccion_id`.
+> ⚠️ **Nota:** No es necesario enviar el número de documento, ya que el sistema lo obtiene automáticamente con el `guid`.
 
 ---
 
@@ -48,7 +48,7 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
 ```json
 {
   "otp": "462019",
-  "transaccion_id": "68406a6a2d9aa64766060ee2"
+  "guid": "68406a6a2d9aa64766060ee2"
 }
 ```
 

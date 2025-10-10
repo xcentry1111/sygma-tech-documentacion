@@ -118,7 +118,7 @@ Los siguientes campos son **requeridos** para procesar correctamente la solicitu
 {
   "status": "success",
   "datos": {
-    "transaccion_id": "2yu2yg33i3iuy3i",
+    "guid": "2yu2yg33i3iuy3i",
     "mensaje": "Registro exitoso - Se ha enviado un correo electornico y mensaje de texto al usuario para su validación"
   }
 }

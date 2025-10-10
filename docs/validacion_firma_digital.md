@@ -175,7 +175,7 @@ Se valida la vigencia de la aprobación:
 {
   "status": "success",
   "datos": {
-    "transaccion_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "mensaje": "Código OTP enviado exitosamente a los canales registrados.",
     "canales_envio": ["SMS", "Email", "WhatsApp"],
     "vigencia_otp": "5 minutos"
@@ -250,5 +250,5 @@ Se valida la vigencia de la aprobación:
 
 ### Almacenamiento de Transacciones
 
-- Todas las consultas y respuestas deben quedar registradas con `transaccion_id` único
+- Todas las consultas y respuestas deben quedar registradas con `guid` único
 - Incluir timestamp, usuario, resultado de validaciones y acciones ejecutadas

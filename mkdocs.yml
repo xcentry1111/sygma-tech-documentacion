@@ -40,5 +40,9 @@ nav:
       - 'Validación Firma': 'validacion_firma_digital.md'
       - 'Validación OTP': 'validacion_otp_firma_digital.md'
       - 'Reenvio OTP': 'validacion_reenvio_otp_firma.md'
+  - 'Desembolso Invictus':
+      - 'Validación Credito': 'invictus_desmebolso_validacion.md'
+      - 'Validación OTP': 'invictus_desembolso_otp_valida.md'
+      - 'Reenvio OTP': 'invictus_desembolso_reenvio_otp.md'
   - 'Municipio': 
       - 'Consultar': 'consulta_municipio.md'    

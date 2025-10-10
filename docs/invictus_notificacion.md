@@ -34,7 +34,7 @@ Ejemplo: `sms=1`, `email=1`, `whatsapp=0` → se envía por **SMS** y **Email**.
 
 Los siguientes campos son **requeridos** para procesar correctamente la notificación:
 
-- `transaccion_id`
+- `guid`
 - `sms`
 - `email`
 - `whatsapp`
@@ -43,7 +43,7 @@ Los siguientes campos son **requeridos** para procesar correctamente la notifica
 ## 🔢 Cuerpo de la Solicitud (JSON)
 
 - **Identificación del destinatario** *(uno de)*:
-  - `transaccion_id`
+  - `guid`
 - **Selección de canales** (enteros 0/1):
   - `sms`, `email`, `whatsapp`  
   > Debe haber **al menos uno** en `1`.
@@ -59,7 +59,7 @@ Los siguientes campos son **requeridos** para procesar correctamente la notifica
 
 ```json
 {
-  "transaccion_id": "68406a6a2d9aa64766060ee2",
+  "guid": "68406a6a2d9aa64766060ee2",
   "sms": 1,
   "email": 1,
   "whatsapp": 0
@@ -81,7 +81,7 @@ Los siguientes campos son **requeridos** para procesar correctamente la notifica
   "status": "success",
   "mensaje": "Notificaciones Envidados con Exito.",
   "canales_enviados": ["sms", "email"],
-  "transaccion_id": "2yu2yg33i3iuy3i"
+  "guid": "2yu2yg33i3iuy3i"
 }
 ```
 
