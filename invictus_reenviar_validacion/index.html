@@ -1342,7 +1342,7 @@
   
   
   <span class="md-ellipsis">
-    Municipio
+    Desembolso Invictus
     
   </span>
   
@@ -1352,6 +1352,120 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Desembolso Invictus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desmebolso_validacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validación Credito
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_otp_valida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validación OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_reenvio_otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reenvio OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Municipio
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             Municipio
           </label>
@@ -1589,12 +1703,12 @@
 <p>Debe enviarse un objeto JSON con el identificador de la transacción.</p>
 <h3 id="campos-obligatorios">🔸 Campos Obligatorios</h3>
 <ul>
-<li><code>transaccion_id</code>: ID único de la transacción al cual se debe asociar el reenvío del OTP.</li>
+<li><code>guid</code>: ID único de la transacción al cual se debe asociar el reenvío del OTP.</li>
 </ul>
 <hr />
 <h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
 <pre><code class="language-json">{
-  &quot;transaccion_id&quot;: &quot;2yu2yg33i3iuy3i&quot;
+  &quot;guid&quot;: &quot;2yu2yg33i3iuy3i&quot;
 }
 </code></pre>
 <h4 id="respuesta-exitosa">✅ Respuesta Exitosa</h4>

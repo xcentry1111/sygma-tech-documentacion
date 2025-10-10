@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../invictus_notificacion/">
+        <link rel="prev" href="../invictus_desmebolso_validacion/">
       
       
-        <link rel="next" href="../invictus_reenviar_validacion/">
+        <link rel="next" href="../invictus_desembolso_reenvio_otp/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-validacion-de-otp-evaluacion-experian" class="md-skip">
+        <a href="#manual-de-integracion-api-validacion-de-codigo-otp-para-desembolso" class="md-skip">
           Skip to content
         </a>
       
@@ -917,20 +917,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -946,7 +944,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Originación Invictus
@@ -1003,32 +1001,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Validación OTP
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../invictus_validacion/" class="md-nav__link">
         
   
   
@@ -1039,230 +1015,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Descripción del Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Tipo de Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔗 URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      📉 Headers Requeridos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔸 Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Ejemplo de Body
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#primera-validacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primera Validacion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa-lista-negra" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Respuesta Exitosa Lista Negra
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa-lista-blanca" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta Exitosa Lista Blanca
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-de-expiriam-estados-y-flujos" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Decisión de Expiriam (Estados y Flujos)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧩 Decisión de Expiriam (Estados y Flujos)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabla-de-estados" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Tabla de estados
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flujo-detallado-por-estado" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Flujo detallado por estado
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta Exitosa
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-en-verificacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta En Verificación
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-rechazado-por-experian" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Respuesta Rechazado por Experian
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❗ Respuesta Rechazado por Experian">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-solicitud-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Respuesta Solicitud Error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-otp-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de OTP Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de Error por Token Ausente o Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-otp-invalido_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de OTP Inválido
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1416,18 +1168,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
         
           
           <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
@@ -1443,7 +1197,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Desembolso Invictus
@@ -1477,10 +1231,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../invictus_desembolso_otp_valida/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Validación OTP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1491,6 +1267,380 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers Requeridos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valores-permitidos-para-tiposdocumento_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Permitidos para tiposdocumento_id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Body
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de Validación del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flujo de Validación del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-validacion-de-transaccion-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Validación de Transacción Existente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Validación de Transacción Existente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-la-transaccion-no-existe-o-no-coincide" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Si la transacción NO existe o no coincide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-validacion-de-vigencia-del-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Validación de Vigencia del OTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Validación de Vigencia del OTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-el-otp-esta-vencido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Si el OTP está vencido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-validacion-de-intentos-fallidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Validación de Intentos Fallidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Validación de Intentos Fallidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-se-superaron-los-intentos-permitidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Si se superaron los intentos permitidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-validacion-del-codigo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Validación del Código OTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Validación del Código OTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-el-codigo-es-incorrecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Si el código es incorrecto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-validacion-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Validación Exitosa
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-validaciones-y-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla de Validaciones y Respuestas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Respuestas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de Respuestas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-otp-valido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa - OTP Válido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-otp-incorrecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Código OTP Incorrecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intentos-superados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Intentos Superados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otp-expirado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ OTP Expirado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-por-campo-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error por Campo Faltante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consideraciones de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código OTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-de-intentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control de Intentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro de Auditoría
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-configurables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros Configurables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Importantes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1623,7 +1773,7 @@
         <li class="md-nav__item">
   <a href="#descripcion-del-servicio" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Descripción del Servicio
+      Descripción del Servicio
     </span>
   </a>
   
@@ -1632,7 +1782,7 @@
         <li class="md-nav__item">
   <a href="#tipo-de-servicio" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 Tipo de Servicio
+      Tipo de Servicio
     </span>
   </a>
   
@@ -1641,7 +1791,7 @@
         <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔗 URL de Integración
+      URL de Integración
     </span>
   </a>
   
@@ -1650,68 +1800,44 @@
         <li class="md-nav__item">
   <a href="#headers-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      📉 Headers Requeridos
+      Headers Requeridos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
+  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
+      Cuerpo de la Solicitud
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
     <span class="md-ellipsis">
-      🔸 Campos Obligatorios
+      Campos Obligatorios
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#valores-permitidos-para-tiposdocumento_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Permitidos para tiposdocumento_id
+    </span>
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-de-body" class="md-nav__link">
     <span class="md-ellipsis">
-      📦 Ejemplo de Body
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#primera-validacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primera Validacion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa-lista-negra" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Respuesta Exitosa Lista Negra
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa-lista-blanca" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta Exitosa Lista Blanca
+      Ejemplo de Body
     </span>
   </a>
   
@@ -1723,92 +1849,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decision-de-expiriam-estados-y-flujos" class="md-nav__link">
+  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩 Decisión de Expiriam (Estados y Flujos)
+      Flujo de Validación del Servicio
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧩 Decisión de Expiriam (Estados y Flujos)">
+    <nav class="md-nav" aria-label="Flujo de Validación del Servicio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tabla-de-estados" class="md-nav__link">
+  <a href="#1-validacion-de-transaccion-existente" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 Tabla de estados
+      1. Validación de Transacción Existente
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flujo-detallado-por-estado" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔁 Flujo detallado por estado
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta Exitosa
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-en-verificacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuesta En Verificación
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-rechazado-por-experian" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Respuesta Rechazado por Experian
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❗ Respuesta Rechazado por Experian">
+    <nav class="md-nav" aria-label="1. Validación de Transacción Existente">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#respuesta-solicitud-error" class="md-nav__link">
+  <a href="#si-la-transaccion-no-existe-o-no-coincide" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Respuesta Solicitud Error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-otp-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de OTP Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de Error por Token Ausente o Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-otp-invalido_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de OTP Inválido
+      ❌ Si la transacción NO existe o no coincide
     </span>
   </a>
   
@@ -1819,8 +1882,245 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#2-validacion-de-vigencia-del-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Validación de Vigencia del OTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Validación de Vigencia del OTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-el-otp-esta-vencido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Si el OTP está vencido
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-validacion-de-intentos-fallidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Validación de Intentos Fallidos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Validación de Intentos Fallidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-se-superaron-los-intentos-permitidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Si se superaron los intentos permitidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-validacion-del-codigo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Validación del Código OTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Validación del Código OTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-el-codigo-es-incorrecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Si el código es incorrecto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-validacion-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Validación Exitosa
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-validaciones-y-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla de Validaciones y Respuestas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Respuestas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de Respuestas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-exitosa-otp-valido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa - OTP Válido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-otp-incorrecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Código OTP Incorrecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intentos-superados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Intentos Superados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otp-expirado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ OTP Expirado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-por-campo-faltante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error por Campo Faltante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Error de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consideraciones de Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codigo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código OTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-de-intentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control de Intentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-auditoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registro de Auditoría
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-configurables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros Configurables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Importantes
+    </span>
+  </a>
   
 </li>
       
@@ -1840,21 +2140,34 @@
 
 
 
-<h1 id="manual-de-integracion-api-validacion-de-otp-evaluacion-experian">📘 Manual de Integración API: Validación de OTP + Evaluación Experian</h1>
-<h2 id="descripcion-del-servicio">📄 Descripción del Servicio</h2>
-<p>Este servicio permite validar un código OTP (One Time Password) asociado a una transacción.<br />
-Una vez validado el OTP, el sistema extrae automáticamente la información del cliente con base en el <code>guid</code> y realiza una evaluación en <strong>Experian</strong> (centrales de riesgo) para determinar si el cliente es <strong>aprobado</strong> o <strong>rechazado</strong>.</p>
+<h1 id="manual-de-integracion-api-validacion-de-codigo-otp-para-desembolso">📘 Manual de Integración API: Validación de Código OTP para Desembolso</h1>
+<h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
+<p>Este servicio permite validar el código OTP (One Time Password) enviado al cliente para confirmar su identidad y autorizar el desembolso del crédito en un punto Gana. El servicio controla el número de intentos permitidos y gestiona el estado de la transacción de firma.</p>
 <hr />
-<h2 id="tipo-de-servicio">🚀 Tipo de Servicio</h2>
-<p><code>POST</code></p>
+<h2 id="tipo-de-servicio">Tipo de Servicio</h2>
+<p><strong>Método HTTP:</strong> <code>POST</code></p>
 <hr />
-<h2 id="url-de-integracion">🔗 URL de Integración</h2>
-<ul>
-<li><strong>Ambiente de Pruebas:</strong> <code>https://testing-sygma.com/api/validar_otp</code>  </li>
-<li><strong>Producción:</strong> <code>POR DEFINIR</code></li>
-</ul>
+<h2 id="url-de-integracion">URL de Integración</h2>
+<table>
+<thead>
+<tr>
+<th>Ambiente</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pruebas</strong></td>
+<td><code>https://testing-sygma.com/api/validacion_otp_desembolso</code></td>
+</tr>
+<tr>
+<td><strong>Producción</strong></td>
+<td><code>POR DEFINIR</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="headers-requeridos">📉 Headers Requeridos</h2>
+<h2 id="headers-requeridos">Headers Requeridos</h2>
 <table>
 <thead>
 <tr>
@@ -1865,190 +2178,347 @@ Una vez validado el OTP, el sistema extrae automáticamente la información del 
 </thead>
 <tbody>
 <tr>
-<td>Authorization</td>
-<td>Bearer <code>{token}</code></td>
+<td><code>Authorization</code></td>
+<td><code>Bearer {token}</code></td>
 <td>✅</td>
 </tr>
 <tr>
-<td>Accept</td>
-<td>application/json</td>
+<td><code>Accept</code></td>
+<td><code>application/json</code></td>
 <td>✅</td>
 </tr>
 <tr>
-<td>Content-Type</td>
-<td>application/json</td>
+<td><code>Content-Type</code></td>
+<td><code>application/json</code></td>
 <td>✅</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación (ver sección <strong>Token</strong>).</p>
-</blockquote>
+<p>!!! "Obtención del Token"
+    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
 <hr />
-<h2 id="cuerpo-de-la-solicitud-json">🔢 Cuerpo de la Solicitud (JSON)</h2>
-<h3 id="campos-obligatorios">🔸 Campos Obligatorios</h3>
-<ul>
-<li><code>otp</code>: Código OTP recibido por el cliente.</li>
-<li><code>guid</code>: ID único de la transacción (internamente vinculado al cliente).</li>
-</ul>
-<blockquote>
-<p>⚠️ <strong>Nota:</strong> No es necesario enviar el número de documento, ya que el sistema lo obtiene automáticamente con el <code>guid</code>.</p>
-</blockquote>
-<hr />
-<h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
-<pre><code class="language-json">{
-  &quot;otp&quot;: &quot;462019&quot;,
-  &quot;guid&quot;: &quot;68406a6a2d9aa64766060ee2&quot;
-}
-</code></pre>
-<h3 id="primera-validacion">Primera Validacion</h3>
-<p>Consultar Listas Negras y Blancas
-Consideraciones: </p>
-<ol>
-<li>Listas negras, en caso de estar de inmediato se entrega la respuesta de RECHAZADO.</li>
-<li>Listas Blancas, en caso de estar de inmediato se marca como aprobado y no hay necesidad de consultar Experiam.</li>
-<li>Si no esta en ninguna de las listas, sigue el flujo sin problema </li>
-</ol>
-<h3 id="respuesta-exitosa-lista-negra">❗ Respuesta Exitosa Lista Negra</h3>
-<pre><code class="language-js">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido.&quot;,
-  &quot;experian_status&quot;: null,
-  &quot;detalle&quot;: &quot;Solicitud rechazada.&quot;
-}
-
-</code></pre>
-<h3 id="respuesta-exitosa-lista-blanca">✅ Respuesta Exitosa Lista Blanca</h3>
-<pre><code class="language-js">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido.&quot;,
-  &quot;experian_status&quot;: null,
-  &quot;detalle&quot;: &quot;El usuario tiene buen perfil crediticio.&quot;
-}
-
-</code></pre>
-<h2 id="decision-de-expiriam-estados-y-flujos">🧩 Decisión de <strong>Expiriam</strong> (Estados y Flujos)</h2>
-<p>El proceso de originación consume una decisión de <strong>Expiriam</strong> y TESEO actúa según el <strong>estado</strong> recibido.<br />
-Estados posibles (valor devuelto en la respuesta exitosa):<br />
-APROBADO · RECHAZADO · REQUIERE_VERIFICACION · SOLICITUD_CON_ERROR</p>
-<hr />
-<h3 id="tabla-de-estados">📊 Tabla de estados</h3>
+<h2 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h2>
+<p>La solicitud debe enviarse en formato <strong>raw JSON</strong> con los siguientes campos:</p>
+<h3 id="campos-obligatorios">Campos Obligatorios</h3>
 <table>
 <thead>
 <tr>
-<th>Estado</th>
-<th>Significado breve</th>
-<th>Acción TESEO</th>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>APROBADO</strong></td>
-<td>Cumple todas las políticas de crédito</td>
-<td>Enviar SMS/correo al usuario informando aprobación. Dirigir al punto Gana para firma.</td>
+<td><code>tiposdocumento_id</code></td>
+<td>string</td>
+<td>ID del tipo de documento</td>
 </tr>
 <tr>
-<td><strong>RECHAZADO</strong></td>
-<td>No cumple políticas</td>
-<td>Registrar rechazo. Bloquear nueva solicitud por <strong>30 días</strong>. A los 30 días sin cambios → <strong>caducado</strong>*</td>
+<td><code>identificacion</code></td>
+<td>string</td>
+<td>Número de identificación del usuario</td>
 </tr>
 <tr>
-<td><strong>REQUIERE_VERIFICACION</strong></td>
-<td>Cumple políticas, pero Expiriam exige validación de identidad (alerta)</td>
-<td>Enviar <strong>OTP</strong> y <strong>enlace de verificación</strong> provisto por Expiriam. Esperar resultado (webhook o polling).</td>
+<td><code>codigo_otp</code></td>
+<td>string</td>
+<td>Código OTP de 6 dígitos enviado al cliente</td>
 </tr>
 <tr>
-<td><strong>SOLICITUD_CON_ERROR</strong></td>
-<td>Error técnico o inconsistencias en la petición a Expiriam</td>
-<td>Registrar error, NO enviar OTP. Devolver detalle en errors.</td>
+<td><code>guid</code></td>
+<td>string</td>
+<td>UUID de la transacción generado al enviar el OTP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="valores-permitidos-para-tiposdocumento_id">Valores Permitidos para <code>tiposdocumento_id</code></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td>Cédula de ciudadanía (CC)</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Cédula de extranjería (CE)</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>NIT</td>
+</tr>
+<tr>
+<td><code>8</code></td>
+<td>Pasaporte (PA)</td>
+</tr>
+<tr>
+<td><code>181</code></td>
+<td>Permiso Especial (PEP)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-body">Ejemplo de Body</h3>
+<pre><code class="language-json">{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;codigo_otp&quot;: &quot;123456&quot;,
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+}
+</code></pre>
+<hr />
+<h2 id="flujo-de-validacion-del-servicio">Flujo de Validación del Servicio</h2>
+<p>El servicio ejecuta las siguientes validaciones en orden:</p>
+<h3 id="1-validacion-de-transaccion-existente">1. Validación de Transacción Existente</h3>
+<p>Se verifica que el <code>guid</code> proporcionado exista en el sistema y corresponda a la identificación enviada.</p>
+<h4 id="si-la-transaccion-no-existe-o-no-coincide">❌ Si la transacción NO existe o no coincide</h4>
+<p><strong>Respuesta:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o no corresponde a esta identificación.&quot;
+}
+</code></pre>
+<h3 id="2-validacion-de-vigencia-del-otp">2. Validación de Vigencia del OTP</h3>
+<p>Se verifica que el código OTP no haya expirado. El tiempo de vigencia es de <strong>5 minutos</strong> desde su generación.</p>
+<h4 id="si-el-otp-esta-vencido">⏰ Si el OTP está vencido</h4>
+<p><strong>Respuesta:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;expired&quot;,
+  &quot;mensaje&quot;: &quot;El código OTP ha expirado. Debe solicitar un nuevo código.&quot;,
+  &quot;tiempo_transcurrido&quot;: &quot;3 minutos&quot;
+}
+</code></pre>
+<h3 id="3-validacion-de-intentos-fallidos">3. Validación de Intentos Fallidos</h3>
+<p>El sistema permite un <strong>máximo de 3 intentos</strong> para ingresar el código OTP correcto. Este valor es parametrizable.</p>
+<h4 id="si-se-superaron-los-intentos-permitidos">🚫 Si se superaron los intentos permitidos</h4>
+<p><strong>Acciones automáticas:</strong>
+- Se bloquea la transacción
+- Se invalida el código OTP actual
+- Se registra el bloqueo en el sistema</p>
+<p><strong>Respuesta:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;blocked&quot;,
+  &quot;mensaje&quot;: &quot;Ha superado el número máximo de intentos permitidos (3). Debe solicitar un nuevo código OTP.&quot;,
+  &quot;intentos_realizados&quot;: 3,
+  &quot;intentos_permitidos&quot;: 3
+}
+</code></pre>
+<h3 id="4-validacion-del-codigo-otp">4. Validación del Código OTP</h3>
+<p>Se compara el código ingresado con el código generado y almacenado en el sistema.</p>
+<h4 id="si-el-codigo-es-incorrecto">❌ Si el código es incorrecto</h4>
+<p>Se incrementa el contador de intentos fallidos y se informa al usuario.</p>
+<p><strong>Respuesta:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;invalid&quot;,
+  &quot;mensaje&quot;: &quot;El código OTP ingresado es incorrecto.&quot;,
+  &quot;intentos_realizados&quot;: 1,
+  &quot;intentos_restantes&quot;: 2
+}
+</code></pre>
+<h3 id="5-validacion-exitosa">5. Validación Exitosa</h3>
+<p>Si el código OTP es correcto, se autoriza el desembolso del crédito.</p>
+<p><strong>Acciones automáticas:</strong>
+- Actualización del estado del crédito a "listo para desembolsar"
+- Registro de la validación exitosa con timestamp
+- Invalidación del código OTP (ya no puede usarse nuevamente)
+- Habilitación del proceso de desembolso</p>
+<p><strong>Respuesta Success:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
+    &quot;mensaje&quot;: &quot;Código OTP validado correctamente. Crédito autorizado para desembolso.&quot;,
+    &quot;monto_desembolso&quot;: 500000,
+    &quot;nombre_cliente&quot;: &quot;Juan Pérez&quot;,
+    &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:45&quot;,
+    &quot;puede_desembolsar&quot;: true
+  }
+}
+</code></pre>
+<hr />
+<h2 id="tabla-de-validaciones-y-respuestas">Tabla de Validaciones y Respuestas</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Condición</th>
+<th>HTTP</th>
+<th>status</th>
+<th>message</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Transacción no encontrada</td>
+<td>404</td>
+<td><code>error</code></td>
+<td>"Transacción no encontrada o no corresponde a esta identificación."</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OTP expirado (&gt;5 minutos)</td>
+<td>200</td>
+<td><code>expired</code></td>
+<td>"El código OTP ha expirado. Debe solicitar un nuevo código."</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Intentos superados (&gt;3)</td>
+<td>200</td>
+<td><code>blocked</code></td>
+<td>"Ha superado el número máximo de intentos permitidos (3)."</td>
+<td>Bloqueo de transacción</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Código OTP incorrecto</td>
+<td>200</td>
+<td><code>invalid</code></td>
+<td>"El código OTP ingresado es incorrecto."</td>
+<td>Incremento de contador</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Código OTP correcto</td>
+<td>200</td>
+<td><code>success</code></td>
+<td>"Código OTP validado correctamente. Crédito autorizado para desembolso."</td>
+<td>Autorización de desembolso</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Error en campos requeridos</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>"El campo {campo} es obligatorio."</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Token inválido o ausente</td>
+<td>401</td>
+<td><code>error</code></td>
+<td>"Token de autorización inválido o ausente."</td>
+<td>Ninguna</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="flujo-detallado-por-estado">🔁 Flujo detallado por estado</h3>
+<h2 id="ejemplos-de-respuestas">Ejemplos de Respuestas</h2>
+<h3 id="respuesta-exitosa-otp-valido">✅ Respuesta Exitosa - OTP Válido</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
+    &quot;mensaje&quot;: &quot;Código OTP validado correctamente. Crédito autorizado para desembolso.&quot;,
+    &quot;monto_desembolso&quot;: 500000,
+    &quot;nombre_cliente&quot;: &quot;Juan Pérez&quot;,
+    &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:45&quot;,
+    &quot;puede_desembolsar&quot;: true
+  }
+}
+</code></pre>
+<h3 id="codigo-otp-incorrecto">❌ Código OTP Incorrecto</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;invalid&quot;,
+  &quot;mensaje&quot;: &quot;El código OTP ingresado es incorrecto.&quot;,
+  &quot;intentos_realizados&quot;: 1,
+  &quot;intentos_restantes&quot;: 2
+}
+</code></pre>
+<h3 id="intentos-superados">🚫 Intentos Superados</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;blocked&quot;,
+  &quot;mensaje&quot;: &quot;Ha superado el número máximo de intentos permitidos (3). Debe solicitar un nuevo código OTP.&quot;,
+  &quot;intentos_realizados&quot;: 3,
+  &quot;intentos_permitidos&quot;: 3
+}
+</code></pre>
+<h3 id="otp-expirado">⏰ OTP Expirado</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;expired&quot;,
+  &quot;mensaje&quot;: &quot;El código OTP ha expirado. Debe solicitar un nuevo código.&quot;,
+  &quot;tiempo_transcurrido&quot;: &quot;6 minutos&quot;,
+  &quot;vigencia_maxima&quot;: &quot;3 minutos&quot;
+}
+</code></pre>
+<h3 id="transaccion-no-encontrada">❌ Transacción No Encontrada</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o no corresponde a esta identificación.&quot;
+}
+</code></pre>
+<h3 id="error-por-campo-faltante">❗ Error por Campo Faltante</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo codigo_otp es obligatorio.&quot;,
+    &quot;El campo guid es obligatorio.&quot;
+  ]
+}
+</code></pre>
+<h3 id="error-de-autenticacion">❗ Error de Autenticación</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
+<hr />
+<h2 id="consideraciones-de-seguridad">Consideraciones de Seguridad</h2>
+<h3 id="codigo-otp">Código OTP</h3>
 <ul>
-<li><strong>APROBADO</strong></li>
-<li>TESEO marca la solicitud como aprobada despues de la respuesta dada.</li>
-<li>
-<p>Envía notificaciones (SMS/correo) al usuario informadole que su credito ha sido aprobado.</p>
-</li>
-<li>
-<p><strong>RECHAZADO</strong></p>
-</li>
-<li>TESEO guarda el rechazo y bloquea re-solicitud por <strong>30 días</strong>.</li>
-<li>Si el usuario reintenta antes, responder “debe esperar 30 días”.</li>
-<li>
-<p>Transcurridos 30 días sin novedades, la solicitud pasa a <strong>caducado</strong> (interno).</p>
-</li>
-<li>
-<p><strong>EN_VERIFICACION</strong></p>
-</li>
-<li>TESEO envía <strong>OTP</strong> y <strong>link de verificación</strong> (entregado por Expiriam) al celular/correo del usuario.</li>
-<li>El usuario completa la verificación desde su <strong>celular</strong>.</li>
-<li>TESEO obtiene el resultado <strong>por webhook</strong> (preferido) o por <strong>consulta periódica</strong> (polling).</li>
-<li>
-<p>Resultado final tras verificación:</p>
-<ul>
-<li><strong>Aprobado</strong> → notificar aprobación y dirigir a punto Gana.</li>
-<li><strong>Rechazado</strong> → aplicar reglas de rechazo (bloqueo 30 días).</li>
+<li><strong>Vigencia:</strong> 5 minutos desde su generación</li>
+<li><strong>Longitud:</strong> 6 dígitos numéricos</li>
+<li><strong>Intentos permitidos:</strong> 3 intentos máximo (parametrizable)</li>
+<li><strong>Uso único:</strong> Una vez validado correctamente, el OTP se invalida</li>
+<li><strong>Bloqueo:</strong> Después de 3 intentos fallidos, se bloquea la transacción</li>
 </ul>
-</li>
-<li>
-<p><strong>SOLICITUD_CON_ERROR</strong></p>
-</li>
-<li>TESEO no realiza validaciones de identidad.</li>
-<li>Devuelve detalles del error en la respuesta y registra logs para soporte.</li>
+<h3 id="control-de-intentos">Control de Intentos</h3>
+<ul>
+<li>Se registra cada intento de validación con timestamp</li>
+<li>Los intentos se cuentan por <code>guid</code></li>
+<li>Al superar los intentos, el cliente debe solicitar un nuevo OTP</li>
+<li>El contador de intentos se reinicia al generar un nuevo OTP</li>
+</ul>
+<h3 id="registro-de-auditoria">Registro de Auditoría</h3>
+<ul>
+<li>Cada validación (exitosa o fallida) queda registrada</li>
+<li>Se almacena: timestamp, IP de origen, resultado, intentos realizados</li>
+<li>Trazabilidad completa para auditorías y seguridad</li>
+</ul>
+<h3 id="parametros-configurables">Parámetros Configurables</h3>
+<p>Los siguientes valores pueden configurarse en el sistema:</p>
+<ul>
+<li><strong>Número máximo de intentos:</strong> Por defecto 3</li>
+<li><strong>Vigencia del OTP:</strong> Por defecto 5 minutos</li>
+<li><strong>Longitud del código:</strong> Por defecto 6 dígitos</li>
 </ul>
 <hr />
-<h3 id="respuesta-exitosa">✅ Respuesta Exitosa</h3>
-<pre><code class="language-js">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
-  &quot;experian_status&quot;: &quot;APROBADO&quot;,
-  &quot;detalle&quot;: &quot;El usuario tiene buen perfil crediticio.&quot;
-}
-
-</code></pre>
-<h3 id="respuesta-en-verificacion">✅ Respuesta En Verificación</h3>
-<pre><code class="language-js">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
-  &quot;experian_status&quot;: &quot;EN_VERIFICACION&quot;,
-  &quot;detalle&quot;: &quot;Validación de identidad requerida.&quot;
-}
-</code></pre>
-<h3 id="respuesta-rechazado-por-experian">❗ Respuesta Rechazado por Experian</h3>
-<pre><code class="language-js">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
-  &quot;experian_status&quot;: &quot;RECHAZADO&quot;,
-  &quot;detalle&quot;: &quot;Solicitud rechazada. Podrá reintentar en 30 días..&quot;
-}
-</code></pre>
-<h4 id="respuesta-solicitud-error">❗ Respuesta Solicitud Error</h4>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;No fue posible obtener la decisión del proveedor.&quot;
-}
-</code></pre>
-<h4 id="ejemplo-de-otp-invalido">❗ Ejemplo de OTP Inválido</h4>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;OTP incorrecto o expirado&quot;
-}
-</code></pre>
-<h4 id="ejemplo-de-error-por-token-ausente-o-invalido">❗ Ejemplo de Error por Token Ausente o Inválido</h4>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente&quot;
-}
-</code></pre>
-<h4 id="ejemplo-de-otp-invalido_1">❗ Ejemplo de OTP Inválido</h4>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;OTP válido.&quot;
-}
-</code></pre>
+<h2 id="flujo-de-integracion">Flujo de Integración</h2>
+<p>!!! "Secuencia Completa"
+    1. <strong>Servicio anterior:</strong> Validación de crédito vigente (retorna <code>success</code>)
+    2. <strong>Servicio de envío:</strong> Se genera y envía OTP (retorna <code>guid</code>)
+    3. <strong>Este servicio:</strong> Validación del OTP ingresado por el cliente
+    4. <strong>Si exitoso:</strong> Se habilita el desembolso del crédito
+    5. <strong>Proceso de desembolso:</strong> Se ejecuta la transferencia/entrega de fondos</p>
+<hr />
+<h2 id="notas-importantes">Notas Importantes</h2>
+<ul>
+<li>El cliente recibe el OTP a través de los canales configurados (SMS, Email, WhatsApp)</li>
+<li>Si el código expira o se agotan los intentos, debe solicitarse un nuevo OTP</li>
+<li>El <code>guid</code> es fundamental para vincular la validación con el OTP correcto</li>
+<li>Después de 3 intentos fallidos, es obligatorio generar un nuevo código</li>
+<li>La validación exitosa autoriza el desembolso pero NO lo ejecuta automáticamente</li>
+<li>El punto Gana debe invocar el servicio de desembolso tras la validación exitosa</li>
+</ul>
 
 
 
