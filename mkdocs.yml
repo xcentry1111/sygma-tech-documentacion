@@ -20,17 +20,18 @@ nav:
       - 'Id Recaudo': 'recaudo_consulta.md'
   - 'Consultar Deudor + Tipo Documento':
       - 'Servicio Consulta': "consulta_completo_credintegral.md"
-  - 'Insertar Recaudos':  
+  - 'Insertar Recaudos':
       - 'Descripción': 'descripcion_insertar_recaudos.md'
       - 'Aplicar Recaudo': 'recaudo_insertar.md'
   - 'Reversar Recaudos':
       - 'Descripción': 'descripcion_reversar_recaudos.md'
       - 'Reversar Recaudo': 'recaudo_reversar.md'
   - 'Simuladores':
-      - 'Plan Simulador': 's_plan_simulador.md'      
+      - 'Plan Simulador': 's_plan_simulador.md'
       - 'Simulador Cuota Maxima': 's_cuota_maxima.md'
+      - 'Simulador Rotativo': 's_simulador_rotativo.md'
   - 'Originacion Promosumma':
-      - 'Importar Datos': 'promosumma_originacion_import.md'       
+      - 'Importar Datos': 'promosumma_originacion_import.md'
   - 'Originación Invictus':
       - 'Originación': 'invictus_originacion_import.md'
       - 'Notificación OTP': 'invictus_notificacion.md'
@@ -44,5 +45,5 @@ nav:
       - 'Validación Credito': 'invictus_desmebolso_validacion.md'
       - 'Validación OTP': 'invictus_desembolso_otp_valida.md'
       - 'Reenvio OTP': 'invictus_desembolso_reenvio_otp.md'
-  - 'Municipio': 
-      - 'Consultar': 'consulta_municipio.md'    
+  - 'Municipio':
+      - 'Consultar': 'consulta_municipio.md'
