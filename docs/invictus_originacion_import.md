@@ -50,7 +50,6 @@ Los siguientes campos son **requeridos** para procesar correctamente la solicitu
 - `fecha_nacimiento`
 - `email`
 - `celular`
-- `codigo_dane`
 - `nombre_red`
 - `oficina`
 - `nombre_oficina`
@@ -89,7 +88,6 @@ Los siguientes campos son **requeridos** para procesar correctamente la solicitu
     "fecha_nacimiento": "1988-05-15",
     "email": "PRUEBA@GMAIL.COM",
     "celular": "3016795090",
-    "codigo_dane": "015001",
     "nombre_red": "PRUEBA DEL SERVICIO",
     "oficina": "OFICINA NRO 1",
     "nombre_oficina": "OFICINA NRO 1 - LAURELES",

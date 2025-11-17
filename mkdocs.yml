@@ -36,6 +36,7 @@ nav:
       - 'Originación': 'invictus_originacion_import.md'
       - 'Notificación OTP': 'invictus_notificacion.md'
       - 'Validación OTP': 'invictus_validacion.md'
+      - 'Selección Linea Credito': 'invictus_aprobacion_linea.md'
       - 'Reenviar OTP': 'invictus_reenviar_validacion.md'
   - 'Firma Digital Invictus':
       - 'Validación Firma': 'validacion_firma_digital.md'

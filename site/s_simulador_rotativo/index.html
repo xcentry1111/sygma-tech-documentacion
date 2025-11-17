@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../invictus_originacion_import/">
+        <link rel="prev" href="../s_cuota_maxima/">
       
       
-        <link rel="next" href="../invictus_validacion/">
+        <link rel="next" href="../promosumma_originacion_import/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Notificación OTP - Documentación Sygma-Tech</title>
+        <title>Simulador Rotativo - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-notificacion-por-canal" class="md-skip">
+        <a href="#servicio-para-simulador-rotativo-plan-de-pagos-credito-integral" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notificación OTP
+              Simulador Rotativo
             
           </span>
         </div>
@@ -758,18 +758,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -785,7 +787,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Simuladores
@@ -842,10 +844,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../s_simulador_rotativo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Simulador Rotativo
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -856,6 +880,197 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛰️ URL de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encabezados-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Encabezados (Headers)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+    <span class="md-ellipsis">
+      📨 Cuerpo de la Solicitud (raw)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📨 Cuerpo de la Solicitud (raw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-de-entrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Parámetros de Entrada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#respuesta-exitosa-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Respuesta Exitosa - Ejemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Respuesta Exitosa - Ejemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-campos-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Descripción de Campos - Resumen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-campos-plan-de-pagos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Descripción de Campos - Plan de Pagos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Errores Comunes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ Errores Comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Token Inválido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametro-monto-requerido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Parámetro monto requerido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametro-cuota-requerido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Parámetro cuota requerido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monto-menor-al-permitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Monto menor al permitido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monto-mayor-al-permitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Monto mayor al permitido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plazo-menor-al-permitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Plazo menor al permitido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plazo-mayor-al-permitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Plazo mayor al permitido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-no-encontrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Registro no encontrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-interno-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Error interno del servidor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -940,20 +1155,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -969,7 +1182,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Originación Invictus
@@ -1003,32 +1216,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Notificación OTP
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../invictus_notificacion/" class="md-nav__link">
         
   
   
@@ -1039,167 +1230,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Descripción del Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Tipo de Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔗 URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      📉 Headers Requeridos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📉 Headers Requeridos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔸 Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reglas-rapidas" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎛️ Reglas rápidas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Ejemplo de Body
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabla-de-canales" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Tabla de Canales
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuestas-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuestas Exitosa
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="✅ Respuestas Exitosa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-de-validacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Error de validación
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de Error por Token Ausente o Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de Error
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1604,46 +1634,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Descripción del Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Tipo de Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔗 URL de Integración
+      🛰️ URL de Integración
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
+  <a href="#encabezados-headers" class="md-nav__link">
     <span class="md-ellipsis">
-      📉 Headers Requeridos
+      🧾 Encabezados (Headers)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📉 Headers Requeridos">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+    <span class="md-ellipsis">
+      📨 Cuerpo de la Solicitud (raw)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📨 Cuerpo de la Solicitud (raw)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
+  <a href="#parametros-de-entrada" class="md-nav__link">
     <span class="md-ellipsis">
-      🔸 Campos Obligatorios
+      📋 Parámetros de Entrada
     </span>
   </a>
   
@@ -1655,19 +1676,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
+  <a href="#respuesta-exitosa-ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
+      ✅ Respuesta Exitosa - Ejemplo
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
+    <nav class="md-nav" aria-label="✅ Respuesta Exitosa - Ejemplo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reglas-rapidas" class="md-nav__link">
+  <a href="#descripcion-de-campos-resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      🎛️ Reglas rápidas
+      📊 Descripción de Campos - Resumen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-campos-plan-de-pagos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Descripción de Campos - Plan de Pagos
     </span>
   </a>
   
@@ -1679,63 +1709,93 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-de-body" class="md-nav__link">
+  <a href="#errores-comunes" class="md-nav__link">
     <span class="md-ellipsis">
-      📦 Ejemplo de Body
+      ❌ Errores Comunes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
+    <nav class="md-nav" aria-label="❌ Errores Comunes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tabla-de-canales" class="md-nav__link">
+  <a href="#token-invalido" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 Tabla de Canales
+      ⚠️ Token Inválido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuestas-exitosa" class="md-nav__link">
+  <a href="#parametro-monto-requerido" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Respuestas Exitosa
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="✅ Respuestas Exitosa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-de-validacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Error de validación
+      ⚠️ Parámetro monto requerido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
+  <a href="#parametro-cuota-requerido" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Ejemplo de Error por Token Ausente o Inválido
+      ⚠️ Parámetro cuota requerido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-error" class="md-nav__link">
+  <a href="#monto-menor-al-permitido" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Ejemplo de Error
+      ⚠️ Monto menor al permitido
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#monto-mayor-al-permitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Monto mayor al permitido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plazo-menor-al-permitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Plazo menor al permitido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plazo-mayor-al-permitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Plazo mayor al permitido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-no-encontrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Registro no encontrado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-interno-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Error interno del servidor
+    </span>
+  </a>
   
 </li>
         
@@ -1760,23 +1820,18 @@
 
 
 
-<h1 id="manual-de-integracion-api-notificacion-por-canal">📘 Manual de Integración API: <strong>Notificación por Canal</strong></h1>
-<h2 id="descripcion-del-servicio">📄 Descripción del Servicio</h2>
-<p>Servicio para <strong>enviar notificaciones</strong> al/los canales seleccionados del cliente usando datos <strong>ya registrados</strong> (celular/email).<br />
-Cada canal se activa con <strong>1</strong> (enviar) o <strong>0</strong> (ignorar).<br />
-Ejemplo: <code>sms=1</code>, <code>email=1</code>, <code>whatsapp=0</code> → se envía por <strong>SMS</strong> y <strong>Email</strong>.</p>
-<p><strong>Nota:</strong> Solo se permite enviar una sola vez a los canales seleccionados, en caso de reenviar se debe de consumir el servicio de Reenvio OTP</p>
+<h1 id="servicio-para-simulador-rotativo-plan-de-pagos-credito-integral">📘 Servicio para <strong>Simulador Rotativo - Plan de Pagos Crédito Integral</strong></h1>
+<p><strong>Descripción:</strong>
+Este servicio permite simular un crédito integral generando un plan de pagos detallado según el monto solicitado y el número de cuotas deseadas. Retorna un resumen financiero completo y el detalle de cada cuota del plan de pagos.</p>
+<p><strong>Tipo de Servicio:</strong> <code>POST</code></p>
 <hr />
-<h2 id="tipo-de-servicio">🚀 Tipo de Servicio</h2>
-<p><code>POST</code></p>
-<hr />
-<h2 id="url-de-integracion">🔗 URL de Integración</h2>
+<h2 id="url-de-integracion">🛰️ URL de Integración</h2>
 <ul>
-<li><strong>Ambiente de Pruebas:</strong> <code>https://testing-sygma.com/api/notificacion_canal</code>  </li>
-<li><strong>Producción:</strong> <code>POR DEFINIR</code></li>
+<li><strong>Prueba:</strong> <code>https://testing-sygma.com/api/simulador_rotativo</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/simulador_rotativo</code></li>
 </ul>
 <hr />
-<h2 id="headers-requeridos">📉 Headers Requeridos</h2>
+<h2 id="encabezados-headers">🧾 Encabezados (Headers)</h2>
 <table>
 <thead>
 <tr>
@@ -1804,99 +1859,264 @@ Ejemplo: <code>sms=1</code>, <code>email=1</code>, <code>whatsapp=0</code> → s
 </tbody>
 </table>
 <blockquote>
-<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación.</p>
+<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación (pestaña <strong>Token</strong>), usando un usuario y contraseña provistos por la entidad.</p>
 </blockquote>
-<h3 id="campos-obligatorios">🔸 Campos Obligatorios</h3>
-<p>Los siguientes campos son <strong>requeridos</strong> para procesar correctamente la notificación:</p>
-<ul>
-<li><code>guid</code></li>
-<li><code>sms</code></li>
-<li><code>email</code></li>
-<li><code>whatsapp</code></li>
-</ul>
 <hr />
-<h2 id="cuerpo-de-la-solicitud-json">🔢 Cuerpo de la Solicitud (JSON)</h2>
-<ul>
-<li><strong>Identificación del destinatario</strong> <em>(uno de)</em>:</li>
-<li><code>guid</code></li>
-<li><strong>Selección de canales</strong> (enteros 0/1):</li>
-<li><code>sms</code>, <code>email</code>, <code>whatsapp</code>  <blockquote>
-<p>Debe haber <strong>al menos uno</strong> en <code>1</code>.</p>
-</blockquote>
-</li>
-</ul>
-<h4 id="reglas-rapidas">🎛️ Reglas rápidas</h4>
-<ul>
-<li><code>sms=1</code> → requiere <strong>celular</strong> registrado.  </li>
-<li><code>whatsapp=1</code> → usa <strong>celular</strong> registrado.  </li>
-<li><code>email=1</code> → requiere <strong>email</strong> registrado.  </li>
-</ul>
-<hr />
-<h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
+<h2 id="cuerpo-de-la-solicitud-raw">📨 Cuerpo de la Solicitud (raw)</h2>
 <pre><code class="language-json">{
-  &quot;guid&quot;: &quot;68406a6a2d9aa64766060ee2&quot;,
-  &quot;sms&quot;: 1,
-  &quot;email&quot;: 1,
-  &quot;whatsapp&quot;: 0
+  &quot;monto&quot;: &quot;200000&quot;,
+  &quot;cuota&quot;: 3
 }
 </code></pre>
-<h3 id="tabla-de-canales">📊 Tabla de Canales</h3>
+<h3 id="parametros-de-entrada">📋 Parámetros de Entrada</h3>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+<th>Requerido</th>
+<th>Validación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monto</code></td>
+<td>String</td>
+<td>Monto del crédito a solicitar</td>
+<td>✅</td>
+<td>Entre $200.000 y $3.500.000</td>
+</tr>
+<tr>
+<td><code>cuota</code></td>
+<td>Integer</td>
+<td>Número de cuotas/meses del crédito</td>
+<td>✅</td>
+<td>Entre 1 y 18 meses</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="respuesta-exitosa-ejemplo">✅ Respuesta Exitosa - Ejemplo</h2>
+<pre><code class="language-json">{
+    &quot;status&quot;: true,
+    &quot;secuencia&quot;: &quot;5001329&quot;,
+    &quot;resumen&quot;: {
+        &quot;secuencia&quot;: &quot;5001329&quot;,
+        &quot;valor_cuota&quot;: 107747,
+        &quot;fianza_regular&quot;: 9949,
+        &quot;seguro&quot;: 785,
+        &quot;vlr_administracion&quot;: 29900,
+        &quot;tasa_ea&quot;: 24.36,
+        &quot;total_desembolso&quot;: 195716
+    },
+    &quot;plan_pagos&quot;: [
+        {
+            &quot;nro_cuota&quot;: 1,
+            &quot;fecha_limite&quot;: &quot;2025-12-02&quot;,
+            &quot;saldo_inicial&quot;: 200000,
+            &quot;capital&quot;: 98266,
+            &quot;interes&quot;: 2928,
+            &quot;seguro&quot;: 480,
+            &quot;fianza&quot;: 5104,
+            &quot;iva_fianza&quot;: 970,
+            &quot;valor_cuota&quot;: 107747,
+            &quot;saldo_final&quot;: 101735
+        },
+        {
+            &quot;nro_cuota&quot;: 2,
+            &quot;fecha_limite&quot;: &quot;2026-01-02&quot;,
+            &quot;saldo_inicial&quot;: 101735,
+            &quot;capital&quot;: 101735,
+            &quot;interes&quot;: 1866,
+            &quot;seguro&quot;: 305,
+            &quot;fianza&quot;: 3256,
+            &quot;iva_fianza&quot;: 619,
+            &quot;valor_cuota&quot;: 107779,
+            &quot;saldo_final&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<h3 id="descripcion-de-campos-resumen">📊 Descripción de Campos - Resumen</h3>
 <table>
 <thead>
 <tr>
 <th>Campo</th>
 <th>Tipo</th>
-<th>Valores</th>
-<th>Usa dato guardado</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>sms</code></td>
-<td>int</td>
-<td>0 / 1</td>
-<td><code>celular</code></td>
+<td><code>secuencia</code></td>
+<td>String</td>
+<td>Identificador único de la simulación</td>
 </tr>
 <tr>
-<td><code>email</code></td>
-<td>int</td>
-<td>0 / 1</td>
-<td><code>email</code></td>
+<td><code>valor_cuota</code></td>
+<td>Integer</td>
+<td>Valor de la cuota mensual</td>
 </tr>
 <tr>
-<td><code>whatsapp</code></td>
-<td>int</td>
-<td>0 / 1</td>
-<td><code>celular</code></td>
+<td><code>total_desembolso</code></td>
+<td>Integer</td>
+<td>Valor neto a desembolsar al cliente</td>
+</tr>
+<tr>
+<td><code>tasa_ea</code></td>
+<td>Float</td>
+<td>Tasa Efectiva Anual</td>
+</tr>
+<tr>
+<td><code>vlr_cuota</code></td>
+<td>Integer</td>
+<td>Valor de la cuota (igual a <code>valor_cuota</code>)</td>
+</tr>
+<tr>
+<td><code>vlr_administracion</code></td>
+<td>Integer</td>
+<td>Valor de administración</td>
+</tr>
+<tr>
+<td><code>seguro</code></td>
+<td>Integer</td>
+<td>Seguro total del crédito</td>
+</tr>
+<tr>
+<td><code>fianza_regular</code></td>
+<td>Integer</td>
+<td>Fianza regular total (comp + IVA)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="respuestas-exitosa">✅ Respuestas Exitosa</h3>
+<h3 id="descripcion-de-campos-plan-de-pagos">📋 Descripción de Campos - Plan de Pagos</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nro_cuota</code></td>
+<td>String</td>
+<td>Número de la cuota</td>
+</tr>
+<tr>
+<td><code>fecha_limite</code></td>
+<td>String</td>
+<td>Fecha límite de pago (formato: YYYY-MM-DD)</td>
+</tr>
+<tr>
+<td><code>saldo_inicial</code></td>
+<td>Integer</td>
+<td>Saldo de capital al inicio del período</td>
+</tr>
+<tr>
+<td><code>capital</code></td>
+<td>Integer</td>
+<td>Abono a capital en esta cuota</td>
+</tr>
+<tr>
+<td><code>interes</code></td>
+<td>Integer</td>
+<td>Interés de esta cuota</td>
+</tr>
+<tr>
+<td><code>seguro</code></td>
+<td>Integer</td>
+<td>Valor del seguro de esta cuota</td>
+</tr>
+<tr>
+<td><code>fianza</code></td>
+<td>Integer</td>
+<td>Fianza de esta cuota</td>
+</tr>
+<tr>
+<td><code>iva_fianza</code></td>
+<td>Integer</td>
+<td>IVA de la fianza</td>
+</tr>
+<tr>
+<td><code>valor_cuota</code></td>
+<td>Integer</td>
+<td>Valor total a pagar en esta cuota</td>
+</tr>
+<tr>
+<td><code>saldo_final</code></td>
+<td>Integer</td>
+<td>Saldo de capital al final del período</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="errores-comunes">❌ Errores Comunes</h2>
+<h3 id="token-invalido">⚠️ Token Inválido</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;Notificaciones Envidados con Exito.&quot;,
-  &quot;canales_enviados&quot;: [&quot;sms&quot;, &quot;email&quot;],
-  &quot;guid&quot;: &quot;2yu2yg33i3iuy3i&quot;
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;Token Inválido&quot;,
+  &quot;code&quot;: 400
 }
 </code></pre>
-<h4 id="error-de-validacion">❗ Error de validación</h4>
+<h3 id="parametro-monto-requerido">⚠️ Parámetro monto requerido</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;errors&quot;: [
-    &quot;Debes seleccionar almenos un canal SMS , Email o Whatsapp&quot;
-  ]
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;El parámetro :monto es requerido y debe ser un número entero válido&quot;,
+  &quot;code&quot;: 400
 }
 </code></pre>
-<h4 id="ejemplo-de-error-por-token-ausente-o-invalido">❗ Ejemplo de Error por Token Ausente o Inválido</h4>
+<h3 id="parametro-cuota-requerido">⚠️ Parámetro cuota requerido</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente&quot;
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;El parámetro :cuota es requerido y debe ser un número entero válido&quot;,
+  &quot;code&quot;: 400
 }
 </code></pre>
-<h4 id="ejemplo-de-error">❗ Ejemplo de Error</h4>
+<h3 id="monto-menor-al-permitido">⚠️ Monto menor al permitido</h3>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Transacción no encontrada o no válida para reenvío&quot;
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;El monto no puede ser menor a $200.000&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="monto-mayor-al-permitido">⚠️ Monto mayor al permitido</h3>
+<pre><code class="language-json">{
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;El monto no puede ser mayor a $3.500.000&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="plazo-menor-al-permitido">⚠️ Plazo menor al permitido</h3>
+<pre><code class="language-json">{
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;El plazo no puede ser menor a 1 mes&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="plazo-mayor-al-permitido">⚠️ Plazo mayor al permitido</h3>
+<pre><code class="language-json">{
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;El plazo no puede ser mayor a 18 meses&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="registro-no-encontrado">⚠️ Registro no encontrado</h3>
+<pre><code class="language-json">{
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;Registro no encontrado&quot;,
+  &quot;details&quot;: &quot;No se encontraron datos del simulador&quot;,
+  &quot;code&quot;: 404
+}
+</code></pre>
+<h3 id="error-interno-del-servidor">⚠️ Error interno del servidor</h3>
+<pre><code class="language-json">{
+  &quot;ok&quot;: false,
+  &quot;message&quot;: &quot;Error interno del servidor&quot;,
+  &quot;details&quot;: &quot;Descripción técnica del error&quot;,
+  &quot;code&quot;: 500
 }
 </code></pre>
 

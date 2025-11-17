@@ -109,6 +109,8 @@ APROBADO · RECHAZADO · REQUIERE_VERIFICACION · SOLICITUD_CON_ERROR
 - **APROBADO**
   - TESEO marca la solicitud como aprobada despues de la respuesta dada.
   - Envía notificaciones (SMS/correo) al usuario informadole que su credito ha sido aprobado.
+  - Al ser aprobado el sistema entrega tres parametros adicionales que son **linea_credito**,  **valor_aprobado** y **linea_credito_id**, donde se le informa al usuario cuanto fue el monto aprobado y la linea de credito.
+  - El campo **linea_credito_id** es el identificador de la linea de credito se le reporto.
 
 - **RECHAZADO**
   - TESEO guarda el rechazo y bloquea re-solicitud por **30 días**.
@@ -136,7 +138,11 @@ APROBADO · RECHAZADO · REQUIERE_VERIFICACION · SOLICITUD_CON_ERROR
   "status": "success",
   "mensaje": "OTP válido. Evaluación Experian exitosa.",
   "experian_status": "APROBADO",
-  "detalle": "El usuario tiene buen perfil crediticio."
+  "detalle": "El usuario tiene buen perfil crediticio.",
+  "linea_credito_id": 100,        
+  "linea_credito": "Credito Rotativo",
+  "valor_aprobado": 300000, 
+  "guid": "68406a6a2d9aa64766060ee2"        
 }
 
 ```
