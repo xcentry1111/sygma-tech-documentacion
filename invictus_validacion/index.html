@@ -12,7 +12,7 @@
         <link rel="prev" href="../invictus_notificacion/">
       
       
-        <link rel="next" href="../invictus_reenviar_validacion/">
+        <link rel="next" href="../invictus_aprobacion_linea/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -1298,6 +1298,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../invictus_aprobacion_linea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Selección Linea Credito
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../invictus_reenviar_validacion/" class="md-nav__link">
         
   
@@ -1992,8 +2015,10 @@ APROBADO · RECHAZADO · REQUIERE_VERIFICACION · SOLICITUD_CON_ERROR</p>
 <ul>
 <li><strong>APROBADO</strong></li>
 <li>TESEO marca la solicitud como aprobada despues de la respuesta dada.</li>
+<li>Envía notificaciones (SMS/correo) al usuario informadole que su credito ha sido aprobado.</li>
+<li>Al ser aprobado el sistema entrega tres parametros adicionales que son <strong>linea_credito</strong>,  <strong>valor_aprobado</strong> y <strong>linea_credito_id</strong>, donde se le informa al usuario cuanto fue el monto aprobado y la linea de credito.</li>
 <li>
-<p>Envía notificaciones (SMS/correo) al usuario informadole que su credito ha sido aprobado.</p>
+<p>El campo <strong>linea_credito_id</strong> es el identificador de la linea de credito se le reporto.</p>
 </li>
 <li>
 <p><strong>RECHAZADO</strong></p>
@@ -2028,7 +2053,11 @@ APROBADO · RECHAZADO · REQUIERE_VERIFICACION · SOLICITUD_CON_ERROR</p>
   &quot;status&quot;: &quot;success&quot;,
   &quot;mensaje&quot;: &quot;OTP válido. Evaluación Experian exitosa.&quot;,
   &quot;experian_status&quot;: &quot;APROBADO&quot;,
-  &quot;detalle&quot;: &quot;El usuario tiene buen perfil crediticio.&quot;
+  &quot;detalle&quot;: &quot;El usuario tiene buen perfil crediticio.&quot;,
+  &quot;linea_credito_id&quot;: 100,        
+  &quot;linea_credito&quot;: &quot;Credito Rotativo&quot;,
+  &quot;valor_aprobado&quot;: 300000, 
+  &quot;guid&quot;: &quot;68406a6a2d9aa64766060ee2&quot;        
 }
 
 </code></pre>
