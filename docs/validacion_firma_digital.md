@@ -95,7 +95,7 @@ El sistema consulta ante el operador configurado Extradata o Entidad deseada par
 ```json
     {
       "status": "blocked",
-      "mensaje": "No hay crédito disponible. Usuario en lista restrictiva."
+      "mensaje": "No hay crédito disponible para firma."
     }
 ```
 
@@ -123,8 +123,8 @@ Se valida la vigencia de la aprobación:
 
 **Acciones automáticas:**
 
-- Se genera un código OTP de 6 dígitos
-- Se envía el código OTP a los canales seleccionados por el usuario en su solicitud inicial:
+- Se genera un código OTP de 6 dígitos (Puede ser parametrico, pueden ser  alfanumerico, numerico, y pueden ser menos caracteres o mas)
+- Se debe enviar a todos los canales:
     - SMS
     - Correo electrónico
     - WhatsApp (si fue seleccionado)
@@ -135,8 +135,11 @@ Se valida la vigencia de la aprobación:
   "status": "success",
   "datos": {
     "guid": "uuid-generado",
-    "mensaje": "Código OTP enviado exitosamente a los canales registrados.",
+    "mensaje": "Código OTP enviado exitosamente a los canales registrados: ",
     "canales_envio": ["SMS", "Email", "WhatsApp"],
+    "sms": "3016795098",
+    "email": "prueba@prueba.com",
+    "whatsapp": "3016795098",
     "vigencia_otp": "5 minutos"
   }
 }
@@ -178,6 +181,9 @@ Se valida la vigencia de la aprobación:
     "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "mensaje": "Código OTP enviado exitosamente a los canales registrados.",
     "canales_envio": ["SMS", "Email", "WhatsApp"],
+    "sms": "3016795098",
+    "email": "prueba@prueba.com",
+    "whatsapp": "3016795098",
     "vigencia_otp": "5 minutos"
   }
 }

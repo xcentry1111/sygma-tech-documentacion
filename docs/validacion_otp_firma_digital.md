@@ -40,17 +40,20 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 ### Campos Obligatorios
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
+| Campo | Tipo | Descripción                                                                     |
+|-------|------|---------------------------------------------------------------------------------|
 | `guid` | string (UUID) | ID único de la transacción generada en el servicio de validación de firma digital |
-| `codigo_otp` | string | Código OTP de 6 dígitos ingresado por el usuario |
+| `codigo_otp` | string | Código OTP de 6 dígitos ingresado por el usuario                                |
+| `tiempo_vigencia` | string | Este tiempo de vigencia del otp es parametrizable y es en minutos               |
+
 
 ### Ejemplo de Body
 
 ```json
 {
   "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-  "codigo_otp": "123456"
+  "codigo_otp": "123456",
+  "tiempo_vigencia": "5"
 }
 ```
 
@@ -109,7 +112,11 @@ Se compara el código ingresado con el código generado para la transacción.
 ```json
 {
   "status": true,
-  "mensaje": "Ya puedes hacer uso de tu crédito"
+  "mensaje": "Ya puedes hacer uso de tu crédito",
+  "nombre_cliente": "Andres Felipe Pelaez",
+  "nombre_cliente": "Andres Felipe Pelaez",
+  "celular": "3016795087",
+  "email": "prueba@gmail.com"
 }
 ```
 
@@ -117,15 +124,15 @@ Se compara el código ingresado con el código generado para la transacción.
 
 ## Tabla de Validaciones y Respuestas
 
-| # | Condición | HTTP | status | mensaje | Acciones |
-|---|-----------|------|--------|---------|----------|
-| 1 | OTP correcto | 200 | `true` | "Ya puedes hacer uso de tu crédito" | Habilitar crédito + Generar y enviar documentos |
-| 2 | OTP incorrecto | 200 | `false` | "El código ingresado es incorrecto." | Registrar intento fallido |
-| 3 | OTP expirado | 200 | `false` | "El código OTP ha expirado. Solicita uno nuevo." | Invalidar OTP |
-| 4 | Intentos agotados | 200 | `false` | "Has superado el número máximo de intentos. Solicita un nuevo código." | Invalidar OTP |
-| 5 | Transacción no encontrada | 404 | `false` | "Transacción no encontrada o inválida." | Ninguna |
-| 6 | Campos requeridos faltantes | 400 | `false` | "El campo {campo} es obligatorio." | Ninguna |
-| 7 | Token inválido o ausente | 401 | `false` | "Token de autorización inválido o ausente." | Ninguna |
+| # | Condición | HTTP | status | mensaje                                                                 | Acciones |
+|---|-----------|------|--------|-------------------------------------------------------------------------|----------|
+| 1 | OTP correcto | 200 | `true` | "Ya puedes hacer uso de tu crédito"                                     | Habilitar crédito + Generar y enviar documentos |
+| 2 | OTP incorrecto | 200 | `false` | "El código ingresado es incorrecto."                                    | Registrar intento fallido |
+| 3 | OTP expirado | 200 | `false` | "El código OTP ha expirado. Solicita uno nuevo."                        | Invalidar OTP |
+| 4 | Intentos agotados | 200 | `false` | "Has superado el número máximo de intentos. Solicita un nuevo código. " | Invalidar OTP |
+| 5 | Transacción no encontrada | 404 | `false` | "Transacción no encontrada o inválida."                                 | Ninguna |
+| 6 | Campos requeridos faltantes | 400 | `false` | "El campo {campo} es obligatorio."                                      | Ninguna |
+| 7 | Token inválido o ausente | 401 | `false` | "Token de autorización inválido o ausente."                             | Ninguna |
 
 ---
 
@@ -137,7 +144,10 @@ Se compara el código ingresado con el código generado para la transacción.
 {
   "status": true,
   "mensaje": "Ya puedes hacer uso de tu crédito",
-  "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "nombre_cliente": "Andres Felipe Pelaez",
+  "celular": "3016795087",
+  "email": "prueba@gmail.com"
 }
 ```
 

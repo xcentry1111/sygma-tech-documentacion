@@ -71,7 +71,7 @@ La solicitud debe enviarse en formato `raw` JSON con los siguientes campos:
 ### 3️⃣ Validación de Límite de Reenvíos
 - Se verifica el número de veces que se ha solicitado el reenvío del OTP para esta transacción.
 - !!! "Límite de Reenvíos"
-- Máximo permitido: 5 reenvíos por transacción
+- Máximo permitido: 5 reenvíos por transacción, y es parametrizable.
 - Tiempo mínimo entre reenvíos: 60 segundos
 
 ### 🚫 Si se excede el límite de reenvíos:
@@ -212,6 +212,7 @@ La solicitud debe enviarse en formato `raw` JSON con los siguientes campos:
 ---
 ### 🚨 Límite de Reenvíos Excedido
 
+- Nota: El sistema debe permitir únicamente dos reenvíos. Si se supera ese límite, se mostrará el mensaje: "Has excedido el número máximo de reenvíos. Intenta nuevamente en 30 minutos."
 ```json
 {
   "status": "error",

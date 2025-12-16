@@ -4,15 +4,16 @@ theme:
 
 nav:
   - Inicio: 'index.md'
-  - 'Servicio WolBox': 'wolbox.md'
+  - 'Dentix':
+    - 'Servicio WolBox': 'wolbox.md'
   - 'autenticación': 'tecfinanzas_token.md'
   - 'Originación (Libranza)':
       - 'Descripción': 'tecfinanzas.md'
       - 'Importar Datos': 'tecfinanzas_importar.md'
       - 'Actualizar Datos': 'tecfinanzas_actualizar.md'
-#   - 'Credito digital':
-#       - 'Descripción': 'descripcion_plan_pagos.md'
-#       - 'Simulador': 'credito_digital.md'
+  - 'Originación (Grupo CTL)':
+      - 'Importar Datos': 'grupoctl_importar.md'
+      - 'Actualizar Datos': 'grupoctl_actualizar.md'
   - 'Consultas Deudor + Obligaciones + Recaudos':
       - 'Descripción': 'identificacion_descripcion.md'
       - 'Identificación Básica': 'identificacion_consulta.md'
