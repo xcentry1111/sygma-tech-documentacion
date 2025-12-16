@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../invictus_originacion_import/">
+        <link rel="prev" href="../grupoctl_importar/">
       
       
-        <link rel="next" href="../invictus_validacion/">
+        <link rel="next" href="../identificacion_descripcion/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Notificación OTP - Documentación Sygma-Tech</title>
+        <title>Actualizar Datos - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-notificacion-por-canal" class="md-skip">
+        <a href="#servicio-para-actualizar-datos" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notificación OTP
+              Actualizar Datos
             
           </span>
         </div>
@@ -215,6 +215,44 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Dentix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dentix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../wolbox/" class="md-nav__link">
         
@@ -227,6 +265,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -371,6 +417,219 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Originación (Grupo CTL)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Originación (Grupo CTL)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupoctl_importar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Importar Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Actualizar Datos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actualizar Datos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL de Integración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideracion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud (raw)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Token Invalido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -382,10 +641,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -398,8 +657,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Consultas Deudor + Obligaciones + Recaudos
           </label>
@@ -519,10 +778,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -535,8 +794,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Consultar Deudor + Tipo Documento
           </label>
@@ -587,10 +846,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -603,8 +862,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Insertar Recaudos
           </label>
@@ -678,10 +937,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -694,8 +953,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Reversar Recaudos
           </label>
@@ -769,10 +1028,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   
@@ -785,8 +1044,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Simuladores
           </label>
@@ -883,10 +1142,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   
@@ -899,8 +1158,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Originacion Promosumma
           </label>
@@ -940,23 +1199,21 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   
@@ -969,8 +1226,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Originación Invictus
           </label>
@@ -1003,32 +1260,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Notificación OTP
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../invictus_notificacion/" class="md-nav__link">
         
   
   
@@ -1039,167 +1274,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Descripción del Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Tipo de Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔗 URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      📉 Headers Requeridos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📉 Headers Requeridos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔸 Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reglas-rapidas" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎛️ Reglas rápidas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Ejemplo de Body
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabla-de-canales" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Tabla de Canales
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuestas-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Respuestas Exitosa
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="✅ Respuestas Exitosa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-de-validacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Error de validación
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de Error por Token Ausente o Inválido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Ejemplo de Error
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1296,10 +1370,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -1312,8 +1386,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Firma Digital Invictus
           </label>
@@ -1410,10 +1484,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -1426,8 +1500,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             Desembolso Invictus
           </label>
@@ -1524,10 +1598,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
             
   
   
@@ -1540,8 +1614,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             Municipio
           </label>
@@ -1604,138 +1678,75 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Descripción del Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Tipo de Servicio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔗 URL de Integración
+      URL de Integración
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      📉 Headers Requeridos
+      Headers
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📉 Headers Requeridos">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideracion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud (raw)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
     <span class="md-ellipsis">
-      🔸 Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reglas-rapidas" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎛️ Reglas rápidas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplo-de-body" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Ejemplo de Body
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Ejemplo de Body">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tabla-de-canales" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Tabla de Canales
+      Campos Obligatorios
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuestas-exitosa" class="md-nav__link">
+  <a href="#respuesta-success" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Respuestas Exitosa
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="✅ Respuestas Exitosa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#error-de-validacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Error de validación
+      Respuesta Success
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-error-por-token-ausente-o-invalido" class="md-nav__link">
+  <a href="#respuesta-token-invalido" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Ejemplo de Error por Token Ausente o Inválido
+      Respuesta Token Invalido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-error" class="md-nav__link">
+  <a href="#respuesta-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Ejemplo de Error
+      Respuesta Campos Requeridos
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1760,143 +1771,355 @@
 
 
 
-<h1 id="manual-de-integracion-api-notificacion-por-canal">📘 Manual de Integración API: <strong>Notificación por Canal</strong></h1>
-<h2 id="descripcion-del-servicio">📄 Descripción del Servicio</h2>
-<p>Servicio para <strong>enviar notificaciones</strong> al/los canales seleccionados del cliente usando datos <strong>ya registrados</strong> (celular/email).<br />
-Cada canal se activa con <strong>1</strong> (enviar) o <strong>0</strong> (ignorar).<br />
-Ejemplo: <code>sms=1</code>, <code>email=1</code>, <code>whatsapp=0</code> → se envía por <strong>SMS</strong> y <strong>Email</strong>.</p>
-<p><strong>Nota:</strong> Solo se permite enviar una sola vez a los canales seleccionados, en caso de reenviar se debe de consumir el servicio de Reenvio OTP</p>
-<hr />
-<h2 id="tipo-de-servicio">🚀 Tipo de Servicio</h2>
-<p><code>POST</code></p>
-<hr />
-<h2 id="url-de-integracion">🔗 URL de Integración</h2>
+<h1 id="servicio-para-actualizar-datos">Servicio para actualizar datos</h1>
+<p><strong>Descripción:</strong> Este servicio permite recibir  parametros para el proceso de la actualizacion del credito.</p>
+<p><strong>Tipo de Servicio:</strong> POST</p>
+<h2 id="url-de-integracion"><strong>URL de Integración</strong></h2>
 <ul>
-<li><strong>Ambiente de Pruebas:</strong> <code>https://testing-sygma.com/api/notificacion_canal</code>  </li>
-<li><strong>Producción:</strong> <code>POR DEFINIR</code></li>
+<li><strong>Prueba:</strong> <code>https://testing-sygma.com/api/originador</code></li>
+<li><strong>Producción:</strong> <code>POR_DEFINIR/api/originador</code></li>
 </ul>
-<hr />
-<h2 id="headers-requeridos">📉 Headers Requeridos</h2>
-<table>
-<thead>
-<tr>
-<th>Nombre</th>
-<th>Valor</th>
-<th>Requerido</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Authorization</td>
-<td>Bearer <code>{token}</code></td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Accept</td>
-<td>application/json</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Content-Type</td>
-<td>application/json</td>
-<td>✅</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>🔐 <strong>Nota:</strong> El token se obtiene a través del módulo de autenticación.</p>
-</blockquote>
-<h3 id="campos-obligatorios">🔸 Campos Obligatorios</h3>
-<p>Los siguientes campos son <strong>requeridos</strong> para procesar correctamente la notificación:</p>
+<h2 id="headers"><strong>Headers</strong></h2>
+<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
 <ul>
-<li><code>guid</code></li>
-<li><code>sms</code></li>
-<li><code>email</code></li>
-<li><code>whatsapp</code></li>
+<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
+<li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
 </ul>
-<hr />
-<h2 id="cuerpo-de-la-solicitud-json">🔢 Cuerpo de la Solicitud (JSON)</h2>
+<h2 id="consideracion"><strong>Consideracion</strong></h2>
 <ul>
-<li><strong>Identificación del destinatario</strong> <em>(uno de)</em>:</li>
-<li><code>guid</code></li>
-<li><strong>Selección de canales</strong> (enteros 0/1):</li>
-<li><code>sms</code>, <code>email</code>, <code>whatsapp</code>  <blockquote>
-<p>Debe haber <strong>al menos uno</strong> en <code>1</code>.</p>
-</blockquote>
-</li>
+<li>El parámetro <strong>tipo_servicio</strong> debe establecerse por defecto en <strong>UPDATE</strong>, ya que con este valor el sistema identifica que se trata de una actualización. Por otro lado, id_transaccion corresponde a un identificador propio de la entidad que debe enviarse con el fin de que, al momento de cruzar información, se pueda identificar.</li>
 </ul>
-<h4 id="reglas-rapidas">🎛️ Reglas rápidas</h4>
-<ul>
-<li><code>sms=1</code> → requiere <strong>celular</strong> registrado.  </li>
-<li><code>whatsapp=1</code> → usa <strong>celular</strong> registrado.  </li>
-<li><code>email=1</code> → requiere <strong>email</strong> registrado.  </li>
-</ul>
-<hr />
-<h2 id="ejemplo-de-body">📦 Ejemplo de Body</h2>
-<pre><code class="language-json">{
-  &quot;guid&quot;: &quot;68406a6a2d9aa64766060ee2&quot;,
-  &quot;sms&quot;: 1,
-  &quot;email&quot;: 1,
-  &quot;whatsapp&quot;: 0
+<h2 id="cuerpo-de-la-solicitud-raw"><strong>Cuerpo de la Solicitud (raw)</strong></h2>
+<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
+<h3 id="campos-obligatorios"><strong>Campos Obligatorios</strong></h3>
+<pre><code class="language-json">
+{
+  &quot;datostecfinanza&quot;: {
+    &quot;cuota_corriente&quot;: &quot;281498.00&quot;,
+    &quot;valor_cuota_total&quot;: &quot;293387.00&quot;,
+    &quot;p_patrimonial&quot;: &quot;1406044.00&quot;,
+    &quot;prima_segvida&quot;: &quot;11889.00&quot;,
+    &quot;valor_aval&quot;: &quot;0.00&quot;,
+    &quot;int_anticipado&quot;: &quot;472196.00&quot;,
+    &quot;gto_plataforma&quot;: &quot;0.00&quot;,
+    &quot;corretaje&quot;: &quot;781136.00&quot;,
+    &quot;seguro_incorporacion&quot;: &quot;0.00&quot;,
+    &quot;estudio_credito&quot;: &quot;520549.00&quot;,
+    &quot;gmf&quot;: &quot;62491.00&quot;,
+    &quot;descuentos_giro&quot;: &quot;12000.00&quot;,
+    &quot;tasa_interes&quot;: &quot;1.500000&quot;,
+    &quot;plazo_inicial_credito&quot;: &quot;120&quot;,
+    &quot;valor_desembolso&quot;: &quot;15622710.00&quot;,
+    &quot;nit_pagaduria&quot;: &quot;8999991181&quot;,
+    &quot;fecha_desemb&quot;: &quot;2025-02-07&quot;,
+    &quot;no_pagare&quot;: &quot;639&quot;,
+    &quot;estado_credito&quot;: &quot;Tesoreria&quot;,
+    &quot;nro_credito&quot;: &quot;639&quot;,
+    &quot;tipo_servicio&quot;: &quot;UPDATE&quot;,
+    &quot;id_transaccion&quot;: 32645
+  }
 }
+
 </code></pre>
-<h3 id="tabla-de-canales">📊 Tabla de Canales</h3>
-<table>
-<thead>
-<tr>
-<th>Campo</th>
-<th>Tipo</th>
-<th>Valores</th>
-<th>Usa dato guardado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sms</code></td>
-<td>int</td>
-<td>0 / 1</td>
-<td><code>celular</code></td>
-</tr>
-<tr>
-<td><code>email</code></td>
-<td>int</td>
-<td>0 / 1</td>
-<td><code>email</code></td>
-</tr>
-<tr>
-<td><code>whatsapp</code></td>
-<td>int</td>
-<td>0 / 1</td>
-<td><code>celular</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="respuestas-exitosa">✅ Respuestas Exitosa</h3>
+<h3 id="respuesta-success"><strong>Respuesta Success</strong></h3>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;success&quot;,
-  &quot;mensaje&quot;: &quot;Notificaciones Envidados con Exito.&quot;,
-  &quot;canales_enviados&quot;: [&quot;sms&quot;, &quot;email&quot;],
-  &quot;guid&quot;: &quot;2yu2yg33i3iuy3i&quot;
+  &quot;data&quot;: {
+    &quot;id&quot;: 832,
+    &quot;nro_documento&quot;: null,
+    &quot;dir_residencia&quot;: null,
+    &quot;correo&quot;: null,
+    &quot;dir_familiar&quot;: null,
+    &quot;dir_correspondencia&quot;: null,
+    &quot;dir_empresa_labora&quot;: null,
+    &quot;email_labora&quot;: null,
+    &quot;dir_ref_fam1&quot;: null,
+    &quot;dir_ref_per1&quot;: null,
+    &quot;cuenta_ext1&quot;: null,
+    &quot;cuenta_ext2&quot;: null,
+    &quot;no_pagare&quot;: &quot;639&quot;,
+    &quot;nro_solicitud&quot;: null,
+    &quot;poliza&quot;: null,
+    &quot;fecha_expedicion_doc&quot;: null,
+    &quot;fecha_nacimiento&quot;: null,
+    &quot;fecha_ingreso&quot;: null,
+    &quot;fecha_ultima&quot;: null,
+    &quot;fecha_ini_cargo&quot;: null,
+    &quot;fecha_fin_cargo&quot;: null,
+    &quot;fecha_desemb&quot;: &quot;2025-02-07&quot;,
+    &quot;fecha_ing_poliza&quot;: null,
+    &quot;clase_poliza&quot;: null,
+    &quot;tipo_cliente&quot;: null,
+    &quot;codigo_dane_exp_doc&quot;: null,
+    &quot;codigo_dane_nacim&quot;: null,
+    &quot;codigo_ciiu_cliente&quot;: null,
+    &quot;antig_actividad&quot;: null,
+    &quot;codigo_dane_resid&quot;: null,
+    &quot;tel_fijo_resi&quot;: null,
+    &quot;tel_cel&quot;: null,
+    &quot;codigo_dane_dir_fam&quot;: null,
+    &quot;codigo_dane_dir_corr&quot;: null,
+    &quot;codigo_dane_dir_emp&quot;: null,
+    &quot;tel_fijo_ofi&quot;: null,
+    &quot;ext_ofi_lab&quot;: null,
+    &quot;nro_renov_contrato&quot;: null,
+    &quot;nro_personas&quot;: null,
+    &quot;menores_18&quot;: null,
+    &quot;codigo_dane_ref_fam1&quot;: null,
+    &quot;tel_ref_fam1&quot;: null,
+    &quot;codigo_dane_ref_per1&quot;: null,
+    &quot;tel_ref_per1&quot;: null,
+    &quot;nro_cuenta&quot;: null,
+    &quot;valor_ingreso_salario&quot;: null,
+    &quot;valor_ingreso_comisiones&quot;: null,
+    &quot;valor_ingreso_honorarios&quot;: null,
+    &quot;valor_ingresos_arrend&quot;: null,
+    &quot;valor_rendimientos&quot;: null,
+    &quot;otros_ingresos&quot;: null,
+    &quot;valor_total_ingresos&quot;: null,
+    &quot;valor_deducciones_ley&quot;: null,
+    &quot;valor_otras_deducciones&quot;: null,
+    &quot;valor_arrend_cliente&quot;: null,
+    &quot;valor_cuota_credito&quot;: null,
+    &quot;valor_gastos_tarjeta&quot;: null,
+    &quot;valor_gastos_familiares&quot;: null,
+    &quot;valor_gastos_sost&quot;: null,
+    &quot;valor_pago_otros_creditos&quot;: null,
+    &quot;otros_egresos&quot;: null,
+    &quot;valor_total_egresos&quot;: null,
+    &quot;valor_activos_corrientes&quot;: null,
+    &quot;valor_activos_fijos&quot;: null,
+    &quot;valor_otros_activos&quot;: null,
+    &quot;total_activos&quot;: null,
+    &quot;valor_pasivos_financieros&quot;: null,
+    &quot;valor_pasivos_corrientes&quot;: null,
+    &quot;valor_otros_pasivos&quot;: null,
+    &quot;total_pasivos&quot;: null,
+    &quot;patrimonio&quot;: null,
+    &quot;monto_solicitado&quot;: null,
+    &quot;monto_cuenta_ext1&quot;: null,
+    &quot;monto_cuenta_ext2&quot;: null,
+    &quot;puntaje_acierta&quot;: null,
+    &quot;nro_cuentas_embargadas&quot;: null,
+    &quot;nro_cuentas_canceladas&quot;: null,
+    &quot;nro_obligaciones_mora&quot;: null,
+    &quot;nro_obligaciones_mora_coop&quot;: null,
+    &quot;nro_carteras_castigadas&quot;: null,
+    &quot;nro_carteras_dudoso&quot;: null,
+    &quot;nro_obligaciones_reestructuradas&quot;: null,
+    &quot;nro_obligaciones_calificadas_c&quot;: null,
+    &quot;nro_obligaciones_calificadas_d&quot;: null,
+    &quot;nro_obligaciones_calificadas_e&quot;: null,
+    &quot;nro_moras_30_dias&quot;: null,
+    &quot;nro_moras_60_dias&quot;: null,
+    &quot;nro_moras_sup_60_dias&quot;: null,
+    &quot;nro_entidades_consulta&quot;: null,
+    &quot;quanto_minimo&quot;: null,
+    &quot;quanto_maximo&quot;: null,
+    &quot;quanto_medio&quot;: null,
+    &quot;sum_cuotas_creditos&quot;: null,
+    &quot;sum_saldos_tdc&quot;: null,
+    &quot;sum_cupos_tdc&quot;: null,
+    &quot;nro_embargos_pago&quot;: null,
+    &quot;nro_procesos_civiles&quot;: null,
+    &quot;nit_custodia&quot;: null,
+    &quot;nit_originador&quot;: null,
+    &quot;nit_pagaduria&quot;: 8999991181,
+    &quot;nit_fideicomisos&quot;: null,
+    &quot;codigo_fideicomiso&quot;: null,
+    &quot;valor_desembolso&quot;: 15622710,
+    &quot;plazo_inicial_credito&quot;: 120,
+    &quot;tasa_interes&quot;: &quot;1.5&quot;,
+    &quot;valor_aval&quot;: 0,
+    &quot;periodicidad&quot;: null,
+    &quot;porcentaje_reserva&quot;: null,
+    &quot;prima_segvida&quot;: 11889,
+    &quot;no_doc_benef_grat1&quot;: null,
+    &quot;porc_benef_grat1&quot;: null,
+    &quot;no_doc_benef_grat2&quot;: null,
+    &quot;porc_benef_grat2&quot;: null,
+    &quot;tipo_entidad&quot;: null,
+    &quot;cliente_declara&quot;: null,
+    &quot;desempena_cargo&quot;: null,
+    &quot;manejo_recursos&quot;: null,
+    &quot;representa_organizacion&quot;: null,
+    &quot;cliente_es_pep&quot;: null,
+    &quot;vinculo_con_pep&quot;: null,
+    &quot;reconocimiento_publico&quot;: null,
+    &quot;posee_cuenta&quot;: null,
+    &quot;realiza_operaciones&quot;: null,
+    &quot;importaciones&quot;: null,
+    &quot;credito_documentario&quot;: null,
+    &quot;giros_directos&quot;: null,
+    &quot;negociacion_divisas&quot;: null,
+    &quot;leasing_importacion&quot;: null,
+    &quot;giros_financiados&quot;: null,
+    &quot;exportaciones&quot;: null,
+    &quot;inversiones&quot;: null,
+    &quot;venta_bienes&quot;: null,
+    &quot;honorarios_comisiones&quot;: null,
+    &quot;ingresos_actividad&quot;: null,
+    &quot;prestamo_bancario&quot;: null,
+    &quot;rifas&quot;: null,
+    &quot;pension&quot;: null,
+    &quot;herencia&quot;: null,
+    &quot;liq_prestaciones&quot;: null,
+    &quot;liq_sucesiones&quot;: null,
+    &quot;otros&quot;: null,
+    &quot;cuentas_moneda_ext&quot;: null,
+    &quot;permanencia_eeuu&quot;: null,
+    &quot;tarjeta_verde&quot;: null,
+    &quot;ingresos_fdap&quot;: null,
+    &quot;ingreso_bruto_venta&quot;: null,
+    &quot;ciudadano_eeuu&quot;: null,
+    &quot;obligado_tributar&quot;: null,
+    &quot;coincidencia_listas&quot;: null,
+    &quot;procesos_cooperativa&quot;: null,
+    &quot;extraprima&quot;: null,
+    &quot;primer_apellido&quot;: null,
+    &quot;segundo_apellido&quot;: null,
+    &quot;primer_nombre&quot;: null,
+    &quot;segundo_nombre&quot;: null,
+    &quot;tipo_doc&quot;: null,
+    &quot;pais_nacimiento&quot;: null,
+    &quot;nacionalidad&quot;: null,
+    &quot;genero&quot;: null,
+    &quot;estado_civil&quot;: null,
+    &quot;nivel_estudios&quot;: null,
+    &quot;grupo_etnico&quot;: null,
+    &quot;profesion&quot;: null,
+    &quot;ocupacion&quot;: null,
+    &quot;clase_cliente&quot;: null,
+    &quot;barrio_resi&quot;: null,
+    &quot;estrato_resi&quot;: null,
+    &quot;tipo_vivienda&quot;: null,
+    &quot;nombre_empresa&quot;: null,
+    &quot;punto_venta&quot;: null,
+    &quot;tipo_contrato&quot;: null,
+    &quot;tipo_empresa&quot;: null,
+    &quot;cargo_actual&quot;: null,
+    &quot;cargo_politico&quot;: null,
+    &quot;nombre_ref_fam1&quot;: null,
+    &quot;parentesco_ref_fam1&quot;: null,
+    &quot;nombre_ref_fam2&quot;: null,
+    &quot;nombre_ref_per1&quot;: null,
+    &quot;nombre_banco_cuenta&quot;: null,
+    &quot;tipo_cuenta&quot;: null,
+    &quot;desc_otros_activos&quot;: null,
+    &quot;desc_otros_pasivos&quot;: null,
+    &quot;otros_activos_pasivos&quot;: null,
+    &quot;nombre_banco_ext1&quot;: null,
+    &quot;tipo_producto_ext1&quot;: null,
+    &quot;moneda_ext1&quot;: null,
+    &quot;ciudad_banco_ext1&quot;: null,
+    &quot;pais_banco_ext1&quot;: null,
+    &quot;nombre_banco_ext2&quot;: null,
+    &quot;tipo_producto_ext2&quot;: null,
+    &quot;moneda_ext2&quot;: null,
+    &quot;ciudad_banco_ext2&quot;: null,
+    &quot;pais_banco_ext2&quot;: null,
+    &quot;calificacion_cliente&quot;: null,
+    &quot;tipo_cliente_datacredito&quot;: null,
+    &quot;tipo_libranza&quot;: null,
+    &quot;razon_social_originador&quot;: null,
+    &quot;razon_social_pagaduria&quot;: null,
+    &quot;segmento_libranza&quot;: null,
+    &quot;razon_social_fideicomisos&quot;: null,
+    &quot;fondeador&quot;: null,
+    &quot;oficina_asociado&quot;: null,
+    &quot;tipo_aval&quot;: null,
+    &quot;benef_grat1&quot;: null,
+    &quot;benef_grat2&quot;: null,
+    &quot;created_at&quot;: &quot;2025-02-10T12:28:28.942-05:00&quot;,
+    &quot;updated_at&quot;: &quot;2025-02-10T12:28:28.942-05:00&quot;,
+    &quot;persona_id&quot;: null,
+    &quot;p_patrimonial&quot;: &quot;1406044.0&quot;,
+    &quot;personasobligacion_id&quot;: null,
+    &quot;cuotas_credito&quot;: null,
+    &quot;cuota_cupo_tdcusado&quot;: null,
+    &quot;cuota_cupo_tdcconting&quot;: null,
+    &quot;cuota_cupo_rotausado&quot;: null,
+    &quot;cuota_cupo_rotaconting&quot;: null,
+    &quot;gastos_familiares_pensionado&quot;: null,
+    &quot;gastos_familiares_activo&quot;: null,
+    &quot;tasa_usura_ultimos_meses&quot;: null,
+    &quot;gastos_financieros&quot;: null,
+    &quot;porcent_endeudamiento&quot;: null,
+    &quot;dias_int_ant&quot;: null,
+    &quot;int_anticipado&quot;: &quot;472196.0&quot;,
+    &quot;gto_plataforma&quot;: &quot;0.0&quot;,
+    &quot;valor_prestamo_sin_c&quot;: null,
+    &quot;valor_prestamo_sin_r&quot;: null,
+    &quot;valor_prestamo_sin_cc&quot;: null,
+    &quot;total_oblm_sf&quot;: null,
+    &quot;total_oblm_mayor_7&quot;: null,
+    &quot;total_obl_castigadas_mayor_15&quot;: null,
+    &quot;total_oblm_mayor_90&quot;: null,
+    &quot;total_deuda_sf&quot;: null,
+    &quot;total_deuda_sc&quot;: null,
+    &quot;total_deuda_sr&quot;: null,
+    &quot;valor_cuota_total&quot;: &quot;293387.0&quot;,
+    &quot;email_ref_fam1&quot;: null,
+    &quot;email_ref_pers1&quot;: null,
+    &quot;estadoscivil_id&quot;: null,
+    &quot;municipio_id&quot;: null,
+    &quot;ciudadexpedicion_id&quot;: null,
+    &quot;tiposdocumento_id&quot;: null,
+    &quot;partiposproducto_id&quot;: null,
+    &quot;portafoliosvehiculo_id&quot;: null,
+    &quot;pagaduria_id&quot;: null,
+    &quot;cliente_id&quot;: null,
+    &quot;fecha_solicitud&quot;: null,
+    &quot;barrio_empresa&quot;: null,
+    &quot;det_otros_ingr&quot;: null,
+    &quot;origen_fondos&quot;: null,
+    &quot;ingresos_brutos&quot;: null,
+    &quot;estado_credito&quot;: &quot;Tesoreria&quot;,
+    &quot;departamento_residencia&quot;: null,
+    &quot;departamento_empresa&quot;: null,
+    &quot;cuota_corriente&quot;: &quot;281498.0&quot;,
+    &quot;cambio_condiciones&quot;: null,
+    &quot;codigo_region&quot;: null,
+    &quot;id_transaccion&quot;: 32645,
+    &quot;request&quot;: null,
+    &quot;response&quot;: null,
+    &quot;municipio_residencia&quot;: null,
+    &quot;corretaje&quot;: &quot;781136.0&quot;,
+    &quot;seguro_incorporacion&quot;: &quot;0.0&quot;,
+    &quot;estudio_credito&quot;: &quot;520549.0&quot;,
+    &quot;descuentos_giro&quot;: &quot;12000.0&quot;,
+    &quot;gmf&quot;: &quot;62491.0&quot;,
+    &quot;parentesco_benef1&quot;: null,
+    &quot;parentesco_benef2&quot;: null,
+    &quot;porc_benef_grat3&quot;: null,
+    &quot;parentesco1&quot;: null,
+    &quot;parentesco2&quot;: null,
+    &quot;parentesco3&quot;: null,
+    &quot;benef_grat3&quot;: null,
+    &quot;no_doc_benef_grat3&quot;: null,
+    &quot;descuento_giro&quot;: null,
+    &quot;tipo_servicio&quot;: &quot;UPDATE&quot;,
+    &quot;portafoliossucursal_id&quot;: null,
+    &quot;nro_credito&quot;: &quot;639&quot;,
+    &quot;prima_comercial&quot;: null
+  }
 }
 </code></pre>
-<h4 id="error-de-validacion">❗ Error de validación</h4>
+<h3 id="respuesta-token-invalido"><strong>Respuesta Token Invalido</strong></h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Token Inválido&quot;,
+  &quot;details&quot;: &quot;Signature has expired&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h3 id="respuesta-campos-requeridos"><strong>Respuesta Campos Requeridos</strong></h3>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;error&quot;,
   &quot;errors&quot;: [
-    &quot;Debes seleccionar almenos un canal SMS , Email o Whatsapp&quot;
+    &quot;Nro documento no puede estar en blanco&quot;
   ]
-}
-</code></pre>
-<h4 id="ejemplo-de-error-por-token-ausente-o-invalido">❗ Ejemplo de Error por Token Ausente o Inválido</h4>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente&quot;
-}
-</code></pre>
-<h4 id="ejemplo-de-error">❗ Ejemplo de Error</h4>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Transacción no encontrada o no válida para reenvío&quot;
 }
 </code></pre>
 

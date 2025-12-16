@@ -532,3 +532,246 @@ Durante el procesamiento de la solicitud, el sistema puede devolver respuestas e
 | Departamento donde está ubicada la residencia del deudor                                                                                                                                                       | departamento_residencia          | VARCHAR2   | DEMOGRÁFICOS           |
 | Departamento donde está ubicada la empresa del deudor                                                                                                                                                          | departamento_empresa             | VARCHAR2   | DEMOGRÁFICOS           |
 | Valor Cuota Corrientes: la cuota financiera del crédito (intereses corrientes + amortización)                                                                                                                  | cuota_corriente                  | NUMBER     | INFORMACIÓN FINANCIERA |
+
+
+
+### **Diccionario de Datos**
+
+Este diccionario proporciona los valores posibles para varios campos en la solicitud. Los IDs se utilizan en los campos correspondientes, y las descripciones ayudan a entender qué representa cada ID.
+
+### **Tipo de Documento**
+
+| ID  | Descripción                     |
+|-----|---------------------------------|
+| 1   | CÉDULA DE CIUDADANÍA            |
+| 2   | CÉDULA DE EXTRANJERÍA           |
+| 5   | TARJETA DE IDENTIDAD            |
+| 161 | PERMISO POR PROTECCIÓN TEMPORAL |
+| 162 | PERSONAS EXPUESTAS POLÍTICAMENTE |
+
+### **Estado Civil**
+
+| ID | Descripción     |
+|----|-----------------|
+| 1  | SOLTERO(A)      |
+| 2  | CASADO(A)       |
+| 3  | DIVORCIADO(A)   |
+| 4  | VIUDO(A)        |
+| 5  | UNIÓN LIBRE     |
+
+### **Género**
+
+| ID | Descripción |
+|----|-------------|
+| 1  | MASCULINO   |
+| 2  | FEMENINO    |
+
+### **Nivel de Estudios**
+
+| ID | Descripción    |
+|----|----------------|
+| 1  | PRIMARIA       |
+| 2  | BACHILLERATO   |
+| 3  | UNIVERSITARIA  |
+| 4  | OTROS          |
+| 5  | TECNÓLOGO      |
+| 6  | POSTGRADO      |
+| 7  | NINGUNO        |
+
+### **Ocupación**
+
+| ID | Descripción         |
+|----|---------------------|
+| 1  | Empleado            |
+| 2  | PENSIONADO          |
+| 3  | Rentista de capital |
+| 4  | Estudiante          |
+| 5  | Ama de casa         |
+| 6  | Desempleado         |
+| 7  | Independiente       |
+
+### **Tipo de Vivienda**
+
+| ID | Descripción |
+|----|-------------|
+| 1  | Arrendada   |
+| 2  | Familiar    |
+| 4  | Propia      |
+
+### **Tipo de Cuenta Bancaria**
+
+| ID | Descripción |
+|----|-------------|
+| 1  | CORRIENTE   |
+| 2  | AHORROS     |
+
+### **Clase de Póliza**
+
+| ID | Descripción |
+|----|-------------|
+| 1  | INDIVIDUAL  |
+
+### **Reconocimiento Público**
+
+| ID | Descripción |
+|----|-------------|
+| 1  | SI          |
+| 2  | NO          |
+
+### **Cliente PEP**
+
+| ID | Descripción |
+|----|-------------|
+| 1  | SI          |
+| 2  | NO          |
+
+### **Tipo de Empresa**
+
+| ID | Descripción |
+|----|-------------|
+| 1  | PÚBLICA     |
+| 2  | PRIVADA     |
+| 3  | MIXTA       |
+
+### **Tipo de Libranza**
+
+| ID | Descripción           |
+|----|-----------------------|
+| 1  | LIBRE INVERSIÓN       |
+| 2  | COMPRA DE CARTERA     |
+| 3  | EDUCACIÓN             |
+| 4  | DESEMBOLSOS PARCIALES |
+| 5  | REFINANCIACIÓN        |
+| 6  | REESTRUCTURACIÓN      |
+
+### **Segmento Libranza**
+
+| ID | Descripción        |
+|----|--------------------|
+| 1  | DOCENTES           |
+| 2  | ENTES DE CONTROL   |
+| 3  | FUERZAS MILITARES  |
+| 4  | PENSIONADOS        |
+| 5  | PRIVADO            |
+
+### **Tipo de Contrato**
+
+| ID | Descripción            |
+|----|------------------------|
+| 1  | TÉRMINO FIJO           |
+| 2  | INDEFINIDO             |
+| 3  | CARRERA ADMINISTRATIVA |
+| 4  | PROVISIONAL            |
+| 5  | CONTRATISTA            |
+| 6  | TEMPORAL               |
+| 9  | ACTIVO                 |
+| 10 | PENSIONADOS            |
+| 11 | OBRA LABOR             |
+| 12 | PLANTA                 |
+| 13 | EN PROPIEDAD           |
+
+### **Grupo Étnico**
+
+| ID | Descripción                                               |
+|----|-----------------------------------------------------------|
+| 1  | INDÍGENA                                                  |
+| 2  | GITANO (A) O RROM                                         |
+| 3  | RAIZAL DEL ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA |
+| 4  | PALENQUERO (A) DE SAN BASILIO                              |
+| 5  | NEGRO (A), MULATO (A), AFRODESCENDIENTE, AFROCOLOMBIANO    |
+| 6  | NINGÚN GRUPO ÉTNICO                                       |
+| 7  | SIN INFORMACIÓN                                           |
+
+### **Parentesco Familiar**
+
+| ID | Descripción           |
+|----|-----------------------|
+| 2  | PADRE                 |
+| 3  | MADRE                 |
+| 4  | HIJO                  |
+| 5  | CÓNYUGE               |
+| 6  | SOBRINO(A)            |
+| 7  | HERMANO(A)            |
+| 8  | NIETO(A)              |
+| 9  | PRIMO(A)              |
+| 10 | ABUELO(A)             |
+| 11 | COMPAÑERO(A)          |
+| 12 | CÓNYUGE SOLIDARIO(A)  |
+| 13 | CUÑADO(A)             |
+| 14 | ENTIDAD JURÍDICA      |
+| 15 | HIJA                  |
+| 16 | HERMANASTRO(A)        |
+| 17 | HIJASTRO(A)           |
+| 18 | MADRASTRA             |
+| 19 | NUERA                 |
+| 20 | OTRO                  |
+| 21 | PADRASTRO             |
+| 22 | PRIMO(A)              |
+| 23 | SUEGRO(A)             |
+| 24 | TÍO(A)                |
+| 25 | YERNO                 |
+
+### **Bancos (nombre_banco_cuenta)**
+
+| ID | Descripción                                       |
+|----|---------------------------------------------------|
+| 1  | BANCO AV VILLAS                                   |
+| 2  | BANCO BBVA                                        |
+| 3  | BANCO CAJA SOCIAL                                 |
+| 4  | BANCO DE BOGOTÁ                                   |
+| 5  | BANCO DE CRÉDITO                                  |
+| 6  | BANCO DE OCCIDENTE                                |
+| 7  | BANCO GNB SUDAMERIS                               |
+| 8  | BANCO POPULAR                                     |
+| 9  | BANCO ITAU CORPBANCA                              |
+| 10 | BANCOLOMBIA                                       |
+| 11 | SCOTIABANK COLPATRIA                              |
+| 12 | BANCO DAVIVIENDA                                  |
+| 13 | BANCOOMEVA                                        |
+| 14 | FINANCIERA JURISCOOP                              |
+| 15 | BANCO AGRARIO                                     |
+| 16 | BANCO PICHINCHA                                   |
+| 17 | BANCO FALABELLA                                   |
+| 18 | BANCAMIA                                          |
+| 19 | BANCO MUNDO MUJER                                 |
+| 20 | BANCO CREDIFINANCIERA                             |
+| 21 | BANCO SANTANDER DE NEGOCIOS COLOMBIA S.A.         |
+| 22 | BANCO SERFINANZA                                  |
+| 23 | CITIBANK-COLOMBIA                                 |
+| 24 | BANCO                                             |
+| 25 | BANCO COOPERATIVO COOPCENTRAL                     |
+| 26 | BANCO DE LA MICROEMPRESA DE COLOMBIA MIBANCO      |
+| 27 | BANCO J.P. MORGAN COLOMBIA                        |
+| 28 | LULO BANK                                         |
+| 29 | BANCO BTG PACTUAL COLOMBIA                        |
+| 30 | BANCO UNION                                       |
+| 31 | CORPORACIÓN FINANCIERA COLOMBIANA CORFICOLOMBIANA |
+| 32 | BNP PARIBAS COLOMBIA CORPORACIÓN FINANCIERA       |
+| 33 | IRIS CF - COMPAÑÍA DE FINANCIAMIENTO              |
+| 34 | CREDIFAMILIA COMPAÑÍA DE FINANCIAMIENTO           |
+| 35 | RAPPIPAY COMPAÑÍA DE FINANCIAMIENTO               |
+| 36 | NEQUI                                             |
+| 37 | NU                                                |
+
+### **NIT Originador / Fideicomiso / Sucursal**
+
+| NIT   | Descripción |
+|-------|-------------|
+| 1212  | CTL         |
+
+### **Municipios (Códigos DANE)**
+
+Los códigos DANE corresponden al estándar DIVIPOLA del DANE.  
+Se utilizan en campos como: `codigo_dane_nacim`, `codigo_dane_resid`, `codigo_dane_exp_doc`, etc.
+
+> **Nota:** La lista completa contiene más de 1100 municipios. Puedes consultar la fuente oficial en:  
+> [https://www.dane.gov.co/index.php/sistema-estadistico-nacional-sen/sistema-de-consulta/divipola](https://www.dane.gov.co/index.php/sistema-estadistico-nacional-sen/sistema-de-consulta/divipola)
+
+Ejemplos:
+
+| ID    | Municipio / Departamento                  | Código DANE |
+|-------|-------------------------------------------|-------------|
+| 05001 | ANTIOQUIA - MEDELLÍN                      | 05001       |
+| 11001 | AMAZONAS - LETICIA                        | 91001       |
+| 76001 | VALLE DEL CAUCA - CALI                    | 76001       |
+| 11000 | VICHADA - PUERTO CARREÑO                  | 99001       |
