@@ -765,7 +765,7 @@ Los códigos DANE corresponden al estándar DIVIPOLA del DANE.
 Se utilizan en campos como: `codigo_dane_nacim`, `codigo_dane_resid`, `codigo_dane_exp_doc`, etc.
 
 > **Nota:** La lista completa contiene más de 1100 municipios. Puedes consultar la fuente oficial en:  
-> [https://www.dane.gov.co/index.php/sistema-estadistico-nacional-sen/sistema-de-consulta/divipola](https://www.dane.gov.co/index.php/sistema-estadistico-nacional-sen/sistema-de-consulta/divipola)
+> [https://www.datos.gov.co/widgets/gdxc-w37w](https://www.datos.gov.co/widgets/gdxc-w37w)
 
 Ejemplos:
 
