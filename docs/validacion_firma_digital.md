@@ -2,7 +2,7 @@
 
 ## Descripción del Servicio
 
-Este servicio permite validar si una persona está en proceso de firma digital, verificar su estado en listas restrictivas a través de operadores como Extradata o Entidad deseada, y determinar la viabilidad de otorgar un crédito. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.
+Este servicio permite validar si una persona está en proceso de firma digital. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.
 
 ---
 
@@ -81,25 +81,8 @@ Se verifica si la persona está actualmente en proceso de firma digital dentro d
     }
 ```
 
-### 2. Consulta de Listas Restrictivas
 
-El sistema consulta ante el operador configurado Extradata o Entidad deseada para verificar si la persona aparece en listas restrictivas
-
-!!! "Usuario en Lista Restrictiva"
-    **Acciones automáticas:**
-    
-- Se envía SMS y correo electrónico al usuario con el mensaje y retorna el mensaje tipo json a invictus
-    
-**Respuesta a Invictus:**
-
-```json
-    {
-      "status": "blocked",
-      "mensaje": "No hay crédito disponible para firma."
-    }
-```
-
-### 3. Validación de Crédito Aprobado
+### 2. Validación de Crédito Aprobado
 
 Si el usuario **NO** está en lista restrictiva, el sistema verifica si tiene un crédito aprobado.
 
