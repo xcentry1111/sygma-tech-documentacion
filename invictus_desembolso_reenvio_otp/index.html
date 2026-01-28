@@ -12,7 +12,7 @@
         <link rel="prev" href="../invictus_desembolso_otp_valida/">
       
       
-        <link rel="next" href="../consulta_municipio/">
+        <link rel="next" href="../invictus_desembolso_linea_credito/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -1399,7 +1399,7 @@
   
   
   <span class="md-ellipsis">
-    Validación Credito
+    Validación usuario Credito
     
   </span>
   
@@ -1499,6 +1499,49 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#flujo-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo del Proceso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flujo del Proceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-del-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secuencia del Flujo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Información Técnica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Información Técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#tipo-de-servicio" class="md-nav__link">
     <span class="md-ellipsis">
       Tipo de Servicio
@@ -1506,8 +1549,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
       URL de Integración
@@ -1515,17 +1558,47 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#headers-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
       Headers Requeridos
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Headers Requeridos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-del-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Obtención del Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
     <span class="md-ellipsis">
       Cuerpo de la Solicitud
@@ -1545,18 +1618,101 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#valores-permitidos-para-tiposdocumento_id" class="md-nav__link">
+  <a href="#catalogo-de-tipos-de-documento" class="md-nav__link">
     <span class="md-ellipsis">
-      Valores Permitidos para tiposdocumento_id
+      Catálogo de Tipos de Documento
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-body" class="md-nav__link">
+  <a href="#ejemplo-de-request" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo de Body
+      Ejemplo de Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validaciones-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validaciones del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validaciones del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nivel-1-validacion-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 1: Validación de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-2-validacion-de-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 2: Validación de Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-3-validacion-de-credito-aprobado-vigente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 3: Validación de Crédito Aprobado Vigente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-4-validacion-de-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 4: Validación de Límite de Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-5-validacion-de-transaccion-completada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 5: Validación de Transacción Completada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-6-validacion-de-transaccion-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 6: Validación de Transacción Existente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-7-generacion-y-envio-de-nuevo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 7: Generación y Envío de Nuevo OTP ✅
     </span>
   </a>
   
@@ -1568,100 +1724,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+  <a href="#response-tabla-resumen-de-respuestas" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo de Validación del Servicio
+      Response - Tabla Resumen de Respuestas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Flujo de Validación del Servicio">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas-completas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Respuestas Completas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de Respuestas Completas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-validacion-de-credito-aprobado-vigente" class="md-nav__link">
+  <a href="#caso-1-reenvio-exitoso-nuevo-otp-enviado" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Validación de Crédito Aprobado Vigente
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Validación de Crédito Aprobado Vigente">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#si-no-hay-credito-vigente" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Si NO hay crédito vigente
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-validacion-de-tiempo-minimo-entre-reenvios" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Validación de Tiempo Mínimo entre Reenvíos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Validación de Tiempo Mínimo entre Reenvíos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#si-no-ha-pasado-el-tiempo-minimo" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⏰ Si NO ha pasado el tiempo mínimo
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-validacion-de-transaccion-anterior" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Validación de Transacción Anterior
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Validación de Transacción Anterior">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i-si-la-transaccion-ya-fue-validada-exitosamente" class="md-nav__link">
-    <span class="md-ellipsis">
-      ℹ️ Si la transacción ya fue validada exitosamente
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-invalidacion-de-codigos-anteriores" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Invalidación de Códigos Anteriores
+      ✅ Caso 1: Reenvío Exitoso - Nuevo OTP Enviado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-generacion-y-envio-de-nuevo-otp" class="md-nav__link">
+  <a href="#caso-2-limite-de-reenvios-excedido" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Generación y Envío de Nuevo OTP
+      🚫 Caso 2: Límite de Reenvíos Excedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-3-transaccion-ya-completada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Caso 3: Transacción Ya Completada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-4-transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Caso 4: Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-5-error-de-autenticacion-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Caso 5: Error de Autenticación (Token Inválido)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-6-sin-credito-vigente" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Caso 6: Sin Crédito Vigente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-7-error-de-validacion-campos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Caso 7: Error de Validación - Campos Faltantes
     </span>
   </a>
   
@@ -1673,84 +1811,81 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tabla-de-validaciones-y-respuestas" class="md-nav__link">
+  <a href="#integracion-en-invictus" class="md-nav__link">
     <span class="md-ellipsis">
-      Tabla de Validaciones y Respuestas
+      Integración en Invictus
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplos-de-respuestas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplos de Respuestas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejemplos de Respuestas">
+    <nav class="md-nav" aria-label="Integración en Invictus">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#respuesta-exitosa-nuevo-otp-enviado" class="md-nav__link">
+  <a href="#opcion-reenviar-codigo-otp" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Respuesta Exitosa - Nuevo OTP Enviado
+      Opción "Reenviar código OTP"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opción &#34;Reenviar código OTP&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-response-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      a) Response: success
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debe-esperar-tiempo-minimo" class="md-nav__link">
+  <a href="#b-response-resend_limit_exceeded" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏰ Debe Esperar Tiempo Mínimo
+      b) Response: resend_limit_exceeded
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sin-credito-vigente" class="md-nav__link">
+  <a href="#c-response-already_validated" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Sin Crédito Vigente
+      c) Response: already_validated
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#i-transaccion-ya-validada" class="md-nav__link">
+  <a href="#d-response-error-transaccion" class="md-nav__link">
     <span class="md-ellipsis">
-      ℹ️ Transacción Ya Validada
+      d) Response: error (transacción)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-en-envio-de-mensajes" class="md-nav__link">
+  <a href="#e-response-error-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Error en Envío de Mensajes
+      e) Response: error (autenticación)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-por-campo-faltante" class="md-nav__link">
+  <a href="#f-response-no_credit" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Error por Campo Faltante
+      f) Response: no_credit
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#error-de-autenticacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Error de Autenticación
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -1797,9 +1932,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limites-de-reenvio" class="md-nav__link">
+  <a href="#nuevo-guid" class="md-nav__link">
     <span class="md-ellipsis">
-      Límites de Reenvío
+      Nuevo GUID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-recomendados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Límites Recomendados
     </span>
   </a>
   
@@ -1829,20 +1973,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flujo de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#notas-importantes" class="md-nav__link">
     <span class="md-ellipsis">
       Notas Importantes
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Notas Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Reglas de Negocio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-completo-con-reenvio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Flujo Completo con Reenvío
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuración del Ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#especificaciones-de-ui-para-mensajes-modales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Especificaciones de UI para Mensajes Modales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Seguridad Adicional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoreo-y-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Monitoreo y Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1850,6 +2045,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_linea_credito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lineas de Credito
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1966,6 +2184,49 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#flujo-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo del Proceso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flujo del Proceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-del-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secuencia del Flujo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Información Técnica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Información Técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#tipo-de-servicio" class="md-nav__link">
     <span class="md-ellipsis">
       Tipo de Servicio
@@ -1973,8 +2234,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#url-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
       URL de Integración
@@ -1982,17 +2243,47 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#headers-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
       Headers Requeridos
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Headers Requeridos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-del-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Obtención del Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
     <span class="md-ellipsis">
       Cuerpo de la Solicitud
@@ -2012,18 +2303,101 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#valores-permitidos-para-tiposdocumento_id" class="md-nav__link">
+  <a href="#catalogo-de-tipos-de-documento" class="md-nav__link">
     <span class="md-ellipsis">
-      Valores Permitidos para tiposdocumento_id
+      Catálogo de Tipos de Documento
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-body" class="md-nav__link">
+  <a href="#ejemplo-de-request" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo de Body
+      Ejemplo de Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validaciones-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validaciones del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validaciones del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nivel-1-validacion-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 1: Validación de Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-2-validacion-de-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 2: Validación de Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-3-validacion-de-credito-aprobado-vigente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 3: Validación de Crédito Aprobado Vigente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-4-validacion-de-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 4: Validación de Límite de Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-5-validacion-de-transaccion-completada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 5: Validación de Transacción Completada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-6-validacion-de-transaccion-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 6: Validación de Transacción Existente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-7-generacion-y-envio-de-nuevo-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 7: Generación y Envío de Nuevo OTP ✅
     </span>
   </a>
   
@@ -2035,100 +2409,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-validacion-del-servicio" class="md-nav__link">
+  <a href="#response-tabla-resumen-de-respuestas" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo de Validación del Servicio
+      Response - Tabla Resumen de Respuestas
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Flujo de Validación del Servicio">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplos-de-respuestas-completas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Respuestas Completas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos de Respuestas Completas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-validacion-de-credito-aprobado-vigente" class="md-nav__link">
+  <a href="#caso-1-reenvio-exitoso-nuevo-otp-enviado" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Validación de Crédito Aprobado Vigente
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Validación de Crédito Aprobado Vigente">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#si-no-hay-credito-vigente" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Si NO hay crédito vigente
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-validacion-de-tiempo-minimo-entre-reenvios" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Validación de Tiempo Mínimo entre Reenvíos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Validación de Tiempo Mínimo entre Reenvíos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#si-no-ha-pasado-el-tiempo-minimo" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⏰ Si NO ha pasado el tiempo mínimo
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-validacion-de-transaccion-anterior" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Validación de Transacción Anterior
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Validación de Transacción Anterior">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i-si-la-transaccion-ya-fue-validada-exitosamente" class="md-nav__link">
-    <span class="md-ellipsis">
-      ℹ️ Si la transacción ya fue validada exitosamente
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-invalidacion-de-codigos-anteriores" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Invalidación de Códigos Anteriores
+      ✅ Caso 1: Reenvío Exitoso - Nuevo OTP Enviado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-generacion-y-envio-de-nuevo-otp" class="md-nav__link">
+  <a href="#caso-2-limite-de-reenvios-excedido" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Generación y Envío de Nuevo OTP
+      🚫 Caso 2: Límite de Reenvíos Excedido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-3-transaccion-ya-completada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Caso 3: Transacción Ya Completada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-4-transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Caso 4: Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-5-error-de-autenticacion-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Caso 5: Error de Autenticación (Token Inválido)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-6-sin-credito-vigente" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Caso 6: Sin Crédito Vigente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-7-error-de-validacion-campos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Caso 7: Error de Validación - Campos Faltantes
     </span>
   </a>
   
@@ -2140,84 +2496,81 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tabla-de-validaciones-y-respuestas" class="md-nav__link">
+  <a href="#integracion-en-invictus" class="md-nav__link">
     <span class="md-ellipsis">
-      Tabla de Validaciones y Respuestas
+      Integración en Invictus
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejemplos-de-respuestas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplos de Respuestas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejemplos de Respuestas">
+    <nav class="md-nav" aria-label="Integración en Invictus">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#respuesta-exitosa-nuevo-otp-enviado" class="md-nav__link">
+  <a href="#opcion-reenviar-codigo-otp" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Respuesta Exitosa - Nuevo OTP Enviado
+      Opción "Reenviar código OTP"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opción &#34;Reenviar código OTP&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-response-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      a) Response: success
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debe-esperar-tiempo-minimo" class="md-nav__link">
+  <a href="#b-response-resend_limit_exceeded" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏰ Debe Esperar Tiempo Mínimo
+      b) Response: resend_limit_exceeded
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sin-credito-vigente" class="md-nav__link">
+  <a href="#c-response-already_validated" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Sin Crédito Vigente
+      c) Response: already_validated
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#i-transaccion-ya-validada" class="md-nav__link">
+  <a href="#d-response-error-transaccion" class="md-nav__link">
     <span class="md-ellipsis">
-      ℹ️ Transacción Ya Validada
+      d) Response: error (transacción)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-en-envio-de-mensajes" class="md-nav__link">
+  <a href="#e-response-error-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Error en Envío de Mensajes
+      e) Response: error (autenticación)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-por-campo-faltante" class="md-nav__link">
+  <a href="#f-response-no_credit" class="md-nav__link">
     <span class="md-ellipsis">
-      ❗ Error por Campo Faltante
+      f) Response: no_credit
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#error-de-autenticacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❗ Error de Autenticación
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -2264,9 +2617,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limites-de-reenvio" class="md-nav__link">
+  <a href="#nuevo-guid" class="md-nav__link">
     <span class="md-ellipsis">
-      Límites de Reenvío
+      Nuevo GUID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-recomendados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Límites Recomendados
     </span>
   </a>
   
@@ -2296,20 +2658,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flujo de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#notas-importantes" class="md-nav__link">
     <span class="md-ellipsis">
       Notas Importantes
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Notas Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Reglas de Negocio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-completo-con-reenvio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Flujo Completo con Reenvío
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuración del Ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#especificaciones-de-ui-para-mensajes-modales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Especificaciones de UI para Mensajes Modales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Seguridad Adicional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoreo-y-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Monitoreo y Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2331,12 +2744,95 @@
 
 <h1 id="manual-de-integracion-api-reenvio-de-codigo-otp-para-desembolso">📘 Manual de Integración API: Reenvío de Código OTP para Desembolso</h1>
 <h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
-<p>Este servicio permite reenviar un nuevo código OTP al cliente cuando el código anterior ha expirado, se han agotado los intentos de validación, o el cliente no ha recibido el código inicial. El servicio controla el tiempo mínimo entre reenvíos y gestiona la invalidación de códigos anteriores.</p>
+<p>Este servicio permite reenviar un nuevo código OTP al cliente cuando el código anterior ha expirado, se han agotado los intentos de validación, o el cliente no ha recibido el código inicial. El servicio controla el límite de reenvíos permitidos, valida el tiempo entre solicitudes y gestiona la invalidación de códigos anteriores, generando un nuevo código completamente independiente.</p>
 <hr />
-<h2 id="tipo-de-servicio">Tipo de Servicio</h2>
+<h2 id="flujo-del-proceso">Flujo del Proceso</h2>
+<h3 id="contexto-general">Contexto General</h3>
+<p>Este servicio es <strong>opcional</strong> en el flujo de desembolso y se activa solo cuando es necesario reenviar el código OTP:</p>
+<pre><code>Servicio 1: Validación de Crédito Vigente
+     ↓ (retorna success + guid + codigo_otp)
+Pantalla de Autenticación Cliente (Invictus)
+     ↓ 
+Temporizador llega a 0:00 o Cliente no recibe código
+     ↓
+Se habilita opción &quot;Reenviar código OTP&quot;
+     ↓
+Servicio 3: Reenvío de OTP (este documento) ← ESTAMOS AQUÍ
+     ↓ (retorna success + nuevo guid + nuevo codigo_otp)
+Pantalla de Autenticación Cliente (actualizada)
+     ↓ (cliente ingresa nuevo código OTP)
+Servicio 2: Validación de OTP
+     ↓
+Continúa flujo normal
+</code></pre>
+<h3 id="secuencia-del-flujo">Secuencia del Flujo</h3>
+<pre><code>1. Usuario se encuentra en &quot;Pantalla de Autenticación Cliente&quot;
+   - Temporizador llega a 0:00 (código expirado)
+   - O cliente indica que no recibió el código
+   ↓
+2. Se habilita opción &quot;Reenviar código OTP&quot;
+   - Botón o enlace: &quot;Reenviar código OTP&quot;
+   - Estado: HABILITADO (solo cuando temporizador = 0:00)
+   ↓
+3. Usuario selecciona &quot;Reenviar código OTP&quot;
+   ↓
+4. Sistema consume Servicio de Reenvío OTP (TESEO)
+   ↓
+5. Servicio ejecuta validaciones en orden:
+
+   a) Validación de Autenticación
+      ↓ Token inválido? → SÍ: retorna &quot;error&quot; (401)
+
+   b) Validación de Campos Requeridos
+      ↓ Campos vacíos? → SÍ: retorna &quot;error&quot; (400)
+
+   c) Validación de Crédito Vigente
+      ↓ Sin crédito vigente? → SÍ: retorna &quot;no_credit&quot;
+
+   d) Validación de Límite de Reenvíos
+      ↓ Límite excedido (&gt;5)? → SÍ: retorna &quot;resend_limit_exceeded&quot;
+
+   e) Validación de Transacción Completada
+      ↓ OTP ya validado exitosamente? → SÍ: retorna &quot;already_validated&quot;
+
+   f) Validación de Transacción No Encontrada
+      ↓ GUID no existe? → SÍ: retorna &quot;error&quot; (404)
+
+   g) Generación y Envío de Nuevo OTP
+      ↓ Todo OK → Invalida OTP anterior, genera nuevo código
+      ↓ Envía nuevo OTP → retorna &quot;success&quot; + nuevo guid
+   ↓
+6. Comportamiento de Invictus según respuesta:
+
+   - success → Modal azul con instrucciones y nuevo temporizador
+               Muestra medios de envío (ofuscados)
+               Habilita casillas OTP (limpias)
+               Reinicia temporizador (3:00 minutos)
+               Permanece en pantalla de autenticación
+
+   - resend_limit_exceeded → Modal naranja: &quot;Has excedido el número máximo (5)...&quot;
+                              Cierra modal, REGRESA a pantalla principal
+                              Proceso se REINICIA desde cero
+
+   - already_validated → Modal rojo: &quot;Esta transacción ya ha sido completada...&quot;
+                         Cierra modal, REGRESA a pantalla principal
+                         No requiere nuevo código
+
+   - error (transacción) → Modal rojo: &quot;Transacción no encontrada o inválida&quot;
+                           Cierra modal, permanece en pantalla OTP
+
+   - error (autenticación) → Modal rojo: &quot;Token de autorización inválido...&quot;
+                             Cierra modal, permanece en pantalla OTP
+
+   - no_credit → Modal con mensaje de crédito no vigente
+                 Cierra modal, REGRESA a pantalla principal
+</code></pre>
+<hr />
+<h2 id="informacion-tecnica">Información Técnica</h2>
+<h3 id="tipo-de-servicio">Tipo de Servicio</h3>
 <p><strong>Método HTTP:</strong> <code>POST</code></p>
 <hr />
-<h2 id="url-de-integracion">URL de Integración</h2>
+<h3 id="url-de-integracion">URL de Integración</h3>
 <table>
 <thead>
 <tr>
@@ -2346,7 +2842,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Pruebas</strong></td>
+<td><strong>Pruebas (QA)</strong></td>
 <td><code>https://testing-sygma.com/api/reenvio_otp_desembolso</code></td>
 </tr>
 <tr>
@@ -2356,13 +2852,14 @@
 </tbody>
 </table>
 <hr />
-<h2 id="headers-requeridos">Headers Requeridos</h2>
+<h3 id="headers-requeridos">Headers Requeridos</h3>
 <table>
 <thead>
 <tr>
 <th>Nombre</th>
 <th>Valor</th>
 <th>Requerido</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
@@ -2370,30 +2867,39 @@
 <td><code>Authorization</code></td>
 <td><code>Bearer {token}</code></td>
 <td>✅</td>
+<td>Token de autenticación JWT</td>
 </tr>
 <tr>
 <td><code>Accept</code></td>
 <td><code>application/json</code></td>
 <td>✅</td>
+<td>Formato de respuesta esperado</td>
 </tr>
 <tr>
 <td><code>Content-Type</code></td>
 <td><code>application/json</code></td>
 <td>✅</td>
+<td>Formato del cuerpo de la petición</td>
 </tr>
 </tbody>
 </table>
-<p>!!! "Obtención del Token"
-    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
+<h4 id="obtencion-del-token">🔐 Obtención del Token</h4>
+<p>!!! "Obtención del Token" El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
+<p><strong>Endpoint de autenticación:</strong></p>
+<pre><code>POST https://testing-sygma.com/api/login
+</code></pre>
 <hr />
-<h2 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h2>
+<h2 id="request">Request</h2>
+<h3 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h3>
 <p>La solicitud debe enviarse en formato <strong>raw JSON</strong> con los siguientes campos:</p>
-<h3 id="campos-obligatorios">Campos Obligatorios</h3>
+<h4 id="campos-obligatorios">Campos Obligatorios</h4>
 <table>
 <thead>
 <tr>
 <th>Campo</th>
 <th>Tipo</th>
+<th>Longitud</th>
+<th>Requerido</th>
 <th>Descripción</th>
 </tr>
 </thead>
@@ -2401,52 +2907,64 @@
 <tr>
 <td><code>tiposdocumento_id</code></td>
 <td>string</td>
-<td>ID del tipo de documento</td>
+<td>-</td>
+<td>✅</td>
+<td>ID del tipo de documento según catálogo</td>
 </tr>
 <tr>
 <td><code>identificacion</code></td>
 <td>string</td>
+<td>variable</td>
+<td>✅</td>
 <td>Número de identificación del usuario</td>
 </tr>
 <tr>
 <td><code>guid</code></td>
 <td>string</td>
-<td>UUID de la transacción original (opcional si es primer reenvío)</td>
+<td>UUID</td>
+<td>✅</td>
+<td>UUID de la transacción del OTP anterior</td>
 </tr>
 </tbody>
 </table>
-<h3 id="valores-permitidos-para-tiposdocumento_id">Valores Permitidos para <code>tiposdocumento_id</code></h3>
+<h4 id="catalogo-de-tipos-de-documento">Catálogo de Tipos de Documento</h4>
 <table>
 <thead>
 <tr>
-<th>ID</th>
+<th><code>tiposdocumento_id</code></th>
 <th>Descripción</th>
+<th>Código</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>1</code></td>
-<td>Cédula de ciudadanía (CC)</td>
+<td>Cédula de ciudadanía</td>
+<td>CC</td>
 </tr>
 <tr>
 <td><code>2</code></td>
-<td>Cédula de extranjería (CE)</td>
+<td>Cédula de extranjería</td>
+<td>CE</td>
 </tr>
 <tr>
 <td><code>3</code></td>
 <td>NIT</td>
+<td>NIT</td>
 </tr>
 <tr>
 <td><code>8</code></td>
-<td>Pasaporte (PA)</td>
+<td>Pasaporte</td>
+<td>PA</td>
 </tr>
 <tr>
 <td><code>181</code></td>
-<td>Permiso Especial (PEP)</td>
+<td>Permiso Especial</td>
+<td>PEP</td>
 </tr>
 </tbody>
 </table>
-<h3 id="ejemplo-de-body">Ejemplo de Body</h3>
+<h4 id="ejemplo-de-request">Ejemplo de Request</h4>
 <pre><code class="language-json">{
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
@@ -2454,234 +2972,726 @@
 }
 </code></pre>
 <hr />
-<h2 id="flujo-de-validacion-del-servicio">Flujo de Validación del Servicio</h2>
-<p>El servicio ejecuta las siguientes validaciones en orden:</p>
-<h3 id="1-validacion-de-credito-aprobado-vigente">1. Validación de Crédito Aprobado Vigente</h3>
-<p>Se verifica que el cliente tenga un crédito aprobado y vigente (dentro del plazo de 30 días).</p>
-<h4 id="si-no-hay-credito-vigente">❌ Si NO hay crédito vigente</h4>
+<h2 id="validaciones-del-servicio">Validaciones del Servicio</h2>
+<p>El servicio ejecuta las siguientes validaciones en orden secuencial:</p>
+<h3 id="nivel-1-validacion-de-autenticacion">Nivel 1: Validación de Autenticación</h3>
+<p><strong>Reglas:</strong>
+- Token debe estar presente en el header <code>Authorization</code>
+- Token debe tener formato válido: <code>Bearer {token}</code>
+- Token debe estar vigente (no expirado)
+- Token debe corresponder a un usuario autorizado</p>
+<p><strong>Resultado: Token Inválido o Vencido</strong></p>
 <p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;no_credit&quot;,
-  &quot;mensaje&quot;: &quot;No se encontró un crédito vigente para esta identificación.&quot;
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
 }
 </code></pre>
-<h3 id="2-validacion-de-tiempo-minimo-entre-reenvios">2. Validación de Tiempo Mínimo entre Reenvíos</h3>
-<p>El sistema valida que haya transcurrido al menos <strong>1 minuto</strong> desde el último envío de OTP. Esta restricción evita spam y abuso del servicio.</p>
-<h4 id="si-no-ha-pasado-el-tiempo-minimo">⏰ Si NO ha pasado el tiempo mínimo</h4>
-<p><strong>Respuesta:</strong></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;wait_required&quot;,
-  &quot;mensaje&quot;: &quot;Debe esperar 1 minuto desde el último envío antes de solicitar un nuevo código.&quot;,
-  &quot;tiempo_transcurrido&quot;: &quot;30 segundos&quot;,
-  &quot;tiempo_restante&quot;: &quot;30 segundos&quot;
-}
-</code></pre>
-<h3 id="3-validacion-de-transaccion-anterior">3. Validación de Transacción Anterior</h3>
-<p>Si se proporciona un <code>guid</code>, se verifica su existencia y estado.</p>
-<h4 id="i-si-la-transaccion-ya-fue-validada-exitosamente">ℹ️ Si la transacción ya fue validada exitosamente</h4>
-<p><strong>Respuesta:</strong></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;already_validated&quot;,
-  &quot;mensaje&quot;: &quot;Esta transacción ya fue validada correctamente. No es necesario reenviar el código.&quot;
-}
-</code></pre>
-<h3 id="4-invalidacion-de-codigos-anteriores">4. Invalidación de Códigos Anteriores</h3>
-<p>Antes de generar el nuevo OTP, se invalidan todos los códigos OTP anteriores asociados a esta identificación.</p>
-<p><strong>Acciones automáticas:</strong>
-- Invalidación de OTP anterior
-- Reinicio del contador de intentos
-- Generación de nuevo <code>guid</code></p>
-<h3 id="5-generacion-y-envio-de-nuevo-otp">5. Generación y Envío de Nuevo OTP</h3>
-<p>Se genera un nuevo código OTP de 6 dígitos y se envía a los canales registrados por el cliente.</p>
-<p><strong>Acciones automáticas:</strong>
-- Generación de nuevo código OTP de 6 dígitos
-- Generación de nuevo <code>guid</code> (UUID)
-- Envío del código a los canales seleccionados:
-  - SMS
-  - Correo electrónico
-  - WhatsApp (si fue configurado)
-- Registro del envío con timestamp</p>
-<p><strong>Respuesta Success:</strong></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;datos&quot;: {
-    &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
-    &quot;mensaje&quot;: &quot;Nuevo código OTP enviado exitosamente a los canales registrados.&quot;,
-    &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
-    &quot;vigencia_otp&quot;: &quot;53 minutos&quot;,
-    &quot;intentos_disponibles&quot;: 3,
-    &quot;fecha_envio&quot;: &quot;2025-10-10 14:35:20&quot;
-  }
-}
-</code></pre>
+<p><strong>Código HTTP:</strong> <code>401 Unauthorized</code></p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal rojo: <strong>"Token de autorización inválido o ausente"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- Dejar al usuario en la <strong>pantalla para ingresar el OTP</strong> (no reinicia proceso)
+- <strong>Nota:</strong> Este token corresponde a la autenticación del sistema Invictus con el sistema TESEO</p>
 <hr />
-<h2 id="tabla-de-validaciones-y-respuestas">Tabla de Validaciones y Respuestas</h2>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Condición</th>
-<th>HTTP</th>
-<th>status</th>
-<th>message</th>
-<th>Acciones</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>No hay crédito vigente</td>
-<td>200</td>
-<td><code>no_credit</code></td>
-<td>"No se encontró un crédito vigente para esta identificación."</td>
-<td>Ninguna</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Tiempo mínimo no cumplido (&lt;1 min)</td>
-<td>200</td>
-<td><code>wait_required</code></td>
-<td>"Debe esperar 1 minuto desde el último envío."</td>
-<td>Ninguna</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Transacción ya validada</td>
-<td>200</td>
-<td><code>already_validated</code></td>
-<td>"Esta transacción ya fue validada correctamente."</td>
-<td>Ninguna</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Reenvío exitoso</td>
-<td>200</td>
-<td><code>success</code></td>
-<td>"Nuevo código OTP enviado exitosamente."</td>
-<td>Generación y envío de nuevo OTP</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Error en campos requeridos</td>
-<td>400</td>
-<td><code>error</code></td>
-<td>"El campo {campo} es obligatorio."</td>
-<td>Ninguna</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Token inválido o ausente</td>
-<td>401</td>
-<td><code>error</code></td>
-<td>"Token de autorización inválido o ausente."</td>
-<td>Ninguna</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Error en envío de mensajes</td>
-<td>500</td>
-<td><code>error</code></td>
-<td>"Error al enviar el código OTP. Intente nuevamente."</td>
-<td>Log de error para revisión</td>
-</tr>
-</tbody>
-</table>
+<h3 id="nivel-2-validacion-de-campos-requeridos">Nivel 2: Validación de Campos Requeridos</h3>
+<p><strong>Reglas:</strong>
+- Todos los campos son obligatorios: <code>tiposdocumento_id</code>, <code>identificacion</code>, <code>guid</code>
+- Campos deben ser tipo string
+- No se permiten valores vacíos o nulos
+- <code>guid</code> debe ser un UUID válido</p>
+<p><strong>Respuesta en caso de error:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo identificacion es obligatorio.&quot;,
+    &quot;El campo guid es obligatorio.&quot;
+  ]
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
 <hr />
-<h2 id="ejemplos-de-respuestas">Ejemplos de Respuestas</h2>
-<h3 id="respuesta-exitosa-nuevo-otp-enviado">✅ Respuesta Exitosa - Nuevo OTP Enviado</h3>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;datos&quot;: {
-    &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
-    &quot;mensaje&quot;: &quot;Nuevo código OTP enviado exitosamente a los canales registrados.&quot;,
-    &quot;canales_envio&quot;: [&quot;SMS&quot;, &quot;Email&quot;, &quot;WhatsApp&quot;],
-    &quot;vigencia_otp&quot;: &quot;3 minutos&quot;,
-    &quot;intentos_disponibles&quot;: 3,
-    &quot;fecha_envio&quot;: &quot;2025-10-10 14:35:20&quot;
-  }
-}
-</code></pre>
-<h3 id="debe-esperar-tiempo-minimo">⏰ Debe Esperar Tiempo Mínimo</h3>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;wait_required&quot;,
-  &quot;mensaje&quot;: &quot;Debe esperar 1 minuto desde el último envío antes de solicitar un nuevo código.&quot;,
-  &quot;tiempo_transcurrido&quot;: &quot;30 segundos&quot;,
-  &quot;tiempo_restante&quot;: &quot;30 segundos&quot;,
-  &quot;proximo_envio_disponible&quot;: &quot;2025-10-10 14:36:00&quot;
-}
-</code></pre>
-<h3 id="sin-credito-vigente">❌ Sin Crédito Vigente</h3>
+<h3 id="nivel-3-validacion-de-credito-aprobado-vigente">Nivel 3: Validación de Crédito Aprobado Vigente</h3>
+<p><strong>Proceso:</strong>
+1. Se verifica que el cliente tenga un crédito aprobado
+2. Se valida que el crédito esté vigente (dentro del plazo de 30 días desde aprobación)
+3. Se verifica que el crédito no haya sido desembolsado</p>
+<p><strong>Resultado: No Hay Crédito Vigente</strong></p>
+<p>El cliente no tiene un crédito aprobado, el crédito ha vencido, o ya fue desembolsado.</p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;no_credit&quot;,
   &quot;mensaje&quot;: &quot;No se encontró un crédito vigente para esta identificación.&quot;,
   &quot;razon&quot;: &quot;El crédito ha vencido o ya fue desembolsado&quot;
 }
 </code></pre>
-<h3 id="i-transaccion-ya-validada">ℹ️ Transacción Ya Validada</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal con la información del servicio
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → REGRESA a la pantalla principal de Invictus</strong>
+- <strong>El proceso de desembolso se REINICIA desde cero</strong></p>
+<p><strong>Campos de respuesta:</strong>
+- <code>status</code>: Indicador del resultado (<code>no_credit</code>)
+- <code>mensaje</code>: Descripción para el usuario final
+- <code>razon</code>: Motivo específico (opcional)</p>
+<hr />
+<h3 id="nivel-4-validacion-de-limite-de-reenvios">Nivel 4: Validación de Límite de Reenvíos</h3>
+<p><strong>Reglas de negocio:</strong>
+- Límite máximo de reenvíos: <strong>5 reenvíos</strong> por transacción (parametrizable)
+- El límite se cuenta por cada proceso de desembolso completo
+- <strong>La cantidad de reenvíos es administrada por TESEO</strong>
+- Al alcanzar el límite, se debe reiniciar el proceso completo</p>
+<p><strong>Resultado: Límite de Reenvíos Excedido</strong></p>
+<p>El usuario ha superado el número máximo de reenvíos permitidos para esta transacción.</p>
+<p><strong>Respuesta:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;resend_limit_exceeded&quot;,
+  &quot;mensaje&quot;: &quot;Has excedido el número máximo (5) de re envíos permitidos, Comunícate con Credintegral&quot;,
+  &quot;reenvios_realizados&quot;: 5,
+  &quot;reenvios_permitidos&quot;: 5
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal naranja con texto:
+  <code>"Has excedido el número máximo (5) de re envíos permitidos,
+  Comunícate con Credintegral"</code>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → REGRESA a la pantalla principal de Invictus</strong>
+- <strong>El proceso de desembolso se debe REINICIAR desde el principio</strong>
+- Cliente debe contactar con Credintegral para resolver el problema</p>
+<p><strong>Campos de respuesta:</strong>
+- <code>status</code>: Indicador del resultado (<code>resend_limit_exceeded</code>)
+- <code>mensaje</code>: Descripción para el usuario final
+- <code>reenvios_realizados</code>: Número de reenvíos que ha realizado
+- <code>reenvios_permitidos</code>: Número máximo configurado</p>
+<p><strong>Nota importante:</strong> Este mensaje se da cuando se excede el límite de reenvíos permitidos. La cantidad de reenvíos es administrada por TESEO.</p>
+<hr />
+<h3 id="nivel-5-validacion-de-transaccion-completada">Nivel 5: Validación de Transacción Completada</h3>
+<p><strong>Proceso:</strong>
+1. Se verifica el estado de la transacción asociada al <code>guid</code>
+2. Se valida si el OTP ya fue validado exitosamente previamente</p>
+<p><strong>Resultado: Transacción Ya Completada Exitosamente</strong></p>
+<p>La transacción ya fue validada correctamente y no es necesario reenviar el código.</p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;already_validated&quot;,
-  &quot;mensaje&quot;: &quot;Esta transacción ya fue validada correctamente. No es necesario reenviar el código.&quot;,
+  &quot;mensaje&quot;: &quot;Esta transacción ya ha sido completada exitosamente. No es necesario un nuevo código.&quot;,
   &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:00&quot;
 }
 </code></pre>
-<h3 id="error-en-envio-de-mensajes">❗ Error en Envío de Mensajes</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal rojo con texto:
+  <code>"Esta transacción ya ha sido completada exitosamente.
+  No es necesario un nuevo código."</code>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → REGRESA a la pantalla principal de Invictus</strong>
+- No requiere reiniciar proceso, la transacción ya está completa</p>
+<p><strong>Campos de respuesta:</strong>
+- <code>status</code>: Indicador del resultado (<code>already_validated</code>)
+- <code>mensaje</code>: Descripción para el usuario final
+- <code>fecha_validacion</code>: Timestamp de cuando se validó el OTP exitosamente</p>
+<p><strong>Nota importante:</strong> Esto se da cuando se envía el mismo OTP dos o más veces y TESEO ya lo validó correctamente.</p>
+<hr />
+<h3 id="nivel-6-validacion-de-transaccion-existente">Nivel 6: Validación de Transacción Existente</h3>
+<p><strong>Proceso:</strong>
+1. Se verifica que el <code>guid</code> proporcionado exista en el sistema TESEO
+2. Se valida que el <code>guid</code> corresponda al <code>tiposdocumento_id</code> e <code>identificacion</code> enviados</p>
+<p><strong>Resultado: Transacción No Encontrada o No Corresponde</strong></p>
+<p>La transacción con el <code>guid</code> proporcionado no existe o no coincide con la identificación del cliente.</p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Error al enviar el código OTP. Intente nuevamente en unos momentos.&quot;,
-  &quot;error_tecnico&quot;: &quot;SMS gateway timeout&quot;
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;
 }
 </code></pre>
-<h3 id="error-por-campo-faltante">❗ Error por Campo Faltante</h3>
+<p><strong>Código HTTP:</strong> <code>404 Not Found</code></p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal rojo: <strong>"Transacción no encontrada o inválida"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- Dejar al usuario en la <strong>pantalla para ingresar el OTP</strong> (no reinicia proceso)</p>
+<hr />
+<h3 id="nivel-7-generacion-y-envio-de-nuevo-otp">Nivel 7: Generación y Envío de Nuevo OTP ✅</h3>
+<p><strong>Condiciones cumplidas:</strong>
+- ✅ Token de autenticación válido
+- ✅ Todos los campos requeridos presentes
+- ✅ Cliente tiene crédito vigente
+- ✅ Límite de reenvíos NO excedido (&lt;5 reenvíos)
+- ✅ Transacción NO ha sido completada exitosamente
+- ✅ Transacción (GUID) existe y corresponde a la identificación</p>
+<p><strong>Acciones automáticas del sistema:</strong></p>
+<ol>
+<li>
+<p><strong>Invalidación de códigos anteriores:</strong></p>
+<ul>
+<li>Se invalidan <strong>todos los códigos OTP anteriores</strong> de esta identificación</li>
+<li>Solo el código más reciente será válido</li>
+<li>Los intentos fallidos de códigos anteriores NO afectan el nuevo código</li>
+</ul>
+</li>
+<li>
+<p><strong>Generación de nuevo código:</strong></p>
+<ul>
+<li>Se genera un nuevo código OTP de 6 dígitos (numérico o alfanumérico)</li>
+<li>Se genera un <strong>nuevo GUID</strong> (UUID v4) diferente al anterior</li>
+<li>Se establece nueva vigencia: 3 minutos desde este momento</li>
+<li>Se reinicia el contador de intentos a 0 (3 intentos disponibles)</li>
+</ul>
+</li>
+<li>
+<p><strong>Envío del código:</strong></p>
+<ul>
+<li>Se envía el nuevo código a los canales configurados del cliente:<ul>
+<li>SMS</li>
+<li>Correo electrónico (Email)</li>
+<li>WhatsApp (si está configurado)</li>
+</ul>
+</li>
+<li>Se registra el envío con timestamp completo</li>
+</ul>
+</li>
+<li>
+<p><strong>Incremento del contador de reenvíos:</strong></p>
+<ul>
+<li>Se incrementa el contador de reenvíos para esta transacción</li>
+<li>Se almacena para validación futura del límite</li>
+</ul>
+</li>
+</ol>
+<p><strong>Respuesta exitosa:</strong></p>
 <pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+    &quot;mensaje&quot;: &quot;Nuevo código OTP enviado exitosamente a los canales registrados.&quot;,
+    &quot;codigo_otp&quot;: 456789,
+    &quot;canales_envio&quot;: {
+      &quot;whatsapp&quot;: &quot;314 *** ** 96&quot;,
+      &quot;sms&quot;: &quot;314 *** ** 96&quot;,
+      &quot;email&quot;: &quot;ars****th@gmail.com&quot;
+    },
+    &quot;vigencia_otp&quot;: &quot;3 minutos&quot;,
+    &quot;intentos_disponibles&quot;: 3,
+    &quot;fecha_envio&quot;: &quot;2025-10-10 14:35:20&quot;,
+    &quot;reenvios_realizados&quot;: 1,
+    &quot;reenvios_restantes&quot;: 4
+  }
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Comportamiento en Invictus:</strong></p>
+<ol>
+<li><strong>Mostrar mensaje modal azul</strong> con instrucciones:
+   ```
+   "Ingrese el código OTP de verificación suministrado por el cliente para la
+   autenticación y envío de documentos de crédito"</li>
+</ol>
+<p>Medios de envío:
+   WhatsApp 314 *** ** 96
+   SMS 314 *** ** 96
+   Email ars<strong><em>*th@gmail.com
+   ```
+    - Mostrar información de los canales de envío (ofuscada)
+    - Botón </em>*[CERRAR]</strong> para cerrar el modal</p>
+<ol>
+<li>
+<p><strong>Cerrar modal → Permanece en la pantalla para ingresar el OTP</strong></p>
+</li>
+<li>
+<p><strong>Actualizar pantalla de autenticación:</strong></p>
+<ul>
+<li><strong>Limpiar las 6 casillas</strong> del código OTP (en blanco)</li>
+<li><strong>Reiniciar temporizador</strong> a 3:00 minutos (cuenta regresiva)</li>
+<li><strong>Inhabilitar nuevamente</strong> la opción "Reenviar código OTP"</li>
+<li>La opción se volverá a habilitar cuando el temporizador llegue a 0:00</li>
+</ul>
+</li>
+<li>
+<p><strong>Validaciones de casillas:</strong></p>
+<ul>
+<li>Es <strong>obligatorio</strong> que el asesor ingrese información en <strong>todas las casillas del OTP</strong></li>
+<li>En caso contrario, no debe permitir realizar la confirmación</li>
+<li>Debe resaltar en <strong>ROJO</strong> la casilla que falta por información</li>
+<li><strong>Nota:</strong> Esta pantalla debe obedecer a lo descrito en <strong>HUE 002 Consultar cliente para validar Crédito, criterio de aceptación 7</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Usuario puede continuar:</strong></p>
+<ul>
+<li>Ingresar el nuevo código OTP en las 6 casillas</li>
+<li>Presionar [Confirmar] para validar (consume Servicio 2: Validación OTP)</li>
+</ul>
+</li>
+</ol>
+<p><strong>Campos de respuesta:</strong>
+- <code>status</code>: Indicador del resultado (<code>success</code>)
+- <code>datos.guid</code>: <strong>Nuevo</strong> identificador único de transacción (diferente al anterior)
+- <code>datos.mensaje</code>: Mensaje de confirmación para el usuario
+- <code>datos.codigo_otp</code>: Nuevo código OTP generado (para propósitos de prueba/desarrollo)
+- <code>datos.canales_envio</code>: Objeto con canales disponibles (<strong>información ofuscada por TESEO</strong>)
+    - <code>whatsapp</code>: Número ofuscado de WhatsApp
+    - <code>sms</code>: Número ofuscado de SMS
+    - <code>email</code>: Email ofuscado
+- <code>datos.vigencia_otp</code>: Tiempo de validez del nuevo código (formato legible)
+- <code>datos.intentos_disponibles</code>: Número de intentos disponibles (reiniciado a 3)
+- <code>datos.fecha_envio</code>: Timestamp del envío (formato: YYYY-MM-DD HH:MM:SS)
+- <code>datos.reenvios_realizados</code>: Cantidad de reenvíos realizados hasta el momento
+- <code>datos.reenvios_restantes</code>: Reenvíos que aún pueden realizarse</p>
+<p><strong>Nota importante:</strong> El <code>guid</code> generado en el reenvío es <strong>diferente</strong> al original y debe ser almacenado por Invictus para usar en la validación posterior del OTP.</p>
+<hr />
+<h2 id="response-tabla-resumen-de-respuestas">Response - Tabla Resumen de Respuestas</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Condición</th>
+<th>HTTP Code</th>
+<th>status</th>
+<th>Mensaje UI Invictus</th>
+<th>Color Modal</th>
+<th>Comportamiento</th>
+<th>Reinicia Proceso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Token inválido/ausente</td>
+<td>401</td>
+<td><code>error</code></td>
+<td>"Token de autorización inválido..."</td>
+<td>Rojo</td>
+<td>Permanece en OTP</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Campos requeridos faltantes</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>No</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sin crédito vigente</td>
+<td>200</td>
+<td><code>no_credit</code></td>
+<td>"No se encontró un crédito vigente..."</td>
+<td>-</td>
+<td>Regresa a inicio</td>
+<td><strong>SÍ</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Límite de reenvíos excedido (&gt;5)</td>
+<td>200</td>
+<td><code>resend_limit_exceeded</code></td>
+<td>"Has excedido el número máximo (5)..."</td>
+<td>Naranja</td>
+<td>Regresa a inicio</td>
+<td><strong>SÍ</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Transacción ya completada</td>
+<td>200</td>
+<td><code>already_validated</code></td>
+<td>"Esta transacción ya ha sido completada..."</td>
+<td>Rojo</td>
+<td>Regresa a inicio</td>
+<td>No</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Transacción no encontrada</td>
+<td>404</td>
+<td><code>error</code></td>
+<td>"Transacción no encontrada o inválida"</td>
+<td>Rojo</td>
+<td>Permanece en OTP</td>
+<td>No</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Reenvío exitoso</td>
+<td>200</td>
+<td><code>success</code></td>
+<td>Instrucciones + medios de envío</td>
+<td>Azul</td>
+<td>Permanece en OTP</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejemplos-de-respuestas-completas">Ejemplos de Respuestas Completas</h2>
+<h3 id="caso-1-reenvio-exitoso-nuevo-otp-enviado">✅ Caso 1: Reenvío Exitoso - Nuevo OTP Enviado</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/reenvio_otp_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+    &quot;mensaje&quot;: &quot;Nuevo código OTP enviado exitosamente a los canales registrados.&quot;,
+    &quot;codigo_otp&quot;: 456789,
+    &quot;canales_envio&quot;: {
+      &quot;whatsapp&quot;: &quot;314 *** ** 96&quot;,
+      &quot;sms&quot;: &quot;314 *** ** 96&quot;,
+      &quot;email&quot;: &quot;ars****th@gmail.com&quot;
+    },
+    &quot;vigencia_otp&quot;: &quot;3 minutos&quot;,
+    &quot;intentos_disponibles&quot;: 3,
+    &quot;fecha_envio&quot;: &quot;2025-10-10 14:35:20&quot;,
+    &quot;reenvios_realizados&quot;: 1,
+    &quot;reenvios_restantes&quot;: 4
+  }
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal azul con instrucciones y medios de envío
+- Cerrar modal
+- Limpiar las 6 casillas OTP
+- Reiniciar temporizador a 3:00
+- Inhabilitar opción "Reenviar código OTP"
+- Usuario puede ingresar nuevo código</p>
+<hr />
+<h3 id="caso-2-limite-de-reenvios-excedido">🚫 Caso 2: Límite de Reenvíos Excedido</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/reenvio_otp_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;resend_limit_exceeded&quot;,
+  &quot;mensaje&quot;: &quot;Has excedido el número máximo (5) de re envíos permitidos, Comunícate con Credintegral&quot;,
+  &quot;reenvios_realizados&quot;: 5,
+  &quot;reenvios_permitidos&quot;: 5
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal naranja: <strong>"Has excedido el número máximo (5) de re envíos permitidos, Comunícate con Credintegral"</strong>
+- Botón [CERRAR]
+- Cerrar modal → <strong>REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso de desembolso se REINICIA desde el principio</strong>
+- Cliente debe contactar con Credintegral</p>
+<hr />
+<h3 id="caso-3-transaccion-ya-completada">⚠️ Caso 3: Transacción Ya Completada</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/reenvio_otp_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;already_validated&quot;,
+  &quot;mensaje&quot;: &quot;Esta transacción ya ha sido completada exitosamente. No es necesario un nuevo código.&quot;,
+  &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:00&quot;
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal rojo: <strong>"Esta transacción ya ha sido completada exitosamente. No es necesario un nuevo código."</strong>
+- Botón [CERRAR]
+- Cerrar modal → <strong>REGRESA a pantalla principal de Invictus</strong>
+- Esto se da cuando se envía el mismo OTP dos o más veces y TESEO ya lo validó correctamente</p>
+<hr />
+<h3 id="caso-4-transaccion-no-encontrada">❌ Caso 4: Transacción No Encontrada</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/reenvio_otp_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;guid-invalido-12345&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 404 Not Found
+Content-Type: application/json
+
+{
   &quot;status&quot;: &quot;error&quot;,
-  &quot;errors&quot;: [
-    &quot;El campo identificacion es obligatorio.&quot;
-  ]
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;
 }
 </code></pre>
-<h3 id="error-de-autenticacion">❗ Error de Autenticación</h3>
-<pre><code class="language-json">{
+<p><strong>Acción en Invictus:</strong>
+- Modal rojo: <strong>"Transacción no encontrada o inválida"</strong>
+- Botón [CERRAR]
+- Cerrar modal → Permanece en pantalla de ingreso OTP</p>
+<hr />
+<h3 id="caso-5-error-de-autenticacion-token-invalido">🔐 Caso 5: Error de Autenticación (Token Inválido)</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/reenvio_otp_desembolso
+Authorization: Bearer token_invalido_o_expirado
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+
+{
   &quot;status&quot;: &quot;error&quot;,
   &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
 }
 </code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal rojo: <strong>"Token de autorización inválido o ausente"</strong>
+- Botón [CERRAR]
+- Cerrar modal → Permanece en pantalla de ingreso OTP
+- <strong>Nota:</strong> Este token corresponde a la autenticación del sistema Invictus con TESEO</p>
+<hr />
+<h3 id="caso-6-sin-credito-vigente">⚠️ Caso 6: Sin Crédito Vigente</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/reenvio_otp_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;no_credit&quot;,
+  &quot;mensaje&quot;: &quot;No se encontró un crédito vigente para esta identificación.&quot;,
+  &quot;razon&quot;: &quot;El crédito ha vencido o ya fue desembolsado&quot;
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal con mensaje del servicio
+- Botón [CERRAR]
+- Cerrar modal → <strong>REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso se REINICIA desde cero</strong></p>
+<hr />
+<h3 id="caso-7-error-de-validacion-campos-faltantes">🚫 Caso 7: Error de Validación - Campos Faltantes</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/reenvio_otp_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 400 Bad Request
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo identificacion es obligatorio.&quot;,
+    &quot;El campo guid es obligatorio.&quot;
+  ]
+}
+</code></pre>
+<hr />
+<h2 id="integracion-en-invictus">Integración en Invictus</h2>
+<h3 id="opcion-reenviar-codigo-otp">Opción "Reenviar código OTP"</h3>
+<p><strong>Estado inicial:</strong>
+- <strong>INHABILITADA</strong> cuando se muestra por primera vez la pantalla de autenticación
+- Se muestra como botón o enlace en la pantalla de autenticación</p>
+<p><strong>Habilitación:</strong>
+- Se <strong>HABILITA</strong> automáticamente cuando el temporizador llega a <strong>0:00</strong>
+- Indicador visual de que el código ha expirado</p>
+<p><strong>Al seleccionar:</strong>
+1. Sistema consume este servicio (Reenvío OTP)
+2. Espera respuesta del servicio</p>
+<p><strong>Comportamiento según respuesta:</strong></p>
+<h4 id="a-response-success">a) Response: <code>success</code></h4>
+<ol>
+<li>
+<p>Mostrar modal azul con:</p>
+<ul>
+<li>Título: "Autenticación Cliente"</li>
+<li>Mensaje: "Ingrese el código OTP de verificación suministrado por el cliente para la autenticación y envío de documentos de crédito"</li>
+<li>Medios de envío (ofuscados):<ul>
+<li>WhatsApp 314 *** ** 96</li>
+<li>SMS 314 *** ** 96</li>
+<li>Email ars****th@gmail.com</li>
+</ul>
+</li>
+<li>Mensaje: "El tiempo de vigencia del OTP es de 3:00 minutos"</li>
+<li>Botón [CERRAR]</li>
+</ul>
+</li>
+<li>
+<p>Al cerrar modal:</p>
+<ul>
+<li>Permanece en pantalla de autenticación</li>
+<li><strong>Limpia las 6 casillas OTP</strong> (en blanco)</li>
+<li><strong>Reinicia temporizador a 3:00</strong> minutos</li>
+<li><strong>Inhabilita opción "Reenviar código OTP"</strong> nuevamente</li>
+</ul>
+</li>
+<li>
+<p>Validaciones de casillas:</p>
+<ul>
+<li>Es <strong>obligatorio</strong> ingresar información en <strong>todas las casillas</strong></li>
+<li>Si alguna está vacía al intentar [Confirmar]:<ul>
+<li>Resalta en <strong>ROJO</strong> las casillas faltantes</li>
+<li>No permite habilitar [Confirmar]</li>
+</ul>
+</li>
+<li><strong>Nota:</strong> Debe obedecer HUE 002, criterio 7</li>
+</ul>
+</li>
+</ol>
+<h4 id="b-response-resend_limit_exceeded">b) Response: <code>resend_limit_exceeded</code></h4>
+<ol>
+<li>Modal naranja: "Has excedido el número máximo (5) de re envíos permitidos, Comunícate con Credintegral"</li>
+<li>[CERRAR]</li>
+<li>Cierra modal → <strong>Regresa a pantalla principal de Invictus</strong></li>
+<li><strong>Proceso completo se REINICIA</strong></li>
+</ol>
+<h4 id="c-response-already_validated">c) Response: <code>already_validated</code></h4>
+<ol>
+<li>Modal rojo: "Esta transacción ya ha sido completada exitosamente. No es necesario un nuevo código."</li>
+<li>[CERRAR]</li>
+<li>Cierra modal → <strong>Regresa a pantalla principal de Invictus</strong></li>
+<li>Transacción ya está completa</li>
+</ol>
+<h4 id="d-response-error-transaccion">d) Response: <code>error</code> (transacción)</h4>
+<ol>
+<li>Modal rojo: "Transacción no encontrada o inválida"</li>
+<li>[CERRAR]</li>
+<li>Permanece en pantalla OTP</li>
+</ol>
+<h4 id="e-response-error-autenticacion">e) Response: <code>error</code> (autenticación)</h4>
+<ol>
+<li>Modal rojo: "Token de autorización inválido o ausente"</li>
+<li>[CERRAR]</li>
+<li>Permanece en pantalla OTP</li>
+</ol>
+<h4 id="f-response-no_credit">f) Response: <code>no_credit</code></h4>
+<ol>
+<li>Modal con mensaje de crédito no vigente</li>
+<li>[CERRAR]</li>
+<li>Cierra modal → <strong>Regresa a pantalla principal de Invictus</strong></li>
+<li><strong>Proceso se REINICIA</strong></li>
+</ol>
 <hr />
 <h2 id="consideraciones-de-seguridad">Consideraciones de Seguridad</h2>
 <h3 id="control-de-reenvios">Control de Reenvíos</h3>
 <ul>
-<li><strong>Tiempo mínimo entre reenvíos:</strong> 1 minuto (60 segundos) - <strong>parametrizable</strong></li>
-<li><strong>Propósito:</strong> Evitar spam y ataques de denegación de servicio</li>
-<li><strong>Cálculo:</strong> Se considera desde el timestamp del último envío exitoso</li>
+<li><strong>Límite máximo de reenvíos:</strong> 5 reenvíos por transacción (parametrizable)</li>
+<li><strong>Propósito:</strong> Evitar spam, ataques de denegación de servicio y fraude</li>
+<li><strong>Administración:</strong> La cantidad de reenvíos es administrada por TESEO</li>
+<li><strong>Contador:</strong> Se incrementa con cada reenvío exitoso</li>
 </ul>
 <h3 id="invalidacion-de-codigos">Invalidación de Códigos</h3>
 <ul>
 <li>Al generar un nuevo OTP, <strong>todos los códigos anteriores</strong> se invalidan automáticamente</li>
-<li>Solo el código más reciente es válido para su validación</li>
-<li>Los intentos fallidos de códigos anteriores no afectan el nuevo código</li>
+<li>Solo el código <strong>más reciente</strong> es válido para su validación</li>
+<li>Los intentos fallidos de códigos anteriores <strong>no afectan</strong> el nuevo código</li>
+<li>El contador de intentos se <strong>reinicia a 0</strong> (3 intentos disponibles)</li>
 </ul>
 <h3 id="nuevo-codigo-otp">Nuevo Código OTP</h3>
 <ul>
-<li><strong>Vigencia:</strong> 5 minutos desde su generación</li>
-<li><strong>Longitud:</strong> 6 dígitos numéricos</li>
+<li><strong>Vigencia:</strong> 3 minutos desde su generación (parametrizable)</li>
+<li><strong>Longitud:</strong> 6 dígitos (numérico o alfanumérico según configuración)</li>
 <li><strong>Intentos:</strong> 3 intentos máximo (se reinicia el contador)</li>
-<li><strong>Unicidad:</strong> Cada reenvío genera un código completamente nuevo</li>
+<li><strong>Unicidad:</strong> Cada reenvío genera un código completamente <strong>nuevo y único</strong></li>
 </ul>
-<h3 id="limites-de-reenvio">Límites de Reenvío</h3>
-<p>Aunque el sistema valida el tiempo mínimo, se recomienda implementar límites adicionales:</p>
+<h3 id="nuevo-guid">Nuevo GUID</h3>
 <ul>
-<li><strong>Máximo de reenvíos por hora:</strong> 5 reenvíos (sugerido, parametrizable)</li>
-<li><strong>Bloqueo temporal:</strong> Después de 10 reenvíos, bloqueo de 1 hora</li>
-<li><strong>Alertas:</strong> Notificar al equipo de seguridad ante patrones sospechosos</li>
+<li><strong>Generación:</strong> Se genera un <strong>nuevo GUID</strong> (UUID v4) diferente al anterior</li>
+<li><strong>Importancia:</strong> Invictus debe <strong>almacenar el nuevo GUID</strong> para usarlo en:<ul>
+<li>Validación posterior del OTP (Servicio 2)</li>
+<li>Futuros reenvíos si son necesarios</li>
 </ul>
+</li>
+<li>El GUID anterior queda invalidado</li>
+</ul>
+<h3 id="limites-recomendados">Límites Recomendados</h3>
+<p>Aunque el sistema valida el límite principal, se recomienda:</p>
+<table>
+<thead>
+<tr>
+<th>Límite</th>
+<th>Valor Sugerido</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reenvíos por transacción</strong></td>
+<td>5</td>
+<td>Máximo por proceso de desembolso</td>
+</tr>
+<tr>
+<td><strong>Bloqueo temporal</strong></td>
+<td>1 hora</td>
+<td>Después de exceder límite</td>
+</tr>
+<tr>
+<td><strong>Alertas de seguridad</strong></td>
+<td>Automáticas</td>
+<td>Notificar patrones sospechosos</td>
+</tr>
+</tbody>
+</table>
 <h3 id="registro-de-auditoria">Registro de Auditoría</h3>
-<ul>
-<li>Cada reenvío queda registrado con timestamp y nuevo <code>guid</code></li>
-<li>Se almacena: usuario, IP de origen, canal de envío, estado del envío</li>
-<li>Trazabilidad completa para auditorías y detección de fraude</li>
-</ul>
+<p>Cada reenvío debe registrar:
+- <strong>Timestamp:</strong> Fecha y hora exacta del reenvío
+- <strong>Nuevo GUID:</strong> UUID generado para este código
+- <strong>Identificación del cliente:</strong> Para trazabilidad
+- <strong>IP de origen:</strong> Dirección IP desde donde se realizó la petición
+- <strong>Canal de envío:</strong> SMS, Email, WhatsApp
+- <strong>Estado del envío:</strong> Exitoso o fallido por canal
+- <strong>Contador de reenvíos:</strong> Número actual de reenvíos realizados</p>
 <hr />
 <h2 id="parametros-configurables">Parámetros Configurables</h2>
-<p>Los siguientes valores pueden configurarse en el sistema:</p>
+<p>Los siguientes valores pueden configurarse en el sistema TESEO:</p>
 <table>
 <thead>
 <tr>
@@ -2692,50 +3702,159 @@
 </thead>
 <tbody>
 <tr>
-<td>Tiempo mínimo entre reenvíos</td>
-<td>60 segundos (1 minuto)</td>
-<td>Tiempo de espera obligatorio</td>
+<td><strong>Reenvíos máximos permitidos</strong></td>
+<td>5</td>
+<td>Límite por transacción de desembolso</td>
 </tr>
 <tr>
-<td>Vigencia del OTP</td>
-<td>5 minutos</td>
+<td><strong>Vigencia del nuevo OTP</strong></td>
+<td>3 minutos</td>
 <td>Tiempo de validez del código</td>
 </tr>
 <tr>
-<td>Intentos de validación</td>
+<td><strong>Intentos de validación</strong></td>
 <td>3 intentos</td>
-<td>Número máximo de intentos por OTP</td>
+<td>Número máximo por código OTP</td>
 </tr>
 <tr>
-<td>Reenvíos máximos por hora</td>
-<td>5 reenvíos</td>
-<td>Límite de seguridad</td>
+<td><strong>Longitud del código</strong></td>
+<td>6 dígitos</td>
+<td>Cantidad de caracteres del OTP</td>
+</tr>
+<tr>
+<td><strong>Tipo de código</strong></td>
+<td>Numérico</td>
+<td>Numérico o Alfanumérico</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="flujo-de-integracion">Flujo de Integración</h2>
-<p>!!! "Secuencia de Uso"
-    1. <strong>Cliente no recibe OTP inicial</strong> o el código expira
-    2. <strong>Punto Gana invoca este servicio</strong> para reenviar código
-    3. <strong>Sistema valida</strong> tiempo mínimo y estado del crédito
-    4. <strong>Se genera nuevo OTP</strong> y se envía a los canales
-    5. <strong>Cliente recibe nuevo código</strong> y lo ingresa en el sistema
-    6. <strong>Se valida el nuevo OTP</strong> con el servicio de validación</p>
-<hr />
-<p>```</p>
-<hr />
 <h2 id="notas-importantes">Notas Importantes</h2>
+<h3 id="reglas-de-negocio">📋 Reglas de Negocio</h3>
 <ul>
-<li>El <code>guid</code> generado en el reenvío es <strong>diferente</strong> al original</li>
-<li>Cada reenvío invalida <strong>todos los códigos anteriores</strong> de esa identificación</li>
-<li>El contador de intentos se <strong>reinicia a cero</strong> con cada nuevo código</li>
-<li>El tiempo de espera de 1 minuto se calcula desde el <strong>último envío exitoso</strong></li>
-<li>Los canales de envío (SMS, Email, WhatsApp) son los mismos configurados inicialmente</li>
-<li>Si hay fallas en el envío a algún canal, se registra pero no se bloquea el proceso</li>
-<li>Este servicio puede invocarse sin <code>guid</code> si es la primera vez</li>
-<li>El punto Gana debe almacenar el nuevo <code>guid</code> para la validación posterior</li>
+<li>✅ El <code>guid</code> generado en el reenvío es <strong>diferente</strong> al original</li>
+<li>✅ Cada reenvío invalida <strong>todos los códigos anteriores</strong> de esa identificación</li>
+<li>✅ El contador de intentos se <strong>reinicia a cero</strong> (3 intentos disponibles) con cada nuevo código</li>
+<li>✅ Los canales de envío (SMS, Email, WhatsApp) son los mismos configurados inicialmente para el cliente</li>
+<li>✅ Si hay fallas en el envío a algún canal, se registra pero <strong>no se bloquea el proceso</strong></li>
+<li>✅ El punto Gana (Invictus) debe <strong>almacenar el nuevo GUID</strong> para la validación posterior</li>
+<li>✅ <strong>La cantidad de reenvíos es administrada por TESEO</strong> (no por Invictus)</li>
+<li>✅ Al exceder el límite de reenvíos, el cliente debe <strong>comunicarse con Credintegral</strong></li>
 </ul>
+<h3 id="flujo-completo-con-reenvio">🔄 Flujo Completo con Reenvío</h3>
+<pre><code>Servicio 1: Validación de Crédito Vigente
+     ↓ (retorna guid_1 + codigo_otp_1)
+Pantalla de Autenticación Cliente
+     ↓
+Temporizador llega a 0:00 (código expirado)
+     ↓
+Se habilita &quot;Reenviar código OTP&quot;
+     ↓
+Servicio 3: Reenvío de OTP (este documento)
+     ↓ (retorna guid_2 + codigo_otp_2 - NUEVO Y DIFERENTE)
+Pantalla de Autenticación Cliente (actualizada)
+     ↓ (temporizador reiniciado, casillas limpias)
+Cliente ingresa nuevo código OTP
+     ↓
+Servicio 2: Validación de OTP (usa guid_2)
+     ↓ (valida codigo_otp_2)
+Sección 2: Datos Crédito
+     ↓
+Desembolso Final
+</code></pre>
+<h3 id="configuracion-del-ambiente">⚙️ Configuración del Ambiente</h3>
+<p><strong>Ambiente de Pruebas (QA):</strong>
+- Base URL: <code>https://testing-sygma.com/api</code>
+- Endpoint Login: <code>/login</code>
+- Endpoint Reenvío OTP: <code>/reenvio_otp_desembolso</code>
+- Usuario: <code>ws_invictus</code>
+- Password: <code>g3z0OmJP7?@(*</code></p>
+<h3 id="especificaciones-de-ui-para-mensajes-modales">🎨 Especificaciones de UI para Mensajes Modales</h3>
+<table>
+<thead>
+<tr>
+<th>Status Response</th>
+<th>Color Modal</th>
+<th>Título/Mensaje</th>
+<th>Botón</th>
+<th>Acción al Cerrar</th>
+<th>Reinicia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td>Azul</td>
+<td>Instrucciones + medios envío</td>
+<td>[CERRAR]</td>
+<td>Permanece en OTP</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>resend_limit_exceeded</code></td>
+<td>Naranja</td>
+<td>"Has excedido el número máximo (5)..."</td>
+<td>[CERRAR]</td>
+<td>Regresa a inicio</td>
+<td><strong>SÍ</strong></td>
+</tr>
+<tr>
+<td><code>already_validated</code></td>
+<td>Rojo</td>
+<td>"Esta transacción ya ha sido completada..."</td>
+<td>[CERRAR]</td>
+<td>Regresa a inicio</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>error</code> (transacción)</td>
+<td>Rojo</td>
+<td>"Transacción no encontrada..."</td>
+<td>[CERRAR]</td>
+<td>Permanece en OTP</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>error</code> (autenticación)</td>
+<td>Rojo</td>
+<td>"Token de autorización inválido..."</td>
+<td>[CERRAR]</td>
+<td>Permanece en OTP</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>no_credit</code></td>
+<td>-</td>
+<td>"No se encontró un crédito vigente..."</td>
+<td>[CERRAR]</td>
+<td>Regresa a inicio</td>
+<td><strong>SÍ</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="seguridad-adicional">🔒 Seguridad Adicional</h3>
+<ul>
+<li>Todos los endpoints requieren autenticación via Bearer Token</li>
+<li>Los tokens tienen tiempo de expiración</li>
+<li>Se recomienda implementar retry logic para renovación de token</li>
+<li>Los datos sensibles no deben ser almacenados en logs</li>
+<li>El código OTP nunca debe ser almacenado en texto plano</li>
+<li>Todos los reenvíos deben quedar registrados para auditoría</li>
+<li>Implementar alertas automáticas ante patrones sospechosos de reenvíos</li>
+<li>Monitorear intentos de exceder límite de reenvíos</li>
+</ul>
+<h3 id="monitoreo-y-logs">📊 Monitoreo y Logs</h3>
+<p>Se recomienda registrar:
+- Timestamp de cada petición de reenvío
+- Identificación del usuario consultado (encriptada)
+- GUID anterior y nuevo GUID generado
+- Status de respuesta
+- Número de reenvío (1, 2, 3, etc.)
+- Canales de envío utilizados
+- Estado del envío por cada canal (exitoso/fallido)
+- Tiempo de respuesta del servicio
+- Errores y excepciones
+- Patrones de reenvíos consecutivos (alerta de seguridad)</p>
 
 
 
