@@ -440,18 +440,22 @@ El código ingresado no coincide con el código generado para esta transacción.
     "puede_desembolsar": true,
     "lineas_credito": [
       {
+        "id_linea_credito": 27373,
         "linea_credito": "Línea 1",
         "valor_cupo": 50000,
         "total_entregado": 50000,
         "total_disponible": 50000,
-        "plazo_meses": 12
+        "plazo_meses": 12,
+        "monto_fijo": 'NO'
       },
       {
+        "id_linea_credito": 27375, 
         "linea_credito": "Línea 2",
         "valor_cupo": 50000,
         "total_entregado": 50000,
         "total_disponible": 50000,
-        "plazo_meses": 2
+        "plazo_meses": 2, 
+        "monto_fijo": 'SI'
       }
     ]
   }
@@ -558,18 +562,22 @@ Content-Type: application/json
     "puede_desembolsar": true,
     "lineas_credito": [
       {
+        "id_linea_credito": 27373,      
         "linea_credito": "Línea 1",
         "valor_cupo": 50000,
         "total_entregado": 50000,
         "total_disponible": 50000,
-        "plazo_meses": 12
+        "plazo_meses": 12,
+        "monto_fijo": 'NO'
       },
       {
+        "id_linea_credito": 27375,
         "linea_credito": "Línea 2",
         "valor_cupo": 50000,
         "total_entregado": 50000,
         "total_disponible": 50000,
-        "plazo_meses": 2
+        "plazo_meses": 2,
+        "monto_fijo": 'SI'
       }
     ]
   }

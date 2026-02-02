@@ -1427,22 +1427,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-consulta-de-listas-restrictivas" class="md-nav__link">
+  <a href="#2-validacion-de-credito-aprobado" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Consulta de Listas Restrictivas
+      2. Validación de Crédito Aprobado
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-validacion-de-credito-aprobado" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Validación de Crédito Aprobado
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Validación de Crédito Aprobado">
+    <nav class="md-nav" aria-label="2. Validación de Crédito Aprobado">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1729,7 +1720,7 @@
   
   
   <span class="md-ellipsis">
-    Validación Credito
+    Validación usuario Credito
     
   </span>
   
@@ -1776,6 +1767,29 @@
   
   <span class="md-ellipsis">
     Reenvio OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_linea_credito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lineas de Credito
     
   </span>
   
@@ -1985,22 +1999,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-consulta-de-listas-restrictivas" class="md-nav__link">
+  <a href="#2-validacion-de-credito-aprobado" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Consulta de Listas Restrictivas
+      2. Validación de Crédito Aprobado
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-validacion-de-credito-aprobado" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Validación de Crédito Aprobado
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Validación de Crédito Aprobado">
+    <nav class="md-nav" aria-label="2. Validación de Crédito Aprobado">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2193,7 +2198,7 @@
 
 <h1 id="manual-de-integracion-api-validacion-de-firma-digital-y-listas-restrictivas">📘 Manual de Integración API: Validación de Firma Digital y Listas Restrictivas</h1>
 <h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
-<p>Este servicio permite validar si una persona está en proceso de firma digital, verificar su estado en listas restrictivas a través de operadores como Extradata o Entidad deseada, y determinar la viabilidad de otorgar un crédito. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.</p>
+<p>Este servicio permite validar si una persona está en proceso de firma digital. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.</p>
 <hr />
 <h2 id="tipo-de-servicio">Tipo de Servicio</h2>
 <p><strong>Método HTTP:</strong> <code>POST</code></p>
@@ -2319,20 +2324,7 @@
       &quot;mensaje&quot;: &quot;No hay crédito disponible para firma.&quot;
     }
 </code></pre>
-<h3 id="2-consulta-de-listas-restrictivas">2. Consulta de Listas Restrictivas</h3>
-<p>El sistema consulta ante el operador configurado Extradata o Entidad deseada para verificar si la persona aparece en listas restrictivas</p>
-<p>!!! "Usuario en Lista Restrictiva"
-    <strong>Acciones automáticas:</strong></p>
-<ul>
-<li>Se envía SMS y correo electrónico al usuario con el mensaje y retorna el mensaje tipo json a invictus</li>
-</ul>
-<p><strong>Respuesta a Invictus:</strong></p>
-<pre><code class="language-json">    {
-      &quot;status&quot;: &quot;blocked&quot;,
-      &quot;mensaje&quot;: &quot;No hay crédito disponible para firma.&quot;
-    }
-</code></pre>
-<h3 id="3-validacion-de-credito-aprobado">3. Validación de Crédito Aprobado</h3>
+<h3 id="2-validacion-de-credito-aprobado">2. Validación de Crédito Aprobado</h3>
 <p>Si el usuario <strong>NO</strong> está en lista restrictiva, el sistema verifica si tiene un crédito aprobado.</p>
 <h4 id="si-tiene-credito-aprobado">✅ Si tiene crédito aprobado</h4>
 <p>Se valida la vigencia de la aprobación:</p>

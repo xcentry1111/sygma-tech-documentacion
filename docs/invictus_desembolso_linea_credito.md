@@ -135,6 +135,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 ```json
 {
+  "id_linea_credito": 27375, 
   "tiposdocumento_id": "1",
   "identificacion": "88282828",
   "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
@@ -161,6 +162,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
     "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
     "mensaje": "Cálculo de desembolso realizado exitosamente.",
     "nombre_cliente": "Fernando Osorio",
+    "id_linea_credito": 27375,
     "linea_credito": "Línea Digital",
     "plazo_meses": 4,
     "valor_total": 500000,
@@ -314,6 +316,7 @@ Content-Type: application/json
     "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
     "mensaje": "Cálculo de desembolso realizado exitosamente.",
     "nombre_cliente": "Fernando Osorio",
+    "id_linea_credito": 27375,
     "linea_credito": "Línea Digital",
     "plazo_meses": 4,
     "valor_total": 500000,
@@ -369,6 +372,7 @@ Authorization: Bearer token_invalido_expirado
 Content-Type: application/json
 
 {
+  "id_linea_credito": 27375,
   "tiposdocumento_id": "1",
   "identificacion": "88282828",
   "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
@@ -406,6 +410,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 Content-Type: application/json
 
 {
+  "id_linea_credito": 27375,
   "tiposdocumento_id": "1",
   "identificacion": "88282828",
   "guid": "guid-invalido-12345",
@@ -424,178 +429,5 @@ Content-Type: application/json
   "status": "error",
   "mensaje": "Transacción no encontrada o inválida."
 }
-```
-
-**Acción en Invictus:**
-- Modal **NARANJA** con texto: **"Transacción no encontrada o inválida"**
-- Botón **[CERRAR]**
-- Al cerrar → **REGRESA a pantalla principal de Invictus**
-- **Proceso de desembolso se REINICIA desde el principio**
-
----
-
-## Integración en Invictus
-
-### Captura de Datos para el Request
-
-**Flujo de captura:**
-
-```javascript
-// 1. Capturar datos de Sección 1 (guardados en estado)
-const tiposdocumento_id = seccion1.tipoDocumento;
-const identificacion = seccion1.numeroIdentificacion;
-
-// 2. Obtener GUID del proceso actual (del último servicio OTP)
-const guid = procesoOTP.guid; // Del servicio 2 o 3
-
-// 3. Capturar datos de Sección 2 (línea seleccionada)
-const lineaSeleccionada = seccion2.lineas.find(linea => linea.seleccionada);
-const linea_credito_id = lineaSeleccionada.id;
-const plazo_meses = lineaSeleccionada.confirme_plazo;
-const valor_desembolso = lineaSeleccionada.confirme_valor;
-
-// 4. Construir request
-const requestData = {
-  tiposdocumento_id,
-  identificacion,
-  guid,
-  linea_credito_id,
-  plazo_meses,
-  valor_desembolso
-};
-```
-
-### Consumo del Servicio
-
-**Momento exacto de consumo:**
-- Usuario presiona [Calcular Desembolso]
-- Sistema muestra Modal de Confirmación
-- Usuario presiona [Aceptar] ← **AQUÍ se consume el servicio**
-
-```javascript
-async function calcularDesembolso() {
-  try {
-    const response = await fetch('https://testing-sygma.com/api/calculo_desembolso', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(requestData)
-    });
-
-    const data = await response.json();
-
-    if (response.status === 200 && data.status === 'exitosa') {
-      // Éxito: Habilitar Sección 3
-      habilitarSeccion3(data.datos);
-      bloquearSecciones1y2();
-    } else if (response.status === 401) {
-      // Error de autenticación
-      mostrarModalError('rojo', data.mensaje);
-      regresarAInicio();
-    } else if (response.status === 404) {
-      // Transacción no encontrada
-      mostrarModalError('naranja', data.mensaje);
-      regresarAInicio();
-    }
-  } catch (error) {
-    console.error('Error al calcular desembolso:', error);
-    mostrarModalError('rojo', 'Error al comunicarse con el servidor');
-  }
-}
-```
-
-### Procesamiento de la Respuesta Exitosa
-
-```javascript
-function habilitarSeccion3(datos) {
-  // 1. Poblar campos de Sección 3
-  document.getElementById('valor_total').value = formatearMoneda(datos.valor_total);
-  document.getElementById('valor_cobros').value = formatearMoneda(datos.valor_cobros);
-  document.getElementById('plaza_empresa').value = datos.plaza_empresa;
-  document.getElementById('valor_a_pagar_cliente').value = formatearMoneda(datos.valor_a_pagar_cliente);
-
-  // 2. Mostrar desglose de descuentos
-  const tablaDescuentos = document.getElementById('tabla_descuentos');
-  datos.detalles_descuentos.forEach(descuento => {
-    const fila = `
-      <tr>
-        <td>${descuento.concepto}</td>
-        <td>${formatearMoneda(descuento.valor)}</td>
-        <td>${descuento.descripcion}</td>
-      </tr>
-    `;
-    tablaDescuentos.innerHTML += fila;
-  });
-
-  // 3. Hacer visible Sección 3
-  document.getElementById('seccion_3').style.display = 'block';
-
-  // 4. Habilitar botones de Sección 3
-  document.getElementById('btn_pagar').disabled = false;
-}
-
-function bloquearSecciones1y2() {
-  // Deshabilitar todos los inputs de Sección 1 y 2
-  document.querySelectorAll('#seccion_1 input, #seccion_2 input').forEach(input => {
-    input.disabled = true;
-    input.style.backgroundColor = '#f0f0f0';
-  });
-
-  // Ocultar botón Calcular Desembolso
-  document.getElementById('btn_calcular_desembolso').style.display = 'none';
-}
-```
-
----
-
-## Notas Importantes
-
-### 📋 Reglas Críticas
-
-1. ✅ **Captura de datos:** Los valores se obtienen de los campos **confirmados** ([Confirme Plazo], [Confirme Valor])
-2. ✅ **GUID actual:** Se usa el GUID retornado por el último servicio OTP (Servicio 2 o 3)
-3. ✅ **Bloqueo post-cálculo:** Una vez exitoso, Secciones 1 y 2 quedan **bloqueadas** (no editables)
-4. ✅ **Valor destacado:** El campo `valor_a_pagar_cliente` es el **más importante** (monto físico a entregar)
-5. ✅ **Sin entrega todavía:** El asesor **NO debe entregar dinero** en este punto (espera Sección 3)
-
-### 🔒 Restricciones de Modificación
-
-**Después de response exitosa:**
-- ❌ NO modificar Sección 1: Datos Cliente
-- ❌ NO modificar Sección 2: Datos Crédito
-- ❌ NO cambiar línea seleccionada
-- ❌ NO cambiar plazo ni valor
-- ✅ Para hacer cambios → Usuario debe **cancelar transacción completa** y **reiniciar proceso**
-
-### ⚙️ Ambiente de Pruebas
-
-**Configuración:**
-- Base URL: `https://testing-sygma.com/api`
-- Endpoint Login: `/login`
-- Endpoint Cálculo: `/calculo_desembolso`
-- Usuario: `ws_invictus`
-- Password: `g3z0OmJP7?@(*`
-
----
-
-## Flujo Completo de Desembolso
-
-```
-Servicio 1: Validación de Crédito Vigente
-     ↓
-Servicio 2: Validación de OTP
-     ↓ (retorna líneas de crédito)
-Sección 2: Datos Crédito (UI)
-     ↓ (selección de línea, plazo, valor)
-Servicio 4: Cálculo de Desembolso (este documento)
-     ↓ (calcula descuentos y valor final)
-Sección 3: Realizar Desembolso
-     ↓ (confirmación y entrega física)
-Servicio 5: Ejecución de Desembolso
-     ↓
-Completado
 ```
 
