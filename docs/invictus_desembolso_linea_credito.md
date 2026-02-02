@@ -122,14 +122,15 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 #### Origen de los Datos (Captura en Invictus)
 
-| Campo | Origen en Invictus | Momento de Captura |
-|-------|-------------------|-------------------|
-| `tiposdocumento_id` | Sección 1: Datos Cliente → Campo "Tipo de Identificación" | Al inicio del proceso |
-| `identificacion` | Sección 1: Datos Cliente → Campo "Número de Identificación" | Al inicio del proceso |
+| Campo | Origen en Invictus                                                   | Momento de Captura |
+|-------|----------------------------------------------------------------------|-------------------|
+| `id_linea_credito` | Sección 1: Identificador de la linea de credito"                     | Al inicio del proceso |
+| `tiposdocumento_id` | Sección 1: Datos Cliente → Campo "Tipo de Identificación"            | Al inicio del proceso |
+| `identificacion` | Sección 1: Datos Cliente → Campo "Número de Identificación"          | Al inicio del proceso |
 | `guid` | Retornado por Servicio 2 (Validación OTP) o Servicio 3 (Reenvío OTP) | Durante validación OTP |
-| `linea_credito_id` | Sección 2: Datos Crédito → Línea seleccionada (checkbox) | Al seleccionar línea |
-| `plazo_meses` | Sección 2: Datos Crédito → Campo [Confirme Plazo] | Al confirmar plazo |
-| `valor_desembolso` | Sección 2: Datos Crédito → Campo [Confirme Valor] | Al confirmar valor |
+| `linea_credito_id` | Sección 2: Datos Crédito → Línea seleccionada (checkbox)             | Al seleccionar línea |
+| `plazo_meses` | Sección 2: Datos Crédito → Campo [Confirme Plazo]                    | Al confirmar plazo |
+| `valor_desembolso` | Sección 2: Datos Crédito → Campo [Confirme Valor]                    | Al confirmar valor |
 
 #### Ejemplo de Request
 

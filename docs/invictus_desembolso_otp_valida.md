@@ -142,12 +142,13 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 #### Campos Obligatorios
 
-| Campo | Tipo | Longitud | Requerido | Descripción |
-|-------|------|----------|-----------|-------------|
-| `tiposdocumento_id` | string | - | ✅ | ID del tipo de documento según catálogo |
-| `identificacion` | string | variable | ✅ | Número de identificación del usuario |
-| `codigo_otp` | string | 6 | ✅ | Código OTP ingresado por el cliente (numérico o alfanumérico) |
-| `guid` | string | UUID | ✅ | UUID de la transacción generado en el servicio anterior |
+| Campo | Tipo     | Longitud | Requerido | Descripción                                                   |
+|-------|----------|----------|-----------|---------------------------------------------------------------|
+| `id_linea_credito` | numerico | - | ✅ | ID de la linea de credito                                     |
+| `tiposdocumento_id` | string   | - | ✅ | ID del tipo de documento según catálogo                       |
+| `identificacion` | string   | variable | ✅ | Número de identificación del usuario                          |
+| `codigo_otp` | string   | 6 | ✅ | Código OTP ingresado por el cliente (numérico o alfanumérico) |
+| `guid` | string   | UUID | ✅ | UUID de la transacción generado en el servicio anterior       |
 
 #### Catálogo de Tipos de Documento
 
