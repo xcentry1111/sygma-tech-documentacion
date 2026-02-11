@@ -2804,6 +2804,13 @@ Desembolso Final
 </thead>
 <tbody>
 <tr>
+<td><code>id_linea_credito</code></td>
+<td>numerico</td>
+<td>-</td>
+<td>✅</td>
+<td>ID de la linea de credito</td>
+</tr>
+<tr>
 <td><code>tiposdocumento_id</code></td>
 <td>string</td>
 <td>-</td>
@@ -3077,18 +3084,22 @@ Desembolso Final
     &quot;puede_desembolsar&quot;: true,
     &quot;lineas_credito&quot;: [
       {
+        &quot;id_linea_credito&quot;: 27373,
         &quot;linea_credito&quot;: &quot;Línea 1&quot;,
         &quot;valor_cupo&quot;: 50000,
         &quot;total_entregado&quot;: 50000,
         &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 12
+        &quot;plazo_meses&quot;: 12,
+        &quot;monto_fijo&quot;: 'NO'
       },
       {
+        &quot;id_linea_credito&quot;: 27375, 
         &quot;linea_credito&quot;: &quot;Línea 2&quot;,
         &quot;valor_cupo&quot;: 50000,
         &quot;total_entregado&quot;: 50000,
         &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 2
+        &quot;plazo_meses&quot;: 2, 
+        &quot;monto_fijo&quot;: 'SI'
       }
     ]
   }
@@ -3276,18 +3287,22 @@ Content-Type: application/json
     &quot;puede_desembolsar&quot;: true,
     &quot;lineas_credito&quot;: [
       {
+        &quot;id_linea_credito&quot;: 27373,      
         &quot;linea_credito&quot;: &quot;Línea 1&quot;,
         &quot;valor_cupo&quot;: 50000,
         &quot;total_entregado&quot;: 50000,
         &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 12
+        &quot;plazo_meses&quot;: 12,
+        &quot;monto_fijo&quot;: 'NO'
       },
       {
+        &quot;id_linea_credito&quot;: 27375,
         &quot;linea_credito&quot;: &quot;Línea 2&quot;,
         &quot;valor_cupo&quot;: 50000,
         &quot;total_entregado&quot;: 50000,
         &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 2
+        &quot;plazo_meses&quot;: 2,
+        &quot;monto_fijo&quot;: 'SI'
       }
     ]
   }

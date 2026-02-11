@@ -106,7 +106,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 | `tiposdocumento_id` | string | - | ✅ | ID del tipo de documento según catálogo |
 | `identificacion` | string | variable | ✅ | Número de identificación del usuario |
 | `guid` | string | UUID | ✅ | UUID de la transacción del proceso actual |
-| `linea_credito_id` | string | - | ✅ | Identificador de la línea de crédito seleccionada |
+| `linea_credito` | string | - | ✅ | Identificador de la línea de crédito seleccionada |
 | `plazo_meses` | integer | - | ✅ | Plazo en meses seleccionado por el cliente |
 | `valor_desembolso` | number | - | ✅ | Valor del desembolso solicitado |
 
@@ -128,7 +128,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 | `tiposdocumento_id` | Sección 1: Datos Cliente → Campo "Tipo de Identificación"            | Al inicio del proceso |
 | `identificacion` | Sección 1: Datos Cliente → Campo "Número de Identificación"          | Al inicio del proceso |
 | `guid` | Retornado por Servicio 2 (Validación OTP) o Servicio 3 (Reenvío OTP) | Durante validación OTP |
-| `linea_credito_id` | Sección 2: Datos Crédito → Línea seleccionada (checkbox)             | Al seleccionar línea |
+| `linea_credito` | Sección 2: Datos Crédito → Línea seleccionada (checkbox)             | Al seleccionar línea |
 | `plazo_meses` | Sección 2: Datos Crédito → Campo [Confirme Plazo]                    | Al confirmar plazo |
 | `valor_desembolso` | Sección 2: Datos Crédito → Campo [Confirme Valor]                    | Al confirmar valor |
 
@@ -140,7 +140,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
   "tiposdocumento_id": "1",
   "identificacion": "88282828",
   "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
-  "linea_credito_id": "linea_digital_001",
+  "linea_credito": "linea_digital_001",
   "plazo_meses": 4,
   "valor_desembolso": 500000
 }
@@ -267,7 +267,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 {
   "status": "error",
   "errors": [
-    "El campo linea_credito_id es obligatorio.",
+    "El campo id_linea_credito es obligatorio.",
     "El campo plazo_meses es obligatorio."
   ]
 }
@@ -300,7 +300,8 @@ Content-Type: application/json
   "tiposdocumento_id": "1",
   "identificacion": "88282828",
   "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
-  "linea_credito_id": "linea_digital_001",
+  "linea_credito": "linea_digital_001",
+  "id_linea_credito": 27375,
   "plazo_meses": 4,
   "valor_desembolso": 500000
 }
@@ -377,7 +378,7 @@ Content-Type: application/json
   "tiposdocumento_id": "1",
   "identificacion": "88282828",
   "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
-  "linea_credito_id": "linea_digital_001",
+  "linea_credito": "linea_digital_001",
   "plazo_meses": 4,
   "valor_desembolso": 500000
 }
@@ -415,7 +416,7 @@ Content-Type: application/json
   "tiposdocumento_id": "1",
   "identificacion": "88282828",
   "guid": "guid-invalido-12345",
-  "linea_credito_id": "linea_digital_001",
+  "linea_credito": "linea_digital_001",
   "plazo_meses": 4,
   "valor_desembolso": 500000
 }
