@@ -401,6 +401,11 @@ El crédito ya fue retirado anteriormente y no puede ser utilizado nuevamente.
         "sms": "314 *** ** 96",
         "email": "ars****th@gmail.com"
      },
+    "informacion_personal": {
+      "whatsapp": "3146795096",
+      "sms": "3146795096",
+      "email": "arsenalth@gmail.com"
+    },
      "mensaje": "Crédito validado con exito!!!."
   }
 }
@@ -521,6 +526,11 @@ Content-Type: application/json
         "sms": "314 *** ** 96",
         "email": "ars****th@gmail.com"
      },
+    "informacion_personal": {
+        "whatsapp": "3146795096",
+        "sms": "3146795096",
+        "email": "arsenalth@gmail.com"
+    },
      "mensaje": "Crédito validado con exito!!!."
   }
 }

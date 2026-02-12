@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../invictus_desmebolso_validacion/">
+        <link rel="prev" href="../invictus_desembolso_linea_credito/">
       
       
-        <link rel="next" href="../invictus_desembolso_reenvio_otp/">
+        <link rel="next" href="../consulta_municipio/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Validación OTP - Documentación Sygma-Tech</title>
+        <title>Desembolso - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-validacion-de-codigo-otp-para-desembolso" class="md-skip">
+        <a href="#manual-de-integracion-api-ejecucion-de-desembolso-final" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Validación OTP
+              Desembolso
             
           </span>
         </div>
@@ -1414,6 +1414,75 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_otp_valida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validación OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_reenvio_otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reenvio OTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_linea_credito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lineas de Credito
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1431,7 +1500,7 @@
   
   
   <span class="md-ellipsis">
-    Validación OTP
+    Desembolso
     
   </span>
   
@@ -1444,7 +1513,7 @@
   
   
   <span class="md-ellipsis">
-    Validación OTP
+    Desembolso
     
   </span>
   
@@ -1604,9 +1673,57 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#origen-de-los-datos-captura-en-invictus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Origen de los Datos (Captura en Invictus)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-de-request" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-respuesta-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Respuesta Exitosa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de Respuesta Exitosa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción de Campos de Respuesta
     </span>
   </a>
   
@@ -1633,72 +1750,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nivel-1-validacion-de-front-end-invictus" class="md-nav__link">
+  <a href="#nivel-1-validacion-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 1: Validación de Front-end (Invictus)
+      Nivel 1: Validación de Autenticación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-2-validacion-de-autenticacion" class="md-nav__link">
+  <a href="#nivel-2-validacion-de-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 2: Validación de Autenticación
+      Nivel 2: Validación de Campos Requeridos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-3-validacion-de-campos-requeridos" class="md-nav__link">
+  <a href="#nivel-3-validacion-de-transaccion-existente" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 3: Validación de Campos Requeridos
+      Nivel 3: Validación de Transacción Existente
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-4-validacion-de-transaccion-existente" class="md-nav__link">
+  <a href="#nivel-4-validacion-de-otp-previamente-confirmado" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 4: Validación de Transacción Existente
+      Nivel 4: Validación de OTP Previamente Confirmado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-5-validacion-de-vigencia-del-otp" class="md-nav__link">
+  <a href="#nivel-5-validacion-de-credito-disponible" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 5: Validación de Vigencia del OTP
+      Nivel 5: Validación de Crédito Disponible
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-6-validacion-de-intentos-fallidos" class="md-nav__link">
+  <a href="#nivel-6-validacion-de-coherencia-de-montos" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 6: Validación de Intentos Fallidos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nivel-7-validacion-del-codigo-otp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nivel 7: Validación del Código OTP
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nivel-8-validacion-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nivel 8: Validación Exitosa ✅
+      Nivel 6: Validación de Coherencia de Montos
     </span>
   </a>
   
@@ -1710,82 +1809,142 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#response-tabla-resumen-de-respuestas" class="md-nav__link">
+  <a href="#respuestas-de-error" class="md-nav__link">
     <span class="md-ellipsis">
-      Response - Tabla Resumen de Respuestas
+      Respuestas de Error
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Respuestas de Error">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-token-de-autenticacion-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 1: Token de Autenticación Inválido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 2: Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-campos-requeridos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 3: Campos Requeridos Faltantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-4-credito-ya-desembolsado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 4: Crédito Ya Desembolsado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-5-otp-no-validado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 5: OTP No Validado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-6-credito-no-disponible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 6: Crédito No Disponible
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-resumen-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla Resumen de Respuestas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplos-de-respuestas-completas" class="md-nav__link">
+  <a href="#ejemplos-completos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplos de Respuestas Completas
+      Ejemplos Completos
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejemplos de Respuestas Completas">
+    <nav class="md-nav" aria-label="Ejemplos Completos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caso-1-validacion-exitosa-otp-valido" class="md-nav__link">
+  <a href="#ejemplo-1-desembolso-exitoso" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Caso 1: Validación Exitosa - OTP Válido
+      ✅ Ejemplo 1: Desembolso Exitoso
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-2-codigo-otp-incorrecto-primer-intento" class="md-nav__link">
+  <a href="#ejemplo-2-error-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 2: Código OTP Incorrecto (Primer Intento)
+      🔴 Ejemplo 2: Error de Autenticación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-3-intentos-superados-tercer-intento-fallido" class="md-nav__link">
+  <a href="#ejemplo-3-transaccion-no-encontrada" class="md-nav__link">
     <span class="md-ellipsis">
-      🚫 Caso 3: Intentos Superados (Tercer Intento Fallido)
+      🟠 Ejemplo 3: Transacción No Encontrada
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-4-otp-expirado" class="md-nav__link">
+  <a href="#ejemplo-4-credito-ya-desembolsado" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏰ Caso 4: OTP Expirado
+      ⚠️ Ejemplo 4: Crédito Ya Desembolsado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-5-transaccion-no-encontrada" class="md-nav__link">
+  <a href="#ejemplo-5-otp-no-validado" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Caso 5: Transacción No Encontrada
+      🔐 Ejemplo 5: OTP No Validado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-6-error-de-autenticacion-token-invalido" class="md-nav__link">
+  <a href="#ejemplo-6-credito-no-disponible-vencido" class="md-nav__link">
     <span class="md-ellipsis">
-      🔐 Caso 6: Error de Autenticación (Token Inválido)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#caso-7-error-de-validacion-campos-faltantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚫 Caso 7: Error de Validación - Campos Faltantes
+      ❌ Ejemplo 6: Crédito No Disponible (Vencido)
     </span>
   </a>
   
@@ -1807,78 +1966,64 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pantalla-autenticacion-cliente-continuacion-de-hue-002" class="md-nav__link">
+  <a href="#seccion-3-realizar-desembolso" class="md-nav__link">
     <span class="md-ellipsis">
-      Pantalla: Autenticación Cliente (Continuación de HUE 002)
+      Sección 3: Realizar Desembolso
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#seccion-2-datos-credito-se-habilita-tras-validacion-exitosa" class="md-nav__link">
+  <a href="#flujo-de-interaccion-con-boton-pagar" class="md-nav__link">
     <span class="md-ellipsis">
-      Sección 2: Datos Crédito (Se habilita tras validación exitosa)
+      Flujo de Interacción con Botón [Pagar]
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#acciones-internas-de-invictus-despues-de-respuesta-exitosa" class="md-nav__link">
     <span class="md-ellipsis">
-      Consideraciones de Seguridad
+      Acciones Internas de Invictus (Después de Respuesta Exitosa)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Consideraciones de Seguridad">
+    <nav class="md-nav" aria-label="Acciones Internas de Invictus (Después de Respuesta Exitosa)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#codigo-otp" class="md-nav__link">
+  <a href="#1-replicar-en-siga-y-contabilidad" class="md-nav__link">
     <span class="md-ellipsis">
-      Código OTP
+      1. Replicar en SIGA y Contabilidad
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#control-de-intentos" class="md-nav__link">
+  <a href="#2-afectar-la-caja-de-la-fuerza-de-ventas" class="md-nav__link">
     <span class="md-ellipsis">
-      Control de Intentos
+      2. Afectar la Caja de la Fuerza de Ventas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#control-de-vigencia" class="md-nav__link">
+  <a href="#3-afectar-la-cartera-de-la-fuerza-de-ventas" class="md-nav__link">
     <span class="md-ellipsis">
-      Control de Vigencia
+      3. Afectar la Cartera de la Fuerza de Ventas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#registro-de-auditoria" class="md-nav__link">
+  <a href="#4-imprimir-colilla-de-transaccion" class="md-nav__link">
     <span class="md-ellipsis">
-      Registro de Auditoría
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-configurables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parámetros Configurables
+      4. Imprimir Colilla de Transacción
     </span>
   </a>
   
@@ -1888,82 +2033,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#notas-importantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notas Importantes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Notas Importantes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reglas-de-negocio" class="md-nav__link">
-    <span class="md-ellipsis">
-      📋 Reglas de Negocio
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flujo-completo-de-desembolso" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 Flujo Completo de Desembolso
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuracion-del-ambiente" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Configuración del Ambiente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#especificaciones-de-ui-para-mensajes-modales" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎨 Especificaciones de UI para Mensajes Modales
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seguridad-adicional" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔒 Seguridad Adicional
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoreo-y-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Monitoreo y Logs
-    </span>
-  </a>
-  
-</li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Glosario
-    </span>
-  </a>
   
 </li>
       
@@ -1971,75 +2043,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../invictus_desembolso_reenvio_otp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Reenvio OTP
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../invictus_desembolso_linea_credito/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Lineas de Credito
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../invictus_desmebolso/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Desembolso
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2284,9 +2287,57 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#origen-de-los-datos-captura-en-invictus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Origen de los Datos (Captura en Invictus)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-de-request" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-respuesta-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Respuesta Exitosa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de Respuesta Exitosa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción de Campos de Respuesta
     </span>
   </a>
   
@@ -2313,72 +2364,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nivel-1-validacion-de-front-end-invictus" class="md-nav__link">
+  <a href="#nivel-1-validacion-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 1: Validación de Front-end (Invictus)
+      Nivel 1: Validación de Autenticación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-2-validacion-de-autenticacion" class="md-nav__link">
+  <a href="#nivel-2-validacion-de-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 2: Validación de Autenticación
+      Nivel 2: Validación de Campos Requeridos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-3-validacion-de-campos-requeridos" class="md-nav__link">
+  <a href="#nivel-3-validacion-de-transaccion-existente" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 3: Validación de Campos Requeridos
+      Nivel 3: Validación de Transacción Existente
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-4-validacion-de-transaccion-existente" class="md-nav__link">
+  <a href="#nivel-4-validacion-de-otp-previamente-confirmado" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 4: Validación de Transacción Existente
+      Nivel 4: Validación de OTP Previamente Confirmado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-5-validacion-de-vigencia-del-otp" class="md-nav__link">
+  <a href="#nivel-5-validacion-de-credito-disponible" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 5: Validación de Vigencia del OTP
+      Nivel 5: Validación de Crédito Disponible
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-6-validacion-de-intentos-fallidos" class="md-nav__link">
+  <a href="#nivel-6-validacion-de-coherencia-de-montos" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 6: Validación de Intentos Fallidos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nivel-7-validacion-del-codigo-otp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nivel 7: Validación del Código OTP
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nivel-8-validacion-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nivel 8: Validación Exitosa ✅
+      Nivel 6: Validación de Coherencia de Montos
     </span>
   </a>
   
@@ -2390,82 +2423,142 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#response-tabla-resumen-de-respuestas" class="md-nav__link">
+  <a href="#respuestas-de-error" class="md-nav__link">
     <span class="md-ellipsis">
-      Response - Tabla Resumen de Respuestas
+      Respuestas de Error
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Respuestas de Error">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-token-de-autenticacion-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 1: Token de Autenticación Inválido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-transaccion-no-encontrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 2: Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-campos-requeridos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 3: Campos Requeridos Faltantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-4-credito-ya-desembolsado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 4: Crédito Ya Desembolsado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-5-otp-no-validado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 5: OTP No Validado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-6-credito-no-disponible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 6: Crédito No Disponible
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-resumen-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabla Resumen de Respuestas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplos-de-respuestas-completas" class="md-nav__link">
+  <a href="#ejemplos-completos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplos de Respuestas Completas
+      Ejemplos Completos
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejemplos de Respuestas Completas">
+    <nav class="md-nav" aria-label="Ejemplos Completos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caso-1-validacion-exitosa-otp-valido" class="md-nav__link">
+  <a href="#ejemplo-1-desembolso-exitoso" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Caso 1: Validación Exitosa - OTP Válido
+      ✅ Ejemplo 1: Desembolso Exitoso
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-2-codigo-otp-incorrecto-primer-intento" class="md-nav__link">
+  <a href="#ejemplo-2-error-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 2: Código OTP Incorrecto (Primer Intento)
+      🔴 Ejemplo 2: Error de Autenticación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-3-intentos-superados-tercer-intento-fallido" class="md-nav__link">
+  <a href="#ejemplo-3-transaccion-no-encontrada" class="md-nav__link">
     <span class="md-ellipsis">
-      🚫 Caso 3: Intentos Superados (Tercer Intento Fallido)
+      🟠 Ejemplo 3: Transacción No Encontrada
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-4-otp-expirado" class="md-nav__link">
+  <a href="#ejemplo-4-credito-ya-desembolsado" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏰ Caso 4: OTP Expirado
+      ⚠️ Ejemplo 4: Crédito Ya Desembolsado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-5-transaccion-no-encontrada" class="md-nav__link">
+  <a href="#ejemplo-5-otp-no-validado" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Caso 5: Transacción No Encontrada
+      🔐 Ejemplo 5: OTP No Validado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-6-error-de-autenticacion-token-invalido" class="md-nav__link">
+  <a href="#ejemplo-6-credito-no-disponible-vencido" class="md-nav__link">
     <span class="md-ellipsis">
-      🔐 Caso 6: Error de Autenticación (Token Inválido)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#caso-7-error-de-validacion-campos-faltantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚫 Caso 7: Error de Validación - Campos Faltantes
+      ❌ Ejemplo 6: Crédito No Disponible (Vencido)
     </span>
   </a>
   
@@ -2487,78 +2580,64 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pantalla-autenticacion-cliente-continuacion-de-hue-002" class="md-nav__link">
+  <a href="#seccion-3-realizar-desembolso" class="md-nav__link">
     <span class="md-ellipsis">
-      Pantalla: Autenticación Cliente (Continuación de HUE 002)
+      Sección 3: Realizar Desembolso
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#seccion-2-datos-credito-se-habilita-tras-validacion-exitosa" class="md-nav__link">
+  <a href="#flujo-de-interaccion-con-boton-pagar" class="md-nav__link">
     <span class="md-ellipsis">
-      Sección 2: Datos Crédito (Se habilita tras validación exitosa)
+      Flujo de Interacción con Botón [Pagar]
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#acciones-internas-de-invictus-despues-de-respuesta-exitosa" class="md-nav__link">
     <span class="md-ellipsis">
-      Consideraciones de Seguridad
+      Acciones Internas de Invictus (Después de Respuesta Exitosa)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Consideraciones de Seguridad">
+    <nav class="md-nav" aria-label="Acciones Internas de Invictus (Después de Respuesta Exitosa)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#codigo-otp" class="md-nav__link">
+  <a href="#1-replicar-en-siga-y-contabilidad" class="md-nav__link">
     <span class="md-ellipsis">
-      Código OTP
+      1. Replicar en SIGA y Contabilidad
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#control-de-intentos" class="md-nav__link">
+  <a href="#2-afectar-la-caja-de-la-fuerza-de-ventas" class="md-nav__link">
     <span class="md-ellipsis">
-      Control de Intentos
+      2. Afectar la Caja de la Fuerza de Ventas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#control-de-vigencia" class="md-nav__link">
+  <a href="#3-afectar-la-cartera-de-la-fuerza-de-ventas" class="md-nav__link">
     <span class="md-ellipsis">
-      Control de Vigencia
+      3. Afectar la Cartera de la Fuerza de Ventas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#registro-de-auditoria" class="md-nav__link">
+  <a href="#4-imprimir-colilla-de-transaccion" class="md-nav__link">
     <span class="md-ellipsis">
-      Registro de Auditoría
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parametros-configurables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parámetros Configurables
+      4. Imprimir Colilla de Transacción
     </span>
   </a>
   
@@ -2568,82 +2647,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#notas-importantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notas Importantes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Notas Importantes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reglas-de-negocio" class="md-nav__link">
-    <span class="md-ellipsis">
-      📋 Reglas de Negocio
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flujo-completo-de-desembolso" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 Flujo Completo de Desembolso
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuracion-del-ambiente" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Configuración del Ambiente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#especificaciones-de-ui-para-mensajes-modales" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎨 Especificaciones de UI para Mensajes Modales
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seguridad-adicional" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔒 Seguridad Adicional
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoreo-y-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 Monitoreo y Logs
-    </span>
-  </a>
-  
-</li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glosario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Glosario
-    </span>
-  </a>
   
 </li>
       
@@ -2663,91 +2669,96 @@
 
 
 
-<h1 id="manual-de-integracion-api-validacion-de-codigo-otp-para-desembolso">📘 Manual de Integración API: Validación de Código OTP para Desembolso</h1>
+<h1 id="manual-de-integracion-api-ejecucion-de-desembolso-final">📘 Manual de Integración API: Ejecución de Desembolso Final</h1>
 <h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
-<p>Este servicio permite validar el código OTP (One Time Password) ingresado por el cliente para confirmar su identidad y autorizar el desembolso del crédito en un punto Gana. El servicio controla el número de intentos permitidos, gestiona el tiempo de vigencia del código y devuelve información de las líneas de crédito del cliente una vez validado exitosamente.</p>
+<p>Este servicio permite ejecutar el desembolso final del crédito al cliente después de haber validado la identidad mediante OTP y calculado los descuentos aplicables. El servicio registra la transacción en TESEO, genera los movimientos contables, actualiza el estado del crédito a "desembolsado" y retorna la confirmación para que Invictus proceda con la entrega física del dinero al cliente.</p>
 <hr />
 <h2 id="flujo-del-proceso">Flujo del Proceso</h2>
 <h3 id="contexto-general">Contexto General</h3>
-<p>Este servicio es el <strong>segundo paso</strong> del flujo de desembolso, ejecutándose después de la validación exitosa del crédito vigente:</p>
+<p>Este servicio es el <strong>quinto y último paso</strong> del flujo de desembolso, ejecutándose después de que el usuario confirma el desembolso presionando el botón [Pagar]:</p>
 <pre><code>Servicio 1: Validación de Crédito Vigente
-     ↓ (retorna success + guid + codigo_otp + canales_envio)
-Pantalla de Autenticación Cliente (Invictus)
-     ↓ (cliente proporciona código OTP)
-Servicio 2: Validación de OTP (este documento) ← ESTAMOS AQUÍ
-     ↓ (confirma identidad del cliente + devuelve líneas de crédito)
-Sección 2: Datos Crédito (se habilita en Invictus)
      ↓
-Desembolso Final
+Servicio 2: Validación de OTP
+     ↓ (retorna success + líneas de crédito)
+Sección 2: Datos Crédito (Selección UI)
+     ↓ (usuario selecciona línea, plazo, valor)
+Servicio 4: Cálculo de Desembolso
+     ↓ (calcula descuentos y valor final)
+Sección 3: Realizar Desembolso (muestra valores calculados)
+     ↓ (usuario presiona [Pagar])
+Servicio 5: Ejecución de Desembolso Final (este documento) ← ESTAMOS AQUÍ
+     ↓ (ejecuta y registra el desembolso)
+Entrega física de dinero al cliente
 </code></pre>
 <h3 id="secuencia-del-flujo">Secuencia del Flujo</h3>
-<pre><code>1. Usuario se encuentra en &quot;Pantalla de Autenticación Cliente&quot;
-   (ver HUE 002 - Consulta de cliente para validar Crédito)
-   - Título parametrizable con instrucciones
-   - Medios de envío del OTP (WhatsApp, SMS, Email) ofuscados
-   - 6 casillas individuales para ingreso de código OTP
-   - Temporizador de vigencia activo (ej: 3:00 minutos)
-   - Opción &quot;Reenviar código OTP&quot; (inhabilitada por defecto)
-   - Botones: [Limpiar], [Cancelar], [Confirmar (inhabilitado)]
+<pre><code>1. Usuario se encuentra en Sección 3: Realizar Desembolso
+   - Visualiza información calculada:
+     * Valor Total
+     * Valor Cobros
+     * Plazo (Meses)
+     * Valor a Pagar al Cliente
+   - Botones habilitados: [Cancelar], [Limpiar], [Pagar]
    ↓
-2. Cliente proporciona código OTP de 6 dígitos
+2. Usuario presiona [Pagar]
+   - Confirmación implícita de que está listo para ejecutar
    ↓
-3. Validación Front-end (Invictus)
-   - ¿Todas las casillas están completas (6 dígitos)?
-   - NO → Resalta casillas vacías en ROJO
-   - NO → Botón [Confirmar] permanece INHABILITADO
-   - NO → NO se consume ningún servicio de TESEO
-   - SÍ → Habilita botón [Confirmar]
+3. Sistema consume este servicio (TESEO)
    ↓
-4. Usuario presiona [Confirmar]
-   ↓
-5. Sistema consume Servicio de Validación OTP (TESEO)
-   ↓
-6. Servicio ejecuta validaciones en orden secuencial:
+4. Servicio ejecuta validaciones y registro:
 
    a) Validación de Autenticación
-      ↓ Token inválido/vencido? → SÍ: retorna &quot;error&quot; (401)
+      ↓ Token inválido? → SÍ: retorna &quot;error&quot; (401)
 
    b) Validación de Campos Requeridos
-      ↓ Campos vacíos/inválidos? → SÍ: retorna &quot;error&quot; (400)
+      ↓ Campos vacíos? → SÍ: retorna &quot;error&quot; (400)
 
    c) Validación de Transacción Existente
-      ↓ GUID no existe/no coincide? → SÍ: retorna &quot;error&quot; (404)
+      ↓ GUID no existe? → SÍ: retorna &quot;error&quot; (404)
 
-   d) Validación de Vigencia del OTP
-      ↓ OTP expirado (&gt;3 min)? → SÍ: retorna &quot;expired&quot;
+   d) Validación de Crédito Disponible
+      ↓ Crédito ya desembolsado? → SÍ: retorna &quot;already_disbursed&quot;
+      ↓ Crédito no vigente? → SÍ: retorna &quot;credit_not_available&quot;
 
-   e) Validación de Intentos Fallidos
-      ↓ Intentos superados (&gt;=3)? → SÍ: retorna &quot;blocked&quot;
+   e) Validación de OTP Previamente Confirmado
+      ↓ OTP no validado? → SÍ: retorna &quot;otp_not_validated&quot;
 
-   f) Validación del Código OTP
-      ↓ Código incorrecto? → SÍ: incrementa contador, retorna &quot;invalid&quot;
-      ↓ Código correcto? → SÍ: invalida OTP, retorna &quot;success&quot; + líneas de crédito
+   f) Ejecución del Desembolso
+      ↓ Registra en TESEO
+      ↓ Actualiza estado a &quot;desembolsado&quot;
+      ↓ Genera movimientos contables
+      ↓ Retorna &quot;success&quot; + comprobante
    ↓
-7. Comportamiento de Invictus según respuesta:
+5. Comportamiento según respuesta:
 
-   - success → Modal verde: &quot;Código OTP validado correctamente...&quot;
-               Cierra modal, permanece en pantalla
-               Habilita Sección 2: Datos Crédito con líneas disponibles
+   - success → Modal verde: &quot;Su transacción fue Exitosa...&quot;
+               Muestra valor a entregar al cliente
+               Cierra modal → Regresa a pantalla inicial de Invictus
+               Invictus ejecuta acciones internas:
+               1. Replica en SIGA y contabilidad
+               2. Afecta caja y cartera de la fuerza de ventas
+               3. Registra en Base de datos de Invictus
+               4. Imprime colilla de transacción
+               5. Afecta la contabilidad en Invictus
 
-   - invalid → Modal naranja: &quot;El código ingresado es incorrecto...&quot;
-               Muestra intentos restantes
-               Cierra modal, permanece en pantalla OTP para reintentar
+   - error (autenticación) → Modal rojo: &quot;Token de autorización inválido...&quot;
+                             Cierra modal, permanece en Sección 3
+                             NO guarda ni registra transacción
 
-   - blocked → Modal naranja: &quot;Ha superado el número máximo de intentos...&quot;
-               Cierra modal, REGRESA a pantalla principal de Invictus
-               Proceso de desembolso se REINICIA desde cero
+   - error (transacción) → Modal naranja: &quot;Transacción no encontrada...&quot;
+                           Cierra modal, permanece en Sección 3
+                           NO guarda ni registra transacción
 
-   - expired → Modal naranja: &quot;El código OTP ha expirado...&quot;
-               Muestra tiempo transcurrido y vigencia máxima
-               Cierra modal, REGRESA a pantalla principal de Invictus
-               Proceso de desembolso se REINICIA desde cero
+   - already_disbursed → Modal naranja: &quot;Este crédito ya fue desembolsado...&quot;
+                         Cierra modal, regresa a pantalla inicial
+                         Proceso se REINICIA
 
-   - error (transacción) → Modal naranja: &quot;Transacción no encontrada o inválida&quot;
-                           Cierra modal, permanece en pantalla OTP
+   - credit_not_available → Modal naranja: &quot;El crédito no está disponible...&quot;
+                            Cierra modal, regresa a pantalla inicial
+                            Proceso se REINICIA
 
-   - error (autenticación) → Modal naranja: &quot;Token de autorización inválido...&quot;
-                             Cierra modal, permanece en pantalla OTP
+   - otp_not_validated → Modal naranja: &quot;Debe validar el OTP...&quot;
+                         Cierra modal, permanece en Sección 3
+                         Usuario debe completar validación OTP
 </code></pre>
 <hr />
 <h2 id="informacion-tecnica">Información Técnica</h2>
@@ -2765,7 +2776,7 @@ Desembolso Final
 <tbody>
 <tr>
 <td><strong>Pruebas (QA)</strong></td>
-<td><code>https://testing-sygma.com/api/validacion_otp_desembolso</code></td>
+<td><code>https://testing-sygma.com/api/proceso_desembolso</code></td>
 </tr>
 <tr>
 <td><strong>Producción</strong></td>
@@ -2806,7 +2817,8 @@ Desembolso Final
 </tbody>
 </table>
 <h4 id="obtencion-del-token">🔐 Obtención del Token</h4>
-<p>!!! "Obtención del Token" El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
+<p>!!! "Obtención del Token"
+El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
 <p><strong>Endpoint de autenticación:</strong></p>
 <pre><code>POST https://testing-sygma.com/api/login
 </code></pre>
@@ -2827,13 +2839,6 @@ Desembolso Final
 </thead>
 <tbody>
 <tr>
-<td><code>id_linea_credito</code></td>
-<td>numerico</td>
-<td>-</td>
-<td>✅</td>
-<td>ID de la linea de credito</td>
-</tr>
-<tr>
 <td><code>tiposdocumento_id</code></td>
 <td>string</td>
 <td>-</td>
@@ -2848,18 +2853,53 @@ Desembolso Final
 <td>Número de identificación del usuario</td>
 </tr>
 <tr>
-<td><code>codigo_otp</code></td>
-<td>string</td>
-<td>6</td>
-<td>✅</td>
-<td>Código OTP ingresado por el cliente (numérico o alfanumérico)</td>
-</tr>
-<tr>
 <td><code>guid</code></td>
 <td>string</td>
 <td>UUID</td>
 <td>✅</td>
-<td>UUID de la transacción generado en el servicio anterior</td>
+<td>UUID de la transacción del proceso actual</td>
+</tr>
+<tr>
+<td><code>id_linea_credito</code></td>
+<td>integer</td>
+<td>-</td>
+<td>✅</td>
+<td>Identificador de la línea de crédito seleccionada</td>
+</tr>
+<tr>
+<td><code>plazo_meses</code></td>
+<td>integer</td>
+<td>-</td>
+<td>✅</td>
+<td>Plazo en meses seleccionado por el cliente</td>
+</tr>
+<tr>
+<td><code>valor_total</code></td>
+<td>number</td>
+<td>-</td>
+<td>✅</td>
+<td>Valor total del desembolso solicitado</td>
+</tr>
+<tr>
+<td><code>valor_cobros</code></td>
+<td>number</td>
+<td>-</td>
+<td>✅</td>
+<td>Suma de todos los descuentos/cobros aplicados</td>
+</tr>
+<tr>
+<td><code>valor_a_pagar_cliente</code></td>
+<td>number</td>
+<td>-</td>
+<td>✅</td>
+<td>Monto final a entregar físicamente al cliente</td>
+</tr>
+<tr>
+<td><code>plaza_empresa</code></td>
+<td>integer</td>
+<td>-</td>
+<td>✅</td>
+<td>Código de la plaza/empresa donde se realiza</td>
 </tr>
 </tbody>
 </table>
@@ -2900,27 +2940,266 @@ Desembolso Final
 </tr>
 </tbody>
 </table>
+<h4 id="origen-de-los-datos-captura-en-invictus">Origen de los Datos (Captura en Invictus)</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Origen en Invictus</th>
+<th>Momento de Captura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tiposdocumento_id</code></td>
+<td>Sección 1: Datos Cliente → Campo "Tipo de Identificación"</td>
+<td>Al inicio del proceso</td>
+</tr>
+<tr>
+<td><code>identificacion</code></td>
+<td>Sección 1: Datos Cliente → Campo "Número de Identificación"</td>
+<td>Al inicio del proceso</td>
+</tr>
+<tr>
+<td><code>guid</code></td>
+<td>Retornado por Servicio 2 (Validación OTP) o Servicio 3 (Reenvío OTP)</td>
+<td>Durante validación OTP</td>
+</tr>
+<tr>
+<td><code>id_linea_credito</code></td>
+<td>Sección 2: Datos Crédito → Línea seleccionada (checkbox)</td>
+<td>Al seleccionar línea</td>
+</tr>
+<tr>
+<td><code>plazo_meses</code></td>
+<td>Sección 2: Datos Crédito → Campo [Confirme Plazo]</td>
+<td>Al confirmar plazo</td>
+</tr>
+<tr>
+<td><code>valor_total</code></td>
+<td>Retornado por Servicio 4 (Cálculo Desembolso)</td>
+<td>Después de calcular</td>
+</tr>
+<tr>
+<td><code>valor_cobros</code></td>
+<td>Retornado por Servicio 4 (Cálculo Desembolso)</td>
+<td>Después de calcular</td>
+</tr>
+<tr>
+<td><code>valor_a_pagar_cliente</code></td>
+<td>Retornado por Servicio 4 (Cálculo Desembolso)</td>
+<td>Después de calcular</td>
+</tr>
+<tr>
+<td><code>plaza_empresa</code></td>
+<td>Retornado por Servicio 4 (Cálculo Desembolso)</td>
+<td>Después de calcular</td>
+</tr>
+</tbody>
+</table>
 <h4 id="ejemplo-de-request">Ejemplo de Request</h4>
 <pre><code class="language-json">{
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
-  &quot;codigo_otp&quot;: &quot;202023&quot;,
-  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+  &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+  &quot;id_linea_credito&quot;: 27375,
+  &quot;plazo_meses&quot;: 4,
+  &quot;valor_total&quot;: 500000,
+  &quot;valor_cobros&quot;: 12050,
+  &quot;valor_a_pagar_cliente&quot;: 487950,
+  &quot;plaza_empresa&quot;: 50
 }
 </code></pre>
 <hr />
+<h2 id="response">Response</h2>
+<h3 id="estructura-de-respuesta-exitosa">Estructura de Respuesta Exitosa</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Status:</strong> <code>"success"</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+    &quot;mensaje&quot;: &quot;Transacción exitosa. Desembolso realizado correctamente.&quot;,
+    &quot;numero_desembolso&quot;: &quot;DES-2025-00012345&quot;,
+    &quot;nombre_cliente&quot;: &quot;Fernando Osorio&quot;,
+    &quot;identificacion&quot;: &quot;88282828&quot;,
+    &quot;linea_credito&quot;: &quot;Línea Digital&quot;,
+    &quot;valor_total&quot;: 500000,
+    &quot;valor_cobros&quot;: 12050,
+    &quot;valor_a_pagar_cliente&quot;: 487950,
+    &quot;plazo_meses&quot;: 4,
+    &quot;plaza_empresa&quot;: 50,
+    &quot;fecha_desembolso&quot;: &quot;2025-02-11 14:35:22&quot;,
+    &quot;comprobante&quot;: {
+      &quot;numero_comprobante&quot;: &quot;COMP-2025-00012345&quot;,
+      &quot;fecha_hora&quot;: &quot;2025-02-11 14:35:22&quot;,
+      &quot;concepto&quot;: &quot;Desembolso de crédito&quot;,
+      &quot;detalles_descuentos&quot;: [
+        {
+          &quot;concepto&quot;: &quot;IVA&quot;,
+          &quot;valor&quot;: 8000
+        },
+        {
+          &quot;concepto&quot;: &quot;Seguro&quot;,
+          &quot;valor&quot;: 4000
+        },
+        {
+          &quot;concepto&quot;: &quot;Comisión&quot;,
+          &quot;valor&quot;: 50
+        }
+      ]
+    },
+    &quot;instrucciones_invictus&quot;: {
+      &quot;replicar_siga&quot;: true,
+      &quot;afectar_caja&quot;: true,
+      &quot;afectar_cartera&quot;: true,
+      &quot;imprimir_colilla&quot;: true,
+      &quot;afectar_contabilidad&quot;: true
+    }
+  }
+}
+</code></pre>
+<h4 id="descripcion-de-campos-de-respuesta">Descripción de Campos de Respuesta</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code></td>
+<td>string</td>
+<td>Indicador del resultado: <code>"success"</code></td>
+</tr>
+<tr>
+<td><code>datos</code></td>
+<td>object</td>
+<td>Objeto con toda la información del desembolso</td>
+</tr>
+<tr>
+<td><code>datos.guid</code></td>
+<td>string</td>
+<td>Identificador único de la transacción (mismo del request)</td>
+</tr>
+<tr>
+<td><code>datos.mensaje</code></td>
+<td>string</td>
+<td>Mensaje de confirmación del desembolso exitoso</td>
+</tr>
+<tr>
+<td><code>datos.numero_desembolso</code></td>
+<td>string</td>
+<td>Número único del desembolso generado por TESEO</td>
+</tr>
+<tr>
+<td><code>datos.nombre_cliente</code></td>
+<td>string</td>
+<td>Nombre completo del cliente (confirmaciónón)</td>
+</tr>
+<tr>
+<td><code>datos.identificacion</code></td>
+<td>string</td>
+<td>Número de identificación del cliente</td>
+</tr>
+<tr>
+<td><code>datos.linea_credito</code></td>
+<td>string</td>
+<td>Nombre de la línea de crédito seleccionada</td>
+</tr>
+<tr>
+<td><code>datos.valor_total</code></td>
+<td>number</td>
+<td>Valor total solicitado por el cliente</td>
+</tr>
+<tr>
+<td><code>datos.valor_cobros</code></td>
+<td>number</td>
+<td>Suma de todos los descuentos/cobros aplicados</td>
+</tr>
+<tr>
+<td><code>datos.valor_a_pagar_cliente</code></td>
+<td>number</td>
+<td><strong>Monto final a entregar físicamente al cliente</strong></td>
+</tr>
+<tr>
+<td><code>datos.plazo_meses</code></td>
+<td>integer</td>
+<td>Plazo en meses del crédito</td>
+</tr>
+<tr>
+<td><code>datos.plaza_empresa</code></td>
+<td>integer</td>
+<td>Código de la plaza/empresa donde se realizó</td>
+</tr>
+<tr>
+<td><code>datos.fecha_desembolso</code></td>
+<td>string</td>
+<td>Timestamp del desembolso (formato: YYYY-MM-DD HH:MM:SS)</td>
+</tr>
+<tr>
+<td><code>datos.comprobante</code></td>
+<td>object</td>
+<td>Información del comprobante generado</td>
+</tr>
+<tr>
+<td><code>datos.comprobante.numero_comprobante</code></td>
+<td>string</td>
+<td>Número único del comprobante</td>
+</tr>
+<tr>
+<td><code>datos.comprobante.fecha_hora</code></td>
+<td>string</td>
+<td>Fecha y hora del comprobante</td>
+</tr>
+<tr>
+<td><code>datos.comprobante.concepto</code></td>
+<td>string</td>
+<td>Concepto del movimiento</td>
+</tr>
+<tr>
+<td><code>datos.comprobante.detalles_descuentos</code></td>
+<td>array</td>
+<td>Array con el desglose de descuentos</td>
+</tr>
+<tr>
+<td><code>datos.instrucciones_invictus</code></td>
+<td>object</td>
+<td>Flags que indican acciones que Invictus debe ejecutar</td>
+</tr>
+<tr>
+<td><code>datos.instrucciones_invictus.replicar_siga</code></td>
+<td>boolean</td>
+<td>Indica si debe replicar en SIGA y contabilidad</td>
+</tr>
+<tr>
+<td><code>datos.instrucciones_invictus.afectar_caja</code></td>
+<td>boolean</td>
+<td>Indica si debe afectar la caja de la fuerza de ventas</td>
+</tr>
+<tr>
+<td><code>datos.instrucciones_invictus.afectar_cartera</code></td>
+<td>boolean</td>
+<td>Indica si debe afectar la cartera de la fuerza de ventas</td>
+</tr>
+<tr>
+<td><code>datos.instrucciones_invictus.imprimir_colilla</code></td>
+<td>boolean</td>
+<td>Indica si debe imprimir colilla de transacción</td>
+</tr>
+<tr>
+<td><code>datos.instrucciones_invictus.afectar_contabilidad</code></td>
+<td>boolean</td>
+<td>Indica si debe afectar la contabilidad en Invictus</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="validaciones-del-servicio">Validaciones del Servicio</h2>
 <p>El servicio ejecuta las siguientes validaciones en orden secuencial:</p>
-<h3 id="nivel-1-validacion-de-front-end-invictus">Nivel 1: Validación de Front-end (Invictus)</h3>
-<p><strong>Reglas (antes de consumir el servicio):</strong>
-- Usuario debe completar <strong>todas las 6 casillas</strong> del código OTP
-- Si alguna casilla está vacía al intentar presionar [Confirmar]:
-    - Invictus resalta en <strong>color ROJO</strong> las casillas faltantes
-    - Botón [Confirmar] permanece <strong>INHABILITADO</strong>
-    - <strong>NO se consume ningún servicio de TESEO</strong>
-    - Usuario debe completar todas las casillas antes de continuar</p>
-<hr />
-<h3 id="nivel-2-validacion-de-autenticacion">Nivel 2: Validación de Autenticación</h3>
+<h3 id="nivel-1-validacion-de-autenticacion">Nivel 1: Validación de Autenticación</h3>
 <p><strong>Reglas:</strong>
 - Token debe estar presente en el header <code>Authorization</code>
 - Token debe tener formato válido: <code>Bearer {token}</code>
@@ -2935,256 +3214,227 @@ Desembolso Final
 </code></pre>
 <p><strong>Código HTTP:</strong> <code>401 Unauthorized</code></p>
 <p><strong>Comportamiento en Invictus:</strong>
-- Mostrar mensaje modal naranja: <strong>"Token de autorización inválido o ausente"</strong>
+- Mostrar mensaje modal <strong>ROJO</strong>: <strong>"Token de autorización inválido o ausente"</strong>
 - Botón <strong>[CERRAR]</strong> para cerrar el modal
-- Dejar al usuario en la <strong>pantalla para ingresar el OTP</strong> (no reinicia proceso)
-- <strong>Nota:</strong> Este token corresponde a la autenticación del sistema Invictus con el sistema TESEO</p>
+- <strong>Cerrar modal → Permanece en Sección 3: Realizar Desembolso</strong>
+- <strong>NO guarda información ni registra la transacción</strong>
+- <strong>Nota:</strong> Este token corresponde a la autenticación del sistema Invictus con TESEO</p>
 <hr />
-<h3 id="nivel-3-validacion-de-campos-requeridos">Nivel 3: Validación de Campos Requeridos</h3>
+<h3 id="nivel-2-validacion-de-campos-requeridos">Nivel 2: Validación de Campos Requeridos</h3>
 <p><strong>Reglas:</strong>
-- Todos los campos son obligatorios: <code>tiposdocumento_id</code>, <code>identificacion</code>, <code>codigo_otp</code>, <code>guid</code>
-- Campos deben ser tipo string
+- Todos los campos del request son obligatorios
+- Campos deben tener el tipo de dato correcto
 - No se permiten valores vacíos o nulos
-- <code>codigo_otp</code> debe tener exactamente 6 caracteres
-- <code>guid</code> debe ser un UUID válido</p>
+- <code>guid</code> debe ser un UUID válido
+- Valores numéricos deben ser mayores a cero</p>
 <p><strong>Respuesta en caso de error:</strong></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;error&quot;,
   &quot;errors&quot;: [
-    &quot;El campo codigo_otp es obligatorio.&quot;,
-    &quot;El campo guid es obligatorio.&quot;
+    &quot;El campo guid es obligatorio.&quot;,
+    &quot;El campo valor_total es obligatorio.&quot;,
+    &quot;El campo valor_a_pagar_cliente debe ser mayor a cero.&quot;
   ]
 }
 </code></pre>
 <p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
 <hr />
-<h3 id="nivel-4-validacion-de-transaccion-existente">Nivel 4: Validación de Transacción Existente</h3>
+<h3 id="nivel-3-validacion-de-transaccion-existente">Nivel 3: Validación de Transacción Existente</h3>
 <p><strong>Proceso:</strong>
 1. Se verifica que el <code>guid</code> proporcionado exista en el sistema TESEO
-2. Se valida que el <code>guid</code> corresponda al <code>tiposdocumento_id</code> e <code>identificacion</code> enviados
-3. Se verifica que la transacción esté en estado válido para recibir OTP</p>
-<p><strong>Resultado: Transacción No Encontrada o No Corresponde</strong></p>
-<p>La transacción con el <code>guid</code> proporcionado no existe o no coincide con la identificación del cliente.</p>
+2. Se valida que corresponda a una transacción de desembolso válida
+3. Se verifica que la transacción pertenezca al cliente identificado</p>
+<p><strong>Resultado: Transacción No Encontrada o Inválida</strong></p>
+<p>El GUID proporcionado no existe en el sistema o no corresponde a la identificación del cliente.</p>
 <p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Transacción no encontrada o no corresponde a esta identificación.&quot;
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;
 }
 </code></pre>
 <p><strong>Código HTTP:</strong> <code>404 Not Found</code></p>
 <p><strong>Comportamiento en Invictus:</strong>
-- Mostrar mensaje modal naranja: <strong>"Transacción no encontrada o inválida"</strong>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"Transacción no encontrada o inválida"</strong>
 - Botón <strong>[CERRAR]</strong> para cerrar el modal
-- Dejar al usuario en la <strong>pantalla para ingresar el OTP</strong> (no reinicia proceso)</p>
+- <strong>Cerrar modal → Permanece en Sección 3: Realizar Desembolso</strong>
+- <strong>NO guarda información ni registra la transacción</strong></p>
 <hr />
-<h3 id="nivel-5-validacion-de-vigencia-del-otp">Nivel 5: Validación de Vigencia del OTP</h3>
-<p><strong>Reglas de negocio:</strong>
-- Vigencia máxima: <strong>3 minutos</strong> desde la generación del código
-- Fórmula: <code>tiempo_transcurrido = timestamp_actual - timestamp_generacion</code>
-- Si <code>tiempo_transcurrido &gt; 3 minutos</code> → OTP expirado
-- El tiempo de vigencia es <strong>parametrizable</strong> en el sistema</p>
-<p><strong>Resultado: OTP Expirado</strong></p>
-<p>El código OTP ha superado el tiempo máximo de vigencia permitido.</p>
-<p><strong>Respuesta:</strong></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;expired&quot;,
-  &quot;mensaje&quot;: &quot;El código OTP ha expirado. Debe solicitar un nuevo código.&quot;,
-  &quot;tiempo_transcurrido&quot;: &quot;6 minutos&quot;,
-  &quot;vigencia_maxima&quot;: &quot;3 minutos&quot;
-}
-</code></pre>
-<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
-<p><strong>Comportamiento en Invictus:</strong>
-- Mostrar mensaje modal naranja con texto:
-  <code>"El código OTP ha expirado. Debe solicitar un nuevo código
-  tiempo_transcurrido: '6 minutos'
-  vigencia_maxima: '3 minutos'"</code>
-- Botón <strong>[CERRAR]</strong> para cerrar el modal
-- <strong>Cerrar modal → REGRESA a la pantalla principal de Invictus</strong>
-- <strong>El proceso de desembolso se debe REINICIAR desde cero</strong>
-- Usuario debe iniciar nuevamente desde Sección 1: Datos Cliente</p>
-<p><strong>Campos de respuesta:</strong>
-- <code>status</code>: Indicador del resultado (<code>expired</code>)
-- <code>mensaje</code>: Descripción para el usuario final
-- <code>tiempo_transcurrido</code>: Tiempo desde que se generó el OTP (formato legible)
-- <code>vigencia_maxima</code>: Tiempo máximo permitido (formato legible)</p>
-<hr />
-<h3 id="nivel-6-validacion-de-intentos-fallidos">Nivel 6: Validación de Intentos Fallidos</h3>
-<p><strong>Reglas de negocio:</strong>
-- Número máximo de intentos: <strong>3 intentos</strong> (parametrizable)
-- Los intentos se cuentan por <code>guid</code> (por transacción)
-- Cada intento fallido incrementa el contador en 1
-- Al alcanzar el máximo de intentos, la transacción se bloquea automáticamente</p>
-<p><strong>Resultado: Intentos Superados</strong></p>
-<p>El usuario ha agotado los 3 intentos permitidos para ingresar el código OTP correcto.</p>
-<p><strong>Acciones automáticas del sistema:</strong>
-1. Bloquea la transacción asociada al <code>guid</code>
-2. Invalida el código OTP actual (ya no puede ser utilizado)
-3. Registra el bloqueo en el sistema con timestamp
-4. El cliente debe solicitar un nuevo código OTP y reiniciar el proceso</p>
-<p><strong>Respuesta:</strong></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;blocked&quot;,
-  &quot;mensaje&quot;: &quot;Ha superado el número máximo de intentos permitidos (3). Debe solicitar un nuevo código OTP.&quot;,
-  &quot;intentos_realizados&quot;: 3,
-  &quot;intentos_permitidos&quot;: 3
-}
-</code></pre>
-<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
-<p><strong>Comportamiento en Invictus:</strong>
-- Mostrar mensaje modal naranja con texto:
-  <code>"Ha superado el número máximo de intentos permitidos (3). Debe solicitar un nuevo código
-  intentos_realizados: '3'
-  intentos_permitidos: '3'"</code>
-- Botón <strong>[CERRAR]</strong> para cerrar el modal
-- <strong>Cerrar modal → REGRESA a la pantalla principal de Invictus</strong>
-- <strong>El proceso de desembolso se debe REINICIAR desde cero</strong>
-- Usuario debe iniciar nuevamente desde Sección 1: Datos Cliente</p>
-<p><strong>Campos de respuesta:</strong>
-- <code>status</code>: Indicador del resultado (<code>blocked</code>)
-- <code>mensaje</code>: Descripción para el usuario final
-- <code>intentos_realizados</code>: Número de intentos que realizó el usuario
-- <code>intentos_permitidos</code>: Número máximo de intentos configurado</p>
-<hr />
-<h3 id="nivel-7-validacion-del-codigo-otp">Nivel 7: Validación del Código OTP</h3>
+<h3 id="nivel-4-validacion-de-otp-previamente-confirmado">Nivel 4: Validación de OTP Previamente Confirmado</h3>
 <p><strong>Proceso:</strong>
-1. Se compara el <code>codigo_otp</code> ingresado con el código generado y almacenado en el sistema
-2. La comparación es <strong>case-sensitive</strong> si el código es alfanumérico
-3. Se verifica que el código no haya sido ya utilizado exitosamente</p>
-<p><strong>Resultado: Código OTP Incorrecto</strong></p>
-<p>El código ingresado no coincide con el código generado para esta transacción.</p>
-<p><strong>Acciones del sistema:</strong>
-1. Incrementa el contador de intentos fallidos para este <code>guid</code>
-2. Calcula los intentos restantes
-3. No invalida el código (el cliente puede reintentar)
-4. Registra el intento fallido con timestamp</p>
+1. Se verifica que el OTP asociado al <code>guid</code> haya sido validado exitosamente
+2. Se confirma que la validación OTP esté vigente (no haya expirado la sesión)
+3. Se valida que no haya transcurrido más tiempo del permitido desde la validación OTP</p>
+<p><strong>Resultado: OTP No Validado o Sesión Expirada</strong></p>
+<p>El OTP no fue validado previamente o la sesión de validación ha expirado.</p>
 <p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;invalid&quot;,
-  &quot;mensaje&quot;: &quot;El código OTP ingresado es incorrecto.&quot;,
-  &quot;intentos_realizados&quot;: 1,
-  &quot;intentos_restantes&quot;: 2
+  &quot;status&quot;: &quot;otp_not_validated&quot;,
+  &quot;mensaje&quot;: &quot;Debe validar el código OTP antes de ejecutar el desembolso.&quot;,
+  &quot;tiempo_desde_validacion&quot;: null
 }
 </code></pre>
 <p><strong>Código HTTP:</strong> <code>200 OK</code></p>
 <p><strong>Comportamiento en Invictus:</strong>
-- Mostrar mensaje modal naranja con texto:
-  <code>"El código ingresado es incorrecto
-  intentos_restantes: 2"</code>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"Debe validar el código OTP antes de ejecutar el desembolso"</strong>
 - Botón <strong>[CERRAR]</strong> para cerrar el modal
-- <strong>Cerrar modal → Dejar al usuario en la pantalla para ingresar el OTP</strong>
-- Usuario puede volver a intentar ingresando un nuevo código
-- Las casillas OTP se limpian automáticamente para un nuevo intento</p>
-<p><strong>Campos de respuesta:</strong>
-- <code>status</code>: Indicador del resultado (<code>invalid</code>)
-- <code>mensaje</code>: Descripción para el usuario final
-- <code>intentos_realizados</code>: Número de intentos que ha realizado hasta el momento
-- <code>intentos_restantes</code>: Cuántos intentos le quedan antes del bloqueo</p>
+- <strong>Cerrar modal → Permanece en Sección 3: Realizar Desembolso</strong>
+- Usuario debe regresar a validar el OTP</p>
 <hr />
-<h3 id="nivel-8-validacion-exitosa">Nivel 8: Validación Exitosa ✅</h3>
-<p><strong>Condiciones cumplidas:</strong>
-- ✅ Token de autenticación válido
-- ✅ Todos los campos requeridos presentes
-- ✅ Transacción (GUID) existe y corresponde a la identificación
-- ✅ Código OTP NO ha expirado (&lt;3 minutos)
-- ✅ Intentos NO superados (&lt;3 intentos)
-- ✅ Código OTP es CORRECTO</p>
-<p><strong>Acciones automáticas del sistema:</strong>
-1. Actualiza el estado del crédito a <strong>"listo para desembolsar"</strong>
-2. Registra la validación exitosa con timestamp completo
-3. <strong>Invalida el código OTP</strong> (uso único, no puede reutilizarse)
-4. Marca la transacción como autenticada
-5. Habilita el proceso de desembolso
-6. <strong>Retorna información de las líneas de crédito del cliente</strong></p>
-<p><strong>Respuesta exitosa:</strong></p>
+<h3 id="nivel-5-validacion-de-credito-disponible">Nivel 5: Validación de Crédito Disponible</h3>
+<p><strong>Proceso:</strong>
+1. Se verifica el estado actual del crédito en TESEO
+2. Se valida que el crédito no haya sido desembolsado previamente
+3. Se confirma que el crédito sigue vigente (dentro de los 30 días)
+4. Se valida que el cupo esté activo y sin bloqueos</p>
+<p><strong>Resultado 5.1: Crédito Ya Desembolsado</strong></p>
+<p>El crédito ya fue desembolsado en una transacción anterior.</p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="language-json">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;datos&quot;: {
-    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
-    &quot;mensaje&quot;: &quot;Código OTP validado correctamente. Crédito autorizado para desembolso.&quot;,
-    &quot;nombre_cliente&quot;: &quot;Juan Pérez&quot;,
-    &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:45&quot;,
-    &quot;puede_desembolsar&quot;: true,
-    &quot;lineas_credito&quot;: [
-      {
-        &quot;id_linea_credito&quot;: 27373,
-        &quot;linea_credito&quot;: &quot;Línea 1&quot;,
-        &quot;valor_cupo&quot;: 50000,
-        &quot;total_entregado&quot;: 50000,
-        &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 12,
-        &quot;monto_fijo&quot;: 'NO'
-      },
-      {
-        &quot;id_linea_credito&quot;: 27375, 
-        &quot;linea_credito&quot;: &quot;Línea 2&quot;,
-        &quot;valor_cupo&quot;: 50000,
-        &quot;total_entregado&quot;: 50000,
-        &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 2, 
-        &quot;monto_fijo&quot;: 'SI'
-      }
-    ]
-  }
+  &quot;status&quot;: &quot;already_disbursed&quot;,
+  &quot;mensaje&quot;: &quot;Este crédito ya fue desembolsado anteriormente.&quot;,
+  &quot;fecha_desembolso_anterior&quot;: &quot;2025-02-10 10:15:30&quot;,
+  &quot;numero_desembolso_anterior&quot;: &quot;DES-2025-00012340&quot;
 }
 </code></pre>
 <p><strong>Código HTTP:</strong> <code>200 OK</code></p>
-<p><strong>Comportamiento en Invictus:</strong></p>
-<ol>
-<li>
-<p><strong>Mostrar mensaje modal verde</strong> con texto:
-   <code>"Código OTP validado correctamente. Crédito autorizado para desembolso."</code></p>
-<ul>
-<li>Botón <strong>[CERRAR]</strong> para cerrar el modal</li>
-</ul>
-</li>
-<li>
-<p><strong>Cerrar modal → Permanece en la pantalla para completar el desembolso</strong></p>
-</li>
-<li>
-<p><strong>Habilitar Sección 2: Datos Crédito</strong> con la información retornada:</p>
-<ul>
-<li>Mostrar tabla con las líneas de crédito del cliente</li>
-<li>Columnas visibles:<ul>
-<li>Línea crédito</li>
-<li>Valor Cupo</li>
-<li>Total Entregado</li>
-<li>Total Disponible</li>
-<li>Plazo (meses)</li>
-<li>Ingresos Plazo</li>
-<li>Confirme Plazo</li>
-<li>Ingresos Valor</li>
-<li>Confirme Valor</li>
-<li>Botón [Selección] por cada línea</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Cliente debe seleccionar una línea de crédito</strong> para continuar con el desembolso</p>
-</li>
-</ol>
-<p><strong>Campos de respuesta:</strong>
-- <code>status</code>: Indicador del resultado (<code>success</code>)
-- <code>datos.guid</code>: Identificador único de la transacción (mismo UUID)
-- <code>datos.mensaje</code>: Mensaje de confirmación para el usuario
-- <code>datos.nombre_cliente</code>: Nombre completo del cliente
-- <code>datos.fecha_validacion</code>: Timestamp de cuando se validó el OTP (formato: YYYY-MM-DD HH:MM:SS)
-- <code>datos.puede_desembolsar</code>: Booleano que indica si está autorizado (siempre <code>true</code> en success)
-- <code>datos.lineas_credito</code>: Array con las líneas de crédito disponibles del cliente</p>
-<p><strong>Estructura de cada línea de crédito:</strong>
-- <code>linea_credito</code>: Identificador de la línea (ej: "Línea 1", "Línea 2")
-- <code>valor_cupo</code>: Monto total del cupo aprobado
-- <code>total_entregado</code>: Monto ya entregado al cliente
-- <code>total_disponible</code>: Monto disponible para desembolsar
-- <code>plazo_meses</code>: Plazo en meses para el crédito
-- <code>ingresos_plazo</code>: Información de ingresos relacionada al plazo
-- <code>confirme_plazo</code>: Campo de confirmación del plazo
-- <code>ingresos_valor</code>: Valor de ingresos
-- <code>confirme_valor</code>: Confirmación del valor</p>
-<p><strong>Nota importante:</strong> La respuesta exitosa en este punto <strong>devuelve información de las líneas de crédito del cliente</strong> que deben mostrarse en la Sección 2: Datos Crédito de Invictus.</p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"Este crédito ya fue desembolsado anteriormente el 2025-02-10"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso completo se REINICIA</strong></p>
 <hr />
-<h2 id="response-tabla-resumen-de-respuestas">Response - Tabla Resumen de Respuestas</h2>
+<p><strong>Resultado 5.2: Crédito No Disponible</strong></p>
+<p>El crédito no está disponible por diferentes razones (vencido, bloqueado, cancelado).</p>
+<p><strong>Respuesta:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;credit_not_available&quot;,
+  &quot;mensaje&quot;: &quot;El crédito no está disponible para desembolso.&quot;,
+  &quot;razon&quot;: &quot;credito_vencido&quot;,
+  &quot;detalles&quot;: &quot;El crédito ha superado el plazo de 30 días desde su aprobación.&quot;
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"El crédito no está disponible para desembolso. [detalles]"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso completo se REINICIA</strong></p>
+<p><strong>Posibles valores de <code>razon</code>:</strong>
+- <code>credito_vencido</code>: Crédito superó los 30 días desde aprobación
+- <code>cupo_bloqueado</code>: Cupo bloqueado por mora u otras razones
+- <code>cupo_cancelado</code>: Cupo fue cancelado
+- <code>cliente_fallecido</code>: Cliente registrado como fallecido
+- <code>sin_cupo</code>: Cliente no cuenta con cupo activo</p>
+<hr />
+<h3 id="nivel-6-validacion-de-coherencia-de-montos">Nivel 6: Validación de Coherencia de Montos</h3>
+<p><strong>Proceso:</strong>
+1. Se valida que <code>valor_total = valor_a_pagar_cliente + valor_cobros</code>
+2. Se verifica que los montos coincidan con el cálculo previo del Servicio 4
+3. Se confirma que no haya manipulación de valores</p>
+<p><strong>Resultado: Montos Incoherentes</strong></p>
+<p>Los valores enviados no son coherentes o no coinciden con el cálculo previo.</p>
+<p><strong>Respuesta:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Los montos enviados no son coherentes o no coinciden con el cálculo previo.&quot;,
+  &quot;errores&quot;: [
+    &quot;El valor_total no coincide con la suma de valor_a_pagar_cliente + valor_cobros&quot;,
+    &quot;Los valores no coinciden con el cálculo registrado&quot;
+  ]
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<hr />
+<h2 id="respuestas-de-error">Respuestas de Error</h2>
+<h3 id="error-1-token-de-autenticacion-invalido">Error 1: Token de Autenticación Inválido</h3>
+<p><strong>Código HTTP:</strong> <code>401 Unauthorized</code></p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal <strong>ROJO</strong>: <strong>"Token de autorización inválido o ausente"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → Permanece en Sección 3: Realizar Desembolso</strong>
+- <strong>NO guarda información ni registra la transacción</strong>
+- <strong>Nota:</strong> Este token corresponde a la autenticación del sistema Invictus con TESEO</p>
+<hr />
+<h3 id="error-2-transaccion-no-encontrada">Error 2: Transacción No Encontrada</h3>
+<p><strong>Código HTTP:</strong> <code>404 Not Found</code></p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;
+}
+</code></pre>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"Transacción no encontrada o inválida"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → Permanece en Sección 3: Realizar Desembolso</strong>
+- <strong>NO guarda información ni registra la transacción</strong></p>
+<hr />
+<h3 id="error-3-campos-requeridos-faltantes">Error 3: Campos Requeridos Faltantes</h3>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo guid es obligatorio.&quot;,
+    &quot;El campo valor_total es obligatorio.&quot;
+  ]
+}
+</code></pre>
+<hr />
+<h3 id="error-4-credito-ya-desembolsado">Error 4: Crédito Ya Desembolsado</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;already_disbursed&quot;,
+  &quot;mensaje&quot;: &quot;Este crédito ya fue desembolsado anteriormente.&quot;,
+  &quot;fecha_desembolso_anterior&quot;: &quot;2025-02-10 10:15:30&quot;,
+  &quot;numero_desembolso_anterior&quot;: &quot;DES-2025-00012340&quot;
+}
+</code></pre>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"Este crédito ya fue desembolsado anteriormente el 2025-02-10"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso completo se REINICIA</strong></p>
+<hr />
+<h3 id="error-5-otp-no-validado">Error 5: OTP No Validado</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;otp_not_validated&quot;,
+  &quot;mensaje&quot;: &quot;Debe validar el código OTP antes de ejecutar el desembolso.&quot;,
+  &quot;tiempo_desde_validacion&quot;: null
+}
+</code></pre>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"Debe validar el código OTP antes de ejecutar el desembolso"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → Permanece en Sección 3: Realizar Desembolso</strong>
+- Usuario debe completar validación OTP</p>
+<hr />
+<h3 id="error-6-credito-no-disponible">Error 6: Crédito No Disponible</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;credit_not_available&quot;,
+  &quot;mensaje&quot;: &quot;El crédito no está disponible para desembolso.&quot;,
+  &quot;razon&quot;: &quot;credito_vencido&quot;,
+  &quot;detalles&quot;: &quot;El crédito ha superado el plazo de 30 días desde su aprobación.&quot;
+}
+</code></pre>
+<p><strong>Comportamiento en Invictus:</strong>
+- Mostrar mensaje modal <strong>NARANJA</strong>: <strong>"El crédito no está disponible para desembolso. [detalles]"</strong>
+- Botón <strong>[CERRAR]</strong> para cerrar el modal
+- <strong>Cerrar modal → REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso completo se REINICIA</strong></p>
+<hr />
+<h2 id="tabla-resumen-de-respuestas">Tabla Resumen de Respuestas</h2>
 <table>
 <thead>
 <tr>
@@ -3192,21 +3442,19 @@ Desembolso Final
 <th>Condición</th>
 <th>HTTP Code</th>
 <th>status</th>
-<th>Mensaje UI Invictus</th>
-<th>Color Modal</th>
-<th>Comportamiento</th>
+<th>Mensaje</th>
+<th>Comportamiento Invictus</th>
 <th>Reinicia Proceso</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Validación Front-end fallida</td>
-<td>-</td>
-<td>-</td>
-<td>Resalta casillas en rojo</td>
-<td>-</td>
-<td>No consume servicio</td>
+<td>Desembolso exitoso</td>
+<td>200</td>
+<td><code>success</code></td>
+<td>"Transacción exitosa..."</td>
+<td>Modal verde, ejecuta acciones internas, regresa a inicio</td>
 <td>No</td>
 </tr>
 <tr>
@@ -3214,86 +3462,84 @@ Desembolso Final
 <td>Token inválido/ausente</td>
 <td>401</td>
 <td><code>error</code></td>
-<td>"Token de autorización inválido..."</td>
-<td>Naranja</td>
-<td>Permanece en OTP</td>
+<td>"Token de autorización inválido o ausente."</td>
+<td>Modal rojo, permanece en Sección 3</td>
 <td>No</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Campos requeridos faltantes</td>
-<td>400</td>
+<td>Transacción no encontrada</td>
+<td>404</td>
 <td><code>error</code></td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>"Transacción no encontrada o inválida."</td>
+<td>Modal naranja, permanece en Sección 3</td>
 <td>No</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Transacción no encontrada</td>
-<td>404</td>
+<td>Campos faltantes</td>
+<td>400</td>
 <td><code>error</code></td>
-<td>"Transacción no encontrada o inválida"</td>
-<td>Naranja</td>
-<td>Permanece en OTP</td>
+<td>Lista de campos obligatorios</td>
+<td>-</td>
 <td>No</td>
 </tr>
 <tr>
 <td>5</td>
-<td>OTP expirado (&gt;3 min)</td>
+<td>Crédito ya desembolsado</td>
 <td>200</td>
-<td><code>expired</code></td>
-<td>"El código OTP ha expirado..."</td>
-<td>Naranja</td>
-<td>Regresa a inicio</td>
+<td><code>already_disbursed</code></td>
+<td>"Este crédito ya fue desembolsado..."</td>
+<td>Modal naranja, regresa a inicio</td>
 <td><strong>SÍ</strong></td>
 </tr>
 <tr>
 <td>6</td>
-<td>Intentos superados (&gt;=3)</td>
+<td>OTP no validado</td>
 <td>200</td>
-<td><code>blocked</code></td>
-<td>"Ha superado el número máximo..."</td>
-<td>Naranja</td>
-<td>Regresa a inicio</td>
-<td><strong>SÍ</strong></td>
-</tr>
-<tr>
-<td>7</td>
-<td>Código OTP incorrecto</td>
-<td>200</td>
-<td><code>invalid</code></td>
-<td>"El código ingresado es incorrecto"</td>
-<td>Naranja</td>
-<td>Permanece en OTP</td>
+<td><code>otp_not_validated</code></td>
+<td>"Debe validar el código OTP..."</td>
+<td>Modal naranja, permanece en Sección 3</td>
 <td>No</td>
 </tr>
 <tr>
-<td>8</td>
-<td>Código OTP correcto</td>
+<td>7</td>
+<td>Crédito no disponible</td>
 <td>200</td>
-<td><code>success</code></td>
-<td>"Código OTP validado correctamente..."</td>
-<td>Verde</td>
-<td>Habilita Sección 2</td>
+<td><code>credit_not_available</code></td>
+<td>"El crédito no está disponible..."</td>
+<td>Modal naranja, regresa a inicio</td>
+<td><strong>SÍ</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Montos incoherentes</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>"Los montos enviados no son coherentes..."</td>
+<td>-</td>
 <td>No</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="ejemplos-de-respuestas-completas">Ejemplos de Respuestas Completas</h2>
-<h3 id="caso-1-validacion-exitosa-otp-valido">✅ Caso 1: Validación Exitosa - OTP Válido</h3>
+<h2 id="ejemplos-completos">Ejemplos Completos</h2>
+<h3 id="ejemplo-1-desembolso-exitoso">✅ Ejemplo 1: Desembolso Exitoso</h3>
 <p><strong>Request:</strong></p>
-<pre><code class="language-json">POST /api/validacion_otp_desembolso
+<pre><code class="language-json">POST /api/proceso_desembolso
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 Content-Type: application/json
 
 {
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
-  &quot;codigo_otp&quot;: &quot;202023&quot;,
-  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+  &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+  &quot;id_linea_credito&quot;: 27375,
+  &quot;plazo_meses&quot;: 4,
+  &quot;valor_total&quot;: 500000,
+  &quot;valor_cobros&quot;: 12050,
+  &quot;valor_a_pagar_cliente&quot;: 487950,
+  &quot;plaza_empresa&quot;: 50
 }
 </code></pre>
 <p><strong>Response:</strong></p>
@@ -3303,181 +3549,107 @@ Content-Type: application/json
 {
   &quot;status&quot;: &quot;success&quot;,
   &quot;datos&quot;: {
-    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
-    &quot;mensaje&quot;: &quot;Código OTP validado correctamente. Crédito autorizado para desembolso.&quot;,
-    &quot;nombre_cliente&quot;: &quot;Juan Pérez&quot;,
-    &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:45&quot;,
-    &quot;puede_desembolsar&quot;: true,
-    &quot;lineas_credito&quot;: [
-      {
-        &quot;id_linea_credito&quot;: 27373,      
-        &quot;linea_credito&quot;: &quot;Línea 1&quot;,
-        &quot;valor_cupo&quot;: 50000,
-        &quot;total_entregado&quot;: 50000,
-        &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 12,
-        &quot;monto_fijo&quot;: 'NO'
-      },
-      {
-        &quot;id_linea_credito&quot;: 27375,
-        &quot;linea_credito&quot;: &quot;Línea 2&quot;,
-        &quot;valor_cupo&quot;: 50000,
-        &quot;total_entregado&quot;: 50000,
-        &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 2,
-        &quot;monto_fijo&quot;: 'SI'
-      }
-    ]
+    &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+    &quot;mensaje&quot;: &quot;Transacción exitosa. Desembolso realizado correctamente.&quot;,
+    &quot;numero_desembolso&quot;: &quot;DES-2025-00012345&quot;,
+    &quot;nombre_cliente&quot;: &quot;Fernando Osorio&quot;,
+    &quot;identificacion&quot;: &quot;88282828&quot;,
+    &quot;linea_credito&quot;: &quot;Línea Digital&quot;,
+    &quot;valor_total&quot;: 500000,
+    &quot;valor_cobros&quot;: 12050,
+    &quot;valor_a_pagar_cliente&quot;: 487950,
+    &quot;plazo_meses&quot;: 4,
+    &quot;plaza_empresa&quot;: 50,
+    &quot;fecha_desembolso&quot;: &quot;2025-02-11 14:35:22&quot;,
+    &quot;comprobante&quot;: {
+      &quot;numero_comprobante&quot;: &quot;COMP-2025-00012345&quot;,
+      &quot;fecha_hora&quot;: &quot;2025-02-11 14:35:22&quot;,
+      &quot;concepto&quot;: &quot;Desembolso de crédito&quot;,
+      &quot;detalles_descuentos&quot;: [
+        {
+          &quot;concepto&quot;: &quot;IVA&quot;,
+          &quot;valor&quot;: 8000
+        },
+        {
+          &quot;concepto&quot;: &quot;Seguro&quot;,
+          &quot;valor&quot;: 4000
+        },
+        {
+          &quot;concepto&quot;: &quot;Comisión&quot;,
+          &quot;valor&quot;: 50
+        }
+      ]
+    },
+    &quot;instrucciones_invictus&quot;: {
+      &quot;replicar_siga&quot;: true,
+      &quot;afectar_caja&quot;: true,
+      &quot;afectar_cartera&quot;: true,
+      &quot;imprimir_colilla&quot;: true,
+      &quot;afectar_contabilidad&quot;: true
+    }
   }
 }
 </code></pre>
-<p><strong>Acción en Invictus:</strong>
-- Modal verde: <strong>"Código OTP validado correctamente. Crédito autorizado para desembolso."</strong>
-- Cerrar modal
-- Habilitar Sección 2: Datos Crédito
-- Mostrar tabla con las 2 líneas de crédito disponibles
-- Cliente puede seleccionar una línea para continuar</p>
+<p><strong>Acción en Invictus:</strong></p>
+<ol>
+<li>
+<p><strong>Mostrar Modal Verde:</strong></p>
+<ul>
+<li>Mensaje: <strong>"Su transacción fue Exitosa debe entregar $487,950 al cliente."</strong></li>
+<li>Botón <strong>[X]</strong> o <strong>[CERRAR]</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Al cerrar modal:</strong></p>
+<ul>
+<li><strong>REGRESA a pantalla principal de Invictus</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Invictus debe ejecutar (según HUE 006):</strong></p>
+<ul>
+<li>✅ Replicar en SIGA y contabilidad</li>
+<li>✅ Afectar la caja de la fuerza de ventas (descontar $487,950)</li>
+<li>✅ Afectar la cartera de la fuerza de ventas</li>
+<li>✅ Registrarse en Base de datos de Invictus</li>
+<li>✅ Imprimir colilla de transacción con:<ul>
+<li>Número de desembolso</li>
+<li>Número de comprobante</li>
+<li>Cliente y documento</li>
+<li>Línea de crédito</li>
+<li>Valor total, cobros, y valor entregado</li>
+<li>Desglose de descuentos</li>
+<li>Fecha y hora</li>
+</ul>
+</li>
+<li>✅ Afectar la contabilidad en Invictus</li>
+</ul>
+</li>
+<li>
+<p><strong>Entrega física:</strong></p>
+<ul>
+<li>El asesor debe entregar <strong>$487,950</strong> en efectivo al cliente</li>
+<li>Cliente firma la colilla impresa como constancia de recibo</li>
+</ul>
+</li>
+</ol>
 <hr />
-<h3 id="caso-2-codigo-otp-incorrecto-primer-intento">❌ Caso 2: Código OTP Incorrecto (Primer Intento)</h3>
+<h3 id="ejemplo-2-error-de-autenticacion">🔴 Ejemplo 2: Error de Autenticación</h3>
 <p><strong>Request:</strong></p>
-<pre><code class="language-json">POST /api/validacion_otp_desembolso
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+<pre><code class="language-json">POST /api/proceso_desembolso
+Authorization: Bearer token_invalido_expirado
 Content-Type: application/json
 
 {
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
-  &quot;codigo_otp&quot;: &quot;123456&quot;,
-  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
-}
-</code></pre>
-<p><strong>Response:</strong></p>
-<pre><code class="language-json">HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  &quot;status&quot;: &quot;invalid&quot;,
-  &quot;mensaje&quot;: &quot;El código OTP ingresado es incorrecto.&quot;,
-  &quot;intentos_realizados&quot;: 1,
-  &quot;intentos_restantes&quot;: 2
-}
-</code></pre>
-<p><strong>Acción en Invictus:</strong>
-- Modal naranja con texto:
-  <code>"El código ingresado es incorrecto
-  intentos_restantes: 2"</code>
-- Botón [CERRAR]
-- Cerrar modal → Permanece en pantalla de ingreso OTP
-- Limpia las 6 casillas OTP para nuevo intento
-- Cliente puede volver a intentar</p>
-<hr />
-<h3 id="caso-3-intentos-superados-tercer-intento-fallido">🚫 Caso 3: Intentos Superados (Tercer Intento Fallido)</h3>
-<p><strong>Request:</strong></p>
-<pre><code class="language-json">POST /api/validacion_otp_desembolso
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-Content-Type: application/json
-
-{
-  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
-  &quot;identificacion&quot;: &quot;88282828&quot;,
-  &quot;codigo_otp&quot;: &quot;999999&quot;,
-  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
-}
-</code></pre>
-<p><strong>Response:</strong></p>
-<pre><code class="language-json">HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  &quot;status&quot;: &quot;blocked&quot;,
-  &quot;mensaje&quot;: &quot;Ha superado el número máximo de intentos permitidos (3). Debe solicitar un nuevo código OTP.&quot;,
-  &quot;intentos_realizados&quot;: 3,
-  &quot;intentos_permitidos&quot;: 3
-}
-</code></pre>
-<p><strong>Acción en Invictus:</strong>
-- Modal naranja con texto:
-  <code>"Ha superado el número máximo de intentos permitidos (3). Debe solicitar un nuevo código
-  intentos_realizados: '3'
-  intentos_permitidos: '3'"</code>
-- Botón [CERRAR]
-- Cerrar modal → <strong>REGRESA a pantalla principal de Invictus</strong>
-- <strong>Proceso de desembolso se REINICIA completamente</strong>
-- Cliente debe iniciar desde Sección 1: Datos Cliente</p>
-<hr />
-<h3 id="caso-4-otp-expirado">⏰ Caso 4: OTP Expirado</h3>
-<p><strong>Request:</strong></p>
-<pre><code class="language-json">POST /api/validacion_otp_desembolso
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-Content-Type: application/json
-
-{
-  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
-  &quot;identificacion&quot;: &quot;88282828&quot;,
-  &quot;codigo_otp&quot;: &quot;202023&quot;,
-  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
-}
-</code></pre>
-<p><strong>Response:</strong></p>
-<pre><code class="language-json">HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  &quot;status&quot;: &quot;expired&quot;,
-  &quot;mensaje&quot;: &quot;El código OTP ha expirado. Debe solicitar un nuevo código.&quot;,
-  &quot;tiempo_transcurrido&quot;: &quot;6 minutos&quot;,
-  &quot;vigencia_maxima&quot;: &quot;3 minutos&quot;
-}
-</code></pre>
-<p><strong>Acción en Invictus:</strong>
-- Modal naranja con texto:
-  <code>"El código OTP ha expirado. Debe solicitar un nuevo código
-  tiempo_transcurrido: '6 minutos'
-  vigencia_maxima: '3 minutos'"</code>
-- Botón [CERRAR]
-- Cerrar modal → <strong>REGRESA a pantalla principal de Invictus</strong>
-- <strong>Proceso de desembolso se REINICIA completamente</strong>
-- Cliente debe iniciar desde Sección 1: Datos Cliente</p>
-<hr />
-<h3 id="caso-5-transaccion-no-encontrada">⚠️ Caso 5: Transacción No Encontrada</h3>
-<p><strong>Request:</strong></p>
-<pre><code class="language-json">POST /api/validacion_otp_desembolso
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-Content-Type: application/json
-
-{
-  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
-  &quot;identificacion&quot;: &quot;88282828&quot;,
-  &quot;codigo_otp&quot;: &quot;202023&quot;,
-  &quot;guid&quot;: &quot;guid-invalido-12345&quot;
-}
-</code></pre>
-<p><strong>Response:</strong></p>
-<pre><code class="language-json">HTTP/1.1 404 Not Found
-Content-Type: application/json
-
-{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Transacción no encontrada o no corresponde a esta identificación.&quot;
-}
-</code></pre>
-<p><strong>Acción en Invictus:</strong>
-- Modal naranja: <strong>"Transacción no encontrada o inválida"</strong>
-- Botón [CERRAR]
-- Cerrar modal → Permanece en pantalla de ingreso OTP
-- No reinicia proceso (puede ser error temporal)</p>
-<hr />
-<h3 id="caso-6-error-de-autenticacion-token-invalido">🔐 Caso 6: Error de Autenticación (Token Inválido)</h3>
-<p><strong>Request:</strong></p>
-<pre><code class="language-json">POST /api/validacion_otp_desembolso
-Authorization: Bearer token_invalido_o_expirado
-Content-Type: application/json
-
-{
-  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
-  &quot;identificacion&quot;: &quot;88282828&quot;,
-  &quot;codigo_otp&quot;: &quot;202023&quot;,
-  &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;
+  &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+  &quot;id_linea_credito&quot;: 27375,
+  &quot;plazo_meses&quot;: 4,
+  &quot;valor_total&quot;: 500000,
+  &quot;valor_cobros&quot;: 12050,
+  &quot;valor_a_pagar_cliente&quot;: 487950,
+  &quot;plaza_empresa&quot;: 50
 }
 </code></pre>
 <p><strong>Response:</strong></p>
@@ -3490,416 +3662,274 @@ Content-Type: application/json
 }
 </code></pre>
 <p><strong>Acción en Invictus:</strong>
-- Modal naranja: <strong>"Token de autorización inválido o ausente"</strong>
-- Botón [CERRAR]
-- Cerrar modal → Permanece en pantalla de ingreso OTP
-- <strong>Nota:</strong> Este token corresponde a la autenticación del sistema Invictus con TESEO</p>
+- Modal <strong>ROJO</strong> (Mockup 07) con texto: <strong>"Token de autorización inválido o ausente"</strong>
+- Botón <strong>[CERRAR]</strong>
+- Al cerrar → <strong>PERMANECE en Sección 3: Realizar Desembolso</strong>
+- <strong>NO guarda información ni registra la transacción</strong></p>
 <hr />
-<h3 id="caso-7-error-de-validacion-campos-faltantes">🚫 Caso 7: Error de Validación - Campos Faltantes</h3>
+<h3 id="ejemplo-3-transaccion-no-encontrada">🟠 Ejemplo 3: Transacción No Encontrada</h3>
 <p><strong>Request:</strong></p>
-<pre><code class="language-json">POST /api/validacion_otp_desembolso
+<pre><code class="language-json">POST /api/proceso_desembolso
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 Content-Type: application/json
 
 {
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
-  &quot;identificacion&quot;: &quot;88282828&quot;
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;guid-invalido-no-existe&quot;,
+  &quot;id_linea_credito&quot;: 27375,
+  &quot;plazo_meses&quot;: 4,
+  &quot;valor_total&quot;: 500000,
+  &quot;valor_cobros&quot;: 12050,
+  &quot;valor_a_pagar_cliente&quot;: 487950,
+  &quot;plaza_empresa&quot;: 50
 }
 </code></pre>
 <p><strong>Response:</strong></p>
-<pre><code class="language-json">HTTP/1.1 400 Bad Request
+<pre><code class="language-json">HTTP/1.1 404 Not Found
 Content-Type: application/json
 
 {
   &quot;status&quot;: &quot;error&quot;,
-  &quot;errors&quot;: [
-    &quot;El campo codigo_otp es obligatorio.&quot;,
-    &quot;El campo guid es obligatorio.&quot;
-  ]
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;
 }
 </code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal <strong>NARANJA</strong> (Mockup 05) con texto: <strong>"Transacción no encontrada o inválida"</strong>
+- Botón <strong>[CERRAR]</strong>
+- Al cerrar → <strong>PERMANECE en Sección 3: Realizar Desembolso</strong>
+- <strong>NO guarda información ni registra la transacción</strong></p>
+<hr />
+<h3 id="ejemplo-4-credito-ya-desembolsado">⚠️ Ejemplo 4: Crédito Ya Desembolsado</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/proceso_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+  &quot;id_linea_credito&quot;: 27375,
+  &quot;plazo_meses&quot;: 4,
+  &quot;valor_total&quot;: 500000,
+  &quot;valor_cobros&quot;: 12050,
+  &quot;valor_a_pagar_cliente&quot;: 487950,
+  &quot;plaza_empresa&quot;: 50
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;already_disbursed&quot;,
+  &quot;mensaje&quot;: &quot;Este crédito ya fue desembolsado anteriormente.&quot;,
+  &quot;fecha_desembolso_anterior&quot;: &quot;2025-02-10 10:15:30&quot;,
+  &quot;numero_desembolso_anterior&quot;: &quot;DES-2025-00012340&quot;
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal <strong>NARANJA</strong> con texto: <strong>"Este crédito ya fue desembolsado anteriormente el 2025-02-10"</strong>
+- Botón <strong>[CERRAR]</strong>
+- Al cerrar → <strong>REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso completo se REINICIA desde el inicio</strong></p>
+<hr />
+<h3 id="ejemplo-5-otp-no-validado">🔐 Ejemplo 5: OTP No Validado</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/proceso_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+  &quot;id_linea_credito&quot;: 27375,
+  &quot;plazo_meses&quot;: 4,
+  &quot;valor_total&quot;: 500000,
+  &quot;valor_cobros&quot;: 12050,
+  &quot;valor_a_pagar_cliente&quot;: 487950,
+  &quot;plaza_empresa&quot;: 50
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;otp_not_validated&quot;,
+  &quot;mensaje&quot;: &quot;Debe validar el código OTP antes de ejecutar el desembolso.&quot;,
+  &quot;tiempo_desde_validacion&quot;: null
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal <strong>NARANJA</strong> con texto: <strong>"Debe validar el código OTP antes de ejecutar el desembolso"</strong>
+- Botón <strong>[CERRAR]</strong>
+- Al cerrar → <strong>PERMANECE en Sección 3: Realizar Desembolso</strong>
+- Usuario debe regresar y completar la validación OTP</p>
+<hr />
+<h3 id="ejemplo-6-credito-no-disponible-vencido">❌ Ejemplo 6: Crédito No Disponible (Vencido)</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/proceso_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;88282828&quot;,
+  &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
+  &quot;id_linea_credito&quot;: 27375,
+  &quot;plazo_meses&quot;: 4,
+  &quot;valor_total&quot;: 500000,
+  &quot;valor_cobros&quot;: 12050,
+  &quot;valor_a_pagar_cliente&quot;: 487950,
+  &quot;plaza_empresa&quot;: 50
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;credit_not_available&quot;,
+  &quot;mensaje&quot;: &quot;El crédito no está disponible para desembolso.&quot;,
+  &quot;razon&quot;: &quot;credito_vencido&quot;,
+  &quot;detalles&quot;: &quot;El crédito ha superado el plazo de 30 días desde su aprobación.&quot;
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+- Modal <strong>NARANJA</strong> con texto: <strong>"El crédito no está disponible para desembolso. El crédito ha superado el plazo de 30 días desde su aprobación."</strong>
+- Botón <strong>[CERRAR]</strong>
+- Al cerrar → <strong>REGRESA a pantalla principal de Invictus</strong>
+- <strong>Proceso completo se REINICIA desde el inicio</strong></p>
 <hr />
 <h2 id="integracion-en-invictus">Integración en Invictus</h2>
-<h3 id="pantalla-autenticacion-cliente-continuacion-de-hue-002">Pantalla: Autenticación Cliente (Continuación de HUE 002)</h3>
-<p><strong>Estado inicial de la pantalla:</strong>
-- Título parametrizable con instrucciones para el cliente
-- Medios de envío mostrados (WhatsApp, SMS, Email) con información ofuscada
-- 6 casillas individuales para código OTP
-- Temporizador de vigencia (ej: "3:00 minutos")
-- Opción "Reenviar código OTP" (inhabilitada)
-- Botones: [Limpiar], [Cancelar], [Confirmar (inhabilitado)]</p>
-<p><strong>Flujo de interacción:</strong></p>
+<h3 id="seccion-3-realizar-desembolso">Sección 3: Realizar Desembolso</h3>
+<p>Esta sección se habilita después de ejecutar exitosamente el <strong>Servicio 4: Cálculo de Desembolso</strong>.</p>
+<p><strong>Campos Mostrados (Solo Lectura):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Valor Total</strong></td>
+<td>Valor total del crédito solicitado</td>
+<td>$500,000</td>
+</tr>
+<tr>
+<td><strong>Valor Cobros</strong></td>
+<td>Suma de todos los descuentos aplicados</td>
+<td>$12,050</td>
+</tr>
+<tr>
+<td><strong>Plazo (Meses)</strong></td>
+<td>Plazo seleccionado del crédito</td>
+<td>4 meses</td>
+</tr>
+<tr>
+<td><strong>Valor a Pagar al Cliente</strong></td>
+<td><strong>Monto final a entregar físicamente</strong></td>
+<td><strong>$487,950</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota importante:</strong> El campo "Valor a Pagar al Cliente" debe estar <strong>destacado visualmente</strong> (negrilla, tamaño mayor, color diferente) ya que es el monto exacto que el asesor debe entregar en efectivo.</p>
+<p><strong>Botones Habilitados:</strong></p>
 <ol>
 <li>
-<p><strong>Cliente ingresa código OTP:</strong></p>
+<p><strong>[Cancelar]</strong></p>
 <ul>
-<li>Puede escribir en las 6 casillas</li>
-<li>Puede editar en cualquier momento</li>
-<li>Temporizador cuenta regresiva activa</li>
+<li><strong>Acción:</strong> Cancela la transacción completa</li>
+<li><strong>Comportamiento:</strong> Lleva a la fuerza de ventas a la pantalla inicial de Invictus</li>
+<li><strong>Resultado:</strong> NO guarda información, NO registra transacción</li>
+<li><strong>Confirmación:</strong> Se recomienda mostrar confirmación antes de cancelar</li>
 </ul>
 </li>
 <li>
-<p><strong>Validación Front-end:</strong></p>
+<p><strong>[Limpiar]</strong></p>
 <ul>
-<li>Si alguna casilla está vacía:<ul>
-<li>Resalta casillas vacías en ROJO</li>
-<li>Botón [Confirmar] permanece INHABILITADO</li>
-<li>NO consume servicio</li>
-</ul>
-</li>
-<li>Si todas las casillas están completas:<ul>
-<li>Habilita botón [Confirmar]</li>
-</ul>
-</li>
+<li><strong>Acción:</strong> Limpia la información de todas las secciones</li>
+<li><strong>Comportamiento:</strong> Limpia campos de Sección 1, 2 y 3</li>
+<li><strong>Resultado:</strong> Permanece en la opción de desembolso</li>
+<li><strong>Confirmación:</strong> Se recomienda mostrar confirmación antes de limpiar</li>
 </ul>
 </li>
 <li>
-<p><strong>Usuario presiona [Confirmar]:</strong></p>
+<p><strong>[Pagar]</strong></p>
 <ul>
-<li>Consume servicio de Validación OTP</li>
-<li>Espera respuesta</li>
+<li><strong>Acción:</strong> Ejecuta el desembolso final</li>
+<li><strong>Comportamiento:</strong> Consume este servicio (Ejecución de Desembolso)</li>
+<li><strong>Estado:</strong> HABILITADO solo si todos los pasos anteriores fueron exitosos</li>
+<li><strong>Confirmación:</strong> Se recomienda mostrar confirmación antes de ejecutar</li>
 </ul>
-</li>
-<li>
-<p><strong>Comportamiento según respuesta:</strong></p>
 </li>
 </ol>
-<p><strong>a) Response: <code>success</code></strong>
-    - Modal verde: "Código OTP validado correctamente. Crédito autorizado para desembolso."
-    - [CERRAR]
-    - Cierra pantalla de autenticación
-    - <strong>Habilita Sección 2: Datos Crédito</strong>
-    - Muestra tabla con líneas de crédito del cliente
-    - Cliente puede seleccionar línea y continuar</p>
-<p><strong>b) Response: <code>invalid</code></strong>
-    - Modal naranja: "El código ingresado es incorrecto\nintentos_restantes: X"
-    - [CERRAR]
-    - Permanece en pantalla OTP
-    - Limpia las 6 casillas
-    - Cliente puede reintentar</p>
-<p><strong>c) Response: <code>blocked</code></strong>
-    - Modal naranja: "Ha superado el número máximo de intentos permitidos (3)..."
-    - [CERRAR]
-    - <strong>Cierra pantalla de autenticación</strong>
-    - <strong>Regresa a pantalla principal de Invictus</strong>
-    - <strong>Proceso completo se REINICIA</strong></p>
-<p><strong>d) Response: <code>expired</code></strong>
-    - Modal naranja: "El código OTP ha expirado. Debe solicitar un nuevo código..."
-    - Muestra tiempo transcurrido y vigencia máxima
-    - [CERRAR]
-    - <strong>Cierra pantalla de autenticación</strong>
-    - <strong>Regresa a pantalla principal de Invictus</strong>
-    - <strong>Proceso completo se REINICIA</strong></p>
-<p><strong>e) Response: <code>error</code> (transacción)</strong>
-    - Modal naranja: "Transacción no encontrada o inválida"
-    - [CERRAR]
-    - Permanece en pantalla OTP
-    - No limpia casillas</p>
-<p><strong>f) Response: <code>error</code> (autenticación)</strong>
-    - Modal naranja: "Token de autorización inválido o ausente"
-    - [CERRAR]
-    - Permanece en pantalla OTP
-    - No limpia casillas</p>
-<h3 id="seccion-2-datos-credito-se-habilita-tras-validacion-exitosa">Sección 2: Datos Crédito (Se habilita tras validación exitosa)</h3>
-<p><strong>Tabla de Líneas de Crédito:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Línea crédito</th>
-<th>Valor Cupo</th>
-<th>Total Entregado</th>
-<th>Total Disponible</th>
-<th>Plazo</th>
-<th>Ingresos Plazo</th>
-<th>Confirme Plazo</th>
-<th>Ingresos Valor</th>
-<th>Confirme Valor</th>
-<th>Selección</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Línea 1</td>
-<td>$50,000</td>
-<td>$50,000</td>
-<td>$50,000</td>
-<td>12</td>
-<td>☐</td>
-<td>☐</td>
-<td>☐</td>
-<td>☐</td>
-<td>☐</td>
-</tr>
-<tr>
-<td>Línea 2</td>
-<td>$50,000</td>
-<td>$50,000</td>
-<td>$50,000</td>
-<td>4</td>
-<td>☐</td>
-<td>☐</td>
-<td>☐</td>
-<td>☐</td>
-<td>☐</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Comportamiento:</strong>
-- Cliente debe seleccionar <strong>una línea de crédito</strong> usando el checkbox [Selección]
-- Solo puede seleccionar una línea a la vez
-- Al seleccionar, se habilita continuar al siguiente paso del desembolso</p>
 <hr />
-<h2 id="consideraciones-de-seguridad">Consideraciones de Seguridad</h2>
-<h3 id="codigo-otp">Código OTP</h3>
-<ul>
-<li><strong>Vigencia:</strong> 3 minutos desde su generación (parametrizable)</li>
-<li><strong>Longitud:</strong> 6 dígitos (numérico o alfanumérico según configuración)</li>
-<li><strong>Intentos permitidos:</strong> 3 intentos máximo (parametrizable)</li>
-<li><strong>Uso único:</strong> Una vez validado correctamente, el OTP se invalida automáticamente</li>
-<li><strong>Bloqueo:</strong> Después de 3 intentos fallidos, se bloquea la transacción y se invalida el OTP</li>
-</ul>
-<h3 id="control-de-intentos">Control de Intentos</h3>
-<ul>
-<li>Se registra cada intento de validación con timestamp completo</li>
-<li>Los intentos se cuentan por <code>guid</code> (por transacción única)</li>
-<li>Al superar los intentos máximos, el cliente debe:<ol>
-<li>Solicitar un nuevo código OTP (reiniciando el proceso)</li>
-<li>El contador de intentos se reinicia al generar un nuevo OTP</li>
-</ol>
-</li>
-<li>El GUID anterior queda invalidado y no puede reutilizarse</li>
-</ul>
-<h3 id="control-de-vigencia">Control de Vigencia</h3>
-<ul>
-<li>El temporizador en Invictus debe sincronizarse con el backend</li>
-<li>Cuando el temporizador llega a 0:00:<ul>
-<li>Se habilita la opción "Reenviar código OTP"</li>
-<li>Si el usuario intenta confirmar, recibirá error de expiración</li>
-</ul>
-</li>
-<li>Es responsabilidad del backend validar la vigencia real del código</li>
-</ul>
-<h3 id="registro-de-auditoria">Registro de Auditoría</h3>
-<p>Cada validación (exitosa o fallida) debe registrar:
-- <strong>Timestamp:</strong> Fecha y hora exacta del intento
-- <strong>IP de origen:</strong> Dirección IP desde donde se realizó la petición
-- <strong>Resultado:</strong> success, invalid, blocked, expired, error
-- <strong>Intentos realizados:</strong> Contador actualizado
-- <strong>Identificación del cliente:</strong> Para trazabilidad
-- <strong>GUID de transacción:</strong> Para asociar todos los eventos</p>
-<h3 id="parametros-configurables">Parámetros Configurables</h3>
-<p>Los siguientes valores pueden configurarse en el sistema TESEO:</p>
-<table>
-<thead>
-<tr>
-<th>Parámetro</th>
-<th>Valor por Defecto</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Número máximo de intentos</strong></td>
-<td>3</td>
-<td>Intentos permitidos antes del bloqueo</td>
-</tr>
-<tr>
-<td><strong>Vigencia del OTP</strong></td>
-<td>3 minutos</td>
-<td>Tiempo de validez del código</td>
-</tr>
-<tr>
-<td><strong>Longitud del código</strong></td>
-<td>6 dígitos</td>
-<td>Cantidad de caracteres del OTP</td>
-</tr>
-<tr>
-<td><strong>Tipo de código</strong></td>
-<td>Numérico</td>
-<td>Numérico o Alfanumérico</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="notas-importantes">Notas Importantes</h2>
-<h3 id="reglas-de-negocio">📋 Reglas de Negocio</h3>
-<ul>
-<li>✅ El cliente recibe el OTP a través de los canales configurados (SMS, Email, WhatsApp) cuando se genera el código</li>
-<li>✅ <strong>Este servicio NO envía el OTP</strong>, solo valida el código que el cliente ingresa</li>
-<li>✅ Si el código expira o se agotan los intentos, el <strong>proceso completo se reinicia</strong></li>
-<li>✅ El <code>guid</code> es fundamental para vincular la validación con el OTP correcto generado</li>
-<li>✅ Después de 3 intentos fallidos, es <strong>obligatorio</strong> generar un nuevo código reiniciando desde el inicio</li>
-<li>✅ La validación exitosa autoriza el desembolso pero <strong>NO lo ejecuta automáticamente</strong></li>
-<li>✅ <strong>La respuesta exitosa devuelve las líneas de crédito del cliente</strong> para mostrar en Invictus</li>
-<li>✅ El punto Gana debe permitir al cliente <strong>seleccionar una línea de crédito</strong> antes de proceder</li>
-</ul>
-<h3 id="flujo-completo-de-desembolso">🔄 Flujo Completo de Desembolso</h3>
-<pre><code>Servicio 1: Validación de Crédito Vigente
-     ↓ (retorna guid + codigo_otp si success)
+<h3 id="flujo-de-interaccion-con-boton-pagar">Flujo de Interacción con Botón [Pagar]</h3>
+<pre><code>1. Usuario presiona [Pagar]
+   ↓
+2. [OPCIONAL] Sistema muestra confirmación:
+   &quot;¿Está seguro de ejecutar el desembolso de $487,950?&quot;
+   [Cancelar] [Confirmar]
+   ↓
+3. Usuario confirma
+   ↓
+4. Sistema muestra indicador de carga
+   &quot;Procesando desembolso...&quot;
+   ↓
+5. Invictus consume servicio de Ejecución de Desembolso
+   ↓
+6. Según respuesta:
 
-Pantalla de Autenticación Cliente (en Invictus)
-     ↓ (usuario ingresa código OTP)
+   a) success → Modal verde con valor a entregar
+                Ejecuta acciones internas (SIGA, caja, contabilidad, impresión)
+                Regresa a pantalla inicial
 
-Servicio 2: Validación de OTP (este documento)
-     ↓ (retorna success + líneas de crédito)
+   b) error (401) → Modal rojo de autenticación
+                    Permanece en Sección 3
 
-Sección 2: Datos Crédito (habilita en Invictus)
-     ↓ (cliente selecciona línea de crédito)
+   c) error (404) → Modal naranja de transacción
+                    Permanece en Sección 3
 
-[Opcional] Servicio 3: Reenvío de OTP
-     ↓ (si el temporizador expira antes de confirmar)
+   d) already_disbursed → Modal naranja
+                          Regresa a pantalla inicial
 
-Sección 3: Realizar Desembolso
-     ↓ (confirma montos y ejecuta desembolso)
+   e) credit_not_available → Modal naranja
+                             Regresa a pantalla inicial
 
-Desembolso Final
+   f) otp_not_validated → Modal naranja
+                          Permanece en Sección 3
 </code></pre>
-<h3 id="configuracion-del-ambiente">⚙️ Configuración del Ambiente</h3>
-<p><strong>Ambiente de Pruebas (QA):</strong>
-- Base URL: <code>https://testing-sygma.com/api</code>
-- Endpoint Login: <code>/login</code>
-- Endpoint Validación OTP: <code>/validacion_otp_desembolso</code>
-- Usuario: <code>ws_invictus</code>
-- Password: <code>g3z0OmJP7?@(*</code></p>
-<h3 id="especificaciones-de-ui-para-mensajes-modales">🎨 Especificaciones de UI para Mensajes Modales</h3>
-<table>
-<thead>
-<tr>
-<th>Status Response</th>
-<th>Color Modal</th>
-<th>Título/Mensaje</th>
-<th>Icono</th>
-<th>Botón</th>
-<th>Acción al Cerrar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>success</code></td>
-<td>Verde</td>
-<td>"Código OTP validado correctamente..."</td>
-<td>✓</td>
-<td>[CERRAR]</td>
-<td>Habilita Sección 2</td>
-</tr>
-<tr>
-<td><code>invalid</code></td>
-<td>Naranja</td>
-<td>"El código ingresado es incorrecto..."</td>
-<td>⚠️</td>
-<td>[CERRAR]</td>
-<td>Permanece en OTP</td>
-</tr>
-<tr>
-<td><code>blocked</code></td>
-<td>Naranja</td>
-<td>"Ha superado el número máximo..."</td>
-<td>🔒</td>
-<td>[CERRAR]</td>
-<td>Regresa a inicio</td>
-</tr>
-<tr>
-<td><code>expired</code></td>
-<td>Naranja</td>
-<td>"El código OTP ha expirado..."</td>
-<td>⏰</td>
-<td>[CERRAR]</td>
-<td>Regresa a inicio</td>
-</tr>
-<tr>
-<td><code>error</code> (transacción)</td>
-<td>Naranja</td>
-<td>"Transacción no encontrada..."</td>
-<td>❌</td>
-<td>[CERRAR]</td>
-<td>Permanece en OTP</td>
-</tr>
-<tr>
-<td><code>error</code> (autenticación)</td>
-<td>Naranja</td>
-<td>"Token de autorización inválido..."</td>
-<td>🔐</td>
-<td>[CERRAR]</td>
-<td>Permanece en OTP</td>
-</tr>
-</tbody>
-</table>
-<h3 id="seguridad-adicional">🔒 Seguridad Adicional</h3>
-<ul>
-<li>Todos los endpoints requieren autenticación via Bearer Token</li>
-<li>Los tokens tienen tiempo de expiración</li>
-<li>Se recomienda implementar retry logic para renovación de token</li>
-<li>Los datos sensibles no deben ser almacenados en logs</li>
-<li>El código OTP nunca debe ser almacenado en texto plano</li>
-<li>Todos los intentos de validación deben quedar registrados para auditoría</li>
-<li>Implementar rate limiting para prevenir ataques de fuerza bruta</li>
-</ul>
-<h3 id="monitoreo-y-logs">📊 Monitoreo y Logs</h3>
-<p>Se recomienda registrar:
-- Timestamp de cada petición
-- Identificación del usuario consultado (encriptada)
-- GUID de la transacción
-- Status de respuesta
-- Número de intento (para códigos incorrectos)
-- Tiempo de respuesta del servicio
-- Errores y excepciones
-- Intentos fallidos consecutivos (alerta de seguridad)</p>
 <hr />
-<h2 id="glosario">Glosario</h2>
-<table>
-<thead>
-<tr>
-<th>Término</th>
-<th>Definición</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>TESEO</strong></td>
-<td>Sistema backend que gestiona los créditos de Credintegral</td>
-</tr>
-<tr>
-<td><strong>Invictus</strong></td>
-<td>Sistema frontend utilizado por vendedores (Sellers) en puntos Gana</td>
-</tr>
-<tr>
-<td><strong>OTP</strong></td>
-<td>One-Time Password - Código de un solo uso para validación</td>
-</tr>
-<tr>
-<td><strong>GUID</strong></td>
-<td>Globally Unique Identifier - Identificador único de transacción (UUID)</td>
-</tr>
-<tr>
-<td><strong>Seller</strong></td>
-<td>Vendedor autorizado en punto Gana para realizar desembolsos</td>
-</tr>
-<tr>
-<td><strong>Desembolso</strong></td>
-<td>Entrega física del dinero del crédito al cliente</td>
-</tr>
-<tr>
-<td><strong>Línea de Crédito</strong></td>
-<td>Producto crediticio específico con condiciones y montos definidos</td>
-</tr>
-<tr>
-<td><strong>Parametrizable</strong></td>
-<td>Valor configurable en el sistema sin necesidad de cambiar código</td>
-</tr>
-<tr>
-<td><strong>Intento</strong></td>
-<td>Cada vez que el cliente ingresa un código OTP (correcto o incorrecto)</td>
-</tr>
-<tr>
-<td><strong>Vigencia</strong></td>
-<td>Tiempo durante el cual el código OTP es válido</td>
-</tr>
-<tr>
-<td><strong>Bloqueo</strong></td>
-<td>Estado en que la transacción ya no permite más intentos</td>
-</tr>
-</tbody>
-</table>
+<h3 id="acciones-internas-de-invictus-despues-de-respuesta-exitosa">Acciones Internas de Invictus (Después de Respuesta Exitosa)</h3>
+<p>Según la HUE 006, cuando la respuesta es <code>success</code>, Invictus debe ejecutar automáticamente:</p>
+<h4 id="1-replicar-en-siga-y-contabilidad">1. Replicar en SIGA y Contabilidad</h4>
+<ul>
+<li>Enviar la transacción al sistema SIGA</li>
+<li>Registrar los movimientos contables correspondientes</li>
+<li>Asegurar sincronización entre sistemas</li>
+</ul>
+<h4 id="2-afectar-la-caja-de-la-fuerza-de-ventas">2. Afectar la Caja de la Fuerza de Ventas</h4>
+<ul>
+<li><strong>Descontar del efectivo disponible:</strong> <code>valor_a_pagar_cliente</code> ($487,950)</li>
+<li>Actualizar el saldo de caja del punto de venta</li>
+<li>Registrar el movimiento de egreso de efectivo</li>
+<li>Fecha y hora del movimiento</li>
+</ul>
+<h4 id="3-afectar-la-cartera-de-la-fuerza-de-ventas">3. Afectar la Cartera de la Fuerza de Ventas</h4>
+<ul>
+<li>Registrar el desembolso en la cartera del vendedor</li>
+<li>Actualizar estadísticas y métricas del vendedor</li>
+<li>Registrar la operación crediticia</li>
+</ul>
+<h4 id="4-imprimir-colilla-de-transaccion">4. Imprimir Colilla de Transacción</h4>
+<p><strong>Información que debe contener la colilla:</strong></p>
 
 
 

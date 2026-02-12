@@ -417,6 +417,11 @@ La transacción con el `guid` proporcionado no existe o no coincide con la ident
       "sms": "314 *** ** 96",
       "email": "ars****th@gmail.com"
     },
+     "informacion_personal": {
+        "whatsapp": "3146795096",
+        "sms": "3146795096",
+        "email": "arsenalth@gmail.com"
+     },
     "vigencia_otp": "3 minutos",
     "intentos_disponibles": 3,
     "fecha_envio": "2025-10-10 14:35:20",
@@ -527,6 +532,11 @@ Content-Type: application/json
       "sms": "314 *** ** 96",
       "email": "ars****th@gmail.com"
     },
+   "informacion_personal": {
+      "whatsapp": "3146795096",
+      "sms": "3146795096",
+      "email": "arsenalth@gmail.com"
+   },
     "vigencia_otp": "3 minutos",
     "intentos_disponibles": 3,
     "fecha_envio": "2025-10-10 14:35:20",

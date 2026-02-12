@@ -12,7 +12,7 @@
         <link rel="prev" href="../invictus_desembolso_reenvio_otp/">
       
       
-        <link rel="next" href="../consulta_municipio/">
+        <link rel="next" href="../invictus_desmebolso/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -1818,6 +1818,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desmebolso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desembolso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2376,7 +2399,7 @@ Sección 3: Realizar Desembolso
 <td>UUID de la transacción del proceso actual</td>
 </tr>
 <tr>
-<td><code>linea_credito_id</code></td>
+<td><code>linea_credito</code></td>
 <td>string</td>
 <td>-</td>
 <td>✅</td>
@@ -2466,7 +2489,7 @@ Sección 3: Realizar Desembolso
 <td>Durante validación OTP</td>
 </tr>
 <tr>
-<td><code>linea_credito_id</code></td>
+<td><code>linea_credito</code></td>
 <td>Sección 2: Datos Crédito → Línea seleccionada (checkbox)</td>
 <td>Al seleccionar línea</td>
 </tr>
@@ -2488,7 +2511,7 @@ Sección 3: Realizar Desembolso
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
   &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
-  &quot;linea_credito_id&quot;: &quot;linea_digital_001&quot;,
+  &quot;linea_credito&quot;: &quot;linea_digital_001&quot;,
   &quot;plazo_meses&quot;: 4,
   &quot;valor_desembolso&quot;: 500000
 }
@@ -2661,7 +2684,7 @@ Sección 3: Realizar Desembolso
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;error&quot;,
   &quot;errors&quot;: [
-    &quot;El campo linea_credito_id es obligatorio.&quot;,
+    &quot;El campo id_linea_credito es obligatorio.&quot;,
     &quot;El campo plazo_meses es obligatorio.&quot;
   ]
 }
@@ -2731,7 +2754,8 @@ Content-Type: application/json
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
   &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
-  &quot;linea_credito_id&quot;: &quot;linea_digital_001&quot;,
+  &quot;linea_credito&quot;: &quot;linea_digital_001&quot;,
+  &quot;id_linea_credito&quot;: 27375,
   &quot;plazo_meses&quot;: 4,
   &quot;valor_desembolso&quot;: 500000
 }
@@ -2799,7 +2823,7 @@ Content-Type: application/json
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
   &quot;guid&quot;: &quot;b2c3d4e5-f6g7-8901-bcde-fg2345678901&quot;,
-  &quot;linea_credito_id&quot;: &quot;linea_digital_001&quot;,
+  &quot;linea_credito&quot;: &quot;linea_digital_001&quot;,
   &quot;plazo_meses&quot;: 4,
   &quot;valor_desembolso&quot;: 500000
 }
@@ -2830,7 +2854,7 @@ Content-Type: application/json
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
   &quot;identificacion&quot;: &quot;88282828&quot;,
   &quot;guid&quot;: &quot;guid-invalido-12345&quot;,
-  &quot;linea_credito_id&quot;: &quot;linea_digital_001&quot;,
+  &quot;linea_credito&quot;: &quot;linea_digital_001&quot;,
   &quot;plazo_meses&quot;: 4,
   &quot;valor_desembolso&quot;: 500000
 }
