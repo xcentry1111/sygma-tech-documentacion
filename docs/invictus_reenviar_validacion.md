@@ -1,39 +1,27 @@
-# 📘 Manual de Integración API: **Reenvío de Código OTP**
+# Reenvío de OTP (originación / validación)
 
-## 📄 Descripción del Servicio
+## Resumen
+Reenvía el código OTP a un usuario con transacción activa. Requiere token válido y el identificador de la transacción. Cada transacción permite máximo **3** reenvíos; si se excede, se debe reiniciar el proceso.
 
-Este servicio permite **reenviar el código OTP ** a un usuario que ya cuenta con una transacción activa. Se debe autenticar usando un token válido y proporcionar el ID de la transacción.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/reenviar_otp`
+- **Ambientes**:
+  - **Pruebas**: `https://testing-sygma.com/api/reenviar_otp`
+  - **Producción**: `POR DEFINIR`
 
-Cada transacción cuenta con un maximo de 3 reenvios de ser asi, el sistema mostrara su mensaje de error y tendra que volver a iniciar el proceso.
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
----
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
-## 🚀 Tipo de Servicio
+## Request
 
-`POST`
-
----
-
-## 🔗 URL de Integración
-
-- **Ambiente de Pruebas:** `https://testing-sygma.com/api/reenviar_otp`  
-- **Producción:** `POR DEFINIR`
-
----
-
-## 📉 Headers Requeridos
-
-| Nombre        | Valor                | Requerido |
-|---------------|----------------------|-----------|
-| Authorization | Bearer `{token}`     | ✅         |
-| Accept        | application/json     | ✅         |
-| Content-Type  | application/json     | ✅         |
-
-> 🔐 **Nota:** El token se obtiene desde el módulo de autenticación (ver pestaña **Token**) usando las credenciales asignadas por la entidad.
-
----
-
-## 🔢 Cuerpo de la Solicitud (JSON)
+### Body (JSON)
 
 Debe enviarse un objeto JSON con el identificador de la transacción.
 

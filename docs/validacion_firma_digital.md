@@ -1,52 +1,35 @@
-# 📘 Manual de Integración API: Validación de Firma Digital y Listas Restrictivas
+# Validación de firma digital y listas restrictivas
 
-## Descripción del Servicio
+## Resumen
+Valida si una persona está en proceso de firma digital. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de OTP para continuar con el proceso de firma.
 
-Este servicio permite validar si una persona está en proceso de firma digital. El flujo incluye validaciones de estado del crédito, vigencia de aprobación y envío de códigos OTP para continuar con el proceso de firma.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/validacion_firma_digital`
+- **Ambientes**:
+  - **Pruebas**: `https://testing-sygma.com/api/validacion_firma_digital`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## Tipo de Servicio
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
-**Método HTTP:** `POST`
+## Request
 
----
+### Body (JSON)
 
-## URL de Integración
+#### Campos
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| tiposdocumento_id | string | sí | ID del tipo de documento. |
+| identificacion | string | sí | Número de identificación del usuario. |
 
-| Ambiente | URL |
-|----------|-----|
-| **Pruebas** | `https://testing-sygma.com/api/validacion_firma_digital` |
-| **Producción** | `POR DEFINIR` |
-
----
-
-## Headers Requeridos
-
-| Nombre | Valor | Requerido |
-|--------|-------|-----------|
-| `Authorization` | `Bearer {token}` | ✅ |
-| `Accept` | `application/json` | ✅ |
-| `Content-Type` | `application/json` | ✅ |
-
-!!! "Obtención del Token"
-    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.
-
----
-
-## Cuerpo de la Solicitud
-
-La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
-
-### Campos Obligatorios
-
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| `tiposdocumento_id` | string | ID del tipo de documento |
-| `identificacion` | string | Número de identificación del usuario |
-
-### Valores Permitidos para `tiposdocumento_id`
-
+#### Valores permitidos para `tiposdocumento_id`
 | ID | Descripción |
 |----|-------------|
 | `1` | Cédula de ciudadanía (CC) |
@@ -55,8 +38,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 | `8` | Pasaporte (PA) |
 | `181` | Permiso Especial (PEP) |
 
-### Ejemplo de Body
-
+#### Ejemplo
 ```json
 {
   "tiposdocumento_id": "1",
@@ -64,9 +46,12 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 }
 ```
 
----
+## Responses
+Ver sección **Flujo de validación** (incluye `success`, `blocked`, `expired`, `no_credit` y errores).
 
-## Flujo de Validación del Servicio
+## Notas / Flujo
+
+### Flujo de validación del servicio
 
 El servicio ejecuta las siguientes validaciones en orden:
 

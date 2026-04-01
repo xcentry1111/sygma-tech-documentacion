@@ -1,38 +1,27 @@
-# 📘 Manual de Integración API: Validación de OTP + Evaluación Experian
+# Validación de OTP + evaluación Experian (Invictus)
 
-## 📄 Descripción del Servicio
+## Resumen
+Valida un OTP asociado a una transacción. Si el OTP es válido, el sistema obtiene información del cliente por `guid` y consulta **Experian** para determinar el estado (**APROBADO**, **RECHAZADO**, **REQUIERE_VERIFICACION**, **SOLICITUD_CON_ERROR**, etc.).
 
-Este servicio permite validar un código OTP (One Time Password) asociado a una transacción.  
-Una vez validado el OTP, el sistema extrae automáticamente la información del cliente con base en el `guid` y realiza una evaluación en **Experian** (centrales de riesgo) para determinar si el cliente es **aprobado** o **rechazado**.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/validar_otp`
+- **Ambientes**:
+  - **Pruebas**: `https://testing-sygma.com/api/validar_otp`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## 🚀 Tipo de Servicio
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
-`POST`
+## Request
 
----
-
-## 🔗 URL de Integración
-
-- **Ambiente de Pruebas:** `https://testing-sygma.com/api/validar_otp`  
-- **Producción:** `POR DEFINIR`
-
----
-
-## 📉 Headers Requeridos
-
-| Nombre        | Valor                | Requerido |
-|---------------|----------------------|-----------|
-| Authorization | Bearer `{token}`     | ✅         |
-| Accept        | application/json     | ✅         |
-| Content-Type  | application/json     | ✅         |
-
-> 🔐 **Nota:** El token se obtiene a través del módulo de autenticación (ver sección **Token**).
-
----
-
-## 🔢 Cuerpo de la Solicitud (JSON)
+### Body (JSON)
 
 ### 🔸 Campos Obligatorios
 

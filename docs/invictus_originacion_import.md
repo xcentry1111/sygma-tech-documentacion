@@ -1,37 +1,27 @@
-# 📘 Manual de Integración API: **Importación de Datos Originación**
+# Importación de datos de originación (Invictus)
 
-## 📄 Descripción del Servicio
+## Resumen
+Recibe y valida información proveniente de Invictus para crear/registrar un usuario y retornar una respuesta de registro en **TESEO**.
 
-Este servicio permite recibir y validar la información proveniente de *Invictus*, con el objetivo de crear un usuario y retornar una respuesta de registro en el sistema **TESEO**.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/ori_invictus`
+- **Ambientes**:
+  - **Pruebas**: `https://testing-sygma.com/api/ori_invictus`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## 🚀 Tipo de Servicio
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
-`POST`
+## Request
 
----
-
-## 🔗 URL de Integración
- 
-- **Ambiente de Pruebas:** `https://testing-sygma.com/api/ori_invictus`  
-- **Producción:** `POR DEFINIR`
-
----
-
-## 📉 Headers Requeridos
-
-| Nombre        | Valor                | Requerido |
-|---------------|----------------------|-----------|
-| Authorization | Bearer `{token}`     | ✅         |
-| Accept        | application/json     | ✅         |
-| Content-Type  | application/json     | ✅         |
-
-> 🔐 **Nota:** El token se obtiene a través del módulo de autenticación (ver pestaña **Token**), usando el usuario y contraseña asignados por la entidad.
-
----
-
-## 🔢 Cuerpo de la Solicitud (JSON)
+### Body (JSON)
 
 La solicitud debe enviarse en formato `raw` JSON con los campos dentro de la clave `datos`.
 

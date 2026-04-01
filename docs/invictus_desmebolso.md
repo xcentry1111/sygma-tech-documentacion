@@ -1,12 +1,34 @@
-# 📘 Manual de Integración API: Ejecución de Desembolso Final
+# Ejecución de desembolso final (Invictus)
 
-## Descripción del Servicio
+## Resumen
+Ejecuta el desembolso final del crédito al cliente después de validar identidad (OTP) y calcular descuentos. Registra la transacción en TESEO, genera movimientos contables, actualiza el estado del crédito a **desembolsado** y retorna confirmación para que Invictus entregue el dinero al cliente.
 
-Este servicio permite ejecutar el desembolso final del crédito al cliente después de haber validado la identidad mediante OTP y calculado los descuentos aplicables. El servicio registra la transacción en TESEO, genera los movimientos contables, actualiza el estado del crédito a "desembolsado" y retorna la confirmación para que Invictus proceda con la entrega física del dinero al cliente.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/proceso_desembolso`
+- **Ambientes**:
+  - **Pruebas (QA)**: `https://testing-sygma.com/api/proceso_desembolso`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
+- **Obtención del token**: `POST https://testing-sygma.com/api/login`
 
-## Flujo del Proceso
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+
+## Request
+Ver sección **Request** (incluye tabla de campos y ejemplo).
+
+## Responses
+Ver sección **Response** (incluye estructura exitosa y errores).
+
+## Notas / Flujo
+
+### Flujo del proceso
 
 ### Contexto General
 

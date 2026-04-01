@@ -1,36 +1,44 @@
-# Generación de token
+# Generación de token (login)
 
-**Descripción:** Este servicio genera un token utilizando un usuario y contraseña, lo cual permite acceder y consumir los servicios proporcionados por el software **TESEO**. El token tiene una validez de 1 hora; después de ese tiempo, se debe solicitar un nuevo token para continuar accediendo a los recursos.
+## Resumen
+Genera un token con usuario y contraseña para consumir los servicios de **TESEO**. El token tiene validez de **1 hora** y debe renovarse al expirar.
 
-**Tipo de Servicio:** POST
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/login`
+- **Ambientes**:
+  - **Prueba**: `https://testing-sygma.com/api/login`
+  - **Producción**: `POR_DEFINIR/api/login`
 
-## **URL de Integración**
+## Autenticación
+No aplica (este endpoint entrega el token).
 
-- **Prueba:** `https://testing-sygma.com/api/login`
-- **Producción:** `POR_DEFINIR/api/login`
+## Headers
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
-## **Headers**
+## Request
 
-El proceso requiere los siguientes encabezados en la solicitud:
+### Body (JSON)
 
-- **Accept:** `application/json` (Obligatorio)
-- **Content-Type:** `application/json` (Obligatorio)
+#### Campos
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| username | string | sí | Usuario asignado para autenticación. |
+| password | string | sí | Contraseña del usuario asignado. |
 
-## **Cuerpo de la Solicitud (raw)**
-
-La información debe enviarse en formato JSON. **Ejemplo:**
-
-`````json
+#### Ejemplo
+```json
 {
-  "username": "",  // USUARIO QUE SE VA A CONECTAR
-  "password": "" // CONTRASEÑA DEL USUARIO QUE SE VA A CONECTAR
+  "username": "",
+  "password": ""
 }
+```
 
-`````
+## Responses
 
-### **Respuesta Success**
-
-``````json
+### 200 OK (Success)
+```json
 {
   "status": true,
   "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozMzg1MywiZXhwIjoxNzIzODMzMDg3fQ.WlNDobuExhSO_jNWOui-HNFhVXPyGLvUs7hIuSY1f5Y",
@@ -39,24 +47,24 @@ La información debe enviarse en formato JSON. **Ejemplo:**
   "message": "Generado con Exito",
   "code": 200
 }
-``````
+```
 
-### **Respuesta Credenciales no Validas**
+## Errores comunes
 
-``````json
+### 400 Bad Request (Credenciales no válidas)
+```json
 {
   "status": false,
   "message": "Credenciales no validas",
   "code": 400
 }
-``````
+```
 
-### **Respuesta Parametros no enviados**
-
-``````json
+### 422 Unprocessable Entity (Parámetros no enviados)
+```json
 {
   "status": false,
   "message": "username y password son requeridos",
   "code": 422
 }
-``````
+```

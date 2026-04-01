@@ -1,21 +1,41 @@
-# Descripción del Servicio
+# Generar plan de pagos
 
-## **Introducción**
-Este servicio permite la generación de un plan de pagos de crédito, procesando la información enviada en formato JSON. Su propósito es calcular el plan de pagos según la parametrización definida para cada cliente.
+## Resumen
+Genera un plan de pagos de crédito a partir de un request JSON, calculándolo según la parametrización definida para cada cliente.
 
-## **Funcionamiento**
-- Recibe una solicitud con datos en formato JSON.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `POR_DEFINIR`
+- **Ambientes**:
+  - **Prueba**: `POR_DEFINIR`
+  - **Producción**: `POR_DEFINIR`
+
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
+
+## Headers
+- **Accept**: `application/json`
+- **Content-Type**: `application/json`
+
+## Request
+
+### Validaciones
 - Valida que todos los campos obligatorios estén presentes.
-- Procesa la información según la configuración establecida.
-- Devuelve el plan de pagos generado en respuesta.
+- Si algún dato es inválido o falta información requerida, se retorna un error con la descripción del problema.
 
-## **Validaciones**
-Para garantizar la integridad y coherencia de los datos, el servicio realiza diversas validaciones antes de procesar la solicitud. Si algún dato es inválido o falta información requerida, se generará un mensaje de error con la descripción del problema.
+### Body (JSON)
 
-## **Formato de Entrada**
-Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
+#### Campos
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| tipo_servicio | string | sí | Debe enviarse `API_PLAN_PAGOS`. |
+| valor | string | sí | Valor base del cálculo. |
+| fecha | string | sí | Fecha del cálculo (formato según integración). |
+| tasa | string | sí | Tasa para el cálculo. |
+| plazo | number | sí | Plazo del crédito. |
 
-- **Ejemplo de solicitud:** Este es un ejemplo de solicitud JSON. La estructura exacta puede variar según la parametrización definida para cada cliente.
+#### Ejemplo
 ```json
 {
   "tipo_servicio": "API_PLAN_PAGOS",
@@ -25,3 +45,9 @@ Los datos deben enviarse en formato JSON, siguiendo la estructura establecida.
   "plazo": 10
 }
 ```
+
+## Responses
+`POR_DEFINIR`
+
+## Errores comunes
+`POR_DEFINIR`

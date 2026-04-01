@@ -1,37 +1,27 @@
-# 📘 Manual de Integración API: Aprobación de linea de credito y monto
+# Aprobación de línea de crédito y monto (Invictus)
 
-## 📄 Descripción del Servicio
+## Resumen
+Registra la decisión del usuario sobre una línea de crédito. Solo permite dos estados: **APROBADO** o **DESISTE**.
 
-Este servicio permite la aprobación de la linea de credito por parte del usuario , donde solose maneja por medio de dos estados **aprobado** o **desiste**
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/validar_linea_credito`
+- **Ambientes**:
+  - **Pruebas**: `https://testing-sygma.com/api/validar_linea_credito`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## 🚀 Tipo de Servicio
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
-`POST`
+## Request
 
----
-
-## 🔗 URL de Integración
-
-- **Ambiente de Pruebas:** `https://testing-sygma.com/api/validar_linea_credito`  
-- **Producción:** `POR DEFINIR`
-
----
-
-## 📉 Headers Requeridos
-
-| Nombre        | Valor                | Requerido |
-|---------------|----------------------|-----------|
-| Authorization | Bearer `{token}`     | ✅         |
-| Accept        | application/json     | ✅         |
-| Content-Type  | application/json     | ✅         |
-
-> 🔐 **Nota:** El token se obtiene a través del módulo de autenticación (ver sección **Token**).
-
----
-
-## 🔢 Cuerpo de la Solicitud (JSON)
+### Body (JSON)
 
 ### 🔸 Campos Obligatorios
 

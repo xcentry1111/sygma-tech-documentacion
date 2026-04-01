@@ -1,64 +1,50 @@
-# Servicio para consultar por id de Recaudo
+# Consultar recaudo por ID
 
+## Resumen
+Consulta un deudor por el **ID de un recaudo**, incluyendo información del crédito y del recaudo.
 
-**Descripción:** Este servicio recibe dos parámetros para consultar a un deudor por el id de un recaudo, incluyendo la información del credito y recaudo.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/consultar`
+- **Ambientes**:
+  - **Prueba**: `https://testing-sygma.com/api/consultar`
+  - **Producción**: `POR_DEFINIR/api/consultar`
 
-**Tipo de Servicio:** POST
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## **URL de Integración**
+## Headers
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>` (obligatorio)
 
-- **Prueba:** `https://testing-sygma.com/api/consultar`
-- **Producción:** `POR_DEFINIR/api/consultar`
+## Request
 
-## **Headers**
+### Notas de negocio
+- El parámetro **servicio** debe enviarse en **`CONSULTA_RECAUDO`**.
+- El parámetro **dato** corresponde al **Id Recaudo TESEO** del deudor que se desea consultar.
 
-El proceso requiere los siguientes encabezados en la solicitud:
+### Body (JSON)
 
-- **Accept:** `application/json` (Obligatorio)
-- **Content-Type:** `application/json` (Obligatorio)
-- **Authorization:** `Bearer ${token}` (Obligatorio)
+#### Campos
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| servicio | string | sí | Debe enviarse `CONSULTA_RECAUDO`. |
+| dato | string | sí | Id recaudo TESEO. |
 
-## **Consideraciones**
-- El parámetro **servicio** debe establecerse por defecto en **CONSULTA_RECAUDO**, ya que este valor permite al sistema identificar que se trata de una consulta por id de recaudo.
-- El parametro **dato** corresponde al ````Id Recaudo Teseo```` del deudor que se desea consultar.
-- Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:
-
-`````json
+#### Ejemplo
+```json
 {
-  "status": false,
-  "message": "No cuenta con los permisos para consumir el servicio",
-  "code": 400
+  "servicio": "CONSULTA_RECAUDO",
+  "dato": "27438761"
 }
-`````
+```
 
-## **Cuerpo de la Solicitud (raw)** 
+## Responses
 
-La información debe enviarse en formato JSON. **Ejemplo:**
-
-### **Campos Obligatorios**
-
-``````json
-{
-  "servicio": "CONSULTA_RECAUDO", 
-  "dato": "27438761" 
-}
-  
-``````
-
-### **Respuesta no valida**
-``````json
-{
-  "status": false,
-  "message": "Id del recaudo no válido",
-  "code": 400
-}
-``````
-
-
-
-### **Ejemplo Respuesta Succes**
-
-``````json
+### 200 OK (Success)
+```json
 {
   "persona": {
     "persona_id": "5642511",
@@ -94,25 +80,45 @@ La información debe enviarse en formato JSON. **Ejemplo:**
     ]
   }
 }
-``````
+```
 
-### **Respuesta Token Invalido**
+## Errores comunes
 
-``````json
+### 400/403 (No cuenta con permisos)
+```json
+{
+  "status": false,
+  "message": "No cuenta con los permisos para consumir el servicio",
+  "code": 400
+}
+```
+
+### Recaudo no válido
+```json
+{
+  "status": false,
+  "message": "Id del recaudo no válido",
+  "code": 400
+}
+```
+
+### Token inválido
+
+```json
 {
   "status": false,
   "message": "Token Inválido",
   "details": "Signature has expired",
   "code": 400
 }
-``````
+```
 
-### **Respuesta Campos Requeridos**
+### Campo requerido no enviado
 
-``````json
+```json
 {
   "status": false,
   "message": "El parámetro :dato es requerido",
   "code": 400
 }
-``````
+```

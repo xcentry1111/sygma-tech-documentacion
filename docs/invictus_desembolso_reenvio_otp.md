@@ -1,12 +1,34 @@
-# 📘 Manual de Integración API: Reenvío de Código OTP para Desembolso
+# Reenvío de OTP para desembolso (Invictus)
 
-## Descripción del Servicio
+## Resumen
+Reenvía un nuevo código OTP cuando el anterior expiró, se agotaron intentos o el cliente no lo recibió. Controla límite de reenvíos, valida tiempos entre solicitudes e invalida códigos anteriores.
 
-Este servicio permite reenviar un nuevo código OTP al cliente cuando el código anterior ha expirado, se han agotado los intentos de validación, o el cliente no ha recibido el código inicial. El servicio controla el límite de reenvíos permitidos, valida el tiempo entre solicitudes y gestiona la invalidación de códigos anteriores, generando un nuevo código completamente independiente.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/reenvio_otp_desembolso`
+- **Ambientes**:
+  - **Pruebas (QA)**: `https://testing-sygma.com/api/reenvio_otp_desembolso`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
+- **Obtención del token**: `POST https://testing-sygma.com/api/login`
 
-## Flujo del Proceso
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+
+## Request
+Ver sección **Request** (tabla de campos + ejemplo).
+
+## Responses
+Ver secciones de validaciones/ejemplos (incluye `success`, `resend_limit_exceeded`, `already_validated`, `no_credit` y errores).
+
+## Notas / Flujo
+
+### Flujo del proceso
 
 ### Contexto General
 

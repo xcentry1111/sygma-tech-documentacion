@@ -1,58 +1,61 @@
-# Servicio para aplicar un recaudo (Pago)
+# Insertar recaudo (pago)
 
+## Resumen
+Inserta/aplica un recaudo a una obligación.
 
-**Descripción:** Este servicio recibe varios parametros cuya finalidad es insertar un recaudo a la obligación
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/insertar_recaudo`
+- **Ambientes**:
+  - **Prueba**: `https://testing-sygma.com/api/insertar_recaudo`
+  - **Producción**: `POR_DEFINIR/api/insertar_recaudo`
 
-**Tipo de Servicio:** POST
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## **URL de Integración**
+## Headers
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>` (obligatorio)
 
-- **Prueba:** `https://testing-sygma.com/api/insertar_recaudo`
-- **Producción:** `POR_DEFINIR/api/insertar_recaudo`
+## Request
 
-## **Headers**
+### Notas de negocio
+- El parámetro **tipo_servicio** debe enviarse en **`INSERTAR_RECAUDO`** para indicar que se trata de una inserción de recaudo.
 
-El proceso requiere los siguientes encabezados en la solicitud:
+### Body (JSON)
 
-- **Accept:** `application/json` (Obligatorio)
-- **Content-Type:** `application/json` (Obligatorio)
-- **Authorization:** `Bearer ${token}` (Obligatorio)
+#### Campos
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| tipo_servicio | string | sí | Debe enviarse `INSERTAR_RECAUDO`. |
+| personasobligacion_id | string | sí | Identificador de la obligación/persona-obligación. |
+| fecha | string | sí | Formato `DD-MM-YYYY`. |
+| valor | string | sí | Valor del recaudo (debe ser > 0). |
+| sucursal | string | no | Sede desde donde se envía el servicio. |
+| codigo_transaccion | string | no | Identificador de la transacción del originador. |
+| usuario | string | no | Usuario asociado a la transacción. |
+| observacion | string | no | Observación del recaudo. |
 
-## **Consideraciones**
-- El parámetro **tipo_servicio** debe establecerse por defecto en **INSERTAR_RECAUDO**, ya que este valor permite al sistema identificar que se trata de una inserción de recaudo.
-- Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:
-
-`````json
+#### Ejemplo
+```json
 {
-  "status": false,
-  "message": "No cuenta con los permisos para consumir el servicio",
-  "code": 400
-}
-`````
-
-## **Cuerpo de la Solicitud (raw)** 
-
-La información debe enviarse en formato JSON. **Ejemplo:**
-
-### **Campos Obligatorios**
-
-``````json
-{
-  "tipo_servicio": "INSERTAR_RECAUDO", // OBLIGATORIO
-  "personasobligacion_id": "1938373", // OBLIGATORIO
-  "fecha": "02-07-2024", // DD-MM-YYYY - OBLIGATORIO - FORMATO
-  "valor": "10000", // OBLIGATORIO
-  "sucursal": "TENJO", // Sede desde donde se envia el servicio
+  "tipo_servicio": "INSERTAR_RECAUDO",
+  "personasobligacion_id": "1938373",
+  "fecha": "02-07-2024",
+  "valor": "10000",
+  "sucursal": "TENJO",
   "codigo_transaccion": "2763637388",
   "usuario": "USUARIO DE LA TRANSACCION",
   "observacion": "PAGO REALIZADO POR LA PLATAFORMA TESEO"
 }
-  
-``````
+```
 
-### **Ejemplo Respuesta Succes**
+## Responses
 
-``````json
+### 200 OK (Success)
+```json
 {
   "status": true,
   "guid": "bf5304c04eb5ef007a0a",
@@ -60,52 +63,61 @@ La información debe enviarse en formato JSON. **Ejemplo:**
   "message": "Registro creado con éxito!!!",
   "code": 200
 }
-``````
+```
 
-### **Respuesta Token Invalido**
+## Errores comunes
 
-``````json
+### 400/403 (No cuenta con permisos)
+```json
+{
+  "status": false,
+  "message": "No cuenta con los permisos para consumir el servicio",
+  "code": 400
+}
+```
+
+### Token inválido
+```json
 {
   "status": false,
   "message": "Token Inválido",
   "details": "Signature has expired",
   "code": 400
 }
-``````
+```
 
-### **Respuesta Campos Requeridos**
-
-``````json
+### Campos requeridos
+```json
 {
   "error": "Falta el parámetro",
   "message": "Los siguientes parámetros son requeridos: tipo_servicio",
   "code": 400
 }
-``````
+```
 
-### **Respuestas no validas - Valor**
-``````json
+### Validación de valor
+```json
 {
   "status": false,
   "message": "El valor debe ser superior a 0",
   "code": 400
 }
-``````
+```
 
-### **Respuestas no validas - Obligación**
-``````json
+### Validación de obligación
+```json
 {
   "status": false,
   "message": "Id de la obligación no valida",
   "code": 400
 }
-``````
+```
 
-### **Respuestas no validas - Fecha**
-``````json
+### Validación de fecha
+```json
 {
   "status": false,
   "message": "La fecha no puede superar el dia actual",
   "code": 400
 }
-``````
+```

@@ -1,34 +1,34 @@
-# Servicio para actualizar datos
+# Actualizar datos de crédito
 
+## Resumen
+Este servicio recibe parámetros para el proceso de **actualización de un crédito**.
 
-**Descripción:** Este servicio permite recibir  parametros para el proceso de la actualizacion del credito.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/originador`
+- **Ambientes**:
+  - **Prueba**: `https://testing-sygma.com/api/originador`
+  - **Producción**: `POR_DEFINIR/api/originador`
 
-**Tipo de Servicio:** POST
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## **URL de Integración**
+## Headers
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>` (obligatorio)
 
-- **Prueba:** `https://testing-sygma.com/api/originador`
-- **Producción:** `POR_DEFINIR/api/originador`
+## Request
 
-## **Headers**
+### Notas de negocio
+- El parámetro **tipo_servicio** debe enviarse en **`UPDATE`** para indicar que se trata de una actualización.
+- **id_transaccion** corresponde a un identificador propio de la entidad y se usa para cruces/conciliación.
 
-El proceso requiere los siguientes encabezados en la solicitud:
+### Body (JSON)
 
-- **Accept:** `application/json` (Obligatorio)
-- **Content-Type:** `application/json` (Obligatorio)
-- **Authorization:** `Bearer ${token}` (Obligatorio)
-
-## **Consideracion**
-
-- El parámetro **tipo_servicio** debe establecerse por defecto en **UPDATE**, ya que con este valor el sistema identifica que se trata de una actualización. Por otro lado, id_transaccion corresponde a un identificador propio de la entidad que debe enviarse con el fin de que, al momento de cruzar información, se pueda identificar.
-## **Cuerpo de la Solicitud (raw)** 
-
-La información debe enviarse en formato JSON. **Ejemplo:**
-
-### **Campos Obligatorios**
-
-``````json
-
+#### Ejemplo
+```json
 {
   "datostecfinanza": {
     "cuota_corriente": "281498.00",
@@ -55,12 +55,12 @@ La información debe enviarse en formato JSON. **Ejemplo:**
     "id_transaccion": 32645
   }
 }
+```
 
-``````
+## Responses
 
-### **Respuesta Success**
-
-``````json
+### 200 OK (Success)
+```json
 {
   "status": "success",
   "data": {
@@ -343,26 +343,26 @@ La información debe enviarse en formato JSON. **Ejemplo:**
     "prima_comercial": null
   }
 }
-``````
+```
 
-### **Respuesta Token Invalido**
+## Errores comunes
 
-``````json
+### Token inválido / expirado
+```json
 {
   "status": false,
   "message": "Token Inválido",
   "details": "Signature has expired",
   "code": 400
 }
-``````
+```
 
-### **Respuesta Campos Requeridos**
-
-``````json
+### Campos requeridos
+```json
 {
   "status": "error",
   "errors": [
     "Nro documento no puede estar en blanco"
   ]
 }
-``````
+```

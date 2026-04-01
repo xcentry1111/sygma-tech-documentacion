@@ -1,76 +1,71 @@
-# Servicio para consultar municipios por descripción
+# Consultar municipios por descripción
 
-**Descripción:** Este servicio permite consultar municipios filtrando por una parte de la descripción. El resultado contiene el ID, descripción y el código DANE del municipio encontrado.
+## Resumen
+Consulta municipios filtrando por una parte de la descripción. El resultado contiene el **ID**, la **descripción** y el **código DANE**.
 
-**Tipo de Servicio:** POST
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/consulta_municipios`
+- **Ambientes**:
+  - **Prueba**: `https://testing-sygma.com/api/consulta_municipios`
+  - **Producción**: `POR_DEFINIR/api/consulta_municipios`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## **URL de Integración**
+## Headers
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>` (obligatorio)
 
-- **Prueba:** `https://testing-sygma.com/api/consulta_municipios`
-- **Producción:** `POR_DEFINIR/api/consulta_municipios`
+## Request
 
----
+### Notas de negocio
+- El parámetro **descripcion** es obligatorio y corresponde al texto a buscar dentro del campo de descripción del municipio.
 
-## **Headers**
+### Body (JSON)
 
-La solicitud debe incluir los siguientes encabezados obligatorios:
+#### Campos
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| descripcion | string | sí | Texto a buscar (parcial) dentro de la descripción del municipio. |
 
-- **Accept:** `application/json`
-- **Content-Type:** `application/json`
-- **Authorization:** `Bearer ${token}`
-
----
-
-## **Consideraciones**
-
-- El parámetro **descripcion** es obligatorio y corresponde al texto que se desea buscar dentro del campo de descripción del municipio.
-
-Si el parámetro `descripcion` no se envía, el servicio responderá con un error.
-
----
-
-## **Cuerpo de la Solicitud (raw)**
-
-``````json
+#### Ejemplo
+```json
 {
   "descripcion": "neiva"
 }
-``````
+```
 
+## Responses
 
+### 200 OK (Success)
+```json
+{
+  "id": 10593,
+  "descripcion": "HUILA - NEIVA | COLOMBIA",
+  "codigo_dane": 41001
+}
+```
 
-### **Ejemplo Respuesta Succes**
+## Errores comunes
 
-``````json
-
-  {
-    "id": 10593,
-    "descripcion": "HUILA - NEIVA | COLOMBIA",
-    "codigo_dane": 41001
-  }
-
-``````
-
-### **Ejemplo Respuesta Succes**
-
-``````json
+### Parámetro requerido no enviado
+```json
 {
   "status": false,
   "message": "El parámetro :descripcion es requerido",
   "code": 400
 }
-``````
+```
 
-
-### **Respuesta Token Invalido**
-
-``````json
+### Token inválido
+```json
 {
   "status": false,
   "message": "Token Inválido",
   "details": "Signature has expired",
   "code": 400
 }
-``````
+```

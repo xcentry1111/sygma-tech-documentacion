@@ -1,12 +1,34 @@
-# 📘 Manual de Integración API: Cálculo de Desembolso
+# Cálculo de desembolso (Invictus)
 
-## Descripción del Servicio
+## Resumen
+Calcula descuentos/cobros y el valor final a pagar al cliente. Recibe la línea de crédito seleccionada, plazo y valor deseado, y retorna el desglose completo de montos aplicables.
 
-Este servicio permite calcular los descuentos, cobros y el valor final a pagar al cliente para un desembolso de crédito. El servicio recibe la información de la línea de crédito seleccionada, el plazo y el valor deseado por el cliente, y retorna el desglose completo de los montos aplicables, incluyendo todos los descuentos que TESEO aplicará al desembolso.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/calculo_desembolso`
+- **Ambientes**:
+  - **Pruebas (QA)**: `https://testing-sygma.com/api/calculo_desembolso`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
+- **Obtención del token**: `POST https://testing-sygma.com/api/login`
 
-## Flujo del Proceso
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+
+## Request
+Ver sección **Request** (tabla de campos + ejemplo).
+
+## Responses
+Ver sección **Response** (incluye `exitosa` y errores).
+
+## Notas / Flujo
+
+### Flujo del proceso
 
 ### Contexto General
 

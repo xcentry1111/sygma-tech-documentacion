@@ -1,12 +1,34 @@
-# 📘 Manual de Integración API: Validación de Crédito Vigente para Desembolso
+# Validación de crédito vigente para desembolso (Invictus)
 
-## Descripción del Servicio
+## Resumen
+Valida si una persona cuenta con un crédito **aprobado y vigente** para realizar el desembolso en puntos autorizados (Gana). Verifica estado y vigencia (máximo 1 mes desde aprobación), valida condiciones del cliente/cupo y genera el OTP requerido para el flujo de desembolso.
 
-Este servicio permite validar si una persona cuenta con un crédito aprobado y vigente para realizar el desembolso en puntos autorizados (Gana). Verifica el estado del crédito, su vigencia (máximo 1 mes desde la aprobación), valida múltiples condiciones del cliente y del cupo, y genera el código OTP necesario para el proceso de desembolso.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/validacion_credito_vigente`
+- **Ambientes**:
+  - **Pruebas (QA)**: `https://testing-sygma.com/api/validacion_credito_vigente`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
+- **Obtención del token**: `POST https://testing-sygma.com/api/login`
 
-## Flujo del Proceso
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+
+## Request
+Ver sección **Request** (tabla de campos + ejemplo).
+
+## Responses
+Ver secciones de validaciones/ejemplos (incluye `success`, `no_credit`, `pending_signatures`, `credit_blocked`, `expired`, `already_disbursed` y errores).
+
+## Notas / Flujo
+
+### Flujo del proceso
 
 ### Contexto General
 Este servicio forma parte del flujo de **"Desembolso de Créditos Credintegral"** en Invictus y se ejecuta cuando el vendedor (Seller) ingresa a la opción:

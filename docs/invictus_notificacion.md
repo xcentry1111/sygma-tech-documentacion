@@ -1,36 +1,29 @@
-# 📘 Manual de Integración API: **Notificación por Canal**
+# Notificación por canal
 
-## 📄 Descripción del Servicio
-Servicio para **enviar notificaciones** al/los canales seleccionados del cliente usando datos **ya registrados** (celular/email).  
-Cada canal se activa con **1** (enviar) o **0** (ignorar).  
-Ejemplo: `sms=1`, `email=1`, `whatsapp=0` → se envía por **SMS** y **Email**.
+## Resumen
+Envía notificaciones a los canales seleccionados del cliente usando datos ya registrados (celular/email). Cada canal se activa con `1` (enviar) o `0` (ignorar). Solo se permite enviar una vez; para reintentos se debe usar el servicio de reenvío OTP correspondiente.
 
-**Nota:** Solo se permite enviar una sola vez a los canales seleccionados, en caso de reenviar se debe de consumir el servicio de Reenvio OTP
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/notificacion_canal`
+- **Ambientes**:
+  - **Pruebas**: `https://testing-sygma.com/api/notificacion_canal`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## 🚀 Tipo de Servicio
-`POST`
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
----
+## Request
 
-## 🔗 URL de Integración
-- **Ambiente de Pruebas:** `https://testing-sygma.com/api/notificacion_canal`  
-- **Producción:** `POR DEFINIR`
+### Body (JSON)
 
----
-
-## 📉 Headers Requeridos
-
-| Nombre          | Valor            | Requerido |
-|-----------------|------------------|-----------|
-| Authorization   | Bearer `{token}` | ✅         |
-| Accept          | application/json | ✅         |
-| Content-Type    | application/json | ✅         |
-
-> 🔐 **Nota:** El token se obtiene a través del módulo de autenticación.
-
-### 🔸 Campos Obligatorios
+#### Campos obligatorios
 
 Los siguientes campos son **requeridos** para procesar correctamente la notificación:
 

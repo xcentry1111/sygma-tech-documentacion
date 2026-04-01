@@ -1,12 +1,34 @@
-# 📘 Manual de Integración API: Validación de Código OTP para Desembolso
+# Validación de OTP para desembolso (Invictus)
 
-## Descripción del Servicio
+## Resumen
+Valida el código OTP ingresado por el cliente para confirmar identidad y autorizar el desembolso en punto Gana. Controla intentos, vigencia del código y retorna líneas de crédito al validar exitosamente.
 
-Este servicio permite validar el código OTP (One Time Password) ingresado por el cliente para confirmar su identidad y autorizar el desembolso del crédito en un punto Gana. El servicio controla el número de intentos permitidos, gestiona el tiempo de vigencia del código y devuelve información de las líneas de crédito del cliente una vez validado exitosamente.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/validacion_otp_desembolso`
+- **Ambientes**:
+  - **Pruebas (QA)**: `https://testing-sygma.com/api/validacion_otp_desembolso`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
+- **Obtención del token**: `POST https://testing-sygma.com/api/login`
 
-## Flujo del Proceso
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+
+## Request
+Ver sección **Request** (tabla de campos + ejemplo).
+
+## Responses
+Ver secciones de validaciones/ejemplos (incluye `success`, `invalid`, `blocked`, `expired` y errores).
+
+## Notas / Flujo
+
+### Flujo del proceso
 
 ### Contexto General
 

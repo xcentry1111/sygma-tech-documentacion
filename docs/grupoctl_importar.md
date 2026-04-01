@@ -1,26 +1,27 @@
-# Servicio para importar datos
+# Importar datos (originador)
 
-**Descripción:** Este servicio permite recibir parametros para el proceso de creacion de los datos demograficos
-y información financiera dentro de TESEO.
+## Resumen
+Recibe información demográfica y financiera en formato JSON para crear datos dentro de **TESEO**.
 
-**Tipo de Servicio:** POST
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/originador`
+- **Ambientes**:
+  - **Prueba**: `https://testing-sygma.com/api/originador`
+  - **Producción**: `POR_DEFINIR/api/originador`
 
-## **URL de Integración**
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-- **Prueba:** `https://testing-sygma.com/api/originador`
-- **Producción:** `POR_DEFINIR/api/originador`
+## Headers
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>` (obligatorio)
 
-## **Headers**
+## Request
 
-El proceso requiere los siguientes encabezados en la solicitud:
-
-- **Accept:** `application/json` (Obligatorio)
-- **Content-Type:** `application/json` (Obligatorio)
-- **Authorization:** `Bearer ${token}` (Obligatorio)
-
-## **Cuerpo de la Solicitud (raw)**
-
-La información debe enviarse en formato JSON. **Ejemplo:**
+### Body (JSON)
 
 ### **Campos Obligatorios**
 

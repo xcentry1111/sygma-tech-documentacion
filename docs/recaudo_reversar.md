@@ -1,88 +1,95 @@
-# Servicio para reversar un recaudo (Pago)
+# Reversar recaudo (pago)
 
+## Resumen
+Reversa un recaudo (pago) asociado a una obligaci?n.
 
-**Descripción:** Este servicio recibe varios parametros cuya finalidad es reversar un recaudo de una obligación (Pago)
+## Endpoint
+- **M?todo**: `POST`
+- **Ruta**: `/api/reversar_recaudo`
+- **Ambientes**:
+  - **Prueba**: `https://testing-sygma.com/api/reversar_recaudo`
+  - **Producci?n**: `POR_DEFINIR/api/reversar_recaudo`
 
-**Tipo de Servicio:** POST
+## Autenticaci?n
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## **URL de Integración**
+## Headers
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>` (obligatorio)
 
-- **Prueba:** `https://testing-sygma.com/api/reversar_recaudo`
-- **Producción:** `POR_DEFINIR/api/reversar_recaudo`
+## Request
 
-## **Headers**
+### Notas de negocio
+- El par?metro **tipo_servicio** debe enviarse en **`REVERSAR_RECAUDO`**.
 
-El proceso requiere los siguientes encabezados en la solicitud:
+### Body (JSON)
 
-- **Accept:** `application/json` (Obligatorio)
-- **Content-Type:** `application/json` (Obligatorio)
-- **Authorization:** `Bearer ${token}` (Obligatorio)
+#### Campos
+| Campo | Tipo | Requerido | Descripci?n |
+|------|------|-----------|-------------|
+| tipo_servicio | string | s? | Debe enviarse `REVERSAR_RECAUDO`. |
+| recaudo_id | string | s? | Identificador del recaudo a reversar. |
+| observacion | string | s? | Justificaci?n del reverso. |
 
-## **Consideraciones**
-- El parámetro **tipo_servicio** debe establecerse por defecto en **REVERSAR_RECAUDO**, ya que este valor permite al sistema identificar que se trata de una inserción de recaudo.
-- Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:
+#### Ejemplo
+```json
+{
+  "tipo_servicio": "REVERSAR_RECAUDO",
+  "recaudo_id": "27832828",
+  "observacion": "SE REVERSA POR MOTIVOS DE PRUEBAS"
+}
+```
 
-`````json
+## Responses
+
+### 200 OK (Success)
+```json
+{
+  "status": true,
+  "guid": "e87d6aad89f02df1a6f6",
+  "estado_aplicacion": "APLICADO",
+  "message": "Registro reversado con ?xito!!!",
+  "code": 200
+}
+```
+
+## Errores comunes
+
+### 400/403 (No cuenta con permisos)
+```json
 {
   "status": false,
   "message": "No cuenta con los permisos para consumir el servicio",
   "code": 400
 }
-`````
+```
 
-## **Cuerpo de la Solicitud (raw)** 
-
-La información debe enviarse en formato JSON. **Ejemplo:**
-
-### **Campos Obligatorios**
-
-``````json
-{
-  "tipo_servicio": "REVERSAR_RECAUDO", // OBLIGATORIO
-  "recaudo_id": "27832828", // OBLIGATORIO
-  "observacion": "SE REVERSA POR MOTIVOS DE PRUEBAS" // OBLIGATORIO - SE DEBE DE JUSTIFICAR PORQUE SE DESEA REVERSAR
-}
-  
-``````
-
-### **Ejemplo Respuesta Succes**
-
-``````json
-{
-  "status": true,
-  "guid": "e87d6aad89f02df1a6f6",
-  "estado_aplicacion": "APLICADO",
-  "message": "Registro reversado con éxito!!!",
-  "code": 200
-}
-``````
-
-### **Respuesta Token Invalido**
-
-``````json
+### Token inv?lido
+```json
 {
   "status": false,
-  "message": "Token Inválido",
+  "message": "Token Inv?lido",
   "details": "Signature has expired",
   "code": 400
 }
-``````
+```
 
-### **Respuesta Campos Requeridos**
-
-``````json
+### Campos requeridos
+```json
 {
-  "error": "Falta el parámetro",
-  "message": "Los siguientes parámetros son requeridos: tipo_servicio",
+  "error": "Falta el par?metro",
+  "message": "Los siguientes par?metros son requeridos: tipo_servicio",
   "code": 400
 }
-``````
+```
 
-### **Respuestas no validas - Recaudo no Existe**
-``````json
+### Recaudo no existe / no v?lido
+```json
 {
   "status": false,
   "message": "Id del recaudo no valido",
   "code": 400
 }
-``````
+```

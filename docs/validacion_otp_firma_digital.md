@@ -1,42 +1,27 @@
-# 📘 Manual de Integración API: Validación de Código OTP
+# Validación de OTP (firma digital)
 
-## Descripción del Servicio
+## Resumen
+Valida el OTP ingresado por el usuario y verifica su correspondencia con la transacción. Si el OTP es correcto, autoriza el uso del crédito y envía documentación a los canales seleccionados.
 
-Este servicio permite validar el código OTP ingresado por el usuario, verificar su correspondencia con la transacción iniciada y, en caso de ser correcto, autorizar el uso del crédito y enviar la documentación correspondiente a los canales seleccionados por el usuario.
+## Endpoint
+- **Método**: `POST`
+- **Ruta**: `/api/validacion_otp_firma`
+- **Ambientes**:
+  - **Pruebas**: `https://testing-sygma.com/api/validacion_otp_firma`
+  - **Producción**: `POR DEFINIR`
 
----
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer <token>`
 
-## Tipo de Servicio
+## Headers
+- **Authorization**: `Bearer <token>` (obligatorio)
+- **Accept**: `application/json` (obligatorio)
+- **Content-Type**: `application/json` (obligatorio)
 
-**Método HTTP:** `POST`
+## Request
 
----
-
-## URL de Integración
-
-| Ambiente | URL |
-|----------|-----|
-| **Pruebas** | `https://testing-sygma.com/api/validacion_otp_firma` |
-| **Producción** | `POR DEFINIR` |
-
----
-
-## Headers Requeridos
-
-| Nombre | Valor | Requerido |
-|--------|-------|-----------|
-| `Authorization` | `Bearer {token}` | ✅ |
-| `Accept` | `application/json` | ✅ |
-| `Content-Type` | `application/json` | ✅ |
-
-!!! "Obtención del Token"
-    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.
-
----
-
-## Cuerpo de la Solicitud
-
-La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
+### Body (JSON)
 
 ### Campos Obligatorios
 
