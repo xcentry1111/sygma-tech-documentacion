@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-ejecucion-de-desembolso-final" class="md-skip">
+        <a href="#ejecucion-de-desembolso-final-invictus" class="md-skip">
           Skip to content
         </a>
       
@@ -1536,23 +1536,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      Descripción del Servicio
+      Resumen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-del-proceso" class="md-nav__link">
+  <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo del Proceso
+      Endpoint
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Flujo del Proceso">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas / Flujo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas / Flujo">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo del proceso
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#contexto-general" class="md-nav__link">
@@ -1635,7 +1689,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#request" class="md-nav__link">
+  <a href="#request_1" class="md-nav__link">
     <span class="md-ellipsis">
       Request
     </span>
@@ -2150,23 +2204,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      Descripción del Servicio
+      Resumen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-del-proceso" class="md-nav__link">
+  <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo del Proceso
+      Endpoint
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Flujo del Proceso">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas / Flujo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas / Flujo">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo del proceso
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#contexto-general" class="md-nav__link">
@@ -2249,7 +2357,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#request" class="md-nav__link">
+  <a href="#request_1" class="md-nav__link">
     <span class="md-ellipsis">
       Request
     </span>
@@ -2669,11 +2777,35 @@
 
 
 
-<h1 id="manual-de-integracion-api-ejecucion-de-desembolso-final">📘 Manual de Integración API: Ejecución de Desembolso Final</h1>
-<h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
-<p>Este servicio permite ejecutar el desembolso final del crédito al cliente después de haber validado la identidad mediante OTP y calculado los descuentos aplicables. El servicio registra la transacción en TESEO, genera los movimientos contables, actualiza el estado del crédito a "desembolsado" y retorna la confirmación para que Invictus proceda con la entrega física del dinero al cliente.</p>
-<hr />
-<h2 id="flujo-del-proceso">Flujo del Proceso</h2>
+<h1 id="ejecucion-de-desembolso-final-invictus">Ejecución de desembolso final (Invictus)</h1>
+<h2 id="resumen">Resumen</h2>
+<p>Ejecuta el desembolso final del crédito al cliente después de validar identidad (OTP) y calcular descuentos. Registra la transacción en TESEO, genera movimientos contables, actualiza el estado del crédito a <strong>desembolsado</strong> y retorna confirmación para que Invictus entregue el dinero al cliente.</p>
+<h2 id="endpoint">Endpoint</h2>
+<ul>
+<li><strong>Método</strong>: <code>POST</code></li>
+<li><strong>Ruta</strong>: <code>/api/proceso_desembolso</code></li>
+<li><strong>Ambientes</strong>:</li>
+<li><strong>Pruebas (QA)</strong>: <code>https://testing-sygma.com/api/proceso_desembolso</code></li>
+<li><strong>Producción</strong>: <code>POR DEFINIR</code></li>
+</ul>
+<h2 id="autenticacion">Autenticación</h2>
+<ul>
+<li><strong>Tipo</strong>: <code>Bearer token</code></li>
+<li><strong>Header</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+<li><strong>Obtención del token</strong>: <code>POST https://testing-sygma.com/api/login</code></li>
+</ul>
+<h2 id="headers">Headers</h2>
+<ul>
+<li><strong>Authorization</strong>: <code>Bearer &lt;token&gt;</code> (obligatorio)</li>
+<li><strong>Accept</strong>: <code>application/json</code> (obligatorio)</li>
+<li><strong>Content-Type</strong>: <code>application/json</code> (obligatorio)</li>
+</ul>
+<h2 id="request">Request</h2>
+<p>Ver sección <strong>Request</strong> (incluye tabla de campos y ejemplo).</p>
+<h2 id="responses">Responses</h2>
+<p>Ver sección <strong>Response</strong> (incluye estructura exitosa y errores).</p>
+<h2 id="notas-flujo">Notas / Flujo</h2>
+<h3 id="flujo-del-proceso">Flujo del proceso</h3>
 <h3 id="contexto-general">Contexto General</h3>
 <p>Este servicio es el <strong>quinto y último paso</strong> del flujo de desembolso, ejecutándose después de que el usuario confirma el desembolso presionando el botón [Pagar]:</p>
 <pre><code>Servicio 1: Validación de Crédito Vigente
@@ -2823,7 +2955,7 @@ El token se obtiene a través del módulo de autenticación, usando el usuario y
 <pre><code>POST https://testing-sygma.com/api/login
 </code></pre>
 <hr />
-<h2 id="request">Request</h2>
+<h2 id="request_1">Request</h2>
 <h3 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h3>
 <p>La solicitud debe enviarse en formato <strong>raw JSON</strong> con los siguientes campos:</p>
 <h4 id="campos-obligatorios">Campos Obligatorios</h4>

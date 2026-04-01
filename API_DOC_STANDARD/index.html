@@ -16,7 +16,7 @@
     
     
       
-        <title>Generar plan de pagos - Documentación Sygma-Tech</title>
+        <title>Estándar de documentación de APIs (Sygma) - Documentación Sygma-Tech</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generar-plan-de-pagos" class="md-skip">
+        <a href="#estandar-de-documentacion-de-apis-sygma" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Generar plan de pagos
+              Estándar de documentación de APIs (Sygma)
             
           </span>
         </div>
@@ -1598,95 +1598,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#resumen" class="md-nav__link">
+  <a href="#estructura-obligatoria-por-archivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Resumen
+      Estructura obligatoria (por archivo)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#endpoint" class="md-nav__link">
+  <a href="#convenciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Endpoint
+      Convenciones
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#autenticacion" class="md-nav__link">
+  <a href="#plantilla-copiarpegar" class="md-nav__link">
     <span class="md-ellipsis">
-      Autenticación
+      Plantilla (copiar/pegar)
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Headers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Request">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#validaciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Validaciones
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#body-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      Body (JSON)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Body (JSON)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1697,12 +1631,69 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200-ok-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      200 OK (Success)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#errores-comunes" class="md-nav__link">
     <span class="md-ellipsis">
       Errores comunes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errores comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#400-bad-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      400 Bad Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401-unauthorized-token-invalidoexpirado" class="md-nav__link">
+    <span class="md-ellipsis">
+      401 Unauthorized (Token inválido/expirado)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas / Consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changelog
     </span>
   </a>
   
@@ -1724,90 +1715,97 @@
 
 
 
-<h1 id="generar-plan-de-pagos">Generar plan de pagos</h1>
-<h2 id="resumen">Resumen</h2>
-<p>Genera un plan de pagos de crédito a partir de un request JSON, calculándolo según la parametrización definida para cada cliente.</p>
-<h2 id="endpoint">Endpoint</h2>
+<h1 id="estandar-de-documentacion-de-apis-sygma">Estándar de documentación de APIs (Sygma)</h1>
+<p>Este estándar define una estructura única para documentar endpoints/servicios. La intención es que <strong>todas</strong> las APIs tengan el mismo orden de secciones, el mismo nivel de detalle y convenciones consistentes.</p>
+<h2 id="estructura-obligatoria-por-archivo">Estructura obligatoria (por archivo)</h2>
+<ol>
+<li><strong>Título</strong> (H1)</li>
+<li><strong>Resumen</strong></li>
+<li><strong>Endpoint</strong></li>
+<li><strong>Autenticación</strong></li>
+<li><strong>Headers</strong></li>
+<li><strong>Request</strong></li>
+<li><strong>Responses</strong></li>
+<li><strong>Errores comunes</strong></li>
+<li><strong>Notas / Consideraciones</strong></li>
+<li><strong>Changelog</strong> (opcional, pero recomendado)</li>
+</ol>
+<h2 id="convenciones">Convenciones</h2>
 <ul>
-<li><strong>Método</strong>: <code>POST</code></li>
-<li><strong>Ruta</strong>: <code>POR_DEFINIR</code></li>
-<li><strong>Ambientes</strong>:</li>
-<li><strong>Prueba</strong>: <code>POR_DEFINIR</code></li>
-<li><strong>Producción</strong>: <code>POR_DEFINIR</code></li>
+<li><strong>Títulos</strong>: usar <code>#</code> para el título principal y <code>##</code> para secciones.</li>
+<li><strong>Nombres</strong>: consistentes y explícitos: “Request”, “Responses”, “Errores comunes”.</li>
+<li><strong>JSON</strong>: ejemplos siempre en bloque <code>```json</code> (sin comentarios inline <code>//</code> dentro del JSON; si necesitas aclaración, ponerla en texto o en tabla).</li>
+<li><strong>Ambientes</strong>: si hay URLs distintas, documentar <code>testing</code> y <code>producción</code>.</li>
+<li><strong>Tipos</strong>: cuando se conozcan, documentar tipo de dato (<code>string</code>, <code>number</code>, <code>boolean</code>, <code>object</code>, <code>array</code>) y formato (<code>date</code>, <code>date-time</code>).</li>
+<li><strong>Obligatoriedad</strong>: expresar como <strong>Requerido: sí/no</strong> y si aplica: <strong>Condicional</strong> (depende de X).</li>
+<li><strong>Códigos HTTP</strong>: documentar el HTTP status esperado (200/201/400/401/403/404/422/500) y el cuerpo.</li>
 </ul>
-<h2 id="autenticacion">Autenticación</h2>
-<ul>
-<li><strong>Tipo</strong>: <code>Bearer token</code></li>
-<li><strong>Header</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
-</ul>
-<h2 id="headers">Headers</h2>
-<ul>
-<li><strong>Accept</strong>: <code>application/json</code></li>
-<li><strong>Content-Type</strong>: <code>application/json</code></li>
-</ul>
-<h2 id="request">Request</h2>
-<h3 id="validaciones">Validaciones</h3>
-<ul>
-<li>Valida que todos los campos obligatorios estén presentes.</li>
-<li>Si algún dato es inválido o falta información requerida, se retorna un error con la descripción del problema.</li>
-</ul>
-<h3 id="body-json">Body (JSON)</h3>
-<h4 id="campos">Campos</h4>
-<table>
-<thead>
-<tr>
-<th>Campo</th>
-<th>Tipo</th>
-<th>Requerido</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tipo_servicio</td>
-<td>string</td>
-<td>sí</td>
-<td>Debe enviarse <code>API_PLAN_PAGOS</code>.</td>
-</tr>
-<tr>
-<td>valor</td>
-<td>string</td>
-<td>sí</td>
-<td>Valor base del cálculo.</td>
-</tr>
-<tr>
-<td>fecha</td>
-<td>string</td>
-<td>sí</td>
-<td>Fecha del cálculo (formato según integración).</td>
-</tr>
-<tr>
-<td>tasa</td>
-<td>string</td>
-<td>sí</td>
-<td>Tasa para el cálculo.</td>
-</tr>
-<tr>
-<td>plazo</td>
-<td>number</td>
-<td>sí</td>
-<td>Plazo del crédito.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="ejemplo">Ejemplo</h4>
-<pre><code class="language-json">{
-  &quot;tipo_servicio&quot;: &quot;API_PLAN_PAGOS&quot;,
-  &quot;valor&quot;: &quot;3000000&quot;,
-  &quot;fecha&quot;: &quot;2025-02-06&quot;,
-  &quot;tasa&quot;: &quot;20.04&quot;,
-  &quot;plazo&quot;: 10
+<h2 id="plantilla-copiarpegar">Plantilla (copiar/pegar)</h2>
+<pre><code class="language-markdown"># &lt;Nombre del servicio / endpoint&gt;
+
+## Resumen
+&lt;Qué hace, en 1-3 líneas.&gt;
+
+## Endpoint
+- **Método**: `POST|GET|PUT|PATCH|DELETE`
+- **Ruta**: `/api/...`
+- **Ambientes**:
+  - **Testing**: `&lt;url-base&gt;`
+  - **Producción**: `&lt;url-base&gt;`
+
+## Autenticación
+- **Tipo**: `Bearer token`
+- **Header**: `Authorization: Bearer &lt;token&gt;`
+
+## Headers
+- **Accept**: `application/json`
+- **Content-Type**: `application/json`
+
+## Request
+
+### Body (JSON)
+
+#### Campos
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| tipo_servicio | string | sí | Identificador funcional del servicio. |
+
+#### Ejemplo
+```json
+{
+  &quot;tipo_servicio&quot;: &quot;...&quot;
 }
 </code></pre>
 <h2 id="responses">Responses</h2>
-<p><code>POR_DEFINIR</code></p>
+<h3 id="200-ok-success">200 OK (Success)</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;
+}
+</code></pre>
 <h2 id="errores-comunes">Errores comunes</h2>
-<p><code>POR_DEFINIR</code></p>
+<h3 id="400-bad-request">400 Bad Request</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;message&quot;: &quot;...&quot;
+}
+</code></pre>
+<h3 id="401-unauthorized-token-invalidoexpirado">401 Unauthorized (Token inválido/expirado)</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: false,
+  &quot;message&quot;: &quot;Token Inválido&quot;,
+  &quot;details&quot;: &quot;...&quot;,
+  &quot;code&quot;: 400
+}
+</code></pre>
+<h2 id="notas-consideraciones">Notas / Consideraciones</h2>
+<ul>
+<li><Reglas de negocio, defaults, validaciones clave.></li>
+</ul>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li><strong>YYYY-MM-DD</strong>: <cambio>
+```</li>
+</ul>
 
 
 
