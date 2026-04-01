@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-reenvio-de-codigo-otp" class="md-skip">
+        <a href="#reenvio-de-otp-originacion-validacion" class="md-skip">
           Skip to content
         </a>
       
@@ -1262,50 +1262,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Descripción del Servicio
+      Resumen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
+  <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 Tipo de Servicio
+      Endpoint
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
+  <a href="#autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔗 URL de Integración
+      Autenticación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      📉 Headers Requeridos
+      Headers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
+  <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
+      Request
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
+    <nav class="md-nav" aria-label="Request">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Body (JSON)
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
@@ -1757,50 +1766,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Descripción del Servicio
+      Resumen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
+  <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      🚀 Tipo de Servicio
+      Endpoint
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
+  <a href="#autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔗 URL de Integración
+      Autenticación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      📉 Headers Requeridos
+      Headers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-json" class="md-nav__link">
+  <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 Cuerpo de la Solicitud (JSON)
+      Request
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔢 Cuerpo de la Solicitud (JSON)">
+    <nav class="md-nav" aria-label="Request">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Body (JSON)
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
@@ -1883,52 +1901,30 @@
 
 
 
-<h1 id="manual-de-integracion-api-reenvio-de-codigo-otp">📘 Manual de Integración API: <strong>Reenvío de Código OTP</strong></h1>
-<h2 id="descripcion-del-servicio">📄 Descripción del Servicio</h2>
-<p>Este servicio permite **reenviar el código OTP ** a un usuario que ya cuenta con una transacción activa. Se debe autenticar usando un token válido y proporcionar el ID de la transacción.</p>
-<p>Cada transacción cuenta con un maximo de 3 reenvios de ser asi, el sistema mostrara su mensaje de error y tendra que volver a iniciar el proceso.</p>
-<hr />
-<h2 id="tipo-de-servicio">🚀 Tipo de Servicio</h2>
-<p><code>POST</code></p>
-<hr />
-<h2 id="url-de-integracion">🔗 URL de Integración</h2>
+<h1 id="reenvio-de-otp-originacion-validacion">Reenvío de OTP (originación / validación)</h1>
+<h2 id="resumen">Resumen</h2>
+<p>Reenvía el código OTP a un usuario con transacción activa. Requiere token válido y el identificador de la transacción. Cada transacción permite máximo <strong>3</strong> reenvíos; si se excede, se debe reiniciar el proceso.</p>
+<h2 id="endpoint">Endpoint</h2>
 <ul>
-<li><strong>Ambiente de Pruebas:</strong> <code>https://testing-sygma.com/api/reenviar_otp</code>  </li>
-<li><strong>Producción:</strong> <code>POR DEFINIR</code></li>
+<li><strong>Método</strong>: <code>POST</code></li>
+<li><strong>Ruta</strong>: <code>/api/reenviar_otp</code></li>
+<li><strong>Ambientes</strong>:</li>
+<li><strong>Pruebas</strong>: <code>https://testing-sygma.com/api/reenviar_otp</code></li>
+<li><strong>Producción</strong>: <code>POR DEFINIR</code></li>
 </ul>
-<hr />
-<h2 id="headers-requeridos">📉 Headers Requeridos</h2>
-<table>
-<thead>
-<tr>
-<th>Nombre</th>
-<th>Valor</th>
-<th>Requerido</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Authorization</td>
-<td>Bearer <code>{token}</code></td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Accept</td>
-<td>application/json</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Content-Type</td>
-<td>application/json</td>
-<td>✅</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>🔐 <strong>Nota:</strong> El token se obtiene desde el módulo de autenticación (ver pestaña <strong>Token</strong>) usando las credenciales asignadas por la entidad.</p>
-</blockquote>
-<hr />
-<h2 id="cuerpo-de-la-solicitud-json">🔢 Cuerpo de la Solicitud (JSON)</h2>
+<h2 id="autenticacion">Autenticación</h2>
+<ul>
+<li><strong>Tipo</strong>: <code>Bearer token</code></li>
+<li><strong>Header</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+</ul>
+<h2 id="headers">Headers</h2>
+<ul>
+<li><strong>Authorization</strong>: <code>Bearer &lt;token&gt;</code> (obligatorio)</li>
+<li><strong>Accept</strong>: <code>application/json</code> (obligatorio)</li>
+<li><strong>Content-Type</strong>: <code>application/json</code> (obligatorio)</li>
+</ul>
+<h2 id="request">Request</h2>
+<h3 id="body-json">Body (JSON)</h3>
 <p>Debe enviarse un objeto JSON con el identificador de la transacción.</p>
 <h3 id="campos-obligatorios">🔸 Campos Obligatorios</h3>
 <ul>
