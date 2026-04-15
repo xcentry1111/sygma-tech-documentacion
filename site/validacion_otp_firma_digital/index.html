@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-de-integracion-api-validacion-de-codigo-otp" class="md-skip">
+        <a href="#validacion-de-otp-firma-digital" class="md-skip">
           Skip to content
         </a>
       
@@ -1353,50 +1353,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      Descripción del Servicio
+      Resumen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
+  <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Tipo de Servicio
+      Endpoint
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
+  <a href="#autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      URL de Integración
+      Autenticación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      Headers Requeridos
+      Headers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
+  <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
-      Cuerpo de la Solicitud
+      Request
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
+    <nav class="md-nav" aria-label="Request">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Body (JSON)
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
@@ -2003,50 +2012,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#descripcion-del-servicio" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      Descripción del Servicio
+      Resumen
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tipo-de-servicio" class="md-nav__link">
+  <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Tipo de Servicio
+      Endpoint
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
+  <a href="#autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      URL de Integración
+      Autenticación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
+  <a href="#headers" class="md-nav__link">
     <span class="md-ellipsis">
-      Headers Requeridos
+      Headers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
+  <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
-      Cuerpo de la Solicitud
+      Request
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
+    <nav class="md-nav" aria-label="Request">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#body-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Body (JSON)
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
@@ -2375,65 +2393,30 @@
 
 
 
-<h1 id="manual-de-integracion-api-validacion-de-codigo-otp">📘 Manual de Integración API: Validación de Código OTP</h1>
-<h2 id="descripcion-del-servicio">Descripción del Servicio</h2>
-<p>Este servicio permite validar el código OTP ingresado por el usuario, verificar su correspondencia con la transacción iniciada y, en caso de ser correcto, autorizar el uso del crédito y enviar la documentación correspondiente a los canales seleccionados por el usuario.</p>
-<hr />
-<h2 id="tipo-de-servicio">Tipo de Servicio</h2>
-<p><strong>Método HTTP:</strong> <code>POST</code></p>
-<hr />
-<h2 id="url-de-integracion">URL de Integración</h2>
-<table>
-<thead>
-<tr>
-<th>Ambiente</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Pruebas</strong></td>
-<td><code>https://testing-sygma.com/api/validacion_otp_firma</code></td>
-</tr>
-<tr>
-<td><strong>Producción</strong></td>
-<td><code>POR DEFINIR</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="headers-requeridos">Headers Requeridos</h2>
-<table>
-<thead>
-<tr>
-<th>Nombre</th>
-<th>Valor</th>
-<th>Requerido</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Authorization</code></td>
-<td><code>Bearer {token}</code></td>
-<td>✅</td>
-</tr>
-<tr>
-<td><code>Accept</code></td>
-<td><code>application/json</code></td>
-<td>✅</td>
-</tr>
-<tr>
-<td><code>Content-Type</code></td>
-<td><code>application/json</code></td>
-<td>✅</td>
-</tr>
-</tbody>
-</table>
-<p>!!! "Obtención del Token"
-    El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
-<hr />
-<h2 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h2>
-<p>La solicitud debe enviarse en formato <strong>raw JSON</strong> con los siguientes campos:</p>
+<h1 id="validacion-de-otp-firma-digital">Validación de OTP (firma digital)</h1>
+<h2 id="resumen">Resumen</h2>
+<p>Valida el OTP ingresado por el usuario y verifica su correspondencia con la transacción. Si el OTP es correcto, autoriza el uso del crédito y envía documentación a los canales seleccionados.</p>
+<h2 id="endpoint">Endpoint</h2>
+<ul>
+<li><strong>Método</strong>: <code>POST</code></li>
+<li><strong>Ruta</strong>: <code>/api/validacion_otp_firma</code></li>
+<li><strong>Ambientes</strong>:</li>
+<li><strong>Pruebas</strong>: <code>https://testing-sygma.com/api/validacion_otp_firma</code></li>
+<li><strong>Producción</strong>: <code>POR DEFINIR</code></li>
+</ul>
+<h2 id="autenticacion">Autenticación</h2>
+<ul>
+<li><strong>Tipo</strong>: <code>Bearer token</code></li>
+<li><strong>Header</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+</ul>
+<h2 id="headers">Headers</h2>
+<ul>
+<li><strong>Authorization</strong>: <code>Bearer &lt;token&gt;</code> (obligatorio)</li>
+<li><strong>Accept</strong>: <code>application/json</code> (obligatorio)</li>
+<li><strong>Content-Type</strong>: <code>application/json</code> (obligatorio)</li>
+</ul>
+<h2 id="request">Request</h2>
+<h3 id="body-json">Body (JSON)</h3>
 <h3 id="campos-obligatorios">Campos Obligatorios</h3>
 <table>
 <thead>

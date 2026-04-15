@@ -44,7 +44,13 @@ Debe enviarse un objeto JSON con el identificador de la transacción.
 ```json
 {
   "status": "success",
-  "mensaje": "OTP reenviado exitosamente al canal registrado"
+  "mensaje": "OTP reenviado exitosamente.",
+  "canales_enviados": [
+    "sms",
+    "email"
+  ],
+  "reenvios_restantes": 0,
+  "timestamp": "2026-04-15T19:38:57Z"
 }
 
 ```
