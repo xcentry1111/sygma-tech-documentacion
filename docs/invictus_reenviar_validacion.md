@@ -65,6 +65,23 @@ Debe enviarse un objeto JSON con el identificador de la transacción.
 
 ```
 
+### 3️⃣ Validación de Límite de Reenvíos
+- Se verifica el número de veces que se ha solicitado el reenvío del OTP para esta transacción.
+- !!! "Límite de Reenvíos"
+- Máximo permitido: 5 reenvíos por transacción, y es parametrizable.
+- Tiempo mínimo entre reenvíos: 60 segundos
+
+### 🚫 Si se excede el límite de reenvíos:
+
+```json
+{
+  "status": "error",
+  "mensaje": "Has excedido el número máximo de reenvíos permitidos. Por favor, contacta a soporte.",
+  "reenvios_maximos": 5,
+  "reenvios_realizados": 5
+}
+```
+
 #### ❗  Error de Autenticación
 
 ```json

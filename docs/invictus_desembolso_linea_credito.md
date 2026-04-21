@@ -1,13 +1,13 @@
-# Cálculo de desembolso (Invictus)
+# Seleccionar Lineas de Credito (Invictus)
 
 ## Resumen
 Calcula descuentos/cobros y el valor final a pagar al cliente. Recibe la línea de crédito seleccionada, plazo y valor deseado, y retorna el desglose completo de montos aplicables.
 
 ## Endpoint
 - **Método**: `POST`
-- **Ruta**: `/api/calculo_desembolso`
+- **Ruta**: `/api/lineas_credito`
 - **Ambientes**:
-  - **Pruebas (QA)**: `https://testing-sygma.com/api/calculo_desembolso`
+  - **Pruebas (QA)**: `https://testing-sygma.com/api/lineas_credito`
   - **Producción**: `POR DEFINIR`
 
 ## Autenticación
@@ -24,7 +24,7 @@ Calcula descuentos/cobros y el valor final a pagar al cliente. Recibe la línea 
 Ver sección **Request** (tabla de campos + ejemplo).
 
 ## Responses
-Ver sección **Response** (incluye `exitosa` y errores).
+Ver sección **Response** (incluye `success` con líneas de crédito y errores).
 
 ## Notas / Flujo
 
@@ -73,9 +73,60 @@ Sección 3: Realizar Desembolso
 6. Servicio ejecuta cálculo de descuentos
    ↓
 7. Respuesta según resultado:
-   - exitosa → Habilita Sección 3 con valores calculados
+   - success → Habilita Sección 2 con líneas de crédito para selección
    - error → Muestra modal de error y regresa a inicio
 ```
+
+### Flujo funcional previo: Seleccionar línea de crédito, valor y plazo
+
+Este flujo corresponde a la etapa donde Invictus presenta líneas disponibles y permite escoger **una sola línea** antes del cálculo.
+
+**Reglas funcionales clave (mockup PDF):**
+
+1. **Carga de líneas de crédito tras OTP válido**
+   - Invictus muestra en Sección 2 los datos devueltos por TESEO:
+     - Nombre cliente
+     - Línea de crédito
+     - Total cupo
+     - Total utilizado
+     - Total disponible
+     - Plazo máximo
+   - Ningún campo retornado por servicio es editable.
+
+2. **Campos de captura obligatorios por línea seleccionada**
+   - `[Ingrese Plazo]` y `[Confirme Plazo]` obligatorios.
+   - `[Ingrese Valor]` y `[Confirme Valor]` obligatorios, salvo reglas de monto fijo.
+   - Todos numéricos, sin valores negativos.
+
+3. **Selección única de línea**
+   - Campo `[Seleccionar]` tipo checkbox.
+   - Solo permite **una** línea a la vez.
+   - No hay selección por defecto al cargar.
+   - Si cambia de línea, se limpia información diligenciada de la línea anterior.
+
+4. **Regla de crédito de monto fijo**
+   - Si línea trae marca `Crédito de monto fijo = S`:
+     - Invictus asigna `Total Disponible` en `[Ingrese Valor]` y `[Confirme Valor]`.
+     - Esos campos quedan no editables.
+     - Solo se diligencia plazo y confirmación de plazo.
+
+5. **Validaciones de plazo y valor**
+   - `[Ingrese Plazo]` debe ser `<= Plazo Máximo`.
+   - `[Confirme Plazo]` debe coincidir con `[Ingrese Plazo]`.
+   - `[Ingrese Valor]` y `[Confirme Valor]` deben coincidir.
+   - Si no cumple, resalta campo en rojo y bloquea avance.
+
+6. **Habilitación de botón `[Calcular Desembolso]`**
+   - Inicia inhabilitado.
+   - Se habilita solo cuando:
+     - hay una línea seleccionada, y
+     - todos campos obligatorios de esa línea están completos y válidos.
+
+7. **Confirmación antes del cálculo**
+   - Al presionar `[Calcular Desembolso]`, Invictus muestra resumen de transacción.
+   - Si asesor confirma (`[Aceptar]`), consume servicio de cálculo.
+   - Si cancela (`[Cancelar]`), sale sin guardar y regresa a inicio.
+   - Después de confirmar, no se permiten cambios en secciones previas.
 
 ---
 
@@ -89,10 +140,10 @@ Sección 3: Realizar Desembolso
 
 ### URL de Integración
 
-| Ambiente | URL |
-|----------|-----|
-| **Pruebas (QA)** | `https://testing-sygma.com/api/calculo_desembolso` |
-| **Producción** | `POR DEFINIR` |
+| Ambiente | URL                                            |
+|----------|------------------------------------------------|
+| **Pruebas (QA)** | `https://testing-sygma.com/api/lineas_credito` |
+| **Producción** | `POR DEFINIR`                                  |
 
 ---
 
@@ -176,40 +227,37 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 **Código HTTP:** `200 OK`
 
-**Status:** `"exitosa"`
+**Status:** `"success"`
 
 ```json
 {
-  "status": "exitosa",
+  "status": "success",
   "datos": {
-    "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
-    "mensaje": "Cálculo de desembolso realizado exitosamente.",
-    "nombre_cliente": "Fernando Osorio",
-    "id_linea_credito": 27375,
-    "linea_credito": "Línea Digital",
-    "plazo_meses": 4,
-    "valor_total": 500000,
-    "valor_cobros": 12050,
-    "valor_a_pagar_cliente": 487950,
-    "plaza_empresa": 50,
-    "detalles_descuentos": [
+    "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "mensaje": "Código OTP validado correctamente. Crédito autorizado para desembolso.",
+    "nombre_cliente": "Juan Pérez",
+    "fecha_validacion": "2025-10-10 14:30:45",
+    "puede_desembolsar": true,
+    "lineas_credito": [
       {
-        "concepto": "IVA",
-        "valor": 8000,
-        "descripcion": "Impuesto al Valor Agregado sobre comisiones"
+        "id_linea_credito": 27373,
+        "linea_credito": "Línea 1",
+        "valor_cupo": 50000,
+        "total_entregado": 50000,
+        "total_disponible": 50000,
+        "plazo_meses": 12,
+        "monto_fijo": "NO"
       },
       {
-        "concepto": "Seguro",
-        "valor": 4000,
-        "descripcion": "Seguro de vida y desempleo"
-      },
-      {
-        "concepto": "Comisión",
-        "valor": 50,
-        "descripcion": "Comisión administrativa"
+        "id_linea_credito": 27375,
+        "linea_credito": "Línea 2",
+        "valor_cupo": 50000,
+        "total_entregado": 50000,
+        "total_disponible": 50000,
+        "plazo_meses": 2,
+        "monto_fijo": "SI"
       }
-    ],
-    "fecha_calculo": "2025-10-10 15:45:30"
+    ]
   }
 }
 ```
@@ -218,22 +266,21 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 | Campo | Tipo | Descripción |
 |-------|------|-------------|
-| `status` | string | Indicador del resultado: `"exitosa"` |
-| `datos` | object | Objeto con toda la información calculada |
+| `status` | string | Indicador del resultado: `"success"` |
+| `datos` | object | Objeto con líneas de crédito disponibles para selección |
 | `datos.guid` | string | Identificador único de la transacción (mismo del request) |
-| `datos.mensaje` | string | Mensaje de confirmación del cálculo |
+| `datos.mensaje` | string | Mensaje de confirmación de OTP válido |
 | `datos.nombre_cliente` | string | Nombre completo del cliente (confirmación) |
-| `datos.linea_credito` | string | Nombre de la línea de crédito seleccionada |
-| `datos.plazo_meses` | integer | Plazo en meses (confirmación) |
-| `datos.valor_total` | number | Valor total solicitado por el cliente |
-| `datos.valor_cobros` | number | Suma de todos los descuentos/cobros aplicados |
-| `datos.valor_a_pagar_cliente` | number | **Monto final que recibirá el cliente físicamente** |
-| `datos.plaza_empresa` | number | Código de la plaza/empresa donde se realiza el desembolso |
-| `datos.detalles_descuentos` | array | Array con el desglose de cada cobro/descuento |
-| `datos.detalles_descuentos[].concepto` | string | Nombre del cobro (IVA, Seguro, Comisión, etc.) |
-| `datos.detalles_descuentos[].valor` | number | Monto del cobro individual |
-| `datos.detalles_descuentos[].descripcion` | string | Descripción detallada del cobro |
-| `datos.fecha_calculo` | string | Timestamp del cálculo (formato: YYYY-MM-DD HH:MM:SS) |
+| `datos.fecha_validacion` | string | Timestamp de validación OTP (formato: YYYY-MM-DD HH:MM:SS) |
+| `datos.puede_desembolsar` | boolean | Indica autorización para continuar (`true`) |
+| `datos.lineas_credito` | array | Array de líneas de crédito disponibles |
+| `datos.lineas_credito[].id_linea_credito` | integer | ID de línea de crédito |
+| `datos.lineas_credito[].linea_credito` | string | Nombre de línea de crédito |
+| `datos.lineas_credito[].valor_cupo` | number | Cupo total de línea |
+| `datos.lineas_credito[].total_entregado` | number | Valor ya entregado |
+| `datos.lineas_credito[].total_disponible` | number | Valor disponible para desembolso |
+| `datos.lineas_credito[].plazo_meses` | integer | Plazo máximo disponible |
+| `datos.lineas_credito[].monto_fijo` | string | Marca de crédito de monto fijo (`SI`/`NO`) |
 
 ---
 
@@ -301,7 +348,7 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 | # | Condición | HTTP Code | status | Mensaje | Comportamiento Invictus | Reinicia Proceso |
 |---|-----------|-----------|--------|---------|------------------------|------------------|
-| 1 | Cálculo exitoso | 200 | `exitosa` | "Cálculo de desembolso realizado exitosamente." | Habilita Sección 3 con valores | No |
+| 1 | OTP validado y líneas disponibles | 200 | `success` | "Código OTP validado correctamente. Crédito autorizado para desembolso." | Habilita Sección 2 con líneas | No |
 | 2 | Token inválido/ausente | 401 | `error` | "Token de autorización inválido o ausente." | Modal rojo, regresa a inicio | **SÍ** |
 | 3 | Transacción no encontrada | 404 | `error` | "Transacción no encontrada o inválida." | Modal naranja, regresa a inicio | **SÍ** |
 | 4 | Campos faltantes | 400 | `error` | Lista de campos obligatorios | - | - |
@@ -310,11 +357,11 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 ## Ejemplos Completos
 
-### ✅ Ejemplo 1: Cálculo Exitoso
+### ✅ Ejemplo 1: OTP Validado y Líneas Disponibles
 
 **Request:**
 ```json
-POST /api/calculo_desembolso
+POST /api/lineas_credito
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 Content-Type: application/json
 
@@ -335,55 +382,42 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "status": "exitosa",
+  "status": "success",
   "datos": {
-    "guid": "b2c3d4e5-f6g7-8901-bcde-fg2345678901",
-    "mensaje": "Cálculo de desembolso realizado exitosamente.",
-    "nombre_cliente": "Fernando Osorio",
-    "id_linea_credito": 27375,
-    "linea_credito": "Línea Digital",
-    "plazo_meses": 4,
-    "valor_total": 500000,
-    "valor_cobros": 12050,
-    "valor_a_pagar_cliente": 487950,
-    "plaza_empresa": 50,
-    "detalles_descuentos": [
+    "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "mensaje": "Código OTP validado correctamente. Crédito autorizado para desembolso.",
+    "nombre_cliente": "Juan Pérez",
+    "fecha_validacion": "2025-10-10 14:30:45",
+    "puede_desembolsar": true,
+    "lineas_credito": [
       {
-        "concepto": "IVA",
-        "valor": 8000,
-        "descripcion": "Impuesto al Valor Agregado sobre comisiones"
+        "id_linea_credito": 27373,
+        "linea_credito": "Línea 1",
+        "valor_cupo": 50000,
+        "total_entregado": 50000,
+        "total_disponible": 50000,
+        "plazo_meses": 12,
+        "monto_fijo": "NO"
       },
       {
-        "concepto": "Seguro",
-        "valor": 4000,
-        "descripcion": "Seguro de vida y desempleo"
-      },
-      {
-        "concepto": "Comisión",
-        "valor": 50,
-        "descripcion": "Comisión administrativa"
+        "id_linea_credito": 27375,
+        "linea_credito": "Línea 2",
+        "valor_cupo": 50000,
+        "total_entregado": 50000,
+        "total_disponible": 50000,
+        "plazo_meses": 2,
+        "monto_fijo": "SI"
       }
-    ],
-    "fecha_calculo": "2025-10-10 15:45:30"
+    ]
   }
 }
 ```
 
 **Acción en Invictus:**
-1. Habilita **Sección 3: Realizar Desembolso**
-2. Muestra valores calculados en los campos:
-   - Valor Total: **$500,000**
-   - Valor Cobros: **$12,050**
-   - Plaza Empresa: **50**
-   - **Valor a Pagar al Cliente: $487,950** ← **DESTACADO (monto a entregar físicamente)**
-3. Muestra tabla de desglose de descuentos:
-   ```
-   IVA         $8,000    Impuesto al Valor Agregado
-   Seguro      $4,000    Seguro de vida y desempleo
-   Comisión    $50       Comisión administrativa
-   ```
-4. **BLOQUEA** Sección 1 y Sección 2 (no editables)
-5. Usuario NO debe entregar dinero todavía (espera completar Sección 3)
+1. Muestra mensaje de validación OTP exitosa.
+2. Habilita **Sección 2: Datos Crédito**.
+3. Carga tabla de líneas retornadas en `datos.lineas_credito`.
+4. Permite selección de una sola línea para continuar flujo.
 
 ---
 
@@ -391,7 +425,7 @@ Content-Type: application/json
 
 **Request:**
 ```json
-POST /api/calculo_desembolso
+POST /api/lineas_credito
 Authorization: Bearer token_invalido_expirado
 Content-Type: application/json
 
@@ -429,7 +463,7 @@ Content-Type: application/json
 
 **Request:**
 ```json
-POST /api/calculo_desembolso
+POST /api/lineas_credito
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 Content-Type: application/json
 

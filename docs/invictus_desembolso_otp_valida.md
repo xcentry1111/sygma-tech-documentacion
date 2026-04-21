@@ -449,7 +449,7 @@ El código ingresado no coincide con el código generado para esta transacción.
 3. **Invalida el código OTP** (uso único, no puede reutilizarse)
 4. Marca la transacción como autenticada
 5. Habilita el proceso de desembolso
-6. **Retorna información de las líneas de crédito del cliente**
+6. Retorna confirmación de OTP válido para continuar flujo
 
 **Respuesta exitosa:**
 ```json
@@ -457,30 +457,7 @@ El código ingresado no coincide con el código generado para esta transacción.
   "status": "success",
   "datos": {
     "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "mensaje": "Código OTP validado correctamente. Crédito autorizado para desembolso.",
-    "nombre_cliente": "Juan Pérez",
-    "fecha_validacion": "2025-10-10 14:30:45",
-    "puede_desembolsar": true,
-    "lineas_credito": [
-      {
-        "id_linea_credito": 27373,
-        "linea_credito": "Línea 1",
-        "valor_cupo": 50000,
-        "total_entregado": 50000,
-        "total_disponible": 50000,
-        "plazo_meses": 12,
-        "monto_fijo": 'NO'
-      },
-      {
-        "id_linea_credito": 27375, 
-        "linea_credito": "Línea 2",
-        "valor_cupo": 50000,
-        "total_entregado": 50000,
-        "total_disponible": 50000,
-        "plazo_meses": 2, 
-        "monto_fijo": 'SI'
-      }
-    ]
+    "mensaje": "Codigo OTP validado correctamente. Credito autorizado para desembolso."
   }
 }
 ```
@@ -497,43 +474,21 @@ El código ingresado no coincide con el código generado para esta transacción.
 
 2. **Cerrar modal → Permanece en la pantalla para completar el desembolso**
 
-3. **Habilitar Sección 2: Datos Crédito** con la información retornada:
-    - Mostrar tabla con las líneas de crédito del cliente
-    - Columnas visibles:
-        * Línea crédito
-        * Valor Cupo
-        * Total Entregado
-        * Total Disponible
-        * Plazo (meses)
-        * Ingresos Plazo
-        * Confirme Plazo
-        * Ingresos Valor
-        * Confirme Valor
-        * Botón [Selección] por cada línea
+3. **Notificar respuesta exitosa de validación OTP**:
+    - Mensaje esperado en Invictus: **"Respuesta Exitosa - OTP Válido!"**
+    - `status`: `success`
+    - El mensaje se puede cerrar para continuar el proceso
 
-4. **Cliente debe seleccionar una línea de crédito** para continuar con el desembolso
+4. **Continuar al siguiente flujo funcional**:
+    - Luego del cierre del mensaje, Invictus continúa con la selección de línea de crédito
+    - El detalle funcional de esta sección está documentado en `invictus_desembolso_linea_credito.md`
 
 **Campos de respuesta:**
 - `status`: Indicador del resultado (`success`)
 - `datos.guid`: Identificador único de la transacción (mismo UUID)
 - `datos.mensaje`: Mensaje de confirmación para el usuario
-- `datos.nombre_cliente`: Nombre completo del cliente
-- `datos.fecha_validacion`: Timestamp de cuando se validó el OTP (formato: YYYY-MM-DD HH:MM:SS)
-- `datos.puede_desembolsar`: Booleano que indica si está autorizado (siempre `true` en success)
-- `datos.lineas_credito`: Array con las líneas de crédito disponibles del cliente
 
-**Estructura de cada línea de crédito:**
-- `linea_credito`: Identificador de la línea (ej: "Línea 1", "Línea 2")
-- `valor_cupo`: Monto total del cupo aprobado
-- `total_entregado`: Monto ya entregado al cliente
-- `total_disponible`: Monto disponible para desembolsar
-- `plazo_meses`: Plazo en meses para el crédito
-- `ingresos_plazo`: Información de ingresos relacionada al plazo
-- `confirme_plazo`: Campo de confirmación del plazo
-- `ingresos_valor`: Valor de ingresos
-- `confirme_valor`: Confirmación del valor
-
-**Nota importante:** La respuesta exitosa en este punto **devuelve información de las líneas de crédito del cliente** que deben mostrarse en la Sección 2: Datos Crédito de Invictus.
+**Nota importante:** En este documento, la salida de éxito se enfoca en la **notificación de OTP válido** (`status: success`). El detalle de interacción para selección de línea, valor y plazo se documenta en `invictus_desembolso_linea_credito.md`.
 
 ---
 
@@ -579,30 +534,7 @@ Content-Type: application/json
   "status": "success",
   "datos": {
     "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "mensaje": "Código OTP validado correctamente. Crédito autorizado para desembolso.",
-    "nombre_cliente": "Juan Pérez",
-    "fecha_validacion": "2025-10-10 14:30:45",
-    "puede_desembolsar": true,
-    "lineas_credito": [
-      {
-        "id_linea_credito": 27373,      
-        "linea_credito": "Línea 1",
-        "valor_cupo": 50000,
-        "total_entregado": 50000,
-        "total_disponible": 50000,
-        "plazo_meses": 12,
-        "monto_fijo": 'NO'
-      },
-      {
-        "id_linea_credito": 27375,
-        "linea_credito": "Línea 2",
-        "valor_cupo": 50000,
-        "total_entregado": 50000,
-        "total_disponible": 50000,
-        "plazo_meses": 2,
-        "monto_fijo": 'SI'
-      }
-    ]
+    "mensaje": "Codigo OTP validado correctamente. Credito autorizado para desembolso."
   }
 }
 ```
@@ -611,8 +543,7 @@ Content-Type: application/json
 - Modal verde: **"Código OTP validado correctamente. Crédito autorizado para desembolso."**
 - Cerrar modal
 - Habilitar Sección 2: Datos Crédito
-- Mostrar tabla con las 2 líneas de crédito disponibles
-- Cliente puede seleccionar una línea para continuar
+- Continuar a flujo de selección de línea de crédito documentado en `invictus_desembolso_linea_credito.md`
 
 ---
 
@@ -919,19 +850,10 @@ Content-Type: application/json
     - Permanece en pantalla OTP
     - No limpia casillas
 
-### Sección 2: Datos Crédito (Se habilita tras validación exitosa)
+### Paso siguiente: Sección 2 Datos Crédito
 
-**Tabla de Líneas de Crédito:**
-
-| Línea crédito | Valor Cupo | Total Entregado | Total Disponible | Plazo | Ingresos Plazo | Confirme Plazo | Ingresos Valor | Confirme Valor | Selección |
-|---------------|------------|-----------------|------------------|-------|--------------|--------------|--------------|--------------|-----------|
-| Línea 1 | $50,000 | $50,000 | $50,000 | 12    | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Línea 2 | $50,000 | $50,000 | $50,000 | 4     | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-**Comportamiento:**
-- Cliente debe seleccionar **una línea de crédito** usando el checkbox [Selección]
-- Solo puede seleccionar una línea a la vez
-- Al seleccionar, se habilita continuar al siguiente paso del desembolso
+Después de mostrar y cerrar la notificación **"Respuesta Exitosa - OTP Válido!"**, Invictus habilita el siguiente flujo funcional para seleccionar línea de crédito, plazo y valor.  
+Ese comportamiento se documenta en `invictus_desembolso_linea_credito.md`.
 
 ---
 
