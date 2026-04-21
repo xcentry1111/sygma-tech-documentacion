@@ -1359,6 +1359,25 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#3-validacion-de-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Validación de Límite de Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-se-excede-el-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Si se excede el límite de reenvíos:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Si se excede el límite de reenvíos:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#error-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
       ❗ Error de Autenticación
@@ -1373,6 +1392,11 @@
       ❗ Limite de envio (Solo se permite enviar maximo 3 veces el servicio)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1630,7 +1654,7 @@
   
   
   <span class="md-ellipsis">
-    Lineas de Credito
+    Seleccionar Lineas de Credito
     
   </span>
   
@@ -1863,6 +1887,25 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#3-validacion-de-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Validación de Límite de Reenvíos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-se-excede-el-limite-de-reenvios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 Si se excede el límite de reenvíos:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚫 Si se excede el límite de reenvíos:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#error-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
       ❗ Error de Autenticación
@@ -1877,6 +1920,11 @@
       ❗ Limite de envio (Solo se permite enviar maximo 3 veces el servicio)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1955,6 +2003,21 @@
   &quot;mensaje&quot;: &quot;Transacción no encontrada o no válida para reenvío&quot;
 }
 
+</code></pre>
+<h3 id="3-validacion-de-limite-de-reenvios">3️⃣ Validación de Límite de Reenvíos</h3>
+<ul>
+<li>Se verifica el número de veces que se ha solicitado el reenvío del OTP para esta transacción.</li>
+<li>!!! "Límite de Reenvíos"</li>
+<li>Máximo permitido: 5 reenvíos por transacción, y es parametrizable.</li>
+<li>Tiempo mínimo entre reenvíos: 60 segundos</li>
+</ul>
+<h3 id="si-se-excede-el-limite-de-reenvios">🚫 Si se excede el límite de reenvíos:</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Has excedido el número máximo de reenvíos permitidos. Por favor, contacta a soporte.&quot;,
+  &quot;reenvios_maximos&quot;: 5,
+  &quot;reenvios_realizados&quot;: 5
+}
 </code></pre>
 <h4 id="error-de-autenticacion">❗  Error de Autenticación</h4>
 <pre><code class="language-json">{
