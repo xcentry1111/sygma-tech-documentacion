@@ -1,4 +1,4 @@
-# Seleccionar líneas de crédito (Invictus)
+# Seleccionar líneas de crédito (Invictus).
 
 ## Resumen
 Documenta cómo Invictus presenta y valida la selección de línea, plazo y valor. Esta sección usa la información recibida en la respuesta exitosa de validación OTP.
