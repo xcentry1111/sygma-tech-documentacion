@@ -1,7 +1,7 @@
 # Validación de OTP para desembolso (Invictus)
 
 ## Resumen
-Valida el código OTP ingresado por el cliente para confirmar identidad y autorizar el desembolso en punto Gana. Controla intentos, vigencia del código y retorna líneas de crédito al validar exitosamente.
+Valida el código OTP ingresado por el cliente para confirmar identidad y autorizar el desembolso en punto Gana. Controla intentos, vigencia del código y, si valida correctamente, confirma continuidad del flujo.
 
 ## Endpoint
 - **Método**: `POST`
@@ -36,11 +36,11 @@ Este servicio es el **segundo paso** del flujo de desembolso, ejecutándose desp
 
 ```
 Servicio 1: Validación de Crédito Vigente
-     ↓ (retorna success + guid + codigo_otp + canales_envio)
+     ↓ (retorna success + guid + mensaje)
 Pantalla de Autenticación Cliente (Invictus)
      ↓ (cliente proporciona código OTP)
 Servicio 2: Validación de OTP (este documento) ← ESTAMOS AQUÍ
-     ↓ (confirma identidad del cliente + devuelve líneas de crédito)
+     ↓ (confirma identidad del cliente)
 Sección 2: Datos Crédito (se habilita en Invictus)
      ↓
 Desembolso Final
@@ -90,7 +90,7 @@ Desembolso Final
    
    f) Validación del Código OTP
       ↓ Código incorrecto? → SÍ: incrementa contador, retorna "invalid"
-      ↓ Código correcto? → SÍ: invalida OTP, retorna "success" + líneas de crédito
+      ↓ Código correcto? → SÍ: invalida OTP, retorna "success"
    ↓
 7. Comportamiento de Invictus según respuesta:
    
@@ -166,7 +166,6 @@ La solicitud debe enviarse en formato **raw JSON** con los siguientes campos:
 
 | Campo | Tipo     | Longitud | Requerido | Descripción                                                   |
 |-------|----------|----------|-----------|---------------------------------------------------------------|
-| `id_linea_credito` | numerico | - | ✅ | ID de la linea de credito                                     |
 | `tiposdocumento_id` | string   | - | ✅ | ID del tipo de documento según catálogo                       |
 | `identificacion` | string   | variable | ✅ | Número de identificación del usuario                          |
 | `codigo_otp` | string   | 6 | ✅ | Código OTP ingresado por el cliente (numérico o alfanumérico) |
@@ -813,8 +812,7 @@ Content-Type: application/json
     - [CERRAR]
     - Cierra pantalla de autenticación
     - **Habilita Sección 2: Datos Crédito**
-    - Muestra tabla con líneas de crédito del cliente
-    - Cliente puede seleccionar línea y continuar
+    - Continúa al flujo de selección de línea documentado en `invictus_desembolso_linea_credito.md`
 
    **b) Response: `invalid`**
     - Modal naranja: "El código ingresado es incorrecto\nintentos_restantes: X"
@@ -917,8 +915,8 @@ Los siguientes valores pueden configurarse en el sistema TESEO:
 - ✅ El `guid` es fundamental para vincular la validación con el OTP correcto generado
 - ✅ Después de 3 intentos fallidos, es **obligatorio** generar un nuevo código reiniciando desde el inicio
 - ✅ La validación exitosa autoriza el desembolso pero **NO lo ejecuta automáticamente**
-- ✅ **La respuesta exitosa devuelve las líneas de crédito del cliente** para mostrar en Invictus
-- ✅ El punto Gana debe permitir al cliente **seleccionar una línea de crédito** antes de proceder
+- ✅ La respuesta exitosa confirma OTP válido y continuidad del flujo
+- ✅ La selección de línea de crédito se documenta en `invictus_desembolso_linea_credito.md`
 
 ### 🔄 Flujo Completo de Desembolso
 
@@ -930,7 +928,7 @@ Pantalla de Autenticación Cliente (en Invictus)
      ↓ (usuario ingresa código OTP)
      
 Servicio 2: Validación de OTP (este documento)
-     ↓ (retorna success + líneas de crédito)
+     ↓ (retorna success)
      
 Sección 2: Datos Crédito (habilita en Invictus)
      ↓ (cliente selecciona línea de crédito)
