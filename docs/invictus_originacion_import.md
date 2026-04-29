@@ -32,7 +32,6 @@ Los siguientes campos son **requeridos** para procesar correctamente la solicitu
 - `tiposdocumento_id`
 - `identificacion`
 - `fecha_expedicion`
-- `codigo_expedicion`
 - `primer_nombre`
 - `segundo_nombre`
 - `primer_apellido`
@@ -70,7 +69,6 @@ Los siguientes campos son **requeridos** para procesar correctamente la solicitu
     "tiposdocumento_id": "1",
     "identificacion": "88282828",
     "fecha_expedicion": "1984-07-12",
-    "codigo_expedicion": "27001",
     "primer_nombre": "MATURANA",
     "segundo_nombre": "MARTINEZ",
     "primer_apellido": "MARIO",
