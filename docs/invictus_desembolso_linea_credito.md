@@ -5,7 +5,7 @@ Documenta cómo Invictus presenta y valida la selección de línea, plazo y valo
 
 ## Endpoint
 - **No aplica endpoint propio en este paso.**
-- **Fuente de datos**: respuesta `success` de `POST /api/validacion_otp_desembolso`.
+- **Fuente de datos**: respuesta `success` de `POST /api/seleccionar_linea_credito`.
 
 ## Autenticación
 - **Tipo**: `Bearer token`
