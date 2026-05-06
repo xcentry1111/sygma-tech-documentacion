@@ -1,11 +1,14 @@
-# Seleccionar líneas de crédito (Invictus).
+# Seleccionar Líneas de Crédito - Desembolso Invictus
 
 ## Resumen
-Documenta cómo Invictus presenta y valida la selección de línea, plazo y valor. Esta sección usa la información recibida en la respuesta exitosa de validación OTP.
+Retorna las líneas de crédito disponibles para la persona, validando que el OTP haya sido previamente validado. La información se obtiene desde la función Oracle `fnc_json_credintegral('INVICTUS', identificacion, tiposdocumento_id)`.
 
 ## Endpoint
-- **No aplica endpoint propio en este paso.**
-- **Fuente de datos**: respuesta `success` de `POST /api/seleccionar_linea_credito`.
+- **Método**: `POST`
+- **Ruta**: `/api/seleccionar_linea_credito`
+- **Ambientes**:
+    - **Pruebas (QA)**: `https://testing-sygma.com/api/seleccionar_linea_credito`
+    - **Producción**: `POR DEFINIR`
 
 ## Autenticación
 - **Tipo**: `Bearer token`
@@ -13,133 +16,6 @@ Documenta cómo Invictus presenta y valida la selección de línea, plazo y valo
 - **Obtención del token**: `POST https://testing-sygma.com/api/login`
 
 ## Headers
-- **Authorization**: `Bearer <token>` (obligatorio)
-- **Accept**: `application/json` (obligatorio)
-- **Content-Type**: `application/json` (obligatorio)
-
-## Request
-No aplica request propio para este paso funcional. Invictus toma los datos del `success` del servicio OTP y habilita la captura de plazo/valor por línea.
-
-## Responses
-Ver sección **Response** (estructura de líneas que Invictus debe mostrar).
-
-## Notas / Flujo
-
-### Flujo del proceso
-
-### Contexto General
-
-Este paso ocurre después de validar OTP exitosamente y antes de calcular desembolso.
-
-```
-Servicio 1: Validación de Crédito Vigente
-     ↓
-Servicio 2: Validación de OTP
-     ↓ (retorna success + líneas de crédito)
-Sección 2: Datos Crédito (este documento)
-     ↓ (usuario selecciona línea, plazo, valor)
-     ↓ (presiona [Calcular Desembolso])
-Servicio de Cálculo de Desembolso
-     ↓
-Sección 3: Realizar Desembolso
-```
-
-### Secuencia del Flujo
-
-```
-1. Usuario completa Sección 2: Datos Crédito
-   - Ha seleccionado una línea de crédito
-   - Ha ingresado y confirmado plazo
-   - Ha ingresado y confirmado valor
-   - Todos los campos validados correctamente
-   ↓
-2. Usuario presiona [Calcular Desembolso]
-   ↓
-3. Sistema muestra Modal de Confirmación
-   - Cliente: [Nombre]
-   - Línea de Crédito: [Nombre línea]
-   - Plazo: [X meses]
-   - Valor Total: $[XXX,XXX]
-   ↓
-4. Usuario selecciona [Calcular Desembolso]
-   ↓
-5. Invictus consume el servicio de cálculo de desembolso (siguiente documento)
-```
-
-### Flujo funcional previo: Seleccionar línea de crédito, valor y plazo
-
-Este flujo corresponde a la etapa donde Invictus presenta líneas disponibles y permite escoger **una sola línea** antes del cálculo.
-
-**Reglas funcionales clave (mockup PDF):**
-
-1. **Carga de líneas de crédito tras OTP válido**
-   - Invictus muestra en Sección 2 los datos devueltos por TESEO:
-     - Nombre cliente
-     - Línea de crédito
-     - Total cupo
-     - Total utilizado
-     - Total disponible
-     - Plazo máximo
-   - Ningún campo retornado por servicio es editable.
-
-2. **Campos de captura obligatorios por línea seleccionada**
-   - `[Ingrese Plazo]` y `[Confirme Plazo]` obligatorios.
-   - `[Ingrese Valor]` y `[Confirme Valor]` obligatorios, salvo reglas de monto fijo.
-   - Todos numéricos, sin valores negativos.
-
-3. **Selección única de línea**
-   - Campo `[Seleccionar]` tipo checkbox.
-   - Solo permite **una** línea a la vez.
-   - No hay selección por defecto al cargar.
-   - Si cambia de línea, se limpia información diligenciada de la línea anterior.
-
-4. **Regla de crédito de monto fijo**
-   - Si línea trae marca `Crédito de monto fijo = S`:
-     - Invictus asigna `Total Disponible` en `[Ingrese Valor]` y `[Confirme Valor]`.
-     - Esos campos quedan no editables.
-     - Solo se diligencia plazo y confirmación de plazo.
-
-5. **Validaciones de plazo y valor**
-   - `[Ingrese Plazo]` debe ser `<= Plazo Máximo`.
-   - `[Confirme Plazo]` debe coincidir con `[Ingrese Plazo]`.
-   - `[Ingrese Valor]` y `[Confirme Valor]` deben coincidir.
-   - Si no cumple, resalta campo en rojo y bloquea avance.
-
-6. **Habilitación de botón `[Calcular Desembolso]`**
-   - Inicia inhabilitado.
-   - Se habilita solo cuando:
-     - hay una línea seleccionada, y
-     - todos campos obligatorios de esa línea están completos y válidos.
-
-7. **Confirmación antes del cálculo**
-   - Al presionar `[Calcular Desembolso]`, Invictus muestra resumen de transacción.
-   - Si asesor confirma (`[Aceptar]`), consume servicio de cálculo.
-   - Si cancela (`[Cancelar]`), sale sin guardar y regresa a inicio.
-   - Después de confirmar, no se permiten cambios en secciones previas.
-
----
-
-## Información Técnica
-
-### Tipo de integración
-
-Este paso no define un endpoint nuevo.  
-Consume datos del `success` de `POST /api/validacion_otp_desembolso`.
-
----
-
-### URL de integración
-
-| Ambiente | URL origen de datos |
-|----------|---------------------|
-| **Pruebas (QA)** | `https://testing-sygma.com/api/validacion_otp_desembolso` |
-| **Producción** | `POR DEFINIR` |
-
----
-
-### Headers Requeridos
-
-Aplican al servicio origen (`validacion_otp_desembolso`):
 
 | Nombre | Valor | Requerido | Descripción |
 |--------|-------|-----------|-------------|
@@ -147,134 +23,263 @@ Aplican al servicio origen (`validacion_otp_desembolso`):
 | `Accept` | `application/json` | ✅ | Formato de respuesta esperado |
 | `Content-Type` | `application/json` | ✅ | Formato del cuerpo de la petición |
 
-#### 🔐 Obtención del Token
+---
 
-!!! "Obtención del Token" El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.
+## Flujo del Proceso
 
-**Endpoint de autenticación:**
 ```
-POST https://testing-sygma.com/api/login
+Servicio 1: POST /api/validacion_credito_vigente
+     ↓ (retorna guid + codigo_otp si success)
+Servicio 2: POST /api/validacion_otp_desembolso
+     ↓ (retorna success con guid validado)
+Servicio 3 (opcional): POST /api/reenvio_otp_desembolso
+     ↓
+Servicio 4: POST /api/seleccionar_linea_credito  ← ESTAMOS AQUÍ
+     ↓ (retorna nombre_cliente, identificacion, lineas_credito)
+Sección 2: Datos Crédito en Invictus
+     ↓ (usuario selecciona línea, ingresa plazo y valor)
+Servicio 5: POST /api/proceso_desembolso
 ```
+
+---
+
+## Fuente de Datos
+
+La información de líneas de crédito se obtiene ejecutando:
+
+```sql
+SELECT fnc_json_credintegral('INVICTUS', :identificacion, :tiposdocumento_id) FROM dual;
+```
+
+Esta función retorna las obligaciones rotativas activas de la persona
+(`partiposproducto_id IN (11881, 11882, 11880)` con `obl_saldototaldeuda > 0`),
+enriquecidas con los campos de cupo desde la tabla `personas`.
 
 ---
 
 ## Request
 
-### Entrada funcional de esta sección
+### Campos Obligatorios
 
-Este paso no consume endpoint propio.  
-Invictus recibe líneas en el `success` de OTP y habilita captura en UI:
+| Campo | Tipo | Requerido | Descripción |
+|-------|------|-----------|-------------|
+| `guid` | string (UUID) | ✅ | UUID de la transacción generado en `validacion_credito_vigente` |
+| `tiposdocumento_id` | string | ✅ | ID del tipo de documento según catálogo |
+| `identificacion` | string | ✅ | Número de identificación del cliente |
 
-- Selección única de `id_linea_credito`
-- `Ingrese Plazo` y `Confirme Plazo`
-- `Ingrese Valor` y `Confirme Valor` (según regla de `monto_fijo`)
+### Catálogo de Tipos de Documento
 
-Los datos confirmados aquí se usan en el siguiente servicio: cálculo de desembolso.
+| `tiposdocumento_id` | Descripción |
+|---------------------|-------------|
+| `1` | Cédula de ciudadanía (CC) |
+| `2` | Cédula de extranjería (CE) |
+| `3` | NIT |
+| `8` | Pasaporte |
+| `181` | Permiso Especial (PEP) |
+
+### Ejemplo de Request
+
+```json
+{
+  "guid": "19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4",
+  "tiposdocumento_id": "1",
+  "identificacion": "1001532242"
+}
+```
 
 ---
 
-## Response
+## Validaciones del Servicio
 
-### Estructura de Respuesta Exitosa
+El servicio ejecuta las siguientes validaciones en orden:
 
-**Código HTTP:** `200 OK`
+### Nivel 1: Autenticación
+- Token JWT válido y vigente en header `Authorization`.
+- Respuesta en caso de error: `401 Unauthorized`.
 
-**Status:** `"success"`
+### Nivel 2: Campos Requeridos
+- `guid`, `tiposdocumento_id` e `identificacion` son obligatorios.
+- Respuesta en caso de error: `400 Bad Request`.
+
+### Nivel 3: Transacción Existente
+- El `guid` debe existir en `Validacionesotp`.
+- La `identificacion` debe coincidir con la registrada en la transacción.
+- Respuesta en caso de error: `404 Not Found`.
+
+### Nivel 4: OTP Validado
+- El estado de la transacción debe ser `VALIDADO`.
+- Si no está validado, retorna `otp_not_validated`.
+
+### Nivel 5: Consulta de Líneas
+- Se ejecuta `fnc_json_credintegral('INVICTUS', identificacion, tiposdocumento_id)`.
+- Si no retorna datos, retorna `no_credit`.
+
+---
+
+## Responses
+
+### ✅ Caso 1: Success
+
+**HTTP:** `200 OK`
 
 ```json
 {
   "status": "success",
   "datos": {
-    "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "mensaje": "Código OTP validado correctamente. Crédito autorizado para desembolso.",
-    "nombre_cliente": "Juan Pérez",
-    "fecha_validacion": "2025-10-10 14:30:45",
+    "guid": "19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4",
+    "nombre_cliente": "YURANY MERCADO ARRIETA",
+    "identificacion": "1001532242",
+    "fecha_validacion": "2026-05-06 11:07:48",
     "puede_desembolsar": true,
     "lineas_credito": [
       {
-        "id_linea_credito": 27373,
-        "linea_credito": "Línea 1",
-        "valor_cupo": 50000,
-        "total_entregado": 50000,
-        "total_disponible": 50000,
+        "id_linea_credito": 5943520472602252,
+        "linea_credito": "RIS ROTATIVO",
+        "valor_cupo": 685000.0,
+        "total_entregado": 5414.0,
+        "total_disponible": 679586.0,
         "plazo_meses": 12,
         "monto_fijo": "NO"
-      },
-      {
-        "id_linea_credito": 27375,
-        "linea_credito": "Línea 2",
-        "valor_cupo": 50000,
-        "total_entregado": 50000,
-        "total_disponible": 50000,
-        "plazo_meses": 2,
-        "monto_fijo": "SI"
       }
     ]
   }
 }
 ```
 
-#### Descripción de Campos de Respuesta
+### ❌ Caso 2: OTP No Validado
+
+**HTTP:** `200 OK`
+
+```json
+{
+  "status": "otp_not_validated",
+  "mensaje": "Debe validar el código OTP antes de consultar las líneas de crédito."
+}
+```
+
+### ❌ Caso 3: Sin Crédito
+
+**HTTP:** `200 OK`
+
+```json
+{
+  "status": "no_credit",
+  "mensaje": "No se encontró información de crédito para esta identificación."
+}
+```
+
+### ❌ Caso 4: Transacción No Encontrada
+
+**HTTP:** `404 Not Found`
+
+```json
+{
+  "status": "error",
+  "mensaje": "Transacción no encontrada o inválida."
+}
+```
+
+### ❌ Caso 5: Campos Faltantes
+
+**HTTP:** `400 Bad Request`
+
+```json
+{
+  "status": "error",
+  "errors": [
+    "El campo guid es obligatorio.",
+    "El campo identificacion es obligatorio."
+  ]
+}
+```
+
+### ❌ Caso 6: Token Inválido
+
+**HTTP:** `401 Unauthorized`
+
+```json
+{
+  "status": "error",
+  "mensaje": "Token de autorización inválido o ausente."
+}
+```
+
+---
+
+## Descripción de Campos de Respuesta
 
 | Campo | Tipo | Descripción |
 |-------|------|-------------|
-| `status` | string | Indicador del resultado: `"success"` |
-| `datos` | object | Objeto con líneas de crédito disponibles para selección |
-| `datos.guid` | string | Identificador único de la transacción (mismo del request) |
-| `datos.mensaje` | string | Mensaje de confirmación de OTP válido |
-| `datos.nombre_cliente` | string | Nombre completo del cliente (confirmación) |
-| `datos.fecha_validacion` | string | Timestamp de validación OTP (formato: YYYY-MM-DD HH:MM:SS) |
-| `datos.puede_desembolsar` | boolean | Indica autorización para continuar (`true`) |
-| `datos.lineas_credito` | array | Array de líneas de crédito disponibles |
-| `datos.lineas_credito[].id_linea_credito` | integer | ID de línea de crédito |
-| `datos.lineas_credito[].linea_credito` | string | Nombre de línea de crédito |
-| `datos.lineas_credito[].valor_cupo` | number | Cupo total de línea |
-| `datos.lineas_credito[].total_entregado` | number | Valor ya entregado |
-| `datos.lineas_credito[].total_disponible` | number | Valor disponible para desembolso |
-| `datos.lineas_credito[].plazo_meses` | integer | Plazo máximo disponible |
-| `datos.lineas_credito[].monto_fijo` | string | Marca de crédito de monto fijo (`SI`/`NO`) |
+| `status` | string | Resultado: `success`, `otp_not_validated`, `no_credit`, `error` |
+| `datos.guid` | string | UUID de la transacción (mismo del request) |
+| `datos.nombre_cliente` | string | Nombre completo del cliente desde `personas.nombre_completo` |
+| `datos.identificacion` | string | Número de identificación desde `personas.identificacion` |
+| `datos.fecha_validacion` | string | Timestamp de consulta (formato: `YYYY-MM-DD HH:MM:SS`) |
+| `datos.puede_desembolsar` | boolean | Siempre `true` cuando `status: success` |
+| `datos.lineas_credito` | array | Líneas de crédito disponibles |
+| `lineas_credito[].id_linea_credito` | integer | `codclavecic` de la persona (código CIC) |
+| `lineas_credito[].linea_credito` | string | Nombre del cliente desde `clientes.nombre` |
+| `lineas_credito[].valor_cupo` | number | `personas.cupo_aprobado` |
+| `lineas_credito[].total_entregado` | number | `personas.cupo_deuda` |
+| `lineas_credito[].total_disponible` | number | `personas.cupo_disponible` |
+| `lineas_credito[].plazo_meses` | integer | `12` fijo para rotativo |
+| `lineas_credito[].monto_fijo` | string | `"NO"` para rotativo |
 
 ---
 
-## Tabla resumen funcional
+## Reglas Funcionales en Invictus (Sección 2: Datos Crédito)
 
-| Evento previo | Fuente | Resultado en Invictus |
-|---|---|---|
-| OTP válido (`status: success`) | `validacion_otp_desembolso` | Habilita Sección 2 y muestra `lineas_credito` |
-| OTP inválido/bloqueado/expirado/error | `validacion_otp_desembolso` | No habilita selección de líneas |
+1. **Carga de líneas** — Invictus muestra los datos retornados. Ningún campo es editable.
+
+2. **Selección única** — Solo se puede seleccionar una línea a la vez. Si cambia de línea, se limpian los campos de la anterior.
+
+3. **Campos de captura obligatorios**
+    - `[Ingrese Plazo]` y `[Confirme Plazo]` — numéricos, `<= plazo_meses`.
+    - `[Ingrese Valor]` y `[Confirme Valor]` — numéricos, `<= total_disponible`.
+
+4. **Regla monto fijo** — Si `monto_fijo = "SI"`, Invictus asigna `total_disponible` en valor y lo deja no editable.
+
+5. **Habilitación de `[Calcular Desembolso]`** — Solo cuando hay línea seleccionada y todos los campos son válidos.
+
+6. **Confirmación** — Al presionar `[Calcular Desembolso]`, Invictus muestra modal de resumen. Si confirma, consume `proceso_desembolso`. Si cancela, regresa sin guardar.
 
 ---
 
-## Ejemplo funcional
+## Tabla Resumen de Respuestas
 
-**Fuente de datos (response OTP success):**
-```json
-{
-  "status": "success",
-  "datos": {
-    "guid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "mensaje": "Código OTP validado correctamente. Crédito autorizado para desembolso.",
-    "nombre_cliente": "Juan Pérez",
-    "fecha_validacion": "2025-10-10 14:30:45",
-    "puede_desembolsar": true,
-    "lineas_credito": [
-      {
-        "id_linea_credito": 27373,
-        "linea_credito": "Línea 1",
-        "valor_cupo": 50000,
-        "total_entregado": 50000,
-        "total_disponible": 50000,
-        "plazo_meses": 12,
-        "monto_fijo": "NO"
-      }
-    ]
-  }
-}
+| Condición | HTTP | status | Comportamiento en Invictus |
+|-----------|------|--------|---------------------------|
+| Todo correcto | 200 | `success` | Habilita Sección 2 con líneas |
+| OTP no validado | 200 | `otp_not_validated` | Modal naranja, permanece en OTP |
+| Sin crédito | 200 | `no_credit` | Modal naranja, regresa a inicio |
+| GUID no encontrado | 404 | `error` | Modal naranja, permanece en OTP |
+| Campos faltantes | 400 | `error` | Modal naranja, permanece en OTP |
+| Token inválido | 401 | `error` | Modal naranja, permanece en OTP |
+
+---
+
+## Ejemplo cURL
+
+```bash
+curl --location 'https://testing-sygma.com/api/seleccionar_linea_credito' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+  "guid": "19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4",
+  "tiposdocumento_id": "1",
+  "identificacion": "1001532242"
+}'
 ```
 
-**Acción en Invictus:**
-1. Habilita **Sección 2: Datos Crédito**.
-2. Carga tabla de líneas retornadas en `datos.lineas_credito`.
-3. Permite seleccionar solo una línea.
-4. Valida plazo y valor antes de habilitar **[Calcular Desembolso]**.
+---
 
+## Configuración del Ambiente de Pruebas
+
+| Parámetro | Valor |
+|-----------|-------|
+| Base URL | `https://testing-sygma.com/api` |
+| Endpoint Login | `/login` |
+| Endpoint Líneas | `/seleccionar_linea_credito` |
+| Usuario | `ws_invictus` |
+| Password | `g3z0OmJP7?@(*` |
