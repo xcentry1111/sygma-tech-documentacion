@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#seleccionar-lineas-de-credito-invictus" class="md-skip">
+        <a href="#seleccionar-lineas-de-credito-desembolso-invictus" class="md-skip">
           Skip to content
         </a>
       
@@ -1549,11 +1549,122 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#flujo-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo del Proceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuente-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuente de Datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
       Request
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogo-de-tipos-de-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catálogo de Tipos de Documento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validaciones-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validaciones del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validaciones del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nivel-1-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 1: Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-2-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 2: Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-3-transaccion-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 3: Transacción Existente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-4-otp-validado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 4: OTP Validado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-5-consulta-de-lineas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 5: Consulta de Líneas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1564,49 +1675,58 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notas-flujo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notas / Flujo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Notas / Flujo">
+    <nav class="md-nav" aria-label="Responses">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#flujo-del-proceso" class="md-nav__link">
+  <a href="#caso-1-success" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo del proceso
+      ✅ Caso 1: Success
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contexto-general" class="md-nav__link">
+  <a href="#caso-2-otp-no-validado" class="md-nav__link">
     <span class="md-ellipsis">
-      Contexto General
+      ❌ Caso 2: OTP No Validado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#secuencia-del-flujo" class="md-nav__link">
+  <a href="#caso-3-sin-credito" class="md-nav__link">
     <span class="md-ellipsis">
-      Secuencia del Flujo
+      ❌ Caso 3: Sin Crédito
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#flujo-funcional-previo-seleccionar-linea-de-credito-valor-y-plazo" class="md-nav__link">
+  <a href="#caso-4-transaccion-no-encontrada" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo funcional previo: Seleccionar línea de crédito, valor y plazo
+      ❌ Caso 4: Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-5-campos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Caso 5: Campos Faltantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-6-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Caso 6: Token Inválido
     </span>
   </a>
   
@@ -1618,107 +1738,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#informacion-tecnica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Información Técnica
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Información Técnica">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tipo-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipo de integración
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL de integración
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Headers Requeridos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Headers Requeridos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obtencion-del-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔐 Obtención del Token
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#request_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Request">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#entrada-funcional-de-esta-seccion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrada funcional de esta sección
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#estructura-de-respuesta-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estructura de Respuesta Exitosa
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Estructura de Respuesta Exitosa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción de Campos de Respuesta
@@ -1726,30 +1745,38 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#tabla-resumen-funcional" class="md-nav__link">
+  <a href="#reglas-funcionales-en-invictus-seccion-2-datos-credito" class="md-nav__link">
     <span class="md-ellipsis">
-      Tabla resumen funcional
+      Reglas Funcionales en Invictus (Sección 2: Datos Crédito)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-funcional" class="md-nav__link">
+  <a href="#tabla-resumen-de-respuestas" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo funcional
+      Tabla Resumen de Respuestas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo cURL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-ambiente-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del Ambiente de Pruebas
     </span>
   </a>
   
@@ -1925,11 +1952,122 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#flujo-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo del Proceso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuente-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuente de Datos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
       Request
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogo-de-tipos-de-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catálogo de Tipos de Documento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validaciones-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validaciones del Servicio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validaciones del Servicio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nivel-1-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 1: Autenticación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-2-campos-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 2: Campos Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-3-transaccion-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 3: Transacción Existente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-4-otp-validado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 4: OTP Validado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-5-consulta-de-lineas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 5: Consulta de Líneas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1940,49 +2078,58 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notas-flujo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notas / Flujo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Notas / Flujo">
+    <nav class="md-nav" aria-label="Responses">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#flujo-del-proceso" class="md-nav__link">
+  <a href="#caso-1-success" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo del proceso
+      ✅ Caso 1: Success
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contexto-general" class="md-nav__link">
+  <a href="#caso-2-otp-no-validado" class="md-nav__link">
     <span class="md-ellipsis">
-      Contexto General
+      ❌ Caso 2: OTP No Validado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#secuencia-del-flujo" class="md-nav__link">
+  <a href="#caso-3-sin-credito" class="md-nav__link">
     <span class="md-ellipsis">
-      Secuencia del Flujo
+      ❌ Caso 3: Sin Crédito
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#flujo-funcional-previo-seleccionar-linea-de-credito-valor-y-plazo" class="md-nav__link">
+  <a href="#caso-4-transaccion-no-encontrada" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo funcional previo: Seleccionar línea de crédito, valor y plazo
+      ❌ Caso 4: Transacción No Encontrada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-5-campos-faltantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Caso 5: Campos Faltantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-6-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Caso 6: Token Inválido
     </span>
   </a>
   
@@ -1994,107 +2141,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#informacion-tecnica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Información Técnica
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Información Técnica">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tipo-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipo de integración
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL de integración
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#headers-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Headers Requeridos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Headers Requeridos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#obtencion-del-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔐 Obtención del Token
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#request_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Request
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Request">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#entrada-funcional-de-esta-seccion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entrada funcional de esta sección
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#estructura-de-respuesta-exitosa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estructura de Respuesta Exitosa
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Estructura de Respuesta Exitosa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
     <span class="md-ellipsis">
       Descripción de Campos de Respuesta
@@ -2102,30 +2148,38 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#tabla-resumen-funcional" class="md-nav__link">
+  <a href="#reglas-funcionales-en-invictus-seccion-2-datos-credito" class="md-nav__link">
     <span class="md-ellipsis">
-      Tabla resumen funcional
+      Reglas Funcionales en Invictus (Sección 2: Datos Crédito)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-funcional" class="md-nav__link">
+  <a href="#tabla-resumen-de-respuestas" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo funcional
+      Tabla Resumen de Respuestas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo cURL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-ambiente-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración del Ambiente de Pruebas
     </span>
   </a>
   
@@ -2147,13 +2201,18 @@
 
 
 
-<h1 id="seleccionar-lineas-de-credito-invictus">Seleccionar líneas de crédito (Invictus).</h1>
+<h1 id="seleccionar-lineas-de-credito-desembolso-invictus">Seleccionar Líneas de Crédito - Desembolso Invictus</h1>
 <h2 id="resumen">Resumen</h2>
-<p>Documenta cómo Invictus presenta y valida la selección de línea, plazo y valor. Esta sección usa la información recibida en la respuesta exitosa de validación OTP.</p>
+<p>Retorna las líneas de crédito disponibles para la persona, validando que el OTP haya sido previamente validado. La información se obtiene desde la función Oracle <code>fnc_json_credintegral('INVICTUS', identificacion, tiposdocumento_id)</code>.</p>
 <h2 id="endpoint">Endpoint</h2>
 <ul>
-<li><strong>No aplica endpoint propio en este paso.</strong></li>
-<li><strong>Fuente de datos</strong>: respuesta <code>success</code> de <code>POST /api/seleccionar_linea_credito</code>.</li>
+<li><strong>Método</strong>: <code>POST</code></li>
+<li><strong>Ruta</strong>: <code>/api/seleccionar_linea_credito</code></li>
+<li><strong>Ambientes</strong>:<ul>
+<li><strong>Pruebas (QA)</strong>: <code>https://testing-sygma.com/api/seleccionar_linea_credito</code></li>
+<li><strong>Producción</strong>: <code>POR DEFINIR</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="autenticacion">Autenticación</h2>
 <ul>
@@ -2162,150 +2221,6 @@
 <li><strong>Obtención del token</strong>: <code>POST https://testing-sygma.com/api/login</code></li>
 </ul>
 <h2 id="headers">Headers</h2>
-<ul>
-<li><strong>Authorization</strong>: <code>Bearer &lt;token&gt;</code> (obligatorio)</li>
-<li><strong>Accept</strong>: <code>application/json</code> (obligatorio)</li>
-<li><strong>Content-Type</strong>: <code>application/json</code> (obligatorio)</li>
-</ul>
-<h2 id="request">Request</h2>
-<p>No aplica request propio para este paso funcional. Invictus toma los datos del <code>success</code> del servicio OTP y habilita la captura de plazo/valor por línea.</p>
-<h2 id="responses">Responses</h2>
-<p>Ver sección <strong>Response</strong> (estructura de líneas que Invictus debe mostrar).</p>
-<h2 id="notas-flujo">Notas / Flujo</h2>
-<h3 id="flujo-del-proceso">Flujo del proceso</h3>
-<h3 id="contexto-general">Contexto General</h3>
-<p>Este paso ocurre después de validar OTP exitosamente y antes de calcular desembolso.</p>
-<pre><code>Servicio 1: Validación de Crédito Vigente
-     ↓
-Servicio 2: Validación de OTP
-     ↓ (retorna success + líneas de crédito)
-Sección 2: Datos Crédito (este documento)
-     ↓ (usuario selecciona línea, plazo, valor)
-     ↓ (presiona [Calcular Desembolso])
-Servicio de Cálculo de Desembolso
-     ↓
-Sección 3: Realizar Desembolso
-</code></pre>
-<h3 id="secuencia-del-flujo">Secuencia del Flujo</h3>
-<pre><code>1. Usuario completa Sección 2: Datos Crédito
-   - Ha seleccionado una línea de crédito
-   - Ha ingresado y confirmado plazo
-   - Ha ingresado y confirmado valor
-   - Todos los campos validados correctamente
-   ↓
-2. Usuario presiona [Calcular Desembolso]
-   ↓
-3. Sistema muestra Modal de Confirmación
-   - Cliente: [Nombre]
-   - Línea de Crédito: [Nombre línea]
-   - Plazo: [X meses]
-   - Valor Total: $[XXX,XXX]
-   ↓
-4. Usuario selecciona [Calcular Desembolso]
-   ↓
-5. Invictus consume el servicio de cálculo de desembolso (siguiente documento)
-</code></pre>
-<h3 id="flujo-funcional-previo-seleccionar-linea-de-credito-valor-y-plazo">Flujo funcional previo: Seleccionar línea de crédito, valor y plazo</h3>
-<p>Este flujo corresponde a la etapa donde Invictus presenta líneas disponibles y permite escoger <strong>una sola línea</strong> antes del cálculo.</p>
-<p><strong>Reglas funcionales clave (mockup PDF):</strong></p>
-<ol>
-<li><strong>Carga de líneas de crédito tras OTP válido</strong></li>
-<li>Invictus muestra en Sección 2 los datos devueltos por TESEO:<ul>
-<li>Nombre cliente</li>
-<li>Línea de crédito</li>
-<li>Total cupo</li>
-<li>Total utilizado</li>
-<li>Total disponible</li>
-<li>Plazo máximo</li>
-</ul>
-</li>
-<li>
-<p>Ningún campo retornado por servicio es editable.</p>
-</li>
-<li>
-<p><strong>Campos de captura obligatorios por línea seleccionada</strong></p>
-</li>
-<li><code>[Ingrese Plazo]</code> y <code>[Confirme Plazo]</code> obligatorios.</li>
-<li><code>[Ingrese Valor]</code> y <code>[Confirme Valor]</code> obligatorios, salvo reglas de monto fijo.</li>
-<li>
-<p>Todos numéricos, sin valores negativos.</p>
-</li>
-<li>
-<p><strong>Selección única de línea</strong></p>
-</li>
-<li>Campo <code>[Seleccionar]</code> tipo checkbox.</li>
-<li>Solo permite <strong>una</strong> línea a la vez.</li>
-<li>No hay selección por defecto al cargar.</li>
-<li>
-<p>Si cambia de línea, se limpia información diligenciada de la línea anterior.</p>
-</li>
-<li>
-<p><strong>Regla de crédito de monto fijo</strong></p>
-</li>
-<li>
-<p>Si línea trae marca <code>Crédito de monto fijo = S</code>:</p>
-<ul>
-<li>Invictus asigna <code>Total Disponible</code> en <code>[Ingrese Valor]</code> y <code>[Confirme Valor]</code>.</li>
-<li>Esos campos quedan no editables.</li>
-<li>Solo se diligencia plazo y confirmación de plazo.</li>
-</ul>
-</li>
-<li>
-<p><strong>Validaciones de plazo y valor</strong></p>
-</li>
-<li><code>[Ingrese Plazo]</code> debe ser <code>&lt;= Plazo Máximo</code>.</li>
-<li><code>[Confirme Plazo]</code> debe coincidir con <code>[Ingrese Plazo]</code>.</li>
-<li><code>[Ingrese Valor]</code> y <code>[Confirme Valor]</code> deben coincidir.</li>
-<li>
-<p>Si no cumple, resalta campo en rojo y bloquea avance.</p>
-</li>
-<li>
-<p><strong>Habilitación de botón <code>[Calcular Desembolso]</code></strong></p>
-</li>
-<li>Inicia inhabilitado.</li>
-<li>
-<p>Se habilita solo cuando:</p>
-<ul>
-<li>hay una línea seleccionada, y</li>
-<li>todos campos obligatorios de esa línea están completos y válidos.</li>
-</ul>
-</li>
-<li>
-<p><strong>Confirmación antes del cálculo</strong></p>
-</li>
-<li>Al presionar <code>[Calcular Desembolso]</code>, Invictus muestra resumen de transacción.</li>
-<li>Si asesor confirma (<code>[Aceptar]</code>), consume servicio de cálculo.</li>
-<li>Si cancela (<code>[Cancelar]</code>), sale sin guardar y regresa a inicio.</li>
-<li>Después de confirmar, no se permiten cambios en secciones previas.</li>
-</ol>
-<hr />
-<h2 id="informacion-tecnica">Información Técnica</h2>
-<h3 id="tipo-de-integracion">Tipo de integración</h3>
-<p>Este paso no define un endpoint nuevo.<br />
-Consume datos del <code>success</code> de <code>POST /api/validacion_otp_desembolso</code>.</p>
-<hr />
-<h3 id="url-de-integracion">URL de integración</h3>
-<table>
-<thead>
-<tr>
-<th>Ambiente</th>
-<th>URL origen de datos</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Pruebas (QA)</strong></td>
-<td><code>https://testing-sygma.com/api/validacion_otp_desembolso</code></td>
-</tr>
-<tr>
-<td><strong>Producción</strong></td>
-<td><code>POR DEFINIR</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="headers-requeridos">Headers Requeridos</h3>
-<p>Aplican al servicio origen (<code>validacion_otp_desembolso</code>):</p>
 <table>
 <thead>
 <tr>
@@ -2336,59 +2251,194 @@ Consume datos del <code>success</code> de <code>POST /api/validacion_otp_desembo
 </tr>
 </tbody>
 </table>
-<h4 id="obtencion-del-token">🔐 Obtención del Token</h4>
-<p>!!! "Obtención del Token" El token se obtiene a través del módulo de autenticación, usando el usuario y contraseña asignados por la entidad.</p>
-<p><strong>Endpoint de autenticación:</strong></p>
-<pre><code>POST https://testing-sygma.com/api/login
+<hr />
+<h2 id="flujo-del-proceso">Flujo del Proceso</h2>
+<pre><code>Servicio 1: POST /api/validacion_credito_vigente
+     ↓ (retorna guid + codigo_otp si success)
+Servicio 2: POST /api/validacion_otp_desembolso
+     ↓ (retorna success con guid validado)
+Servicio 3 (opcional): POST /api/reenvio_otp_desembolso
+     ↓
+Servicio 4: POST /api/seleccionar_linea_credito  ← ESTAMOS AQUÍ
+     ↓ (retorna nombre_cliente, identificacion, lineas_credito)
+Sección 2: Datos Crédito en Invictus
+     ↓ (usuario selecciona línea, ingresa plazo y valor)
+Servicio 5: POST /api/proceso_desembolso
 </code></pre>
 <hr />
-<h2 id="request_1">Request</h2>
-<h3 id="entrada-funcional-de-esta-seccion">Entrada funcional de esta sección</h3>
-<p>Este paso no consume endpoint propio.<br />
-Invictus recibe líneas en el <code>success</code> de OTP y habilita captura en UI:</p>
-<ul>
-<li>Selección única de <code>id_linea_credito</code></li>
-<li><code>Ingrese Plazo</code> y <code>Confirme Plazo</code></li>
-<li><code>Ingrese Valor</code> y <code>Confirme Valor</code> (según regla de <code>monto_fijo</code>)</li>
-</ul>
-<p>Los datos confirmados aquí se usan en el siguiente servicio: cálculo de desembolso.</p>
+<h2 id="fuente-de-datos">Fuente de Datos</h2>
+<p>La información de líneas de crédito se obtiene ejecutando:</p>
+<pre><code class="language-sql">SELECT fnc_json_credintegral('INVICTUS', :identificacion, :tiposdocumento_id) FROM dual;
+</code></pre>
+<p>Esta función retorna las obligaciones rotativas activas de la persona
+(<code>partiposproducto_id IN (11881, 11882, 11880)</code> con <code>obl_saldototaldeuda &gt; 0</code>),
+enriquecidas con los campos de cupo desde la tabla <code>personas</code>.</p>
 <hr />
-<h2 id="response">Response</h2>
-<h3 id="estructura-de-respuesta-exitosa">Estructura de Respuesta Exitosa</h3>
-<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
-<p><strong>Status:</strong> <code>"success"</code></p>
+<h2 id="request">Request</h2>
+<h3 id="campos-obligatorios">Campos Obligatorios</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Requerido</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guid</code></td>
+<td>string (UUID)</td>
+<td>✅</td>
+<td>UUID de la transacción generado en <code>validacion_credito_vigente</code></td>
+</tr>
+<tr>
+<td><code>tiposdocumento_id</code></td>
+<td>string</td>
+<td>✅</td>
+<td>ID del tipo de documento según catálogo</td>
+</tr>
+<tr>
+<td><code>identificacion</code></td>
+<td>string</td>
+<td>✅</td>
+<td>Número de identificación del cliente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="catalogo-de-tipos-de-documento">Catálogo de Tipos de Documento</h3>
+<table>
+<thead>
+<tr>
+<th><code>tiposdocumento_id</code></th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td>Cédula de ciudadanía (CC)</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Cédula de extranjería (CE)</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>NIT</td>
+</tr>
+<tr>
+<td><code>8</code></td>
+<td>Pasaporte</td>
+</tr>
+<tr>
+<td><code>181</code></td>
+<td>Permiso Especial (PEP)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-de-request">Ejemplo de Request</h3>
+<pre><code class="language-json">{
+  &quot;guid&quot;: &quot;19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4&quot;,
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;1001532242&quot;
+}
+</code></pre>
+<hr />
+<h2 id="validaciones-del-servicio">Validaciones del Servicio</h2>
+<p>El servicio ejecuta las siguientes validaciones en orden:</p>
+<h3 id="nivel-1-autenticacion">Nivel 1: Autenticación</h3>
+<ul>
+<li>Token JWT válido y vigente en header <code>Authorization</code>.</li>
+<li>Respuesta en caso de error: <code>401 Unauthorized</code>.</li>
+</ul>
+<h3 id="nivel-2-campos-requeridos">Nivel 2: Campos Requeridos</h3>
+<ul>
+<li><code>guid</code>, <code>tiposdocumento_id</code> e <code>identificacion</code> son obligatorios.</li>
+<li>Respuesta en caso de error: <code>400 Bad Request</code>.</li>
+</ul>
+<h3 id="nivel-3-transaccion-existente">Nivel 3: Transacción Existente</h3>
+<ul>
+<li>El <code>guid</code> debe existir en <code>Validacionesotp</code>.</li>
+<li>La <code>identificacion</code> debe coincidir con la registrada en la transacción.</li>
+<li>Respuesta en caso de error: <code>404 Not Found</code>.</li>
+</ul>
+<h3 id="nivel-4-otp-validado">Nivel 4: OTP Validado</h3>
+<ul>
+<li>El estado de la transacción debe ser <code>VALIDADO</code>.</li>
+<li>Si no está validado, retorna <code>otp_not_validated</code>.</li>
+</ul>
+<h3 id="nivel-5-consulta-de-lineas">Nivel 5: Consulta de Líneas</h3>
+<ul>
+<li>Se ejecuta <code>fnc_json_credintegral('INVICTUS', identificacion, tiposdocumento_id)</code>.</li>
+<li>Si no retorna datos, retorna <code>no_credit</code>.</li>
+</ul>
+<hr />
+<h2 id="responses">Responses</h2>
+<h3 id="caso-1-success">✅ Caso 1: Success</h3>
+<p><strong>HTTP:</strong> <code>200 OK</code></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;success&quot;,
   &quot;datos&quot;: {
-    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
-    &quot;mensaje&quot;: &quot;Código OTP validado correctamente. Crédito autorizado para desembolso.&quot;,
-    &quot;nombre_cliente&quot;: &quot;Juan Pérez&quot;,
-    &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:45&quot;,
+    &quot;guid&quot;: &quot;19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4&quot;,
+    &quot;nombre_cliente&quot;: &quot;YURANY MERCADO ARRIETA&quot;,
+    &quot;identificacion&quot;: &quot;1001532242&quot;,
+    &quot;fecha_validacion&quot;: &quot;2026-05-06 11:07:48&quot;,
     &quot;puede_desembolsar&quot;: true,
     &quot;lineas_credito&quot;: [
       {
-        &quot;id_linea_credito&quot;: 27373,
-        &quot;linea_credito&quot;: &quot;Línea 1&quot;,
-        &quot;valor_cupo&quot;: 50000,
-        &quot;total_entregado&quot;: 50000,
-        &quot;total_disponible&quot;: 50000,
+        &quot;id_linea_credito&quot;: 5943520472602252,
+        &quot;linea_credito&quot;: &quot;RIS ROTATIVO&quot;,
+        &quot;valor_cupo&quot;: 685000.0,
+        &quot;total_entregado&quot;: 5414.0,
+        &quot;total_disponible&quot;: 679586.0,
         &quot;plazo_meses&quot;: 12,
         &quot;monto_fijo&quot;: &quot;NO&quot;
-      },
-      {
-        &quot;id_linea_credito&quot;: 27375,
-        &quot;linea_credito&quot;: &quot;Línea 2&quot;,
-        &quot;valor_cupo&quot;: 50000,
-        &quot;total_entregado&quot;: 50000,
-        &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 2,
-        &quot;monto_fijo&quot;: &quot;SI&quot;
       }
     ]
   }
 }
 </code></pre>
-<h4 id="descripcion-de-campos-de-respuesta">Descripción de Campos de Respuesta</h4>
+<h3 id="caso-2-otp-no-validado">❌ Caso 2: OTP No Validado</h3>
+<p><strong>HTTP:</strong> <code>200 OK</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;otp_not_validated&quot;,
+  &quot;mensaje&quot;: &quot;Debe validar el código OTP antes de consultar las líneas de crédito.&quot;
+}
+</code></pre>
+<h3 id="caso-3-sin-credito">❌ Caso 3: Sin Crédito</h3>
+<p><strong>HTTP:</strong> <code>200 OK</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;no_credit&quot;,
+  &quot;mensaje&quot;: &quot;No se encontró información de crédito para esta identificación.&quot;
+}
+</code></pre>
+<h3 id="caso-4-transaccion-no-encontrada">❌ Caso 4: Transacción No Encontrada</h3>
+<p><strong>HTTP:</strong> <code>404 Not Found</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;
+}
+</code></pre>
+<h3 id="caso-5-campos-faltantes">❌ Caso 5: Campos Faltantes</h3>
+<p><strong>HTTP:</strong> <code>400 Bad Request</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo guid es obligatorio.&quot;,
+    &quot;El campo identificacion es obligatorio.&quot;
+  ]
+}
+</code></pre>
+<h3 id="caso-6-token-invalido">❌ Caso 6: Token Inválido</h3>
+<p><strong>HTTP:</strong> <code>401 Unauthorized</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
+<hr />
+<h2 id="descripcion-de-campos-de-respuesta">Descripción de Campos de Respuesta</h2>
 <table>
 <thead>
 <tr>
@@ -2401,133 +2451,195 @@ Invictus recibe líneas en el <code>success</code> de OTP y habilita captura en 
 <tr>
 <td><code>status</code></td>
 <td>string</td>
-<td>Indicador del resultado: <code>"success"</code></td>
-</tr>
-<tr>
-<td><code>datos</code></td>
-<td>object</td>
-<td>Objeto con líneas de crédito disponibles para selección</td>
+<td>Resultado: <code>success</code>, <code>otp_not_validated</code>, <code>no_credit</code>, <code>error</code></td>
 </tr>
 <tr>
 <td><code>datos.guid</code></td>
 <td>string</td>
-<td>Identificador único de la transacción (mismo del request)</td>
-</tr>
-<tr>
-<td><code>datos.mensaje</code></td>
-<td>string</td>
-<td>Mensaje de confirmación de OTP válido</td>
+<td>UUID de la transacción (mismo del request)</td>
 </tr>
 <tr>
 <td><code>datos.nombre_cliente</code></td>
 <td>string</td>
-<td>Nombre completo del cliente (confirmación)</td>
+<td>Nombre completo del cliente desde <code>personas.nombre_completo</code></td>
+</tr>
+<tr>
+<td><code>datos.identificacion</code></td>
+<td>string</td>
+<td>Número de identificación desde <code>personas.identificacion</code></td>
 </tr>
 <tr>
 <td><code>datos.fecha_validacion</code></td>
 <td>string</td>
-<td>Timestamp de validación OTP (formato: YYYY-MM-DD HH:MM:SS)</td>
+<td>Timestamp de consulta (formato: <code>YYYY-MM-DD HH:MM:SS</code>)</td>
 </tr>
 <tr>
 <td><code>datos.puede_desembolsar</code></td>
 <td>boolean</td>
-<td>Indica autorización para continuar (<code>true</code>)</td>
+<td>Siempre <code>true</code> cuando <code>status: success</code></td>
 </tr>
 <tr>
 <td><code>datos.lineas_credito</code></td>
 <td>array</td>
-<td>Array de líneas de crédito disponibles</td>
+<td>Líneas de crédito disponibles</td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito[].id_linea_credito</code></td>
+<td><code>lineas_credito[].id_linea_credito</code></td>
 <td>integer</td>
-<td>ID de línea de crédito</td>
+<td><code>codclavecic</code> de la persona (código CIC)</td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito[].linea_credito</code></td>
+<td><code>lineas_credito[].linea_credito</code></td>
 <td>string</td>
-<td>Nombre de línea de crédito</td>
+<td>Nombre del cliente desde <code>clientes.nombre</code></td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito[].valor_cupo</code></td>
+<td><code>lineas_credito[].valor_cupo</code></td>
 <td>number</td>
-<td>Cupo total de línea</td>
+<td><code>personas.cupo_aprobado</code></td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito[].total_entregado</code></td>
+<td><code>lineas_credito[].total_entregado</code></td>
 <td>number</td>
-<td>Valor ya entregado</td>
+<td><code>personas.cupo_deuda</code></td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito[].total_disponible</code></td>
+<td><code>lineas_credito[].total_disponible</code></td>
 <td>number</td>
-<td>Valor disponible para desembolso</td>
+<td><code>personas.cupo_disponible</code></td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito[].plazo_meses</code></td>
+<td><code>lineas_credito[].plazo_meses</code></td>
 <td>integer</td>
-<td>Plazo máximo disponible</td>
+<td><code>12</code> fijo para rotativo</td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito[].monto_fijo</code></td>
+<td><code>lineas_credito[].monto_fijo</code></td>
 <td>string</td>
-<td>Marca de crédito de monto fijo (<code>SI</code>/<code>NO</code>)</td>
+<td><code>"NO"</code> para rotativo</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="tabla-resumen-funcional">Tabla resumen funcional</h2>
+<h2 id="reglas-funcionales-en-invictus-seccion-2-datos-credito">Reglas Funcionales en Invictus (Sección 2: Datos Crédito)</h2>
+<ol>
+<li>
+<p><strong>Carga de líneas</strong> — Invictus muestra los datos retornados. Ningún campo es editable.</p>
+</li>
+<li>
+<p><strong>Selección única</strong> — Solo se puede seleccionar una línea a la vez. Si cambia de línea, se limpian los campos de la anterior.</p>
+</li>
+<li>
+<p><strong>Campos de captura obligatorios</strong></p>
+<ul>
+<li><code>[Ingrese Plazo]</code> y <code>[Confirme Plazo]</code> — numéricos, <code>&lt;= plazo_meses</code>.</li>
+<li><code>[Ingrese Valor]</code> y <code>[Confirme Valor]</code> — numéricos, <code>&lt;= total_disponible</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regla monto fijo</strong> — Si <code>monto_fijo = "SI"</code>, Invictus asigna <code>total_disponible</code> en valor y lo deja no editable.</p>
+</li>
+<li>
+<p><strong>Habilitación de <code>[Calcular Desembolso]</code></strong> — Solo cuando hay línea seleccionada y todos los campos son válidos.</p>
+</li>
+<li>
+<p><strong>Confirmación</strong> — Al presionar <code>[Calcular Desembolso]</code>, Invictus muestra modal de resumen. Si confirma, consume <code>proceso_desembolso</code>. Si cancela, regresa sin guardar.</p>
+</li>
+</ol>
+<hr />
+<h2 id="tabla-resumen-de-respuestas">Tabla Resumen de Respuestas</h2>
 <table>
 <thead>
 <tr>
-<th>Evento previo</th>
-<th>Fuente</th>
-<th>Resultado en Invictus</th>
+<th>Condición</th>
+<th>HTTP</th>
+<th>status</th>
+<th>Comportamiento en Invictus</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>OTP válido (<code>status: success</code>)</td>
-<td><code>validacion_otp_desembolso</code></td>
-<td>Habilita Sección 2 y muestra <code>lineas_credito</code></td>
+<td>Todo correcto</td>
+<td>200</td>
+<td><code>success</code></td>
+<td>Habilita Sección 2 con líneas</td>
 </tr>
 <tr>
-<td>OTP inválido/bloqueado/expirado/error</td>
-<td><code>validacion_otp_desembolso</code></td>
-<td>No habilita selección de líneas</td>
+<td>OTP no validado</td>
+<td>200</td>
+<td><code>otp_not_validated</code></td>
+<td>Modal naranja, permanece en OTP</td>
+</tr>
+<tr>
+<td>Sin crédito</td>
+<td>200</td>
+<td><code>no_credit</code></td>
+<td>Modal naranja, regresa a inicio</td>
+</tr>
+<tr>
+<td>GUID no encontrado</td>
+<td>404</td>
+<td><code>error</code></td>
+<td>Modal naranja, permanece en OTP</td>
+</tr>
+<tr>
+<td>Campos faltantes</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>Modal naranja, permanece en OTP</td>
+</tr>
+<tr>
+<td>Token inválido</td>
+<td>401</td>
+<td><code>error</code></td>
+<td>Modal naranja, permanece en OTP</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="ejemplo-funcional">Ejemplo funcional</h2>
-<p><strong>Fuente de datos (response OTP success):</strong></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;success&quot;,
-  &quot;datos&quot;: {
-    &quot;guid&quot;: &quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,
-    &quot;mensaje&quot;: &quot;Código OTP validado correctamente. Crédito autorizado para desembolso.&quot;,
-    &quot;nombre_cliente&quot;: &quot;Juan Pérez&quot;,
-    &quot;fecha_validacion&quot;: &quot;2025-10-10 14:30:45&quot;,
-    &quot;puede_desembolsar&quot;: true,
-    &quot;lineas_credito&quot;: [
-      {
-        &quot;id_linea_credito&quot;: 27373,
-        &quot;linea_credito&quot;: &quot;Línea 1&quot;,
-        &quot;valor_cupo&quot;: 50000,
-        &quot;total_entregado&quot;: 50000,
-        &quot;total_disponible&quot;: 50000,
-        &quot;plazo_meses&quot;: 12,
-        &quot;monto_fijo&quot;: &quot;NO&quot;
-      }
-    ]
-  }
-}
+<h2 id="ejemplo-curl">Ejemplo cURL</h2>
+<pre><code class="language-bash">curl --location 'https://testing-sygma.com/api/seleccionar_linea_credito' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '{
+  &quot;guid&quot;: &quot;19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4&quot;,
+  &quot;tiposdocumento_id&quot;: &quot;1&quot;,
+  &quot;identificacion&quot;: &quot;1001532242&quot;
+}'
 </code></pre>
-<p><strong>Acción en Invictus:</strong>
-1. Habilita <strong>Sección 2: Datos Crédito</strong>.
-2. Carga tabla de líneas retornadas en <code>datos.lineas_credito</code>.
-3. Permite seleccionar solo una línea.
-4. Valida plazo y valor antes de habilitar <strong>[Calcular Desembolso]</strong>.</p>
+<hr />
+<h2 id="configuracion-del-ambiente-de-pruebas">Configuración del Ambiente de Pruebas</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base URL</td>
+<td><code>https://testing-sygma.com/api</code></td>
+</tr>
+<tr>
+<td>Endpoint Login</td>
+<td><code>/login</code></td>
+</tr>
+<tr>
+<td>Endpoint Líneas</td>
+<td><code>/seleccionar_linea_credito</code></td>
+</tr>
+<tr>
+<td>Usuario</td>
+<td><code>ws_invictus</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><code>g3z0OmJP7?@(*</code></td>
+</tr>
+</tbody>
+</table>
 
 
 

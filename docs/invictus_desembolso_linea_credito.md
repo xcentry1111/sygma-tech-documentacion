@@ -271,15 +271,3 @@ curl --location 'https://testing-sygma.com/api/seleccionar_linea_credito' \
   "identificacion": "1001532242"
 }'
 ```
-
----
-
-## Configuración del Ambiente de Pruebas
-
-| Parámetro | Valor |
-|-----------|-------|
-| Base URL | `https://testing-sygma.com/api` |
-| Endpoint Login | `/login` |
-| Endpoint Líneas | `/seleccionar_linea_credito` |
-| Usuario | `ws_invictus` |
-| Password | `g3z0OmJP7?@(*` |
