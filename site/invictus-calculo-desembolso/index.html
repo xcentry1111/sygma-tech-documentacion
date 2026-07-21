@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../invictus_desembolso_reenvio_otp/">
+        <link rel="prev" href="../invictus_desembolso_linea_credito/">
       
       
-        <link rel="next" href="../invictus-calculo-desembolso/">
+        <link rel="next" href="../invictus_desmebolso/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Seleccionar Lineas de Credito - Documentación Sygma-Tech</title>
+        <title>Calculo Desembolso - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#seleccionar-lineas-de-credito-desembolso-invictus" class="md-skip">
+        <a href="#calculo-de-desembolso-invictus" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Seleccionar Lineas de Credito
+              Calculo Desembolso
             
           </span>
         </div>
@@ -1460,6 +1460,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../invictus_desembolso_linea_credito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Seleccionar Lineas de Credito
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1477,7 +1500,7 @@
   
   
   <span class="md-ellipsis">
-    Seleccionar Lineas de Credito
+    Calculo Desembolso
     
   </span>
   
@@ -1490,7 +1513,7 @@
   
   
   <span class="md-ellipsis">
-    Seleccionar Lineas de Credito
+    Calculo Desembolso
     
   </span>
   
@@ -1549,20 +1572,86 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-del-proceso" class="md-nav__link">
+  <a href="#notas-flujo" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo del Proceso
+      Notas / Flujo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas / Flujo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto General
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fuente-de-datos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#proposito-del-servicio" class="md-nav__link">
     <span class="md-ellipsis">
-      Fuente de Datos
+      Propósito del Servicio
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-del-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secuencia del Flujo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Información Técnica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Información Técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL de Integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headers-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1577,9 +1666,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
     <span class="md-ellipsis">
       Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-opcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Opcionales
     </span>
   </a>
   
@@ -1595,11 +1703,73 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#rangos-permitidos-configurados-en-teseo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rangos Permitidos (Configurados en TESEO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origen-de-los-datos-en-invictus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Origen de los Datos en Invictus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-de-request" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de Request
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-respuesta-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Respuesta Exitosa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de Respuesta Exitosa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción de Campos de Respuesta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1619,45 +1789,63 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nivel-1-autenticacion" class="md-nav__link">
+  <a href="#nivel-1-validacion-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 1: Autenticación
+      Nivel 1: Validación de Autenticación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-2-campos-requeridos" class="md-nav__link">
+  <a href="#nivel-2-validacion-de-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 2: Campos Requeridos
+      Nivel 2: Validación de Campos Requeridos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-3-transaccion-existente" class="md-nav__link">
+  <a href="#nivel-3-validacion-de-rangos-de-monto-y-plazo" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 3: Transacción Existente
+      Nivel 3: Validación de Rangos de Monto y Plazo
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-4-otp-validado" class="md-nav__link">
+  <a href="#nivel-4-validacion-de-cupo-en-linea-de-credito" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 4: OTP Validado
+      Nivel 4: Validación de Cupo en Línea de Crédito
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-5-consulta-de-lineas" class="md-nav__link">
+  <a href="#nivel-5-calculo-via-simulador-prc" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 5: Consulta de Líneas
+      Nivel 5: Cálculo vía Simulador PRC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-6-validacion-de-montos-enviados-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 6: Validación de Montos Enviados (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-7-validacion-de-coherencia-de-montos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 7: Validación de Coherencia de Montos
     </span>
   </a>
   
@@ -1669,64 +1857,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
+  <a href="#respuestas-de-error" class="md-nav__link">
     <span class="md-ellipsis">
-      Responses
+      Respuestas de Error
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Responses">
+    <nav class="md-nav" aria-label="Respuestas de Error">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caso-1-success" class="md-nav__link">
+  <a href="#error-1-token-de-autenticacion-invalido" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Caso 1: Success
+      Error 1: Token de Autenticación Inválido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-2-otp-no-validado" class="md-nav__link">
+  <a href="#error-2-campos-requeridos-faltantes" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 2: OTP No Validado
+      Error 2: Campos Requeridos Faltantes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-3-sin-credito" class="md-nav__link">
+  <a href="#error-3-rango-de-monto-o-plazo-invalido" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 3: Sin Crédito
+      Error 3: Rango de Monto o Plazo Inválido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-4-transaccion-no-encontrada" class="md-nav__link">
+  <a href="#error-4-cupo-insuficiente-en-la-linea" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 4: Transacción No Encontrada
+      Error 4: Cupo Insuficiente en la Línea
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-5-campos-faltantes" class="md-nav__link">
+  <a href="#error-5-linea-de-credito-no-disponible" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 5: Campos Faltantes
+      Error 5: Línea de Crédito No Disponible
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-6-token-invalido" class="md-nav__link">
+  <a href="#error-6-error-interno-en-simulador" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 6: Token Inválido
+      Error 6: Error Interno en Simulador
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-7-montos-incoherentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 7: Montos Incoherentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-8-error-interno-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 8: Error Interno General
     </span>
   </a>
   
@@ -1734,24 +1940,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descripción de Campos de Respuesta
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reglas-funcionales-en-invictus-seccion-2-datos-credito" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reglas Funcionales en Invictus (Sección 2: Datos Crédito)
-    </span>
-  </a>
   
 </li>
       
@@ -1765,11 +1953,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-curl" class="md-nav__link">
+  <a href="#ejemplos-completos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo cURL
+      Ejemplos Completos
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-calculo-exitoso" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Ejemplo 1: Cálculo Exitoso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 Ejemplo 2: Token Inválido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-3-monto-fuera-de-rango" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Ejemplo 3: Monto Fuera de Rango
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-4-cupo-insuficiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Ejemplo 4: Cupo Insuficiente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1777,29 +2007,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../invictus-calculo-desembolso/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Calculo Desembolso
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1966,20 +2173,86 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-del-proceso" class="md-nav__link">
+  <a href="#notas-flujo" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo del Proceso
+      Notas / Flujo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas / Flujo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto General
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fuente-de-datos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#proposito-del-servicio" class="md-nav__link">
     <span class="md-ellipsis">
-      Fuente de Datos
+      Propósito del Servicio
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-del-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secuencia del Flujo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Información Técnica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Información Técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de Servicio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL de Integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headers-requeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers Requeridos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1994,9 +2267,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#cuerpo-de-la-solicitud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuerpo de la Solicitud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuerpo de la Solicitud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#campos-obligatorios" class="md-nav__link">
     <span class="md-ellipsis">
       Campos Obligatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-opcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos Opcionales
     </span>
   </a>
   
@@ -2012,11 +2304,73 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#rangos-permitidos-configurados-en-teseo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rangos Permitidos (Configurados en TESEO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origen-de-los-datos-en-invictus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Origen de los Datos en Invictus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejemplo-de-request" class="md-nav__link">
     <span class="md-ellipsis">
       Ejemplo de Request
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-respuesta-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Respuesta Exitosa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de Respuesta Exitosa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción de Campos de Respuesta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2036,45 +2390,63 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nivel-1-autenticacion" class="md-nav__link">
+  <a href="#nivel-1-validacion-de-autenticacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 1: Autenticación
+      Nivel 1: Validación de Autenticación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-2-campos-requeridos" class="md-nav__link">
+  <a href="#nivel-2-validacion-de-campos-requeridos" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 2: Campos Requeridos
+      Nivel 2: Validación de Campos Requeridos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-3-transaccion-existente" class="md-nav__link">
+  <a href="#nivel-3-validacion-de-rangos-de-monto-y-plazo" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 3: Transacción Existente
+      Nivel 3: Validación de Rangos de Monto y Plazo
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-4-otp-validado" class="md-nav__link">
+  <a href="#nivel-4-validacion-de-cupo-en-linea-de-credito" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 4: OTP Validado
+      Nivel 4: Validación de Cupo en Línea de Crédito
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nivel-5-consulta-de-lineas" class="md-nav__link">
+  <a href="#nivel-5-calculo-via-simulador-prc" class="md-nav__link">
     <span class="md-ellipsis">
-      Nivel 5: Consulta de Líneas
+      Nivel 5: Cálculo vía Simulador PRC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-6-validacion-de-montos-enviados-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 6: Validación de Montos Enviados (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nivel-7-validacion-de-coherencia-de-montos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nivel 7: Validación de Coherencia de Montos
     </span>
   </a>
   
@@ -2086,64 +2458,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
+  <a href="#respuestas-de-error" class="md-nav__link">
     <span class="md-ellipsis">
-      Responses
+      Respuestas de Error
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Responses">
+    <nav class="md-nav" aria-label="Respuestas de Error">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#caso-1-success" class="md-nav__link">
+  <a href="#error-1-token-de-autenticacion-invalido" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Caso 1: Success
+      Error 1: Token de Autenticación Inválido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-2-otp-no-validado" class="md-nav__link">
+  <a href="#error-2-campos-requeridos-faltantes" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 2: OTP No Validado
+      Error 2: Campos Requeridos Faltantes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-3-sin-credito" class="md-nav__link">
+  <a href="#error-3-rango-de-monto-o-plazo-invalido" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 3: Sin Crédito
+      Error 3: Rango de Monto o Plazo Inválido
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-4-transaccion-no-encontrada" class="md-nav__link">
+  <a href="#error-4-cupo-insuficiente-en-la-linea" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 4: Transacción No Encontrada
+      Error 4: Cupo Insuficiente en la Línea
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-5-campos-faltantes" class="md-nav__link">
+  <a href="#error-5-linea-de-credito-no-disponible" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 5: Campos Faltantes
+      Error 5: Línea de Crédito No Disponible
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caso-6-token-invalido" class="md-nav__link">
+  <a href="#error-6-error-interno-en-simulador" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ Caso 6: Token Inválido
+      Error 6: Error Interno en Simulador
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-7-montos-incoherentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 7: Montos Incoherentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-8-error-interno-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 8: Error Interno General
     </span>
   </a>
   
@@ -2151,24 +2541,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descripcion-de-campos-de-respuesta" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descripción de Campos de Respuesta
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reglas-funcionales-en-invictus-seccion-2-datos-credito" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reglas Funcionales en Invictus (Sección 2: Datos Crédito)
-    </span>
-  </a>
   
 </li>
       
@@ -2182,11 +2554,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-curl" class="md-nav__link">
+  <a href="#ejemplos-completos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo cURL
+      Ejemplos Completos
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-calculo-exitoso" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Ejemplo 1: Cálculo Exitoso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-token-invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 Ejemplo 2: Token Inválido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-3-monto-fuera-de-rango" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Ejemplo 3: Monto Fuera de Rango
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-4-cupo-insuficiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Ejemplo 4: Cupo Insuficiente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2206,18 +2620,16 @@
 
 
 
-<h1 id="seleccionar-lineas-de-credito-desembolso-invictus">Seleccionar Líneas de Crédito - Desembolso Invictus</h1>
+<h1 id="calculo-de-desembolso-invictus">Cálculo de Desembolso (Invictus)</h1>
 <h2 id="resumen">Resumen</h2>
-<p>Retorna las líneas de crédito disponibles para la persona, validando que el OTP haya sido previamente validado. La información se obtiene desde la función Oracle <code>fnc_json_credintegral('INVICTUS', identificacion, tiposdocumento_id)</code>.</p>
+<p>Calcula los montos del desembolso (fianza anticipada, IVA y valor neto a entregar al cliente) <strong>sin ejecutar ninguna transacción real</strong>. No requiere OTP, no crea obligaciones, no modifica ningún registro. Es el <strong>Servicio 4</strong> del flujo y debe consumirse antes de mostrar la Sección 3: Realizar Desembolso, para que el asesor y el cliente visualicen exactamente cuánto recibirá.</p>
 <h2 id="endpoint">Endpoint</h2>
 <ul>
 <li><strong>Método</strong>: <code>POST</code></li>
-<li><strong>Ruta</strong>: <code>/api/seleccionar_linea_credito</code></li>
-<li><strong>Ambientes</strong>:<ul>
-<li><strong>Pruebas (QA)</strong>: <code>https://testing-sygma.com/api/seleccionar_linea_credito</code></li>
+<li><strong>Ruta</strong>: <code>/api/calcular_desembolso</code></li>
+<li><strong>Ambientes</strong>:</li>
+<li><strong>Pruebas (QA)</strong>: <code>https://testing-sygma.com/api/calcular_desembolso</code></li>
 <li><strong>Producción</strong>: <code>POR DEFINIR</code></li>
-</ul>
-</li>
 </ul>
 <h2 id="autenticacion">Autenticación</h2>
 <ul>
@@ -2226,6 +2638,104 @@
 <li><strong>Obtención del token</strong>: <code>POST https://testing-sygma.com/api/login</code></li>
 </ul>
 <h2 id="headers">Headers</h2>
+<ul>
+<li><strong>Authorization</strong>: <code>Bearer &lt;token&gt;</code> (obligatorio)</li>
+<li><strong>Accept</strong>: <code>application/json</code> (obligatorio)</li>
+<li><strong>Content-Type</strong>: <code>application/json</code> (obligatorio)</li>
+</ul>
+<hr />
+<h2 id="notas-flujo">Notas / Flujo</h2>
+<h3 id="contexto-general">Contexto General</h3>
+<p>Este servicio es el <strong>cuarto paso</strong> del flujo de desembolso, ejecutándose después de que el usuario selecciona la línea de crédito, confirma el plazo y el valor:</p>
+<pre><code>Servicio 1: Validación de Crédito Vigente
+     ↓
+Servicio 2: Validación de OTP
+     ↓ (retorna success + líneas de crédito)
+Sección 2: Datos Crédito (Selección UI)
+     ↓ (usuario selecciona línea, plazo, valor)
+Servicio 4: Cálculo de Desembolso (este documento) ← ESTAMOS AQUÍ
+     ↓ (calcula descuentos y valor final)
+Sección 3: Realizar Desembolso (muestra valores calculados)
+     ↓ (usuario presiona [Pagar])
+Servicio 5: Ejecución de Desembolso Final
+</code></pre>
+<h3 id="proposito-del-servicio">Propósito del Servicio</h3>
+<ul>
+<li>Calcular la <strong>fianza anticipada</strong> (valor_cobros) y el <strong>valor neto</strong> (valor_a_pagar_cliente) usando el simulador interno de TESEO (PRC).</li>
+<li>Validar que el monto y plazo solicitados estén dentro de los rangos permitidos.</li>
+<li>Validar que el cupo de la línea de crédito sea suficiente para el valor solicitado.</li>
+<li><strong>No registra nada</strong>. Puede llamarse múltiples veces con diferentes valores/plazos sin efectos secundarios.</li>
+</ul>
+<h3 id="secuencia-del-flujo">Secuencia del Flujo</h3>
+<pre><code>1. Usuario se encuentra en Sección 2: Datos Crédito
+   - Seleccionó línea de crédito (checkbox)
+   - Ingresó o confirmó el plazo en meses
+   - Ingresó el valor total a solicitar
+   - Presiona [Calcular]
+   ↓
+2. Sistema consume este servicio (TESEO)
+   ↓
+3. Servicio ejecuta validaciones y cálculo:
+
+   a) Validación de Autenticación
+      ↓ Token inválido? → SÍ: retorna &quot;error&quot; (401)
+
+   b) Validación de Campos Requeridos
+      ↓ Campos vacíos o inválidos? → SÍ: retorna &quot;error&quot; (400)
+
+   c) Validación de Rangos (monto y plazo)
+      ↓ Fuera de rango? → SÍ: retorna &quot;error&quot; (400)
+
+   d) Validación de Cupo en Línea de Crédito
+      ↓ Línea no disponible? → SÍ: retorna &quot;error&quot;
+      ↓ Monto supera cupo? → SÍ: retorna &quot;credit_not_available&quot;
+
+   e) Cálculo vía PRC (simulador TESEO)
+      ↓ Error en simulador? → SÍ: retorna &quot;error&quot; (500)
+
+   f) Validación de Coherencia de Montos
+      ↓ valor_total ≠ valor_cobros + valor_a_pagar_cliente? → SÍ: retorna &quot;error&quot; (400)
+
+   g) Retorna &quot;success&quot; con desglose completo
+   ↓
+4. Comportamiento según respuesta:
+
+   - success → Habilita Sección 3: Realizar Desembolso
+               Muestra valor_cobros y valor_a_pagar_cliente
+               Habilita botón [Pagar]
+
+   - error (autenticación) → Modal rojo, permanece en Sección 2
+
+   - error (validación) → Muestra errores, permanece en Sección 2
+
+   - credit_not_available → Modal naranja, el usuario ajusta el valor
+</code></pre>
+<hr />
+<h2 id="informacion-tecnica">Información Técnica</h2>
+<h3 id="tipo-de-servicio">Tipo de Servicio</h3>
+<p><strong>Método HTTP:</strong> <code>POST</code></p>
+<hr />
+<h3 id="url-de-integracion">URL de Integración</h3>
+<table>
+<thead>
+<tr>
+<th>Ambiente</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pruebas (QA)</strong></td>
+<td><code>https://testing-sygma.com/api/calcular_desembolso</code></td>
+</tr>
+<tr>
+<td><strong>Producción</strong></td>
+<td><code>POR DEFINIR</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="headers-requeridos">Headers Requeridos</h3>
 <table>
 <thead>
 <tr>
@@ -2257,30 +2767,10 @@
 </tbody>
 </table>
 <hr />
-<h2 id="flujo-del-proceso">Flujo del Proceso</h2>
-<pre><code>Servicio 1: POST /api/validacion_credito_vigente
-     ↓ (retorna guid + codigo_otp si success)
-Servicio 2: POST /api/validacion_otp_desembolso
-     ↓ (retorna success con guid validado)
-Servicio 3 (opcional): POST /api/reenvio_otp_desembolso
-     ↓
-Servicio 4: POST /api/seleccionar_linea_credito  ← ESTAMOS AQUÍ
-     ↓ (retorna nombre_cliente, identificacion, lineas_credito)
-Sección 2: Datos Crédito en Invictus
-     ↓ (usuario selecciona línea, ingresa plazo y valor)
-Servicio 5: POST /api/proceso_desembolso
-</code></pre>
-<hr />
-<h2 id="fuente-de-datos">Fuente de Datos</h2>
-<p>La información de líneas de crédito se obtiene ejecutando:</p>
-<pre><code class="language-sql">SELECT fnc_json_credintegral('INVICTUS', :identificacion, :tiposdocumento_id) FROM dual;
-</code></pre>
-<p>Esta función retorna las obligaciones rotativas activas de la persona
-(<code>partiposproducto_id IN (11881, 11882, 11880)</code> con <code>obl_saldototaldeuda &gt; 0</code>),
-enriquecidas con los campos de cupo desde la tabla <code>personas</code>.</p>
-<hr />
 <h2 id="request">Request</h2>
-<h3 id="campos-obligatorios">Campos Obligatorios</h3>
+<h3 id="cuerpo-de-la-solicitud">Cuerpo de la Solicitud</h3>
+<p>La solicitud debe enviarse en formato <strong>raw JSON</strong> con los siguientes campos:</p>
+<h4 id="campos-obligatorios">Campos Obligatorios</h4>
 <table>
 <thead>
 <tr>
@@ -2291,12 +2781,6 @@ enriquecidas con los campos de cupo desde la tabla <code>personas</code>.</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>guid</code></td>
-<td>string (UUID)</td>
-<td>✅</td>
-<td>UUID de la transacción generado en <code>validacion_credito_vigente</code></td>
-</tr>
 <tr>
 <td><code>tiposdocumento_id</code></td>
 <td>string</td>
@@ -2309,141 +2793,217 @@ enriquecidas con los campos de cupo desde la tabla <code>personas</code>.</p>
 <td>✅</td>
 <td>Número de identificación del cliente</td>
 </tr>
+<tr>
+<td><code>guid</code></td>
+<td>string (UUID)</td>
+<td>✅</td>
+<td>UUID retornado por Servicio 2 (Validación OTP) o Servicio 3 (Reenvío OTP)</td>
+</tr>
+<tr>
+<td><code>id_linea_credito</code></td>
+<td>integer</td>
+<td>✅</td>
+<td>Identificador de la línea de crédito seleccionada</td>
+</tr>
+<tr>
+<td><code>plazo_meses</code></td>
+<td>integer</td>
+<td>✅</td>
+<td>Plazo en meses (debe ser mayor a cero, dentro de rangos permitidos)</td>
+</tr>
+<tr>
+<td><code>valor_total</code></td>
+<td>number</td>
+<td>✅</td>
+<td>Valor total del desembolso solicitado (debe ser mayor a cero, dentro de rangos)</td>
+</tr>
+<tr>
+<td><code>plaza_empresa</code></td>
+<td>integer</td>
+<td>✅</td>
+<td>Código de la plaza/empresa donde se realiza la transacción</td>
+</tr>
 </tbody>
 </table>
-<h3 id="catalogo-de-tipos-de-documento">Catálogo de Tipos de Documento</h3>
+<h4 id="campos-opcionales">Campos Opcionales</h4>
 <table>
 <thead>
 <tr>
-<th><code>tiposdocumento_id</code></th>
+<th>Campo</th>
+<th>Tipo</th>
 <th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td><code>valor_cobros</code></td>
+<td>number</td>
+<td>Si se envía, TESEO valida que coincida con el cálculo (tolerancia ±1 peso)</td>
+</tr>
+<tr>
+<td><code>valor_a_pagar_cliente</code></td>
+<td>number</td>
+<td>Si se envía, TESEO valida que coincida con el cálculo (tolerancia ±1 peso)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="catalogo-de-tipos-de-documento">Catálogo de Tipos de Documento</h4>
+<table>
+<thead>
+<tr>
+<th><code>tiposdocumento_id</code></th>
+<th>Descripción</th>
+<th>Código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td><code>1</code></td>
-<td>Cédula de ciudadanía (CC)</td>
+<td>Cédula de ciudadanía</td>
+<td>CC</td>
 </tr>
 <tr>
 <td><code>2</code></td>
-<td>Cédula de extranjería (CE)</td>
+<td>Cédula de extranjería</td>
+<td>CE</td>
 </tr>
 <tr>
 <td><code>3</code></td>
+<td>NIT</td>
 <td>NIT</td>
 </tr>
 <tr>
 <td><code>8</code></td>
 <td>Pasaporte</td>
+<td>PA</td>
 </tr>
 <tr>
 <td><code>181</code></td>
-<td>Permiso Especial (PEP)</td>
+<td>Permiso Especial</td>
+<td>PEP</td>
 </tr>
 </tbody>
 </table>
-<h3 id="ejemplo-de-request">Ejemplo de Request</h3>
+<h4 id="rangos-permitidos-configurados-en-teseo">Rangos Permitidos (Configurados en TESEO)</h4>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor mínimo</th>
+<th>Valor máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>valor_total</code></td>
+<td>$200,000</td>
+<td>$3,500,000</td>
+</tr>
+<tr>
+<td><code>plazo_meses</code></td>
+<td>1 mes</td>
+<td>12 meses</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Los rangos pueden variar según la configuración de parámetros en TESEO.</p>
+</blockquote>
+<h4 id="origen-de-los-datos-en-invictus">Origen de los Datos en Invictus</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Origen en Invictus</th>
+<th>Momento de Captura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tiposdocumento_id</code></td>
+<td>Sección 1: Datos Cliente → "Tipo de Identificación"</td>
+<td>Al inicio del proceso</td>
+</tr>
+<tr>
+<td><code>identificacion</code></td>
+<td>Sección 1: Datos Cliente → "Número de Identificación"</td>
+<td>Al inicio del proceso</td>
+</tr>
+<tr>
+<td><code>guid</code></td>
+<td>Retornado por Servicio 2 (Validación OTP) o Servicio 3 (Reenvío OTP)</td>
+<td>Durante validación OTP</td>
+</tr>
+<tr>
+<td><code>id_linea_credito</code></td>
+<td>Sección 2: Datos Crédito → Línea seleccionada (checkbox)</td>
+<td>Al seleccionar línea</td>
+</tr>
+<tr>
+<td><code>plazo_meses</code></td>
+<td>Sección 2: Datos Crédito → Campo [Confirme Plazo]</td>
+<td>Al confirmar plazo</td>
+</tr>
+<tr>
+<td><code>valor_total</code></td>
+<td>Sección 2: Datos Crédito → Campo de valor ingresado</td>
+<td>Al ingresar el valor</td>
+</tr>
+<tr>
+<td><code>plaza_empresa</code></td>
+<td>Configuración interna de Invictus por punto de venta</td>
+<td>Fijo por sesión</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplo-de-request">Ejemplo de Request</h4>
 <pre><code class="language-json">{
-  &quot;guid&quot;: &quot;19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4&quot;,
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
-  &quot;identificacion&quot;: &quot;1001532242&quot;
+  &quot;identificacion&quot;: &quot;1034567890&quot;,
+  &quot;guid&quot;: &quot;30cdcb83-9d2c-4918-b015-ca9c481e381e&quot;,
+  &quot;id_linea_credito&quot;: &quot;1743840501964083&quot;,
+  &quot;plazo_meses&quot;: 2,
+  &quot;valor_total&quot;: 200000,
+  &quot;plaza_empresa&quot;: 50
 }
 </code></pre>
 <hr />
-<h2 id="validaciones-del-servicio">Validaciones del Servicio</h2>
-<p>El servicio ejecuta las siguientes validaciones en orden:</p>
-<h3 id="nivel-1-autenticacion">Nivel 1: Autenticación</h3>
-<ul>
-<li>Token JWT válido y vigente en header <code>Authorization</code>.</li>
-<li>Respuesta en caso de error: <code>401 Unauthorized</code>.</li>
-</ul>
-<h3 id="nivel-2-campos-requeridos">Nivel 2: Campos Requeridos</h3>
-<ul>
-<li><code>guid</code>, <code>tiposdocumento_id</code> e <code>identificacion</code> son obligatorios.</li>
-<li>Respuesta en caso de error: <code>400 Bad Request</code>.</li>
-</ul>
-<h3 id="nivel-3-transaccion-existente">Nivel 3: Transacción Existente</h3>
-<ul>
-<li>El <code>guid</code> debe existir en <code>Validacionesotp</code>.</li>
-<li>La <code>identificacion</code> debe coincidir con la registrada en la transacción.</li>
-<li>Respuesta en caso de error: <code>404 Not Found</code>.</li>
-</ul>
-<h3 id="nivel-4-otp-validado">Nivel 4: OTP Validado</h3>
-<ul>
-<li>El estado de la transacción debe ser <code>VALIDADO</code>.</li>
-<li>Si no está validado, retorna <code>otp_not_validated</code>.</li>
-</ul>
-<h3 id="nivel-5-consulta-de-lineas">Nivel 5: Consulta de Líneas</h3>
-<ul>
-<li>Se ejecuta <code>fnc_json_credintegral('INVICTUS', identificacion, tiposdocumento_id)</code>.</li>
-<li>Si no retorna datos, retorna <code>no_credit</code>.</li>
-</ul>
-<hr />
-<h2 id="responses">Responses</h2>
-<h3 id="caso-1-success">✅ Caso 1: Success</h3>
-<p><strong>HTTP:</strong> <code>200 OK</code></p>
+<h2 id="response">Response</h2>
+<h3 id="estructura-de-respuesta-exitosa">Estructura de Respuesta Exitosa</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Status:</strong> <code>"success"</code></p>
 <pre><code class="language-json">{
   &quot;status&quot;: &quot;success&quot;,
   &quot;datos&quot;: {
-    &quot;guid&quot;: &quot;19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4&quot;,
-    &quot;nombre_cliente&quot;: &quot;YURANY MERCADO ARRIETA&quot;,
-    &quot;identificacion&quot;: &quot;1001532242&quot;,
-    &quot;fecha_validacion&quot;: &quot;2026-05-06 11:07:48&quot;,
-    &quot;puede_desembolsar&quot;: true,
-    &quot;lineas_credito&quot;: [
-      {
-        &quot;id_linea_credito&quot;: 5943520472602252,
-        &quot;linea_credito&quot;: &quot;RIS ROTATIVO&quot;,
-        &quot;valor_cupo&quot;: 685000.0,
-        &quot;total_entregado&quot;: 5414.0,
-        &quot;total_disponible&quot;: 679586.0,
-        &quot;plazo_meses&quot;: 12,
-        &quot;monto_fijo&quot;: &quot;NO&quot;
-      }
-    ]
+    &quot;guid&quot;: &quot;30cdcb83-9d2c-4918-b015-ca9c481e381e&quot;,
+    &quot;mensaje&quot;: &quot;Cálculo de desembolso realizado correctamente. Este es un cálculo previo, no se ha ejecutado ningún desembolso.&quot;,
+    &quot;nombre_cliente&quot;: &quot;SANTIAGO DAVID JIMENEZ PINTO&quot;,
+    &quot;identificacion&quot;: &quot;1034567890&quot;,
+    &quot;linea_credito&quot;: &quot;Línea Credintegral&quot;,
+    &quot;valor_total&quot;: 200000.0,
+    &quot;valor_cobros&quot;: 4284,
+    &quot;valor_a_pagar_cliente&quot;: 195716,
+    &quot;plazo_meses&quot;: 2,
+    &quot;plaza_empresa&quot;: 50,
+    &quot;fecha_desembolso&quot;: &quot;2026-07-07 13:27:00&quot;,
+    &quot;comprobante&quot;: {
+      &quot;fecha_hora&quot;: &quot;2026-07-07 13:27:00&quot;,
+      &quot;concepto&quot;: &quot;Cálculo previo de desembolso&quot;,
+      &quot;detalles_descuentos&quot;: [
+        {
+          &quot;concepto&quot;: &quot;Fianza Anticipada&quot;,
+          &quot;valor&quot;: 3600
+        },
+        {
+          &quot;concepto&quot;: &quot;IVA Fianza Anticipada&quot;,
+          &quot;valor&quot;: 684
+        }
+      ]
+    }
   }
 }
 </code></pre>
-<h3 id="caso-2-otp-no-validado">❌ Caso 2: OTP No Validado</h3>
-<p><strong>HTTP:</strong> <code>200 OK</code></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;otp_not_validated&quot;,
-  &quot;mensaje&quot;: &quot;Debe validar el código OTP antes de consultar las líneas de crédito.&quot;
-}
-</code></pre>
-<h3 id="caso-3-sin-credito">❌ Caso 3: Sin Crédito</h3>
-<p><strong>HTTP:</strong> <code>200 OK</code></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;no_credit&quot;,
-  &quot;mensaje&quot;: &quot;No se encontró información de crédito para esta identificación.&quot;
-}
-</code></pre>
-<h3 id="caso-4-transaccion-no-encontrada">❌ Caso 4: Transacción No Encontrada</h3>
-<p><strong>HTTP:</strong> <code>404 Not Found</code></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Transacción no encontrada o inválida.&quot;
-}
-</code></pre>
-<h3 id="caso-5-campos-faltantes">❌ Caso 5: Campos Faltantes</h3>
-<p><strong>HTTP:</strong> <code>400 Bad Request</code></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;errors&quot;: [
-    &quot;El campo guid es obligatorio.&quot;,
-    &quot;El campo identificacion es obligatorio.&quot;
-  ]
-}
-</code></pre>
-<h3 id="caso-6-token-invalido">❌ Caso 6: Token Inválido</h3>
-<p><strong>HTTP:</strong> <code>401 Unauthorized</code></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
-}
-</code></pre>
-<hr />
-<h2 id="descripcion-de-campos-de-respuesta">Descripción de Campos de Respuesta</h2>
+<h4 id="descripcion-de-campos-de-respuesta">Descripción de Campos de Respuesta</h4>
 <table>
 <thead>
 <tr>
@@ -2456,163 +3016,441 @@ enriquecidas con los campos de cupo desde la tabla <code>personas</code>.</p>
 <tr>
 <td><code>status</code></td>
 <td>string</td>
-<td>Resultado: <code>success</code>, <code>otp_not_validated</code>, <code>no_credit</code>, <code>error</code></td>
+<td>Indicador del resultado: <code>"success"</code></td>
+</tr>
+<tr>
+<td><code>datos</code></td>
+<td>object</td>
+<td>Objeto con el desglose completo del cálculo</td>
 </tr>
 <tr>
 <td><code>datos.guid</code></td>
 <td>string</td>
-<td>UUID de la transacción (mismo del request)</td>
+<td>El mismo UUID enviado en el request (identificador del proceso)</td>
+</tr>
+<tr>
+<td><code>datos.mensaje</code></td>
+<td>string</td>
+<td>Confirmación de que es un cálculo previo, no un desembolso real</td>
 </tr>
 <tr>
 <td><code>datos.nombre_cliente</code></td>
 <td>string</td>
-<td>Nombre completo del cliente desde <code>personas.nombre_completo</code></td>
+<td>Nombre completo del cliente según TESEO</td>
 </tr>
 <tr>
 <td><code>datos.identificacion</code></td>
 <td>string</td>
-<td>Número de identificación desde <code>personas.identificacion</code></td>
+<td>Número de identificación del cliente</td>
 </tr>
 <tr>
-<td><code>datos.fecha_validacion</code></td>
+<td><code>datos.linea_credito</code></td>
 <td>string</td>
-<td>Timestamp de consulta (formato: <code>YYYY-MM-DD HH:MM:SS</code>)</td>
+<td>Nombre de la línea de crédito seleccionada</td>
 </tr>
 <tr>
-<td><code>datos.puede_desembolsar</code></td>
-<td>boolean</td>
-<td>Siempre <code>true</code> cuando <code>status: success</code></td>
+<td><code>datos.valor_total</code></td>
+<td>number</td>
+<td>Valor total solicitado por el cliente</td>
 </tr>
 <tr>
-<td><code>datos.lineas_credito</code></td>
+<td><code>datos.valor_cobros</code></td>
+<td>number</td>
+<td><strong>Suma de todos los descuentos aplicados (fianza + IVA)</strong></td>
+</tr>
+<tr>
+<td><code>datos.valor_a_pagar_cliente</code></td>
+<td>number</td>
+<td><strong>Monto neto a entregar físicamente al cliente</strong></td>
+</tr>
+<tr>
+<td><code>datos.plazo_meses</code></td>
+<td>integer</td>
+<td>Plazo en meses confirmado</td>
+</tr>
+<tr>
+<td><code>datos.plaza_empresa</code></td>
+<td>integer</td>
+<td>Código de la plaza/empresa</td>
+</tr>
+<tr>
+<td><code>datos.fecha_desembolso</code></td>
+<td>string</td>
+<td>Timestamp del cálculo (formato: YYYY-MM-DD HH:MM:SS)</td>
+</tr>
+<tr>
+<td><code>datos.comprobante</code></td>
+<td>object</td>
+<td>Desglose del cálculo de cobros</td>
+</tr>
+<tr>
+<td><code>datos.comprobante.fecha_hora</code></td>
+<td>string</td>
+<td>Fecha y hora del cálculo</td>
+</tr>
+<tr>
+<td><code>datos.comprobante.concepto</code></td>
+<td>string</td>
+<td><code>"Cálculo previo de desembolso"</code></td>
+</tr>
+<tr>
+<td><code>datos.comprobante.detalles_descuentos</code></td>
 <td>array</td>
-<td>Líneas de crédito disponibles</td>
+<td>Desglose ítem por ítem de los cobros aplicados</td>
 </tr>
 <tr>
-<td><code>lineas_credito[].id_linea_credito</code></td>
-<td>integer</td>
-<td><code>codclavecic</code> de la persona (código CIC)</td>
-</tr>
-<tr>
-<td><code>lineas_credito[].linea_credito</code></td>
+<td><code>datos.comprobante.detalles_descuentos[].concepto</code></td>
 <td>string</td>
-<td>Nombre del cliente desde <code>clientes.nombre</code></td>
+<td>Nombre del cobro (ej: "Fianza Anticipada", "IVA Fianza Anticipada")</td>
 </tr>
 <tr>
-<td><code>lineas_credito[].valor_cupo</code></td>
+<td><code>datos.comprobante.detalles_descuentos[].valor</code></td>
 <td>number</td>
-<td><code>personas.cupo_aprobado</code></td>
-</tr>
-<tr>
-<td><code>lineas_credito[].total_entregado</code></td>
-<td>number</td>
-<td><code>personas.cupo_deuda</code></td>
-</tr>
-<tr>
-<td><code>lineas_credito[].total_disponible</code></td>
-<td>number</td>
-<td><code>personas.cupo_disponible</code></td>
-</tr>
-<tr>
-<td><code>lineas_credito[].plazo_meses</code></td>
-<td>integer</td>
-<td><code>12</code> fijo para rotativo</td>
-</tr>
-<tr>
-<td><code>lineas_credito[].monto_fijo</code></td>
-<td>string</td>
-<td><code>"NO"</code> para rotativo</td>
+<td>Valor en pesos del cobro</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Nota:</strong> A diferencia del Servicio 5 (<code>proceso_desembolso</code>), esta respuesta <strong>no incluye</strong> <code>numero_desembolso</code> ni <code>numero_comprobante</code> ya que no se ejecuta ninguna transacción real. Tampoco incluye <code>instrucciones_invictus</code> ya que no hay acciones internas a ejecutar.</p>
+</blockquote>
 <hr />
-<h2 id="reglas-funcionales-en-invictus-seccion-2-datos-credito">Reglas Funcionales en Invictus (Sección 2: Datos Crédito)</h2>
-<ol>
-<li>
-<p><strong>Carga de líneas</strong> — Invictus muestra los datos retornados. Ningún campo es editable.</p>
-</li>
-<li>
-<p><strong>Selección única</strong> — Solo se puede seleccionar una línea a la vez. Si cambia de línea, se limpian los campos de la anterior.</p>
-</li>
-<li>
-<p><strong>Campos de captura obligatorios</strong></p>
-<ul>
-<li><code>[Ingrese Plazo]</code> y <code>[Confirme Plazo]</code> — numéricos, <code>&lt;= plazo_meses</code>.</li>
-<li><code>[Ingrese Valor]</code> y <code>[Confirme Valor]</code> — numéricos, <code>&lt;= total_disponible</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Regla monto fijo</strong> — Si <code>monto_fijo = "SI"</code>, Invictus asigna <code>total_disponible</code> en valor y lo deja no editable.</p>
-</li>
-<li>
-<p><strong>Habilitación de <code>[Calcular Desembolso]</code></strong> — Solo cuando hay línea seleccionada y todos los campos son válidos.</p>
-</li>
-<li>
-<p><strong>Confirmación</strong> — Al presionar <code>[Calcular Desembolso]</code>, Invictus muestra modal de resumen. Si confirma, consume <code>proceso_desembolso</code>. Si cancela, regresa sin guardar.</p>
-</li>
-</ol>
+<h2 id="validaciones-del-servicio">Validaciones del Servicio</h2>
+<p>El servicio ejecuta las siguientes validaciones en orden secuencial:</p>
+<h3 id="nivel-1-validacion-de-autenticacion">Nivel 1: Validación de Autenticación</h3>
+<p><strong>Reglas:</strong>
+- Token debe estar presente en el header <code>Authorization</code>
+- Formato válido: <code>Bearer {token}</code>
+- Token debe estar vigente (no expirado)
+- Token debe corresponder a un usuario autorizado en TESEO</p>
+<p><strong>Respuesta en caso de error:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>401 Unauthorized</code></p>
+<hr />
+<h3 id="nivel-2-validacion-de-campos-requeridos">Nivel 2: Validación de Campos Requeridos</h3>
+<p><strong>Reglas:</strong>
+- Todos los campos obligatorios deben estar presentes y no vacíos
+- <code>valor_total</code> debe ser mayor a cero
+- <code>plazo_meses</code> debe ser mayor a cero</p>
+<p><strong>Respuesta en caso de error:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo plazo_meses es obligatorio.&quot;,
+    &quot;El campo valor_total debe ser mayor a cero.&quot;
+  ]
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<hr />
+<h3 id="nivel-3-validacion-de-rangos-de-monto-y-plazo">Nivel 3: Validación de Rangos de Monto y Plazo</h3>
+<p><strong>Reglas:</strong>
+- <code>valor_total</code> debe estar dentro del rango mínimo-máximo configurado en TESEO
+- <code>plazo_meses</code> debe estar dentro del rango mínimo-máximo configurado en TESEO</p>
+<p><strong>Respuesta en caso de error:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;El valor_total no puede ser menor a $200000.&quot;
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<hr />
+<h3 id="nivel-4-validacion-de-cupo-en-linea-de-credito">Nivel 4: Validación de Cupo en Línea de Crédito</h3>
+<p><strong>Proceso:</strong>
+1. Se consulta <code>fnc_json_credintegral</code> con el <code>id_linea_credito</code> para verificar disponibilidad
+2. Se valida que la línea de crédito exista y esté activa para el cliente
+3. Se verifica que el <code>valor_total</code> no supere el <code>total_disponible</code> de la línea</p>
+<p><strong>Resultado 4.1: Línea no encontrada</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;La línea de crédito seleccionada no está disponible.&quot;
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Resultado 4.2: Monto supera cupo disponible</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;credit_not_available&quot;,
+  &quot;mensaje&quot;: &quot;El monto solicitado supera el cupo disponible.&quot;,
+  &quot;razon&quot;: &quot;sin_cupo&quot;,
+  &quot;detalles&quot;: &quot;Cupo disponible: 150000, solicitado: 200000.&quot;
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<p><strong>Comportamiento en Invictus:</strong>
+- Modal naranja informando cupo insuficiente
+- El asesor puede ajustar el <code>valor_total</code> a un monto menor e intentar nuevamente</p>
+<hr />
+<h3 id="nivel-5-calculo-via-simulador-prc">Nivel 5: Cálculo vía Simulador PRC</h3>
+<p><strong>Proceso:</strong>
+1. TESEO invoca el procedimiento <code>prc_simulador_crediintegral</code> con el monto y plazo
+2. Se obtiene <code>valor_cobros</code> (fianza anticipada + IVA) y <code>valor_a_pagar_cliente</code> (neto)
+3. Se genera el desglose detallado de cobros</p>
+<p><strong>Respuesta en caso de error del simulador:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;No fue posible calcular los montos del desembolso.&quot;,
+  &quot;errores&quot;: [&quot;No se obtuvieron datos del simulador.&quot;]
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>500 Internal Server Error</code></p>
+<hr />
+<h3 id="nivel-6-validacion-de-montos-enviados-opcional">Nivel 6: Validación de Montos Enviados (Opcional)</h3>
+<p>Si Invictus envía <code>valor_cobros</code> y/o <code>valor_a_pagar_cliente</code> en el request, TESEO los compara contra el cálculo del simulador con una tolerancia de ±1 peso.</p>
+<p><strong>Respuesta si no coinciden:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Los montos enviados no coinciden con el cálculo de fianza anticipada.&quot;,
+  &quot;errores&quot;: [&quot;valor_cobros esperado: 4284, recibido: 5000&quot;]
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<hr />
+<h3 id="nivel-7-validacion-de-coherencia-de-montos">Nivel 7: Validación de Coherencia de Montos</h3>
+<p><strong>Regla:</strong> <code>valor_total = valor_cobros + valor_a_pagar_cliente</code> (tolerancia ±1 peso)</p>
+<p><strong>Respuesta en caso de incoherencia:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Los montos calculados no son coherentes con el valor_total.&quot;,
+  &quot;errores&quot;: [&quot;El valor_total no coincide con valor_a_pagar_cliente + valor_cobros&quot;]
+}
+</code></pre>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<hr />
+<h2 id="respuestas-de-error">Respuestas de Error</h2>
+<h3 id="error-1-token-de-autenticacion-invalido">Error 1: Token de Autenticación Inválido</h3>
+<p><strong>Código HTTP:</strong> <code>401 Unauthorized</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
+<hr />
+<h3 id="error-2-campos-requeridos-faltantes">Error 2: Campos Requeridos Faltantes</h3>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;errors&quot;: [
+    &quot;El campo guid es obligatorio.&quot;,
+    &quot;El campo valor_total es obligatorio.&quot;
+  ]
+}
+</code></pre>
+<hr />
+<h3 id="error-3-rango-de-monto-o-plazo-invalido">Error 3: Rango de Monto o Plazo Inválido</h3>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;El valor_total no puede ser mayor a $3500000.&quot;
+}
+</code></pre>
+<hr />
+<h3 id="error-4-cupo-insuficiente-en-la-linea">Error 4: Cupo Insuficiente en la Línea</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;credit_not_available&quot;,
+  &quot;mensaje&quot;: &quot;El monto solicitado supera el cupo disponible.&quot;,
+  &quot;razon&quot;: &quot;sin_cupo&quot;,
+  &quot;detalles&quot;: &quot;Cupo disponible: 150000, solicitado: 200000.&quot;
+}
+</code></pre>
+<hr />
+<h3 id="error-5-linea-de-credito-no-disponible">Error 5: Línea de Crédito No Disponible</h3>
+<p><strong>Código HTTP:</strong> <code>200 OK</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;La línea de crédito seleccionada no está disponible.&quot;
+}
+</code></pre>
+<hr />
+<h3 id="error-6-error-interno-en-simulador">Error 6: Error Interno en Simulador</h3>
+<p><strong>Código HTTP:</strong> <code>500 Internal Server Error</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;No fue posible calcular los montos del desembolso.&quot;,
+  &quot;errores&quot;: [&quot;No se obtuvieron datos del simulador.&quot;]
+}
+</code></pre>
+<hr />
+<h3 id="error-7-montos-incoherentes">Error 7: Montos Incoherentes</h3>
+<p><strong>Código HTTP:</strong> <code>400 Bad Request</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Los montos calculados no son coherentes con el valor_total.&quot;,
+  &quot;errores&quot;: [&quot;El valor_total no coincide con valor_a_pagar_cliente + valor_cobros&quot;]
+}
+</code></pre>
+<hr />
+<h3 id="error-8-error-interno-general">Error 8: Error Interno General</h3>
+<p><strong>Código HTTP:</strong> <code>500 Internal Server Error</code></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Error interno en cálculo de desembolso.&quot;
+}
+</code></pre>
 <hr />
 <h2 id="tabla-resumen-de-respuestas">Tabla Resumen de Respuestas</h2>
 <table>
 <thead>
 <tr>
+<th>#</th>
 <th>Condición</th>
-<th>HTTP</th>
+<th>HTTP Code</th>
 <th>status</th>
-<th>Comportamiento en Invictus</th>
+<th>Comportamiento Invictus</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Todo correcto</td>
+<td>1</td>
+<td>Cálculo exitoso</td>
 <td>200</td>
 <td><code>success</code></td>
-<td>Habilita Sección 2 con líneas</td>
+<td>Habilita Sección 3, muestra desglose de cobros</td>
 </tr>
 <tr>
-<td>OTP no validado</td>
-<td>200</td>
-<td><code>otp_not_validated</code></td>
-<td>Modal naranja, permanece en OTP</td>
-</tr>
-<tr>
-<td>Sin crédito</td>
-<td>200</td>
-<td><code>no_credit</code></td>
-<td>Modal naranja, regresa a inicio</td>
-</tr>
-<tr>
-<td>GUID no encontrado</td>
-<td>404</td>
-<td><code>error</code></td>
-<td>Modal naranja, permanece en OTP</td>
-</tr>
-<tr>
-<td>Campos faltantes</td>
-<td>400</td>
-<td><code>error</code></td>
-<td>Modal naranja, permanece en OTP</td>
-</tr>
-<tr>
-<td>Token inválido</td>
+<td>2</td>
+<td>Token inválido/ausente</td>
 <td>401</td>
 <td><code>error</code></td>
-<td>Modal naranja, permanece en OTP</td>
+<td>Modal rojo, permanece en Sección 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Campos faltantes o inválidos</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>Muestra errores en Sección 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rango de monto/plazo inválido</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>Muestra error, el asesor corrige el valor</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cupo insuficiente</td>
+<td>200</td>
+<td><code>credit_not_available</code></td>
+<td>Modal naranja, asesor ajusta el monto</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Línea no disponible</td>
+<td>200</td>
+<td><code>error</code></td>
+<td>Modal naranja, volver a Sección 2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Error en simulador</td>
+<td>500</td>
+<td><code>error</code></td>
+<td>Modal rojo, intentar nuevamente</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Montos incoherentes</td>
+<td>400</td>
+<td><code>error</code></td>
+<td>Modal rojo, revisar valores</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="ejemplo-curl">Ejemplo cURL</h2>
-<pre><code class="language-bash">curl --location 'https://testing-sygma.com/api/seleccionar_linea_credito' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...' \
---header 'Accept: application/json' \
---header 'Content-Type: application/json' \
---data '{
-  &quot;guid&quot;: &quot;19da7351-7c07-4a28-8d1c-5cdc5ddbbbe4&quot;,
+<h2 id="ejemplos-completos">Ejemplos Completos</h2>
+<h3 id="ejemplo-1-calculo-exitoso">✅ Ejemplo 1: Cálculo Exitoso</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">POST /api/calcular_desembolso
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Content-Type: application/json
+
+{
   &quot;tiposdocumento_id&quot;: &quot;1&quot;,
-  &quot;identificacion&quot;: &quot;1001532242&quot;
-}'
+  &quot;identificacion&quot;: &quot;1034567890&quot;,
+  &quot;guid&quot;: &quot;30cdcb83-9d2c-4918-b015-ca9c481e381e&quot;,
+  &quot;id_linea_credito&quot;: &quot;1743840501964083&quot;,
+  &quot;plazo_meses&quot;: 2,
+  &quot;valor_total&quot;: 200000,
+  &quot;plaza_empresa&quot;: 50
+}
 </code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;datos&quot;: {
+    &quot;guid&quot;: &quot;30cdcb83-9d2c-4918-b015-ca9c481e381e&quot;,
+    &quot;mensaje&quot;: &quot;Cálculo de desembolso realizado correctamente. Este es un cálculo previo, no se ha ejecutado ningún desembolso.&quot;,
+    &quot;nombre_cliente&quot;: &quot;SANTIAGO DAVID JIMENEZ PINTO&quot;,
+    &quot;identificacion&quot;: &quot;1034567890&quot;,
+    &quot;linea_credito&quot;: &quot;Línea Credintegral&quot;,
+    &quot;valor_total&quot;: 200000.0,
+    &quot;valor_cobros&quot;: 4284,
+    &quot;valor_a_pagar_cliente&quot;: 195716,
+    &quot;plazo_meses&quot;: 2,
+    &quot;plaza_empresa&quot;: 50,
+    &quot;fecha_desembolso&quot;: &quot;2026-07-07 13:27:00&quot;,
+    &quot;comprobante&quot;: {
+      &quot;fecha_hora&quot;: &quot;2026-07-07 13:27:00&quot;,
+      &quot;concepto&quot;: &quot;Cálculo previo de desembolso&quot;,
+      &quot;detalles_descuentos&quot;: [
+        { &quot;concepto&quot;: &quot;Fianza Anticipada&quot;, &quot;valor&quot;: 3600 },
+        { &quot;concepto&quot;: &quot;IVA Fianza Anticipada&quot;, &quot;valor&quot;: 684 }
+      ]
+    }
+  }
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong>
+1. Poblar la Sección 3: Realizar Desembolso con los valores retornados
+2. Destacar visualmente el campo <strong>Valor a Pagar al Cliente: $195,716</strong>
+3. Habilitar el botón <strong>[Pagar]</strong>
+4. Guardar <code>valor_cobros</code> y <code>valor_a_pagar_cliente</code> para enviarlos en el Servicio 5</p>
+<hr />
+<h3 id="ejemplo-2-token-invalido">🔴 Ejemplo 2: Token Inválido</h3>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 401 Unauthorized
+
+{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;Token de autorización inválido o ausente.&quot;
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong> Modal rojo. Permanece en Sección 2.</p>
+<hr />
+<h3 id="ejemplo-3-monto-fuera-de-rango">🟠 Ejemplo 3: Monto Fuera de Rango</h3>
+<p><strong>Request:</strong> <code>"valor_total": 50000</code> (menor al mínimo de $200,000)</p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 400 Bad Request
+
+{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;mensaje&quot;: &quot;El valor_total no puede ser menor a $200000.&quot;
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong> Mostrar error inline en el campo de valor. El asesor corrige y recalcula.</p>
+<hr />
+<h3 id="ejemplo-4-cupo-insuficiente">🟠 Ejemplo 4: Cupo Insuficiente</h3>
+<p><strong>Request:</strong> <code>"valor_total": 500000</code> con cupo disponible de $150,000</p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+
+{
+  &quot;status&quot;: &quot;credit_not_available&quot;,
+  &quot;mensaje&quot;: &quot;El monto solicitado supera el cupo disponible.&quot;,
+  &quot;razon&quot;: &quot;sin_cupo&quot;,
+  &quot;detalles&quot;: &quot;Cupo disponible: 150000, solicitado: 500000.&quot;
+}
+</code></pre>
+<p><strong>Acción en Invictus:</strong> Modal naranja informando el cupo disponible. El asesor puede ajustar el valor a un monto menor.</p>
+<hr />
 
 
 

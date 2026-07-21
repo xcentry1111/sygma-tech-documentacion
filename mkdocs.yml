@@ -52,3 +52,5 @@ nav:
       - 'Desembolso': 'invictus_desmebolso.md'
   - 'Municipio':
       - 'Consultar': 'consulta_municipio.md'
+  - 'Radicacion PQRS':
+      - 'Radicacion': 'wsquejas_api.md'
