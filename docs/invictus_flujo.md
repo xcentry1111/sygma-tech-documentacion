@@ -2,7 +2,7 @@
 
 Fuente: código TESEO (`Api::InvictusController`, `Api::InvictusFirmaController`, `Api::InvictusDesembolsoController`, servicios y jobs). **No hay un modelo `Formulariosinvictus`**: la solicitud vive en `Formulario` (`portafolio_id: 10053`, `tipo: 'INVICTUS'`).
 
-Catálogo hermano (APIs distintas, no mezclar `guid`): [Onboarding](onboarding_flujo.md).
+Catálogo hermano (APIs distintas, no mezclar `guid`): [Onboarding](onboarding/flujo.md).
 
 Este documento es el **mapa técnico y funcional**. Cada API tiene su página; Swagger (botón **Documentación** en `/api/docs/invictus`) resume el mismo flujo para consumo.
 

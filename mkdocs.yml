@@ -31,11 +31,30 @@ nav:
       - 'Cálculo desembolso': 'invictus-calculo-desembolso.md'
       - 'Proceso desembolso': 'invictus_desmebolso.md'
       - 'API inexistente (línea)': 'invictus_aprobacion_linea.md'
-  - 'Onboarding (mapa)':
-      - 'Flujo completo': 'onboarding_flujo.md'
-      - 'Autenticar': 'onboarding_autenticar.md'
-      - 'Simular': 'onboarding_simular.md'
-      - 'Información básica': 'onboarding_informacion_basica.md'
+  - 'Onboarding':
+      - 'Flujo completo': 'onboarding/flujo.md'
+      - Originación:
+          - 'Resumen': 'onboarding/originacion/index.md'
+          - 'Autenticar': 'onboarding/originacion/autenticar.md'
+          - 'Simular': 'onboarding/originacion/simular.md'
+          - 'Información básica': 'onboarding/originacion/informacion_basica.md'
+          - 'Notificación OTP': 'onboarding/originacion/notificacion.md'
+          - 'Reenviar OTP': 'onboarding/originacion/reenviar_otp.md'
+          - 'Validar OTP': 'onboarding/originacion/validar_otp.md'
+          - 'Truora KYC': 'onboarding/originacion/truora_kyc.md'
+      - Firma:
+          - 'Resumen': 'onboarding/firma/index.md'
+          - 'Validación firma': 'onboarding/firma/validacion_firma_digital.md'
+          - 'OTP firma': 'onboarding/firma/otp_firma.md'
+          - 'Reenvío OTP firma': 'onboarding/firma/reenvio_otp_firma.md'
+      - Desembolso:
+          - 'Resumen': 'onboarding/desembolso/index.md'
+          - 'Crédito vigente': 'onboarding/desembolso/credito_vigente.md'
+          - 'OTP desembolso': 'onboarding/desembolso/otp_desembolso.md'
+          - 'Reenvío OTP desembolso': 'onboarding/desembolso/reenvio_otp_desembolso.md'
+          - 'Seleccionar línea': 'onboarding/desembolso/linea_credito.md'
+          - 'Cálculo': 'onboarding/desembolso/calcular_desembolso.md'
+          - 'Proceso desembolso': 'onboarding/desembolso/proceso_desembolso.md'
   - 'Dentix':
     - 'Servicio WolBox': 'wolbox.md'
   - 'autenticación': 'tecfinanzas_token.md'

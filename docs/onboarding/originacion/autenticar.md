@@ -3,7 +3,7 @@
 ## Resumen
 Emite JWT (1 hora) para el catálogo Onboarding. Devuelve `user_id`, `username` y `portafolio_id` del usuario. Mismo comando `AuthenticateUser` que `POST /api/login`, **otro envelope**.
 
-Mapa: [Flujo Onboarding](onboarding_flujo.md). Equivalente Invictus: [Token TESEO](tecfinanzas_token.md).
+Mapa: [Flujo Onboarding](../flujo.md). Carpeta: [Originación](index.md). Equivalente Invictus: [Token TESEO](../../tecfinanzas_token.md).
 
 ## Objetivo
 Identificar al consumidor API y su portafolio. Sin este paso no hay `simular` ni `informacion_basica`.

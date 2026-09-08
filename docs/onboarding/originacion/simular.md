@@ -3,7 +3,7 @@
 ## Resumen
 Calcula crédito de cupo fijo (cuota, fianzas, desembolso, plan de pagos). **No persiste.** Misma matemática que la vista `/simulador` y que el cálculo digital Invictus: `PlaneshsimulaCreditoService` + tabla `planeshsimula`.
 
-Mapa: [Flujo Onboarding](onboarding_flujo.md). En Invictus el cálculo API equivalente es [Cálculo desembolso](invictus-calculo-desembolso.md), pero **después** de originación/firma. Aquí ocurre **antes** de registrar al cliente.
+Mapa: [Flujo Onboarding](../flujo.md). Carpeta: [Originación](index.md). Equivalente Invictus (etapa desembolso): [Cálculo desembolso](../../invictus-calculo-desembolso.md). Aquí ocurre **antes** de registrar al cliente. Onboarding desembolso: [calcular_desembolso](../desembolso/calcular_desembolso.md).
 
 ## Objetivo
 Mostrar al usuario términos (cuota, desembolso neto, plan) con los rangos del portafolio del JWT.

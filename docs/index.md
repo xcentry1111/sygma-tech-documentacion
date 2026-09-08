@@ -30,16 +30,31 @@ Swagger TESEO: `/api/docs/invictus` (botones **Ver flujo** y **Documentación**)
 
 ## Onboarding (mapa técnico)
 
-Empezar por **[Flujo completo](onboarding_flujo.md)** (auth → simulación → información básica, y comparación con Invictus).
+Empezar por **[Flujo completo](onboarding/flujo.md)**. Carpetas: [Originación](onboarding/originacion/index.md) · [Firma](onboarding/firma/index.md) · [Desembolso](onboarding/desembolso/index.md).
 
-Swagger TESEO: `/api/docs/onboarding`.
+Swagger TESEO: `/api/docs/onboarding`. **No modifica Invictus.** Rutas `/api/onboarding/*`.
 
-**No modifica Invictus.** Rutas propias `/api/onboarding/*`. Hoy no hay OTP, firma ni desembolso Onboarding.
+### Originación
+- `docs/onboarding/originacion/autenticar.md`
+- `docs/onboarding/originacion/simular.md`
+- `docs/onboarding/originacion/informacion_basica.md`
+- `docs/onboarding/originacion/notificacion.md`
+- `docs/onboarding/originacion/reenviar_otp.md`
+- `docs/onboarding/originacion/validar_otp.md`
+- `docs/onboarding/originacion/truora_kyc.md`
 
-- `docs/onboarding_flujo.md`
-- `docs/onboarding_autenticar.md`
-- `docs/onboarding_simular.md`
-- `docs/onboarding_informacion_basica.md`
+### Firma
+- `docs/onboarding/firma/validacion_firma_digital.md`
+- `docs/onboarding/firma/otp_firma.md`
+- `docs/onboarding/firma/reenvio_otp_firma.md`
+
+### Desembolso
+- `docs/onboarding/desembolso/credito_vigente.md`
+- `docs/onboarding/desembolso/otp_desembolso.md`
+- `docs/onboarding/desembolso/reenvio_otp_desembolso.md`
+- `docs/onboarding/desembolso/linea_credito.md`
+- `docs/onboarding/desembolso/calcular_desembolso.md`
+- `docs/onboarding/desembolso/proceso_desembolso.md`
 
 ## Documentación de servicios (MD)
 

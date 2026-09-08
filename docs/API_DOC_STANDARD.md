@@ -19,7 +19,7 @@ Este estándar define una estructura única para documentar endpoints/servicios.
 
 Para el ecosistema Invictus el mapa maestro es `docs/invictus_flujo.md`. Swagger TESEO consume `doc/api/invictus_guia.yaml` (botón Documentación).
 
-Para Onboarding el mapa maestro es `docs/onboarding_flujo.md`. Swagger TESEO: `/api/docs/onboarding` (`doc/api/onboarding.yaml` + `onboarding_guia.yaml`). No reutilizar rutas Invictus.
+Para Onboarding el mapa maestro es `docs/onboarding/flujo.md` (carpetas `originacion/`, `firma/`, `desembolso/`). Swagger TESEO: `/api/docs/onboarding`. No reutilizar rutas Invictus.
 
 ## Convenciones
 

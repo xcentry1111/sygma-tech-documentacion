@@ -3,7 +3,7 @@
 ## Resumen
 Crea o actualiza un `Formulario` de Onboarding (no Invictus). Campos habilitados/obligatorios salen de `parametros` del `portafolio_id` del JWT. Devuelve `id` y `guid` (`transaction_id_teseo`).
 
-Mapa: [Flujo Onboarding](onboarding_flujo.md). Equivalente Invictus recortado: [Originación `ori_invictus`](invictus_originacion_import.md). Este endpoint **no** consulta listas, Experian, mora ni genera OTP.
+Mapa: [Flujo Onboarding](../flujo.md). Carpeta: [Originación](index.md). Equivalente Invictus recortado: [Originación `ori_invictus`](../../invictus_originacion_import.md). Este endpoint **no** consulta listas, Experian, mora ni genera OTP.
 
 ## Objetivo
 Registrar datos de identidad y contacto para el flujo Onboarding, reutilizando la tabla `formularios` con otro `tipo`.
@@ -19,7 +19,7 @@ Registrar datos de identidad y contacto para el flujo Onboarding, reutilizando l
 ## Autenticación
 - **Tipo**: JWT Bearer (`POST /api/onboarding/autenticar`)
 - **Header**: `Authorization: Bearer <token>`
-- **401**: `{ "status": "error", "mensaje": "Token de autorización inválido o ausente" }` (ver [Autenticar](onboarding_autenticar.md))
+- **401**: `{ "status": "error", "mensaje": "Token de autorización inválido o ausente" }` (ver [Autenticar](autenticar.md))
 
 ## Headers
 - **Authorization**: `Bearer <token>` (obligatorio)
@@ -204,7 +204,7 @@ Ver Autenticación.
 `POST /api/onboarding/autenticar`. Opcional: `POST /api/onboarding/simular` (el registro **no** recibe monto/plazo).
 
 ## Flujo posterior
-Ningún API Onboarding posterior en `routes.rb`. Conservar `guid` para evolución (OTP / firma / desembolso, si se construyen **rutas Onboarding nuevas**; no reutilizar las de Invictus).
+Contrato: [Notificación OTP](notificacion.md) con el `guid`. Hoy esa ruta **no** está en `routes.rb`. No usar `/api/notificacion_canal` de Invictus.
 
 ## Notas / Consideraciones
 - Update: misma `identificacion` + mismo `tipo` + mismo `portafolio_id` reescribe la fila más reciente. No crea duplicado.

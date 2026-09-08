@@ -8,10 +8,13 @@ No documentar rutas que no existan en TESEO (`config/routes.rb`).
 
 ## Onboarding
 
-El mapa (auth → simulación → información básica) está en `docs/onboarding_flujo.md`.
-Misma regla: una API por archivo, proceso interno, flujo anterior/posterior.
-Catálogo aparte de Invictus. No documentar OTP/firma/desembolso Onboarding hasta que existan en `routes.rb`.
-Swagger TESEO: `/api/docs/onboarding`.
+Mapa: `docs/onboarding/flujo.md`. Subcarpetas:
+
+- Originación: `docs/onboarding/originacion/`
+- Firma: `docs/onboarding/firma/`
+- Desembolso: `docs/onboarding/desembolso/`
+
+Una API por archivo. OTP/firma/desembolso = contrato (aún no en `routes.rb`). No usar URLs Invictus. Swagger: `/api/docs/onboarding`.
 
 ## Cómo documentar un servicio nuevo
 
