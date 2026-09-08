@@ -1,154 +1,153 @@
-# Importación de datos de originación (Invictus)
+# Originación Invictus (`ori_invictus`)
 
 ## Resumen
-Recibe y valida información proveniente de Invictus para crear/registrar un usuario y retornar una respuesta de registro en **TESEO**.
+Crea o retoma una solicitud Invictus en TESEO (`Formulario`, portafolio **10053**, `tipo: INVICTUS`). No envía OTP. Devuelve `guid` (`transaction_id_teseo`) para `notificacion_canal`, o redirige a firma / KYC / desembolso según estado.
+
+Mapa: [Flujo Invictus](invictus_flujo.md).
+
+## Objetivo
+Registrar al cliente para originación digital (solo cédula de ciudadanía) y dejar la solicitud lista para OTP, o informar que ya hay cupo, firma pendiente o KYC.
 
 ## Endpoint
 - **Método**: `POST`
 - **Ruta**: `/api/ori_invictus`
+- **Controller**: `Api::InvictusController#create`
 - **Ambientes**:
-  - **Pruebas**: `https://testing-sygma.com/api/ori_invictus`
+  - **Testing**: `https://testing-sygma.com/api/ori_invictus`
   - **Producción**: `POR DEFINIR`
 
 ## Autenticación
-- **Tipo**: `Bearer token`
+- **Tipo**: JWT Bearer (mismo `/api/login`).
 - **Header**: `Authorization: Bearer <token>`
+- **401**: `{ "status": "error", "mensaje": "Token de autorización inválido o ausente" }`
 
 ## Headers
 - **Authorization**: `Bearer <token>` (obligatorio)
-- **Accept**: `application/json` (obligatorio)
-- **Content-Type**: `application/json` (obligatorio)
+- **Accept**: `application/json`
+- **Content-Type**: `application/json`
 
 ## Request
 
-### Body (JSON)
+Cuerpo en clave **`datos`**. Campos requeridos: CSV del parámetro `CAMPOS VALIDACION ORIGINACION INVICTUS` **más** `fecha_nacimiento`. Código exige **`tiposdocumento_id = "1"` (CC)**. CE/NIT/PA/PEP **no** aplican en este endpoint.
 
-La solicitud debe enviarse en formato `raw` JSON con los campos dentro de la clave `datos`.
+### Campos (los que el código lee siempre)
 
-### 🔸 Campos Obligatorios
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| datos | object | sí | Wrapper. Sin él → 422. |
+| datos.tiposdocumento_id | string | sí | Solo `"1"` (CC). |
+| datos.identificacion | string | sí | Cédula. |
+| datos.fecha_nacimiento | string | sí | Edad / validaciones. |
+| datos.email | string | sí* | *Si está en el CSV de parámetros. |
+| datos.celular | string | sí* | Normalizado en TESEO. |
+| datos.fecha_expedicion | string | sí* | |
+| datos.primer_nombre / segundo_nombre / primer_apellido / segundo_apellido | string | sí* | |
+| datos.nombre_red, oficina, nombre_oficina, usuario_transaccion, nombre_usuario_transaccion | string | sí* | Trazabilidad origen. |
 
-Los siguientes campos son **requeridos** para procesar correctamente la solicitud:
+\*Obligatoriedad exacta = parámetro `CAMPOS VALIDACION ORIGINACION INVICTUS`. El hash se persiste con `permit!` en `Formulario`.
 
-- `tiposdocumento_id`
-- `identificacion`
-- `fecha_expedicion`
-- `primer_nombre`
-- `segundo_nombre`
-- `primer_apellido`
-- `segundo_apellido`
-- `fecha_nacimiento`
-- `email`
-- `celular`
-- `nombre_red`
-- `oficina`
-- `nombre_oficina`
-- `usuario_transaccion`
-- `nombre_usuario_transaccion`
-
----
-
-### 🔸 Valores Permitidos
-
-#### `tiposdocumento_id` (Tipo de Documento)
-
-| ID  | Descripción                |
-|-----|----------------------------|
-| 1   | Cédula de ciudadanía (CC)  |
-| 2   | Cédula de extranjería (CE) |
-| 3   | NIT                        |
-| 8   | Pasaporte (PA)             |
-| 181 | Permiso Especial (PEP)     |
-
----
-
-## 📦 Ejemplo de Body
-
+### Ejemplo
 ```json
 {
   "datos": {
     "tiposdocumento_id": "1",
     "identificacion": "88282828",
     "fecha_expedicion": "1984-07-12",
-    "primer_nombre": "MATURANA",
-    "segundo_nombre": "MARTINEZ",
-    "primer_apellido": "MARIO",
-    "segundo_apellido": "MARIO",
+    "primer_nombre": "MARIO",
+    "segundo_nombre": "ANTONIO",
+    "primer_apellido": "MATURANA",
+    "segundo_apellido": "MARTINEZ",
     "fecha_nacimiento": "1988-05-15",
-    "email": "PRUEBA@GMAIL.COM",
+    "email": "prueba@example.com",
     "celular": "3016795090",
-    "nombre_red": "PRUEBA DEL SERVICIO",
+    "nombre_red": "PRUEBA",
     "oficina": "OFICINA NRO 1",
     "nombre_oficina": "OFICINA NRO 1 - LAURELES",
-    "usuario_transaccion": "ANDRES FELIPE PRUEBA",
-    "nombre_usuario_transaccion": "ANDRES FELIPE PRUEBA"
+    "usuario_transaccion": "USUARIO API",
+    "nombre_usuario_transaccion": "USUARIO API"
   }
 }
-
 ```
-----
-### Validaciones
 
-| Regla | Condición | HTTP | `status` | `message` |
-|---|---|---:|---|---|
-| 1. Crédito existente y datos coinciden | Existe crédito y **correo/celular** coinciden | 200 | success | "Datos coinciden. Continúa el flujo." |
-| 2. Conflicto de identidad | Correo o celular ya existen pero con **otra cédula** | 409 | blocked | "El {correo\|celular} ya está registrado para otra identificación." |
-| 3. Rechazo reciente (<30 días) | Última solicitud **rechazada** hace <30 días | 423 | blocked | "Te faltan {dias_restantes} día(s) para volver a solicitar." |
-| 4. Aprobada pendiente de firma | Existe solicitud **aprobada** sin firma | 409 | action_required | "Tienes una solicitud aprobada. Completa el proceso de firma." |
-| 5. KYC pendiente | Estado requiere **verificación de identidad** | 202 | action_required | "Requiere verificación de identidad." |
+## Proceso interno (orden real)
 
+1. Auditoría inicio (`Formularioevaluacion`).
+2. `CredintegralSolicitudElegibilidadService`: mora y líneas digital/rotativo.
+3. Si `Persona` con `cupo_disponible > 0` → camino cupo (`CON_CUPO` / conflicto / desembolso).
+4. Cancela `CON_CUPO` viejo.
+5. Lista restrictiva permanente `estado_lista_restritiva = BLOQUEADO`.
+6. Lista negra (`Listascontrol`).
+7. `RECHAZADO` reciente: cooldown (`InvictusTruoraService.dias_bloqueo_por_razon`: fraude/otros 30d, intentos KYC 1d).
+8. Consistencia email/celular vs solicitudes vivas.
+9. Si existe `EN_VERIFICACION` → actualiza contacto + `InvictusTruoraService.iniciar_verificacion` → **HTTP 202**.
+10. Si `PENDIENTE` mismo email+celular dentro de `horas_expiracion_solicitud_pendiente` (default 2h) → mismo `guid`, **200**.
+11. Cancela `PENDIENTE` expirado.
+12. Si `APROBADO_PENDIENTE_FIRMA` → **HTTP 409** con `status: "success"` (ir a firma).
+13. Conflicto email/celular con otra solicitud viva → 409.
+14. Crea `Formulario` `PENDIENTE`, genera OTP **sin enviarlo**, asigna `guid`.
 
+## Servicios / componentes
 
-#### ✅ Respuesta Exitosa
+- `CredintegralSolicitudElegibilidadService`
+- `InvictusTruoraService` (retoma KYC)
+- `Listascontrol` / flags lista restrictiva
+- Modelo `Formulario`, `Persona`
+- Auditoría `Formularioevaluacion`
 
+## Responses
+
+### 200 — Alta o retoma PENDIENTE
 ```json
 {
   "status": "success",
   "datos": {
-    "guid": "2yu2yg33i3iuy3i",
-    "mensaje": "Registro exitoso - Se ha enviado un correo electornico y mensaje de texto al usuario para su validación"
+    "guid": "959ed262dc803739a937",
+    "mensaje": "Registro exitoso..."
   }
 }
-
 ```
+**Siguiente:** `POST /api/notificacion_canal` con ese `guid`.
 
-#### ❗ Conflicto de identidad
-
+### 202 — KYC pendiente (retoma EN_VERIFICACION)
 ```json
 {
-  "status": "error",
-  "errors": [
-    "El correo ya está registrado para otra identificación."
-  ]
+  "status": "success",
+  "datos": {
+    "guid": "...",
+    "mensaje": "Requiere verificación de identidad..."
+  }
 }
 ```
+**Siguiente:** completar Truora. No firma. Ver [Truora KYC](invictus_truora_kyc.md).
 
+### 409 — Firma pendiente (`status: success`)
+Ya `APROBADO_PENDIENTE_FIRMA`. **Siguiente:** `POST /api/validacion_firma_digital`.
 
-#### ❗ Rechazo reciente (<30 días)
+### 409 — Cupo / contacto (`status: error`)
+Cupo existente, email/celular de otra solicitud viva, o ambas líneas. **Siguiente:** desembolso si hay cupo, o usar datos de la solicitud viva.
 
-```json
+### 422
+Validación: falta `datos`, no es CC, mora, líneas, campos del CSV.
 
-{
-  "status": "error",
-  "errors": [
-    "Te faltan 12 día(s) para volver a realizar la solicitud"
-  ]
-}
-```
+### 423
+Políticas: lista negra / restrictiva `BLOQUEADO` / rechazo vigente. No reintentar originación hasta que aplique la regla.
 
+### 401
+Token ausente o inválido.
 
-#### ❗ Ejemplo de Error por Campo Faltante
+### 500
+`{ "status": "error", "errors": ["Error interno"] }` (puede incluir `debug` en algunos ambientes).
 
-```json
-{
-  "status": "error",
-  "errors": [
-    "El campo identificacion es obligatorio"
-  ]
-}
-```
+## Flujo anterior
+`POST /api/login` → Authorize.
 
-#### ❗ Ejemplo de Error por Token Ausente o Inválido
+## Flujo posterior
+Normal: `notificacion_canal` → `validar_otp` → firma.  
+Atajos: firma, KYC, o desembolso según respuesta.
 
+## Errores comunes
+
+### 401 Unauthorized
 ```json
 {
   "status": "error",
@@ -156,26 +155,10 @@ Los siguientes campos son **requeridos** para procesar correctamente la solicitu
 }
 ```
 
-#### ✅ Aprobada pendiente de firma
+## Notas / Consideraciones
+- OTP **no** se envía aquí. `notificacion_canal` es obligatorio en camino feliz.
+- Docs antiguas listaban CE/NIT/PA/PEP: **incorrecto para este endpoint**.
+- HTTP 409 + `status: success` es intencional en código (firma pendiente).
 
-```json
-{
-  "status": "success",
-  "datos": {
-    "mensaje": "Tienes una solicitud aprobada. Completa el proceso de firma."
-  }
-}
-
-```
-
-#### ✅ KYC pendiente
-
-```json
-{
-  "status": "success",
-  "datos": {
-    "mensaje": "Requiere verificación de identidad. Se te acaba de enviar un mensaje a los diferentes canales SMS - EMAIL y WHATSAPP"
-  }
-}
-
-```
+## Changelog
+- **2026-08-26**: Alineado al código TESEO (`InvictusController#create`).

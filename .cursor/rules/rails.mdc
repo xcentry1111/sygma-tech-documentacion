@@ -1,0 +1,35 @@
+---
+description: Convenciones Rails — reutilizar MVC, services, jobs y concerns
+globs: "**/*.{rb,rake,yml,erb,haml,slim}"
+alwaysApply: false
+---
+
+# Rails
+
+## Antes de implementar
+
+Revisar en este orden: routes → controllers → models → services → jobs → validators → concerns → serializers/API.
+
+## Preferencias
+
+- Reutilizar Services existentes antes de crear nuevos.
+- Lógica de negocio en Services/Interactors, no en controllers.
+- Validaciones en Model/Validator; no duplicar en controller.
+- Side effects asíncronos en Jobs cuando ya exista el patrón.
+- Preferir concerns existentes antes de copiar código.
+- Migraciones generadas por el agente; nunca ejecutar SQL destructivo en producción.
+
+## Ejemplo
+
+```ruby
+# ❌ BAD — lógica duplicada en controller
+def create
+  Solicitud.create!(attrs)
+  Experian::Consulta.call(solicitud)
+end
+
+# ✅ GOOD — reutilizar service existente
+def create
+  Solicitudes::Crear.call(attrs)
+end
+```

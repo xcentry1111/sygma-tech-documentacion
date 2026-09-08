@@ -1,0 +1,22 @@
+---
+description: Uso seguro de Docker MCP — contenedores, compose y logs
+globs: "**/Dockerfile*,**/docker-compose*.{yml,yaml},**/.dockerignore"
+alwaysApply: false
+---
+
+# Docker
+
+## Uso del MCP
+
+- Inspeccionar contenedores, logs y compose antes de reiniciar o reconstruir.
+- Preferir `docker compose` del proyecto existente.
+- No borrar volúmenes ni imágenes sin confirmación explícita.
+- No ejecutar comandos destructivos (`down -v`, `system prune`) sin aprobación.
+
+## Flujos típicos
+
+- Contenedores detenidos → listar e informar.
+- Reiniciar un servicio (ej. Redis) → confirmar nombre del servicio en compose.
+- Levantar proyecto → usar el compose del repo.
+- Rebuild Rails/API → rebuild del servicio afectado, no de todo el stack salvo pedido.
+- Logs → filtrar por servicio relevante (api, web, sidekiq, etc.).

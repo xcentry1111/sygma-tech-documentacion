@@ -1,195 +1,96 @@
-# Validación de OTP + evaluación Experian (Invictus)
+# Validación OTP originación (`validar_otp`)
 
 ## Resumen
-Valida un OTP asociado a una transacción. Si el OTP es válido, el sistema obtiene información del cliente por `guid` y consulta **Experian** para determinar el estado (**APROBADO**, **RECHAZADO**, **REQUIERE_VERIFICACION**, **SOLICITUD_CON_ERROR**, etc.).
+Valida el OTP de originación y **decide** el crédito: listas restrictivas, lista negra/blanca, elegibilidad, Experian, Truora KYC. Es el corazón de originación.
+
+Mapa: [Flujo Invictus](invictus_flujo.md).
+
+## Objetivo
+Pasar de `PENDIENTE` a `APROBADO_PENDIENTE_FIRMA`, `EN_VERIFICACION` o `RECHAZADO` (u otros terminales).
 
 ## Endpoint
 - **Método**: `POST`
 - **Ruta**: `/api/validar_otp`
+- **Controller**: `Api::InvictusController#validar_otp`
 - **Ambientes**:
-  - **Pruebas**: `https://testing-sygma.com/api/validar_otp`
+  - **Testing**: `https://testing-sygma.com/api/validar_otp`
   - **Producción**: `POR DEFINIR`
 
 ## Autenticación
-- **Tipo**: `Bearer token`
-- **Header**: `Authorization: Bearer <token>`
+JWT Bearer. `@user` se usa en `prc_crediintegral` si se crea `Persona` rotativo.
 
 ## Headers
-- **Authorization**: `Bearer <token>` (obligatorio)
-- **Accept**: `application/json` (obligatorio)
-- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>`
+- **Accept**: `application/json`
+- **Content-Type**: `application/json`
 
 ## Request
 
-### Body (JSON)
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| otp | string | sí | Código recibido. |
+| guid | string | sí | Guid del formulario. |
 
-### 🔸 Campos Obligatorios
+No enviar documento: TESEO lo saca del `Formulario`.
 
-- `otp`: Código OTP recibido por el cliente.
-- `guid`: ID único de la transacción (internamente vinculado al cliente).
-
-> ⚠️ **Nota:** No es necesario enviar el número de documento, ya que el sistema lo obtiene automáticamente con el `guid`.
-
----
-
-## 📦 Ejemplo de Body
-
+### Ejemplo
 ```json
 {
   "otp": "462019",
-  "guid": "68406a6a2d9aa64766060ee2"
+  "guid": "959ed262dc803739a937"
 }
 ```
 
-### Primera Validacion
+## Proceso interno (orden real)
 
-Consultar Listas Negras y Blancas
-Consideraciones: 
+1. Si estado terminal (`APROBADO`, `APROBADO_PENDIENTE_FIRMA`, `RECHAZADO`, `CANCELADO`, …) → respuesta corta (a veces 200 “ya aprobado”, a veces 422).
+2. `InvictusOtpValidacionLimite`: máx `total_intentos_otp` (default 3). Fallos en `Formularioevaluacion`.
+3. Compara OTP (seguro). Mensaje “incorrecto o expirado” **sin** validar `otp_expiracion_minutos_invictus`.
+4. `decision_lista_restrictiva_invictus` → `ListasrestrictivasController.consultar_externa`.
+5. Lista **negra** → `RECHAZADO` + notificación.
+6. Lista **blanca** → `APROBADO_PENDIENTE_FIRMA` (+ `Persona` y SPs si no es digital).
+7. Elegibilidad otra vez.
+8. Experian: cache 30 días / `InvictusExperianSimulacion` / `ExperianService#consultar_preselecta_invictus`.
+9. Rama: `APROBADO` → firma; `RECHAZADO`; `EN_VERIFICACION` → `InvictusTruoraService.iniciar_verificacion`; sin decisión → reset `PENDIENTE` + OTP nuevo (`experian_status: REINTENTAR`).
 
-1. Listas negras, en caso de estar de inmediato se entrega la respuesta de RECHAZADO.
-2. Listas Blancas, en caso de estar de inmediato se marca como aprobado y no hay necesidad de consultar Experiam.
-3. Si no esta en ninguna de las listas, sigue el flujo sin problema 
+Oracle si crea Persona rotativo: `ProcesoJob` `prc_teseo_demografico`, `prc_crediintegral(..., 'CREAROBLCUOTAMANEJO', user_id)`.
 
-### ❗ Respuesta Exitosa Lista Negra
+## Qué información procesa
+OTP, formulario, listas, Experian (score/decisión), flags `opc_*` para notificar, datos demográficos para `Persona`.
 
-```js
-{
-  "status": "success",
-  "mensaje": "OTP válido.",
-  "experian_status": null,
-  "detalle": "Solicitud rechazada."
-}
+## Responses — regla: mirar `experian_status` y `status`, no solo HTTP
 
-```
+### 200 — Aprobado (firma)
+`status: "success"`, `experian_status: "APROBADO"`, estado `APROBADO_PENDIENTE_FIRMA`.  
+**Siguiente:** `POST /api/validacion_firma_digital`.
 
-### ✅ Respuesta Exitosa Lista Blanca
+### 200 — KYC
+`experian_status: "EN_VERIFICACION"`.  
+**Siguiente:** [Truora KYC](invictus_truora_kyc.md). No firma.
 
-```js
-{
-  "status": "success",
-  "mensaje": "OTP válido.",
-  "experian_status": null,
-  "detalle": "El usuario tiene buen perfil crediticio."
-}
+### 200 — Rechazado Experian
+A menudo `status: "success"` + `experian_status: "RECHAZADO"`. Crédito no sigue.
 
-```
+### 200 — Listas / REINTENTAR
+Frecuente `status: "error"` + `experian_status: RECHAZADO` o `REINTENTAR`.  
+REINTENTAR: volver a `validar_otp` más tarde (puede pedir OTP de nuevo).
 
-## 🧩 Decisión de **Expiriam** (Estados y Flujos)
+### 422 — OTP incorrecto / máximo intentos / terminal RECHAZADO
+`intentos_restantes` si aplica. Tras 3 fallos: OTP invalidado, bloqueo ~30 min → `notificacion_canal` o `reenviar_otp`.
 
-El proceso de originación consume una decisión de **Expiriam** y TESEO actúa según el **estado** recibido.  
-Estados posibles (valor devuelto en la respuesta exitosa):  
-APROBADO · RECHAZADO · REQUIERE_VERIFICACION · SOLICITUD_CON_ERROR
+### 401 / 500
+Token / interno.
 
----
+## Flujo anterior
+`notificacion_canal` (o `reenviar_otp`).
 
-### 📊 Tabla de estados
+## Flujo posterior
+Firma, Truora, reintento, o stop.
 
-| Estado              | Significado breve                                                     | Acción TESEO                                                                                         |
-|---------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| **APROBADO**        | Cumple todas las políticas de crédito                                 | Enviar SMS/correo al usuario informando aprobación. Dirigir al punto Gana para firma.                |
-| **RECHAZADO**       | No cumple políticas                                                    | Registrar rechazo. Bloquear nueva solicitud por **30 días**. A los 30 días sin cambios → **caducado*** |
-| **REQUIERE_VERIFICACION** | Cumple políticas, pero Expiriam exige validación de identidad (alerta) | Enviar **OTP** y **enlace de verificación** provisto por Expiriam. Esperar resultado (webhook o polling). |
-| **SOLICITUD_CON_ERROR** | Error técnico o inconsistencias en la petición a Expiriam              | Registrar error, NO enviar OTP. Devolver detalle en errors.                                         |
+## Inconsistencias vs docs viejas
+- Lista negra **no** responde `status: success` + “OTP válido” como crédito OK: rechaza.
+- HTTP 200 + `status: error` es normal en listas.
+- `REQUIERE_VERIFICACION` en docs antiguas = en código `EN_VERIFICACION` / `experian_status: EN_VERIFICACION`.
 
----
-
-### 🔁 Flujo detallado por estado
-
-- **APROBADO**
-  - TESEO marca la solicitud como aprobada despues de la respuesta dada.
-  - Envía notificaciones (SMS/correo) al usuario informadole que su credito ha sido aprobado.
-  - Al ser aprobado el sistema entrega tres parametros adicionales que son **linea_credito**,  **valor_aprobado** y **linea_credito_id**, donde se le informa al usuario cuanto fue el monto aprobado y la linea de credito.
-  - El campo **linea_credito_id** es el identificador de la linea de credito se le reporto.
-
-- **RECHAZADO**
-  - TESEO guarda el rechazo y bloquea re-solicitud por **30 días**.
-  - Si el usuario reintenta antes, responder “debe esperar 30 días”.
-  - Transcurridos 30 días sin novedades, la solicitud pasa a **caducado** (interno).
-
-- **EN_VERIFICACION**
-  - TESEO envía **OTP** y **link de verificación** (entregado por Expiriam) al celular/correo del usuario.
-  - El usuario completa la verificación desde su **celular**.
-  - TESEO obtiene el resultado **por webhook** (preferido) o por **consulta periódica** (polling).
-  - Resultado final tras verificación:
-    - **Aprobado** → notificar aprobación y dirigir a punto Gana.
-    - **Rechazado** → aplicar reglas de rechazo (bloqueo 30 días).
-
-- **SOLICITUD_CON_ERROR**
-  - TESEO no realiza validaciones de identidad.
-  - Devuelve detalles del error en la respuesta y registra logs para soporte.
-
----
-
-### ✅ Respuesta Exitosa
-
-```js
-{
-  "status": "success",
-  "mensaje": "OTP válido. Evaluación Experian exitosa.",
-  "experian_status": "APROBADO",
-  "detalle": "El usuario tiene buen perfil crediticio.",
-  "linea_credito_id": 100,        
-  "linea_credito": "Credito Rotativo",
-  "valor_aprobado": 300000, 
-  "guid": "68406a6a2d9aa64766060ee2"        
-}
-
-```
-
-### ✅ Respuesta En Verificación
-
-```js
-{
-  "status": "success",
-  "mensaje": "OTP válido. Evaluación Experian exitosa.",
-  "experian_status": "EN_VERIFICACION",
-  "detalle": "Validación de identidad requerida."
-}
-```
-
-### ❗ Respuesta Rechazado por Experian
-
-```js
-{
-  "status": "success",
-  "mensaje": "OTP válido. Evaluación Experian exitosa.",
-  "experian_status": "RECHAZADO",
-  "detalle": "Solicitud rechazada. Podrá reintentar en 30 días.."
-}
-```
-
-#### ❗ Respuesta Solicitud Error
-
-```json
-{
-  "status": "error",
-  "mensaje": "No fue posible obtener la decisión del proveedor."
-}
-```
-
-#### ❗ Ejemplo de OTP Inválido
-
-```json
-{
-  "status": "error",
-  "mensaje": "OTP incorrecto o expirado"
-}
-```
-
-#### ❗ Ejemplo de Error por Token Ausente o Inválido
-
-```json
-{
-  "status": "error",
-  "mensaje": "Token de autorización inválido o ausente"
-}
-```
-
-#### ❗ Ejemplo de OTP Inválido
-
-```json
-{
-  "status": "error",
-  "mensaje": "OTP válido."
-}
-```
+## Changelog
+- **2026-08-26**: Alineado a `validar_otp` en código.

@@ -14,6 +14,12 @@ Este estándar define una estructura única para documentar endpoints/servicios.
 8. **Errores comunes**
 9. **Notas / Consideraciones**
 10. **Changelog** (opcional, pero recomendado)
+11. **Flujo anterior / posterior** (si el API es parte de una cadena, p. ej. Invictus)
+12. **Proceso interno / componentes** (qué servicios, jobs y modelos toca)
+
+Para el ecosistema Invictus el mapa maestro es `docs/invictus_flujo.md`. Swagger TESEO consume `doc/api/invictus_guia.yaml` (botón Documentación).
+
+Para Onboarding el mapa maestro es `docs/onboarding_flujo.md`. Swagger TESEO: `/api/docs/onboarding` (`doc/api/onboarding.yaml` + `onboarding_guia.yaml`). No reutilizar rutas Invictus.
 
 ## Convenciones
 

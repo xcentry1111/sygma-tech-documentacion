@@ -1,7 +1,14 @@
 # Seleccionar Líneas de Crédito - Desembolso Invictus
 
+> **Fuente código (2026-08-26):** `seleccionar_linea_credito`. Mapa: [Flujo Invictus](invictus_flujo.md).
+>
+> - OTP debe estar `VALIDADO`. Si no: `otp_not_validated`.
+> - Oracle `fnc_json_credintegral('INVICTUS', …)` **más** `InvictusDigitalLineaService.fusionar_lineas` (línea DIGITAL sintética) y `filtrar_lineas` por elegibilidad.
+> - **Este es el endpoint real de “elegir línea”.** `/api/validar_linea_credito` no existe ([nota](invictus_aprobacion_linea.md)).
+> - **Siguiente:** `calcular_desembolso` (opcional) y/o `proceso_desembolso` con `id_linea_credito`.
+
 ## Resumen
-Retorna las líneas de crédito disponibles para la persona, validando que el OTP haya sido previamente validado. La información se obtiene desde la función Oracle `fnc_json_credintegral('INVICTUS', identificacion, tiposdocumento_id)`.
+Retorna líneas usables (rotativo Oracle + digital fusionada) si el OTP de desembolso está `VALIDADO`.
 
 ## Endpoint
 - **Método**: `POST`

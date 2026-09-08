@@ -1,7 +1,14 @@
 # Validación de OTP para desembolso (Invictus)
 
+> **Fuente código (2026-08-26):** `validacion_otp_desembolso`. Mapa: [Flujo Invictus](invictus_flujo.md).
+>
+> - **No retorna `lineas_credito`.** Éxito: `{ status: "success", datos: { guid, mensaje } }` y OTP queda `VALIDADO`.
+> - Líneas: `POST /api/seleccionar_linea_credito`.
+> - TTL default **3 min** (campo `tiempo_vigencia` / `reenviado_en`). Intentos: `total_intentos_otp_desembolso` (3) → `BLOQUEADO`.
+> - `status` de negocio en HTTP 200: `success`, `invalid`, `expired`, `blocked`, `already_validated`, `already_disbursed`.
+
 ## Resumen
-Valida el código OTP ingresado por el cliente para confirmar identidad y autorizar el desembolso en punto Gana. Controla intentos, vigencia del código y, si valida correctamente, confirma continuidad del flujo.
+Valida el OTP de desembolso. Controla intentos y vigencia. **No lista líneas.**
 
 ## Endpoint
 - **Método**: `POST`

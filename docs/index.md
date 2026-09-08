@@ -5,19 +5,43 @@
 - **Estándar de documentación API**: `docs/API_DOC_STANDARD.md`
 - **Guía de uso de docs**: `docs/README.md`
 
-## Documentación de servicios (MD)
+## Invictus (mapa técnico)
 
-### Invictus
-- `docs/invictus_aprobacion_linea.md`
-- `docs/invictus_desembolso_linea_credito.md`
-- `docs/invictus_desembolso_otp_valida.md`
-- `docs/invictus_desembolso_reenvio_otp.md`
-- `docs/invictus_desmebolso_validacion.md`
-- `docs/invictus_desmebolso.md`
-- `docs/invictus_notificacion.md`
+Empezar por **[Flujo completo](invictus_flujo.md)** (diagramas originación → firma → desembolso).
+
+Swagger TESEO: `/api/docs/invictus` (botones **Ver flujo** y **Documentación**).
+
+- `docs/invictus_flujo.md`
+- `docs/invictus_truora_kyc.md`
 - `docs/invictus_originacion_import.md`
+- `docs/invictus_notificacion.md`
 - `docs/invictus_reenviar_validacion.md`
 - `docs/invictus_validacion.md`
+- `docs/validacion_firma_digital.md`
+- `docs/validacion_otp_firma_digital.md`
+- `docs/validacion_reenvio_otp_firma.md`
+- `docs/invictus_desmebolso_validacion.md`
+- `docs/invictus_desembolso_otp_valida.md`
+- `docs/invictus_desembolso_reenvio_otp.md`
+- `docs/invictus_desembolso_linea_credito.md`
+- `docs/invictus-calculo-desembolso.md`
+- `docs/invictus_desmebolso.md`
+- `docs/invictus_aprobacion_linea.md` (ruta **inexistente** en código)
+
+## Onboarding (mapa técnico)
+
+Empezar por **[Flujo completo](onboarding_flujo.md)** (auth → simulación → información básica, y comparación con Invictus).
+
+Swagger TESEO: `/api/docs/onboarding`.
+
+**No modifica Invictus.** Rutas propias `/api/onboarding/*`. Hoy no hay OTP, firma ni desembolso Onboarding.
+
+- `docs/onboarding_flujo.md`
+- `docs/onboarding_autenticar.md`
+- `docs/onboarding_simular.md`
+- `docs/onboarding_informacion_basica.md`
+
+## Documentación de servicios (MD)
 
 ### Tecfinanzas / TESEO
 - `docs/tecfinanzas_token.md`
@@ -46,9 +70,6 @@
 - `docs/grupoctl_importar.md`
 - `docs/grupoctl_actualizar.md`
 - `docs/promosumma_originacion_import.md`
-- `docs/validacion_firma_digital.md`
-- `docs/validacion_otp_firma_digital.md`
-- `docs/validacion_reenvio_otp_firma.md`
 - `docs/wolbox.md`
 
 ## ¿Quiénes somos?

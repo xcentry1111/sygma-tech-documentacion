@@ -68,3 +68,9 @@ No aplica (este endpoint entrega el token).
   "code": 422
 }
 ```
+
+## Notas / Consideraciones
+- Token 1 hora. Header `Authorization: Bearer <token>`.
+- Mismo login para Invictus y otros APIs TESEO. PQRS usa `/api/wsquejas/generar_token`.
+- Cadena Invictus: [Flujo Invictus](invictus_flujo.md).
+- HTTP 401 de login usa `status: false` y `code: 400` en JSON (distinto del 401 Invictus `status: "error"` + `mensaje`).

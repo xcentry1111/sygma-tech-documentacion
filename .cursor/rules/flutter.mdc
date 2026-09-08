@@ -1,0 +1,31 @@
+---
+description: Convenciones Flutter — widgets, state y reutilización
+globs: "**/*.{dart}"
+alwaysApply: false
+---
+
+# Flutter
+
+## Antes de implementar
+
+Buscar widgets, screens, repositories, providers/blocs/cubits y services relacionados.
+
+## Preferencias
+
+- Reutilizar widgets y themes existentes.
+- Separar UI de lógica (repository / service / state).
+- Seguir el patrón de estado ya usado en el proyecto (Provider, Bloc, Riverpod, etc.).
+- No introducir un nuevo state manager sin aprobación.
+- Mantener naming y estructura de carpetas del repo.
+
+## Ejemplo
+
+```dart
+// ❌ BAD — lógica de API en el widget
+onPressed: () async {
+  final res = await http.get(Uri.parse(url));
+}
+
+// ✅ GOOD — reutilizar repository/service existente
+onPressed: () => context.read<SolicitudCubit>().cargarPendientes();
+```

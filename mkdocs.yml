@@ -2,8 +2,40 @@ site_name: Documentación Sygma-Tech
 theme:
   name: material
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 nav:
   - Inicio: 'index.md'
+  - 'Invictus (mapa)':
+      - 'Flujo completo': 'invictus_flujo.md'
+      - 'Auth (login)': 'tecfinanzas_token.md'
+      - 'Originación': 'invictus_originacion_import.md'
+      - 'Notificación OTP': 'invictus_notificacion.md'
+      - 'Reenviar OTP': 'invictus_reenviar_validacion.md'
+      - 'Validar OTP': 'invictus_validacion.md'
+      - 'Truora KYC': 'invictus_truora_kyc.md'
+      - 'Firma digital': 'validacion_firma_digital.md'
+      - 'OTP firma': 'validacion_otp_firma_digital.md'
+      - 'Reenvío OTP firma': 'validacion_reenvio_otp_firma.md'
+      - 'Crédito vigente': 'invictus_desmebolso_validacion.md'
+      - 'OTP desembolso': 'invictus_desembolso_otp_valida.md'
+      - 'Reenvío OTP desembolso': 'invictus_desembolso_reenvio_otp.md'
+      - 'Seleccionar línea': 'invictus_desembolso_linea_credito.md'
+      - 'Cálculo desembolso': 'invictus-calculo-desembolso.md'
+      - 'Proceso desembolso': 'invictus_desmebolso.md'
+      - 'API inexistente (línea)': 'invictus_aprobacion_linea.md'
+  - 'Onboarding (mapa)':
+      - 'Flujo completo': 'onboarding_flujo.md'
+      - 'Autenticar': 'onboarding_autenticar.md'
+      - 'Simular': 'onboarding_simular.md'
+      - 'Información básica': 'onboarding_informacion_basica.md'
   - 'Dentix':
     - 'Servicio WolBox': 'wolbox.md'
   - 'autenticación': 'tecfinanzas_token.md'
@@ -33,23 +65,6 @@ nav:
       - 'Simulador Rotativo': 's_simulador_rotativo.md'
   - 'Originacion Promosumma':
       - 'Importar Datos': 'promosumma_originacion_import.md'
-  - 'Originación Invictus':
-      - 'Originación': 'invictus_originacion_import.md'
-      - 'Notificación OTP': 'invictus_notificacion.md'
-      - 'Validación OTP': 'invictus_validacion.md'
-      - 'Selección Linea Credito': 'invictus_aprobacion_linea.md'
-      - 'Reenviar OTP': 'invictus_reenviar_validacion.md'
-  - 'Firma Digital Invictus':
-      - 'Validación Firma': 'validacion_firma_digital.md'
-      - 'Validación OTP': 'validacion_otp_firma_digital.md'
-      - 'Reenvio OTP': 'validacion_reenvio_otp_firma.md'
-  - 'Desembolso Invictus':
-      - 'Validación usuario Credito': 'invictus_desmebolso_validacion.md'
-      - 'Validación OTP': 'invictus_desembolso_otp_valida.md'
-      - 'Reenvio OTP': 'invictus_desembolso_reenvio_otp.md'
-      - 'Seleccionar Lineas de Credito': 'invictus_desembolso_linea_credito.md'
-      - 'Calculo Desembolso': 'invictus-calculo-desembolso.md'
-      - 'Desembolso': 'invictus_desmebolso.md'
   - 'Municipio':
       - 'Consultar': 'consulta_municipio.md'
   - 'Radicacion PQRS':

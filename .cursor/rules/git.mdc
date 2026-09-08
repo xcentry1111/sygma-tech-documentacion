@@ -1,0 +1,25 @@
+---
+description: Git y GitHub — commits, branches, PRs sin operaciones destructivas
+alwaysApply: true
+---
+
+# Git y GitHub
+
+## Git
+
+- Usar Git MCP para historial, branches y diffs.
+- Commits solo cuando el usuario lo pida.
+- Nunca `push --force` a main/master.
+- Nunca actualizar git config.
+- Evitar rebase interactivo y amend salvo reglas explícitas del usuario.
+
+## GitHub
+
+- PRs e Issues vía GitHub MCP / `gh`.
+- Al crear PR: resumen claro + plan de prueba.
+- Revisar diff completo de la rama, no solo el último commit.
+
+## Base de datos
+
+- Nunca conectar ni ejecutar queries vía MCP de DB.
+- SQL/migraciones solo como código propuesto.

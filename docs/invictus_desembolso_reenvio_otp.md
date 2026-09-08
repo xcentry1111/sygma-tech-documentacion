@@ -1,7 +1,14 @@
 # Reenvío de OTP para desembolso (Invictus)
 
+> **Fuente código (2026-08-26):** `reenvio_otp_desembolso`. Mapa: [Flujo Invictus](invictus_flujo.md).
+>
+> - Máx **5** reenvíos, mínimo **60 s**, cooldown **30 min**.
+> - Genera **nuevo `guid`** en el mismo registro OTP (distinto a firma, que reusa guid).
+> - Si ya `VALIDADO` → `already_validated` (no reenvía). Vuelve a chequear elegibilidad.
+> - **Siguiente:** `validacion_otp_desembolso` con el guid **nuevo**.
+
 ## Resumen
-Reenvía un nuevo código OTP cuando el anterior expiró, se agotaron intentos o el cliente no lo recibió. Controla límite de reenvíos, valida tiempos entre solicitudes e invalida códigos anteriores.
+Reenvía OTP de desembolso cuando expiró, se agotaron intentos o no llegó.
 
 ## Endpoint
 - **Método**: `POST`

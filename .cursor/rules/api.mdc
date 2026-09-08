@@ -1,0 +1,22 @@
+---
+description: Diseño e integración de APIs — contratos, errores y reutilización
+globs: "**/*.{rb,ts,js,dart,json}"
+alwaysApply: false
+---
+
+# API
+
+## Antes de cambiar endpoints
+
+1. Localizar rutas/controllers/serializers existentes.
+2. Revisar contratos (request/response) y clientes que los consumen.
+3. Detectar autenticación, autorización y rate limits.
+4. Proponer cambio e impacto; esperar aprobación.
+
+## Preferencias
+
+- No romper contratos públicos sin versionado o deprecación.
+- Reutilizar serializers/DTOs existentes.
+- Errores consistentes con el formato del proyecto.
+- Documentar cambios de contrato en la propuesta.
+- No llamar servicios externos sin revisar wrappers/clients ya existentes.

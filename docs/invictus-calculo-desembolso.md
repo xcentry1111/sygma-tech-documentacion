@@ -1,7 +1,14 @@
 # Cálculo de Desembolso (Invictus)
 
+> **Fuente código (2026-08-26):** `calcular_desembolso`. Mapa: [Flujo Invictus](invictus_flujo.md).
+>
+> - Simulación **sin persistir**. **No exige OTP** (comentario en controller).
+> - Digital: `InvictusDigitalLineaService.calcular_montos` (rangos 200k–1M, plazo 1–6). Rotativo: `prc_simulador_crediintegral` (monto máx param 11680, plazos 11742/11743).
+> - Si el cliente manda `valor_cobros` / `valor_a_pagar_cliente`, compara ±1.
+> - **Siguiente:** `proceso_desembolso` (irreversible).
+
 ## Resumen
-Calcula los montos del desembolso (fianza anticipada, IVA y valor neto a entregar al cliente) **sin ejecutar ninguna transacción real**. No requiere OTP, no crea obligaciones, no modifica ningún registro. Es el **Servicio 4** del flujo y debe consumirse antes de mostrar la Sección 3: Realizar Desembolso, para que el asesor y el cliente visualicen exactamente cuánto recibirá.
+Calcula fianza y neto **sin ejecutar desembolso**. No crea obligaciones.
 
 ## Endpoint
 - **Método**: `POST`

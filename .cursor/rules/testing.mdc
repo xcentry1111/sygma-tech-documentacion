@@ -1,0 +1,20 @@
+---
+description: Testing — cubrir cambios sin romper suites existentes
+globs: "**/{spec,test,tests}/**/*.*,**/*_{spec,test}.*"
+alwaysApply: false
+---
+
+# Testing
+
+## Antes de implementar tests
+
+- Detectar el framework (RSpec, Minitest, Flutter test, etc.).
+- Reutilizar factories, fixtures y helpers existentes.
+- Cubrir el camino feliz y los errores relevantes del cambio.
+
+## Preferencias
+
+- No desactivar tests para “hacer pasar” el cambio.
+- Preferir tests de comportamiento en la capa adecuada (request/service/unit).
+- Nombrar ejemplos de forma que describan el negocio.
+- Tras implementar: indicar cómo ejecutar los tests afectados.

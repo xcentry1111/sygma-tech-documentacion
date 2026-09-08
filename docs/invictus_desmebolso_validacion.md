@@ -1,7 +1,16 @@
 # Validación de crédito vigente para desembolso (Invictus)
 
+> **Fuente código (2026-08-26):** `Api::InvictusDesembolsoController#validacion_credito_vigente`. Mapa: [Flujo Invictus](invictus_flujo.md).
+>
+> - Body: `tiposdocumento_id` + `identificacion` (no guid de originación).
+> - Elegibilidad: `InvictusDesembolsoElegibilidadService` (mora, digital vs rotativo, expiración **181 días** no migrado — no “1 mes” fijo).
+> - `EN_VERIFICACION` → `pending_identity`. Firma pendiente → `pending_signatures`.
+> - Digital puede seguir **sin Persona** si form digital `APROBADO`.
+> - Éxito: crea `Validacionesotp` y envía OTP. **Siguiente:** `validacion_otp_desembolso`.
+> - HTTP negocio casi siempre **200**; leer `status` (`success`, `no_credit`, `already_disbursed`, `credit_blocked`, etc.).
+
 ## Resumen
-Valida si una persona cuenta con un crédito **aprobado y vigente** para realizar el desembolso en puntos autorizados (Gana). Verifica estado y vigencia (máximo 1 mes desde aprobación), valida condiciones del cliente/cupo y genera el OTP requerido para el flujo de desembolso.
+Valida si una persona cuenta con crédito usable para desembolso (formulario `APROBADO` y/o cupo migrado). Corre elegibilidad y, si aplica, genera OTP de desembolso.
 
 ## Endpoint
 - **Método**: `POST`

@@ -1,0 +1,25 @@
+---
+description: Seguridad — secretos, DB y operaciones de alto riesgo
+alwaysApply: true
+---
+
+# Seguridad
+
+## Prohibido
+
+- Acceso directo a Base de Datos vía MCP.
+- Ejecutar DELETE/UPDATE/DROP o SQL destructivo.
+- Commit de secretos (`.env`, tokens, credenciales).
+- Exponer tokens en logs o respuestas.
+
+## Obligatorio
+
+- Generar SQL/migraciones para revisión humana.
+- Usar secrets vía env/credentials del proyecto.
+- Validar autorización en cambios de API.
+- Pedir confirmación explícita en operaciones destructivas (volúmenes Docker, force push, borrado masivo).
+
+## GitHub Token
+
+- Mantener `GITHUB_TOKEN` solo en `mcp.json` / env local.
+- Permisos mínimos: `repo`, `read:org` (+ `workflow` si hace falta).

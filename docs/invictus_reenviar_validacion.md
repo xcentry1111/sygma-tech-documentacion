@@ -1,102 +1,66 @@
-# Reenvío de OTP (originación / validación)
+# Reenviar OTP originación (`reenviar_otp`)
 
 ## Resumen
-Reenvía el código OTP a un usuario con transacción activa. Requiere token válido y el identificador de la transacción. Cada transacción permite máximo **3** reenvíos; si se excede, se debe reiniciar el proceso.
+Genera un OTP nuevo y lo envía por los canales ya guardados (`opc_sms` / `opc_email` / `opc_whatsapp`). Tope default 3 reenvíos, mínimo ~60 s entre envíos, cooldown 30 min.
+
+Mapa: [Flujo Invictus](invictus_flujo.md).
+
+## Objetivo
+Reponer el código si no llegó, expiró para el usuario, o falló `validar_otp`.
 
 ## Endpoint
 - **Método**: `POST`
 - **Ruta**: `/api/reenviar_otp`
+- **Controller**: `Api::InvictusController#reenviar_otp`
 - **Ambientes**:
-  - **Pruebas**: `https://testing-sygma.com/api/reenviar_otp`
+  - **Testing**: `https://testing-sygma.com/api/reenviar_otp`
   - **Producción**: `POR DEFINIR`
 
 ## Autenticación
-- **Tipo**: `Bearer token`
-- **Header**: `Authorization: Bearer <token>`
+JWT Bearer.
 
 ## Headers
-- **Authorization**: `Bearer <token>` (obligatorio)
-- **Accept**: `application/json` (obligatorio)
-- **Content-Type**: `application/json` (obligatorio)
+- **Authorization**: `Bearer <token>`
+- **Accept**: `application/json`
+- **Content-Type**: `application/json`
 
 ## Request
 
-### Body (JSON)
+| Campo | Tipo | Requerido | Descripción |
+|------|------|-----------|-------------|
+| guid | string | sí | Mismo guid de originación. |
 
-Debe enviarse un objeto JSON con el identificador de la transacción.
-
-### 🔸 Campos Obligatorios
-
-- `guid`: ID único de la transacción al cual se debe asociar el reenvío del OTP.
-
----
-
-## 📦 Ejemplo de Body
-
+### Ejemplo
 ```json
 {
-  "guid": "2yu2yg33i3iuy3i"
+  "guid": "959ed262dc803739a937"
 }
 ```
 
-#### ✅ Respuesta Exitosa
+## Proceso interno
+1. Formulario por guid. Debe tener canales `opc_*`.
+2. Parámetros 10053: `max_reenvios_otp_invictus` (3), `tiempo_minimo_reenvio_otp_segundos` (60), `cooldown_reenvio_otp_minutos` (30).
+3. `InvictusOtpReenvioLimite.decidir` usando `updated_at` como ancla (no `fecha_otp`).
+4. Nuevo OTP → mismos canales → `reenvios_otp++`, limpia `otp_bloqueado_hasta`.
 
-```json
-{
-  "status": "success",
-  "mensaje": "OTP reenviado exitosamente.",
-  "canales_enviados": [
-    "sms",
-    "email"
-  ],
-  "reenvios_restantes": 0,
-  "timestamp": "2026-04-15T19:38:57Z"
-}
+`otp_expiracion_minutos_invictus` se lee en config de originación pero **este endpoint no expira el código por tiempo**.
 
-```
+## Responses
 
-#### ❗ Ejemplo de Error
+### 200 — Reenviado
+Incluye `reenvios_restantes`. En el último permitido puede venir `cooldown_minutos`. **Siguiente:** `validar_otp` con el código **nuevo**.
 
-```json
-{
-  "status": "error",
-  "mensaje": "Transacción no encontrada o no válida para reenvío"
-}
+### 422
+Cooldown agotado, espera mínima, sin canales, fallo de envío.
 
-```
+### 404
+guid inexistente.
 
-### 3️⃣ Validación de Límite de Reenvíos
-- Se verifica el número de veces que se ha solicitado el reenvío del OTP para esta transacción.
-- !!! "Límite de Reenvíos"
-- Máximo permitido: 5 reenvíos por transacción, y es parametrizable.
-- Tiempo mínimo entre reenvíos: 60 segundos
+## Flujo anterior
+`notificacion_canal` exitoso (canales persistidos).
 
-### 🚫 Si se excede el límite de reenvíos:
+## Flujo posterior
+`POST /api/validar_otp`.
 
-```json
-{
-  "status": "error",
-  "mensaje": "Has excedido el número máximo de reenvíos permitidos. Por favor, contacta a soporte.",
-  "reenvios_maximos": 5,
-  "reenvios_realizados": 5
-}
-```
-
-#### ❗  Error de Autenticación
-
-```json
-{
-  "status": "error",
-  "mensaje": "Token de autorización inválido o ausente"
-}
-```
-
-#### ❗ Limite de envio (Solo se permite enviar maximo 3 veces el servicio)
-
-```json
-{
-  "status": "error",
-  "mensaje": "Límite de envío alcanzado."
-}
-```
-
+## Changelog
+- **2026-08-26**: Alineado a `reenviar_otp` en código.

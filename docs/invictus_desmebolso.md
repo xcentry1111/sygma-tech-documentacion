@@ -1,7 +1,16 @@
 # Ejecución de desembolso final (Invictus)
 
+> **Fuente código (2026-08-26):** `proceso_desembolso`. Mapa: [Flujo Invictus](invictus_flujo.md).
+>
+> - **Irreversible.** OTP debe estar `VALIDADO`. Marca OTP `DESEMBOLSADO` **antes** de persistir negocio (anti doble submit).
+> - Formulario → `estado_invictus: DESEMBOLSADO`.
+> - **Digital:** `InvictusDigitalLineaService.desembolsar!` → `Datostecfinanza` + `prc_tecfinanzas` + `prc_procesocrediintegral` + `prc_obligacion` (sin `CREAROBLCUOTAMANEJO`).
+> - **Rotativo:** `Personasobligacion` + `prc_obligacion` + `prc_crediintegral(..., CREAROBLCUOTAMANEJO)`.
+> - **No** inserta recaudo ni asientos. El JSON trae `instrucciones_invictus` (`replicar_siga`, `afectar_caja`, `afectar_cartera`, `imprimir_colilla`, `afectar_contabilidad`) para el **cliente Invictus**.
+> - No reenviar si `status: success` o `already_disbursed`.
+
 ## Resumen
-Ejecuta el desembolso final del crédito al cliente después de validar identidad (OTP) y calcular descuentos. Registra la transacción en TESEO, genera movimientos contables, actualiza el estado del crédito a **desembolsado** y retorna confirmación para que Invictus entregue el dinero al cliente.
+Ejecuta el desembolso en TESEO (obligación / pipeline digital) tras OTP validado. Invictus usa la respuesta para entregar dinero al cliente. **TESEO no mueve caja/contabilidad en este controller.**
 
 ## Endpoint
 - **Método**: `POST`

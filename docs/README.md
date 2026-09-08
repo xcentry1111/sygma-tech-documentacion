@@ -1,5 +1,18 @@
 # Documentación de APIs
 
+## Invictus
+
+El mapa del flujo (originación → firma → desembolso) está en `docs/invictus_flujo.md`.
+Cada API de esa cadena debe incluir **flujo anterior/posterior** y **proceso interno**.
+No documentar rutas que no existan en TESEO (`config/routes.rb`).
+
+## Onboarding
+
+El mapa (auth → simulación → información básica) está en `docs/onboarding_flujo.md`.
+Misma regla: una API por archivo, proceso interno, flujo anterior/posterior.
+Catálogo aparte de Invictus. No documentar OTP/firma/desembolso Onboarding hasta que existan en `routes.rb`.
+Swagger TESEO: `/api/docs/onboarding`.
+
 ## Cómo documentar un servicio nuevo
 
 - Usa como base el estándar en `docs/API_DOC_STANDARD.md`.
