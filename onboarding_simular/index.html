@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../identificacion_descripcion/">
+        <link rel="prev" href="../onboarding_autenticar/">
       
       
-        <link rel="next" href="../identificacion_consulta_completo/">
+        <link rel="next" href="../onboarding_informacion_basica/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Identificación Básica - Documentación Sygma-Tech</title>
+        <title>Simular - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servicio-para-consultar-por-identificacion-obligaciones" class="md-skip">
+        <a href="#simular-onboarding" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Identificación Básica
+              Simular
             
           </span>
         </div>
@@ -649,18 +649,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -676,7 +678,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Onboarding (mapa)
@@ -733,10 +735,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../onboarding_simular/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Simular
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -747,6 +771,233 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-interno-orden-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso interno (orden real)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios / componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200-ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      200 OK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errores comunes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errores comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#422-params-o-rango" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — params o rango
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#404-sin-fila-en-planeshsimula" class="md-nav__link">
+    <span class="md-ellipsis">
+      404 — sin fila en planeshsimula
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401" class="md-nav__link">
+    <span class="md-ellipsis">
+      401
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500" class="md-nav__link">
+    <span class="md-ellipsis">
+      500
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-anterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo anterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo posterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas / Consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changelog
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1081,20 +1332,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1110,7 +1359,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Consultas Deudor + Obligaciones + Recaudos
@@ -1144,32 +1393,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Identificación Básica
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../identificacion_consulta/" class="md-nav__link">
         
   
   
@@ -1180,113 +1407,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Headers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consideraciones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Identificación no valida
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Token Invalido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-campos-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Campos Requeridos
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1940,9 +2060,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      URL de Integración
+      Resumen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticación
     </span>
   </a>
   
@@ -1958,64 +2105,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
+  <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
-      Consideraciones
+      Request
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+    <nav class="md-nav" aria-label="Request">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
+  <a href="#campos" class="md-nav__link">
     <span class="md-ellipsis">
-      Campos Obligatorios
+      Campos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
+  <a href="#ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      Respuesta Identificación no valida
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Token Invalido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-campos-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Campos Requeridos
+      Ejemplo
     </span>
   </a>
   
@@ -2023,6 +2134,135 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-interno-orden-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso interno (orden real)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios / componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200-ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      200 OK
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errores comunes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errores comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#422-params-o-rango" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — params o rango
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#404-sin-fila-en-planeshsimula" class="md-nav__link">
+    <span class="md-ellipsis">
+      404 — sin fila en planeshsimula
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401" class="md-nav__link">
+    <span class="md-ellipsis">
+      401
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500" class="md-nav__link">
+    <span class="md-ellipsis">
+      500
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-anterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo anterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo posterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas / Consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changelog
+    </span>
+  </a>
   
 </li>
       
@@ -2042,86 +2282,213 @@
 
 
 
-<h1 id="servicio-para-consultar-por-identificacion-obligaciones">Servicio para consultar por identificación + Obligaciones</h1>
-<p><strong>Descripción:</strong> Este servicio recibe dos parámetros para consultar a un deudor por su identificación y devuelve la información básica del deudor y del crédito.</p>
-<p><strong>Tipo de Servicio:</strong> POST</p>
-<h2 id="url-de-integracion"><strong>URL de Integración</strong></h2>
+<h1 id="simular-onboarding">Simular Onboarding</h1>
+<h2 id="resumen">Resumen</h2>
+<p>Calcula crédito de cupo fijo (cuota, fianzas, desembolso, plan de pagos). <strong>No persiste.</strong> Misma matemática que la vista <code>/simulador</code> y que el cálculo digital Invictus: <code>PlaneshsimulaCreditoService</code> + tabla <code>planeshsimula</code>.</p>
+<p>Mapa: <a href="../onboarding_flujo/">Flujo Onboarding</a>. En Invictus el cálculo API equivalente es <a href="../invictus-calculo-desembolso/">Cálculo desembolso</a>, pero <strong>después</strong> de originación/firma. Aquí ocurre <strong>antes</strong> de registrar al cliente.</p>
+<h2 id="objetivo">Objetivo</h2>
+<p>Mostrar al usuario términos (cuota, desembolso neto, plan) con los rangos del portafolio del JWT.</p>
+<h2 id="endpoint">Endpoint</h2>
 <ul>
-<li><strong>Prueba:</strong> <code>https://testing-sygma.com/api/consultar</code></li>
-<li><strong>Producción:</strong> <code>POR_DEFINIR/api/consultar</code></li>
+<li><strong>Método</strong>: <code>POST</code></li>
+<li><strong>Ruta</strong>: <code>/api/onboarding/simular</code></li>
+<li><strong>Controller</strong>: <code>Api::OnboardingController#simular</code></li>
+<li><strong>Ambientes</strong>:</li>
+<li><strong>Testing</strong>: <code>https://testing-sygma.com/api/onboarding/simular</code></li>
+<li><strong>Producción</strong>: <code>POR DEFINIR</code></li>
 </ul>
-<h2 id="headers"><strong>Headers</strong></h2>
-<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
+<h2 id="autenticacion">Autenticación</h2>
 <ul>
-<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
-<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
-<li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
-</ul>
-<h2 id="consideraciones"><strong>Consideraciones</strong></h2>
-<ul>
-<li>El parámetro <strong>servicio</strong> debe establecerse por defecto en <strong>CONSULTA_BASICO</strong>, ya que este valor permite al sistema identificar que se trata de una consulta por identificación.</li>
-<li>El parametro <strong>dato</strong> corresponde al <code>Número de Identificación</code> del deudor que se desea consultar.</li>
-<li>Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:</li>
+<li><strong>Tipo</strong>: JWT Bearer (<code>POST /api/onboarding/autenticar</code>)</li>
+<li><strong>Header</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+<li><strong>401</strong> (<code>ApiJwtAuthenticatable</code>, envelope distinto):</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No cuenta con los permisos para consumir el servicio&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;mensaje&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Token de autorización inválido o ausente&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="cuerpo-de-la-solicitud-raw"><strong>Cuerpo de la Solicitud (raw)</strong></h2>
-<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
-<h3 id="campos-obligatorios"><strong>Campos Obligatorios</strong></h3>
+<p>Token expirado: <code>"mensaje": "Token Expirado"</code>. JWT malformado: <code>"mensaje": "Token Inválido"</code> (+ <code>details</code>).</p>
+<h2 id="headers">Headers</h2>
+<ul>
+<li><strong>Authorization</strong>: <code>Bearer &lt;token&gt;</code> (obligatorio)</li>
+<li><strong>Accept</strong>: <code>application/json</code></li>
+<li><strong>Content-Type</strong>: <code>application/json</code></li>
+</ul>
+<h2 id="request">Request</h2>
+<p><code>monto</code> y <code>plazo</code> pueden ir en raíz o dentro de <code>datos</code>. <code>cuota</code> es alias de <code>plazo</code> (compatibilidad con el simulador web).</p>
+<h4 id="campos">Campos</h4>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Requerido</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>monto</td>
+<td>integer</td>
+<td>sí*</td>
+<td>Valor a simular. También <code>datos.monto</code>.</td>
+</tr>
+<tr>
+<td>plazo</td>
+<td>integer</td>
+<td>sí*</td>
+<td>Número de cuotas. También <code>datos.plazo</code>.</td>
+</tr>
+<tr>
+<td>cuota</td>
+<td>integer</td>
+<td>no</td>
+<td>Alias de <code>plazo</code>. También <code>datos.cuota</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>*Si falta o es ≤ 0 → 422.</p>
+<h4 id="ejemplo">Ejemplo</h4>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;servicio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CONSULTA_BASICO&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">&quot;dato&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37195302&quot;</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">&quot;monto&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;plazo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="respuesta-identificacion-no-valida"><strong>Respuesta Identificación no valida</strong></h3>
+<p>Alias:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No se encontro informacion sobre este registro - 37195302111&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span>
+<span class="w">  </span><span class="nt">&quot;monto&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;cuota&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="ejemplo-respuesta-succes"><strong>Ejemplo Respuesta Succes</strong></h3>
+<h2 id="proceso-interno-orden-real">Proceso interno (orden real)</h2>
+<ol>
+<li>JWT → <code>@user.portafolio_id</code>. Si <code>portafolio_id</code> ≤ 0 → 422 (portafolio no configurado).</li>
+<li>Lee <code>monto</code> / <code>plazo</code> (aliases).</li>
+<li><code>Onboarding::SimulacionService</code>:</li>
+<li><code>monto</code> y <code>plazo</code> &gt; 0.</li>
+<li>Rango: <code>onboarding_sim_monto_min/max</code>, <code>plazo_min/max</code>.</li>
+<li>Step: <code>(monto - min) % onboarding_sim_monto_step == 0</code> (si step &gt; 0).</li>
+<li><code>PlaneshsimulaCreditoService.calcular</code> — fila <code>planeshsimula</code> con <code>nro_cuota = '-1'</code> + sumas de cuotas reales.</li>
+<li>Si no hay plan → 404.</li>
+<li><code>PlaneshsimulaCreditoService.plan_pagos</code> — cuotas con <code>nro_cuota != '-1'</code>.</li>
+<li>Condiciones informativas: tasa EA, % fianza, % IVA, firma electrónica, estudio crédito (IDs de <code>parametros</code> configurables).</li>
+<li><code>fianza_anticipada</code> en respuesta = base + IVA (el service suma). <code>fianza_anticipada_base</code> e <code>iva_fianza</code> van aparte.</li>
+</ol>
+<p>No crea ni actualiza <code>Formulario</code>. No exige que exista información básica previa.</p>
+<h2 id="servicios-componentes">Servicios / componentes</h2>
+<ul>
+<li><code>Onboarding::ConfiguracionPortafolio</code></li>
+<li><code>Onboarding::SimulacionService</code></li>
+<li><code>PlaneshsimulaCreditoService</code></li>
+<li>Tabla <code>planeshsimula</code></li>
+<li><code>Parametro</code> ids 54 (tasa), 60 (firma), 10940 (estudio) — configurables; fianza/IVA del plan usan params 11900 y 57 <strong>dentro</strong> de <code>PlaneshsimulaCreditoService</code> (globales, no del CSV Onboarding)</li>
+</ul>
+<h2 id="responses">Responses</h2>
+<h3 id="200-ok">200 OK</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;persona&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;persona_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9755361&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;identificacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37195302&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PRUEBA&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;telefono&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_nro_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_pago_minimo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210000&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_pago_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;271045&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obligaciones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;monto&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;plazo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tasa_ea&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;valor_cuota&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">180000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fianza_anticipada&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">11900</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fianza_anticipada_base&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;iva_fianza&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1900</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;desembolso&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">188100</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;intereses&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fianza_regular&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;seguro&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;firma_electronica&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;estudio_credito&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;condiciones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;tasa_ea&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tarifa_fianza_pct&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;iva_fianza_pct&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">19.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;firma_electronica&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;estudio_credito&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;monto_min&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;monto_max&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;monto_step&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;plazo_min&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;plazo_max&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;plan_pagos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;personasobligacion_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8864800&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;nro_obligacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;204202004788&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;idcredito&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11632563&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;pago_minimo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210000&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;dias_mora&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;pago_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;271045&quot;</span>
+<span class="w">        </span><span class="nt">&quot;nro_cuota&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fecha_vence&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-10-01&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;inicial&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;capital&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">170000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;interes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;seguro&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;finanza&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;iva_fianza&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;plataforma&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cuota&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">180000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;final&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30000</span>
 <span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;mensaje&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simulación calculada correctamente.&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="respuesta-token-invalido"><strong>Respuesta Token Invalido</strong></h3>
+<p>Valores numéricos de cuota/desembolso dependen de <code>planeshsimula</code> en el ambiente. El ejemplo replica la forma del código + tests (<code>valor_cuota</code>, <code>desembolso</code>, <code>fianza_anticipada</code> = base + IVA).</p>
+<p><strong>Siguiente:</strong> mostrar términos. Luego <code>POST /api/onboarding/informacion_basica</code>. Este endpoint <strong>no</strong> desembolsar.</p>
+<h2 id="errores-comunes">Errores comunes</h2>
+<h3 id="422-params-o-rango">422 — params o rango</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Token Inválido&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Signature has expired&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;monto y plazo son requeridos&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="respuesta-campos-requeridos"><strong>Respuesta Campos Requeridos</strong></h3>
+<p>Fuera de rango (defaults 200000–1000000, plazo 1–6, step 10000):</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;El parámetro :dato es requerido&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;El monto o el plazo están fuera del rango permitido.&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Portafolio del usuario en 0 / nil:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;El portafolio del usuario no está configurado para onboarding.&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="404-sin-fila-en-planeshsimula">404 — sin fila en <code>planeshsimula</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Sin plan de simulación para el monto y plazo indicados.&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Combo típico válido en cupo fijo: <code>200000</code> / <code>1</code>. Si 404, el monto/plazo no existe en la tabla aunque pase el rango.</p>
+<h3 id="401">401</h3>
+<p>Ver sección Autenticación (<code>mensaje</code>, no <code>errors</code>).</p>
+<h3 id="500">500</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Error interno&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="flujo-anterior">Flujo anterior</h2>
+<p><code>POST /api/onboarding/autenticar</code>.</p>
+<h2 id="flujo-posterior">Flujo posterior</h2>
+<p><code>POST /api/onboarding/informacion_basica</code> (opcional respecto a este cálculo: el body de información básica <strong>no</strong> lleva monto/plazo hoy).</p>
+<h2 id="notas-consideraciones">Notas / Consideraciones</h2>
+<ul>
+<li>No es <code>proceso_desembolso</code>. No marca obligaciones. No genera OTP.</li>
+<li><code>tasa_ea</code> / <code>firma_electronica</code> / <code>estudio_credito</code> salen de <code>Parametro.find_by(id:)</code> según ids configurados. Si el id no existe → <code>0.0</code>.</li>
+<li>Rangos y mensajes se sobreescriben con <code>parametros</code> del <code>portafolio_id</code> del JWT.</li>
+</ul>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li><strong>2026-09-08</strong>: Alineado a <code>Onboarding::SimulacionService</code> y tests de <code>Api::OnboardingSimularTest</code>.</li>
+</ul>
 
 
 

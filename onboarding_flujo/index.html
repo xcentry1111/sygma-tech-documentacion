@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../identificacion_descripcion/">
+        <link rel="prev" href="../invictus_aprobacion_linea/">
       
       
-        <link rel="next" href="../identificacion_consulta_completo/">
+        <link rel="next" href="../onboarding_autenticar/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Identificación Básica - Documentación Sygma-Tech</title>
+        <title>Flujo completo - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servicio-para-consultar-por-identificacion-obligaciones" class="md-skip">
+        <a href="#mapa-onboarding-auth-simulacion-informacion-basica" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Identificación Básica
+              Flujo completo
             
           </span>
         </div>
@@ -649,18 +649,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -676,7 +678,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Onboarding (mapa)
@@ -687,10 +689,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../onboarding_flujo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Flujo completo
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -701,6 +725,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-onboarding-en-teseo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qué es Onboarding en TESEO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-general-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama general (implementado)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#envelope-json-regla-de-oro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Envelope JSON (regla de oro)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-con-invictus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación con Invictus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-hace-cada-etapa-detalle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qué hace cada etapa (detalle)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué hace cada etapa (detalle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-auth-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Auth — implementado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-simulacion-implementado-no-es-originacion-ni-desembolso" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Simulación — implementado (no es originación ni desembolso)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-originacion-ligera-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Originación ligera — implementado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-firma-de-documentos-no-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Firma de documentos — no implementado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-desembolso-no-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Desembolso — no implementado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-por-etapa-solo-rutas-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs por etapa (solo rutas reales)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-vs-invictus-que-falta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama vs Invictus (qué falta)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-de-negocio-por-portafolio_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros de negocio (por portafolio_id)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swagger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aislamiento-respecto-a-invictus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aislamiento respecto a Invictus
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1081,20 +1275,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1110,7 +1302,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Consultas Deudor + Obligaciones + Recaudos
@@ -1144,32 +1336,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Identificación Básica
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../identificacion_consulta/" class="md-nav__link">
         
   
   
@@ -1180,113 +1350,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Headers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consideraciones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Identificación no valida
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Token Invalido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-campos-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Campos Requeridos
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1940,82 +2003,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
+  <a href="#que-es-onboarding-en-teseo" class="md-nav__link">
     <span class="md-ellipsis">
-      URL de Integración
+      Qué es Onboarding en TESEO
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
+  <a href="#diagrama-general-implementado" class="md-nav__link">
     <span class="md-ellipsis">
-      Headers
+      Diagrama general (implementado)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
+  <a href="#envelope-json-regla-de-oro" class="md-nav__link">
     <span class="md-ellipsis">
-      Consideraciones
+      Envelope JSON (regla de oro)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
+  <a href="#comparacion-con-invictus" class="md-nav__link">
     <span class="md-ellipsis">
-      Cuerpo de la Solicitud (raw)
+      Comparación con Invictus
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-hace-cada-etapa-detalle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qué hace cada etapa (detalle)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qué hace cada etapa (detalle)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
+  <a href="#1-auth-implementado" class="md-nav__link">
     <span class="md-ellipsis">
-      Campos Obligatorios
+      1. Auth — implementado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
+  <a href="#2-simulacion-implementado-no-es-originacion-ni-desembolso" class="md-nav__link">
     <span class="md-ellipsis">
-      Respuesta Identificación no valida
+      2. Simulación — implementado (no es originación ni desembolso)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
+  <a href="#3-originacion-ligera-implementado" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
+      3. Originación ligera — implementado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuesta-token-invalido" class="md-nav__link">
+  <a href="#4-firma-de-documentos-no-implementado" class="md-nav__link">
     <span class="md-ellipsis">
-      Respuesta Token Invalido
+      4. Firma de documentos — no implementado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuesta-campos-requeridos" class="md-nav__link">
+  <a href="#5-desembolso-no-implementado" class="md-nav__link">
     <span class="md-ellipsis">
-      Respuesta Campos Requeridos
+      5. Desembolso — no implementado
     </span>
   </a>
   
@@ -2023,6 +2095,60 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-por-etapa-solo-rutas-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs por etapa (solo rutas reales)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-vs-invictus-que-falta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama vs Invictus (qué falta)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-de-negocio-por-portafolio_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros de negocio (por portafolio_id)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swagger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aislamiento-respecto-a-invictus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aislamiento respecto a Invictus
+    </span>
+  </a>
   
 </li>
       
@@ -2042,86 +2168,413 @@
 
 
 
-<h1 id="servicio-para-consultar-por-identificacion-obligaciones">Servicio para consultar por identificación + Obligaciones</h1>
-<p><strong>Descripción:</strong> Este servicio recibe dos parámetros para consultar a un deudor por su identificación y devuelve la información básica del deudor y del crédito.</p>
-<p><strong>Tipo de Servicio:</strong> POST</p>
-<h2 id="url-de-integracion"><strong>URL de Integración</strong></h2>
+<h1 id="mapa-onboarding-auth-simulacion-informacion-basica">Mapa Onboarding: auth → simulación → información básica</h1>
+<p>Fuente: código TESEO (<code>Api::OnboardingController</code>, <code>Onboarding::SimulacionService</code>, <code>Onboarding::InformacionBasicaService</code>, <code>Onboarding::ConfiguracionPortafolio</code>). <strong>No modifica Invictus.</strong> No hereda de <code>InvictusController</code>. No usa <code>/api/login</code>.</p>
+<p>Este documento es el <strong>mapa técnico</strong>. Cada API implementada tiene su página. Swagger TESEO: <code>/api/docs/onboarding</code>.</p>
+<p>Referencia de diseño: <a href="../invictus_flujo/">Flujo Invictus</a> (originación → firma → desembolso). Onboarding <strong>reutiliza ideas y servicios de cálculo</strong>, no las rutas Invictus.</p>
+<h2 id="que-es-onboarding-en-teseo">Qué es Onboarding en TESEO</h2>
+<p>API genérica por <code>portafolio_id</code> del usuario JWT. El primer portafolio configurado es <strong>10053</strong> (cupo fijo). Campos, mensajes, rangos del simulador y <code>tipo</code> de <code>Formulario</code> salen de <code>parametros</code>.</p>
+<p>Flujo real <strong>hoy</strong> (rutas en <code>config/routes.rb</code>):</p>
+<ol>
+<li><strong>Auth</strong> — <code>POST /api/onboarding/autenticar</code> emite JWT (1 hora) y devuelve <code>portafolio_id</code>.</li>
+<li><strong>Simulación</strong> — <code>POST /api/onboarding/simular</code> calcula cupo fijo (no persiste).</li>
+<li><strong>Información básica</strong> — <code>POST /api/onboarding/informacion_basica</code> crea o actualiza <code>Formulario</code> (tipo parametrizado; fallback <code>ONBOARDING</code>). No toca filas <code>tipo: INVICTUS</code>.</li>
+</ol>
+<p>No hay OTP, Truora, firma digital ni desembolso en este catálogo. Esos pasos existen solo en Invictus.</p>
+<h2 id="diagrama-general-implementado">Diagrama general (implementado)</h2>
+<pre class="mermaid"><code>flowchart LR
+  subgraph auth [Auth]
+    A["POST /api/onboarding/autenticar"]
+  end
+
+  subgraph sim [Simulación]
+    S["POST /api/onboarding/simular"]
+  end
+
+  subgraph ori [Originación ligera]
+    I["POST /api/onboarding/informacion_basica"]
+  end
+
+  A --&gt; S --&gt; I
+  A --&gt; I</code></pre>
+<p><code>simular</code> e <code>informacion_basica</code> son independientes entre sí. Ambos exigen JWT. El cliente puede simular primero (mostrar cuota) y luego registrar datos, o registrar datos si ya tiene el monto.</p>
+<h2 id="envelope-json-regla-de-oro">Envelope JSON (regla de oro)</h2>
+<p>Éxito y error de negocio del controller Onboarding:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Error de negocio:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;texto&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Excepción:</strong> JWT inválido/ausente/expirado (<code>ApiJwtAuthenticatable</code>) <strong>no</strong> usa <code>datos</code>/<code>errors</code>. Usa <code>mensaje</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;mensaje&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Token de autorización inválido o ausente&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Login Invictus (<code>POST /api/login</code>) usa otro contrato (<code>status: true/false</code>, <code>auth_token</code> en raíz). No mezclar.</p>
+<h2 id="comparacion-con-invictus">Comparación con Invictus</h2>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Invictus (existe)</th>
+<th>Onboarding (hoy)</th>
+<th>Correspondencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auth</td>
+<td><code>POST /api/login</code></td>
+<td><code>POST /api/onboarding/autenticar</code></td>
+<td>Mismo <code>AuthenticateUser</code> + JWT 1h. Envelope distinto. Onboarding además devuelve <code>user_id</code> y <code>portafolio_id</code>.</td>
+</tr>
+<tr>
+<td>Simulación comercial</td>
+<td>Vista web <code>/simulador</code> (no es API Invictus)</td>
+<td><code>POST /api/onboarding/simular</code></td>
+<td><strong>Paso extra de Onboarding.</strong> Matemática = <code>PlaneshsimulaCreditoService</code> (misma que desembolso digital Invictus / <code>calcular_desembolso</code>). No persiste.</td>
+</tr>
+<tr>
+<td>Originación</td>
+<td><code>POST /api/ori_invictus</code></td>
+<td><code>POST /api/onboarding/informacion_basica</code></td>
+<td>Ambos persisten <code>Formulario</code>. Invictus: portafolio 10053, <code>tipo: INVICTUS</code>, listas, mora, Experian, OTP generado sin enviar, estados <code>estado_invictus</code>. Onboarding: <code>tipo</code> parametrizado, validación de campos CSV, <strong>sin</strong> listas/Experian/OTP/estados Invictus.</td>
+</tr>
+<tr>
+<td>OTP originación</td>
+<td><code>notificacion_canal</code>, <code>reenviar_otp</code>, <code>validar_otp</code></td>
+<td><strong>No existe</strong></td>
+<td>Pendiente si el producto lo requiere.</td>
+</tr>
+<tr>
+<td>KYC Truora</td>
+<td>webhook <code>truora/webhook_invictus</code></td>
+<td><strong>No existe</strong></td>
+<td>Invictus cierra originación cuando <code>EN_VERIFICACION</code>.</td>
+</tr>
+<tr>
+<td>Firma digital</td>
+<td><code>validacion_firma_digital</code>, <code>validacion_otp_firma</code>, <code>reenvio_otp_firma</code></td>
+<td><strong>No existe</strong></td>
+<td>Invictus pasa a <code>APROBADO</code>.</td>
+</tr>
+<tr>
+<td>Desembolso</td>
+<td><code>validacion_credito_vigente</code> → OTP → <code>seleccionar_linea_credito</code> → <code>calcular_desembolso</code> → <code>proceso_desembolso</code></td>
+<td><strong>No existe</strong></td>
+<td><code>simular</code> <strong>no</strong> es desembolso. Solo cotiza.</td>
+</tr>
+<tr>
+<td>Persistencia</td>
+<td><code>Formulario</code> <code>tipo: INVICTUS</code></td>
+<td><code>Formulario</code> <code>tipo</code> = <code>onboarding_formulario_tipo</code> (10053 suele ser <code>DIGITAL</code>; fallback código <code>ONBOARDING</code>)</td>
+<td>Filtro por <code>tipo</code> + <code>portafolio_id</code> + <code>identificacion</code>. No pisa solicitudes Invictus.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="que-hace-cada-etapa-detalle">Qué hace cada etapa (detalle)</h2>
+<h3 id="1-auth-implementado">1. Auth — implementado</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cuándo</strong></td>
+<td>Primer paso. Sin <code>Authorization</code>.</td>
+</tr>
+<tr>
+<td><strong>Recibe</strong></td>
+<td><code>username</code>, <code>password</code></td>
+</tr>
+<tr>
+<td><strong>Hace</strong></td>
+<td><code>User.find_for_authentication</code> + <code>AuthenticateUser.call</code> → JWT <code>{ user_id, exp }</code></td>
+</tr>
+<tr>
+<td><strong>Siguiente</strong></td>
+<td>Bearer en <code>simular</code> y/o <code>informacion_basica</code></td>
+</tr>
+<tr>
+<td><strong>Página</strong></td>
+<td><a href="../onboarding_autenticar/">Autenticar</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-simulacion-implementado-no-es-originacion-ni-desembolso">2. Simulación — implementado (no es originación ni desembolso)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cuándo</strong></td>
+<td>Tras autenticar. Antes de mostrar términos al usuario.</td>
+</tr>
+<tr>
+<td><strong>Recibe</strong></td>
+<td><code>monto</code> + <code>plazo</code> (<code>cuota</code> = alias de <code>plazo</code>)</td>
+</tr>
+<tr>
+<td><strong>Hace</strong></td>
+<td>Valida rango de parámetros del portafolio → <code>PlaneshsimulaCreditoService.calcular</code> + <code>plan_pagos</code></td>
+</tr>
+<tr>
+<td><strong>No hace</strong></td>
+<td>No crea <code>Formulario</code>. No exige OTP. No desembolsar.</td>
+</tr>
+<tr>
+<td><strong>Siguiente</strong></td>
+<td>UI muestra cuota/desembolso. Luego <code>informacion_basica</code>.</td>
+</tr>
+<tr>
+<td><strong>Página</strong></td>
+<td><a href="../onboarding_simular/">Simular</a></td>
+</tr>
+</tbody>
+</table>
+<p>Equivalente Invictus más cercano: <code>POST /api/calcular_desembolso</code> (simulación sin persistir, <strong>en etapa desembolso</strong>, con solicitud ya <code>APROBADO</code>). En Onboarding el cálculo ocurre <strong>antes</strong> de originar.</p>
+<h3 id="3-originacion-ligera-implementado">3. Originación ligera — implementado</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cuándo</strong></td>
+<td>Tras autenticar (con o sin simular).</td>
+</tr>
+<tr>
+<td><strong>Recibe</strong></td>
+<td><code>{ datos: { ...campos } }</code></td>
+</tr>
+<tr>
+<td><strong>Hace</strong></td>
+<td>CSV habilitados/obligatorios → formato email/celular/fechas → create/update <code>Formulario</code></td>
+</tr>
+<tr>
+<td><strong>No hace</strong></td>
+<td>Listas restrictivas, Experian, Truora, generación OTP, <code>estado_invictus</code>, validadores Credintegral (<code>save(validate: false)</code>)</td>
+</tr>
+<tr>
+<td><strong>Siguiente</strong></td>
+<td>Conservar <code>guid</code> (<code>transaction_id_teseo</code>) para servicios futuros. Hoy no hay siguiente API Onboarding.</td>
+</tr>
+<tr>
+<td><strong>Página</strong></td>
+<td><a href="../onboarding_informacion_basica/">Información básica</a></td>
+</tr>
+</tbody>
+</table>
+<p>Equivalente Invictus: <code>POST /api/ori_invictus</code>, pero recortado a persistencia de datos.</p>
+<h3 id="4-firma-de-documentos-no-implementado">4. Firma de documentos — no implementado</h3>
+<p>En Invictus: OTP de firma cuando <code>estado_invictus = APROBADO_PENDIENTE_FIRMA</code>. Ver <a href="../validacion_firma_digital/">Firma digital</a>.</p>
+<p>Onboarding no expone rutas de firma. No llamar <code>/api/validacion_firma_digital</code> con un <code>guid</code> de Onboarding: ese flujo espera <code>Formulario</code> Invictus.</p>
+<h3 id="5-desembolso-no-implementado">5. Desembolso — no implementado</h3>
+<p>En Invictus: OTP desembolso + líneas + <code>proceso_desembolso</code> irreversible. Ver <a href="../invictus_desmebolso/">Desembolso</a>.</p>
+<p>Onboarding no expone esas rutas. <code>simular</code> solo cotiza.</p>
+<h2 id="apis-por-etapa-solo-rutas-reales">APIs por etapa (solo rutas reales)</h2>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Método</th>
+<th>Ruta</th>
+<th>Estado</th>
+<th>Página</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auth</td>
+<td>POST</td>
+<td><code>/api/onboarding/autenticar</code></td>
+<td>Implementado</td>
+<td><a href="../onboarding_autenticar/">Autenticar</a></td>
+</tr>
+<tr>
+<td>Simulación</td>
+<td>POST</td>
+<td><code>/api/onboarding/simular</code></td>
+<td>Implementado</td>
+<td><a href="../onboarding_simular/">Simular</a></td>
+</tr>
+<tr>
+<td>Originación</td>
+<td>POST</td>
+<td><code>/api/onboarding/informacion_basica</code></td>
+<td>Implementado</td>
+<td><a href="../onboarding_informacion_basica/">Información básica</a></td>
+</tr>
+<tr>
+<td>OTP / KYC / Firma / Desembolso</td>
+<td>—</td>
+<td>—</td>
+<td><strong>No hay rutas</strong></td>
+<td>Usar mapa <a href="../invictus_flujo/">Invictus</a> solo como referencia de diseño</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diagrama-vs-invictus-que-falta">Diagrama vs Invictus (qué falta)</h2>
+<pre class="mermaid"><code>flowchart TD
+  A["Onboarding autenticar"] --&gt; S["Onboarding simular"]
+  A --&gt; I["Onboarding informacion_basica"]
+  S --&gt; I
+  I --&gt; GAP["Sin API Onboarding aún"]
+  GAP -.-&gt; OTP["Invictus: OTP originación"]
+  GAP -.-&gt; KYC["Invictus: Truora KYC"]
+  GAP -.-&gt; FIR["Invictus: firma digital"]
+  GAP -.-&gt; DES["Invictus: desembolso"]</code></pre>
+<p>Líneas punteadas = referencia de producto, <strong>no</strong> son llamadas válidas desde un <code>guid</code> Onboarding.</p>
+<h2 id="componentes">Componentes</h2>
+<table>
+<thead>
+<tr>
+<th>Pieza</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Api::OnboardingController</code></td>
+<td>3 acciones. Envelope <code>status</code> / <code>datos</code> / <code>errors</code>.</td>
+</tr>
+<tr>
+<td><code>ApiJwtAuthenticatable</code></td>
+<td>JWT Bearer (mismo secreto que <code>/api/login</code>).</td>
+</tr>
+<tr>
+<td><code>AuthenticateUser</code></td>
+<td>Emisión de token (mismo comando que login TESEO).</td>
+</tr>
+<tr>
+<td><code>Onboarding::ConfiguracionPortafolio</code></td>
+<td>Lee <code>parametros</code> por <code>portafolio_id</code>. Defaults en código si no hay fila.</td>
+</tr>
+<tr>
+<td><code>Onboarding::SimulacionService</code></td>
+<td>Rangos + <code>PlaneshsimulaCreditoService</code>.</td>
+</tr>
+<tr>
+<td><code>Onboarding::InformacionBasicaService</code></td>
+<td>Validación de campos y persistencia.</td>
+</tr>
+<tr>
+<td><code>PlaneshsimulaCreditoService</code></td>
+<td>Tabla <code>planeshsimula</code>. Compartido con <code>/simulador</code> e Invictus digital.</td>
+</tr>
+<tr>
+<td><code>Formulario</code></td>
+<td>Misma tabla que Invictus. Discriminador: <code>tipo</code> + <code>portafolio_id</code>.</td>
+</tr>
+<tr>
+<td><code>User.portafolio_id</code></td>
+<td>Define qué parámetros aplican. No viaja en el body.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parametros-de-negocio-por-portafolio_id">Parámetros de negocio (por <code>portafolio_id</code>)</h2>
+<p>Si no existe fila en <code>parametros</code>, el código usa el default.</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro (<code>descripcion</code>)</th>
+<th>Default</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onboarding_campos_habilitados</code></td>
+<td>CSV identidad/contacto</td>
+<td>Campos aceptados en <code>datos</code></td>
+</tr>
+<tr>
+<td><code>onboarding_campos_obligatorios</code></td>
+<td>CSV (sin segundo nombre/apellido ni teléfono)</td>
+<td>422 si faltan</td>
+</tr>
+<tr>
+<td><code>onboarding_formulario_tipo</code></td>
+<td><code>ONBOARDING</code></td>
+<td><code>formularios.tipo</code> (10053 suele parametrizarse <code>DIGITAL</code>)</td>
+</tr>
+<tr>
+<td><code>onboarding_sim_monto_min</code></td>
+<td>200000</td>
+<td>Rango simulador</td>
+</tr>
+<tr>
+<td><code>onboarding_sim_monto_max</code></td>
+<td>1000000</td>
+<td></td>
+</tr>
+<tr>
+<td><code>onboarding_sim_monto_step</code></td>
+<td>10000</td>
+<td>El monto debe caer en el step</td>
+</tr>
+<tr>
+<td><code>onboarding_sim_plazo_min</code></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>onboarding_sim_plazo_max</code></td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td><code>onboarding_param_tasa_id</code></td>
+<td>54</td>
+<td><code>Parametro</code> tasa EA</td>
+</tr>
+<tr>
+<td><code>onboarding_param_firma_id</code></td>
+<td>60</td>
+<td>Costo firma electrónica (informativo en simulación)</td>
+</tr>
+<tr>
+<td><code>onboarding_param_estudio_id</code></td>
+<td>10940</td>
+<td>Costo estudio crédito</td>
+</tr>
+<tr>
+<td><code>onboarding_msg_*</code></td>
+<td>ver <code>ConfiguracionPortafolio::MSG</code></td>
+<td>Textos de respuesta</td>
+</tr>
+</tbody>
+</table>
+<h2 id="swagger">Swagger</h2>
+<p>En TESEO (dev / testing-sygma / <code>API_SWAGGER=1</code>): <code>/api/docs/onboarding</code></p>
+<p>Specs en repo app: <code>doc/api/onboarding.yaml</code> + <code>doc/api/onboarding_guia.yaml</code>.</p>
+<h2 id="aislamiento-respecto-a-invictus">Aislamiento respecto a Invictus</h2>
 <ul>
-<li><strong>Prueba:</strong> <code>https://testing-sygma.com/api/consultar</code></li>
-<li><strong>Producción:</strong> <code>POR_DEFINIR/api/consultar</code></li>
+<li>Rutas distintas (<code>/api/onboarding/*</code> vs <code>/api/ori_invictus</code>, <code>/api/login</code>, etc.).</li>
+<li>Controller propio. Cero herencia Invictus.</li>
+<li><code>informacion_basica</code> filtra <code>Formulario</code> por <code>tipo</code> Onboarding. No actualiza <code>tipo: INVICTUS</code>.</li>
+<li><code>save(validate: false)</code> evita disparar validadores Credintegral de portafolio 10053 (esos validadores no distinguen tipo).</li>
+<li>Mismo JWT secret que el resto de APIs TESEO: un token de <code>autenticar</code> <strong>sí</strong> autenticaría técnicamente otras APIs JWT. El contrato de negocio de Onboarding es usar solo <code>/api/onboarding/*</code>.</li>
 </ul>
-<h2 id="headers"><strong>Headers</strong></h2>
-<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
-<ul>
-<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
-<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
-<li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
-</ul>
-<h2 id="consideraciones"><strong>Consideraciones</strong></h2>
-<ul>
-<li>El parámetro <strong>servicio</strong> debe establecerse por defecto en <strong>CONSULTA_BASICO</strong>, ya que este valor permite al sistema identificar que se trata de una consulta por identificación.</li>
-<li>El parametro <strong>dato</strong> corresponde al <code>Número de Identificación</code> del deudor que se desea consultar.</li>
-<li>Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No cuenta con los permisos para consumir el servicio&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="cuerpo-de-la-solicitud-raw"><strong>Cuerpo de la Solicitud (raw)</strong></h2>
-<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
-<h3 id="campos-obligatorios"><strong>Campos Obligatorios</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;servicio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CONSULTA_BASICO&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">&quot;dato&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37195302&quot;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="respuesta-identificacion-no-valida"><strong>Respuesta Identificación no valida</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No se encontro informacion sobre este registro - 37195302111&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="ejemplo-respuesta-succes"><strong>Ejemplo Respuesta Succes</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;persona&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;persona_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9755361&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;identificacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37195302&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PRUEBA&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;telefono&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_nro_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_pago_minimo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210000&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_pago_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;271045&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obligaciones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;personasobligacion_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8864800&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;nro_obligacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;204202004788&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;idcredito&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11632563&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;pago_minimo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210000&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;dias_mora&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;pago_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;271045&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="respuesta-token-invalido"><strong>Respuesta Token Invalido</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Token Inválido&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Signature has expired&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="respuesta-campos-requeridos"><strong>Respuesta Campos Requeridos</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;El parámetro :dato es requerido&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
-<span class="p">}</span>
-</code></pre></div>
 
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../identificacion_descripcion/">
+        <link rel="prev" href="../onboarding_simular/">
       
       
-        <link rel="next" href="../identificacion_consulta_completo/">
+        <link rel="next" href="../wolbox/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Identificación Básica - Documentación Sygma-Tech</title>
+        <title>Información básica - Documentación Sygma-Tech</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servicio-para-consultar-por-identificacion-obligaciones" class="md-skip">
+        <a href="#informacion-basica-onboarding" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Identificación Básica
+              Información básica
             
           </span>
         </div>
@@ -649,18 +649,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -676,7 +678,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Onboarding (mapa)
@@ -756,10 +758,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../onboarding_informacion_basica/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Información básica
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -770,6 +794,260 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campos (defaults)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-interno-orden-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso interno (orden real)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios / componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200-ok-alta-o-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      200 OK (alta o update)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errores comunes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errores comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#422-falta-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — falta datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-campo-obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — campo obligatorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-formato" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — formato
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — persistencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — portafolio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401" class="md-nav__link">
+    <span class="md-ellipsis">
+      401
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500" class="md-nav__link">
+    <span class="md-ellipsis">
+      500
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-anterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo anterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo posterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas / Consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changelog
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1081,20 +1359,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1110,7 +1386,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Consultas Deudor + Obligaciones + Recaudos
@@ -1144,32 +1420,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Identificación Básica
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../identificacion_consulta/" class="md-nav__link">
         
   
   
@@ -1180,113 +1434,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      URL de Integración
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Headers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      Consideraciones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
-    <span class="md-ellipsis">
-      Campos Obligatorios
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Identificación no valida
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Token Invalido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-campos-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Campos Requeridos
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1940,9 +2087,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#url-de-integracion" class="md-nav__link">
+  <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
-      URL de Integración
+      Resumen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autenticación
     </span>
   </a>
   
@@ -1958,64 +2132,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consideraciones" class="md-nav__link">
+  <a href="#request" class="md-nav__link">
     <span class="md-ellipsis">
-      Consideraciones
+      Request
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cuerpo-de-la-solicitud-raw" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cuerpo de la Solicitud (raw)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cuerpo de la Solicitud (raw)">
+    <nav class="md-nav" aria-label="Request">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#campos-obligatorios" class="md-nav__link">
+  <a href="#campos-defaults" class="md-nav__link">
     <span class="md-ellipsis">
-      Campos Obligatorios
+      Campos (defaults)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#respuesta-identificacion-no-valida" class="md-nav__link">
+  <a href="#ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      Respuesta Identificación no valida
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-respuesta-succes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo Respuesta Succes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-token-invalido" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Token Invalido
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#respuesta-campos-requeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Respuesta Campos Requeridos
+      Ejemplo
     </span>
   </a>
   
@@ -2023,6 +2161,162 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-interno-orden-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proceso interno (orden real)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios / componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#200-ok-alta-o-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      200 OK (alta o update)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errores comunes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errores comunes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#422-falta-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — falta datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-campo-obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — campo obligatorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-formato" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — formato
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — persistencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      422 — portafolio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401" class="md-nav__link">
+    <span class="md-ellipsis">
+      401
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500" class="md-nav__link">
+    <span class="md-ellipsis">
+      500
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-anterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo anterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flujo posterior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas / Consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changelog
+    </span>
+  </a>
   
 </li>
       
@@ -2042,86 +2336,264 @@
 
 
 
-<h1 id="servicio-para-consultar-por-identificacion-obligaciones">Servicio para consultar por identificación + Obligaciones</h1>
-<p><strong>Descripción:</strong> Este servicio recibe dos parámetros para consultar a un deudor por su identificación y devuelve la información básica del deudor y del crédito.</p>
-<p><strong>Tipo de Servicio:</strong> POST</p>
-<h2 id="url-de-integracion"><strong>URL de Integración</strong></h2>
+<h1 id="informacion-basica-onboarding">Información básica Onboarding</h1>
+<h2 id="resumen">Resumen</h2>
+<p>Crea o actualiza un <code>Formulario</code> de Onboarding (no Invictus). Campos habilitados/obligatorios salen de <code>parametros</code> del <code>portafolio_id</code> del JWT. Devuelve <code>id</code> y <code>guid</code> (<code>transaction_id_teseo</code>).</p>
+<p>Mapa: <a href="../onboarding_flujo/">Flujo Onboarding</a>. Equivalente Invictus recortado: <a href="../invictus_originacion_import/">Originación <code>ori_invictus</code></a>. Este endpoint <strong>no</strong> consulta listas, Experian, mora ni genera OTP.</p>
+<h2 id="objetivo">Objetivo</h2>
+<p>Registrar datos de identidad y contacto para el flujo Onboarding, reutilizando la tabla <code>formularios</code> con otro <code>tipo</code>.</p>
+<h2 id="endpoint">Endpoint</h2>
 <ul>
-<li><strong>Prueba:</strong> <code>https://testing-sygma.com/api/consultar</code></li>
-<li><strong>Producción:</strong> <code>POR_DEFINIR/api/consultar</code></li>
+<li><strong>Método</strong>: <code>POST</code></li>
+<li><strong>Ruta</strong>: <code>/api/onboarding/informacion_basica</code></li>
+<li><strong>Controller</strong>: <code>Api::OnboardingController#informacion_basica</code></li>
+<li><strong>Ambientes</strong>:</li>
+<li><strong>Testing</strong>: <code>https://testing-sygma.com/api/onboarding/informacion_basica</code></li>
+<li><strong>Producción</strong>: <code>POR DEFINIR</code></li>
 </ul>
-<h2 id="headers"><strong>Headers</strong></h2>
-<p>El proceso requiere los siguientes encabezados en la solicitud:</p>
+<h2 id="autenticacion">Autenticación</h2>
 <ul>
-<li><strong>Accept:</strong> <code>application/json</code> (Obligatorio)</li>
-<li><strong>Content-Type:</strong> <code>application/json</code> (Obligatorio)</li>
-<li><strong>Authorization:</strong> <code>Bearer ${token}</code> (Obligatorio)</li>
+<li><strong>Tipo</strong>: JWT Bearer (<code>POST /api/onboarding/autenticar</code>)</li>
+<li><strong>Header</strong>: <code>Authorization: Bearer &lt;token&gt;</code></li>
+<li><strong>401</strong>: <code>{ "status": "error", "mensaje": "Token de autorización inválido o ausente" }</code> (ver <a href="../onboarding_autenticar/">Autenticar</a>)</li>
 </ul>
-<h2 id="consideraciones"><strong>Consideraciones</strong></h2>
+<h2 id="headers">Headers</h2>
 <ul>
-<li>El parámetro <strong>servicio</strong> debe establecerse por defecto en <strong>CONSULTA_BASICO</strong>, ya que este valor permite al sistema identificar que se trata de una consulta por identificación.</li>
-<li>El parametro <strong>dato</strong> corresponde al <code>Número de Identificación</code> del deudor que se desea consultar.</li>
-<li>Si este parámetro no es proporcionado, el sistema responderá con el siguiente error:</li>
+<li><strong>Authorization</strong>: <code>Bearer &lt;token&gt;</code> (obligatorio)</li>
+<li><strong>Accept</strong>: <code>application/json</code></li>
+<li><strong>Content-Type</strong>: <code>application/json</code></li>
 </ul>
+<h2 id="request">Request</h2>
+<p>Cuerpo en clave <strong><code>datos</code></strong>. Sin ella → 422.</p>
+<p>Obligatoriedad exacta = CSV <code>onboarding_campos_obligatorios</code> del portafolio. La tabla abajo es el <strong>default de código</strong> (si no hay parámetro).</p>
+<h3 id="campos-defaults">Campos (defaults)</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Requerido (default)</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>datos</td>
+<td>object</td>
+<td>sí</td>
+<td>Wrapper.</td>
+</tr>
+<tr>
+<td>datos.tiposdocumento_id</td>
+<td>string</td>
+<td>sí</td>
+<td>Tipo documento.</td>
+</tr>
+<tr>
+<td>datos.identificacion</td>
+<td>string</td>
+<td>sí</td>
+<td>Número. Alias: <code>numero_identificacion</code>.</td>
+</tr>
+<tr>
+<td>datos.fecha_nacimiento</td>
+<td>string</td>
+<td>sí</td>
+<td>Fecha. No futura.</td>
+</tr>
+<tr>
+<td>datos.fecha_expedicion</td>
+<td>string</td>
+<td>sí</td>
+<td>Fecha. No futura.</td>
+</tr>
+<tr>
+<td>datos.ciudadexpedicion_id</td>
+<td>integer</td>
+<td>sí</td>
+<td>Alias: <code>ciudad_expedicion</code>.</td>
+</tr>
+<tr>
+<td>datos.primer_nombre</td>
+<td>string</td>
+<td>sí</td>
+<td>Alias: <code>nombres</code>.</td>
+</tr>
+<tr>
+<td>datos.segundo_nombre</td>
+<td>string</td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>datos.primer_apellido</td>
+<td>string</td>
+<td>sí</td>
+<td>Alias: <code>apellidos</code>.</td>
+</tr>
+<tr>
+<td>datos.segundo_apellido</td>
+<td>string</td>
+<td>no</td>
+<td></td>
+</tr>
+<tr>
+<td>datos.celular</td>
+<td>string</td>
+<td>sí</td>
+<td>Mínimo 10 dígitos (se ignoran no-dígitos al validar).</td>
+</tr>
+<tr>
+<td>datos.telefono</td>
+<td>string</td>
+<td>no</td>
+<td>Celular secundario. Alias: <code>celular_secundario</code>. Mismo mínimo 10 si viene.</td>
+</tr>
+<tr>
+<td>datos.email</td>
+<td>string</td>
+<td>sí</td>
+<td>Regex email.</td>
+</tr>
+</tbody>
+</table>
+<p>Solo se persisten claves listadas en <code>onboarding_campos_habilitados</code>. El resto del JSON se ignora.</p>
+<h3 id="ejemplo">Ejemplo</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No cuenta con los permisos para consumir el servicio&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="cuerpo-de-la-solicitud-raw"><strong>Cuerpo de la Solicitud (raw)</strong></h2>
-<p>La información debe enviarse en formato JSON. <strong>Ejemplo:</strong></p>
-<h3 id="campos-obligatorios"><strong>Campos Obligatorios</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;servicio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CONSULTA_BASICO&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">&quot;dato&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37195302&quot;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="respuesta-identificacion-no-valida"><strong>Respuesta Identificación no valida</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No se encontro informacion sobre este registro - 37195302111&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="ejemplo-respuesta-succes"><strong>Ejemplo Respuesta Succes</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;persona&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;persona_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9755361&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;identificacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;37195302&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PRUEBA&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;telefono&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_nro_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_pago_minimo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210000&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obl_pago_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;271045&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;obligaciones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;personasobligacion_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8864800&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;nro_obligacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;204202004788&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;idcredito&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11632563&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;pago_minimo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;210000&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;dias_mora&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;pago_total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;271045&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;tiposdocumento_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;identificacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234567890&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fecha_nacimiento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1990-01-15&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fecha_expedicion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2008-03-20&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ciudadexpedicion_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;primer_nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ANA&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;segundo_nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MARIA&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;primer_apellido&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PEREZ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;segundo_apellido&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GOMEZ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;celular&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3001234567&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;telefono&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3109876543&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ana.perez@example.com&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="respuesta-token-invalido"><strong>Respuesta Token Invalido</strong></h3>
+<p>Con aliases:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Token Inválido&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Signature has expired&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;tiposdocumento_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;numero_identificacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234567890&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fecha_nacimiento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1990-01-15&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fecha_expedicion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2008-03-20&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ciudad_expedicion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;nombres&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ANA&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;apellidos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PEREZ&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;celular&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3001234567&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;celular_secundario&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3109876543&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ana.perez@example.com&quot;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="respuesta-campos-requeridos"><strong>Respuesta Campos Requeridos</strong></h3>
+<h2 id="proceso-interno-orden-real">Proceso interno (orden real)</h2>
+<ol>
+<li>JWT → portafolio. Si no configurado → 422.</li>
+<li>Si falta clave <code>datos</code> → 422.</li>
+<li>Normaliza aliases (<code>numero_identificacion</code> → <code>identificacion</code>, etc.).</li>
+<li>Si CSV habilitados vacío → 422.</li>
+<li>Extrae solo campos habilitados.</li>
+<li>Faltantes vs CSV obligatorios → 422 con lista entre paréntesis.</li>
+<li>Formato: email, celular ≥ 10 dígitos, teléfono ≥ 10 si presente, fechas parseables y no futuras.</li>
+<li>Busca <code>Formulario</code> con <code>portafolio_id</code> + <code>tipo</code> (param <code>onboarding_formulario_tipo</code>, default <code>ONBOARDING</code>) + <code>identificacion</code>. Toma el de <code>id</code> más alto.</li>
+<li>Si no hay: <code>Formulario.new</code> y asigna <code>transaction_id_teseo</code> = <code>SecureRandom.hex(10)</code>.</li>
+<li>Si hay: actualiza atributos. Si el <code>guid</code> estaba vacío, lo genera.</li>
+<li>Fija <code>user_id</code> del JWT y <code>origen_solicitud: "ONBOARDING API"</code>.</li>
+<li><code>save(validate: false)</code> — no corre validadores Credintegral de 10053.</li>
+<li>Si <code>save</code> falla → 422 registro error.</li>
+</ol>
+<p>No escribe <code>estado_invictus</code>. No llama listas/Experian/Truora. No genera OTP.</p>
+<h2 id="servicios-componentes">Servicios / componentes</h2>
+<ul>
+<li><code>Onboarding::InformacionBasicaService</code></li>
+<li><code>Onboarding::ConfiguracionPortafolio</code></li>
+<li>Modelo <code>Formulario</code></li>
+</ul>
+<h2 id="responses">Responses</h2>
+<h3 id="200-ok-alta-o-update">200 OK (alta o update)</h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;El parámetro :dato es requerido&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;guid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;guidonb1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tipo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ONBOARDING&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;portafolio_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10053</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;identificacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234567890&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mensaje&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;La información fue registrada correctamente.&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Si el portafolio tiene <code>onboarding_formulario_tipo = DIGITAL</code>, <code>datos.tipo</code> será <code>"DIGITAL"</code> (caso 10053 en OpenAPI).</p>
+<p><strong>Siguiente hoy:</strong> guardar <code>guid</code>. No hay siguiente endpoint Onboarding. No usar este <code>guid</code> en APIs Invictus (<code>notificacion_canal</code>, firma, desembolso).</p>
+<h2 id="errores-comunes">Errores comunes</h2>
+<h3 id="422-falta-datos">422 — falta <code>datos</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Body inválido: falta la clave &#39;datos&#39;&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="422-campo-obligatorio">422 — campo obligatorio</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Faltan campos obligatorios. (identificacion, email, ...)&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="422-formato">422 — formato</h3>
+<p>Mensajes concatenados con <code>|</code> si hay varios:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;email inválido&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Otros textos de código: <code>celular debe tener al menos 10 dígitos</code>, <code>celular_secundario / telefono debe tener al menos 10 dígitos</code>, <code>fecha_nacimiento inválida</code>, <code>fecha_nacimiento no puede ser futura</code> (igual para <code>fecha_expedicion</code>).</p>
+<h3 id="422-persistencia">422 — persistencia</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;No fue posible registrar la información.&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="422-portafolio">422 — portafolio</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;El portafolio del usuario no está configurado para onboarding.&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="401">401</h3>
+<p>Ver Autenticación.</p>
+<h3 id="500">500</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;datos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Error interno&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="flujo-anterior">Flujo anterior</h2>
+<p><code>POST /api/onboarding/autenticar</code>. Opcional: <code>POST /api/onboarding/simular</code> (el registro <strong>no</strong> recibe monto/plazo).</p>
+<h2 id="flujo-posterior">Flujo posterior</h2>
+<p>Ningún API Onboarding posterior en <code>routes.rb</code>. Conservar <code>guid</code> para evolución (OTP / firma / desembolso, si se construyen <strong>rutas Onboarding nuevas</strong>; no reutilizar las de Invictus).</p>
+<h2 id="notas-consideraciones">Notas / Consideraciones</h2>
+<ul>
+<li>Update: misma <code>identificacion</code> + mismo <code>tipo</code> + mismo <code>portafolio_id</code> reescribe la fila más reciente. No crea duplicado.</li>
+<li>Aislamiento Invictus: query incluye <code>tipo</code>. Una cédula con solicitud <code>INVICTUS</code> no se actualiza desde aquí.</li>
+<li>Código <strong>no</strong> fuerza <code>tiposdocumento_id = "1"</code> (Invictus sí). Si el CSV lo exige, falta el campo; el valor <code>"1"</code> vs otros no se valida aquí.</li>
+<li>Mensaje de éxito parametrizable: <code>onboarding_msg_registro_ok</code>.</li>
+</ul>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li><strong>2026-09-08</strong>: Alineado a <code>Onboarding::InformacionBasicaService</code> y <code>Api::OnboardingInformacionBasicaTest</code>.</li>
+</ul>
 
 
 
