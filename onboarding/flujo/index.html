@@ -1012,29 +1012,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../originacion/truora_kyc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Truora KYC
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2519,7 +2496,7 @@
 <td><strong>Sí</strong></td>
 </tr>
 <tr>
-<td>OTP originación, Truora, firma, desembolso</td>
+<td>OTP originación, firma, desembolso</td>
 <td><strong>No</strong> (contrato de este mapa)</td>
 </tr>
 </tbody>
@@ -2540,7 +2517,6 @@
     N["POST /api/onboarding/notificacion_canal"]
     R["POST /api/onboarding/reenviar_otp"]
     V["POST /api/onboarding/validar_otp"]
-    T["Webhook Truora Onboarding"]
   end
 
   subgraph fir [Firma]
@@ -2561,7 +2537,6 @@
   A --&gt; S --&gt; I --&gt; N --&gt; V
   N --&gt; R --&gt; V
   V --&gt;|APROBADO_PENDIENTE_FIRMA| F1
-  V --&gt;|EN_VERIFICACION| T --&gt; F1
   F1 --&gt; F2
   F1 --&gt; F3 --&gt; F2
   F2 --&gt;|APROBADO| D1
@@ -2571,7 +2546,7 @@
 <h2 id="envelope">Envelope</h2>
 <p>Negocio Onboarding (implementado hoy): <code>{ "status": "success|error", "datos": {}, "errors": [] }</code>.</p>
 <p>JWT 401 (<code>ApiJwtAuthenticatable</code>): <code>{ "status": "error", "mensaje": "..." }</code>.</p>
-<p>Etapas copia Invictus: mismos <code>status</code> de negocio (<code>pending_identity</code>, <code>already_signed</code>, <code>otp_not_validated</code>, <code>already_disbursed</code>, …). Mirar <strong>campo <code>status</code></strong>, no solo HTTP.</p>
+<p>Etapas copia Invictus: mismos <code>status</code> de negocio (<code>already_signed</code>, <code>otp_not_validated</code>, <code>already_disbursed</code>, …). Mirar <strong>campo <code>status</code></strong>, no solo HTTP. Onboarding <strong>no</strong> incluye Truora KYC.</p>
 <h2 id="cupo-fijo-vs-invictus-rotativo">Cupo fijo vs Invictus rotativo</h2>
 <table>
 <thead>
@@ -2618,6 +2593,11 @@
 <td>Solo digital</td>
 </tr>
 <tr>
+<td>KYC Truora</td>
+<td>webhook <code>truora/webhook_invictus</code></td>
+<td><strong>No aplica</strong></td>
+</tr>
+<tr>
 <td><code>id_linea_credito</code></td>
 <td><code>91000000000 + form.id</code> (DIGITAL)</td>
 <td>Igual, sobre <code>Formulario</code> Onboarding</td>
@@ -2641,13 +2621,8 @@
 <td><code>notificacion_canal</code> → <code>validar_otp</code></td>
 </tr>
 <tr>
-<td><code>EN_VERIFICACION</code></td>
-<td><code>validar_otp</code> (Experian pide KYC)</td>
-<td>Webhook Truora. No firma</td>
-</tr>
-<tr>
 <td><code>APROBADO_PENDIENTE_FIRMA</code></td>
-<td>OTP OK o Truora OK</td>
+<td><code>validar_otp</code> OK</td>
 <td>Firma</td>
 </tr>
 <tr>
@@ -2662,7 +2637,7 @@
 </tr>
 <tr>
 <td><code>RECHAZADO</code></td>
-<td>Listas / Experian / Truora</td>
+<td>Listas / Experian</td>
 <td>Cooldown</td>
 </tr>
 <tr>
@@ -2725,13 +2700,6 @@
 <td><code>/api/onboarding/validar_otp</code></td>
 <td>No</td>
 <td><a href="../originacion/validar_otp/">Validar OTP</a></td>
-</tr>
-<tr>
-<td>KYC</td>
-<td>webhook</td>
-<td><code>truora/webhook_onboarding</code></td>
-<td>No</td>
-<td><a href="../originacion/truora_kyc/">Truora</a></td>
 </tr>
 <tr>
 <td>Firma</td>
@@ -2821,8 +2789,8 @@
 <td>Límites OTP</td>
 </tr>
 <tr>
-<td>Listas + Experian + <code>InvictusTruoraService</code></td>
-<td><code>validar_otp</code></td>
+<td>Listas + Experian</td>
+<td><code>validar_otp</code> (sin Truora / sin <code>EN_VERIFICACION</code>)</td>
 </tr>
 <tr>
 <td><code>Validacionesotp</code></td>

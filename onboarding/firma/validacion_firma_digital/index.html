@@ -907,29 +907,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../originacion/truora_kyc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Truora KYC
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2569,7 +2546,7 @@
 <li>Si <code>APROBADO_PENDIENTE_FIRMA</code>: OTP + UUID, envío <code>opc_*</code>. Puede reservar <code>nro_obligacion</code> DIGITAL (<code>reservar_firma_digital!</code>).</li>
 <li>Crea <code>Validacionesotp</code> <code>PENDIENTE</code>.</li>
 </ol>
-<p>No consulta Truora ni listas aquí.</p>
+<p>No consulta listas aquí.</p>
 <h2 id="responses-http-200-mirar-status">Responses (HTTP 200; mirar <code>status</code>)</h2>
 <table>
 <thead>
@@ -2591,11 +2568,6 @@
 <td><a href="../../desembolso/">Desembolso</a></td>
 </tr>
 <tr>
-<td><code>pending_identity</code></td>
-<td><code>EN_VERIFICACION</code></td>
-<td><a href="../../originacion/truora_kyc/">Truora</a></td>
-</tr>
-<tr>
 <td><code>no_credit</code> / <code>expired</code></td>
 <td>Sin crédito / <code>CANCELADO</code></td>
 <td>Originación</td>
@@ -2603,7 +2575,7 @@
 </tbody>
 </table>
 <h2 id="flujo-anterior">Flujo anterior</h2>
-<p><a href="../../originacion/validar_otp/">validar_otp</a> APROBADO o Truora OK.</p>
+<p><a href="../../originacion/validar_otp/">validar_otp</a> APROBADO.</p>
 <h2 id="flujo-posterior">Flujo posterior</h2>
 <p><a href="../otp_firma/">validacion_otp_firma</a> o <a href="../reenvio_otp_firma/">reenvio_otp_firma</a>.</p>
 
