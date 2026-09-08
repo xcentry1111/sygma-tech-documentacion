@@ -107,7 +107,7 @@ Con aliases:
 12. `save(validate: false)` — no corre validadores Credintegral de 10053.
 13. Si `save` falla → 422 registro error.
 
-No escribe `estado_invictus`. No llama listas/Experian/Truora. No genera OTP.
+No escribe `estado_invictus`. No llama listas/Experian. No genera OTP.
 
 ## Servicios / componentes
 

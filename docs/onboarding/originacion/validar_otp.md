@@ -1,11 +1,11 @@
 # Validar OTP originación (Onboarding)
 
-> **Estado:** contrato. Ruta **no** en `routes.rb`. Copia de `POST /api/validar_otp` (listas, Experian, Truora) sobre `Formulario` Onboarding cupo fijo.
+> **Estado:** contrato. Ruta **no** en `routes.rb`. Copia de `POST /api/validar_otp` (listas + Experian) sobre `Formulario` Onboarding cupo fijo. **Sin** Truora KYC ni estado `EN_VERIFICACION`.
 
 Mapa: [Flujo](../flujo.md) · [Originación](index.md).
 
 ## Resumen
-Valida OTP y **decide** crédito. Pasa a `APROBADO_PENDIENTE_FIRMA`, `EN_VERIFICACION` o `RECHAZADO`.
+Valida OTP y **decide** crédito. Pasa a `APROBADO_PENDIENTE_FIRMA` o `RECHAZADO`.
 
 ## Endpoint
 - **Método**: `POST`
@@ -35,7 +35,7 @@ JWT Bearer (`/api/onboarding/autenticar`).
 3. Compara OTP.
 4. Listas restrictivas / negra / blanca.
 5. Experian (`InvictusExperianSimulacion` / preselecta). Cupo fijo DIGITAL.
-6. Rama: aprobado → firma; KYC → Truora; rechazo; `REINTENTAR`.
+6. Rama: aprobado → firma; rechazo; `REINTENTAR`. Si Experian pediría KYC en Invictus, Onboarding **no** abre Truora: tratar como rechazo o reintento según política de listas/Experian (no `EN_VERIFICACION`).
 
 Cupo fijo: **no** crea `Persona` rotativo ni `CREAROBLCUOTAMANEJO` en este paso.
 
@@ -44,7 +44,6 @@ Cupo fijo: **no** crea `Persona` rotativo ni `CREAROBLCUOTAMANEJO` en este paso.
 | Caso | Siguiente |
 |------|-----------|
 | 200 `experian_status: APROBADO` | [Firma](../firma/validacion_firma_digital.md) |
-| 200 `EN_VERIFICACION` | [Truora](truora_kyc.md). No firma |
 | 200 `RECHAZADO` | Stop |
 | 200 `REINTENTAR` | Volver a validar / [reenviar](reenviar_otp.md) |
 | 422 OTP malo | Reintento o reenvío |
@@ -53,4 +52,4 @@ Cupo fijo: **no** crea `Persona` rotativo ni `CREAROBLCUOTAMANEJO` en este paso.
 [notificacion_canal](notificacion.md) o [reenviar_otp](reenviar_otp.md).
 
 ## Flujo posterior
-[Firma](../firma/index.md) o [Truora](truora_kyc.md).
+[Firma](../firma/index.md) si APROBADO.

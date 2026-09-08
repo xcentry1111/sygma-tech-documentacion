@@ -41,7 +41,6 @@ nav:
           - 'Notificación OTP': 'onboarding/originacion/notificacion.md'
           - 'Reenviar OTP': 'onboarding/originacion/reenviar_otp.md'
           - 'Validar OTP': 'onboarding/originacion/validar_otp.md'
-          - 'Truora KYC': 'onboarding/originacion/truora_kyc.md'
       - Firma:
           - 'Resumen': 'onboarding/firma/index.md'
           - 'Validación firma': 'onboarding/firma/validacion_firma_digital.md'

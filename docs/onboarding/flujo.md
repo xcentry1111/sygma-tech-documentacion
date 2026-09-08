@@ -13,7 +13,7 @@ Carpetas: [Originación](originacion/index.md) · [Firma](firma/index.md) · [De
 | Grupo | En `routes.rb` |
 |-------|----------------|
 | `autenticar`, `simular`, `informacion_basica` | **Sí** |
-| OTP originación, Truora, firma, desembolso | **No** (contrato de este mapa) |
+| OTP originación, firma, desembolso | **No** (contrato de este mapa) |
 
 Cliente **no** debe pegar `/api/ori_invictus`, `/api/validacion_firma_digital`, `/api/proceso_desembolso`, etc. Esas son Invictus.
 
@@ -34,7 +34,6 @@ flowchart LR
     N["POST /api/onboarding/notificacion_canal"]
     R["POST /api/onboarding/reenviar_otp"]
     V["POST /api/onboarding/validar_otp"]
-    T["Webhook Truora Onboarding"]
   end
 
   subgraph fir [Firma]
@@ -55,7 +54,6 @@ flowchart LR
   A --> S --> I --> N --> V
   N --> R --> V
   V -->|APROBADO_PENDIENTE_FIRMA| F1
-  V -->|EN_VERIFICACION| T --> F1
   F1 --> F2
   F1 --> F3 --> F2
   F2 -->|APROBADO| D1
@@ -70,7 +68,7 @@ Negocio Onboarding (implementado hoy): `{ "status": "success|error", "datos": {}
 
 JWT 401 (`ApiJwtAuthenticatable`): `{ "status": "error", "mensaje": "..." }`.
 
-Etapas copia Invictus: mismos `status` de negocio (`pending_identity`, `already_signed`, `otp_not_validated`, `already_disbursed`, …). Mirar **campo `status`**, no solo HTTP.
+Etapas copia Invictus: mismos `status` de negocio (`already_signed`, `otp_not_validated`, `already_disbursed`, …). Mirar **campo `status`**, no solo HTTP. Onboarding **no** incluye Truora KYC.
 
 ## Cupo fijo vs Invictus rotativo
 
@@ -83,6 +81,7 @@ Etapas copia Invictus: mismos `status` de negocio (`pending_identity`, `already_
 | Cálculo | Digital: `planeshsimula`. Rotativo: `prc_simulador_crediintegral` | Solo `PlaneshsimulaCreditoService` |
 | Firma PDFs 14222/14202/14203 | Rotativo en OTP firma | **No** en firma. Docs en desembolso |
 | Pipeline desembolso | Digital: `Datostecfinanza` + PRC. Rotativo: `Personasobligacion` | Solo digital |
+| KYC Truora | webhook `truora/webhook_invictus` | **No aplica** |
 | `id_linea_credito` | `91000000000 + form.id` (DIGITAL) | Igual, sobre `Formulario` Onboarding |
 
 ## Estados (`estado_invictus` / equivalente Onboarding)
@@ -92,11 +91,10 @@ Misma máquina Invictus, sobre `Formulario` `tipo` = `onboarding_formulario_tipo
 | Estado | Quién | Qué sigue |
 |--------|-------|-----------|
 | `PENDIENTE` | `informacion_basica` / alta OTP | `notificacion_canal` → `validar_otp` |
-| `EN_VERIFICACION` | `validar_otp` (Experian pide KYC) | Webhook Truora. No firma |
-| `APROBADO_PENDIENTE_FIRMA` | OTP OK o Truora OK | Firma |
+| `APROBADO_PENDIENTE_FIRMA` | `validar_otp` OK | Firma |
 | `APROBADO` | OTP firma OK | Desembolso |
 | `DESEMBOLSADO` | `proceso_desembolso` | Fin. No repetir |
-| `RECHAZADO` | Listas / Experian / Truora | Cooldown |
+| `RECHAZADO` | Listas / Experian | Cooldown |
 | `CANCELADO` | Caducidad | Nueva originación |
 
 ## APIs
@@ -109,7 +107,6 @@ Misma máquina Invictus, sobre `Formulario` `tipo` = `onboarding_formulario_tipo
 | Originación OTP | POST | `/api/onboarding/notificacion_canal` | No | [Notificación](originacion/notificacion.md) |
 | Originación OTP | POST | `/api/onboarding/reenviar_otp` | No | [Reenviar OTP](originacion/reenviar_otp.md) |
 | Originación decisión | POST | `/api/onboarding/validar_otp` | No | [Validar OTP](originacion/validar_otp.md) |
-| KYC | webhook | `truora/webhook_onboarding` | No | [Truora](originacion/truora_kyc.md) |
 | Firma | POST | `/api/onboarding/validacion_firma_digital` | No | [Firma](firma/validacion_firma_digital.md) |
 | Firma | POST | `/api/onboarding/validacion_otp_firma` | No | [OTP firma](firma/otp_firma.md) |
 | Firma | POST | `/api/onboarding/reenvio_otp_firma` | No | [Reenvío OTP firma](firma/reenvio_otp_firma.md) |
@@ -129,7 +126,7 @@ Misma máquina Invictus, sobre `Formulario` `tipo` = `onboarding_formulario_tipo
 | `AuthenticateUser` / JWT | Auth propia |
 | SMS / Sygmail / Wolbox 6718 | OTP originación, firma, desembolso |
 | `InvictusOtpReenvioLimite` / `InvictusOtpValidacionLimite` | Límites OTP |
-| Listas + Experian + `InvictusTruoraService` | `validar_otp` |
+| Listas + Experian | `validar_otp` (sin Truora / sin `EN_VERIFICACION`) |
 | `Validacionesotp` | Firma y desembolso |
 | `PlaneshsimulaCreditoService` | `simular` + `calcular_desembolso` |
 | `InvictusDigitalLineaService` | Línea, `validar_cupo!`, `desembolsar!` (filtrar `tipo` Onboarding) |

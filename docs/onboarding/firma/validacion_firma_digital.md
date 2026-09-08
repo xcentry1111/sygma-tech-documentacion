@@ -35,7 +35,7 @@ JWT Bearer (`/api/onboarding/autenticar`).
 3. Si `APROBADO_PENDIENTE_FIRMA`: OTP + UUID, envío `opc_*`. Puede reservar `nro_obligacion` DIGITAL (`reservar_firma_digital!`).
 4. Crea `Validacionesotp` `PENDIENTE`.
 
-No consulta Truora ni listas aquí.
+No consulta listas aquí.
 
 ## Responses (HTTP 200; mirar `status`)
 
@@ -43,11 +43,10 @@ No consulta Truora ni listas aquí.
 |----------|-------------|-----------|
 | `success` | OTP + `datos.guid` | [otp_firma](otp_firma.md) |
 | `already_signed` | Ya `APROBADO` | [Desembolso](../desembolso/index.md) |
-| `pending_identity` | `EN_VERIFICACION` | [Truora](../originacion/truora_kyc.md) |
 | `no_credit` / `expired` | Sin crédito / `CANCELADO` | Originación |
 
 ## Flujo anterior
-[validar_otp](../originacion/validar_otp.md) APROBADO o Truora OK.
+[validar_otp](../originacion/validar_otp.md) APROBADO.
 
 ## Flujo posterior
 [validacion_otp_firma](otp_firma.md) o [reenvio_otp_firma](reenvio_otp_firma.md).

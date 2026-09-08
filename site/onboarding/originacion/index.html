@@ -960,29 +960,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="truora_kyc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Truora KYC
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2395,11 +2372,10 @@
 
 
 <h1 id="originacion-onboarding-cupo-fijo">Originación Onboarding (cupo fijo)</h1>
-<p>Mapa: <a href="../flujo/">Flujo completo</a>. Fuente funcional: Invictus originación DIGITAL. Rutas <code>/api/onboarding/*</code>.</p>
+<p>Mapa: <a href="../flujo/">Flujo completo</a>. Fuente funcional: Invictus originación DIGITAL <strong>sin</strong> Truora KYC. Rutas <code>/api/onboarding/*</code>.</p>
 <h2 id="orden">Orden</h2>
-<div class="highlight"><pre><span></span><code>autenticar → simular → informacion_basica → notificacion_canal → validar_otp
+<div class="highlight"><pre><span></span><code>autenticar → simular → informacion_basica → notificacion_canal → validar_otp → firma
                                     ↘ reenviar_otp ↗
-validar_otp → firma  |  EN_VERIFICACION → Truora → firma
 </code></pre></div>
 <table>
 <thead>
@@ -2438,11 +2414,6 @@ validar_otp → firma  |  EN_VERIFICACION → Truora → firma
 <tr>
 <td><a href="validar_otp/">Validar OTP</a></td>
 <td><code>POST /api/onboarding/validar_otp</code></td>
-<td>No</td>
-</tr>
-<tr>
-<td><a href="truora_kyc/">Truora KYC</a></td>
-<td><code>POST truora/webhook_onboarding</code></td>
 <td>No</td>
 </tr>
 </tbody>

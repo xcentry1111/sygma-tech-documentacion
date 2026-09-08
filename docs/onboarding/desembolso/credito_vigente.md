@@ -30,7 +30,7 @@ JWT Bearer (`/api/onboarding/autenticar`).
 ```
 
 ## Proceso interno
-`InvictusDesembolsoElegibilidadService` (mora, DIGITAL, expiración 181 días no migrado). `EN_VERIFICACION` → `pending_identity`. Firma pendiente → `pending_signatures`. Éxito: `Validacionesotp` + envío OTP. Canales ofuscados.
+`InvictusDesembolsoElegibilidadService` (mora, DIGITAL, expiración 181 días no migrado). Firma pendiente → `pending_signatures`. Éxito: `Validacionesotp` + envío OTP. Canales ofuscados.
 
 ## Responses (HTTP 200; mirar `status`)
 
@@ -38,7 +38,6 @@ JWT Bearer (`/api/onboarding/autenticar`).
 |----------|-----------|
 | `success` + `datos.guid` | [otp_desembolso](otp_desembolso.md) |
 | `pending_signatures` | [Firma](../firma/index.md) |
-| `pending_identity` | [Truora](../originacion/truora_kyc.md) |
 | `no_credit` / `credit_blocked` / `expired` / `already_disbursed` | Stop o nueva originación |
 
 ### 200 success

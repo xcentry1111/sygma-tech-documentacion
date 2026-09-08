@@ -12,7 +12,7 @@
         <link rel="prev" href="../reenviar_otp/">
       
       
-        <link rel="next" href="../truora_kyc/">
+        <link rel="next" href="../../firma/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1018,29 +1018,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../truora_kyc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Truora KYC
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2522,11 +2499,11 @@
 
 <h1 id="validar-otp-originacion-onboarding">Validar OTP originación (Onboarding)</h1>
 <blockquote>
-<p><strong>Estado:</strong> contrato. Ruta <strong>no</strong> en <code>routes.rb</code>. Copia de <code>POST /api/validar_otp</code> (listas, Experian, Truora) sobre <code>Formulario</code> Onboarding cupo fijo.</p>
+<p><strong>Estado:</strong> contrato. Ruta <strong>no</strong> en <code>routes.rb</code>. Copia de <code>POST /api/validar_otp</code> (listas + Experian) sobre <code>Formulario</code> Onboarding cupo fijo. <strong>Sin</strong> Truora KYC ni estado <code>EN_VERIFICACION</code>.</p>
 </blockquote>
 <p>Mapa: <a href="../../flujo/">Flujo</a> · <a href="../">Originación</a>.</p>
 <h2 id="resumen">Resumen</h2>
-<p>Valida OTP y <strong>decide</strong> crédito. Pasa a <code>APROBADO_PENDIENTE_FIRMA</code>, <code>EN_VERIFICACION</code> o <code>RECHAZADO</code>.</p>
+<p>Valida OTP y <strong>decide</strong> crédito. Pasa a <code>APROBADO_PENDIENTE_FIRMA</code> o <code>RECHAZADO</code>.</p>
 <h2 id="endpoint">Endpoint</h2>
 <ul>
 <li><strong>Método</strong>: <code>POST</code></li>
@@ -2569,7 +2546,7 @@
 <li>Compara OTP.</li>
 <li>Listas restrictivas / negra / blanca.</li>
 <li>Experian (<code>InvictusExperianSimulacion</code> / preselecta). Cupo fijo DIGITAL.</li>
-<li>Rama: aprobado → firma; KYC → Truora; rechazo; <code>REINTENTAR</code>.</li>
+<li>Rama: aprobado → firma; rechazo; <code>REINTENTAR</code>. Si Experian pediría KYC en Invictus, Onboarding <strong>no</strong> abre Truora: tratar como rechazo o reintento según política de listas/Experian (no <code>EN_VERIFICACION</code>).</li>
 </ol>
 <p>Cupo fijo: <strong>no</strong> crea <code>Persona</code> rotativo ni <code>CREAROBLCUOTAMANEJO</code> en este paso.</p>
 <h2 id="responses-mirar-experian_status-no-solo-http">Responses — mirar <code>experian_status</code>, no solo HTTP</h2>
@@ -2584,10 +2561,6 @@
 <tr>
 <td>200 <code>experian_status: APROBADO</code></td>
 <td><a href="../../firma/validacion_firma_digital/">Firma</a></td>
-</tr>
-<tr>
-<td>200 <code>EN_VERIFICACION</code></td>
-<td><a href="../truora_kyc/">Truora</a>. No firma</td>
 </tr>
 <tr>
 <td>200 <code>RECHAZADO</code></td>
@@ -2606,7 +2579,7 @@
 <h2 id="flujo-anterior">Flujo anterior</h2>
 <p><a href="../notificacion/">notificacion_canal</a> o <a href="../reenviar_otp/">reenviar_otp</a>.</p>
 <h2 id="flujo-posterior">Flujo posterior</h2>
-<p><a href="../../firma/">Firma</a> o <a href="../truora_kyc/">Truora</a>.</p>
+<p><a href="../../firma/">Firma</a> si APROBADO.</p>
 
 
 

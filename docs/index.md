@@ -41,7 +41,6 @@ Swagger TESEO: `/api/docs/onboarding`. **No modifica Invictus.** Rutas `/api/onb
 - `docs/onboarding/originacion/notificacion.md`
 - `docs/onboarding/originacion/reenviar_otp.md`
 - `docs/onboarding/originacion/validar_otp.md`
-- `docs/onboarding/originacion/truora_kyc.md`
 
 ### Firma
 - `docs/onboarding/firma/validacion_firma_digital.md`

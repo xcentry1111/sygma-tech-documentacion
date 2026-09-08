@@ -1,13 +1,12 @@
 # Originación Onboarding (cupo fijo)
 
-Mapa: [Flujo completo](../flujo.md). Fuente funcional: Invictus originación DIGITAL. Rutas `/api/onboarding/*`.
+Mapa: [Flujo completo](../flujo.md). Fuente funcional: Invictus originación DIGITAL **sin** Truora KYC. Rutas `/api/onboarding/*`.
 
 ## Orden
 
 ```
-autenticar → simular → informacion_basica → notificacion_canal → validar_otp
+autenticar → simular → informacion_basica → notificacion_canal → validar_otp → firma
                                     ↘ reenviar_otp ↗
-validar_otp → firma  |  EN_VERIFICACION → Truora → firma
 ```
 
 | API | Ruta | Código |
@@ -18,6 +17,5 @@ validar_otp → firma  |  EN_VERIFICACION → Truora → firma
 | [Notificación OTP](notificacion.md) | `POST /api/onboarding/notificacion_canal` | No |
 | [Reenviar OTP](reenviar_otp.md) | `POST /api/onboarding/reenviar_otp` | No |
 | [Validar OTP](validar_otp.md) | `POST /api/onboarding/validar_otp` | No |
-| [Truora KYC](truora_kyc.md) | `POST truora/webhook_onboarding` | No |
 
 Siguiente carpeta: [Firma](../firma/index.md).
